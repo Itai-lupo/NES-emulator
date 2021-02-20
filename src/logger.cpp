@@ -7,10 +7,12 @@ namespace raftelGraphicEngine
     {
         google::InitGoogleLogging(projectName.c_str());
         FLAGS_stderrthreshold = 0;
-        FLAGS_minloglevel = 1;
+
+        google::SetLogDestination(google::INFO, (pathToLogs + "info/" + projectName + "_").c_str());
         google::SetLogDestination(google::WARNING, (pathToLogs + "warninig/" + projectName + "_").c_str());
         google::SetLogDestination(google::ERROR, (pathToLogs + "error/" + projectName + "_").c_str());
         google::SetLogDestination(google::FATAL, (pathToLogs + "fatal/" + projectName + "_").c_str());
+
         LOG(INFO) << "init glog successfully";
     }
 
@@ -19,43 +21,43 @@ namespace raftelGraphicEngine
         google::ShutdownGoogleLogging();
     }
 
-    void LogInfo(std::string& toLog)
+    void logger::LogInfo(std::string& toLog)
     {
         LOG(INFO) << toLog;
     }
 
-    void LogWarning(std::string& toLog)
+    void logger::LogWarning(std::string& toLog)
     {
         LOG(WARNING) << toLog;
     }
     
-    void LogError(std::string& toLog)
+    void logger::LogError(std::string& toLog)
     {
         LOG(ERROR) << toLog;
     }
     
-    void LogFatal(std::string& toLog)
+    void logger::LogFatal(std::string& toLog)
     {
         LOG(FATAL) << toLog;
     }
     
 
-    void condtionLogInfo(std::string& toLog, bool condition)
+    void logger::condtionLogInfo(std::string& toLog, bool condition)
     {
         LOG_IF(INFO, condition) << toLog;
     }
     
-    void condtionLogWarning(std::string& toLog, bool condition)
+    void logger::condtionLogWarning(std::string& toLog, bool condition)
     {
         LOG_IF(WARNING, condition) << toLog;
     }
     
-    void condtionLogError(std::string& toLog, bool condition)
+    void logger::condtionLogError(std::string& toLog, bool condition)
     {
         LOG_IF(ERROR, condition) << toLog;
     }
     
-    void condtionLogFatal(std::string& toLog, bool condition)
+    void logger::condtionLogFatal(std::string& toLog, bool condition)
     {
         LOG_IF(FATAL, condition) << toLog;
     }

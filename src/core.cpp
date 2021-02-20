@@ -1,6 +1,7 @@
 #include "core.h"
-#include <stdexcept>
+#include "events.h"
 #include "logger.h"
+#include <stdexcept>
 #include <string>
 
 namespace raftelGraphicEngine
@@ -10,11 +11,14 @@ namespace raftelGraphicEngine
         std::string pathToLogs =  "./logs/";
         std::string projectName =  "raftelGraphicEngine";
         logger::init(pathToLogs, projectName);
+        eventManger::init();
     }
 
     void close()
     {
         logger::close();
+        eventManger::close();
+
     }
 };
 

@@ -15,18 +15,10 @@ namespace raftelGraphicEngine
             static void LogError(std::string& toLog);
             static void LogFatal(std::string& toLog);
 
-            static void dLogInfo(std::string& toLog);
-            static void dLogWarning(std::string& toLog);
-            static void dLogError(std::string& toLog);
-            static void dLogFatal(std::string& toLog);
-
             static void condtionLogInfo(std::string& toLog, bool condition);
             static void condtionLogWarning(std::string& toLog, bool condition);
             static void condtionLogError(std::string& toLog, bool condition);
             static void condtionLogFatal(std::string& toLog, bool condition);
-            
-
-        
     };
 
 }

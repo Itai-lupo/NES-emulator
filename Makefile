@@ -24,9 +24,9 @@ INC_DIRS := $(shell find $(SRC_DIRS) -type d)
 TEST_INC_DIRS := $(shell find $(TEST_DIRS) -type d)
 INC_FLAGS := $(addprefix -I,$(INC_DIRS))
 
-CPPFLAGS ?=  $(INC_FLAGS)  -MMD -MP  -g -Wall 
-TEST_CPP_FLAGE = -lgtest -lgtest_main -lglog
-CFLAGS := -lstdc++
+CPPFLAGS ?=  $(INC_FLAGS)  -MMD -MP  -g -Wall
+TEST_CPP_FLAGE = -lgtest -lgtest_main -lgmock  
+CFLAGS := -lstdc++ -lglog
 
 CXXFLAGS += -g -Wall -Wextra -pthread
 
