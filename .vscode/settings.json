@@ -63,7 +63,15 @@
         "thread": "c",
         "typeindex": "c",
         "typeinfo": "c",
-        "variant": "c"
+        "variant": "c",
+        "hash_set": "cpp",
+        "codecvt": "cpp",
+        "complex": "cpp",
+        "csignal": "cpp",
+        "deque": "cpp",
+        "source_location": "cpp",
+        "future": "cpp",
+        "valarray": "cpp"
     },
     "files.exclude": {
         "build/": true,

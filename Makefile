@@ -3,7 +3,7 @@ CC = clang
 GTEST_DIR=/usr/src/googletest/
 
 
-TARGET_EXEC ?= main.out
+TARGET_EXEC ?= libgeapp.lib libgecore.lib
 
 BUILD_DIR ?= ./build
 OUTPUT_DIR ?= ./output
@@ -13,7 +13,7 @@ TEST_DIRS ?= ./tests ./headers
 SRCS := $(shell find $(SRC_DIRS) -name *.cpp)
 TESTS := $(shell find $(TEST_DIRS) -name *.cpp)
 OBJS := $(SRCS:%=$(BUILD_DIR)/%.o)
-TEST_OBJS  := $(TESTS:%=$(BUILD_DIR)/%.o) $(subst ./build/./src/main.cpp.o,,$(OBJS))
+TEST_OBJS  := $(TESTS:%=$(BUILD_DIR)/%.o) $(subst ./build/./src/core.h.o,./build/./src/app.cpp.o,$(OBJS))
 DEPS := $(OBJS:.o=.d)
 TEST_DEPS := $(TEST_OBJS:.o=.d)
 
@@ -25,7 +25,7 @@ TEST_INC_DIRS := $(shell find $(TEST_DIRS) -type d)
 INC_FLAGS := $(addprefix -I,$(INC_DIRS))
 
 CPPFLAGS ?=  $(INC_FLAGS)  -MMD -MP  -g -Wall 
-TEST_CPP_FLAGE = -lgtest -lgtest_main 
+TEST_CPP_FLAGE = -lgtest -lgtest_main -lglog
 CFLAGS := -lstdc++
 
 CXXFLAGS += -g -Wall -Wextra -pthread
