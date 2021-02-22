@@ -1,4 +1,0 @@
-Log file created at: 2021/02/20 19:39:39
-Running on machine: itai-pc
-Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
-I0220 19:39:39.648461 121783 logger.cpp:14] init glog successfully

@@ -1,7 +1,8 @@
 #include "core.h"
 #include "events.h"
+#include "entity.h"
 #include "logger.h"
-#include <stdexcept>
+
 #include <string>
 
 namespace raftelGraphicEngine
@@ -12,13 +13,15 @@ namespace raftelGraphicEngine
         std::string projectName =  "raftelGraphicEngine";
         logger::init(pathToLogs, projectName);
         eventManger::init();
+        entityManger::init();
     }
 
     void close()
     {
         logger::close();
         eventManger::close();
-
+        entityManger::close();
+        
     }
 };
 

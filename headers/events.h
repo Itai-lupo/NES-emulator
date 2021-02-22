@@ -1,7 +1,7 @@
 #pragma once
 #include <functional>
 #include <vector>
-
+#include "entity.h"
 
 namespace raftelGraphicEngine
 {
@@ -20,24 +20,15 @@ namespace raftelGraphicEngine
         private:
             int id;
     };
-
-    class IEntity
-    {
-        public:
-            IEntity(int id):id(id){}
-            int getId() { return id; }
-        private:
-            int id;
-    };
     
 
     struct event
     {
         public:
-            event(events eventType, std::function<void(IEntity eventEntity, IEventData sendor)> callback, int entityID)
+            event(events eventType, std::function<void(IEntity *eventEntity, IEventData sendor)> callback, int entityID)
                 :eventType(eventType), callback(callback), entityID(entityID){};
 
-            void trigerEvent(IEntity eventEntity, IEventData sendor)
+            void trigerEvent(IEntity *eventEntity, IEventData sendor)
             {
                 this->callback(eventEntity, sendor);
             }
@@ -47,7 +38,7 @@ namespace raftelGraphicEngine
 
         private:
             events eventType;
-            std::function<void(IEntity eventEntity, IEventData sendor)> callback;
+            std::function<void(IEntity *eventEntity, IEventData sendor)> callback;
             int entityID;
     };
 
@@ -58,7 +49,7 @@ namespace raftelGraphicEngine
         public:
             static void init();
             static void close();
-            static int addEvent(events eventType, std::function<void(IEntity eventEntity, IEventData sendor)> callback, int entityID);
+            static int addEvent(events eventType, std::function<void(IEntity *eventEntity, IEventData sendor)> callback, int entityID);
             static int addEvent(event *eventToAdd);
             static void trigerEvent(events eventType, IEventData sendor);
     };

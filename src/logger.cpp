@@ -3,8 +3,10 @@
 
 namespace raftelGraphicEngine
 {
+    static bool wasInit = false; 
     void logger::init(std::string& pathToLogs, std::string& projectName)
     {
+        if(wasInit) return;
         google::InitGoogleLogging(projectName.c_str());
         FLAGS_stderrthreshold = 0;
 
@@ -12,13 +14,13 @@ namespace raftelGraphicEngine
         google::SetLogDestination(google::WARNING, (pathToLogs + "warninig/" + projectName + "_").c_str());
         google::SetLogDestination(google::ERROR, (pathToLogs + "error/" + projectName + "_").c_str());
         google::SetLogDestination(google::FATAL, (pathToLogs + "fatal/" + projectName + "_").c_str());
-
+        wasInit = true;
         LOG(INFO) << "init glog successfully";
     }
 
     void logger::close()
     {
-        google::ShutdownGoogleLogging();
+        // google::ShutdownGoogleLogging();
     }
 
     void logger::LogInfo(std::string& toLog)
