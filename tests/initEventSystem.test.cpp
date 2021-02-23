@@ -5,6 +5,13 @@
 
 using namespace raftelGraphicEngine;
 
+struct testEventData: public IEventData
+{
+    public:
+        testEventData(int id):id(id){}
+        int id;
+};
+
 TEST(initEngine, InitAndCloseEngineWork)
 {
     try
@@ -24,12 +31,10 @@ TEST(eventSystem, addAndCallEvent)
 
     try
     {
-        std::function<void(IEntity *eventEntity, IEventData sendor)> callback = [](IEntity *eventEntity, IEventData sendor){
+        eventCallbackFunc callback = [](IEntity *eventEntity, IEventData *sendor){
             EXPECT_EQ(0, eventEntity->id) << "wrong entity id";
-            EXPECT_EQ(1, sendor.getId()) << "wrong event id";
+            EXPECT_EQ(1, dynamic_cast<testEventData*>(sendor)->id) << "wrong event id";
             eventEntity->x = 10;
-            std::string msg("event trigerd at test addAndCallEvent");
-            logger::LogInfo(msg);
         };
         
         init();
@@ -40,7 +45,7 @@ TEST(eventSystem, addAndCallEvent)
 
         logger::LogInfo(msg);
 
-        IEventData testEvent(1);
+        testEventData *testEvent = new testEventData(1);
         eventManger::trigerEvent(events::manualEvent, testEvent);
         EXPECT_EQ(10, testEntity.x) << "wrong event id";
 
@@ -57,12 +62,10 @@ TEST(eventSystem, EventWithMoreThenOneCallback)
 
     try
     {
-        std::function<void(IEntity *eventEntity, IEventData sendor)> callback = [](IEntity *eventEntity, IEventData sendor){
+        eventCallbackFunc callback = [](IEntity *eventEntity, IEventData *sendor){
             EXPECT_EQ(0, eventEntity->id) << "wrong entity id";
-            EXPECT_EQ(1, sendor.getId()) << "wrong event id";
+            EXPECT_EQ(1, dynamic_cast<testEventData*>(sendor)->id) << "wrong event id";
             eventEntity->x++;
-            std::string msg("event trigerd at test EventWithMoreThenOneCallback");
-            logger::LogInfo(msg);
         };
         
         init();
@@ -76,7 +79,8 @@ TEST(eventSystem, EventWithMoreThenOneCallback)
     
         logger::LogInfo(msg);
 
-        IEventData testEvent(1);
+        testEventData *testEvent = new testEventData(1);
+
         eventManger::trigerEvent(events::manualEvent, testEvent);
         EXPECT_EQ(3, testEntity.x) << "entity didnt change";
 
@@ -88,33 +92,29 @@ TEST(eventSystem, EventWithMoreThenOneCallback)
     }
 }
 
+
+
 TEST(eventSystem, fewEntityWithFewEvents)
 {
 
     try
     {
-        std::function<void(IEntity *eventEntity, IEventData sendor)> callback = [](IEntity *eventEntity, IEventData sendor){
+        eventCallbackFunc callback = [](IEntity *eventEntity, IEventData *sendor){
             EXPECT_EQ(0, eventEntity->id) << "wrong entity id on 1";
-            EXPECT_EQ(1, sendor.getId()) << "wrong event id on 1";
+            EXPECT_EQ(1,  dynamic_cast<testEventData*>(sendor)->id) << "wrong event id on 1";
             eventEntity->x++;
-            std::string msg("event trigerd at test fewEntityWithFewEvents on 1");
-            logger::LogInfo(msg);
         };
         
-        std::function<void(IEntity *eventEntity, IEventData sendor)> callback2 = [](IEntity *eventEntity, IEventData sendor){
+        eventCallbackFunc callback2 = [](IEntity *eventEntity, IEventData *sendor){
             EXPECT_EQ(1, eventEntity->id) << "wrong entity id on 2";
-            EXPECT_EQ(1, sendor.getId()) << "wrong event id on 2";
+            EXPECT_EQ(1,  dynamic_cast<testEventData*>(sendor)->id) << "wrong event id on 2";
             eventEntity->x++;
-            std::string msg("event trigerd at test fewEntityWithFewEvents on 2");
-            logger::LogInfo(msg);
         };
 
-        std::function<void(IEntity *eventEntity, IEventData sendor)> callback3 = [](IEntity *eventEntity, IEventData sendor){
+        eventCallbackFunc callback3 = [](IEntity *eventEntity, IEventData *sendor){
             EXPECT_EQ(2, eventEntity->id) << "wrong entity id on 3";
-            EXPECT_EQ(1, sendor.getId()) << "wrong event id pn 3";
+            EXPECT_EQ(1, dynamic_cast<testEventData*>(sendor)->id) << "wrong event id pn 3";
             eventEntity->x++;
-            std::string msg("event trigerd at test fewEntityWithFewEvents on 3");
-            logger::LogInfo(msg);
         };
 
         init();
@@ -138,7 +138,7 @@ TEST(eventSystem, fewEntityWithFewEvents)
     
         logger::LogInfo(msg);
 
-        IEventData testEvent(1);
+        testEventData *testEvent = new testEventData(1);
         eventManger::trigerEvent(events::manualEvent, testEvent);
         EXPECT_EQ(3, testEntity.x) << "entity didnt change on 1";
         EXPECT_EQ(3, testEntity2.x) << "entity didnt change on 2";

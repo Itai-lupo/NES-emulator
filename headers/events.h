@@ -3,8 +3,15 @@
 #include <vector>
 #include "entity.h"
 
+
 namespace raftelGraphicEngine
 {
+    struct event;
+    struct IEventData;
+
+    typedef std::function<void(IEntity *eventEntity, IEventData *sendor)> eventCallbackFunc;
+
+
     enum events
     {
         manualEvent,
@@ -12,23 +19,21 @@ namespace raftelGraphicEngine
     };
 
 
-    class IEventData
+    struct IEventData
     {
         public:
-            IEventData(int id):id(id){}
-            int getId() { return id; }
-        private:
-            int id;
+            virtual ~IEventData() {}
+            events eventType;
     };
     
 
     struct event
     {
         public:
-            event(events eventType, std::function<void(IEntity *eventEntity, IEventData sendor)> callback, int entityID)
+            event(events eventType,  eventCallbackFunc callback, int entityID)
                 :eventType(eventType), callback(callback), entityID(entityID){};
 
-            void trigerEvent(IEntity *eventEntity, IEventData sendor)
+            void trigerEvent(IEntity *eventEntity, IEventData *sendor)
             {
                 this->callback(eventEntity, sendor);
             }
@@ -38,7 +43,7 @@ namespace raftelGraphicEngine
 
         private:
             events eventType;
-            std::function<void(IEntity *eventEntity, IEventData sendor)> callback;
+            eventCallbackFunc  callback;
             int entityID;
     };
 
@@ -49,9 +54,10 @@ namespace raftelGraphicEngine
         public:
             static void init();
             static void close();
-            static int addEvent(events eventType, std::function<void(IEntity *eventEntity, IEventData sendor)> callback, int entityID);
+            static int addEvent(events eventType, eventCallbackFunc callback, int entityID);
             static int addEvent(event *eventToAdd);
-            static void trigerEvent(events eventType, IEventData sendor);
+            static void trigerEvent(events eventType, IEventData *sendor);
     };
+
 
 }

@@ -17,7 +17,7 @@ namespace raftelGraphicEngine
         
     }
 
-    int eventManger::addEvent(events eventType, std::function<void(IEntity *eventEntity, IEventData sendor)> callback, int entityID)
+    int eventManger::addEvent(events eventType, eventCallbackFunc callback, int entityID)
     {
         event *newEvent = new event(eventType, callback, entityID);
         return eventManger::addEvent(newEvent);
@@ -29,8 +29,9 @@ namespace raftelGraphicEngine
         return eventManger::eventList[eventToAdd->getEventType()].size() - 1;
     }
 
-    void eventManger::trigerEvent(events eventType, IEventData sendor)
+    void eventManger::trigerEvent(events eventType, IEventData *sendor)
     {
+        sendor->eventType = eventType;
         for(event e : eventManger::eventList[eventType]) 
         {
             IEntity *a = entityManger::getEntityById(e.getEntityID()); 

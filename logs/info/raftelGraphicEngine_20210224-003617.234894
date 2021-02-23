@@ -1,0 +1,20 @@
+Log file created at: 2021/02/24 00:36:17
+Running on machine: itai-pc
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I0224 00:36:17.364130 234894 logger.cpp:18] init glog successfully
+I0224 00:36:17.364465 234894 logger.cpp:28] event added sucssfly
+I0224 00:36:17.364487 234894 logger.cpp:28] event trigerd at test addAndCallEvent
+I0224 00:36:17.364538 234894 logger.cpp:28] event added sucssfly: 0
+I0224 00:36:17.364559 234894 logger.cpp:28] event trigerd at test EventWithMoreThenOneCallback
+I0224 00:36:17.364575 234894 logger.cpp:28] event trigerd at test EventWithMoreThenOneCallback
+I0224 00:36:17.364593 234894 logger.cpp:28] event trigerd at test EventWithMoreThenOneCallback
+I0224 00:36:17.364650 234894 logger.cpp:28] event added sucssfly: 0
+I0224 00:36:17.364665 234894 logger.cpp:28] event trigerd at test fewEntityWithFewEvents on 1
+I0224 00:36:17.364681 234894 logger.cpp:28] event trigerd at test fewEntityWithFewEvents on 1
+I0224 00:36:17.364693 234894 logger.cpp:28] event trigerd at test fewEntityWithFewEvents on 1
+I0224 00:36:17.364707 234894 logger.cpp:28] event trigerd at test fewEntityWithFewEvents on 2
+I0224 00:36:17.364719 234894 logger.cpp:28] event trigerd at test fewEntityWithFewEvents on 2
+I0224 00:36:17.364732 234894 logger.cpp:28] event trigerd at test fewEntityWithFewEvents on 2
+I0224 00:36:17.364750 234894 logger.cpp:28] event trigerd at test fewEntityWithFewEvents on 3
+I0224 00:36:17.364768 234894 logger.cpp:28] event trigerd at test fewEntityWithFewEvents on 3
+I0224 00:36:17.364781 234894 logger.cpp:28] event trigerd at test fewEntityWithFewEvents on 3
