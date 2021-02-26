@@ -1,6 +1,7 @@
 #pragma once
 #include <functional>
 #include <vector>
+#include "core.h"
 
 namespace raftelGraphicEngine
 {
@@ -12,7 +13,7 @@ namespace raftelGraphicEngine
             int spriteId = 0;
             int vertexShaderId = 0;
             int fragmentShaderId = 0;
-            int id;
+            raftelId id;
     };
 
     class entityManger
@@ -22,7 +23,7 @@ namespace raftelGraphicEngine
         public:
             static void init();
             static void close();
-            static int addEntity(IEntity *eventToAdd);
-            static IEntity *getEntityById(int id);
+            static raftelId addEntity(IEntity *eventToAdd);
+            static IEntity *getEntityById(raftelId id);
     };
 }

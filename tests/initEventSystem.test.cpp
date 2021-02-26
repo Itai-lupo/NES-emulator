@@ -39,7 +39,7 @@ TEST(eventSystem, addAndCallEvent)
         
         init();
         IEntity testEntity;
-        int id = entityManger::addEntity(&testEntity);
+        raftelId id = entityManger::addEntity(&testEntity);
         eventManger::addEvent(events::manualEvent, callback, id);
         std::string msg("event added sucssfly");
 
@@ -70,7 +70,7 @@ TEST(eventSystem, EventWithMoreThenOneCallback)
         
         init();
         IEntity testEntity;
-        int id =  entityManger::addEntity(&testEntity);
+        raftelId id =  entityManger::addEntity(&testEntity);
         eventManger::addEvent(events::manualEvent, callback, id);
         eventManger::addEvent(events::manualEvent, callback, id);
         eventManger::addEvent(events::manualEvent, callback, id);
@@ -118,12 +118,15 @@ TEST(eventSystem, fewEntityWithFewEvents)
         };
 
         init();
+
         IEntity testEntity;
         IEntity testEntity2;
         IEntity testEntity3;
-        int id =  entityManger::addEntity(&testEntity);
-        int id2 =  entityManger::addEntity(&testEntity2);
-        int id3 =  entityManger::addEntity(&testEntity3);
+
+        raftelId id =  entityManger::addEntity(&testEntity);
+        raftelId id2 =  entityManger::addEntity(&testEntity2);
+        raftelId id3 =  entityManger::addEntity(&testEntity3);
+        
         eventManger::addEvent(events::manualEvent, callback, id);
         eventManger::addEvent(events::manualEvent, callback, id);
         eventManger::addEvent(events::manualEvent, callback, id);
@@ -140,6 +143,7 @@ TEST(eventSystem, fewEntityWithFewEvents)
 
         testEventData *testEvent = new testEventData(1);
         eventManger::trigerEvent(events::manualEvent, testEvent);
+        
         EXPECT_EQ(3, testEntity.x) << "entity didnt change on 1";
         EXPECT_EQ(3, testEntity2.x) << "entity didnt change on 2";
         EXPECT_EQ(3, testEntity3.x) << "entity didnt change on 3";

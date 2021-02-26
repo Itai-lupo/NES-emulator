@@ -23,7 +23,7 @@ namespace raftelGraphicEngine
         return entityManger::entitys.size() - 1;
     }
 
-    IEntity *entityManger::getEntityById(int id)
+    IEntity *entityManger::getEntityById(raftelId id)
     {
         return  entityManger::entitys[id];
     }

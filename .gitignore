@@ -34,3 +34,8 @@
 build/
 output/
 .vscode/
+
+logs/info
+logs/warninig
+logs/error
+logs/fatal

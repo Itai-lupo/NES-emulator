@@ -71,7 +71,12 @@
         "deque": "cpp",
         "source_location": "cpp",
         "future": "cpp",
-        "valarray": "cpp"
+        "valarray": "cpp",
+        "window.h": "c",
+        "events.h": "c",
+        "linuxwindow.h": "c",
+        "entity.h": "c",
+        "core.h": "c"
     },
     "files.exclude": {
         "build/": true,

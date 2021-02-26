@@ -17,25 +17,29 @@ namespace raftelGraphicEngine
         
     }
 
-    int eventManger::addEvent(events eventType, eventCallbackFunc callback, int entityID)
+    raftelId eventManger::addEvent(events eventType, eventCallbackFunc callback, raftelId entityID, windowPtr windowID)
     {
-        event *newEvent = new event(eventType, callback, entityID);
+        event *newEvent = new event(eventType, callback, entityID, windowID);
         return eventManger::addEvent(newEvent);
     }
 
-    int eventManger::addEvent(event *eventToAdd)
+    raftelId eventManger::addEvent(event *eventToAdd)
     {
         eventManger::eventList[eventToAdd->getEventType()].push_back(*eventToAdd); 
-        return eventManger::eventList[eventToAdd->getEventType()].size() - 1;
+        eventToAdd->id = eventManger::eventList[eventToAdd->getEventType()].size() - 1;
+        return eventToAdd->id;
     }
 
-    void eventManger::trigerEvent(events eventType, IEventData *sendor)
+    void eventManger::trigerEvent(events eventType, IEventData *sendor, windowPtr windowID)
     {
         sendor->eventType = eventType;
         for(event e : eventManger::eventList[eventType]) 
         {
-            IEntity *a = entityManger::getEntityById(e.getEntityID()); 
-            e.trigerEvent(a, sendor);
+            if(windowID == NULL || e.getWindowID() == NULL || e.getWindowID() == windowID)
+            {
+                IEntity *a = entityManger::getEntityById(e.getEntityID()); 
+                e.trigerEvent(a, sendor);
+            }
         }
     }
 }
