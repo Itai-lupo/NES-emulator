@@ -1,6 +1,0 @@
-Log file created at: 2021/02/24 00:33:35
-Running on machine: itai-pc
-Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
-I0224 00:33:35.663913 234455 logger.cpp:18] init glog successfully
-I0224 00:33:35.664691 234455 logger.cpp:28] event added sucssfly
-I0224 00:33:35.664938 234455 logger.cpp:28] event trigerd at test addAndCallEvent

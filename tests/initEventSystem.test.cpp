@@ -16,9 +16,9 @@ TEST(initEngine, InitAndCloseEngineWork)
 {
     try
     {
-        init();
+        app::init();
 
-        close();
+        app::close();
     }
     catch(const std::exception& e)
     {
@@ -37,7 +37,7 @@ TEST(eventSystem, addAndCallEvent)
             eventEntity->x = 10;
         };
         
-        init();
+        app::init();
         IEntity testEntity;
         raftelId id = entityManger::addEntity(&testEntity);
         eventManger::addEvent(events::manualEvent, callback, id);
@@ -49,7 +49,7 @@ TEST(eventSystem, addAndCallEvent)
         eventManger::trigerEvent(events::manualEvent, testEvent);
         EXPECT_EQ(10, testEntity.x) << "wrong event id";
 
-        close();
+        app::close();
     }
     catch(const std::exception& e)
     {
@@ -68,7 +68,7 @@ TEST(eventSystem, EventWithMoreThenOneCallback)
             eventEntity->x++;
         };
         
-        init();
+        app::init();
         IEntity testEntity;
         raftelId id =  entityManger::addEntity(&testEntity);
         eventManger::addEvent(events::manualEvent, callback, id);
@@ -84,7 +84,7 @@ TEST(eventSystem, EventWithMoreThenOneCallback)
         eventManger::trigerEvent(events::manualEvent, testEvent);
         EXPECT_EQ(3, testEntity.x) << "entity didnt change";
 
-        close();
+        app::close();
     }
     catch(const std::exception& e)
     {
@@ -117,7 +117,7 @@ TEST(eventSystem, fewEntityWithFewEvents)
             eventEntity->x++;
         };
 
-        init();
+        app::init();
 
         IEntity testEntity;
         IEntity testEntity2;
@@ -148,7 +148,7 @@ TEST(eventSystem, fewEntityWithFewEvents)
         EXPECT_EQ(3, testEntity2.x) << "entity didnt change on 2";
         EXPECT_EQ(3, testEntity3.x) << "entity didnt change on 3";
 
-        close();
+        app::close();
     }
     catch(const std::exception& e)
     {

@@ -4,9 +4,7 @@
 #include <functional>
 #include <vector>
 
-
-#include <GLFW/glfw3.h>
-
+struct GLFWwindow;
 namespace raftelGraphicEngine {
 
 	class linuxWindow
@@ -20,9 +18,9 @@ namespace raftelGraphicEngine {
 
 			static GLFWwindow* Init(linuxWindow data);
 			static void Shutdown(GLFWwindow* Window);
-			static void onUpdate(linuxWindow window);
+			static void onUpdate(linuxWindow window, void *sendor);
 			static bool isOpen(GLFWwindow* Window);
-
+			static void setVSync(bool enabled);
 			GLFWwindow* Window;
 		
 			std::string Title;

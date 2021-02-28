@@ -76,7 +76,8 @@
         "events.h": "c",
         "linuxwindow.h": "c",
         "entity.h": "c",
-        "core.h": "c"
+        "core.h": "c",
+        "event.h": "c"
     },
     "files.exclude": {
         "build/": true,

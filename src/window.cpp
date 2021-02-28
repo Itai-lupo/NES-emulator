@@ -3,7 +3,16 @@
 #include <string>
 namespace raftelGraphicEngine
 {
+    bool windowManger::VSync = false;
     static std::vector<window> windows = std::vector<window>();
+
+    void windowManger::setVSync(bool enabled){ window::setVSync(VSync = enabled); }
+
+    void windowManger::init(){
+        setVSync(true);
+    }
+    void windowManger::close(){}
+
     raftelId windowManger::addWindow(const std::string& title, unsigned int width, unsigned int height)
     {
         window newWin(title, width, height);
@@ -12,11 +21,11 @@ namespace raftelGraphicEngine
         return windows.size() - 1;
     }
 
-    void windowManger::onUpdate()
+    void windowManger::onUpdate(IEventData *sendor)
     {
         for(window win: windows)
         {
-            win.onUpdate(win);
+            win.onUpdate(win, sendor);
         }
     }
 

@@ -3,15 +3,15 @@ CC = clang
 GTEST_DIR=/usr/src/googletest/
 
 
-TARGET_EXEC ?= libgeapp.lib libgecore.lib
+TARGET_EXEC ?= raftel.out
 
 BUILD_DIR ?= ./build
 OUTPUT_DIR ?= ./output
-SRC_DIRS ?= ./src ./headers
-TEST_DIRS ?= ./tests ./headers
+SRC_DIRS ?= ./src ./headers ./vendor
+TEST_DIRS ?= ./tests
 
-SRCS := $(shell find $(SRC_DIRS) -name *.cpp)
-TESTS := $(shell find $(TEST_DIRS) -name *.cpp)
+SRCS := $(shell find $(SRC_DIRS) -name *.c*)
+TESTS := $(shell find $(TEST_DIRS) -name *.c*)
 OBJS := $(SRCS:%=$(BUILD_DIR)/%.o)
 TEST_OBJS  := $(TESTS:%=$(BUILD_DIR)/%.o) $(subst ./build/./src/core.h.o,./build/./src/app.cpp.o,$(OBJS))
 DEPS := $(OBJS:.o=.d)
@@ -26,7 +26,7 @@ INC_FLAGS := $(addprefix -I,$(INC_DIRS))
 
 CPPFLAGS ?=  $(INC_FLAGS)  -MMD -MP  -g -Wall -Wreorder-ctor
 TEST_CPP_FLAGE = -lgtest -lgtest_main -lgmock  
-CFLAGS := -lstdc++ -lglog -lGL -lglfw -lGLEW  -lc -lrt -lm -ldl
+CFLAGS := -lstdc++ -lglog -lGL -lglfw  -lc -lrt -lm -ldl
 
 CXXFLAGS += -g -Wall -Wextra -pthread
 
@@ -36,6 +36,10 @@ $(OUTPUT_DIR)/$(TARGET_EXEC): $(OBJS)
 
 # c++ source
 $(BUILD_DIR)/%.cpp.o: %.cpp
+	$(MKDIR_P) $(dir $@)
+	$(CC)  $(CPPFLAGS) $(CXXFLAGS) -c $< -o $@
+
+$(BUILD_DIR)/%.c.o: %.c
 	$(MKDIR_P) $(dir $@)
 	$(CC)  $(CPPFLAGS) $(CXXFLAGS) -c $< -o $@
 

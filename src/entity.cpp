@@ -25,6 +25,7 @@ namespace raftelGraphicEngine
 
     IEntity *entityManger::getEntityById(raftelId id)
     {
+        if(id < 0) return NULL;
         return  entityManger::entitys[id];
     }
 

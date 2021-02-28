@@ -4,7 +4,6 @@
 #include "core.h"
 #include "entity.h"
 
-#include <GLFW/glfw3.h>
 
 
 namespace raftelGraphicEngine
@@ -18,7 +17,7 @@ namespace raftelGraphicEngine
         manualEvent,
         WindowClose, WindowResize, WindowFocus, WindowLostFocus, WindowMoved,
 		AppTick, AppUpdate, AppRender,
-		KeyPressed, KeyReleased, KeyRepeat,
+		KeyPressed, KeyReleased, KeyRepeat, KeyTyped,
 		MouseButtonPressed, MouseButtonReleased, MouseMoved, MouseScrolled,
         events_MAX
     };
@@ -52,6 +51,16 @@ namespace raftelGraphicEngine
         windowPtr window;
 
     };
+
+    struct keyTypedData: public IEventData
+    {
+        keyTypedData(unsigned int keycode, windowPtr window):
+            keycode(keycode), window(window){}
+
+        unsigned int keycode;
+        windowPtr window;
+
+    };
     
     struct mouseClickData: public IEventData
     {
@@ -80,6 +89,15 @@ namespace raftelGraphicEngine
 
         double xPos, yPos;
         windowPtr window;
+    };
+
+    struct onUpdateData: public IEventData
+    {
+        onUpdateData(uint64_t startTime, uint64_t currentTime, short DeltaTime):
+            startTime(startTime), currentTime(currentTime), DeltaTime(DeltaTime), IEventData(events::AppUpdate){}
+
+        uint64_t startTime, currentTime;
+        short DeltaTime;
     };
     
     struct event

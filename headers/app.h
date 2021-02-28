@@ -1,5 +1,11 @@
 
 namespace raftelGraphicEngine{
-    void init();
-    void close();
+    class app
+    {
+        public:
+            static void init();
+            static void close();
+            static void run();
+            inline static bool keepRunning = true;
+    };
 };

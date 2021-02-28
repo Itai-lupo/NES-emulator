@@ -37,6 +37,7 @@ namespace raftelGraphicEngine
         {
             if(windowID == NULL || e.getWindowID() == NULL || e.getWindowID() == windowID)
             {
+
                 IEntity *a = entityManger::getEntityById(e.getEntityID()); 
                 e.trigerEvent(a, sendor);
             }

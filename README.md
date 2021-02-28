@@ -12,3 +12,4 @@ dev tools:
 DLLS:
     glog
     glfw
+    
