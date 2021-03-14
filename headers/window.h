@@ -18,7 +18,7 @@ namespace raftelGraphicEngine
             static void init();
             static void close();
             
-            static raftelId addWindow(const std::string& title = "raftel engine", unsigned int width = 1280, unsigned int height = 720);
+            static raftelId addWindow(const std::string& title = "raftel engine", bool useImGui = false, unsigned int width = 1280, unsigned int height = 720);
             static void onUpdate(IEventData *sendor);
 
             static unsigned int getWidth(raftelId windowId);
@@ -31,3 +31,4 @@ namespace raftelGraphicEngine
             static bool isVSync(){ return VSync; };
     };
 }
+    

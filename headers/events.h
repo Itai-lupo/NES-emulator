@@ -35,7 +35,7 @@ namespace raftelGraphicEngine
     struct WindowResizeData: public IEventData
     {
         WindowResizeData(int width, int height, windowPtr window):
-            windowWidth(width), windowHeight(height), IEventData(events::WindowResize), window(window){}
+            IEventData(events::WindowResize), windowWidth(width), windowHeight(height), window(window){}
 
         int windowWidth, windowHeight;
         windowPtr window;
@@ -45,7 +45,7 @@ namespace raftelGraphicEngine
     struct KeyData: public IEventData
     {
         KeyData(int key, int scancode, int mods, windowPtr window):
-            key(key), scancode(scancode), mods(mods), IEventData(), window(window){}
+            IEventData(), key(key), scancode(scancode), mods(mods), window(window){}
 
         int key, scancode, mods;
         windowPtr window;
@@ -65,7 +65,7 @@ namespace raftelGraphicEngine
     struct mouseClickData: public IEventData
     {
         mouseClickData(int button, int mods, windowPtr window):
-            button(button), mods(mods), IEventData(), window(window){}
+            IEventData(), button(button), mods(mods), window(window){}
 
         int button, mods;
         windowPtr window;
@@ -75,7 +75,7 @@ namespace raftelGraphicEngine
     struct mouseScrollData: public IEventData
     {
         mouseScrollData(double xOffset, double yOffset, windowPtr window):
-            xOffset(xOffset), yOffset(yOffset), IEventData(events::MouseScrolled), window(window){}
+            IEventData(events::MouseScrolled), xOffset(xOffset), yOffset(yOffset), window(window){}
 
         double xOffset, yOffset;
         windowPtr window;
@@ -85,7 +85,7 @@ namespace raftelGraphicEngine
     struct mouseMoveData: public IEventData
     {
         mouseMoveData(double xPos, double yPos, windowPtr window):
-            xPos(xPos), yPos(yPos), window(window), IEventData(events::MouseScrolled){}
+            IEventData(events::MouseScrolled), xPos(xPos), yPos(yPos), window(window) {}
 
         double xPos, yPos;
         windowPtr window;
@@ -94,7 +94,7 @@ namespace raftelGraphicEngine
     struct onUpdateData: public IEventData
     {
         onUpdateData(uint64_t startTime, uint64_t currentTime, short DeltaTime):
-            startTime(startTime), currentTime(currentTime), DeltaTime(DeltaTime), IEventData(events::AppUpdate){}
+            IEventData(events::AppUpdate), startTime(startTime), currentTime(currentTime), DeltaTime(DeltaTime){}
 
         uint64_t startTime, currentTime;
         short DeltaTime;
@@ -104,7 +104,7 @@ namespace raftelGraphicEngine
     {
         public:
             event(events eventType,  eventCallbackFunc callback, int entityID, windowPtr window)
-                :eventType(eventType), callback(callback), entityID(entityID), window(window){};
+                :window(window), eventType(eventType), callback(callback), entityID(entityID){};
 
             void trigerEvent(IEntity *eventEntity, IEventData *sendor)
             {
@@ -130,7 +130,7 @@ namespace raftelGraphicEngine
         public:
             static void init();
             static void close();
-            static raftelId addEvent(events eventType, eventCallbackFunc callback, int entityID, windowPtr windowID = NULL);
+            static raftelId addEvent(events eventType, eventCallbackFunc callback, raftelId entityID, windowPtr windowID = NULL);
             static raftelId addEvent(event *eventToAdd);
             static void trigerEvent(events eventType, IEventData *sendor, windowPtr windowID = NULL);
     };

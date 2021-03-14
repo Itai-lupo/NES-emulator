@@ -9,10 +9,10 @@ namespace raftelGraphicEngine
     {
         public:
             IEntity(){}
-            int x = 0, y = 0, z = 0;
-            int spriteId = 0;
-            int vertexShaderId = 0;
-            int fragmentShaderId = 0;
+            int x = 0, y = 0, z = 0, width = 0, hight = 0;
+            raftelId spriteId = 0;
+            raftelId vertexShaderId = 0;
+            raftelId fragmentShaderId = 0;
             raftelId id;
     };
 

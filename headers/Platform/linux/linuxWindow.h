@@ -1,5 +1,5 @@
 #pragma once
-
+#include "coreWindow.h"
 #include <string>
 #include <functional>
 #include <vector>
@@ -7,13 +7,13 @@
 struct GLFWwindow;
 namespace raftelGraphicEngine {
 
-	class linuxWindow
+	class linuxWindow: public coreWindow
 	{
 		private:
 
 		public:
-			linuxWindow(const std::string& title, unsigned int width, unsigned int height):
-				Title(title), Width(width), Height(height){}
+			linuxWindow(const std::string& title, unsigned int width, unsigned int height, bool useImGui):
+				coreWindow(title, width, height, useImGui){}
 
 
 			static GLFWwindow* Init(linuxWindow data);
@@ -23,9 +23,6 @@ namespace raftelGraphicEngine {
 			static void setVSync(bool enabled);
 			GLFWwindow* Window;
 		
-			std::string Title;
-			unsigned int Width, Height;
-
 			
 	};
 }

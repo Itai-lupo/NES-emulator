@@ -8,7 +8,9 @@
 
 #elif defined(__linux__) // linux
     #include "linuxWindow.h"
+    #include "linuxInput.h"
     typedef raftelGraphicEngine::linuxWindow window;
+    typedef raftelGraphicEngine::linuxInput input;
     typedef GLFWwindow* windowPtr;
 #elif defined(__APPLE__) && defined(__MACH__) // Apple OSX and iOS (Darwin)
     #include <TargetConditionals.h>

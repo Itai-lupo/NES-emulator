@@ -1,6 +1,8 @@
 #include "window.h"
 #include "logger.h"
 #include <string>
+
+
 namespace raftelGraphicEngine
 {
     bool windowManger::VSync = false;
@@ -13,9 +15,9 @@ namespace raftelGraphicEngine
     }
     void windowManger::close(){}
 
-    raftelId windowManger::addWindow(const std::string& title, unsigned int width, unsigned int height)
+    raftelId windowManger::addWindow(const std::string& title, bool useImGui, unsigned int width, unsigned int height)
     {
-        window newWin(title, width, height);
+        window newWin(title, width, height, useImGui);
         newWin.Window =  newWin.Init(newWin);
         windows.push_back(newWin);
         return windows.size() - 1;

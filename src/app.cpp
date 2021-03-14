@@ -12,7 +12,8 @@
 
 namespace raftelGraphicEngine
 {
-    void onUpdate(IEntity *eventEntity, IEventData *sendor)
+    bool app::keepRunning = true;
+    void onUpdate(__attribute__((unused)) IEntity *eventEntity, IEventData *sendor)
     {
         windowManger::onUpdate(sendor);
     }

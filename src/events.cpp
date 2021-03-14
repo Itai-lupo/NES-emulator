@@ -33,11 +33,11 @@ namespace raftelGraphicEngine
     void eventManger::trigerEvent(events eventType, IEventData *sendor, windowPtr windowID)
     {
         sendor->eventType = eventType;
+        sendor->window = windowID;
         for(event e : eventManger::eventList[eventType]) 
         {
             if(windowID == NULL || e.getWindowID() == NULL || e.getWindowID() == windowID)
             {
-
                 IEntity *a = entityManger::getEntityById(e.getEntityID()); 
                 e.trigerEvent(a, sendor);
             }
