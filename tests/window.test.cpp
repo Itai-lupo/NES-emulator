@@ -67,12 +67,11 @@ TEST(window, openWindowAndUseEvent)
         mouseMoveData* sendorData = dynamic_cast<mouseMoveData*>(sendor);
         eventEntity->x = sendorData->xPos;
         eventEntity->y = sendorData->yPos;
-        std::string msg = 
-            "mouseMoveDatacallbackWin1: " + 
+        
+        logger::LogInfo("mouseMoveDatacallbackWin1: " + 
             std::to_string(sendorData->xPos) + 
             ", " + 
-            std::to_string(sendorData->yPos);
-        logger::LogInfo(msg);
+            std::to_string(sendorData->yPos));
     };
 
 
@@ -135,15 +134,14 @@ TEST(window, openWindowAndUseEvent)
     raftelId win1 =  windowManger::addWindow("win 1");
     raftelId win2 = windowManger::addWindow("win 2", true);
 
-    std::string msg = "win1: " + std::to_string(win1) + ", win2: " + std::to_string(win2);
-    logger::LogInfo(msg);
+    logger::LogInfo("win1: " + std::to_string(win1) + ", win2: " + std::to_string(win2));
     
     IEntity testEntity;
     testEntity.width = 1280;
     testEntity.hight = 720;
     raftelId id = entityManger::addEntity(&testEntity);
     eventManger::addEvent(events::MouseMoved, mouseMoveDatacallbackWin1, id, windowManger::raftelIdToWindowId(win1));
-    eventManger::addEvent(events::AppRender, onRenderWin1, id, windowManger::raftelIdToWindowId(win1));
+    // eventManger::addEvent(events::AppRender, onRenderWin1, id, windowManger::raftelIdToWindowId(win1));
     eventManger::addEvent(events::WindowResize, Window1Resize, id, windowManger::raftelIdToWindowId(win1));
 
 
@@ -153,8 +151,7 @@ TEST(window, openWindowAndUseEvent)
     eventManger::addEvent(events::WindowClose, WindowClose, -1);
 
 
-    msg = "event added sucssfly";
-    logger::LogInfo(msg);
+    logger::LogInfo("event added sucssfly");
 
     
     app::run();

@@ -4,7 +4,7 @@
 namespace raftelGraphicEngine
 {
     static bool wasInit = false; 
-    void logger::init(std::string& pathToLogs, std::string& projectName)
+    void logger::init(const std::string& pathToLogs, const std::string& projectName)
     {
         if(wasInit) return;
         google::InitGoogleLogging(projectName.c_str());
@@ -23,43 +23,43 @@ namespace raftelGraphicEngine
         // google::ShutdownGoogleLogging();
     }
 
-    void logger::LogInfo(std::string& toLog)
+    void logger::LogInfo(const std::string& toLog)
     {
         LOG(INFO) << toLog;
     }
 
-    void logger::LogWarning(std::string& toLog)
+    void logger::LogWarning(const std::string& toLog)
     {
         LOG(WARNING) << toLog;
     }
     
-    void logger::LogError(std::string& toLog)
+    void logger::LogError(const std::string& toLog)
     {
         LOG(ERROR) << toLog;
     }
     
-    void logger::LogFatal(std::string& toLog)
+    void logger::LogFatal(const std::string& toLog)
     {
         LOG(FATAL) << toLog;
     }
     
 
-    void logger::condtionLogInfo(std::string& toLog, bool condition)
+    void logger::condtionLogInfo(const std::string& toLog, bool condition)
     {
         LOG_IF(INFO, condition) << toLog;
     }
     
-    void logger::condtionLogWarning(std::string& toLog, bool condition)
+    void logger::condtionLogWarning(const std::string& toLog, bool condition)
     {
         LOG_IF(WARNING, condition) << toLog;
     }
     
-    void logger::condtionLogError(std::string& toLog, bool condition)
+    void logger::condtionLogError(const std::string& toLog, bool condition)
     {
         LOG_IF(ERROR, condition) << toLog;
     }
     
-    void logger::condtionLogFatal(std::string& toLog, bool condition)
+    void logger::condtionLogFatal(const std::string& toLog, bool condition)
     {
         LOG_IF(FATAL, condition) << toLog;
     }

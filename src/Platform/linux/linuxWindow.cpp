@@ -16,6 +16,7 @@ namespace raftelGraphicEngine {
 	void WindowSizeCallback(GLFWwindow* window, int width, int height)
 	{
 		WindowResizeData *eventData = new WindowResizeData(width, height, window);
+		
 		eventManger::trigerEvent(events::WindowResize, eventData, window);
 		std::string msg = "WindowSizeCallback " + std::to_string(width) + ", " + std::to_string(height);
 		logger::LogInfo(msg);
@@ -90,9 +91,10 @@ namespace raftelGraphicEngine {
 	}
 
 
-	GLFWwindow* linuxWindow::Init(linuxWindow data)
+	GLFWwindow* linuxWindow::Init(linuxWindow *data)
 	{
-		std::string msg = "Creating window " +  std::to_string(data.useImGui) + ", " +  std::to_string(data.Height) + ", " +   std::to_string(data.Width);
+
+		std::string msg = "Creating window " +  std::to_string(data->useImGui) + ", " +  std::to_string(data->Height) + ", " +   std::to_string(data->Width);
 		logger::LogInfo(msg);
 		
 
@@ -111,14 +113,14 @@ namespace raftelGraphicEngine {
 			s_GLFWInitialized = true;
 		}
 
-		GLFWwindow* Window = glfwCreateWindow((int)data.Width, (int)data.Height, data.Title.c_str(), NULL, NULL);
+		GLFWwindow* Window = glfwCreateWindow((int)data->Width, (int)data->Height, data->Title.c_str(), NULL, NULL);
 		glfwMakeContextCurrent(Window);
 
 		int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
 		msg = "faild to initalize glad";
 		logger::condtionLogFatal(msg, !status);
 
-		glfwSetWindowUserPointer(Window, &data);
+		glfwSetWindowUserPointer(Window, data);
 
 		glfwSetWindowSizeCallback(Window, WindowSizeCallback);
 		glfwSetWindowCloseCallback(Window, WindowCloseCallback);
@@ -128,7 +130,7 @@ namespace raftelGraphicEngine {
 		glfwSetCursorPosCallback(Window, CursorPosCallback);
 		glfwSetCharCallback(Window, SetCharCallback);
 
-		if(data.useImGui)
+		if(data->useImGui)
 			initImGui(Window);
 
 		return Window;
@@ -140,21 +142,23 @@ namespace raftelGraphicEngine {
 		glfwDestroyWindow(Window);
 	}
 
-	void linuxWindow::onUpdate(linuxWindow data, void *sendor)
+	void linuxWindow::onUpdate(linuxWindow *data, void *sendor)
 	{
+        logger::LogInfo(data->Title + "onUpdate width: " + std::to_string(data->Width) + " hight: " + std::to_string(data->Height));
+		
 		onUpdateData *eventData = static_cast<onUpdateData *>(sendor);
 
-		glfwMakeContextCurrent(data.Window);
+		glfwMakeContextCurrent(data->Window);
 
 		IEventData *renderData = new IEventData(events::AppRender);
-		eventData->window = data.Window;
-		eventManger::trigerEvent(events::AppRender, renderData, data.Window);
+		eventData->window = data->Window;
+		eventManger::trigerEvent(events::AppRender, renderData, data->Window);
 
 
-		if(data.useImGui)
-			onImGuiUpdate(data, eventData);
+		if(data->useImGui)
+			onImGuiUpdate(*data, eventData);
 
-		glfwSwapBuffers(data.Window);
+		glfwSwapBuffers(data->Window);
         glfwPollEvents();
 	}
 
@@ -167,6 +171,4 @@ namespace raftelGraphicEngine {
 	{
 		glfwSwapInterval(enabled);
 	}
-
-
 }

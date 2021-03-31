@@ -46,6 +46,8 @@ $(BUILD_DIR)/%.c.o: %.c
 
 .PHONY: clean
 
+test: $(OUTPUT_DIR)/test.out
+
 $(OUTPUT_DIR)/test.out: $(TEST_OBJS)
 	mkdir -p output
 	$(CC)  $(CFLAGS) $(CPPFLAGS)  $(TEST_CPP_FLAGE) $(CXXFLAGS) $(TEST_OBJS) -o output/test.out $(LDFLAGS)

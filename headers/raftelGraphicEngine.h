@@ -5,5 +5,6 @@
 #include "events.h"
 #include "entity.h"
 #include "logger.h"
-
+#include "keycodes.h"
+#include "MouseButtonCodes.h"
 #include "window.h"

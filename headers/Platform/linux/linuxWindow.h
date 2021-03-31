@@ -16,9 +16,9 @@ namespace raftelGraphicEngine {
 				coreWindow(title, width, height, useImGui){}
 
 
-			static GLFWwindow* Init(linuxWindow data);
+			static GLFWwindow* Init(linuxWindow *data);
 			static void Shutdown(GLFWwindow* Window);
-			static void onUpdate(linuxWindow window, void *sendor);
+			static void onUpdate(linuxWindow *window, void *sendor);
 			static bool isOpen(GLFWwindow* Window);
 			static void setVSync(bool enabled);
 			GLFWwindow* Window;

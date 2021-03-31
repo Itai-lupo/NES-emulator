@@ -82,5 +82,6 @@
     "files.exclude": {
         "build/": true,
         "output/": true
-    }
+    },
+    "C_Cpp.errorSquiggles": "Disabled"
 }

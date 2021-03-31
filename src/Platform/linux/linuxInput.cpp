@@ -64,7 +64,7 @@ namespace raftelGraphicEngine
     }
     
     float linuxInput::GetMouseY(windowPtr windowId)
-    {
+    { 
         double xpos, ypos;
         glfwGetCursorPos(windowId, &xpos, &ypos);
         return ypos;

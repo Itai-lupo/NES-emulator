@@ -19,6 +19,7 @@ namespace raftelGraphicEngine
 		AppTick, AppUpdate, AppRender,
 		KeyPressed, KeyReleased, KeyRepeat, KeyTyped,
 		MouseButtonPressed, MouseButtonReleased, MouseMoved, MouseScrolled,
+        ImGuiRender,
         events_MAX
     };
 
