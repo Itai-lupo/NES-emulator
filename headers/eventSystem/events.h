@@ -6,7 +6,7 @@
 
 
 
-namespace raftelGraphicEngine
+namespace LaughTaleEngine
 {
     struct event;
     struct IEventData;
@@ -113,26 +113,29 @@ namespace raftelGraphicEngine
             }
 
             events getEventType() { return eventType; }
-            raftelId getEntityID() { return entityID; }
+            entityTaleId getEntityID() { return entityID; }
             windowPtr getWindowID() { return window; }
 
-            raftelId id;
+            eventLaughId id;
         private:
             windowPtr window;
             events eventType;
             eventCallbackFunc  callback;
-            raftelId entityID;
+            entityTaleId entityID;
     };
 
     class eventManger
     {
         private:
             static std::vector<event> *eventList;
+            static u_int32_t nextEventId;
         public:
             static void init();
             static void close();
-            static raftelId addEvent(events eventType, eventCallbackFunc callback, raftelId entityID, windowPtr windowID = NULL);
-            static raftelId addEvent(event *eventToAdd);
+            static eventLaughId addEvent(events eventType, eventCallbackFunc callback, entityTaleId entityID, windowPtr windowID = NULL);
+            static eventLaughId addEvent(event *eventToAdd);
             static void trigerEvent(events eventType, IEventData *sendor, windowPtr windowID = NULL);
+            static void removeEvent(events eventType, eventLaughId eventToRemove);
+
     };
 }

@@ -8,7 +8,7 @@
 #include "core.h"
 
 
-namespace raftelGraphicEngine
+namespace LaughTaleEngine
 {
     class windowManger
     {
@@ -18,13 +18,13 @@ namespace raftelGraphicEngine
             static void init();
             static void close();
             
-            static raftelId addWindow(const std::string& title = "raftel engine", bool useImGui = false, unsigned int width = 1280, unsigned int height = 720);
+            static windowPieceId addWindow(const std::string& title = "raftel engine", bool useImGui = false, unsigned int width = 1280, unsigned int height = 720);
             static void onUpdate(IEventData *sendor);
 
-            static unsigned int getWidth(raftelId windowId);
-            static unsigned int getHeight(raftelId windowId);
+            static unsigned int getWidth(windowPieceId windowId);
+            static unsigned int getHeight(windowPieceId windowId);
 
-            static windowPtr raftelIdToWindowId(raftelId windowId);
+            static windowPtr raftelIdToWindowId(windowPieceId windowId);
 
             static void setVSync(bool enabled);
 

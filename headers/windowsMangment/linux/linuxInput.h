@@ -2,7 +2,7 @@
 #include <utility>
 
 struct GLFWwindow;
-namespace raftelGraphicEngine
+namespace LaughTaleEngine
 {
     class linuxInput
     {

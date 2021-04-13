@@ -13,7 +13,7 @@
 #include <GLFW/glfw3.h>
 
 
-namespace raftelGraphicEngine 
+namespace LaughTaleEngine 
 {
     void ImGuiMouseButtonPressed(__attribute__((unused)) IEntity *eventEntity, IEventData *sendor)
     {
@@ -51,8 +51,10 @@ namespace raftelGraphicEngine
     void ImGuiWindowResize(__attribute__((unused)) IEntity *eventEntity, IEventData *sendor)
     {
         WindowResizeData *eventData = static_cast<WindowResizeData *>(sendor);
-        std::string msg = "ImGuiWindowResize" + std::to_string(eventData->windowWidth) + ", " +  std::to_string(eventData->windowHeight);
-        logger::LogInfo(msg);
+        LAUGHTALE_ENGINR_LOG_INFO(
+            "ImGuiWindowResize" + 
+            std::to_string(eventData->windowWidth) + ", " +  
+            std::to_string(eventData->windowHeight));
 
         ImGuiIO& io = ImGui::GetIO();
         io.DisplaySize = ImVec2( eventData->windowWidth, eventData->windowHeight);
@@ -64,8 +66,7 @@ namespace raftelGraphicEngine
     {
         KeyData *eventData = static_cast<KeyData *>(sendor);
 
-        std::string msg = "ImGuiKeyPressed";
-        logger::LogInfo(msg);
+        LAUGHTALE_ENGINR_LOG_INFO("ImGuiKeyPressed");
 
         ImGuiIO& io = ImGui::GetIO();
         io.KeysDown[eventData->key] = true;
@@ -75,8 +76,7 @@ namespace raftelGraphicEngine
         io.KeyAlt = io.KeysDown[GLFW_KEY_LEFT_ALT] || io.KeysDown[GLFW_KEY_RIGHT_ALT];
         io.KeySuper = io.KeysDown[GLFW_KEY_LEFT_SUPER] || io.KeysDown[GLFW_KEY_RIGHT_SUPER];
 
-        msg = "ImGuiKeyPressedE";
-        logger::LogInfo(msg);
+        LAUGHTALE_ENGINR_LOG_INFO("ImGuiKeyPressed");
     }
 
     void ImGuiKeyReleased(__attribute__((unused)) IEntity *eventEntity, IEventData *sendor)
@@ -107,37 +107,12 @@ namespace raftelGraphicEngine
 
         ImGuiIO& io = ImGui::GetIO(); (void)io;
 		io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;
-		// io.ConfigFlags |= ImGuiConfigFlags_DockingEnable;
-		// io.ConfigFlags |= ImGuiConfigFlags_ViewportsEnable;     
 
-        ImGuiStyle& style = ImGui::GetStyle();
-		// if (io.ConfigFlags & ImGuiConfigFlags_ViewportsEnable)
-		// {
-			style.WindowRounding = 0.0f;
-			style.Colors[ImGuiCol_WindowBg].w = 1.0f;
-		// }
         ImGui_ImplGlfw_InitForOpenGL(window, true);
         ImGui_ImplOpenGL3_Init("#version 410");
-        
-        // eventManger::addEvent(events::MouseButtonPressed, ImGuiMouseButtonPressed, -1, window);
-        // eventManger::addEvent(events::MouseButtonReleased, ImGuiMouseButtonReleased, -1, window);
-        // eventManger::addEvent(events::MouseMoved, ImGuiMouseMoved, -1, window);
-        // eventManger::addEvent(events::MouseScrolled, ImGuiMouseScrolled, -1, window);
-        // eventManger::addEvent(events::KeyPressed, ImGuiKeyPressed, -1, window);
-        // eventManger::addEvent(events::KeyRepeat, ImGuiKeyPressed, -1, window);
-        // eventManger::addEvent(events::KeyReleased, ImGuiKeyReleased, -1, window);
-        // eventManger::addEvent(events::KeyTyped, ImGuiKeyTyped, -1, window);
-        // eventManger::addEvent(events::WindowResize, ImGuiWindowResize, -1, window);
 
-        std::string msg = "imgui init successfully";
-        logger::LogInfo(msg);
+        LAUGHTALE_ENGINR_LOG_INFO("imgui init successfully");
     }
-
-    void OnImGuiRender()
-	{
-		static bool show = true;
-		ImGui::ShowDemoWindow(&show);
-	}
 
     void onImGuiUpdate(linuxWindow data, onUpdateData *eventData)
     {
@@ -146,19 +121,17 @@ namespace raftelGraphicEngine
 		ImGui_ImplGlfw_NewFrame();
 		ImGui::NewFrame();
 
-        OnImGuiRender();
         eventManger::trigerEvent(events::ImGuiRender, eventData, data.Window);
+        
 		io.DisplaySize = ImVec2(data.Width, data.Height);
         ImGui::Render();
 		ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
-
     }
 
     void closeImGui()
     {
-        ImGui_ImplOpenGL3_Shutdown();
+    	ImGui_ImplOpenGL3_Shutdown();
 		ImGui_ImplGlfw_Shutdown();
 		ImGui::DestroyContext();
     }
 }
-

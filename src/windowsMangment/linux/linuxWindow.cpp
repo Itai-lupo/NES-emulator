@@ -9,7 +9,7 @@
 
 #include <string>
 
-namespace raftelGraphicEngine {
+namespace LaughTaleEngine {
 	
 	static bool s_GLFWInitialized = false;
 
@@ -18,8 +18,10 @@ namespace raftelGraphicEngine {
 		WindowResizeData *eventData = new WindowResizeData(width, height, window);
 		
 		eventManger::trigerEvent(events::WindowResize, eventData, window);
-		std::string msg = "WindowSizeCallback " + std::to_string(width) + ", " + std::to_string(height);
-		logger::LogInfo(msg);
+		LAUGHTALE_ENGINR_LOG_INFO(
+			"WindowSizeCallback " + 
+			std::to_string(width) + ", " + 
+			std::to_string(height));
 	}
 
 	void WindowCloseCallback(GLFWwindow* window)
@@ -28,8 +30,7 @@ namespace raftelGraphicEngine {
 		eventData->window = window;
 		eventManger::trigerEvent(events::WindowClose, eventData, window);
 
-		std::string msg = "WindowCloseCallback";
-		logger::LogInfo(msg);
+		LAUGHTALE_ENGINR_LOG_INFO("WindowCloseCallback");
 	}
 
 	void KeyCallback(GLFWwindow* window, int key, int scancode, int action, int mods)
@@ -44,8 +45,10 @@ namespace raftelGraphicEngine {
 
 		eventManger::trigerEvent(eventData->eventType, eventData, window);
 
-		std::string msg = "KeyCallback " + std::to_string(eventData->eventType) + ", " + (char)key;
-		logger::LogInfo(msg);
+		LAUGHTALE_ENGINR_LOG_INFO(
+			"KeyCallback " + 
+			std::to_string(eventData->eventType) + ", " + 
+			(char)key);
 	}
 
 	void MouseButtonCallback(GLFWwindow* window, int button, int action, int mods)
@@ -58,8 +61,7 @@ namespace raftelGraphicEngine {
 		);
 
 		eventManger::trigerEvent(eventData->eventType, eventData, window);
-		std::string msg = "MouseButtonCallback";
-		logger::LogInfo(msg);
+		LAUGHTALE_ENGINR_LOG_INFO("MouseButtonCallback");
 	}
 
 	void ScrollCallback(GLFWwindow* window, double xOffset, double yOffset)
@@ -68,8 +70,7 @@ namespace raftelGraphicEngine {
 
 		eventManger::trigerEvent(events::MouseScrolled, eventData, window);
 
-		std::string msg = "ScrollCallback";
-		logger::LogInfo(msg);
+		LAUGHTALE_ENGINR_LOG_INFO("ScrollCallback");
 	}
 
 	void CursorPosCallback(GLFWwindow* window, double xPos, double yPos)
@@ -77,8 +78,7 @@ namespace raftelGraphicEngine {
 		mouseMoveData *eventData = new mouseMoveData(xPos, yPos, window);
 		eventManger::trigerEvent(events::MouseMoved, eventData, window);
 
-		std::string msg = "CursorPosCallback";
-		logger::LogInfo(msg);	
+		LAUGHTALE_ENGINR_LOG_INFO("CursorPosCallback");	
 	}
 
 	void SetCharCallback(GLFWwindow* window, unsigned int keycode)
@@ -86,29 +86,37 @@ namespace raftelGraphicEngine {
 		keyTypedData *eventData = new keyTypedData(keycode, window);
 		eventManger::trigerEvent(events::KeyTyped, eventData, window);
 
-		std::string msg = "SetCharCallback";
-		logger::LogInfo(msg);
+		LAUGHTALE_ENGINR_LOG_INFO("SetCharCallback");
 	}
-
 
 	GLFWwindow* linuxWindow::Init(linuxWindow *data)
 	{
-
-		std::string msg = "Creating window " +  std::to_string(data->useImGui) + ", " +  std::to_string(data->Height) + ", " +   std::to_string(data->Width);
-		logger::LogInfo(msg);
-		
+		LAUGHTALE_ENGINR_LOG_INFO(
+			"Creating window: " +  
+			std::to_string(data->useImGui) + ", " +  
+			std::to_string(data->Height) + ", " +   
+			std::to_string(data->Width)
+		);
 
 		if (!s_GLFWInitialized)
 		{
-			glfwSetErrorCallback([](int error, const char* description){ 
-				std::string msg =  "glfw error: error code: " + std::to_string(error) + "\t error message" + description;
-				logger::LogError(msg);
-			});
+			glfwSetErrorCallback(
+				[](int error, const char* description)
+				{
+					LAUGHTALE_ENGINR_LOG_ERROR(
+						"glfw error: \nerror code: " + 
+						std::to_string(error) + 
+						",\t error message" + 
+						description
+						);
+				}
+			);
 
 			int success = glfwInit();
 
-            std::string msg =  "Could not intialize GLFW!" + std::to_string(success);
-			logger::condtionLogFatal(msg, success != GLFW_TRUE);
+			LAUGHTALE_ENGINR_CONDTION_LOG_FATAL(
+				"Could not intialize GLFW!" + std::to_string(success),
+				 success != GLFW_TRUE);
 
 			s_GLFWInitialized = true;
 		}
@@ -117,8 +125,7 @@ namespace raftelGraphicEngine {
 		glfwMakeContextCurrent(Window);
 
 		int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
-		msg = "faild to initalize glad";
-		logger::condtionLogFatal(msg, !status);
+		LAUGHTALE_ENGINR_CONDTION_LOG_FATAL("faild to initalize glad", !status);
 
 		glfwSetWindowUserPointer(Window, data);
 
@@ -136,7 +143,6 @@ namespace raftelGraphicEngine {
 		return Window;
 	}
 
-
 	void linuxWindow::Shutdown(GLFWwindow* Window)
 	{
 		glfwDestroyWindow(Window);
@@ -144,8 +150,6 @@ namespace raftelGraphicEngine {
 
 	void linuxWindow::onUpdate(linuxWindow *data, void *sendor)
 	{
-        logger::LogInfo(data->Title + "onUpdate width: " + std::to_string(data->Width) + " hight: " + std::to_string(data->Height));
-		
 		onUpdateData *eventData = static_cast<onUpdateData *>(sendor);
 
 		glfwMakeContextCurrent(data->Window);

@@ -1,9 +1,9 @@
 #include <gtest/gtest.h>
 
 #include <vector> 
-#include "raftelGraphicEngine.h"
+#include "LaughTaleEngine.h"
 
-using namespace raftelGraphicEngine;
+using namespace LaughTaleEngine;
 
 struct testEventData: public IEventData
 {
@@ -39,11 +39,10 @@ TEST(eventSystem, addAndCallEvent)
         
         app::init();
         IEntity testEntity;
-        raftelId id = entityManger::addEntity(&testEntity);
+        entityTaleId id = entityManger::addEntity(&testEntity);
         eventManger::addEvent(events::manualEvent, callback, id);
-        std::string msg("event added sucssfly");
 
-        logger::LogInfo(msg);
+        LAUGHTALE_ENGINR_LOG_INFO("event added sucssfly");
 
         testEventData *testEvent = new testEventData(1);
         eventManger::trigerEvent(events::manualEvent, testEvent);
@@ -70,14 +69,14 @@ TEST(eventSystem, EventWithMoreThenOneCallback)
         
         app::init();
         IEntity testEntity;
-        raftelId id =  entityManger::addEntity(&testEntity);
+        entityTaleId id =  entityManger::addEntity(&testEntity);
         eventManger::addEvent(events::manualEvent, callback, id);
         eventManger::addEvent(events::manualEvent, callback, id);
         eventManger::addEvent(events::manualEvent, callback, id);
 
-        std::string msg("event added sucssfly: " + std::to_string(id));
-    
-        logger::LogInfo(msg);
+        LAUGHTALE_ENGINR_LOG_INFO(
+            "event added sucssfly: " + 
+            std::to_string(id));
 
         testEventData *testEvent = new testEventData(1);
 
@@ -123,9 +122,9 @@ TEST(eventSystem, fewEntityWithFewEvents)
         IEntity testEntity2;
         IEntity testEntity3;
 
-        raftelId id =  entityManger::addEntity(&testEntity);
-        raftelId id2 =  entityManger::addEntity(&testEntity2);
-        raftelId id3 =  entityManger::addEntity(&testEntity3);
+        entityTaleId id =  entityManger::addEntity(&testEntity);
+        entityTaleId id2 =  entityManger::addEntity(&testEntity2);
+        entityTaleId id3 =  entityManger::addEntity(&testEntity3);
         
         eventManger::addEvent(events::manualEvent, callback, id);
         eventManger::addEvent(events::manualEvent, callback, id);
@@ -137,9 +136,8 @@ TEST(eventSystem, fewEntityWithFewEvents)
         eventManger::addEvent(events::manualEvent, callback3, id3);
         eventManger::addEvent(events::manualEvent, callback3, id3);
 
-        std::string msg("event added sucssfly: " + std::to_string(id));
     
-        logger::LogInfo(msg);
+        LAUGHTALE_ENGINR_LOG_INFO("event added sucssfly: " + std::to_string(id));
 
         testEventData *testEvent = new testEventData(1);
         eventManger::trigerEvent(events::manualEvent, testEvent);

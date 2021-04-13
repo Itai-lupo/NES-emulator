@@ -2,10 +2,10 @@
 #include <stdlib.h> 
 #include "logger.h"
 
-namespace raftelGraphicEngine
+namespace LaughTaleEngine
 {
     std::vector<event> *eventManger::eventList = new std::vector<event>[events::events_MAX];
-
+    u_int32_t eventManger::nextEventId = 0;
 
     void eventManger::init()
     {
@@ -17,17 +17,30 @@ namespace raftelGraphicEngine
         
     }
 
-    raftelId eventManger::addEvent(events eventType, eventCallbackFunc callback, raftelId entityID, windowPtr windowID)
+    eventLaughId eventManger::addEvent(events eventType, eventCallbackFunc callback, entityTaleId entityID, windowPtr windowID)
     {
         event *newEvent = new event(eventType, callback, entityID, windowID);
         return eventManger::addEvent(newEvent);
     }
 
-    raftelId eventManger::addEvent(event *eventToAdd)
+    eventLaughId eventManger::addEvent(event *eventToAdd)
     {
+        eventToAdd->id = eventManger::nextEventId;
+        eventManger::nextEventId++;
         eventManger::eventList[eventToAdd->getEventType()].push_back(*eventToAdd); 
-        eventToAdd->id = eventManger::eventList[eventToAdd->getEventType()].size() - 1;
         return eventToAdd->id;
+    }
+
+    void eventManger::removeEvent(events eventType, eventLaughId eventToRemove)
+    {
+        for (uint64_t i = 0; i < eventManger::eventList[eventType].size(); i++)
+        {
+            if (eventManger::eventList[eventType][i].id == eventToRemove)
+            {
+                eventManger::eventList[eventType].erase(eventManger::eventList[eventType].begin() + i);
+                return;
+            }   
+        }        
     }
 
     void eventManger::trigerEvent(events eventType, IEventData *sendor, windowPtr windowID)

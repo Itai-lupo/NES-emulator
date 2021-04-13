@@ -3,7 +3,7 @@
 #include "core.h"
 #include <GLFW/glfw3.h>
 
-namespace raftelGraphicEngine
+namespace LaughTaleEngine
 {
     bool linuxInput::isKeyPressed(int keycode, raftelId windowId)
     {

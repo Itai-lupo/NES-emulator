@@ -10,7 +10,7 @@
 #include <string>
 
 
-namespace raftelGraphicEngine
+namespace LaughTaleEngine
 {
     bool app::keepRunning = true;
     void onUpdate(__attribute__((unused)) IEntity *eventEntity, IEventData *sendor)
@@ -21,7 +21,7 @@ namespace raftelGraphicEngine
     void app::init()
     {
         std::string pathToLogs =  "./logs/";
-        std::string projectName =  "raftelGraphicEngine";
+        std::string projectName =  "LaughTaleEngine";
         logger::init(pathToLogs, projectName);
         eventManger::init();
         entityManger::init();

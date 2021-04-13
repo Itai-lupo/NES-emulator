@@ -1,5 +1,5 @@
 
-namespace raftelGraphicEngine{
+namespace LaughTaleEngine{
     class app
     {
         public:

@@ -4,14 +4,14 @@
 #include <string>
 #include <functional>
 
-class windowEntity: public raftelGraphicEngine::IEntity
+class windowEntity: public LaughTaleEngine::IEntity
 {
     public:
         windowEntity(window *win): win(win) {}
         window *win;
 };
 
-namespace raftelGraphicEngine
+namespace LaughTaleEngine
 {
     bool windowManger::VSync = false;
     static std::vector<window*> windows = std::vector<window*>();
@@ -21,49 +21,46 @@ namespace raftelGraphicEngine
     void windowManger::init(){
         setVSync(true);
     }
-    void windowManger::close(){}
-
     
+    void windowManger::close(){}    
 
     void onWindowResize(IEntity *eventEntity, IEventData *sendor)
     {
         WindowResizeData* sendorData = dynamic_cast<WindowResizeData*>(sendor);
         windowEntity* entityData = static_cast<windowEntity*>(eventEntity);
-        logger::LogInfo("event width: " + std::to_string(sendorData->windowWidth) + " hight: " + std::to_string(sendorData->windowHeight));
-        logger::LogInfo("entity width: " + std::to_string(entityData->win->Width) + " hight: " + std::to_string(entityData->win->Height));
+        LAUGHTALE_ENGINR_LOG_INFO("event width: " + std::to_string(sendorData->windowWidth) + " hight: " + std::to_string(sendorData->windowHeight));
+        LAUGHTALE_ENGINR_LOG_INFO("entity width: " + std::to_string(entityData->win->Width) + " hight: " + std::to_string(entityData->win->Height));
 
         entityData->win->Width = sendorData->windowWidth;
         entityData->win->Height = sendorData->windowHeight;
     }
 
-    raftelId windowManger::addWindow(const std::string& title, bool useImGui, unsigned int width, unsigned int height)
+    windowPieceId windowManger::addWindow(const std::string& title, bool useImGui, unsigned int width, unsigned int height)
     {
-        window *newWin = new window(title, width, height, useImGui);
+        window *newWin = new window(title, width, height, useImGui, windows.size());
         newWin->Window =  window::Init(newWin);
         windows.push_back(newWin);
 
         windowEntity *windowEntityData = new windowEntity(newWin);
-        raftelId windowEntityId = entityManger::addEntity(dynamic_cast<windowEntity*>(windowEntityData));
+        entityTaleId windowEntityId = entityManger::addEntity(dynamic_cast<windowEntity*>(windowEntityData));
         eventManger::addEvent(events::WindowResize, onWindowResize, windowEntityId, newWin->Window);
         
-        return windows.size() - 1;
+        return newWin->id;
     }
 
     void windowManger::onUpdate(IEventData *sendor)
     {
-        logger::LogInfo("on update");
         for(window *win: windows)
         {
-            logger::LogInfo(win->Title);
             win->onUpdate(win, sendor);
         }
     }
 
-    windowPtr windowManger::raftelIdToWindowId(raftelId windowId)
+    windowPtr windowManger::raftelIdToWindowId(windowPieceId windowId)
     {
         return windows[windowId]->Window;
     }
 
-    unsigned int windowManger::getWidth(raftelId windowId){ return windows[windowId]->Width; }
-    unsigned int windowManger::getHeight(raftelId windowId){ return windows[windowId]->Height; }
+    unsigned int windowManger::getWidth(windowPieceId windowId){ return windows[windowId]->Width; }
+    unsigned int windowManger::getHeight(windowPieceId windowId){ return windows[windowId]->Height; }
 }

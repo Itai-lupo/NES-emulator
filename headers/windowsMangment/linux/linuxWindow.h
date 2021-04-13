@@ -5,15 +5,15 @@
 #include <vector>
 
 struct GLFWwindow;
-namespace raftelGraphicEngine {
+namespace LaughTaleEngine {
 
 	class linuxWindow: public coreWindow
 	{
 		private:
 
 		public:
-			linuxWindow(const std::string& title, unsigned int width, unsigned int height, bool useImGui):
-				coreWindow(title, width, height, useImGui){}
+			linuxWindow(const std::string& title, unsigned int width, unsigned int height, bool useImGui, windowPieceId id):
+				coreWindow(title, width, height, useImGui, id){}
 
 
 			static GLFWwindow* Init(linuxWindow *data);

@@ -1,7 +1,5 @@
 #pragma once
 
-
-
 #if defined(_WIN32) || defined(_WIN64) // Windows
 
 #elif defined(__ANDROID__)  // Android (implies Linux, so it must come first)
@@ -9,8 +7,8 @@
 #elif defined(__linux__) // linux
     #include "linuxWindow.h"
     #include "linuxInput.h"
-    typedef raftelGraphicEngine::linuxWindow window;
-    typedef raftelGraphicEngine::linuxInput input;
+    typedef LaughTaleEngine::linuxWindow window;
+    typedef LaughTaleEngine::linuxInput input;
     typedef GLFWwindow* windowPtr;
 #elif defined(__APPLE__) && defined(__MACH__) // Apple OSX and iOS (Darwin)
     #include <TargetConditionals.h>
@@ -23,4 +21,7 @@
     #error "platform not supported"
 #endif
 
-typedef int raftelId;
+typedef u_int32_t eventLaughId;
+typedef u_int32_t entityTaleId;
+
+

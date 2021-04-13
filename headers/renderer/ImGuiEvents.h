@@ -1,5 +1,5 @@
 struct GLFWwindow;
-namespace raftelGraphicEngine 
+namespace LaughTaleEngine 
 {
     struct IEntity;
     struct IEventData;
