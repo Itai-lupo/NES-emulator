@@ -13,52 +13,54 @@ class ImGuiData: public IEntity
         std::string textToPrint =  "hello world";
 };
 
+class windowTest
+{
+    public:
+        static void mouseMoveDatacallbackWin1(IEntity *eventEntity, IEventData *sendor)
+        {
+            mouseMoveData* sendorData = dynamic_cast<mouseMoveData*>(sendor);
+            eventEntity->x = sendorData->xPos;
+            eventEntity->y = sendorData->yPos;
+        }
+
+        static void WindowResize (IEntity *eventEntity, IEventData *sendor)
+        {
+            WindowResizeData* sendorData = dynamic_cast<WindowResizeData*>(sendor);
+            eventEntity->width = sendorData->windowWidth;
+            eventEntity->hight = sendorData->windowHeight;
+        }
+
+        static void WindowClose(__attribute__((unused)) IEntity *eventEntity, __attribute__((unused)) IEventData *sendor)
+        {
+            app::keepRunning = false;
+        }
+
+        static void onRenderWin1(IEntity *eventEntity, __attribute__((unused)) IEventData *sendor)
+        {
+            glClearColor((float)eventEntity->x / eventEntity->width, (float)eventEntity->y / eventEntity->hight, 0, 1);
+            glClear(GL_COLOR_BUFFER_BIT);
+        }
+
+        static void onRenderWin2(IEntity *eventEntity,  IEventData *sendor)
+        {
+            glClearColor(
+                (float)input::GetMouseX(windowManger::raftelIdToWindowReference(sendor->windowId)) / windowManger::getWidth(sendor->windowId), 
+                (float)input::GetMouseY(windowManger::raftelIdToWindowReference(sendor->windowId)) / windowManger::getHeight(sendor->windowId), 
+                1, 
+                1);
+            glClear(GL_COLOR_BUFFER_BIT);
+        }
+
+        static void ImGuiRender(IEntity *eventEntity, __attribute__((unused)) IEventData *sendor)
+        {
+            ImGuiData *data = static_cast<ImGuiData*>(eventEntity);
+            ImGui::Text("%s", data->textToPrint.c_str());
+        }
+
+};
 
 TEST(window, openWindowAndUseEvent)
 {
-    eventCallbackFunc mouseMoveDatacallbackWin1 = [](IEntity *eventEntity, IEventData *sendor)
-    {
-        mouseMoveData* sendorData = dynamic_cast<mouseMoveData*>(sendor);
-        eventEntity->x = sendorData->xPos;
-        eventEntity->y = sendorData->yPos;
-    };
-
-
-    eventCallbackFunc mouseMoveDatacallbackWin2 = [](__attribute__((unused)) IEntity *eventEntity, __attribute__((unused)) IEventData *sendor)
-    {
-        // mouseMoveData* sendorData = dynamic_cast<mouseMoveData*>(sendor);
-    };
-
-    eventCallbackFunc WindowResize = [](IEntity *eventEntity, IEventData *sendor)
-    {
-        WindowResizeData* sendorData = dynamic_cast<WindowResizeData*>(sendor);
-        eventEntity->width = sendorData->windowWidth;
-        eventEntity->hight = sendorData->windowHeight;
-    };
-
-    eventCallbackFunc WindowClose = [](__attribute__((unused)) IEntity *eventEntity, __attribute__((unused)) IEventData *sendor)
-    {
-        app::keepRunning = false;
-    };
-
-    eventCallbackFunc onRenderWin1 = [](IEntity *eventEntity, __attribute__((unused)) IEventData *sendor)
-    {
-        glClearColor((float)eventEntity->x / eventEntity->width, (float)eventEntity->y / eventEntity->hight, 0, 1);
-        glClear(GL_COLOR_BUFFER_BIT);
-    };
-
-    eventCallbackFunc onRenderWin2 = [](IEntity *eventEntity,  IEventData *sendor)
-    {
-        glClearColor((float)input::GetMouseX(sendor->window) / eventEntity->width, (float)input::GetMouseY(sendor->window) / eventEntity->hight, 1, 1);
-        glClear(GL_COLOR_BUFFER_BIT);
-    };
-    
-    eventCallbackFunc ImGuiRender = [](IEntity *eventEntity, __attribute__((unused)) IEventData *sendor)
-    {
-        ImGuiData *data = static_cast<ImGuiData*>(eventEntity);
-        ImGui::Text("%s", data->textToPrint.c_str());
-    };
-
     app::init();
 
     windowPieceId win1 =  windowManger::addWindow("win 1");
@@ -78,21 +80,16 @@ TEST(window, openWindowAndUseEvent)
     entityTaleId id2 = entityManger::addEntity(&testEntity2);
     entityTaleId imGuiEntityId = entityManger::addEntity(imGuiData);
 
-    eventManger::addEvent(events::ImGuiRender, ImGuiRender, imGuiEntityId);
+    eventManger::addEvent(events::ImGuiRender, windowTest::ImGuiRender, imGuiEntityId);
 
-    eventManger::addEvent(events::MouseMoved, mouseMoveDatacallbackWin1, id, windowManger::raftelIdToWindowId(win1));
-    eventManger::addEvent(events::AppRender, onRenderWin1, id, windowManger::raftelIdToWindowId(win1));
-    eventManger::addEvent(events::WindowResize, WindowResize, id, windowManger::raftelIdToWindowId(win1));
+    eventManger::addEvent(events::MouseMoved, windowTest::mouseMoveDatacallbackWin1, id, win1);
+    eventManger::addEvent(events::AppRender, windowTest::onRenderWin1, id, win1);
+    eventManger::addEvent(events::WindowResize, windowTest::WindowResize, id, win1);
 
-    eventManger::addEvent(events::MouseMoved, mouseMoveDatacallbackWin2, id2, windowManger::raftelIdToWindowId(win2));
-    eventManger::addEvent(events::WindowResize, WindowResize, id2, windowManger::raftelIdToWindowId(win2));
-    eventManger::addEvent(events::AppRender, onRenderWin2, id2, windowManger::raftelIdToWindowId(win2));
+    eventManger::addEvent(events::WindowResize, windowTest::WindowResize, id2, win2);
+    eventManger::addEvent(events::AppRender, windowTest::onRenderWin2, id2, win2);
 
-    eventManger::addEvent(events::WindowClose, WindowClose, -1);
-
-
-    LAUGHTALE_ENGINR_LOG_INFO("event added sucssfly");
-
+    eventManger::addEvent(events::WindowClose, windowTest::WindowClose);
     
     app::run();
     app::close();    

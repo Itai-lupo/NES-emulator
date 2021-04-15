@@ -18,6 +18,7 @@ namespace LaughTaleEngine
     {
         private:
             static std::vector<IEntity*> entitys;
+            static u_int32_t nextEventId;
         public:
             static void init();
             static void close();

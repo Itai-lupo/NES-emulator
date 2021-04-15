@@ -12,8 +12,8 @@ namespace LaughTaleEngine {
 		private:
 
 		public:
-			linuxWindow(const std::string& title, unsigned int width, unsigned int height, bool useImGui, windowPieceId id):
-				coreWindow(title, width, height, useImGui, id){}
+			linuxWindow(const std::string& title, unsigned int width, unsigned int height, bool useImGui):
+				coreWindow(title, width, height, useImGui){}
 
 
 			static GLFWwindow* Init(linuxWindow *data);

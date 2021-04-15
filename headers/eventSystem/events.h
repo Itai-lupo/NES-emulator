@@ -30,7 +30,7 @@ namespace LaughTaleEngine
         IEventData(events eventType): eventType(eventType){}
         virtual ~IEventData() {}
         events eventType;
-        windowPtr window = NULL;
+        windowPieceId windowId;
     };
 
     struct WindowResizeData: public IEventData
@@ -104,7 +104,7 @@ namespace LaughTaleEngine
     struct event
     {
         public:
-            event(events eventType,  eventCallbackFunc callback, int entityID, windowPtr window)
+            event(events eventType,  eventCallbackFunc callback, int entityID, windowPieceId window)
                 :window(window), eventType(eventType), callback(callback), entityID(entityID){};
 
             void trigerEvent(IEntity *eventEntity, IEventData *sendor)
@@ -114,11 +114,11 @@ namespace LaughTaleEngine
 
             events getEventType() { return eventType; }
             entityTaleId getEntityID() { return entityID; }
-            windowPtr getWindowID() { return window; }
+            windowPieceId getWindowID() { return window; }
 
             eventLaughId id;
         private:
-            windowPtr window;
+            windowPieceId window;
             events eventType;
             eventCallbackFunc  callback;
             entityTaleId entityID;
@@ -132,9 +132,9 @@ namespace LaughTaleEngine
         public:
             static void init();
             static void close();
-            static eventLaughId addEvent(events eventType, eventCallbackFunc callback, entityTaleId entityID, windowPtr windowID = NULL);
+            static eventLaughId addEvent(events eventType, eventCallbackFunc callback, entityTaleId entityID = -1, windowPieceId windowID = 0);
             static eventLaughId addEvent(event *eventToAdd);
-            static void trigerEvent(events eventType, IEventData *sendor, windowPtr windowID = NULL);
+            static void trigerEvent(events eventType, IEventData *sendor, windowPieceId windowID = 0);
             static void removeEvent(events eventType, eventLaughId eventToRemove);
 
     };

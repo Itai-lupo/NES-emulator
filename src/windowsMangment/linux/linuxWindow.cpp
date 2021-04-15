@@ -17,7 +17,7 @@ namespace LaughTaleEngine {
 	{
 		WindowResizeData *eventData = new WindowResizeData(width, height, window);
 		
-		eventManger::trigerEvent(events::WindowResize, eventData, window);
+		eventManger::trigerEvent(events::WindowResize, eventData, (windowPieceId)window);
 		LAUGHTALE_ENGINR_LOG_INFO(
 			"WindowSizeCallback " + 
 			std::to_string(width) + ", " + 
@@ -27,8 +27,8 @@ namespace LaughTaleEngine {
 	void WindowCloseCallback(GLFWwindow* window)
 	{
 		IEventData *eventData = new IEventData(events::WindowClose);
-		eventData->window = window;
-		eventManger::trigerEvent(events::WindowClose, eventData, window);
+		
+		eventManger::trigerEvent(events::WindowClose, eventData, (windowPieceId)window);
 
 		LAUGHTALE_ENGINR_LOG_INFO("WindowCloseCallback");
 	}
@@ -43,7 +43,7 @@ namespace LaughTaleEngine {
 			(action == GLFW_RELEASE) * events::KeyReleased + 
 			(action == GLFW_REPEAT) * events::KeyRepeat);
 
-		eventManger::trigerEvent(eventData->eventType, eventData, window);
+		eventManger::trigerEvent(eventData->eventType, eventData, (windowPieceId)window);
 
 		LAUGHTALE_ENGINR_LOG_INFO(
 			"KeyCallback " + 
@@ -60,7 +60,7 @@ namespace LaughTaleEngine {
 			(action == GLFW_RELEASE) * events::MouseButtonReleased
 		);
 
-		eventManger::trigerEvent(eventData->eventType, eventData, window);
+		eventManger::trigerEvent(eventData->eventType, eventData, (windowPieceId)window);
 		LAUGHTALE_ENGINR_LOG_INFO("MouseButtonCallback");
 	}
 
@@ -68,7 +68,7 @@ namespace LaughTaleEngine {
 	{
 		mouseScrollData *eventData = new mouseScrollData(xOffset, yOffset, window);
 
-		eventManger::trigerEvent(events::MouseScrolled, eventData, window);
+		eventManger::trigerEvent(events::MouseScrolled, eventData, (windowPieceId)window);
 
 		LAUGHTALE_ENGINR_LOG_INFO("ScrollCallback");
 	}
@@ -76,7 +76,7 @@ namespace LaughTaleEngine {
 	void CursorPosCallback(GLFWwindow* window, double xPos, double yPos)
 	{
 		mouseMoveData *eventData = new mouseMoveData(xPos, yPos, window);
-		eventManger::trigerEvent(events::MouseMoved, eventData, window);
+		eventManger::trigerEvent(events::MouseMoved, eventData, (windowPieceId)window);
 
 		LAUGHTALE_ENGINR_LOG_INFO("CursorPosCallback");	
 	}
@@ -84,7 +84,7 @@ namespace LaughTaleEngine {
 	void SetCharCallback(GLFWwindow* window, unsigned int keycode)
 	{
 		keyTypedData *eventData = new keyTypedData(keycode, window);
-		eventManger::trigerEvent(events::KeyTyped, eventData, window);
+		eventManger::trigerEvent(events::KeyTyped, eventData, (windowPieceId)window);
 
 		LAUGHTALE_ENGINR_LOG_INFO("SetCharCallback");
 	}
@@ -122,6 +122,7 @@ namespace LaughTaleEngine {
 		}
 
 		GLFWwindow* Window = glfwCreateWindow((int)data->Width, (int)data->Height, data->Title.c_str(), NULL, NULL);
+		data->id = (uint64_t)Window;
 		glfwMakeContextCurrent(Window);
 
 		int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
@@ -155,8 +156,8 @@ namespace LaughTaleEngine {
 		glfwMakeContextCurrent(data->Window);
 
 		IEventData *renderData = new IEventData(events::AppRender);
-		eventData->window = data->Window;
-		eventManger::trigerEvent(events::AppRender, renderData, data->Window);
+		
+		eventManger::trigerEvent(events::AppRender, renderData, data->id);
 
 
 		if(data->useImGui)

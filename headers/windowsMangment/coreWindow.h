@@ -3,7 +3,7 @@
 #include <functional>
 #include <vector>
 
-typedef u_int32_t windowPieceId;
+typedef u_int64_t windowPieceId;
 
 namespace LaughTaleEngine {
 
@@ -12,8 +12,8 @@ namespace LaughTaleEngine {
 		private:
 
 		public:
-			coreWindow(const std::string& title, unsigned int width, unsigned int height, bool useImGui, windowPieceId id):
-				Title(title), Width(width), Height(height), useImGui(useImGui), id(id){}
+			coreWindow(const std::string& title, unsigned int width, unsigned int height, bool useImGui):
+				Title(title), Width(width), Height(height), useImGui(useImGui){}
 		
 			std::string Title;
 			unsigned int Width, Height;

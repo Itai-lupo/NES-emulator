@@ -3,6 +3,8 @@
 #include "logger.h"
 #include <string>
 #include <functional>
+#include <algorithm>
+// #include <boost/bind.hpp>
 
 class windowEntity: public LaughTaleEngine::IEntity
 {
@@ -28,8 +30,6 @@ namespace LaughTaleEngine
     {
         WindowResizeData* sendorData = dynamic_cast<WindowResizeData*>(sendor);
         windowEntity* entityData = static_cast<windowEntity*>(eventEntity);
-        LAUGHTALE_ENGINR_LOG_INFO("event width: " + std::to_string(sendorData->windowWidth) + " hight: " + std::to_string(sendorData->windowHeight));
-        LAUGHTALE_ENGINR_LOG_INFO("entity width: " + std::to_string(entityData->win->Width) + " hight: " + std::to_string(entityData->win->Height));
 
         entityData->win->Width = sendorData->windowWidth;
         entityData->win->Height = sendorData->windowHeight;
@@ -37,13 +37,13 @@ namespace LaughTaleEngine
 
     windowPieceId windowManger::addWindow(const std::string& title, bool useImGui, unsigned int width, unsigned int height)
     {
-        window *newWin = new window(title, width, height, useImGui, windows.size());
+        window *newWin = new window(title, width, height, useImGui);
         newWin->Window =  window::Init(newWin);
         windows.push_back(newWin);
 
         windowEntity *windowEntityData = new windowEntity(newWin);
         entityTaleId windowEntityId = entityManger::addEntity(dynamic_cast<windowEntity*>(windowEntityData));
-        eventManger::addEvent(events::WindowResize, onWindowResize, windowEntityId, newWin->Window);
+        eventManger::addEvent(events::WindowResize, onWindowResize, windowEntityId, newWin->id);
         
         return newWin->id;
     }
@@ -56,11 +56,25 @@ namespace LaughTaleEngine
         }
     }
 
-    windowPtr windowManger::raftelIdToWindowId(windowPieceId windowId)
+    windowPtr windowManger::raftelIdToWindowReference(windowPieceId windowId)
     {
-        return windows[windowId]->Window;
+        return (GLFWwindow*)windowId;
     }
 
-    unsigned int windowManger::getWidth(windowPieceId windowId){ return windows[windowId]->Width; }
-    unsigned int windowManger::getHeight(windowPieceId windowId){ return windows[windowId]->Height; }
+    unsigned int windowManger::getWidth(windowPieceId windowId)
+    { 
+        return (*std::find_if(
+            windows.begin(), 
+            windows.end(), 
+            [=](window *win)-> bool { return win->id == windowId; }
+        ))->Width;
+    }
+    unsigned int windowManger::getHeight(windowPieceId windowId)
+    { 
+        return (*std::find_if(
+            windows.begin(), 
+            windows.end(), 
+            [=](window *win)-> bool { return win->id == windowId; }
+        ))->Height;
+    }
 }

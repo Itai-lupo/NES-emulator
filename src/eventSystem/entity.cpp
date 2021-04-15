@@ -4,6 +4,7 @@
 namespace LaughTaleEngine
 {
     std::vector<IEntity*> entityManger::entitys = std::vector<IEntity*>();
+    u_int32_t entityManger::nextEventId = 0;
 
 
     void entityManger::init()
@@ -14,11 +15,13 @@ namespace LaughTaleEngine
     void entityManger::close()
     {
         entityManger::entitys.clear();
+        entityManger::nextEventId = 0;
     }
 
     entityTaleId entityManger::addEntity(IEntity *entityToAdd)
     {
-        entityToAdd->id = entityManger::entitys.size();
+        entityToAdd->id = entityManger::nextEventId;
+        entityManger::nextEventId++;
         entityManger::entitys.push_back(entityToAdd);
         return entityToAdd->id;
     }

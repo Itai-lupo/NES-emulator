@@ -24,7 +24,7 @@ namespace LaughTaleEngine
             static unsigned int getWidth(windowPieceId windowId);
             static unsigned int getHeight(windowPieceId windowId);
 
-            static windowPtr raftelIdToWindowId(windowPieceId windowId);
+            static windowPtr raftelIdToWindowReference(windowPieceId windowId);
 
             static void setVSync(bool enabled);
 

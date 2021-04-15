@@ -121,7 +121,7 @@ namespace LaughTaleEngine
 		ImGui_ImplGlfw_NewFrame();
 		ImGui::NewFrame();
 
-        eventManger::trigerEvent(events::ImGuiRender, eventData, data.Window);
+        eventManger::trigerEvent(events::ImGuiRender, eventData, data.id);
         
 		io.DisplaySize = ImVec2(data.Width, data.Height);
         ImGui::Render();

@@ -7,31 +7,31 @@ namespace LaughTaleEngine
 {
     bool linuxInput::isKeyPressed(int keycode, raftelId windowId)
     {
-        windowPtr win = windowManger::raftelIdToWindowId(windowId);
+        windowPtr win = windowManger::raftelIdToWindowReference(windowId);
         return isKeyPressed(keycode, win);
     }
 
     bool linuxInput::isMouseButtonPressed(int button, raftelId windowId)
     {
-        windowPtr win = windowManger::raftelIdToWindowId(windowId);
+        windowPtr win = windowManger::raftelIdToWindowReference(windowId);
         return isMouseButtonPressed(button, win);
     }
 
     std::pair<float, float> linuxInput::GetMousePosition(raftelId windowId)
     {
-        windowPtr win = windowManger::raftelIdToWindowId(windowId);
+        windowPtr win = windowManger::raftelIdToWindowReference(windowId);
         return GetMousePosition(win);
     }
 
     float linuxInput::GetMouseX(raftelId windowId)
     {
-        windowPtr win = windowManger::raftelIdToWindowId(windowId);
+        windowPtr win = windowManger::raftelIdToWindowReference(windowId);
         return GetMouseX(win);
     }
 
     float linuxInput::GetMouseY(raftelId windowId)
     {
-        windowPtr win = windowManger::raftelIdToWindowId(windowId);
+        windowPtr win = windowManger::raftelIdToWindowReference(windowId);
         return GetMouseY(win);
     }
 

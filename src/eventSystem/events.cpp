@@ -14,10 +14,10 @@ namespace LaughTaleEngine
 
     void eventManger:: close()
     {
-        
+        eventManger::nextEventId = 0;
     }
 
-    eventLaughId eventManger::addEvent(events eventType, eventCallbackFunc callback, entityTaleId entityID, windowPtr windowID)
+    eventLaughId eventManger::addEvent(events eventType, eventCallbackFunc callback, entityTaleId entityID, windowPieceId windowID)
     {
         event *newEvent = new event(eventType, callback, entityID, windowID);
         return eventManger::addEvent(newEvent);
@@ -43,13 +43,13 @@ namespace LaughTaleEngine
         }        
     }
 
-    void eventManger::trigerEvent(events eventType, IEventData *sendor, windowPtr windowID)
+    void eventManger::trigerEvent(events eventType, IEventData *sendor, windowPieceId windowID)
     {
         sendor->eventType = eventType;
-        sendor->window = windowID;
+        sendor->windowId = windowID;
         for(event e : eventManger::eventList[eventType]) 
         {
-            if(windowID == NULL || e.getWindowID() == NULL || e.getWindowID() == windowID)
+            if(windowID == 0 || e.getWindowID() == 0 || e.getWindowID() == windowID)
             {
                 IEntity *a = entityManger::getEntityById(e.getEntityID()); 
                 e.trigerEvent(a, sendor);
