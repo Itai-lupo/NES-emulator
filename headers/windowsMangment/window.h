@@ -21,6 +21,8 @@ namespace LaughTaleEngine
             static windowPieceId addWindow(const std::string& title = "raftel engine", bool useImGui = false, unsigned int width = 1280, unsigned int height = 720);
             static void onUpdate(IEventData *sendor);
 
+            static window *getWindow(windowPieceId windowId);
+
             static unsigned int getWidth(windowPieceId windowId);
             static unsigned int getHeight(windowPieceId windowId);
 

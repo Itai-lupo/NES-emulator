@@ -4,7 +4,6 @@
 #include <string>
 #include <functional>
 #include <algorithm>
-// #include <boost/bind.hpp>
 
 class windowEntity: public LaughTaleEngine::IEntity
 {
@@ -35,15 +34,31 @@ namespace LaughTaleEngine
         entityData->win->Height = sendorData->windowHeight;
     }
 
+    void onWindowClose(IEntity *eventEntity, IEventData *sendor)
+    {
+        (*std::find_if(
+            windows.begin(), 
+            windows.end(), 
+            [=](window *win)-> bool { return win->id == sendor->windowId; }
+        ))->Shutdown(windowManger::getWindow(sendor->windowId));
+
+        std::remove_if(
+            windows.begin(), 
+            windows.end(), 
+            [=](window *win)-> bool { return win->id == sendor->windowId; }
+        );
+    }
+
     windowPieceId windowManger::addWindow(const std::string& title, bool useImGui, unsigned int width, unsigned int height)
     {
         window *newWin = new window(title, width, height, useImGui);
-        newWin->Window =  window::Init(newWin);
+        window::Init(newWin);
         windows.push_back(newWin);
 
         windowEntity *windowEntityData = new windowEntity(newWin);
         entityTaleId windowEntityId = entityManger::addEntity(dynamic_cast<windowEntity*>(windowEntityData));
         eventManger::addEvent(events::WindowResize, onWindowResize, windowEntityId, newWin->id);
+        eventManger::addEvent(events::WindowClose, onWindowClose, -1, newWin->id);
         
         return newWin->id;
     }
@@ -59,6 +74,15 @@ namespace LaughTaleEngine
     windowPtr windowManger::raftelIdToWindowReference(windowPieceId windowId)
     {
         return (GLFWwindow*)windowId;
+    }
+
+    window *windowManger::getWindow(windowPieceId windowId)
+    {
+        return (*std::find_if(
+            windows.begin(), 
+            windows.end(), 
+            [=](window *win)-> bool { return win->id == windowId; }
+        ));
     }
 
     unsigned int windowManger::getWidth(windowPieceId windowId)

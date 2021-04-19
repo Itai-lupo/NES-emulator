@@ -2,10 +2,10 @@
 #include "ImGuiEvents.h"
 #include "logger.h"
 #include "events.h"
-
-#include "glad/glad.h"
 #include <GLFW/glfw3.h>
 
+
+#include "openGLContext.h"
 
 #include <string>
 
@@ -78,7 +78,6 @@ namespace LaughTaleEngine {
 		mouseMoveData *eventData = new mouseMoveData(xPos, yPos, window);
 		eventManger::trigerEvent(events::MouseMoved, eventData, (windowPieceId)window);
 
-		LAUGHTALE_ENGINR_LOG_INFO("CursorPosCallback");	
 	}
 
 	void SetCharCallback(GLFWwindow* window, unsigned int keycode)
@@ -89,7 +88,7 @@ namespace LaughTaleEngine {
 		LAUGHTALE_ENGINR_LOG_INFO("SetCharCallback");
 	}
 
-	GLFWwindow* linuxWindow::Init(linuxWindow *data)
+	void linuxWindow::Init(linuxWindow *data)
 	{
 		LAUGHTALE_ENGINR_LOG_INFO(
 			"Creating window: " +  
@@ -123,11 +122,10 @@ namespace LaughTaleEngine {
 
 		GLFWwindow* Window = glfwCreateWindow((int)data->Width, (int)data->Height, data->Title.c_str(), NULL, NULL);
 		data->id = (uint64_t)Window;
-		glfwMakeContextCurrent(Window);
+		data->Window = Window;
 
-		int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
-		LAUGHTALE_ENGINR_CONDTION_LOG_FATAL("faild to initalize glad", !status);
-
+		data->context = new openGLContext(Window);
+		data->context->Init();
 		glfwSetWindowUserPointer(Window, data);
 
 		glfwSetWindowSizeCallback(Window, WindowSizeCallback);
@@ -141,12 +139,14 @@ namespace LaughTaleEngine {
 		if(data->useImGui)
 			initImGui(Window);
 
-		return Window;
 	}
 
-	void linuxWindow::Shutdown(GLFWwindow* Window)
+	void linuxWindow::Shutdown(window* Window)
 	{
-		glfwDestroyWindow(Window);
+		if(Window->useImGui)
+			closeImGui();
+		Window->useImGui = false;
+		glfwDestroyWindow(Window->Window);
 	}
 
 	void linuxWindow::onUpdate(linuxWindow *data, void *sendor)
@@ -155,15 +155,13 @@ namespace LaughTaleEngine {
 
 		glfwMakeContextCurrent(data->Window);
 
-		IEventData *renderData = new IEventData(events::AppRender);
-		
-		eventManger::trigerEvent(events::AppRender, renderData, data->id);
+		eventManger::trigerEvent(events::AppRender, eventData, data->id);
 
 
 		if(data->useImGui)
 			onImGuiUpdate(*data, eventData);
 
-		glfwSwapBuffers(data->Window);
+		data->context->SwapBuffers();
         glfwPollEvents();
 	}
 

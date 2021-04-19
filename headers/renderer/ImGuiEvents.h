@@ -21,6 +21,7 @@ namespace LaughTaleEngine
     void ImGuiKeyTyped(__attribute__((unused)) IEntity *eventEntity, IEventData *sendor);
 
     void initImGui(GLFWwindow *window);
+    void closeImGui();
 
     void onImGuiUpdate(linuxWindow data, onUpdateData *eventData);
 }

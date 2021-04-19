@@ -5,7 +5,7 @@
 #include "entity.h"
 #include "logger.h"
 #include "window.h"
-
+#include "VertexBufferManger.h"
 #include <chrono>
 #include <string>
 
@@ -26,7 +26,7 @@ namespace LaughTaleEngine
         eventManger::init();
         entityManger::init();
         windowManger::init();
-
+        VertexBufferManger::init();
         eventManger::addEvent(events::AppUpdate, onUpdate, -1);
     }
 
@@ -36,6 +36,7 @@ namespace LaughTaleEngine
         eventManger::close();
         entityManger::close();
         windowManger::close();
+        VertexBufferManger::close();
         
     }
 

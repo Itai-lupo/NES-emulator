@@ -1,4 +1,3 @@
-
 #include "LaughTaleEngine.h"
 #include <gtest/gtest.h>
 #include <string.h>
@@ -32,7 +31,7 @@ class windowTest
 
         static void WindowClose(__attribute__((unused)) IEntity *eventEntity, __attribute__((unused)) IEventData *sendor)
         {
-            app::keepRunning = false;
+            // app::keepRunning = false;
         }
 
         static void onRenderWin1(IEntity *eventEntity, __attribute__((unused)) IEventData *sendor)
@@ -41,8 +40,10 @@ class windowTest
             glClear(GL_COLOR_BUFFER_BIT);
         }
 
-        static void onRenderWin2(IEntity *eventEntity,  IEventData *sendor)
+        static void onRenderWin2(__attribute__((unused)) IEntity *eventEntity,  IEventData *sendor)
         {
+	    	// onUpdateData *eventData = static_cast<onUpdateData *>(sendor);
+
             glClearColor(
                 (float)input::GetMouseX(windowManger::raftelIdToWindowReference(sendor->windowId)) / windowManger::getWidth(sendor->windowId), 
                 (float)input::GetMouseY(windowManger::raftelIdToWindowReference(sendor->windowId)) / windowManger::getHeight(sendor->windowId), 
@@ -63,8 +64,22 @@ TEST(window, openWindowAndUseEvent)
 {
     app::init();
 
-    windowPieceId win1 =  windowManger::addWindow("win 1");
-    windowPieceId win2 = windowManger::addWindow("win 2", true);
+    float postions[16] = {
+        100.0f, 100.0f,  0.0f, 0.0f,
+        150.0f, 100.0f, 1.0f, 0.0f,
+        150.0f, 150.0f, 1.0f, 1.0f,
+        100.0f, 150.0f, 0.0f, 1.0f
+    };
+
+    windowPieceId win1 =  windowManger::addWindow("win 1", true);
+    windowPieceId win2 = windowManger::addWindow("win 2");
+
+    OpenGLVertexBuffer *vb = new OpenGLVertexBuffer((const void*)postions, 4 * 4 * sizeof(float));
+    vb->pushVertexBufferElement({GL_FLOAT, 2, false, 4});
+    vertexBufferId vbId= VertexBufferManger::add(vb);
+    LAUGHTALE_ENGINR_LOG_INFO("vb added");
+    VertexBufferManger::pushVertexBufferElement(vbId, {GL_FLOAT, 2, false, 4});
+    VertexBufferManger::bind(vbId);
 
     IEntity testEntity;
     testEntity.width = 1280;

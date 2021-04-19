@@ -8,3 +8,6 @@
 #include "keycodes.h"
 #include "MouseButtonCodes.h"
 #include "window.h"
+#include "VertexBufferManger.h"
+#include "VertexBuffer.h"
+#include "openGLVertexBuffer.h"
