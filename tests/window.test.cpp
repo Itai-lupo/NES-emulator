@@ -3,7 +3,7 @@
 #include <string.h>
 #include "glad.h"
 #include "imgui.h"
-
+#include "handleOpenGlErrors.h"
 using namespace LaughTaleEngine;
 
 class ImGuiData: public IEntity
@@ -11,6 +11,15 @@ class ImGuiData: public IEntity
     public:
         std::string textToPrint =  "hello world";
 };
+
+class renderData: public IEntity
+{
+    public:
+        vertexBufferId vbId;
+        indexBufferId ibId;
+
+};
+
 
 class windowTest
 {
@@ -31,25 +40,36 @@ class windowTest
 
         static void WindowClose(__attribute__((unused)) IEntity *eventEntity, __attribute__((unused)) IEventData *sendor)
         {
-            // app::keepRunning = false;
+            app::keepRunning = false;
         }
 
         static void onRenderWin1(IEntity *eventEntity, __attribute__((unused)) IEventData *sendor)
         {
+            renderData *renderEntity = static_cast<renderData *>(eventEntity);
+
             glClearColor((float)eventEntity->x / eventEntity->width, (float)eventEntity->y / eventEntity->hight, 0, 1);
             glClear(GL_COLOR_BUFFER_BIT);
+
+            VertexBufferManger::bind(renderEntity->vbId);
+            GL_CALL(glDrawArrays(GL_TRIANGLES, 0, 3));
+
         }
 
-        static void onRenderWin2(__attribute__((unused)) IEntity *eventEntity,  IEventData *sendor)
+        static void onRenderWin2(IEntity *eventEntity,  IEventData *sendor)
         {
-	    	// onUpdateData *eventData = static_cast<onUpdateData *>(sendor);
-
+            renderData *renderEntity = static_cast<renderData *>(eventEntity);
             glClearColor(
                 (float)input::GetMouseX(windowManger::raftelIdToWindowReference(sendor->windowId)) / windowManger::getWidth(sendor->windowId), 
                 (float)input::GetMouseY(windowManger::raftelIdToWindowReference(sendor->windowId)) / windowManger::getHeight(sendor->windowId), 
                 1, 
                 1);
             glClear(GL_COLOR_BUFFER_BIT);
+            
+
+            indexBufferManger::bind(renderEntity->ibId);
+            VertexBufferManger::bind(renderEntity->vbId);
+
+            GL_CALL(glDrawElements(GL_TRIANGLES, 12, GL_UNSIGNED_INT, nullptr));
         }
 
         static void ImGuiRender(IEntity *eventEntity, __attribute__((unused)) IEventData *sendor)
@@ -64,35 +84,59 @@ TEST(window, openWindowAndUseEvent)
 {
     app::init();
 
-    float postions[16] = {
-        100.0f, 100.0f,  0.0f, 0.0f,
-        150.0f, 100.0f, 1.0f, 0.0f,
-        150.0f, 150.0f, 1.0f, 1.0f,
-        100.0f, 150.0f, 0.0f, 1.0f
+    float postions[6] = { 
+        0.5f,  -0.5f,
+        -0.5f,   0.5f,
+        0.5f,   0.5f
     };
 
+    float postions2[12] = { 
+        0.0f,  1.0f,
+        0.5f,   0.5f,
+        0.5f,   -0.5f,
+        0.0f,   -1.0f,
+        -0.5f,   -0.5f,
+        -0.5f,   0.5f
+    };
+
+    unsigned int indices[12] = {
+         0, 1, 5,
+         1, 2, 4,
+         2, 3, 4,
+         1, 4, 5
+     };
+
+    renderData *win1RenderData = new renderData();
+    renderData *win2RenderData = new renderData();
     windowPieceId win1 =  windowManger::addWindow("win 1", true);
+
+    OpenGLVertexBuffer *vb = new OpenGLVertexBuffer(postions, 2 * 3 * sizeof(float));
+    win1RenderData->vbId = VertexBufferManger::add(vb);
+
+    glEnableVertexAttribArray(0);
+    glVertexAttribPointer(0, 3, GL_FLOAT, false, 3*sizeof(float), 0);
+ 
     windowPieceId win2 = windowManger::addWindow("win 2");
+    
+    OpenGLVertexBuffer *vb2 = new OpenGLVertexBuffer(postions2, 3 * 6 * sizeof(float));
+    win2RenderData->vbId = VertexBufferManger::add(vb2);
+    
+    indexBuffer *ib = new openGLIndexBuffer(indices, 12);
+    win2RenderData->ibId = indexBufferManger::add(ib);
 
-    OpenGLVertexBuffer *vb = new OpenGLVertexBuffer((const void*)postions, 4 * 4 * sizeof(float));
-    vb->pushVertexBufferElement({GL_FLOAT, 2, false, 4});
-    vertexBufferId vbId= VertexBufferManger::add(vb);
-    LAUGHTALE_ENGINR_LOG_INFO("vb added");
-    VertexBufferManger::pushVertexBufferElement(vbId, {GL_FLOAT, 2, false, 4});
-    VertexBufferManger::bind(vbId);
+    
+    GL_CALL(glEnableVertexAttribArray(0));
+    GL_CALL(glVertexAttribPointer(0, 2, GL_FLOAT, false, 2*sizeof(float), 0));
+    win1RenderData->width = 1280;
+    win1RenderData->hight = 720;
 
-    IEntity testEntity;
-    testEntity.width = 1280;
-    testEntity.hight = 720;
-
-    IEntity testEntity2;
-    testEntity2.width = 1280;
-    testEntity2.hight = 720;
+    win2RenderData->width = 1280;
+    win2RenderData->hight = 720;
 
     ImGuiData *imGuiData = new ImGuiData();
     
-    entityTaleId id = entityManger::addEntity(&testEntity);
-    entityTaleId id2 = entityManger::addEntity(&testEntity2);
+    entityTaleId id = entityManger::addEntity(win1RenderData);
+    entityTaleId id2 = entityManger::addEntity(win2RenderData);
     entityTaleId imGuiEntityId = entityManger::addEntity(imGuiData);
 
     eventManger::addEvent(events::ImGuiRender, windowTest::ImGuiRender, imGuiEntityId);
@@ -105,6 +149,7 @@ TEST(window, openWindowAndUseEvent)
     eventManger::addEvent(events::AppRender, windowTest::onRenderWin2, id2, win2);
 
     eventManger::addEvent(events::WindowClose, windowTest::WindowClose);
+            LAUGHTALE_ENGINR_LOG_INFO("a");
     
     app::run();
     app::close();    

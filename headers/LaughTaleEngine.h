@@ -11,3 +11,5 @@
 #include "VertexBufferManger.h"
 #include "VertexBuffer.h"
 #include "openGLVertexBuffer.h"
+#include "indexBufferManger.h"
+#include "openGLIndexBuffer.h"

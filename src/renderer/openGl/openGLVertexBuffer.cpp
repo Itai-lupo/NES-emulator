@@ -7,7 +7,6 @@ namespace LaughTaleEngine
 {
     vertexBufferId OpenGLVertexBuffer::init()
     {
-        RendererID = 0;
         GL_CALL(glGenBuffers(1, &RendererID));
         glBindBuffer(GL_ARRAY_BUFFER, RendererID);
         glBufferData(GL_ARRAY_BUFFER, size, data, GL_STATIC_DRAW);
