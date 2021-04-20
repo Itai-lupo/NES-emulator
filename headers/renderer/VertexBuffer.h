@@ -26,8 +26,8 @@ namespace LaughTaleEngine
                 elements.push_back(ElementToPush);
             }
 
-            inline const std::vector<VertexBufferElement> getElements() const { return elements; }
-            inline unsigned int GetStride() const { return stride; };
+            inline const std::vector<VertexBufferElement> getElements() { return elements; }
+            inline unsigned int GetStride() { return stride; };
     };
 
     class VertexBuffer 

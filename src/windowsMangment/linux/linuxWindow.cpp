@@ -174,4 +174,9 @@ namespace LaughTaleEngine {
 	{
 		glfwSwapInterval(enabled);
 	}
+
+	void linuxWindow::makeContextCurrent(GLFWwindow* Window)
+	{
+		glfwMakeContextCurrent(Window);
+	}
 }

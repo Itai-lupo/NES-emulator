@@ -101,4 +101,13 @@ namespace LaughTaleEngine
             [=](window *win)-> bool { return win->id == windowId; }
         ))->Height;
     }
+
+    void windowManger::bindContext(windowPieceId windowId)
+    {
+        (*std::find_if(
+            windows.begin(), 
+            windows.end(), 
+            [=](window *win)-> bool { return win->id == windowId; }
+        ))->makeContextCurrent((windowPtr)windowId);
+    }
 }

@@ -13,3 +13,6 @@
 #include "openGLVertexBuffer.h"
 #include "indexBufferManger.h"
 #include "openGLIndexBuffer.h"
+#include "vertexArrayManger.h"
+#include "vertexArray.h"
+#include "openGLVertexArray.h"

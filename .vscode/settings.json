@@ -79,7 +79,8 @@
         "core.h": "c",
         "event.h": "c",
         "linuxinput.h": "c",
-        "bitset": "cpp"
+        "bitset": "cpp",
+        "corewindow.h": "c"
     },
     "files.exclude": {
         "build/": true,

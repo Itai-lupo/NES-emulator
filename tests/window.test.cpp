@@ -17,6 +17,7 @@ class renderData: public IEntity
     public:
         vertexBufferId vbId;
         indexBufferId ibId;
+        vertexArrayId vaId;
 
 };
 
@@ -86,17 +87,17 @@ TEST(window, openWindowAndUseEvent)
 
     float postions[6] = { 
         0.5f,  -0.5f,
-        -0.5f,   0.5f,
+        -0.5f,   0.0f,
         0.5f,   0.5f
     };
 
     float postions2[12] = { 
-        0.0f,  1.0f,
-        0.5f,   0.5f,
-        0.5f,   -0.5f,
-        0.0f,   -1.0f,
+         0.0f,    1.0f, 
+         0.5f,    0.5f,
+         0.5f,   -0.5f,
+         0.0f,   -1.0f,
         -0.5f,   -0.5f,
-        -0.5f,   0.5f
+        -0.5f,    0.5f
     };
 
     unsigned int indices[12] = {
@@ -106,27 +107,30 @@ TEST(window, openWindowAndUseEvent)
          1, 4, 5
      };
 
+    windowPieceId win1 =  windowManger::addWindow("win 1", true);
+    windowPieceId win2 = windowManger::addWindow("win 2");
+
     renderData *win1RenderData = new renderData();
     renderData *win2RenderData = new renderData();
-    windowPieceId win1 =  windowManger::addWindow("win 1", true);
-
+    
+    windowManger::bindContext(win1);
     OpenGLVertexBuffer *vb = new OpenGLVertexBuffer(postions, 2 * 3 * sizeof(float));
     win1RenderData->vbId = VertexBufferManger::add(vb);
 
-    glEnableVertexAttribArray(0);
-    glVertexAttribPointer(0, 3, GL_FLOAT, false, 3*sizeof(float), 0);
- 
-    windowPieceId win2 = windowManger::addWindow("win 2");
-    
+
+    GL_CALL(glEnableVertexAttribArray(0));
+    GL_CALL(glVertexAttribPointer(0, 2, GL_FLOAT, false, 2*sizeof(float), 0));
+
+    windowManger::bindContext(win2);
     OpenGLVertexBuffer *vb2 = new OpenGLVertexBuffer(postions2, 3 * 6 * sizeof(float));
     win2RenderData->vbId = VertexBufferManger::add(vb2);
     
     indexBuffer *ib = new openGLIndexBuffer(indices, 12);
     win2RenderData->ibId = indexBufferManger::add(ib);
 
-    
     GL_CALL(glEnableVertexAttribArray(0));
     GL_CALL(glVertexAttribPointer(0, 2, GL_FLOAT, false, 2*sizeof(float), 0));
+
     win1RenderData->width = 1280;
     win1RenderData->hight = 720;
 

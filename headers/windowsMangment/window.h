@@ -31,6 +31,8 @@ namespace LaughTaleEngine
             static void setVSync(bool enabled);
 
             static bool isVSync(){ return VSync; };
+
+            static void bindContext(windowPieceId windowId);
     };
 }
     
