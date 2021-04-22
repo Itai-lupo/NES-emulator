@@ -8,6 +8,7 @@
 #include "VertexBufferManger.h"
 #include "indexBufferManger.h"
 #include "vertexArrayManger.h"
+#include "shaderManger.h"
 #include <chrono>
 #include <string>
 
@@ -31,6 +32,8 @@ namespace LaughTaleEngine
         VertexBufferManger::init();
         indexBufferManger::init();
         VertexBufferManger::init();
+        shaderManger::init();
+
         eventManger::addEvent(events::AppUpdate, onUpdate, -1);
     }
 
@@ -43,6 +46,7 @@ namespace LaughTaleEngine
         VertexBufferManger::close();
         indexBufferManger::close();
         VertexBufferManger::close();
+        shaderManger::close();
     }
 
 

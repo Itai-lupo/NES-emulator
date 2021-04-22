@@ -4,6 +4,7 @@
 #include "glad.h"
 #include "imgui.h"
 #include "handleOpenGlErrors.h"
+
 using namespace LaughTaleEngine;
 
 class ImGuiData: public IEntity
@@ -18,6 +19,7 @@ class renderData: public IEntity
         vertexBufferId vbId;
         indexBufferId ibId;
         vertexArrayId vaId;
+        shaderId sId;
 
 };
 
@@ -59,16 +61,23 @@ class windowTest
         static void onRenderWin2(IEntity *eventEntity,  IEventData *sendor)
         {
             renderData *renderEntity = static_cast<renderData *>(eventEntity);
+            float mouseX = (float)input::GetMouseX(windowManger::raftelIdToWindowReference(sendor->windowId)) / windowManger::getWidth(sendor->windowId);
+            float mouseY = (float)input::GetMouseY(windowManger::raftelIdToWindowReference(sendor->windowId)) / windowManger::getHeight(sendor->windowId);
             glClearColor(
-                (float)input::GetMouseX(windowManger::raftelIdToWindowReference(sendor->windowId)) / windowManger::getWidth(sendor->windowId), 
-                (float)input::GetMouseY(windowManger::raftelIdToWindowReference(sendor->windowId)) / windowManger::getHeight(sendor->windowId), 
+                mouseX, 
+                mouseY, 
                 1, 
                 1);
             glClear(GL_COLOR_BUFFER_BIT);
             
 
             indexBufferManger::bind(renderEntity->ibId);
-            VertexBufferManger::bind(renderEntity->vbId);
+            vertexArrayManger::bindVertexArray(renderEntity->vaId);
+            shaderManger::bind(renderEntity->sId);
+            
+            shaderManger::setUniform4f(renderEntity->sId, "colorOffset", mouseX, 1 - mouseY, 0.0f, 1.0f);
+            shaderManger::setUniform1f(renderEntity->sId, "xOffset", mouseX * 2 - 1);
+            shaderManger::setUniform1f(renderEntity->sId, "yOffset", -mouseY * 2 + 1);
 
             GL_CALL(glDrawElements(GL_TRIANGLES, 12, GL_UNSIGNED_INT, nullptr));
         }
@@ -92,13 +101,13 @@ TEST(window, openWindowAndUseEvent)
     };
 
     float postions2[12] = { 
-         0.0f,    1.0f, 
+         0.0f,    1.0f,
          0.5f,    0.5f,
          0.5f,   -0.5f,
          0.0f,   -1.0f,
         -0.5f,   -0.5f,
         -0.5f,    0.5f
-    };
+        };
 
     unsigned int indices[12] = {
          0, 1, 5,
@@ -122,14 +131,21 @@ TEST(window, openWindowAndUseEvent)
     GL_CALL(glVertexAttribPointer(0, 2, GL_FLOAT, false, 2*sizeof(float), 0));
 
     windowManger::bindContext(win2);
-    OpenGLVertexBuffer *vb2 = new OpenGLVertexBuffer(postions2, 3 * 6 * sizeof(float));
+    OpenGLVertexBuffer *vb2 = new OpenGLVertexBuffer(postions2, 2 * 6 * sizeof(float));
     win2RenderData->vbId = VertexBufferManger::add(vb2);
-    
+    VertexBufferManger::pushVertexBufferElement(win2RenderData->vbId, {GL_FLOAT, 2, false, 4});
+
     indexBuffer *ib = new openGLIndexBuffer(indices, 12);
     win2RenderData->ibId = indexBufferManger::add(ib);
 
-    GL_CALL(glEnableVertexAttribArray(0));
-    GL_CALL(glVertexAttribPointer(0, 2, GL_FLOAT, false, 2*sizeof(float), 0));
+    shader *s = new openGLShader("res/shaders/Basic.shader");
+    win2RenderData->sId = shaderManger::add(s);
+    
+
+    
+    vertexArray *va = new openGLVertexArray();
+    win2RenderData->vaId = vertexArrayManger::addVertxArray(va);
+    vertexArrayManger::AddBufferToVertexArray(win2RenderData->vaId, win2RenderData->vbId);
 
     win1RenderData->width = 1280;
     win1RenderData->hight = 720;
@@ -153,7 +169,6 @@ TEST(window, openWindowAndUseEvent)
     eventManger::addEvent(events::AppRender, windowTest::onRenderWin2, id2, win2);
 
     eventManger::addEvent(events::WindowClose, windowTest::WindowClose);
-            LAUGHTALE_ENGINR_LOG_INFO("a");
     
     app::run();
     app::close();    

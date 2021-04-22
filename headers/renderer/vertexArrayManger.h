@@ -16,7 +16,7 @@ namespace LaughTaleEngine
 
             static vertexArrayId addVertxArray(vertexArray *va);
 
-            static void AddBufferToVertexArray(vertexArrayId id, VertexBuffer& vb);
+            static void AddBufferToVertexArray(vertexArrayId id, vertexBufferId vb);
             static void bindVertexArray(vertexArrayId id);
             static void unbindVertexArray(vertexArrayId id);
     };    

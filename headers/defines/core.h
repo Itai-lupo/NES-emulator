@@ -26,6 +26,7 @@ typedef u_int32_t entityTaleId;
 typedef u_int32_t vertexBufferId;
 typedef u_int32_t indexBufferId;
 typedef u_int32_t vertexArrayId;
+typedef u_int32_t shaderId;
 
 
 

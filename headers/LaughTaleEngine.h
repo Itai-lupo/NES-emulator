@@ -16,3 +16,6 @@
 #include "vertexArrayManger.h"
 #include "vertexArray.h"
 #include "openGLVertexArray.h"
+#include "shader.h"
+#include "shaderManger.h"
+#include "openGLShader.h"

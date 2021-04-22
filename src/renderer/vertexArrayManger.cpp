@@ -1,4 +1,5 @@
 #include "vertexArrayManger.h"
+#include "VertexBufferManger.h"
 #include "algorithm"
 
 namespace LaughTaleEngine
@@ -22,8 +23,9 @@ namespace LaughTaleEngine
         return va->rendererId;
     }    
     
-    void vertexArrayManger::AddBufferToVertexArray(vertexArrayId id,  VertexBuffer& vb)
+    void vertexArrayManger::AddBufferToVertexArray(vertexArrayId id,  vertexBufferId vbId)
     {
+        VertexBuffer *vb = VertexBufferManger::getVB(vbId);
         (*std::find_if(
             vertexArrays->begin(),
             vertexArrays->end(),
