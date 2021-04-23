@@ -3,9 +3,6 @@
 
 namespace LaughTaleEngine
 {
-    std::vector<shader *> *shaderManger::shaders = new std::vector<shader *>();
-
-
     void shaderManger::init()
     {
         shaders = new std::vector<shader *>();

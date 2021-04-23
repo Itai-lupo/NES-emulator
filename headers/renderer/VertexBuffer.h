@@ -1,7 +1,7 @@
 #pragma once
 #include "core.h"
 #include <vector>
-
+#include "logger.h"
 namespace LaughTaleEngine
 {
     struct VertexBufferElement{
@@ -53,9 +53,14 @@ namespace LaughTaleEngine
 
             inline const std::vector<VertexBufferElement> getElements() { return VBLayout->getElements(); }
             inline unsigned int GetStride() { return VBLayout->GetStride(); };
-            inline void pushVertexBufferElement(VertexBufferElement ElementToPush) 
+            inline void pushElement(VertexBufferElement ElementToPush) 
             {  
+                LAUGHTALE_ENGINR_LOG_INFO(std::to_string(RendererID));
                 VBLayout->push(ElementToPush); 
+                for( VertexBufferElement i : VBLayout->getElements())
+                {
+                    LAUGHTALE_ENGINR_LOG_INFO(std::to_string(i.type));
+                }
             }
 
 

@@ -3,6 +3,7 @@
 
 namespace LaughTaleEngine
 {
+
     class OpenGLVertexBuffer: public VertexBuffer
     {
         public:

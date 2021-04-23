@@ -48,13 +48,25 @@ class windowTest
 
         static void onRenderWin1(IEntity *eventEntity, __attribute__((unused)) IEventData *sendor)
         {
-            renderData *renderEntity = static_cast<renderData *>(eventEntity);
 
+            renderData *renderEntity = static_cast<renderData *>(eventEntity);
+            float mouseX = (float)input::GetMouseX(windowManger::raftelIdToWindowReference(sendor->windowId)) / windowManger::getWidth(sendor->windowId);
+            float mouseY = (float)input::GetMouseY(windowManger::raftelIdToWindowReference(sendor->windowId)) / windowManger::getHeight(sendor->windowId);
+            
             glClearColor((float)eventEntity->x / eventEntity->width, (float)eventEntity->y / eventEntity->hight, 0, 1);
             glClear(GL_COLOR_BUFFER_BIT);
 
-            VertexBufferManger::bind(renderEntity->vbId);
-            GL_CALL(glDrawArrays(GL_TRIANGLES, 0, 3));
+            
+            windowManger::bindVA(sendor->windowId, renderEntity->vaId);
+            windowManger::bindS(sendor->windowId, renderEntity->sId);
+            windowManger::bindIB(sendor->windowId, renderEntity->ibId);
+            
+            shaderManger *windowShaderManger = windowManger::getShaderManger(sendor->windowId);
+            windowShaderManger->setUniform4f(renderEntity->sId, "colorOffset", mouseX, 1 - mouseY, 0.0f, 1.0f);
+            windowShaderManger->setUniform1f(renderEntity->sId, "xOffset", mouseX * 2 - 1);
+            windowShaderManger->setUniform1f(renderEntity->sId, "yOffset", -mouseY * 2 + 1);
+
+            GL_CALL(glDrawElements(GL_TRIANGLES, 12, GL_UNSIGNED_INT, nullptr));
 
         }
 
@@ -69,15 +81,15 @@ class windowTest
                 1, 
                 1);
             glClear(GL_COLOR_BUFFER_BIT);
-            
 
-            indexBufferManger::bind(renderEntity->ibId);
-            vertexArrayManger::bindVertexArray(renderEntity->vaId);
-            shaderManger::bind(renderEntity->sId);
+            windowManger::bindVA(sendor->windowId, renderEntity->vaId);
+            windowManger::bindS(sendor->windowId, renderEntity->sId);
+            windowManger::bindIB(sendor->windowId, renderEntity->ibId);
             
-            shaderManger::setUniform4f(renderEntity->sId, "colorOffset", mouseX, 1 - mouseY, 0.0f, 1.0f);
-            shaderManger::setUniform1f(renderEntity->sId, "xOffset", mouseX * 2 - 1);
-            shaderManger::setUniform1f(renderEntity->sId, "yOffset", -mouseY * 2 + 1);
+            shaderManger *windowShaderManger = windowManger::getShaderManger(sendor->windowId);
+            windowShaderManger->setUniform4f(renderEntity->sId, "colorOffset", mouseX, 1 - mouseY, 0.0f, 1.0f);
+            windowShaderManger->setUniform1f(renderEntity->sId, "xOffset", mouseX * 2 - 1);
+            windowShaderManger->setUniform1f(renderEntity->sId, "yOffset", -mouseY * 2 + 1);
 
             GL_CALL(glDrawElements(GL_TRIANGLES, 12, GL_UNSIGNED_INT, nullptr));
         }
@@ -123,30 +135,34 @@ TEST(window, openWindowAndUseEvent)
     renderData *win2RenderData = new renderData();
     
     windowManger::bindContext(win1);
-    OpenGLVertexBuffer *vb = new OpenGLVertexBuffer(postions, 2 * 3 * sizeof(float));
-    win1RenderData->vbId = VertexBufferManger::add(vb);
-
-
-    GL_CALL(glEnableVertexAttribArray(0));
-    GL_CALL(glVertexAttribPointer(0, 2, GL_FLOAT, false, 2*sizeof(float), 0));
-
-    windowManger::bindContext(win2);
+    OpenGLVertexBuffer *vb = new OpenGLVertexBuffer(postions2, 2 * 6 * sizeof(float));
     OpenGLVertexBuffer *vb2 = new OpenGLVertexBuffer(postions2, 2 * 6 * sizeof(float));
-    win2RenderData->vbId = VertexBufferManger::add(vb2);
-    VertexBufferManger::pushVertexBufferElement(win2RenderData->vbId, {GL_FLOAT, 2, false, 4});
+
+    win1RenderData->vbId = windowManger::add(win1, vb);
+    win2RenderData->vbId = windowManger::add(win2, vb2);
+
+    windowManger::pushElement(win1, win1RenderData->vbId, {LT_FLOAT, 2, false, 4});
+    windowManger::pushElement(win2, win2RenderData->vbId, {LT_FLOAT, 2, false, 4});
+
+    vertexArray *va = new openGLVertexArray();
+    win1RenderData->vaId = windowManger::add(win1, va);
+
+    vertexArray *va2 = new openGLVertexArray();
+    win2RenderData->vaId = windowManger::add(win2, va2);
+
 
     indexBuffer *ib = new openGLIndexBuffer(indices, 12);
-    win2RenderData->ibId = indexBufferManger::add(ib);
+    win1RenderData->ibId = windowManger::add(win1, ib);
+    win2RenderData->ibId = windowManger::add(win2, ib);
 
     shader *s = new openGLShader("res/shaders/Basic.shader");
-    win2RenderData->sId = shaderManger::add(s);
+    win1RenderData->sId = windowManger::add(win1, s);
+    win2RenderData->sId = windowManger::add(win2, s);
     
 
-    
-    vertexArray *va = new openGLVertexArray();
-    win2RenderData->vaId = vertexArrayManger::addVertxArray(va);
-    vertexArrayManger::AddBufferToVertexArray(win2RenderData->vaId, win2RenderData->vbId);
-
+    windowManger::addBuffer(win1, win1RenderData->vaId, win1RenderData->vbId);
+    windowManger::addBuffer(win2, win2RenderData->vaId, win2RenderData->vbId);
+  
     win1RenderData->width = 1280;
     win1RenderData->hight = 720;
 
@@ -171,5 +187,6 @@ TEST(window, openWindowAndUseEvent)
     eventManger::addEvent(events::WindowClose, windowTest::WindowClose);
     
     app::run();
+
     app::close();    
 }

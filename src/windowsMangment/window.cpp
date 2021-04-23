@@ -5,6 +5,13 @@
 #include <functional>
 #include <algorithm>
 
+#define findWinById(windowId)                                           \
+    (*std::find_if(                                                     \
+            windows.begin(),                                            \
+            windows.end(),                                              \
+            [=](window *win)-> bool { return win->id == windowId; }     \
+        ))
+
 class windowEntity: public LaughTaleEngine::IEntity
 {
     public:
@@ -36,11 +43,7 @@ namespace LaughTaleEngine
 
     void onWindowClose(IEntity *eventEntity, IEventData *sendor)
     {
-        (*std::find_if(
-            windows.begin(), 
-            windows.end(), 
-            [=](window *win)-> bool { return win->id == sendor->windowId; }
-        ))->Shutdown(windowManger::getWindow(sendor->windowId));
+        findWinById(sendor->windowId)->Shutdown(windowManger::getWindow(sendor->windowId));
 
         std::remove_if(
             windows.begin(), 
@@ -78,36 +81,84 @@ namespace LaughTaleEngine
 
     window *windowManger::getWindow(windowPieceId windowId)
     {
-        return (*std::find_if(
-            windows.begin(), 
-            windows.end(), 
-            [=](window *win)-> bool { return win->id == windowId; }
-        ));
+        return findWinById(windowId);
     }
 
     unsigned int windowManger::getWidth(windowPieceId windowId)
     { 
-        return (*std::find_if(
-            windows.begin(), 
-            windows.end(), 
-            [=](window *win)-> bool { return win->id == windowId; }
-        ))->Width;
+        return findWinById(windowId)->Width;
     }
     unsigned int windowManger::getHeight(windowPieceId windowId)
     { 
-        return (*std::find_if(
-            windows.begin(), 
-            windows.end(), 
-            [=](window *win)-> bool { return win->id == windowId; }
-        ))->Height;
+        return findWinById(windowId)->Height;
     }
 
     void windowManger::bindContext(windowPieceId windowId)
     {
-        (*std::find_if(
-            windows.begin(), 
-            windows.end(), 
-            [=](window *win)-> bool { return win->id == windowId; }
-        ))->makeContextCurrent((windowPtr)windowId);
+        findWinById(windowId)->makeContextCurrent((windowPtr)windowId);
     }
+
+    vertexBufferId windowManger::add(windowPieceId windowId, VertexBuffer *data)
+    {
+        bindContext(windowId);
+        return static_cast<VertexBufferManger *>(findWinById(windowId)->getVertexBufferManger())->add(data);
+    }
+
+    indexBufferId windowManger::add(windowPieceId windowId, indexBuffer *data)
+    {
+        bindContext(windowId);
+        return static_cast<indexBufferManger *>(findWinById(windowId)->getIndexBufferManger())->add(data);
+    }
+
+    vertexArrayId windowManger::add(windowPieceId windowId, vertexArray *data)
+    {
+        bindContext(windowId);
+        return static_cast<vertexArrayManger *>(findWinById(windowId)->getVertexArrayManger())->add(data);
+    }
+
+    shaderId windowManger::add(windowPieceId windowId, shader *data)
+    {
+        bindContext(windowId);
+        return static_cast<shaderManger *>(findWinById(windowId)->getShaderManger())->add(data);
+    }
+
+    
+
+    void windowManger::bindVB(windowPieceId windowId, vertexBufferId id)
+    {
+        return static_cast<VertexBufferManger *>(findWinById(windowId)->getVertexBufferManger())->bind(id);
+    }
+
+    void windowManger::bindIB(windowPieceId windowId, indexBufferId id)
+    {
+        return static_cast<indexBufferManger *>(findWinById(windowId)->getIndexBufferManger())->bind(id);
+    }
+
+    void windowManger::bindVA(windowPieceId windowId, vertexArrayId id)
+    {
+        return static_cast<vertexArrayManger *>(findWinById(windowId)->getVertexArrayManger())->bind(id);
+    }
+
+    void windowManger::bindS(windowPieceId windowId, shaderId id)
+    {
+        static_cast<shaderManger *>(findWinById(windowId)->getShaderManger())->bind(id);
+    }
+
+    void windowManger::pushElement(windowPieceId windowId, vertexBufferId id, VertexBufferElement data)
+    {
+        static_cast<VertexBufferManger *>(findWinById(windowId)->getVertexBufferManger())->pushElement(id, data);
+    }
+
+    void windowManger::addBuffer(windowPieceId windowId, vertexArrayId id, vertexBufferId vbId)
+    {
+        bindContext(windowId);
+        VertexBuffer *vb = static_cast<VertexBufferManger *>(findWinById(windowId)->getVertexBufferManger())->getVB(vbId);
+        static_cast<vertexArrayManger *>(findWinById(windowId)->getVertexArrayManger())->addBuffer(id, vb);
+    }
+
+    shaderManger *windowManger::getShaderManger(windowPieceId windowId)
+    {
+        return static_cast<shaderManger *>(findWinById(windowId)->getShaderManger());
+    }
+
 }

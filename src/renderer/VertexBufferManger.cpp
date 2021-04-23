@@ -1,10 +1,9 @@
 #include "VertexBufferManger.h"
 #include "algorithm"
 #include "logger.h"
+
 namespace LaughTaleEngine
 {
-    std::vector<VertexBuffer *>  *VertexBufferManger::VertexBuffers = new std::vector<VertexBuffer *>();
-
     void VertexBufferManger::init()
     {
         VertexBuffers = new std::vector<VertexBuffer *>();
@@ -92,12 +91,12 @@ namespace LaughTaleEngine
             ))->GetStride();
     }
 
-    void VertexBufferManger::pushVertexBufferElement(vertexBufferId vbId, VertexBufferElement ElementToPush)
+    void VertexBufferManger::pushElement(vertexBufferId vbId, VertexBufferElement ElementToPush)
     {
         (*std::find_if(
             VertexBuffers->begin(), 
             VertexBuffers->end(),
             [=](VertexBuffer * vb)-> bool { return vb->RendererID == vbId; }
-        ))->pushVertexBufferElement(ElementToPush);
+        ))->pushElement(ElementToPush);
     }
 }

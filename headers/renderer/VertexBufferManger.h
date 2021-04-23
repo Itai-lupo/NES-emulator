@@ -8,22 +8,25 @@ namespace LaughTaleEngine
     class VertexBufferManger
     {
         private:
-            static std::vector<VertexBuffer *> *VertexBuffers;
+            std::vector<VertexBuffer *> *VertexBuffers;
         public:
-            static void init();
-            static void close();
+            VertexBufferManger(){ init(); }
+            ~VertexBufferManger(){ close(); }
 
-            static void bind(vertexBufferId vbId);
-            static void unBind(vertexBufferId vbId);
+            void init();
+            void close();
 
-            static vertexBufferId add(VertexBuffer *vbToAdd);
-            static void remove(vertexBufferId vbToAdd);
+            void bind(vertexBufferId vbId);
+            void unBind(vertexBufferId vbId);
 
-            static void changeData(vertexBufferId vbId, const void *data, uint32_t size);
-            static VertexBuffer *getVB(vertexBufferId vbId);
-            
-            static std::vector<VertexBufferElement> getElements(vertexBufferId vbId);
-            static unsigned int GetStride(vertexBufferId vbId);
-            static void pushVertexBufferElement(vertexBufferId vbId, VertexBufferElement ElementToPush);
+            vertexBufferId add(VertexBuffer *vbToAdd);
+            void remove(vertexBufferId vbToAdd);
+
+            void changeData(vertexBufferId vbId, const void *data, uint32_t size);
+            VertexBuffer *getVB(vertexBufferId vbId);
+        
+            std::vector<VertexBufferElement> getElements(vertexBufferId vbId);
+            unsigned int GetStride(vertexBufferId vbId);
+            void pushElement(vertexBufferId vbId, VertexBufferElement ElementToPush);
     };
 }

@@ -80,7 +80,12 @@
         "event.h": "c",
         "linuxinput.h": "c",
         "bitset": "cpp",
-        "corewindow.h": "c"
+        "corewindow.h": "c",
+        "indexbuffermanger.h": "c",
+        "vertexbuffer.h": "c",
+        "vertexbuffermanger.h": "c",
+        "shader.h": "c",
+        "vertexarraymanger.h": "c"
     },
     "files.exclude": {
         "build/": true,

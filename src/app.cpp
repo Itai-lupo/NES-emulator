@@ -29,10 +29,6 @@ namespace LaughTaleEngine
         eventManger::init();
         entityManger::init();
         windowManger::init();
-        VertexBufferManger::init();
-        indexBufferManger::init();
-        VertexBufferManger::init();
-        shaderManger::init();
 
         eventManger::addEvent(events::AppUpdate, onUpdate, -1);
     }
@@ -43,10 +39,6 @@ namespace LaughTaleEngine
         eventManger::close();
         entityManger::close();
         windowManger::close();
-        VertexBufferManger::close();
-        indexBufferManger::close();
-        VertexBufferManger::close();
-        shaderManger::close();
     }
 
 
@@ -65,7 +57,6 @@ namespace LaughTaleEngine
             now = getTime();
             updateData->DeltaTime = now - updateData->currentTime;
             updateData->currentTime = now;
-
             eventManger::trigerEvent(events::AppUpdate, updateData);
         }
         

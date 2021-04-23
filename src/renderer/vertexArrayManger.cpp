@@ -4,8 +4,6 @@
 
 namespace LaughTaleEngine
 {
-    std::vector<vertexArray *> *vertexArrayManger::vertexArrays = new std::vector<vertexArray *>();
-
     void vertexArrayManger::init()
     {
         vertexArrays = new std::vector<vertexArray*>();
@@ -16,16 +14,15 @@ namespace LaughTaleEngine
         vertexArrays->clear();
     }    
     
-    vertexArrayId vertexArrayManger::addVertxArray(vertexArray *va)
+    vertexArrayId vertexArrayManger::add(vertexArray *va)
     {
         va->rendererId = va->init();
         vertexArrays->push_back(va);
         return va->rendererId;
     }    
     
-    void vertexArrayManger::AddBufferToVertexArray(vertexArrayId id,  vertexBufferId vbId)
+    void vertexArrayManger::addBuffer(vertexArrayId id,  VertexBuffer *vb)
     {
-        VertexBuffer *vb = VertexBufferManger::getVB(vbId);
         (*std::find_if(
             vertexArrays->begin(),
             vertexArrays->end(),
@@ -33,7 +30,7 @@ namespace LaughTaleEngine
         ))->AddBuffer(vb);
     }    
     
-    void vertexArrayManger::bindVertexArray(vertexArrayId id)
+    void vertexArrayManger::bind(vertexArrayId id)
     {
         (*std::find_if(
             vertexArrays->begin(),
@@ -42,7 +39,7 @@ namespace LaughTaleEngine
         ))->bind();
     }    
     
-    void vertexArrayManger::unbindVertexArray(vertexArrayId id)
+    void vertexArrayManger::unbind(vertexArrayId id)
     {
         (*std::find_if(
             vertexArrays->begin(),

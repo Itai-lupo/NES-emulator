@@ -26,14 +26,17 @@ namespace LaughTaleEngine
     class indexBufferManger
     {
         private:
-            static std::vector<indexBuffer *> *indexBuffers;
+            std::vector<indexBuffer *> *indexBuffers;
         public:
-            static void init();
-            static void close();
+            indexBufferManger(){ init(); }
+            ~indexBufferManger(){ close(); }
+            
+            void init();
+            void close();
 
-            static indexBufferId add(indexBuffer * indexBufferToAdd);
-            static void bind(indexBufferId id);
-            static void unbind(indexBufferId id);
+            indexBufferId add(indexBuffer * indexBufferToAdd);
+            void bind(indexBufferId id);
+            void unbind(indexBufferId id);
 
     };       
 }

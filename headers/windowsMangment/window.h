@@ -6,7 +6,13 @@
 #include "events.h"
 
 #include "core.h"
-
+#include "shader.h"
+#include "shaderManger.h"
+#include "vertexArray.h"
+#include "vertexArrayManger.h"
+#include "VertexBuffer.h"
+#include "VertexBufferManger.h"
+#include "indexBufferManger.h"
 
 namespace LaughTaleEngine
 {
@@ -33,6 +39,22 @@ namespace LaughTaleEngine
             static bool isVSync(){ return VSync; };
 
             static void bindContext(windowPieceId windowId);
+
+
+            static vertexBufferId add(windowPieceId windowId, VertexBuffer *data);
+            static indexBufferId add(windowPieceId windowId, indexBuffer *data);
+            static vertexArrayId add(windowPieceId windowId, vertexArray *data);
+            static shaderId add(windowPieceId windowId, shader *data);
+
+            static void bindVB(windowPieceId windowId, vertexBufferId id);
+            static void bindIB(windowPieceId windowId, indexBufferId id);
+            static void bindVA(windowPieceId windowId, vertexArrayId id);
+            static void bindS(windowPieceId windowId, shaderId id);
+
+            static void pushElement(windowPieceId windowId, vertexBufferId id, VertexBufferElement data);
+            static void addBuffer(windowPieceId windowId, vertexArrayId id, vertexBufferId vbId);
+
+            static shaderManger *getShaderManger(windowPieceId windowId);
     };
 }
     

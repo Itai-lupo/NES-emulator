@@ -3,8 +3,6 @@
 
 namespace LaughTaleEngine
 {
-    std::vector<indexBuffer *> *indexBufferManger::indexBuffers = new std::vector<indexBuffer *>();
-
     void indexBufferManger::init()
     {
         indexBuffers = new std::vector<indexBuffer *>();

@@ -9,15 +9,18 @@ namespace LaughTaleEngine
     class vertexArrayManger
     {
         private:
-            static std::vector<vertexArray *> *vertexArrays;
+            std::vector<vertexArray *> *vertexArrays;
         public:
-            static void init();
-            static void close();
+            vertexArrayManger(){ init(); }
+            ~vertexArrayManger(){ close(); }
+            
+            void init();
+            void close();
 
-            static vertexArrayId addVertxArray(vertexArray *va);
+            vertexArrayId add(vertexArray *va);
 
-            static void AddBufferToVertexArray(vertexArrayId id, vertexBufferId vb);
-            static void bindVertexArray(vertexArrayId id);
-            static void unbindVertexArray(vertexArrayId id);
+            void addBuffer(vertexArrayId id, VertexBuffer *vb);
+            void bind(vertexArrayId id);
+            void unbind(vertexArrayId id);
     };    
 } 
