@@ -43,7 +43,6 @@ namespace LaughTaleEngine
                 {
                     VBLayout = new VertexBufferLayout();
                 }
-            // virtual ~VertexBuffer() = 0;
 
             virtual vertexBufferId init() = 0;
             virtual void setData(const void *data, uint32_t size) = 0;
@@ -62,7 +61,5 @@ namespace LaughTaleEngine
                     LAUGHTALE_ENGINR_LOG_INFO(std::to_string(i.type));
                 }
             }
-
-
     };
 }

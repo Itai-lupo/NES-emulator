@@ -20,6 +20,7 @@ namespace LaughTaleEngine
 
     void openGLVertexArray::AddBuffer(VertexBuffer *vb)
     {
+        LAUGHTALE_ENGINR_CONDTION_LOG_FATAL("no vertex buffer layout", vb->getElements().size() == 0);
         bind();
         const auto& elements = vb->getElements();
 

@@ -13,6 +13,8 @@
 #include "VertexBuffer.h"
 #include "VertexBufferManger.h"
 #include "indexBufferManger.h"
+#include "renderApi.h"
+#include "renderer.h"
 
 namespace LaughTaleEngine
 {
@@ -24,7 +26,7 @@ namespace LaughTaleEngine
             static void init();
             static void close();
             
-            static windowPieceId addWindow(const std::string& title = "raftel engine", bool useImGui = false, unsigned int width = 1280, unsigned int height = 720);
+            static windowPieceId addWindow(const std::string& title = "raftel engine", bool useImGui = false, unsigned int width = 1280, unsigned int height = 720, renderAPI renderAPIType = renderAPI::OpenGL);
             static void onUpdate(IEventData *sendor);
 
             static window *getWindow(windowPieceId windowId);
@@ -55,6 +57,8 @@ namespace LaughTaleEngine
             static void addBuffer(windowPieceId windowId, vertexArrayId id, vertexBufferId vbId);
 
             static shaderManger *getShaderManger(windowPieceId windowId);
+            static renderApi *getRenderApi(windowPieceId windowId);
+            static renderer *getRenderer(windowPieceId windowId);
     };
 }
     

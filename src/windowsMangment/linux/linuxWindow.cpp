@@ -6,7 +6,8 @@
 
 
 #include "openGLContext.h"
-
+#include "openGLrenderApi.h"
+#include "renderer.h"
 #include <string>
 
 namespace LaughTaleEngine {
@@ -124,7 +125,20 @@ namespace LaughTaleEngine {
 		data->id = (uint64_t)Window;
 		data->Window = Window;
 
-		data->context = new openGLContext(Window);
+		renderApi *rApi;
+		switch (data->renderAPIType)
+		{
+			case renderAPI::OpenGL:
+				data->context = new openGLContext(Window);
+				rApi = new openGLRenderApi();
+				break;
+			
+			default:
+				LAUGHTALE_ENGINR_LOG_FATAL("can't open window, no render Type specifiction");
+		}
+		
+		data->setRenderApi(rApi);
+		data->setRenderer(new renderer(rApi));
 		data->context->Init();
 		glfwSetWindowUserPointer(Window, data);
 

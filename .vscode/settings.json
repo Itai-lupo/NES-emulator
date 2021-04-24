@@ -85,7 +85,11 @@
         "vertexbuffer.h": "c",
         "vertexbuffermanger.h": "c",
         "shader.h": "c",
-        "vertexarraymanger.h": "c"
+        "vertexarraymanger.h": "c",
+        "renderapi.h": "c",
+        "glm.hpp": "c",
+        "renderer.h": "c",
+        "vertexarray.h": "c"
     },
     "files.exclude": {
         "build/": true,

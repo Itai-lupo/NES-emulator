@@ -52,9 +52,9 @@ namespace LaughTaleEngine
         );
     }
 
-    windowPieceId windowManger::addWindow(const std::string& title, bool useImGui, unsigned int width, unsigned int height)
+    windowPieceId windowManger::addWindow(const std::string& title, bool useImGui, unsigned int width, unsigned int height, renderAPI renderAPIType)
     {
-        window *newWin = new window(title, width, height, useImGui);
+        window *newWin = new window(title, width, height, useImGui, renderAPIType);
         window::Init(newWin);
         windows.push_back(newWin);
 
@@ -159,6 +159,16 @@ namespace LaughTaleEngine
     shaderManger *windowManger::getShaderManger(windowPieceId windowId)
     {
         return static_cast<shaderManger *>(findWinById(windowId)->getShaderManger());
+    }
+
+    renderApi *windowManger::getRenderApi(windowPieceId windowId)
+    {
+        return static_cast<renderApi *>(findWinById(windowId)->getRenderApi());
+    }
+
+    renderer *windowManger::getRenderer(windowPieceId windowId)
+    {
+        return static_cast<renderer *>(findWinById(windowId)->getRenderer());
     }
 
 }

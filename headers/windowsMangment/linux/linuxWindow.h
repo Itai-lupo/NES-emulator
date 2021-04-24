@@ -5,6 +5,7 @@
 #include <vector>
 #include "graphicsContext.h"
 
+
 struct GLFWwindow;
 namespace LaughTaleEngine {
 
@@ -12,8 +13,8 @@ namespace LaughTaleEngine {
 	{
 		private:
 		public:
-			linuxWindow(const std::string& title, unsigned int width, unsigned int height, bool useImGui):
-				coreWindow(title, width, height, useImGui){}
+			linuxWindow(const std::string& title, unsigned int width, unsigned int height, bool useImGui, renderAPI renderAPIType):
+				coreWindow(title, width, height, useImGui, renderAPIType){}
 
 
 			static void Init(linuxWindow *data);

@@ -1,7 +1,6 @@
 #include "LaughTaleEngine.h"
 #include <gtest/gtest.h>
 #include <string.h>
-#include "glad.h"
 #include "imgui.h"
 #include "handleOpenGlErrors.h"
 
@@ -20,7 +19,6 @@ class renderData: public IEntity
         indexBufferId ibId;
         vertexArrayId vaId;
         shaderId sId;
-
 };
 
 
@@ -50,11 +48,16 @@ class windowTest
         {
 
             renderData *renderEntity = static_cast<renderData *>(eventEntity);
+            renderApi *api = windowManger::getRenderApi(sendor->windowId);
+            renderer *r = windowManger::getRenderer(sendor->windowId);
+            r->BeginScene();
+
+
             float mouseX = (float)input::GetMouseX(windowManger::raftelIdToWindowReference(sendor->windowId)) / windowManger::getWidth(sendor->windowId);
             float mouseY = (float)input::GetMouseY(windowManger::raftelIdToWindowReference(sendor->windowId)) / windowManger::getHeight(sendor->windowId);
             
-            glClearColor((float)eventEntity->x / eventEntity->width, (float)eventEntity->y / eventEntity->hight, 0, 1);
-            glClear(GL_COLOR_BUFFER_BIT);
+            api->SetClearColor(glm::vec4((float)eventEntity->x / eventEntity->width, (float)eventEntity->y / eventEntity->hight, 0, 1));
+            api->Clear();
 
             
             windowManger::bindVA(sendor->windowId, renderEntity->vaId);
@@ -66,21 +69,21 @@ class windowTest
             windowShaderManger->setUniform1f(renderEntity->sId, "xOffset", mouseX * 2 - 1);
             windowShaderManger->setUniform1f(renderEntity->sId, "yOffset", -mouseY * 2 + 1);
 
-            GL_CALL(glDrawElements(GL_TRIANGLES, 12, GL_UNSIGNED_INT, nullptr));
-
+            r->Submit(12);
         }
 
         static void onRenderWin2(IEntity *eventEntity,  IEventData *sendor)
         {
             renderData *renderEntity = static_cast<renderData *>(eventEntity);
+            renderApi *api = windowManger::getRenderApi(sendor->windowId);
+            renderer *r = windowManger::getRenderer(sendor->windowId);
+
+            r->BeginScene();
             float mouseX = (float)input::GetMouseX(windowManger::raftelIdToWindowReference(sendor->windowId)) / windowManger::getWidth(sendor->windowId);
             float mouseY = (float)input::GetMouseY(windowManger::raftelIdToWindowReference(sendor->windowId)) / windowManger::getHeight(sendor->windowId);
-            glClearColor(
-                mouseX, 
-                mouseY, 
-                1, 
-                1);
-            glClear(GL_COLOR_BUFFER_BIT);
+
+            api->SetClearColor(glm::vec4(mouseX, mouseY, 1, 1));
+            api->Clear();
 
             windowManger::bindVA(sendor->windowId, renderEntity->vaId);
             windowManger::bindS(sendor->windowId, renderEntity->sId);
@@ -91,7 +94,7 @@ class windowTest
             windowShaderManger->setUniform1f(renderEntity->sId, "xOffset", mouseX * 2 - 1);
             windowShaderManger->setUniform1f(renderEntity->sId, "yOffset", -mouseY * 2 + 1);
 
-            GL_CALL(glDrawElements(GL_TRIANGLES, 12, GL_UNSIGNED_INT, nullptr));
+            r->Submit(12);
         }
 
         static void ImGuiRender(IEntity *eventEntity, __attribute__((unused)) IEventData *sendor)
@@ -105,12 +108,6 @@ class windowTest
 TEST(window, openWindowAndUseEvent)
 {
     app::init();
-
-    float postions[6] = { 
-        0.5f,  -0.5f,
-        -0.5f,   0.0f,
-        0.5f,   0.5f
-    };
 
     float postions2[12] = { 
          0.0f,    1.0f,
@@ -187,6 +184,5 @@ TEST(window, openWindowAndUseEvent)
     eventManger::addEvent(events::WindowClose, windowTest::WindowClose);
     
     app::run();
-
     app::close();    
 }

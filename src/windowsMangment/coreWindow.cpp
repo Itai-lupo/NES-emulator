@@ -6,8 +6,8 @@
 
 namespace LaughTaleEngine {
 
-    coreWindow::coreWindow(const std::string& title, unsigned int width, unsigned int height, bool useImGui)
-        :Title(title), Width(width), Height(height), useImGui(useImGui)
+    coreWindow::coreWindow(const std::string& title, unsigned int width, unsigned int height, bool useImGui, renderAPI renderAPIType)
+        :Title(title), Width(width), Height(height), useImGui(useImGui), renderAPIType(renderAPIType)
     {
         vaManger = new vertexArrayManger();
         vbManger = new VertexBufferManger();
