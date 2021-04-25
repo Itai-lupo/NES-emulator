@@ -37,6 +37,6 @@ namespace LaughTaleEngine
             virtual void setUniform1i(const std::string& name, int value) override;
             virtual void setUniform1f(const std::string& name, float value) override;
             virtual void setUniform4f(const std::string& name, float v0, float v1, float v2, float v3) override;
-            virtual void setUniformMat4f(const std::string& name,  void *value) override;
+            virtual void setUniformMat4f(const std::string& name, const glm::mat4& value) override;
     };
 }

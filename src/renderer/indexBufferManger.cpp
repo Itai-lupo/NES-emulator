@@ -44,4 +44,13 @@ namespace LaughTaleEngine
             [=](indexBuffer *ib) -> bool { return ib->RendererID == id; }
         ))->unbind();
     }
+
+    uint32_t indexBufferManger::getCount(indexBufferId id)
+    {
+        return (*std::find_if(
+            indexBuffers->begin(),
+            indexBuffers->end(),
+            [=](indexBuffer *ib) -> bool { return ib->RendererID == id; }
+        ))->getCount();
+    }
 }

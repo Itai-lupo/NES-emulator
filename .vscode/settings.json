@@ -89,7 +89,9 @@
         "renderapi.h": "c",
         "glm.hpp": "c",
         "renderer.h": "c",
-        "vertexarray.h": "c"
+        "vertexarray.h": "c",
+        "shadermanger.h": "c",
+        "corecamera.h": "c"
     },
     "files.exclude": {
         "build/": true,

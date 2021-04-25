@@ -50,8 +50,6 @@ class windowTest
             renderData *renderEntity = static_cast<renderData *>(eventEntity);
             renderApi *api = windowManger::getRenderApi(sendor->windowId);
             renderer *r = windowManger::getRenderer(sendor->windowId);
-            r->BeginScene();
-
 
             float mouseX = (float)input::GetMouseX(windowManger::raftelIdToWindowReference(sendor->windowId)) / windowManger::getWidth(sendor->windowId);
             float mouseY = (float)input::GetMouseY(windowManger::raftelIdToWindowReference(sendor->windowId)) / windowManger::getHeight(sendor->windowId);
@@ -65,11 +63,12 @@ class windowTest
             windowManger::bindIB(sendor->windowId, renderEntity->ibId);
             
             shaderManger *windowShaderManger = windowManger::getShaderManger(sendor->windowId);
-            windowShaderManger->setUniform4f(renderEntity->sId, "colorOffset", mouseX, 1 - mouseY, 0.0f, 1.0f);
-            windowShaderManger->setUniform1f(renderEntity->sId, "xOffset", mouseX * 2 - 1);
-            windowShaderManger->setUniform1f(renderEntity->sId, "yOffset", -mouseY * 2 + 1);
+            shader *s = windowShaderManger->getShader(renderEntity->sId);
+            s->setUniform4f("colorOffset", mouseX, 1 - mouseY, 0.0f, 1.0f);
+            s->setUniform1f("xOffset", mouseX * 2 - 1);
+            s->setUniform1f("yOffset", -mouseY * 2 + 1);
 
-            r->Submit(12);
+            r->Submit(s, 12);
         }
 
         static void onRenderWin2(IEntity *eventEntity,  IEventData *sendor)
@@ -78,9 +77,12 @@ class windowTest
             renderApi *api = windowManger::getRenderApi(sendor->windowId);
             renderer *r = windowManger::getRenderer(sendor->windowId);
 
-            r->BeginScene();
-            float mouseX = (float)input::GetMouseX(windowManger::raftelIdToWindowReference(sendor->windowId)) / windowManger::getWidth(sendor->windowId);
-            float mouseY = (float)input::GetMouseY(windowManger::raftelIdToWindowReference(sendor->windowId)) / windowManger::getHeight(sendor->windowId);
+            float mouseX = 
+                (float)input::GetMouseX(windowManger::raftelIdToWindowReference(sendor->windowId)) / 
+                windowManger::getWidth(sendor->windowId);
+            float mouseY = 
+                (float)input::GetMouseY(windowManger::raftelIdToWindowReference(sendor->windowId)) / 
+                windowManger::getHeight(sendor->windowId);
 
             api->SetClearColor(glm::vec4(mouseX, mouseY, 1, 1));
             api->Clear();
@@ -90,11 +92,12 @@ class windowTest
             windowManger::bindIB(sendor->windowId, renderEntity->ibId);
             
             shaderManger *windowShaderManger = windowManger::getShaderManger(sendor->windowId);
-            windowShaderManger->setUniform4f(renderEntity->sId, "colorOffset", mouseX, 1 - mouseY, 0.0f, 1.0f);
-            windowShaderManger->setUniform1f(renderEntity->sId, "xOffset", mouseX * 2 - 1);
-            windowShaderManger->setUniform1f(renderEntity->sId, "yOffset", -mouseY * 2 + 1);
+            shader *s = windowShaderManger->getShader(renderEntity->sId);
+            s->setUniform4f("colorOffset", mouseX, 1 - mouseY, 0.0f, 1.0f);
+            s->setUniform1f("xOffset", mouseX * 2 - 1);
+            s->setUniform1f("yOffset", -mouseY * 2 + 1);
 
-            r->Submit(12);
+            r->Submit(s, windowManger::getIndexBufferCount(sendor->windowId, renderEntity->ibId));
         }
 
         static void ImGuiRender(IEntity *eventEntity, __attribute__((unused)) IEventData *sendor)
@@ -127,6 +130,10 @@ TEST(window, openWindowAndUseEvent)
 
     windowPieceId win1 =  windowManger::addWindow("win 1", true);
     windowPieceId win2 = windowManger::addWindow("win 2");
+
+    windowManger::setCamera(win1, new orthographicCamera(-1.0f, 1.0f, -1.0f, 1.0f));
+
+    windowManger::setCamera(win2, new orthographicCamera(-1.0f, 1.0f, -1.0f, 1.0f));
 
     renderData *win1RenderData = new renderData();
     renderData *win2RenderData = new renderData();

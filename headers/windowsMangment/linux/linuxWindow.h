@@ -1,4 +1,5 @@
 #pragma once
+#include "core.h"
 #include "coreWindow.h"
 #include <string>
 #include <functional>
@@ -25,7 +26,5 @@ namespace LaughTaleEngine {
 			static void makeContextCurrent(GLFWwindow* Window);
 			GLFWwindow* Window;
 			GraphicsContext *context;
-		
-			
 	};
 }

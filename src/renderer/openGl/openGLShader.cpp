@@ -8,6 +8,7 @@
 #include "logger.h"
 
 #include <glm/gtx/string_cast.hpp>
+#include <glm/gtc/type_ptr.hpp>
 
 #include "handleOpenGlErrors.h"
 
@@ -133,9 +134,9 @@ namespace LaughTaleEngine
         GL_CALL(glUniform1f(GetUniformLocation(name), value));
     }
 
-    void openGLShader::setUniformMat4f(const std::string& name,  void *value)
+    void openGLShader::setUniformMat4f(const std::string& name, const glm::mat4& value)
     {   
-        GL_CALL(glUniformMatrix4fv(GetUniformLocation(name), 1, GL_FALSE, (const GLfloat *)value));
+        GL_CALL(glUniformMatrix4fv(GetUniformLocation(name), 1, GL_FALSE, glm::value_ptr(value)));
     }
 
 

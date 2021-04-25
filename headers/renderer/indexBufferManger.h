@@ -37,6 +37,7 @@ namespace LaughTaleEngine
             indexBufferId add(indexBuffer * indexBufferToAdd);
             void bind(indexBufferId id);
             void unbind(indexBufferId id);
+            uint32_t getCount(indexBufferId id);
 
     };       
 }

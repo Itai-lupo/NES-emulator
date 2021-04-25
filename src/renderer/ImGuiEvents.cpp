@@ -1,3 +1,5 @@
+#include "core.h"
+#include "window.h"
 #include "logger.h"
 #include "events.h"
 
@@ -114,7 +116,7 @@ namespace LaughTaleEngine
         LAUGHTALE_ENGINR_LOG_INFO("imgui init successfully");
     }
 
-    void onImGuiUpdate(linuxWindow data, onUpdateData *eventData)
+    void onImGuiUpdate(window data, onUpdateData *eventData)
     {
         ImGuiIO& io = ImGui::GetIO();
         ImGui_ImplOpenGL3_NewFrame();

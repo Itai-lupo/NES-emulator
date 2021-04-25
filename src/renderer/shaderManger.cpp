@@ -35,6 +35,14 @@ namespace LaughTaleEngine
         );
     }
 
+    shader *shaderManger::getShader(shaderId id)
+    {
+        return (*std::find_if(
+            shaders->begin(),
+            shaders->end(),
+            [=](shader *i) -> bool { return i->rendererID == id; }
+        ));
+    }
 
     void shaderManger::bind(shaderId id)
     {
@@ -82,7 +90,7 @@ namespace LaughTaleEngine
         ))->setUniform4f(name, v0, v1, v2, v3);
     }
     
-    void shaderManger::setUniformMat4f(shaderId id, const std::string& name,  void *value)
+    void shaderManger::setUniformMat4f(shaderId id, const std::string& name, const glm::mat4 &value)
     {
         (*std::find_if(
             shaders->begin(),

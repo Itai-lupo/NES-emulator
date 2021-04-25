@@ -35,61 +35,61 @@ namespace LaughTaleEngine
 
     struct WindowResizeData: public IEventData
     {
-        WindowResizeData(int width, int height, windowPtr window):
+        WindowResizeData(int width, int height, windowPieceId window):
             IEventData(events::WindowResize), windowWidth(width), windowHeight(height), window(window){}
 
         int windowWidth, windowHeight;
-        windowPtr window;
+        windowPieceId window;
     };
     
     
     struct KeyData: public IEventData
     {
-        KeyData(int key, int scancode, int mods, windowPtr window):
+        KeyData(int key, int scancode, int mods, windowPieceId window):
             IEventData(), key(key), scancode(scancode), mods(mods), window(window){}
 
         int key, scancode, mods;
-        windowPtr window;
+        windowPieceId window;
 
     };
 
     struct keyTypedData: public IEventData
     {
-        keyTypedData(unsigned int keycode, windowPtr window):
+        keyTypedData(unsigned int keycode, windowPieceId window):
             keycode(keycode), window(window){}
 
         unsigned int keycode;
-        windowPtr window;
+        windowPieceId window;
 
     };
     
     struct mouseClickData: public IEventData
     {
-        mouseClickData(int button, int mods, windowPtr window):
+        mouseClickData(int button, int mods, windowPieceId window):
             IEventData(), button(button), mods(mods), window(window){}
 
         int button, mods;
-        windowPtr window;
+        windowPieceId window;
 
     };
 
     struct mouseScrollData: public IEventData
     {
-        mouseScrollData(double xOffset, double yOffset, windowPtr window):
+        mouseScrollData(double xOffset, double yOffset, windowPieceId window):
             IEventData(events::MouseScrolled), xOffset(xOffset), yOffset(yOffset), window(window){}
 
         double xOffset, yOffset;
-        windowPtr window;
+        windowPieceId window;
 
     };
 
     struct mouseMoveData: public IEventData
     {
-        mouseMoveData(double xPos, double yPos, windowPtr window):
+        mouseMoveData(double xPos, double yPos, windowPieceId window):
             IEventData(events::MouseScrolled), xPos(xPos), yPos(yPos), window(window) {}
 
         double xPos, yPos;
-        windowPtr window;
+        windowPieceId window;
     };
 
     struct onUpdateData: public IEventData
@@ -128,7 +128,7 @@ namespace LaughTaleEngine
     {
         private:
             static std::vector<event> *eventList;
-            static u_int32_t nextEventId;
+            static uint32_t nextEventId;
         public:
             static void init();
             static void close();

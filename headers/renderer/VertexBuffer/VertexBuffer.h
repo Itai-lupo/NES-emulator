@@ -2,6 +2,7 @@
 #include "core.h"
 #include <vector>
 #include "logger.h"
+
 namespace LaughTaleEngine
 {
     struct VertexBufferElement{
@@ -54,7 +55,6 @@ namespace LaughTaleEngine
             inline unsigned int GetStride() { return VBLayout->GetStride(); };
             inline void pushElement(VertexBufferElement ElementToPush) 
             {  
-                LAUGHTALE_ENGINR_LOG_INFO(std::to_string(RendererID));
                 VBLayout->push(ElementToPush); 
                 for( VertexBufferElement i : VBLayout->getElements())
                 {

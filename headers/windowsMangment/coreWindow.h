@@ -2,24 +2,28 @@
 #include <string>
 #include <functional>
 #include <vector>
-
-enum renderAPI
-{
-    None = 0, OpenGL = 1
-};
-typedef u_int64_t windowPieceId;
+#include "core.h"
+#include "vertexArrayManger.h"
+#include "VertexBufferManger.h"
+#include "indexBufferManger.h"
+#include "shaderManger.h"
+#include "renderApi.h"
+#include "renderer.h"
+#include "coreCamera.h"
 
 namespace LaughTaleEngine {
 
 	class coreWindow
 	{
-		private:
-			void *vaManger;
-			void *vbManger;
-			void *ibManger;
-			void *sManger;
-			void *Api;
-			void *winRenderer;
+		protected:
+			vertexArrayManger *vaManger;
+			VertexBufferManger *vbManger;
+			indexBufferManger *ibManger;
+			shaderManger *sManger;
+			renderApi *Api;
+			renderer *winRenderer;
+			coreCamera *camera;
+
 		public:
 			coreWindow(const std::string& title, unsigned int width, unsigned int height, bool useImGui, renderAPI renderAPIType);
 
@@ -29,14 +33,14 @@ namespace LaughTaleEngine {
 			renderAPI renderAPIType;
 			windowPieceId id;
 
-			void *getVertexArrayManger(){ return vaManger; };
-			void *getVertexBufferManger(){ return vbManger; };
-			void *getIndexBufferManger(){ return ibManger; };
-			void *getShaderManger(){ return sManger; };
-			void *getRenderApi(){ return Api; };
-			void *getRenderer(){ return winRenderer; };
-			void setRenderApi(void *rApi){ Api = rApi; }
-			void setRenderer(void *r){ winRenderer = r; }
-
+			vertexArrayManger *getVertexArrayManger(){ return vaManger; };
+			VertexBufferManger *getVertexBufferManger(){ return vbManger; };
+			indexBufferManger *getIndexBufferManger(){ return ibManger; };
+			shaderManger *getShaderManger(){ return sManger; };
+			renderApi *getRenderApi(){ return Api; };
+			renderer *getRenderer(){ return winRenderer; };
+			void setRenderApi(renderApi *rApi){ Api = rApi; }
+			void setRenderer(renderer *r){ winRenderer = r; }
+			void setCamera(coreCamera *cam){ camera = cam; }
 	};
 }

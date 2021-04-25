@@ -2,6 +2,7 @@
 #include <vector>
 #include "shader.h"
 #include "core.h"
+#include <glm/glm.hpp>
 
 namespace LaughTaleEngine
 {
@@ -25,6 +26,8 @@ namespace LaughTaleEngine
             void setUniform1f(shaderId id, const std::string& name, float value);
             void setUniform1i(shaderId id, const std::string& name, int value);
             void setUniform4f(shaderId id, const std::string& name, float v0, float v1, float v2, float v3);
-            void setUniformMat4f(shaderId id, const std::string& name,  void *value);
+            void setUniformMat4f(shaderId id, const std::string& name,  const glm::mat4 &value);
+
+            shader *getShader(shaderId id);
     };
 }
