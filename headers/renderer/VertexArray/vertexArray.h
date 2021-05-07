@@ -13,6 +13,5 @@ namespace LaughTaleEngine
             virtual void AddBuffer(VertexBuffer *vb) = 0;
             virtual void bind() = 0;
             virtual void unbind() = 0;
-
     };
 } 

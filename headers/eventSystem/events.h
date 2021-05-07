@@ -20,6 +20,7 @@ namespace LaughTaleEngine
 		KeyPressed, KeyReleased, KeyRepeat, KeyTyped,
 		MouseButtonPressed, MouseButtonReleased, MouseMoved, MouseScrolled,
         ImGuiRender,
+        onSoundsample,
         events_MAX
     };
 
@@ -31,6 +32,15 @@ namespace LaughTaleEngine
         virtual ~IEventData() {}
         events eventType;
         windowPieceId windowId;
+    };
+
+    struct SoundsampleData : public IEventData
+    {
+        SoundsampleData():
+            IEventData(events::onSoundsample), amp(0.0), time(0.0){}
+
+        double amp;
+        double time;
     };
 
     struct WindowResizeData: public IEventData

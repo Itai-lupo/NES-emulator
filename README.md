@@ -15,4 +15,4 @@ dev tools:
 DLLS:
     glog
     glfw
-    
+    glm

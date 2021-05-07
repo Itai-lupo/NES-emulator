@@ -9,6 +9,7 @@
 #include "indexBufferManger.h"
 #include "vertexArrayManger.h"
 #include "shaderManger.h"
+#include "soundEngine.h"
 #include <chrono>
 #include <string>
 
@@ -23,22 +24,25 @@ namespace LaughTaleEngine
     
     void app::init()
     {
+        keepRunning = true;
         std::string pathToLogs =  "./logs/";
         std::string projectName =  "LaughTaleEngine";
         logger::init(pathToLogs, projectName);
         eventManger::init();
         entityManger::init();
         windowManger::init();
-
+        soundEngine::init();
         eventManger::addEvent(events::AppUpdate, onUpdate, -1);
     }
 
     void app::close()
     {
+        keepRunning = false;
         logger::close();
         eventManger::close();
         entityManger::close();
         windowManger::close();
+        soundEngine::close();
     }
 
 

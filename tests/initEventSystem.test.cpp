@@ -17,12 +17,19 @@ TEST(initEngine, InitAndCloseEngineWork)
     try
     {
         app::init();
+    }
+    catch(const std::exception& e)
+    {
+        FAIL() << "init " << e.what() << "\n";
+    }
 
+    try
+    {
         app::close();
     }
     catch(const std::exception& e)
     {
-        FAIL() << e.what() << "\n";
+        FAIL() << "close " << e.what() << "\n";
     }
 }
 
