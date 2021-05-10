@@ -36,11 +36,14 @@ namespace LaughTaleEngine
 
     struct SoundsampleData : public IEventData
     {
-        SoundsampleData():
-            IEventData(events::onSoundsample), amp(0.0), time(0.0){}
-
-        double amp;
+        SoundsampleData(int16_t *amp, uint64_t framesPerSampel, unsigned int sample_rate, unsigned channels, double time,  uint8_t sizeOfFrame):
+            IEventData(events::onSoundsample), amp(amp), framesPerSampel(framesPerSampel), sample_rate(sample_rate), channels(channels), time(time), sizeOfFrame(sizeOfFrame){}
+        int16_t micAmp;
+        int16_t *amp;
+        uint64_t framesPerSampel;
+        unsigned int sample_rate, channels;
         double time;
+        uint8_t sizeOfFrame;
     };
 
     struct WindowResizeData: public IEventData

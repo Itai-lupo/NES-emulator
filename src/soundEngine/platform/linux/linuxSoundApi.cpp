@@ -7,7 +7,19 @@
 #include "linuxSoundApi.h"
 namespace LaughTaleEngine
 {
-    linuxSoundApi::linuxSoundApi()
+    linuxSoundApi::linuxSoundApi(
+            std::string device_name,
+            unsigned int sample_rate,
+            unsigned int channels,
+            unsigned int frames_per_period,
+            snd_pcm_format_t format,
+            _snd_pcm_stream type): 
+                device_name(device_name),
+                sample_rate(sample_rate),
+                channels(channels),
+                frames_per_period(frames_per_period),
+                format(format),
+                type(type)
     {
         OpenPCMDevicePlayback();
         writeParamsToDriver();
@@ -27,7 +39,7 @@ namespace LaughTaleEngine
         snd_pcm_hw_params_alloca(&params);
         snd_pcm_hw_params_any(handle, params);
         snd_pcm_hw_params_set_access(handle, params, SND_PCM_ACCESS_RW_INTERLEAVED);
-        snd_pcm_hw_params_set_format(handle, params, format); // SND_PCM_FORMAT_S16_LE
+        snd_pcm_hw_params_set_format(handle, params, format);
         snd_pcm_hw_params_set_channels(handle, params, 1);
         int err = snd_pcm_hw_params_set_rate_near(handle, params, &sample_rate, NULL);
         snd_pcm_hw_params_set_period_size_near(handle, params, &frames_per_period, NULL);
@@ -60,55 +72,43 @@ namespace LaughTaleEngine
         return size_of_one_frame;
     }
 
-    unsigned int linuxSoundApi::capture_into_buffer(char* buffer, snd_pcm_uframes_t frames_to_capture) {
-        if(frames_to_capture != frames_per_period) {
-            fprintf(stderr, "frames_to_read must equal frames in period <%lu>\n", frames_per_period);
+    long linuxSoundApi::capture_into_buffer(char* buffer, snd_pcm_uframes_t frames_to_capture) {
+        if(frames_to_capture != frames_per_period) 
+        {
+            LAUGHTALE_ENGINR_LOG_WARNING("frames_to_read must equal frames in period <" + std::to_string(frames_per_period) + ">");
             return 0;
         }
 
         snd_pcm_sframes_t frames_read = snd_pcm_readi(handle, buffer, frames_to_capture);
 
-        if(frames_read == 0) {
-            fprintf(stderr, "End of file.\n");
-            return 0;
-        }
-
-        if(frames_read != frames_per_period) {
-            fprintf(stderr, "Short read: we read <%ld> frames\n", frames_read);
-            if(frames_read < 0) {
-                fprintf(stderr, "error from readi: %s\n", snd_strerror(frames_read));
-                return 0;
-            }
-            return frames_read;
-        }
+        LAUGHTALE_ENGINR_CONDTION_LOG_ERROR("End of file", frames_read == 0);
+        LAUGHTALE_ENGINR_CONDTION_LOG_ERROR("error from readi: " + std::string(snd_strerror(frames_read)), frames_read < 0);
+        LAUGHTALE_ENGINR_CONDTION_LOG_ERROR("Short read: we read <" + std::to_string(frames_read) + "> frames", frames_read != frames_per_period);
+        
+        return frames_read;
     }
 
     unsigned int linuxSoundApi::play_from_buffer(char* buffer, snd_pcm_uframes_t frames_to_play) {
-        if(frames_to_play != frames_per_period) {
-            fprintf(stderr, "frames_to_play must equal frames in period <%lu>\n", frames_per_period);
+        if(frames_to_play != frames_per_period) 
+        {
+            LAUGHTALE_ENGINR_LOG_WARNING("frames_to_play must equal frames in period <" + std::to_string(frames_per_period) + ">");
             return 0;
         }
 
         bool done = false;
-        LAUGHTALE_ENGINR_LOG_INFO("PCM handle name = " + std::string(snd_pcm_name(handle)));
-        LAUGHTALE_ENGINR_LOG_INFO("frames to play = " + std::to_string(frames_to_play));
+
         std::string bufferStringFormat;
-        for(unsigned short *i = (unsigned short *)buffer; (char *)i < buffer + 64; i++)
-        {
-            bufferStringFormat += std::to_string(*i) + ", ";  
-        }
-        
-        LAUGHTALE_ENGINR_LOG_INFO("buffer = " + bufferStringFormat );
-        snd_pcm_sframes_t frames_written = snd_pcm_writei(handle, buffer, 32);
+        snd_pcm_sframes_t frames_written = snd_pcm_writei(handle, buffer, frames_to_play);
 
         if (frames_written == -EPIPE) {
-            fprintf(stderr, "underrun occurred\n");
+            LAUGHTALE_ENGINR_LOG_ERROR("underrun occurred");
             snd_pcm_prepare(handle);
-        } else if (frames_written < 0) {
-            fprintf(stderr, "error from writei: %s\n", snd_strerror(frames_written));
-        }  else if (frames_written != frames_per_period) {
-            fprintf(stderr, "short write, write %ld frames\n", frames_written);
+            return -EPIPE;
         }
+        
+        LAUGHTALE_ENGINR_CONDTION_LOG_ERROR("error from writei: " + std::string(snd_strerror(frames_written)), frames_written < 0);        
+        LAUGHTALE_ENGINR_CONDTION_LOG_ERROR("short write, write " + std::to_string(frames_written) + " frames", frames_written != frames_per_period);
+            
 
         return frames_written;
     }

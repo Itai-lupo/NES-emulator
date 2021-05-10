@@ -1,6 +1,7 @@
 #include "soundEngine.h"
 #include "logger.h"
 #include "app.h"
+#include "events.h"
 #include <string>
 #include <chrono>
 #include <glm/glm.hpp>
@@ -25,11 +26,14 @@
 namespace LaughTaleEngine
 {
     std::thread *soundEngine::soundThread;
-    soundApi *soundEngine::soundIntrface;
+    soundApi *soundEngine::speaker;
+    soundApi *soundEngine::microphone;
+    int16_t *soundEngine::buffer;
 
     void soundEngine::init()
     {
-        soundIntrface = new linuxSoundApi();
+        microphone = new linuxSoundApi("plughw:1,0,0", 44100, 2, 64, SND_PCM_FORMAT_S16_LE, SND_PCM_STREAM_CAPTURE);
+        speaker = new linuxSoundApi("default", 44100, 2, 64, SND_PCM_FORMAT_S16_LE, SND_PCM_STREAM_PLAYBACK);
         soundThread = new std::thread(threadLoop);
     }
 
@@ -37,29 +41,33 @@ namespace LaughTaleEngine
     {
         soundThread->join();
         free(soundThread);
-        free(soundIntrface);
+        free(microphone);
+        free(speaker);
     }      
+
 
     void soundEngine::threadLoop()
     {
+        double time = 0;
+        int16_t amp;
+        SoundsampleData *e = new SoundsampleData(&amp,  speaker->get_frames_per_period(), speaker->getSample_rate(), speaker->getChannelsCount(), time, speaker->get_bytes_per_frame());
+                
         while (app::keepRunning)
         {
-            uint16_t *buffer = (uint16_t *)soundIntrface->allocate_buffer();
-            uint64_t time = std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::system_clock::now().time_since_epoch()).count();
-            bool s = true;
-            int j = 0;
-            int f = 30;
+            buffer = (int16_t *)speaker->allocate_buffer();
+            microphone->capture_into_buffer((char *)buffer, speaker->get_frames_per_period());
 
-            for(uint16_t *i = (uint16_t*)buffer; i < buffer +  soundIntrface->get_frames_per_period() / 2 ; i++)
+            for(int16_t *i = (int16_t*)buffer; i < buffer +  speaker->get_frames_per_period(); i++)
             {
-                (*i) = s * 255 * 255; //(glm::sin(110 * pow(pow(2.0, 1.0 / 12.0), 2) * 2.0 * 3.14159  * time/1000000)) * 255 * 125;
-                j = (j + 1) % (f + 1);
-                if(j == f)
-                    s = !s;
-                time += 1000000/soundIntrface->getSample_rate();
+                e->time = time;
+                e->micAmp = *i;
+                eventManger::trigerEvent(events::onSoundsample, e);
+                
+                (*i) = amp;
+                time += 1/(double)speaker->getSample_rate();
             }
-            LAUGHTALE_ENGINR_LOG_INFO(time);
-            soundIntrface->play_from_buffer((char *)buffer, soundIntrface->get_frames_per_period() );
+
+            speaker->play_from_buffer((char *)buffer, speaker->get_frames_per_period() );
         }
     }
 }

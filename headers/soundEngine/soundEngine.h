@@ -8,7 +8,9 @@ namespace LaughTaleEngine
     class soundEngine
     {
         private:
-            static soundApi *soundIntrface;
+            static soundApi *speaker;
+            static soundApi *microphone;
+            static int16_t *buffer;
 
             static void threadLoop();
 
