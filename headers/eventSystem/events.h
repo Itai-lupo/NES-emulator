@@ -20,7 +20,6 @@ namespace LaughTaleEngine
 		KeyPressed, KeyReleased, KeyRepeat, KeyTyped,
 		MouseButtonPressed, MouseButtonReleased, MouseMoved, MouseScrolled,
         ImGuiRender,
-        onSoundsample,
         events_MAX
     };
 
@@ -33,19 +32,7 @@ namespace LaughTaleEngine
         events eventType;
         windowPieceId windowId;
     };
-
-    struct SoundsampleData : public IEventData
-    {
-        SoundsampleData(int16_t *amp, uint64_t framesPerSampel, unsigned int sample_rate, unsigned channels, double time,  uint8_t sizeOfFrame):
-            IEventData(events::onSoundsample), amp(amp), framesPerSampel(framesPerSampel), sample_rate(sample_rate), channels(channels), time(time), sizeOfFrame(sizeOfFrame){}
-        int16_t micAmp;
-        int16_t *amp;
-        uint64_t framesPerSampel;
-        unsigned int sample_rate, channels;
-        double time;
-        uint8_t sizeOfFrame;
-    };
-
+    
     struct WindowResizeData: public IEventData
     {
         WindowResizeData(int width, int height, windowPieceId window):

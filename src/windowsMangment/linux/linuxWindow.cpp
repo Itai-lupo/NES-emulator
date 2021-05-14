@@ -45,11 +45,6 @@ namespace LaughTaleEngine {
 			(action == GLFW_REPEAT) * events::KeyRepeat);
 
 		eventManger::trigerEvent(eventData->eventType, eventData, (windowPieceId)window);
-
-		LAUGHTALE_ENGINR_LOG_INFO(
-			"KeyCallback " + 
-			std::to_string(eventData->eventType) + ", " + 
-			(char)key);
 	}
 
 	void MouseButtonCallback(GLFWwindow* window, int button, int action, int mods)
@@ -85,8 +80,6 @@ namespace LaughTaleEngine {
 	{
 		keyTypedData *eventData = new keyTypedData(keycode, (windowPieceId)window);
 		eventManger::trigerEvent(events::KeyTyped, eventData, (windowPieceId)window);
-
-		LAUGHTALE_ENGINR_LOG_INFO("SetCharCallback");
 	}
 
 	void linuxWindow::Init(linuxWindow *data)
@@ -170,11 +163,11 @@ namespace LaughTaleEngine {
 		data->winRenderer->beginScene(data->camera);
 		glfwMakeContextCurrent(data->Window);
 
+		eventManger::trigerEvent(events::AppRender, eventData, data->id);
 
 		if(data->useImGui)
 			onImGuiUpdate(*data, eventData);
 
-		eventManger::trigerEvent(events::AppRender, eventData, data->id);
 
 		data->winRenderer->endScene();
 
