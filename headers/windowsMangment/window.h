@@ -49,7 +49,7 @@ namespace LaughTaleEngine
             static void close();
             
             static windowPieceId addWindow(const std::string& title = "raftel engine", bool useImGui = false, unsigned int width = 1280, unsigned int height = 720, renderAPI renderAPIType = renderAPI::OpenGL);
-            static void onUpdate(IEventData *sendor);
+            static void onUpdate(IEntity *eventEntity, IEventData *sendor);
 
             static window *getWindow(windowPieceId windowId);
 

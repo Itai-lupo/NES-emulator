@@ -10,6 +10,8 @@
 #include "vertexArrayManger.h"
 #include "shaderManger.h"
 #include "soundEngine.h"
+#include "soundSynthesizer.h"
+
 #include <chrono>
 #include <string>
 
@@ -17,10 +19,6 @@
 namespace LaughTaleEngine
 {
     bool app::keepRunning = true;
-    void onUpdate(__attribute__((unused)) IEntity *eventEntity, IEventData *sendor)
-    {
-        windowManger::onUpdate(sendor);
-    }
     
     void app::init()
     {
@@ -32,7 +30,7 @@ namespace LaughTaleEngine
         entityManger::init();
         windowManger::init();
         soundEngine::init();
-        eventManger::addEvent(events::AppUpdate, onUpdate, -1);
+        soundSynthesizer::init();
     }
 
     void app::close()
@@ -43,6 +41,7 @@ namespace LaughTaleEngine
         entityManger::close();
         windowManger::close();
         soundEngine::close();
+        soundSynthesizer::close();
     }
 
 

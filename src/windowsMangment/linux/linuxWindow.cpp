@@ -160,14 +160,13 @@ namespace LaughTaleEngine {
 	{
 		onUpdateData *eventData = static_cast<onUpdateData *>(sendor);
 
+		makeContextCurrent(data->Window);
 		data->winRenderer->beginScene(data->camera);
-		glfwMakeContextCurrent(data->Window);
 
 		eventManger::trigerEvent(events::AppRender, eventData, data->id);
-
+		
 		if(data->useImGui)
 			onImGuiUpdate(*data, eventData);
-
 
 		data->winRenderer->endScene();
 

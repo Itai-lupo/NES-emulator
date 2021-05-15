@@ -27,6 +27,8 @@ namespace LaughTaleEngine
     void windowManger::setVSync(bool enabled){ window::setVSync(VSync = enabled); }
 
     void windowManger::init(){
+        eventManger::addEvent(events::AppUpdate, onUpdate, -1);
+
         setVSync(true);
     }
     
@@ -66,7 +68,7 @@ namespace LaughTaleEngine
         return newWin->id;
     }
 
-    void windowManger::onUpdate(IEventData *sendor)
+    void windowManger::onUpdate(__attribute__((unused)) IEntity *eventEntity, IEventData *sendor)
     {
         for(window *win: windows)
         {

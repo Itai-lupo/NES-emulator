@@ -6,13 +6,20 @@
 #include "imgui.h"
 
 
-
 using namespace LaughTaleEngine;
 
 
 class soundEntity : public IEntity
 {
     public:
+        soundEntity()
+        {
+            for(int i = 0; i < 17; i++)
+                for(int j = 0; j < 8; j++)
+                    envIds[i][j] = 1000;
+        }
+
+        apoEnvelopeId envIds[17][8];
         sondWaves mod;
         int f;
         int key;
@@ -30,9 +37,20 @@ void onKeyPressed(IEntity *eventEntity, IEventData *sendor)
     {
         if (("ZSXCFVGBNJMK,L.;/"[k]) == e->key)
         {	
-            data->key = e->key;
             data->f = dOctaveBaseFrequency * pow(d12thRootOf2, k);
-            soundEngine::setSoundWave(data->f, data->mod);
+            if(data->envIds[k][data->mod] == 1000)
+            {
+                envelope *newEnv = (new envelope())
+                    ->setAttackTime(0.15)
+                    ->setDecayTime(0.25)
+                    ->setFrequency( data->f )
+                    ->setReleaseTime(0.2)
+                    ->setStartAmplitude(1.0)
+                    ->setSondWaveType(data->mod)
+                    ->setSustainAmplitude(0.8);
+                data->envIds[k][data->mod] = soundSynthesizer::addEnvelope( newEnv );
+            }
+            soundSynthesizer::noteOn(data->envIds[k][data->mod]);
         }
     }
 
@@ -41,7 +59,6 @@ void onKeyPressed(IEntity *eventEntity, IEventData *sendor)
         if (("01234567"[k]) == e->key)
         {	
             data->mod = (sondWaves)k;
-            soundEngine::setSoundWave(data->f, data->mod);
         }
     }
 }
@@ -50,9 +67,15 @@ void onKeyReleased(IEntity *eventEntity, IEventData *sendor)
 {
     KeyData *e = static_cast<KeyData *>(sendor);
     soundEntity *data = static_cast<soundEntity *>(eventEntity);
-    if(data->key == e->key)
-        data->f = 0;
-    soundEngine::setSoundWave(data->f, data->mod);
+    
+    for (int k = 0; k < 17; k++)
+    {
+        if (("ZSXCFVGBNJMK,L.;/"[k]) == e->key)
+        {	
+            soundSynthesizer::noteOff(data->envIds[k][data->mod]);
+        }
+    }
+
     
 }
 
@@ -88,7 +111,7 @@ TEST(SoundEngine, soundInterface)
 {
     soundEntity *e = new soundEntity();
     app::init();
-
+    
     entityTaleId id = entityManger::addEntity(e);
     windowPieceId win1 =  windowManger::addWindow("win 1", true);
 

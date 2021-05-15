@@ -22,3 +22,4 @@
 #include "shaderTypes.h"
 #include "orthographicCamera.h"
 #include "soundEngine.h"
+#include "soundSynthesizer.h"

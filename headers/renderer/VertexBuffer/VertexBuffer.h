@@ -56,10 +56,6 @@ namespace LaughTaleEngine
             inline void pushElement(VertexBufferElement ElementToPush) 
             {  
                 VBLayout->push(ElementToPush); 
-                for( VertexBufferElement i : VBLayout->getElements())
-                {
-                    LAUGHTALE_ENGINR_LOG_INFO(std::to_string(i.type));
-                }
             }
     };
 }

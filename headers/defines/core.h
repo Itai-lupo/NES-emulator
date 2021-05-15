@@ -1,18 +1,31 @@
 #pragma once
 #include <cstdint>
 
-typedef uint32_t eventLaughId;
-typedef uint32_t entityTaleId;
-typedef uint32_t vertexBufferId;
-typedef uint32_t indexBufferId;
-typedef uint32_t vertexArrayId;
-typedef uint32_t shaderId;
-typedef uint64_t windowPieceId;
-
-
-enum renderAPI
+namespace LaughTaleEngine
 {
-    None = 0, OpenGL = 1
-};
+    typedef uint32_t eventLaughId;
+    typedef uint32_t entityTaleId;
+    typedef uint32_t vertexBufferId;
+    typedef uint32_t indexBufferId;
+    typedef uint32_t vertexArrayId;
+    typedef uint32_t shaderId;
+    typedef uint64_t windowPieceId;
+    typedef uint32_t apoEnvelopeId;
 
+    enum renderAPI
+    {
+        None = 0, OpenGL = 1
+    };
 
+    enum sondWaves
+    {
+        mute,
+        sin,
+        sowTooth,
+        analogSowTooth,
+        squre,
+        analogSqure,
+        triangels,
+        speaker
+    };
+}

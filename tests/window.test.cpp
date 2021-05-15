@@ -100,10 +100,11 @@ class windowTest
             r->Submit(s, windowManger::getIndexBufferCount(sendor->windowId, renderEntity->ibId));
         }
 
-        static void ImGuiRender(IEntity *eventEntity, __attribute__((unused)) IEventData *sendor)
+        static void ImGuiRender(IEntity *eventEntity, IEventData *sendor)
         {
+            onUpdateData *e = static_cast<onUpdateData *>(sendor);
             ImGuiData *data = static_cast<ImGuiData*>(eventEntity);
-            ImGui::Text("%s", data->textToPrint.c_str());
+            ImGui::Text("%d", e->DeltaTime);
         }
 
 };
