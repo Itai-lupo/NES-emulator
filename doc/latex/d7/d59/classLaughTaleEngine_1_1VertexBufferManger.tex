@@ -1,0 +1,125 @@
+\hypertarget{classLaughTaleEngine_1_1VertexBufferManger}{}\doxysection{Laugh\+Tale\+Engine\+::Vertex\+Buffer\+Manger Class Reference}
+\label{classLaughTaleEngine_1_1VertexBufferManger}\index{LaughTaleEngine::VertexBufferManger@{LaughTaleEngine::VertexBufferManger}}
+
+
+{\ttfamily \#include $<$Vertex\+Buffer\+Manger.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classLaughTaleEngine_1_1VertexBufferManger_a01b7ce652d378488b372a7f43590dc59}{Vertex\+Buffer\+Manger}} ()
+\item 
+\mbox{\hyperlink{classLaughTaleEngine_1_1VertexBufferManger_aa1decb9eeadf9f4a0cd5f8de063434d7}{$\sim$\+Vertex\+Buffer\+Manger}} ()
+\item 
+void \mbox{\hyperlink{classLaughTaleEngine_1_1VertexBufferManger_a88c659b7236e4135e53b9335b67b48c8}{init}} ()
+\item 
+void \mbox{\hyperlink{classLaughTaleEngine_1_1VertexBufferManger_ac42dcd8b2b5f18365f2880b808ebc166}{close}} ()
+\item 
+void \mbox{\hyperlink{classLaughTaleEngine_1_1VertexBufferManger_a0b91eb421570633cb02b54293ca1f9bc}{bind}} (\mbox{\hyperlink{namespaceLaughTaleEngine_a613aeb0e534a90cfb6a4542be7c38cca}{vertex\+Buffer\+Id}} vb\+Id)
+\item 
+void \mbox{\hyperlink{classLaughTaleEngine_1_1VertexBufferManger_aa3479ac4b706d3cfe1c0f4a562c19533}{un\+Bind}} (\mbox{\hyperlink{namespaceLaughTaleEngine_a613aeb0e534a90cfb6a4542be7c38cca}{vertex\+Buffer\+Id}} vb\+Id)
+\item 
+\mbox{\hyperlink{namespaceLaughTaleEngine_a613aeb0e534a90cfb6a4542be7c38cca}{vertex\+Buffer\+Id}} \mbox{\hyperlink{classLaughTaleEngine_1_1VertexBufferManger_addb645f9e36d02628e2f7ac426963fa4}{add}} (\mbox{\hyperlink{classLaughTaleEngine_1_1VertexBuffer}{Vertex\+Buffer}} $\ast$vb\+To\+Add)
+\item 
+void \mbox{\hyperlink{classLaughTaleEngine_1_1VertexBufferManger_ada91ed29c20cf37e85686fc72a662517}{remove}} (\mbox{\hyperlink{namespaceLaughTaleEngine_a613aeb0e534a90cfb6a4542be7c38cca}{vertex\+Buffer\+Id}} vb\+To\+Add)
+\item 
+void \mbox{\hyperlink{classLaughTaleEngine_1_1VertexBufferManger_aead877ae477f51f29fc286b0a5b9a396}{change\+Data}} (\mbox{\hyperlink{namespaceLaughTaleEngine_a613aeb0e534a90cfb6a4542be7c38cca}{vertex\+Buffer\+Id}} vb\+Id, const void $\ast$data, uint32\+\_\+t size)
+\item 
+\mbox{\hyperlink{classLaughTaleEngine_1_1VertexBuffer}{Vertex\+Buffer}} $\ast$ \mbox{\hyperlink{classLaughTaleEngine_1_1VertexBufferManger_a4a959699e8d9f42696035ff269442121}{get\+VB}} (\mbox{\hyperlink{namespaceLaughTaleEngine_a613aeb0e534a90cfb6a4542be7c38cca}{vertex\+Buffer\+Id}} vb\+Id)
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structLaughTaleEngine_1_1VertexBufferElement}{Vertex\+Buffer\+Element}} $>$ \mbox{\hyperlink{classLaughTaleEngine_1_1VertexBufferManger_a9394a7cbdc10d2fe95c99b4ac80a3cd3}{get\+Elements}} (\mbox{\hyperlink{namespaceLaughTaleEngine_a613aeb0e534a90cfb6a4542be7c38cca}{vertex\+Buffer\+Id}} vb\+Id)
+\item 
+unsigned int \mbox{\hyperlink{classLaughTaleEngine_1_1VertexBufferManger_a43889746c09f6bdd6705281d04b0791c}{Get\+Stride}} (\mbox{\hyperlink{namespaceLaughTaleEngine_a613aeb0e534a90cfb6a4542be7c38cca}{vertex\+Buffer\+Id}} vb\+Id)
+\item 
+void \mbox{\hyperlink{classLaughTaleEngine_1_1VertexBufferManger_aaff84e50e0bf66abca6b341e5fd5bcc3}{push\+Element}} (\mbox{\hyperlink{namespaceLaughTaleEngine_a613aeb0e534a90cfb6a4542be7c38cca}{vertex\+Buffer\+Id}} vb\+Id, \mbox{\hyperlink{structLaughTaleEngine_1_1VertexBufferElement}{Vertex\+Buffer\+Element}} Element\+To\+Push)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classLaughTaleEngine_1_1VertexBufferManger_a01b7ce652d378488b372a7f43590dc59}\label{classLaughTaleEngine_1_1VertexBufferManger_a01b7ce652d378488b372a7f43590dc59}} 
+\index{LaughTaleEngine::VertexBufferManger@{LaughTaleEngine::VertexBufferManger}!VertexBufferManger@{VertexBufferManger}}
+\index{VertexBufferManger@{VertexBufferManger}!LaughTaleEngine::VertexBufferManger@{LaughTaleEngine::VertexBufferManger}}
+\doxysubsubsection{\texorpdfstring{VertexBufferManger()}{VertexBufferManger()}}
+{\footnotesize\ttfamily Laugh\+Tale\+Engine\+::\+Vertex\+Buffer\+Manger\+::\+Vertex\+Buffer\+Manger (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classLaughTaleEngine_1_1VertexBufferManger_aa1decb9eeadf9f4a0cd5f8de063434d7}\label{classLaughTaleEngine_1_1VertexBufferManger_aa1decb9eeadf9f4a0cd5f8de063434d7}} 
+\index{LaughTaleEngine::VertexBufferManger@{LaughTaleEngine::VertexBufferManger}!````~VertexBufferManger@{$\sim$VertexBufferManger}}
+\index{````~VertexBufferManger@{$\sim$VertexBufferManger}!LaughTaleEngine::VertexBufferManger@{LaughTaleEngine::VertexBufferManger}}
+\doxysubsubsection{\texorpdfstring{$\sim$VertexBufferManger()}{~VertexBufferManger()}}
+{\footnotesize\ttfamily Laugh\+Tale\+Engine\+::\+Vertex\+Buffer\+Manger\+::$\sim$\+Vertex\+Buffer\+Manger (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classLaughTaleEngine_1_1VertexBufferManger_addb645f9e36d02628e2f7ac426963fa4}\label{classLaughTaleEngine_1_1VertexBufferManger_addb645f9e36d02628e2f7ac426963fa4}} 
+\index{LaughTaleEngine::VertexBufferManger@{LaughTaleEngine::VertexBufferManger}!add@{add}}
+\index{add@{add}!LaughTaleEngine::VertexBufferManger@{LaughTaleEngine::VertexBufferManger}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceLaughTaleEngine_a613aeb0e534a90cfb6a4542be7c38cca}{vertex\+Buffer\+Id}} Laugh\+Tale\+Engine\+::\+Vertex\+Buffer\+Manger\+::add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classLaughTaleEngine_1_1VertexBuffer}{Vertex\+Buffer}} $\ast$}]{vb\+To\+Add }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classLaughTaleEngine_1_1VertexBufferManger_a0b91eb421570633cb02b54293ca1f9bc}\label{classLaughTaleEngine_1_1VertexBufferManger_a0b91eb421570633cb02b54293ca1f9bc}} 
+\index{LaughTaleEngine::VertexBufferManger@{LaughTaleEngine::VertexBufferManger}!bind@{bind}}
+\index{bind@{bind}!LaughTaleEngine::VertexBufferManger@{LaughTaleEngine::VertexBufferManger}}
+\doxysubsubsection{\texorpdfstring{bind()}{bind()}}
+{\footnotesize\ttfamily void Laugh\+Tale\+Engine\+::\+Vertex\+Buffer\+Manger\+::bind (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceLaughTaleEngine_a613aeb0e534a90cfb6a4542be7c38cca}{vertex\+Buffer\+Id}}}]{vb\+Id }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classLaughTaleEngine_1_1VertexBufferManger_aead877ae477f51f29fc286b0a5b9a396}\label{classLaughTaleEngine_1_1VertexBufferManger_aead877ae477f51f29fc286b0a5b9a396}} 
+\index{LaughTaleEngine::VertexBufferManger@{LaughTaleEngine::VertexBufferManger}!changeData@{changeData}}
+\index{changeData@{changeData}!LaughTaleEngine::VertexBufferManger@{LaughTaleEngine::VertexBufferManger}}
+\doxysubsubsection{\texorpdfstring{changeData()}{changeData()}}
+{\footnotesize\ttfamily void Laugh\+Tale\+Engine\+::\+Vertex\+Buffer\+Manger\+::change\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceLaughTaleEngine_a613aeb0e534a90cfb6a4542be7c38cca}{vertex\+Buffer\+Id}}}]{vb\+Id,  }\item[{const void $\ast$}]{data,  }\item[{uint32\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classLaughTaleEngine_1_1VertexBufferManger_ac42dcd8b2b5f18365f2880b808ebc166}\label{classLaughTaleEngine_1_1VertexBufferManger_ac42dcd8b2b5f18365f2880b808ebc166}} 
+\index{LaughTaleEngine::VertexBufferManger@{LaughTaleEngine::VertexBufferManger}!close@{close}}
+\index{close@{close}!LaughTaleEngine::VertexBufferManger@{LaughTaleEngine::VertexBufferManger}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily void Laugh\+Tale\+Engine\+::\+Vertex\+Buffer\+Manger\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classLaughTaleEngine_1_1VertexBufferManger_a9394a7cbdc10d2fe95c99b4ac80a3cd3}\label{classLaughTaleEngine_1_1VertexBufferManger_a9394a7cbdc10d2fe95c99b4ac80a3cd3}} 
+\index{LaughTaleEngine::VertexBufferManger@{LaughTaleEngine::VertexBufferManger}!getElements@{getElements}}
+\index{getElements@{getElements}!LaughTaleEngine::VertexBufferManger@{LaughTaleEngine::VertexBufferManger}}
+\doxysubsubsection{\texorpdfstring{getElements()}{getElements()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{structLaughTaleEngine_1_1VertexBufferElement}{Vertex\+Buffer\+Element}} $>$ Laugh\+Tale\+Engine\+::\+Vertex\+Buffer\+Manger\+::get\+Elements (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceLaughTaleEngine_a613aeb0e534a90cfb6a4542be7c38cca}{vertex\+Buffer\+Id}}}]{vb\+Id }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classLaughTaleEngine_1_1VertexBufferManger_a43889746c09f6bdd6705281d04b0791c}\label{classLaughTaleEngine_1_1VertexBufferManger_a43889746c09f6bdd6705281d04b0791c}} 
+\index{LaughTaleEngine::VertexBufferManger@{LaughTaleEngine::VertexBufferManger}!GetStride@{GetStride}}
+\index{GetStride@{GetStride}!LaughTaleEngine::VertexBufferManger@{LaughTaleEngine::VertexBufferManger}}
+\doxysubsubsection{\texorpdfstring{GetStride()}{GetStride()}}
+{\footnotesize\ttfamily unsigned int Laugh\+Tale\+Engine\+::\+Vertex\+Buffer\+Manger\+::\+Get\+Stride (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceLaughTaleEngine_a613aeb0e534a90cfb6a4542be7c38cca}{vertex\+Buffer\+Id}}}]{vb\+Id }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classLaughTaleEngine_1_1VertexBufferManger_a4a959699e8d9f42696035ff269442121}\label{classLaughTaleEngine_1_1VertexBufferManger_a4a959699e8d9f42696035ff269442121}} 
+\index{LaughTaleEngine::VertexBufferManger@{LaughTaleEngine::VertexBufferManger}!getVB@{getVB}}
+\index{getVB@{getVB}!LaughTaleEngine::VertexBufferManger@{LaughTaleEngine::VertexBufferManger}}
+\doxysubsubsection{\texorpdfstring{getVB()}{getVB()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classLaughTaleEngine_1_1VertexBuffer}{Vertex\+Buffer}} $\ast$ Laugh\+Tale\+Engine\+::\+Vertex\+Buffer\+Manger\+::get\+VB (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceLaughTaleEngine_a613aeb0e534a90cfb6a4542be7c38cca}{vertex\+Buffer\+Id}}}]{vb\+Id }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classLaughTaleEngine_1_1VertexBufferManger_a88c659b7236e4135e53b9335b67b48c8}\label{classLaughTaleEngine_1_1VertexBufferManger_a88c659b7236e4135e53b9335b67b48c8}} 
+\index{LaughTaleEngine::VertexBufferManger@{LaughTaleEngine::VertexBufferManger}!init@{init}}
+\index{init@{init}!LaughTaleEngine::VertexBufferManger@{LaughTaleEngine::VertexBufferManger}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Laugh\+Tale\+Engine\+::\+Vertex\+Buffer\+Manger\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classLaughTaleEngine_1_1VertexBufferManger_aaff84e50e0bf66abca6b341e5fd5bcc3}\label{classLaughTaleEngine_1_1VertexBufferManger_aaff84e50e0bf66abca6b341e5fd5bcc3}} 
+\index{LaughTaleEngine::VertexBufferManger@{LaughTaleEngine::VertexBufferManger}!pushElement@{pushElement}}
+\index{pushElement@{pushElement}!LaughTaleEngine::VertexBufferManger@{LaughTaleEngine::VertexBufferManger}}
+\doxysubsubsection{\texorpdfstring{pushElement()}{pushElement()}}
+{\footnotesize\ttfamily void Laugh\+Tale\+Engine\+::\+Vertex\+Buffer\+Manger\+::push\+Element (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceLaughTaleEngine_a613aeb0e534a90cfb6a4542be7c38cca}{vertex\+Buffer\+Id}}}]{vb\+Id,  }\item[{\mbox{\hyperlink{structLaughTaleEngine_1_1VertexBufferElement}{Vertex\+Buffer\+Element}}}]{Element\+To\+Push }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classLaughTaleEngine_1_1VertexBufferManger_ada91ed29c20cf37e85686fc72a662517}\label{classLaughTaleEngine_1_1VertexBufferManger_ada91ed29c20cf37e85686fc72a662517}} 
+\index{LaughTaleEngine::VertexBufferManger@{LaughTaleEngine::VertexBufferManger}!remove@{remove}}
+\index{remove@{remove}!LaughTaleEngine::VertexBufferManger@{LaughTaleEngine::VertexBufferManger}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily void Laugh\+Tale\+Engine\+::\+Vertex\+Buffer\+Manger\+::remove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceLaughTaleEngine_a613aeb0e534a90cfb6a4542be7c38cca}{vertex\+Buffer\+Id}}}]{vb\+To\+Add }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classLaughTaleEngine_1_1VertexBufferManger_aa3479ac4b706d3cfe1c0f4a562c19533}\label{classLaughTaleEngine_1_1VertexBufferManger_aa3479ac4b706d3cfe1c0f4a562c19533}} 
+\index{LaughTaleEngine::VertexBufferManger@{LaughTaleEngine::VertexBufferManger}!unBind@{unBind}}
+\index{unBind@{unBind}!LaughTaleEngine::VertexBufferManger@{LaughTaleEngine::VertexBufferManger}}
+\doxysubsubsection{\texorpdfstring{unBind()}{unBind()}}
+{\footnotesize\ttfamily void Laugh\+Tale\+Engine\+::\+Vertex\+Buffer\+Manger\+::un\+Bind (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceLaughTaleEngine_a613aeb0e534a90cfb6a4542be7c38cca}{vertex\+Buffer\+Id}}}]{vb\+Id }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+headers/renderer/\+Vertex\+Buffer/\mbox{\hyperlink{VertexBufferManger_8h}{Vertex\+Buffer\+Manger.\+h}}\item 
+src/renderer/\mbox{\hyperlink{VertexBufferManger_8cpp}{Vertex\+Buffer\+Manger.\+cpp}}\end{DoxyCompactItemize}

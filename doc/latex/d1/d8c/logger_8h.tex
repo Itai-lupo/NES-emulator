@@ -1,0 +1,84 @@
+\hypertarget{logger_8h}{}\doxysection{headers/utls/logger.h File Reference}
+\label{logger_8h}\index{headers/utls/logger.h@{headers/utls/logger.h}}
+{\ttfamily \#include $<$glog/logging.\+h$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classLaughTaleEngine_1_1logger}{Laugh\+Tale\+Engine\+::logger}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceLaughTaleEngine}{Laugh\+Tale\+Engine}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{logger_8h_a70645337545523faca46e49a3180d5f7}{LAUGHTALE\+\_\+\+ENGINR\+\_\+\+LOG\+\_\+\+INFO}}(to\+Log)~LOG(INFO) $<$$<$ to\+Log;
+\item 
+\#define \mbox{\hyperlink{logger_8h_ac50547ba95023ba6994629f68b4a39d4}{LAUGHTALE\+\_\+\+ENGINR\+\_\+\+LOG\+\_\+\+WARNING}}(to\+Log)~LOG(WARNING) $<$$<$ to\+Log;
+\item 
+\#define \mbox{\hyperlink{logger_8h_aae4cf1bd083983040d4d6572a9b0d8bf}{LAUGHTALE\+\_\+\+ENGINR\+\_\+\+LOG\+\_\+\+ERROR}}(to\+Log)~LOG(ERROR) $<$$<$ to\+Log;
+\item 
+\#define \mbox{\hyperlink{logger_8h_a9d905beb21802d8bef4629dc7004acb4}{LAUGHTALE\+\_\+\+ENGINR\+\_\+\+LOG\+\_\+\+FATAL}}(to\+Log)~LOG(FATAL) $<$$<$ to\+Log;
+\item 
+\#define \mbox{\hyperlink{logger_8h_af88fb42cd54fc3611866b6f8837827e2}{LAUGHTALE\+\_\+\+ENGINR\+\_\+\+CONDTION\+\_\+\+LOG\+\_\+\+INFO}}(to\+Log,  condition)~LOG\+\_\+\+IF(INFO, condition) $<$$<$ to\+Log;
+\item 
+\#define \mbox{\hyperlink{logger_8h_a21ab8e9154ac14e707f69f40e5ba41c7}{LAUGHTALE\+\_\+\+ENGINR\+\_\+\+CONDTION\+\_\+\+LOG\+\_\+\+WARNING}}(to\+Log,  condition)~LOG\+\_\+\+IF(WARNING, condition) $<$$<$ to\+Log;
+\item 
+\#define \mbox{\hyperlink{logger_8h_a030a2caf9f43b4e2926c659309f955ef}{LAUGHTALE\+\_\+\+ENGINR\+\_\+\+CONDTION\+\_\+\+LOG\+\_\+\+ERROR}}(to\+Log,  condition)~LOG\+\_\+\+IF(ERROR, condition) $<$$<$ to\+Log;
+\item 
+\#define \mbox{\hyperlink{logger_8h_a3052079577798185a0dafda4915fa760}{LAUGHTALE\+\_\+\+ENGINR\+\_\+\+CONDTION\+\_\+\+LOG\+\_\+\+FATAL}}(to\+Log,  condition)~LOG\+\_\+\+IF(FATAL, condition) $<$$<$ to\+Log;
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{logger_8h_a030a2caf9f43b4e2926c659309f955ef}\label{logger_8h_a030a2caf9f43b4e2926c659309f955ef}} 
+\index{logger.h@{logger.h}!LAUGHTALE\_ENGINR\_CONDTION\_LOG\_ERROR@{LAUGHTALE\_ENGINR\_CONDTION\_LOG\_ERROR}}
+\index{LAUGHTALE\_ENGINR\_CONDTION\_LOG\_ERROR@{LAUGHTALE\_ENGINR\_CONDTION\_LOG\_ERROR}!logger.h@{logger.h}}
+\doxysubsubsection{\texorpdfstring{LAUGHTALE\_ENGINR\_CONDTION\_LOG\_ERROR}{LAUGHTALE\_ENGINR\_CONDTION\_LOG\_ERROR}}
+{\footnotesize\ttfamily \#define LAUGHTALE\+\_\+\+ENGINR\+\_\+\+CONDTION\+\_\+\+LOG\+\_\+\+ERROR(\begin{DoxyParamCaption}\item[{}]{to\+Log,  }\item[{}]{condition }\end{DoxyParamCaption})~LOG\+\_\+\+IF(ERROR, condition) $<$$<$ to\+Log;}
+
+\mbox{\Hypertarget{logger_8h_a3052079577798185a0dafda4915fa760}\label{logger_8h_a3052079577798185a0dafda4915fa760}} 
+\index{logger.h@{logger.h}!LAUGHTALE\_ENGINR\_CONDTION\_LOG\_FATAL@{LAUGHTALE\_ENGINR\_CONDTION\_LOG\_FATAL}}
+\index{LAUGHTALE\_ENGINR\_CONDTION\_LOG\_FATAL@{LAUGHTALE\_ENGINR\_CONDTION\_LOG\_FATAL}!logger.h@{logger.h}}
+\doxysubsubsection{\texorpdfstring{LAUGHTALE\_ENGINR\_CONDTION\_LOG\_FATAL}{LAUGHTALE\_ENGINR\_CONDTION\_LOG\_FATAL}}
+{\footnotesize\ttfamily \#define LAUGHTALE\+\_\+\+ENGINR\+\_\+\+CONDTION\+\_\+\+LOG\+\_\+\+FATAL(\begin{DoxyParamCaption}\item[{}]{to\+Log,  }\item[{}]{condition }\end{DoxyParamCaption})~LOG\+\_\+\+IF(FATAL, condition) $<$$<$ to\+Log;}
+
+\mbox{\Hypertarget{logger_8h_af88fb42cd54fc3611866b6f8837827e2}\label{logger_8h_af88fb42cd54fc3611866b6f8837827e2}} 
+\index{logger.h@{logger.h}!LAUGHTALE\_ENGINR\_CONDTION\_LOG\_INFO@{LAUGHTALE\_ENGINR\_CONDTION\_LOG\_INFO}}
+\index{LAUGHTALE\_ENGINR\_CONDTION\_LOG\_INFO@{LAUGHTALE\_ENGINR\_CONDTION\_LOG\_INFO}!logger.h@{logger.h}}
+\doxysubsubsection{\texorpdfstring{LAUGHTALE\_ENGINR\_CONDTION\_LOG\_INFO}{LAUGHTALE\_ENGINR\_CONDTION\_LOG\_INFO}}
+{\footnotesize\ttfamily \#define LAUGHTALE\+\_\+\+ENGINR\+\_\+\+CONDTION\+\_\+\+LOG\+\_\+\+INFO(\begin{DoxyParamCaption}\item[{}]{to\+Log,  }\item[{}]{condition }\end{DoxyParamCaption})~LOG\+\_\+\+IF(INFO, condition) $<$$<$ to\+Log;}
+
+\mbox{\Hypertarget{logger_8h_a21ab8e9154ac14e707f69f40e5ba41c7}\label{logger_8h_a21ab8e9154ac14e707f69f40e5ba41c7}} 
+\index{logger.h@{logger.h}!LAUGHTALE\_ENGINR\_CONDTION\_LOG\_WARNING@{LAUGHTALE\_ENGINR\_CONDTION\_LOG\_WARNING}}
+\index{LAUGHTALE\_ENGINR\_CONDTION\_LOG\_WARNING@{LAUGHTALE\_ENGINR\_CONDTION\_LOG\_WARNING}!logger.h@{logger.h}}
+\doxysubsubsection{\texorpdfstring{LAUGHTALE\_ENGINR\_CONDTION\_LOG\_WARNING}{LAUGHTALE\_ENGINR\_CONDTION\_LOG\_WARNING}}
+{\footnotesize\ttfamily \#define LAUGHTALE\+\_\+\+ENGINR\+\_\+\+CONDTION\+\_\+\+LOG\+\_\+\+WARNING(\begin{DoxyParamCaption}\item[{}]{to\+Log,  }\item[{}]{condition }\end{DoxyParamCaption})~LOG\+\_\+\+IF(WARNING, condition) $<$$<$ to\+Log;}
+
+\mbox{\Hypertarget{logger_8h_aae4cf1bd083983040d4d6572a9b0d8bf}\label{logger_8h_aae4cf1bd083983040d4d6572a9b0d8bf}} 
+\index{logger.h@{logger.h}!LAUGHTALE\_ENGINR\_LOG\_ERROR@{LAUGHTALE\_ENGINR\_LOG\_ERROR}}
+\index{LAUGHTALE\_ENGINR\_LOG\_ERROR@{LAUGHTALE\_ENGINR\_LOG\_ERROR}!logger.h@{logger.h}}
+\doxysubsubsection{\texorpdfstring{LAUGHTALE\_ENGINR\_LOG\_ERROR}{LAUGHTALE\_ENGINR\_LOG\_ERROR}}
+{\footnotesize\ttfamily \#define LAUGHTALE\+\_\+\+ENGINR\+\_\+\+LOG\+\_\+\+ERROR(\begin{DoxyParamCaption}\item[{}]{to\+Log }\end{DoxyParamCaption})~LOG(ERROR) $<$$<$ to\+Log;}
+
+\mbox{\Hypertarget{logger_8h_a9d905beb21802d8bef4629dc7004acb4}\label{logger_8h_a9d905beb21802d8bef4629dc7004acb4}} 
+\index{logger.h@{logger.h}!LAUGHTALE\_ENGINR\_LOG\_FATAL@{LAUGHTALE\_ENGINR\_LOG\_FATAL}}
+\index{LAUGHTALE\_ENGINR\_LOG\_FATAL@{LAUGHTALE\_ENGINR\_LOG\_FATAL}!logger.h@{logger.h}}
+\doxysubsubsection{\texorpdfstring{LAUGHTALE\_ENGINR\_LOG\_FATAL}{LAUGHTALE\_ENGINR\_LOG\_FATAL}}
+{\footnotesize\ttfamily \#define LAUGHTALE\+\_\+\+ENGINR\+\_\+\+LOG\+\_\+\+FATAL(\begin{DoxyParamCaption}\item[{}]{to\+Log }\end{DoxyParamCaption})~LOG(FATAL) $<$$<$ to\+Log;}
+
+\mbox{\Hypertarget{logger_8h_a70645337545523faca46e49a3180d5f7}\label{logger_8h_a70645337545523faca46e49a3180d5f7}} 
+\index{logger.h@{logger.h}!LAUGHTALE\_ENGINR\_LOG\_INFO@{LAUGHTALE\_ENGINR\_LOG\_INFO}}
+\index{LAUGHTALE\_ENGINR\_LOG\_INFO@{LAUGHTALE\_ENGINR\_LOG\_INFO}!logger.h@{logger.h}}
+\doxysubsubsection{\texorpdfstring{LAUGHTALE\_ENGINR\_LOG\_INFO}{LAUGHTALE\_ENGINR\_LOG\_INFO}}
+{\footnotesize\ttfamily \#define LAUGHTALE\+\_\+\+ENGINR\+\_\+\+LOG\+\_\+\+INFO(\begin{DoxyParamCaption}\item[{}]{to\+Log }\end{DoxyParamCaption})~LOG(INFO) $<$$<$ to\+Log;}
+
+\mbox{\Hypertarget{logger_8h_ac50547ba95023ba6994629f68b4a39d4}\label{logger_8h_ac50547ba95023ba6994629f68b4a39d4}} 
+\index{logger.h@{logger.h}!LAUGHTALE\_ENGINR\_LOG\_WARNING@{LAUGHTALE\_ENGINR\_LOG\_WARNING}}
+\index{LAUGHTALE\_ENGINR\_LOG\_WARNING@{LAUGHTALE\_ENGINR\_LOG\_WARNING}!logger.h@{logger.h}}
+\doxysubsubsection{\texorpdfstring{LAUGHTALE\_ENGINR\_LOG\_WARNING}{LAUGHTALE\_ENGINR\_LOG\_WARNING}}
+{\footnotesize\ttfamily \#define LAUGHTALE\+\_\+\+ENGINR\+\_\+\+LOG\+\_\+\+WARNING(\begin{DoxyParamCaption}\item[{}]{to\+Log }\end{DoxyParamCaption})~LOG(WARNING) $<$$<$ to\+Log;}
+

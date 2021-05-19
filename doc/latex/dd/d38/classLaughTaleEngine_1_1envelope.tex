@@ -1,0 +1,344 @@
+\hypertarget{classLaughTaleEngine_1_1envelope}{}\doxysection{Laugh\+Tale\+Engine\+::envelope Class Reference}
+\label{classLaughTaleEngine_1_1envelope}\index{LaughTaleEngine::envelope@{LaughTaleEngine::envelope}}
+
+
+{\ttfamily \#include $<$envelope.\+h$>$}
+
+Inheritance diagram for Laugh\+Tale\+Engine\+::envelope\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.975309cm]{dd/d38/classLaughTaleEngine_1_1envelope}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classLaughTaleEngine_1_1envelope_ac1a328d1e44cf37425a33f7be80097c4}{set\+Id}} (\mbox{\hyperlink{namespaceLaughTaleEngine_a105044a4171f64ca8e60fc9247c8c0e0}{apo\+Envelope\+Id}} id)
+\item 
+\mbox{\hyperlink{namespaceLaughTaleEngine_a105044a4171f64ca8e60fc9247c8c0e0}{apo\+Envelope\+Id}} \mbox{\hyperlink{classLaughTaleEngine_1_1envelope_af6fff4ae2cc8090f6c729b08b879b5b3}{get\+Id}} ()
+\item 
+virtual \mbox{\hyperlink{classLaughTaleEngine_1_1envelope}{envelope}} $\ast$ \mbox{\hyperlink{classLaughTaleEngine_1_1envelope_ae82d63c0013abce4214d7076a35e1903}{set\+Attack\+Time}} (double \mbox{\hyperlink{classLaughTaleEngine_1_1envelope_a7fbb769cf4b87d97fbc70b62a2061825}{attack\+Time}})
+\item 
+virtual \mbox{\hyperlink{classLaughTaleEngine_1_1envelope}{envelope}} $\ast$ \mbox{\hyperlink{classLaughTaleEngine_1_1envelope_a6e3920b32d6f7815a3fa9fbc263fc0cd}{set\+Decay\+Time}} (double \mbox{\hyperlink{classLaughTaleEngine_1_1envelope_ada05ad0b544e11fbc4f6388b44eb7eed}{decay\+Time}})
+\item 
+virtual \mbox{\hyperlink{classLaughTaleEngine_1_1envelope}{envelope}} $\ast$ \mbox{\hyperlink{classLaughTaleEngine_1_1envelope_ab6cc91653d6917cd3e11f0e087a87fd3}{set\+Sustain\+Amplitude}} (double \mbox{\hyperlink{classLaughTaleEngine_1_1envelope_a20e412d1d03a632db3624e38473156c1}{sustain\+Amplitude}})
+\item 
+virtual \mbox{\hyperlink{classLaughTaleEngine_1_1envelope}{envelope}} $\ast$ \mbox{\hyperlink{classLaughTaleEngine_1_1envelope_a0063b692866b7194c260622544f9287c}{set\+Release\+Time}} (double \mbox{\hyperlink{classLaughTaleEngine_1_1envelope_a4c18f1218451c83abcfd8dd2bfb8db3a}{release\+Time}})
+\item 
+virtual \mbox{\hyperlink{classLaughTaleEngine_1_1envelope}{envelope}} $\ast$ \mbox{\hyperlink{classLaughTaleEngine_1_1envelope_a393c65642ed6dd1720124a505de82546}{set\+Start\+Amplitude}} (double \mbox{\hyperlink{classLaughTaleEngine_1_1envelope_a53f48b0520beb043be850ff9b43d5dcb}{start\+Amplitude}})
+\item 
+virtual \mbox{\hyperlink{classLaughTaleEngine_1_1envelope}{envelope}} $\ast$ \mbox{\hyperlink{classLaughTaleEngine_1_1envelope_a1cc2ec5a50096df72e532cc476b3e3d1}{set\+Master\+Volume}} (double \mbox{\hyperlink{classLaughTaleEngine_1_1envelope_ab41aa2a4a2a0efa87cc6ca96623c63ac}{master\+Volume}})
+\item 
+virtual \mbox{\hyperlink{classLaughTaleEngine_1_1envelope}{envelope}} $\ast$ \mbox{\hyperlink{classLaughTaleEngine_1_1envelope_a0f369dbfb9400f4389ed3c856e9adae9}{set\+Frequency}} (double \mbox{\hyperlink{classLaughTaleEngine_1_1envelope_a01b536591b2952464ba538998106aed2}{freq}})
+\item 
+virtual \mbox{\hyperlink{classLaughTaleEngine_1_1envelope}{envelope}} $\ast$ \mbox{\hyperlink{classLaughTaleEngine_1_1envelope_ab209a7f4556be1d95d24b1b4ae5428df}{set\+Sond\+Wave\+Type}} (\mbox{\hyperlink{namespaceLaughTaleEngine_a45efbfe0b4260ca80f20f61b7e22677e}{sond\+Waves}} mod)
+\item 
+virtual void \mbox{\hyperlink{classLaughTaleEngine_1_1envelope_a5d5b40368b64cbd081cefe1211413f53}{note\+On}} (double time)
+\item 
+virtual void \mbox{\hyperlink{classLaughTaleEngine_1_1envelope_af77bd7697d2d1296c80211233d01398f}{note\+Off}} (double time)
+\item 
+virtual double \mbox{\hyperlink{classLaughTaleEngine_1_1envelope_af93cb799a40b02cd796305751cf9b853}{get\+Sampel\+Amp}} (double time, int16\+\_\+t mic\+Amp)
+\item 
+double \mbox{\hyperlink{classLaughTaleEngine_1_1envelope_ad1d68f43a515c1e0bbeb89e22c2c45c2}{get\+Envelope\+Amp\+Multiplayer}} (double time)
+\item 
+virtual bool \mbox{\hyperlink{classLaughTaleEngine_1_1envelope_ad72f4242c5832324b02f74c20273ec81}{is\+Active}} (double time)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{classLaughTaleEngine_1_1envelope_abf4d3224588bc274f056b60194c837c7}{Multiplayer\+If\+Note\+Is\+On}} (double delta\+Time)
+\item 
+double \mbox{\hyperlink{classLaughTaleEngine_1_1envelope_ab3ee6d2cf513d35760c0f38a513462fd}{Multiplayer\+If\+Note\+Is\+Off}} (double life\+Time, double delta\+Time)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static double \mbox{\hyperlink{classLaughTaleEngine_1_1envelope_a507bb4af684d398138ecb27b5c1f0f58}{w}} (int \mbox{\hyperlink{classLaughTaleEngine_1_1envelope_a01b536591b2952464ba538998106aed2}{freq}})
+\item 
+static double \mbox{\hyperlink{classLaughTaleEngine_1_1envelope_af4705a26ba99be508089b01ab3406cf3}{mute}} (double time=0.\+0, double \mbox{\hyperlink{classLaughTaleEngine_1_1envelope_a01b536591b2952464ba538998106aed2}{freq}}=0.\+0, int16\+\_\+t mic\+Amp=0.\+0)
+\item 
+static double \mbox{\hyperlink{classLaughTaleEngine_1_1envelope_a68e2ece91c6c0ad002b80241abdcb03c}{sin}} (double time, double \mbox{\hyperlink{classLaughTaleEngine_1_1envelope_a01b536591b2952464ba538998106aed2}{freq}}, int16\+\_\+t mic\+Amp=0.\+0)
+\item 
+static double \mbox{\hyperlink{classLaughTaleEngine_1_1envelope_a2667ece96cc9263610c7ecd8102e0ff8}{sow\+Tooth}} (double time, double \mbox{\hyperlink{classLaughTaleEngine_1_1envelope_a01b536591b2952464ba538998106aed2}{freq}}, int16\+\_\+t mic\+Amp=0.\+0)
+\item 
+static double \mbox{\hyperlink{classLaughTaleEngine_1_1envelope_add9788dca9d8585741432a5ef2ba124c}{analog\+Sow\+Tooth}} (double time, double \mbox{\hyperlink{classLaughTaleEngine_1_1envelope_a01b536591b2952464ba538998106aed2}{freq}}, int16\+\_\+t mic\+Amp=0.\+0)
+\item 
+static double \mbox{\hyperlink{classLaughTaleEngine_1_1envelope_a1a1b4e5957a8514ff28492822aaf6b82}{squre}} (double time, double \mbox{\hyperlink{classLaughTaleEngine_1_1envelope_a01b536591b2952464ba538998106aed2}{freq}}, int16\+\_\+t mic\+Amp=0.\+0)
+\item 
+static double \mbox{\hyperlink{classLaughTaleEngine_1_1envelope_ad796994dc28a5edc62297ada607391d3}{analog\+Squre}} (double time, double \mbox{\hyperlink{classLaughTaleEngine_1_1envelope_a01b536591b2952464ba538998106aed2}{freq}}, int16\+\_\+t mic\+Amp=0.\+0)
+\item 
+static double \mbox{\hyperlink{classLaughTaleEngine_1_1envelope_a1c5778f33b6236392bfaab2a608e1aaf}{triangels}} (double time, double \mbox{\hyperlink{classLaughTaleEngine_1_1envelope_a01b536591b2952464ba538998106aed2}{freq}}, int16\+\_\+t mic\+Amp=0.\+0)
+\item 
+static double \mbox{\hyperlink{classLaughTaleEngine_1_1envelope_a92fb9771f6d10728848e5915c65755ee}{noise}} (double time=0.\+0, double \mbox{\hyperlink{classLaughTaleEngine_1_1envelope_a01b536591b2952464ba538998106aed2}{freq}}=0.\+0, int16\+\_\+t mic\+Amp=0.\+0)
+\item 
+static double \mbox{\hyperlink{classLaughTaleEngine_1_1envelope_a65611328bbb6eab771f4dc1f9b7a9b0e}{speaker}} (double time, double \mbox{\hyperlink{classLaughTaleEngine_1_1envelope_a01b536591b2952464ba538998106aed2}{freq}}, int16\+\_\+t mic\+Amp)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{classLaughTaleEngine_1_1envelope_a7fbb769cf4b87d97fbc70b62a2061825}{attack\+Time}}
+\item 
+double \mbox{\hyperlink{classLaughTaleEngine_1_1envelope_ada05ad0b544e11fbc4f6388b44eb7eed}{decay\+Time}}
+\item 
+double \mbox{\hyperlink{classLaughTaleEngine_1_1envelope_a20e412d1d03a632db3624e38473156c1}{sustain\+Amplitude}}
+\item 
+double \mbox{\hyperlink{classLaughTaleEngine_1_1envelope_a4c18f1218451c83abcfd8dd2bfb8db3a}{release\+Time}}
+\item 
+double \mbox{\hyperlink{classLaughTaleEngine_1_1envelope_a53f48b0520beb043be850ff9b43d5dcb}{start\+Amplitude}} = 1.\+0
+\item 
+double \mbox{\hyperlink{classLaughTaleEngine_1_1envelope_ab41aa2a4a2a0efa87cc6ca96623c63ac}{master\+Volume}} = 1.\+0
+\item 
+double \mbox{\hyperlink{classLaughTaleEngine_1_1envelope_a0dda94aa798f4cb671abc01ebdf07b76}{triger\+On\+Time}}
+\item 
+double \mbox{\hyperlink{classLaughTaleEngine_1_1envelope_a8cd8a594eb166f814e557627af80f206}{triger\+Off\+Time}}
+\item 
+bool \mbox{\hyperlink{classLaughTaleEngine_1_1envelope_a4409032b0a43352c24b85a07be84ed31}{is\+Note\+On}} = false
+\item 
+bool \mbox{\hyperlink{classLaughTaleEngine_1_1envelope_adadc948b89d31082d5c7ef0816872f21}{trigerd\+Once}} = false
+\item 
+double \mbox{\hyperlink{classLaughTaleEngine_1_1envelope_a01b536591b2952464ba538998106aed2}{freq}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classLaughTaleEngine_1_1envelope_add9788dca9d8585741432a5ef2ba124c}\label{classLaughTaleEngine_1_1envelope_add9788dca9d8585741432a5ef2ba124c}} 
+\index{LaughTaleEngine::envelope@{LaughTaleEngine::envelope}!analogSowTooth@{analogSowTooth}}
+\index{analogSowTooth@{analogSowTooth}!LaughTaleEngine::envelope@{LaughTaleEngine::envelope}}
+\doxysubsubsection{\texorpdfstring{analogSowTooth()}{analogSowTooth()}}
+{\footnotesize\ttfamily double Laugh\+Tale\+Engine\+::envelope\+::analog\+Sow\+Tooth (\begin{DoxyParamCaption}\item[{double}]{time,  }\item[{double}]{freq,  }\item[{int16\+\_\+t}]{mic\+Amp = {\ttfamily 0.0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classLaughTaleEngine_1_1envelope_ad796994dc28a5edc62297ada607391d3}\label{classLaughTaleEngine_1_1envelope_ad796994dc28a5edc62297ada607391d3}} 
+\index{LaughTaleEngine::envelope@{LaughTaleEngine::envelope}!analogSqure@{analogSqure}}
+\index{analogSqure@{analogSqure}!LaughTaleEngine::envelope@{LaughTaleEngine::envelope}}
+\doxysubsubsection{\texorpdfstring{analogSqure()}{analogSqure()}}
+{\footnotesize\ttfamily double Laugh\+Tale\+Engine\+::envelope\+::analog\+Squre (\begin{DoxyParamCaption}\item[{double}]{time,  }\item[{double}]{freq,  }\item[{int16\+\_\+t}]{mic\+Amp = {\ttfamily 0.0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classLaughTaleEngine_1_1envelope_ad1d68f43a515c1e0bbeb89e22c2c45c2}\label{classLaughTaleEngine_1_1envelope_ad1d68f43a515c1e0bbeb89e22c2c45c2}} 
+\index{LaughTaleEngine::envelope@{LaughTaleEngine::envelope}!getEnvelopeAmpMultiplayer@{getEnvelopeAmpMultiplayer}}
+\index{getEnvelopeAmpMultiplayer@{getEnvelopeAmpMultiplayer}!LaughTaleEngine::envelope@{LaughTaleEngine::envelope}}
+\doxysubsubsection{\texorpdfstring{getEnvelopeAmpMultiplayer()}{getEnvelopeAmpMultiplayer()}}
+{\footnotesize\ttfamily double Laugh\+Tale\+Engine\+::envelope\+::get\+Envelope\+Amp\+Multiplayer (\begin{DoxyParamCaption}\item[{double}]{time }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classLaughTaleEngine_1_1envelope_af6fff4ae2cc8090f6c729b08b879b5b3}\label{classLaughTaleEngine_1_1envelope_af6fff4ae2cc8090f6c729b08b879b5b3}} 
+\index{LaughTaleEngine::envelope@{LaughTaleEngine::envelope}!getId@{getId}}
+\index{getId@{getId}!LaughTaleEngine::envelope@{LaughTaleEngine::envelope}}
+\doxysubsubsection{\texorpdfstring{getId()}{getId()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceLaughTaleEngine_a105044a4171f64ca8e60fc9247c8c0e0}{apo\+Envelope\+Id}} Laugh\+Tale\+Engine\+::envelope\+::get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classLaughTaleEngine_1_1envelope_af93cb799a40b02cd796305751cf9b853}\label{classLaughTaleEngine_1_1envelope_af93cb799a40b02cd796305751cf9b853}} 
+\index{LaughTaleEngine::envelope@{LaughTaleEngine::envelope}!getSampelAmp@{getSampelAmp}}
+\index{getSampelAmp@{getSampelAmp}!LaughTaleEngine::envelope@{LaughTaleEngine::envelope}}
+\doxysubsubsection{\texorpdfstring{getSampelAmp()}{getSampelAmp()}}
+{\footnotesize\ttfamily double Laugh\+Tale\+Engine\+::envelope\+::get\+Sampel\+Amp (\begin{DoxyParamCaption}\item[{double}]{time,  }\item[{int16\+\_\+t}]{mic\+Amp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classLaughTaleEngine_1_1harmonica_a307ad65f475168a80239b30a4aba9dd1}{Laugh\+Tale\+Engine\+::harmonica}}, \mbox{\hyperlink{classLaughTaleEngine_1_1bell_aae01012045b953c6f8b093dfb62bcee7}{Laugh\+Tale\+Engine\+::bell}}, and \mbox{\hyperlink{classLaughTaleEngine_1_1guitarString_a95c93c842b02e6760a92839826d2fd44}{Laugh\+Tale\+Engine\+::guitar\+String}}.
+
+\mbox{\Hypertarget{classLaughTaleEngine_1_1envelope_ad72f4242c5832324b02f74c20273ec81}\label{classLaughTaleEngine_1_1envelope_ad72f4242c5832324b02f74c20273ec81}} 
+\index{LaughTaleEngine::envelope@{LaughTaleEngine::envelope}!isActive@{isActive}}
+\index{isActive@{isActive}!LaughTaleEngine::envelope@{LaughTaleEngine::envelope}}
+\doxysubsubsection{\texorpdfstring{isActive()}{isActive()}}
+{\footnotesize\ttfamily virtual bool Laugh\+Tale\+Engine\+::envelope\+::is\+Active (\begin{DoxyParamCaption}\item[{double}]{time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classLaughTaleEngine_1_1envelope_ab3ee6d2cf513d35760c0f38a513462fd}\label{classLaughTaleEngine_1_1envelope_ab3ee6d2cf513d35760c0f38a513462fd}} 
+\index{LaughTaleEngine::envelope@{LaughTaleEngine::envelope}!MultiplayerIfNoteIsOff@{MultiplayerIfNoteIsOff}}
+\index{MultiplayerIfNoteIsOff@{MultiplayerIfNoteIsOff}!LaughTaleEngine::envelope@{LaughTaleEngine::envelope}}
+\doxysubsubsection{\texorpdfstring{MultiplayerIfNoteIsOff()}{MultiplayerIfNoteIsOff()}}
+{\footnotesize\ttfamily double Laugh\+Tale\+Engine\+::envelope\+::\+Multiplayer\+If\+Note\+Is\+Off (\begin{DoxyParamCaption}\item[{double}]{life\+Time,  }\item[{double}]{delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classLaughTaleEngine_1_1envelope_abf4d3224588bc274f056b60194c837c7}\label{classLaughTaleEngine_1_1envelope_abf4d3224588bc274f056b60194c837c7}} 
+\index{LaughTaleEngine::envelope@{LaughTaleEngine::envelope}!MultiplayerIfNoteIsOn@{MultiplayerIfNoteIsOn}}
+\index{MultiplayerIfNoteIsOn@{MultiplayerIfNoteIsOn}!LaughTaleEngine::envelope@{LaughTaleEngine::envelope}}
+\doxysubsubsection{\texorpdfstring{MultiplayerIfNoteIsOn()}{MultiplayerIfNoteIsOn()}}
+{\footnotesize\ttfamily double Laugh\+Tale\+Engine\+::envelope\+::\+Multiplayer\+If\+Note\+Is\+On (\begin{DoxyParamCaption}\item[{double}]{delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classLaughTaleEngine_1_1envelope_af4705a26ba99be508089b01ab3406cf3}\label{classLaughTaleEngine_1_1envelope_af4705a26ba99be508089b01ab3406cf3}} 
+\index{LaughTaleEngine::envelope@{LaughTaleEngine::envelope}!mute@{mute}}
+\index{mute@{mute}!LaughTaleEngine::envelope@{LaughTaleEngine::envelope}}
+\doxysubsubsection{\texorpdfstring{mute()}{mute()}}
+{\footnotesize\ttfamily double Laugh\+Tale\+Engine\+::envelope\+::mute (\begin{DoxyParamCaption}\item[{double}]{time = {\ttfamily 0.0},  }\item[{double}]{freq = {\ttfamily 0.0},  }\item[{int16\+\_\+t}]{mic\+Amp = {\ttfamily 0.0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classLaughTaleEngine_1_1envelope_a92fb9771f6d10728848e5915c65755ee}\label{classLaughTaleEngine_1_1envelope_a92fb9771f6d10728848e5915c65755ee}} 
+\index{LaughTaleEngine::envelope@{LaughTaleEngine::envelope}!noise@{noise}}
+\index{noise@{noise}!LaughTaleEngine::envelope@{LaughTaleEngine::envelope}}
+\doxysubsubsection{\texorpdfstring{noise()}{noise()}}
+{\footnotesize\ttfamily double Laugh\+Tale\+Engine\+::envelope\+::noise (\begin{DoxyParamCaption}\item[{double}]{time = {\ttfamily 0.0},  }\item[{double}]{freq = {\ttfamily 0.0},  }\item[{int16\+\_\+t}]{mic\+Amp = {\ttfamily 0.0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classLaughTaleEngine_1_1envelope_af77bd7697d2d1296c80211233d01398f}\label{classLaughTaleEngine_1_1envelope_af77bd7697d2d1296c80211233d01398f}} 
+\index{LaughTaleEngine::envelope@{LaughTaleEngine::envelope}!noteOff@{noteOff}}
+\index{noteOff@{noteOff}!LaughTaleEngine::envelope@{LaughTaleEngine::envelope}}
+\doxysubsubsection{\texorpdfstring{noteOff()}{noteOff()}}
+{\footnotesize\ttfamily void Laugh\+Tale\+Engine\+::envelope\+::note\+Off (\begin{DoxyParamCaption}\item[{double}]{time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classLaughTaleEngine_1_1envelope_a5d5b40368b64cbd081cefe1211413f53}\label{classLaughTaleEngine_1_1envelope_a5d5b40368b64cbd081cefe1211413f53}} 
+\index{LaughTaleEngine::envelope@{LaughTaleEngine::envelope}!noteOn@{noteOn}}
+\index{noteOn@{noteOn}!LaughTaleEngine::envelope@{LaughTaleEngine::envelope}}
+\doxysubsubsection{\texorpdfstring{noteOn()}{noteOn()}}
+{\footnotesize\ttfamily void Laugh\+Tale\+Engine\+::envelope\+::note\+On (\begin{DoxyParamCaption}\item[{double}]{time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classLaughTaleEngine_1_1envelope_ae82d63c0013abce4214d7076a35e1903}\label{classLaughTaleEngine_1_1envelope_ae82d63c0013abce4214d7076a35e1903}} 
+\index{LaughTaleEngine::envelope@{LaughTaleEngine::envelope}!setAttackTime@{setAttackTime}}
+\index{setAttackTime@{setAttackTime}!LaughTaleEngine::envelope@{LaughTaleEngine::envelope}}
+\doxysubsubsection{\texorpdfstring{setAttackTime()}{setAttackTime()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classLaughTaleEngine_1_1envelope}{envelope}}$\ast$ Laugh\+Tale\+Engine\+::envelope\+::set\+Attack\+Time (\begin{DoxyParamCaption}\item[{double}]{attack\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classLaughTaleEngine_1_1envelope_a6e3920b32d6f7815a3fa9fbc263fc0cd}\label{classLaughTaleEngine_1_1envelope_a6e3920b32d6f7815a3fa9fbc263fc0cd}} 
+\index{LaughTaleEngine::envelope@{LaughTaleEngine::envelope}!setDecayTime@{setDecayTime}}
+\index{setDecayTime@{setDecayTime}!LaughTaleEngine::envelope@{LaughTaleEngine::envelope}}
+\doxysubsubsection{\texorpdfstring{setDecayTime()}{setDecayTime()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classLaughTaleEngine_1_1envelope}{envelope}}$\ast$ Laugh\+Tale\+Engine\+::envelope\+::set\+Decay\+Time (\begin{DoxyParamCaption}\item[{double}]{decay\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classLaughTaleEngine_1_1envelope_a0f369dbfb9400f4389ed3c856e9adae9}\label{classLaughTaleEngine_1_1envelope_a0f369dbfb9400f4389ed3c856e9adae9}} 
+\index{LaughTaleEngine::envelope@{LaughTaleEngine::envelope}!setFrequency@{setFrequency}}
+\index{setFrequency@{setFrequency}!LaughTaleEngine::envelope@{LaughTaleEngine::envelope}}
+\doxysubsubsection{\texorpdfstring{setFrequency()}{setFrequency()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classLaughTaleEngine_1_1envelope}{envelope}}$\ast$ Laugh\+Tale\+Engine\+::envelope\+::set\+Frequency (\begin{DoxyParamCaption}\item[{double}]{freq }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classLaughTaleEngine_1_1envelope_ac1a328d1e44cf37425a33f7be80097c4}\label{classLaughTaleEngine_1_1envelope_ac1a328d1e44cf37425a33f7be80097c4}} 
+\index{LaughTaleEngine::envelope@{LaughTaleEngine::envelope}!setId@{setId}}
+\index{setId@{setId}!LaughTaleEngine::envelope@{LaughTaleEngine::envelope}}
+\doxysubsubsection{\texorpdfstring{setId()}{setId()}}
+{\footnotesize\ttfamily void Laugh\+Tale\+Engine\+::envelope\+::set\+Id (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceLaughTaleEngine_a105044a4171f64ca8e60fc9247c8c0e0}{apo\+Envelope\+Id}}}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classLaughTaleEngine_1_1envelope_a1cc2ec5a50096df72e532cc476b3e3d1}\label{classLaughTaleEngine_1_1envelope_a1cc2ec5a50096df72e532cc476b3e3d1}} 
+\index{LaughTaleEngine::envelope@{LaughTaleEngine::envelope}!setMasterVolume@{setMasterVolume}}
+\index{setMasterVolume@{setMasterVolume}!LaughTaleEngine::envelope@{LaughTaleEngine::envelope}}
+\doxysubsubsection{\texorpdfstring{setMasterVolume()}{setMasterVolume()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classLaughTaleEngine_1_1envelope}{envelope}}$\ast$ Laugh\+Tale\+Engine\+::envelope\+::set\+Master\+Volume (\begin{DoxyParamCaption}\item[{double}]{master\+Volume }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classLaughTaleEngine_1_1envelope_a0063b692866b7194c260622544f9287c}\label{classLaughTaleEngine_1_1envelope_a0063b692866b7194c260622544f9287c}} 
+\index{LaughTaleEngine::envelope@{LaughTaleEngine::envelope}!setReleaseTime@{setReleaseTime}}
+\index{setReleaseTime@{setReleaseTime}!LaughTaleEngine::envelope@{LaughTaleEngine::envelope}}
+\doxysubsubsection{\texorpdfstring{setReleaseTime()}{setReleaseTime()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classLaughTaleEngine_1_1envelope}{envelope}}$\ast$ Laugh\+Tale\+Engine\+::envelope\+::set\+Release\+Time (\begin{DoxyParamCaption}\item[{double}]{release\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classLaughTaleEngine_1_1envelope_ab209a7f4556be1d95d24b1b4ae5428df}\label{classLaughTaleEngine_1_1envelope_ab209a7f4556be1d95d24b1b4ae5428df}} 
+\index{LaughTaleEngine::envelope@{LaughTaleEngine::envelope}!setSondWaveType@{setSondWaveType}}
+\index{setSondWaveType@{setSondWaveType}!LaughTaleEngine::envelope@{LaughTaleEngine::envelope}}
+\doxysubsubsection{\texorpdfstring{setSondWaveType()}{setSondWaveType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classLaughTaleEngine_1_1envelope}{envelope}} $\ast$ Laugh\+Tale\+Engine\+::envelope\+::set\+Sond\+Wave\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceLaughTaleEngine_a45efbfe0b4260ca80f20f61b7e22677e}{sond\+Waves}}}]{mod }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classLaughTaleEngine_1_1envelope_a393c65642ed6dd1720124a505de82546}\label{classLaughTaleEngine_1_1envelope_a393c65642ed6dd1720124a505de82546}} 
+\index{LaughTaleEngine::envelope@{LaughTaleEngine::envelope}!setStartAmplitude@{setStartAmplitude}}
+\index{setStartAmplitude@{setStartAmplitude}!LaughTaleEngine::envelope@{LaughTaleEngine::envelope}}
+\doxysubsubsection{\texorpdfstring{setStartAmplitude()}{setStartAmplitude()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classLaughTaleEngine_1_1envelope}{envelope}}$\ast$ Laugh\+Tale\+Engine\+::envelope\+::set\+Start\+Amplitude (\begin{DoxyParamCaption}\item[{double}]{start\+Amplitude }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classLaughTaleEngine_1_1envelope_ab6cc91653d6917cd3e11f0e087a87fd3}\label{classLaughTaleEngine_1_1envelope_ab6cc91653d6917cd3e11f0e087a87fd3}} 
+\index{LaughTaleEngine::envelope@{LaughTaleEngine::envelope}!setSustainAmplitude@{setSustainAmplitude}}
+\index{setSustainAmplitude@{setSustainAmplitude}!LaughTaleEngine::envelope@{LaughTaleEngine::envelope}}
+\doxysubsubsection{\texorpdfstring{setSustainAmplitude()}{setSustainAmplitude()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classLaughTaleEngine_1_1envelope}{envelope}}$\ast$ Laugh\+Tale\+Engine\+::envelope\+::set\+Sustain\+Amplitude (\begin{DoxyParamCaption}\item[{double}]{sustain\+Amplitude }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classLaughTaleEngine_1_1envelope_a68e2ece91c6c0ad002b80241abdcb03c}\label{classLaughTaleEngine_1_1envelope_a68e2ece91c6c0ad002b80241abdcb03c}} 
+\index{LaughTaleEngine::envelope@{LaughTaleEngine::envelope}!sin@{sin}}
+\index{sin@{sin}!LaughTaleEngine::envelope@{LaughTaleEngine::envelope}}
+\doxysubsubsection{\texorpdfstring{sin()}{sin()}}
+{\footnotesize\ttfamily double Laugh\+Tale\+Engine\+::envelope\+::sin (\begin{DoxyParamCaption}\item[{double}]{time,  }\item[{double}]{freq,  }\item[{int16\+\_\+t}]{mic\+Amp = {\ttfamily 0.0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classLaughTaleEngine_1_1envelope_a2667ece96cc9263610c7ecd8102e0ff8}\label{classLaughTaleEngine_1_1envelope_a2667ece96cc9263610c7ecd8102e0ff8}} 
+\index{LaughTaleEngine::envelope@{LaughTaleEngine::envelope}!sowTooth@{sowTooth}}
+\index{sowTooth@{sowTooth}!LaughTaleEngine::envelope@{LaughTaleEngine::envelope}}
+\doxysubsubsection{\texorpdfstring{sowTooth()}{sowTooth()}}
+{\footnotesize\ttfamily double Laugh\+Tale\+Engine\+::envelope\+::sow\+Tooth (\begin{DoxyParamCaption}\item[{double}]{time,  }\item[{double}]{freq,  }\item[{int16\+\_\+t}]{mic\+Amp = {\ttfamily 0.0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classLaughTaleEngine_1_1envelope_a65611328bbb6eab771f4dc1f9b7a9b0e}\label{classLaughTaleEngine_1_1envelope_a65611328bbb6eab771f4dc1f9b7a9b0e}} 
+\index{LaughTaleEngine::envelope@{LaughTaleEngine::envelope}!speaker@{speaker}}
+\index{speaker@{speaker}!LaughTaleEngine::envelope@{LaughTaleEngine::envelope}}
+\doxysubsubsection{\texorpdfstring{speaker()}{speaker()}}
+{\footnotesize\ttfamily double Laugh\+Tale\+Engine\+::envelope\+::speaker (\begin{DoxyParamCaption}\item[{double}]{time,  }\item[{double}]{freq,  }\item[{int16\+\_\+t}]{mic\+Amp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classLaughTaleEngine_1_1envelope_a1a1b4e5957a8514ff28492822aaf6b82}\label{classLaughTaleEngine_1_1envelope_a1a1b4e5957a8514ff28492822aaf6b82}} 
+\index{LaughTaleEngine::envelope@{LaughTaleEngine::envelope}!squre@{squre}}
+\index{squre@{squre}!LaughTaleEngine::envelope@{LaughTaleEngine::envelope}}
+\doxysubsubsection{\texorpdfstring{squre()}{squre()}}
+{\footnotesize\ttfamily double Laugh\+Tale\+Engine\+::envelope\+::squre (\begin{DoxyParamCaption}\item[{double}]{time,  }\item[{double}]{freq,  }\item[{int16\+\_\+t}]{mic\+Amp = {\ttfamily 0.0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classLaughTaleEngine_1_1envelope_a1c5778f33b6236392bfaab2a608e1aaf}\label{classLaughTaleEngine_1_1envelope_a1c5778f33b6236392bfaab2a608e1aaf}} 
+\index{LaughTaleEngine::envelope@{LaughTaleEngine::envelope}!triangels@{triangels}}
+\index{triangels@{triangels}!LaughTaleEngine::envelope@{LaughTaleEngine::envelope}}
+\doxysubsubsection{\texorpdfstring{triangels()}{triangels()}}
+{\footnotesize\ttfamily double Laugh\+Tale\+Engine\+::envelope\+::triangels (\begin{DoxyParamCaption}\item[{double}]{time,  }\item[{double}]{freq,  }\item[{int16\+\_\+t}]{mic\+Amp = {\ttfamily 0.0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classLaughTaleEngine_1_1envelope_a507bb4af684d398138ecb27b5c1f0f58}\label{classLaughTaleEngine_1_1envelope_a507bb4af684d398138ecb27b5c1f0f58}} 
+\index{LaughTaleEngine::envelope@{LaughTaleEngine::envelope}!w@{w}}
+\index{w@{w}!LaughTaleEngine::envelope@{LaughTaleEngine::envelope}}
+\doxysubsubsection{\texorpdfstring{w()}{w()}}
+{\footnotesize\ttfamily double Laugh\+Tale\+Engine\+::envelope\+::w (\begin{DoxyParamCaption}\item[{int}]{freq }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classLaughTaleEngine_1_1envelope_a7fbb769cf4b87d97fbc70b62a2061825}\label{classLaughTaleEngine_1_1envelope_a7fbb769cf4b87d97fbc70b62a2061825}} 
+\index{LaughTaleEngine::envelope@{LaughTaleEngine::envelope}!attackTime@{attackTime}}
+\index{attackTime@{attackTime}!LaughTaleEngine::envelope@{LaughTaleEngine::envelope}}
+\doxysubsubsection{\texorpdfstring{attackTime}{attackTime}}
+{\footnotesize\ttfamily double Laugh\+Tale\+Engine\+::envelope\+::attack\+Time\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classLaughTaleEngine_1_1envelope_ada05ad0b544e11fbc4f6388b44eb7eed}\label{classLaughTaleEngine_1_1envelope_ada05ad0b544e11fbc4f6388b44eb7eed}} 
+\index{LaughTaleEngine::envelope@{LaughTaleEngine::envelope}!decayTime@{decayTime}}
+\index{decayTime@{decayTime}!LaughTaleEngine::envelope@{LaughTaleEngine::envelope}}
+\doxysubsubsection{\texorpdfstring{decayTime}{decayTime}}
+{\footnotesize\ttfamily double Laugh\+Tale\+Engine\+::envelope\+::decay\+Time\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classLaughTaleEngine_1_1envelope_a01b536591b2952464ba538998106aed2}\label{classLaughTaleEngine_1_1envelope_a01b536591b2952464ba538998106aed2}} 
+\index{LaughTaleEngine::envelope@{LaughTaleEngine::envelope}!freq@{freq}}
+\index{freq@{freq}!LaughTaleEngine::envelope@{LaughTaleEngine::envelope}}
+\doxysubsubsection{\texorpdfstring{freq}{freq}}
+{\footnotesize\ttfamily double Laugh\+Tale\+Engine\+::envelope\+::freq\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classLaughTaleEngine_1_1envelope_a4409032b0a43352c24b85a07be84ed31}\label{classLaughTaleEngine_1_1envelope_a4409032b0a43352c24b85a07be84ed31}} 
+\index{LaughTaleEngine::envelope@{LaughTaleEngine::envelope}!isNoteOn@{isNoteOn}}
+\index{isNoteOn@{isNoteOn}!LaughTaleEngine::envelope@{LaughTaleEngine::envelope}}
+\doxysubsubsection{\texorpdfstring{isNoteOn}{isNoteOn}}
+{\footnotesize\ttfamily bool Laugh\+Tale\+Engine\+::envelope\+::is\+Note\+On = false\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classLaughTaleEngine_1_1envelope_ab41aa2a4a2a0efa87cc6ca96623c63ac}\label{classLaughTaleEngine_1_1envelope_ab41aa2a4a2a0efa87cc6ca96623c63ac}} 
+\index{LaughTaleEngine::envelope@{LaughTaleEngine::envelope}!masterVolume@{masterVolume}}
+\index{masterVolume@{masterVolume}!LaughTaleEngine::envelope@{LaughTaleEngine::envelope}}
+\doxysubsubsection{\texorpdfstring{masterVolume}{masterVolume}}
+{\footnotesize\ttfamily double Laugh\+Tale\+Engine\+::envelope\+::master\+Volume = 1.\+0\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classLaughTaleEngine_1_1envelope_a4c18f1218451c83abcfd8dd2bfb8db3a}\label{classLaughTaleEngine_1_1envelope_a4c18f1218451c83abcfd8dd2bfb8db3a}} 
+\index{LaughTaleEngine::envelope@{LaughTaleEngine::envelope}!releaseTime@{releaseTime}}
+\index{releaseTime@{releaseTime}!LaughTaleEngine::envelope@{LaughTaleEngine::envelope}}
+\doxysubsubsection{\texorpdfstring{releaseTime}{releaseTime}}
+{\footnotesize\ttfamily double Laugh\+Tale\+Engine\+::envelope\+::release\+Time\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classLaughTaleEngine_1_1envelope_a53f48b0520beb043be850ff9b43d5dcb}\label{classLaughTaleEngine_1_1envelope_a53f48b0520beb043be850ff9b43d5dcb}} 
+\index{LaughTaleEngine::envelope@{LaughTaleEngine::envelope}!startAmplitude@{startAmplitude}}
+\index{startAmplitude@{startAmplitude}!LaughTaleEngine::envelope@{LaughTaleEngine::envelope}}
+\doxysubsubsection{\texorpdfstring{startAmplitude}{startAmplitude}}
+{\footnotesize\ttfamily double Laugh\+Tale\+Engine\+::envelope\+::start\+Amplitude = 1.\+0\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classLaughTaleEngine_1_1envelope_a20e412d1d03a632db3624e38473156c1}\label{classLaughTaleEngine_1_1envelope_a20e412d1d03a632db3624e38473156c1}} 
+\index{LaughTaleEngine::envelope@{LaughTaleEngine::envelope}!sustainAmplitude@{sustainAmplitude}}
+\index{sustainAmplitude@{sustainAmplitude}!LaughTaleEngine::envelope@{LaughTaleEngine::envelope}}
+\doxysubsubsection{\texorpdfstring{sustainAmplitude}{sustainAmplitude}}
+{\footnotesize\ttfamily double Laugh\+Tale\+Engine\+::envelope\+::sustain\+Amplitude\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classLaughTaleEngine_1_1envelope_adadc948b89d31082d5c7ef0816872f21}\label{classLaughTaleEngine_1_1envelope_adadc948b89d31082d5c7ef0816872f21}} 
+\index{LaughTaleEngine::envelope@{LaughTaleEngine::envelope}!trigerdOnce@{trigerdOnce}}
+\index{trigerdOnce@{trigerdOnce}!LaughTaleEngine::envelope@{LaughTaleEngine::envelope}}
+\doxysubsubsection{\texorpdfstring{trigerdOnce}{trigerdOnce}}
+{\footnotesize\ttfamily bool Laugh\+Tale\+Engine\+::envelope\+::trigerd\+Once = false\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classLaughTaleEngine_1_1envelope_a8cd8a594eb166f814e557627af80f206}\label{classLaughTaleEngine_1_1envelope_a8cd8a594eb166f814e557627af80f206}} 
+\index{LaughTaleEngine::envelope@{LaughTaleEngine::envelope}!trigerOffTime@{trigerOffTime}}
+\index{trigerOffTime@{trigerOffTime}!LaughTaleEngine::envelope@{LaughTaleEngine::envelope}}
+\doxysubsubsection{\texorpdfstring{trigerOffTime}{trigerOffTime}}
+{\footnotesize\ttfamily double Laugh\+Tale\+Engine\+::envelope\+::triger\+Off\+Time\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classLaughTaleEngine_1_1envelope_a0dda94aa798f4cb671abc01ebdf07b76}\label{classLaughTaleEngine_1_1envelope_a0dda94aa798f4cb671abc01ebdf07b76}} 
+\index{LaughTaleEngine::envelope@{LaughTaleEngine::envelope}!trigerOnTime@{trigerOnTime}}
+\index{trigerOnTime@{trigerOnTime}!LaughTaleEngine::envelope@{LaughTaleEngine::envelope}}
+\doxysubsubsection{\texorpdfstring{trigerOnTime}{trigerOnTime}}
+{\footnotesize\ttfamily double Laugh\+Tale\+Engine\+::envelope\+::triger\+On\+Time\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+headers/sound\+Engine/\mbox{\hyperlink{envelope_8h}{envelope.\+h}}\item 
+src/sound\+Engine/\mbox{\hyperlink{envelope_8cpp}{envelope.\+cpp}}\end{DoxyCompactItemize}

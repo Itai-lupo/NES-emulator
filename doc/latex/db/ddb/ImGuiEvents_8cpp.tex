@@ -1,0 +1,56 @@
+\hypertarget{ImGuiEvents_8cpp}{}\doxysection{src/renderer/\+Im\+Gui\+Events.cpp File Reference}
+\label{ImGuiEvents_8cpp}\index{src/renderer/ImGuiEvents.cpp@{src/renderer/ImGuiEvents.cpp}}
+{\ttfamily \#include \char`\"{}core.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}window.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}logger.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}events.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Im\+Gui\+Events.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}imgui.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}imgui\+\_\+impl\+\_\+glfw.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}imgui\+\_\+impl\+\_\+opengl3.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$functional$>$}\newline
+{\ttfamily \#include $<$GLFW/glfw3.\+h$>$}\newline
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceLaughTaleEngine}{Laugh\+Tale\+Engine}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{ImGuiEvents_8cpp_a764d466a9da0dbe5fc6c81aaa567f984}{IMGUI\+\_\+\+IMPL\+\_\+\+OPENGL\+\_\+\+LOADER\+\_\+\+GLAD}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{namespaceLaughTaleEngine_ad7a9114377e1cd2df5bf8867fa6ac7a0}{Laugh\+Tale\+Engine\+::\+Im\+Gui\+Mouse\+Button\+Pressed}} (\+\_\+\+\_\+attribute\+\_\+\+\_\+((unused)) IEntity $\ast$event\+Entity, IEvent\+Data $\ast$sendor)
+\item 
+void \mbox{\hyperlink{namespaceLaughTaleEngine_af318fe37c50c0504a531ba96606917d5}{Laugh\+Tale\+Engine\+::\+Im\+Gui\+Mouse\+Button\+Released}} (\+\_\+\+\_\+attribute\+\_\+\+\_\+((unused)) IEntity $\ast$event\+Entity, IEvent\+Data $\ast$sendor)
+\item 
+void \mbox{\hyperlink{namespaceLaughTaleEngine_a63d2adf1887b4ab717e6c0e4545f626d}{Laugh\+Tale\+Engine\+::\+Im\+Gui\+Mouse\+Moved}} (\+\_\+\+\_\+attribute\+\_\+\+\_\+((unused)) IEntity $\ast$event\+Entity, IEvent\+Data $\ast$sendor)
+\item 
+void \mbox{\hyperlink{namespaceLaughTaleEngine_abe009e444654c65d0f72e191cb5d25f8}{Laugh\+Tale\+Engine\+::\+Im\+Gui\+Mouse\+Scrolled}} (\+\_\+\+\_\+attribute\+\_\+\+\_\+((unused)) IEntity $\ast$event\+Entity, IEvent\+Data $\ast$sendor)
+\item 
+void \mbox{\hyperlink{namespaceLaughTaleEngine_a7d863f5035ba3717cd4d16c8d5a6341c}{Laugh\+Tale\+Engine\+::\+Im\+Gui\+Window\+Resize}} (\+\_\+\+\_\+attribute\+\_\+\+\_\+((unused)) IEntity $\ast$event\+Entity, IEvent\+Data $\ast$sendor)
+\item 
+void \mbox{\hyperlink{namespaceLaughTaleEngine_aeea67f4c016082747f3e862984ccf66b}{Laugh\+Tale\+Engine\+::\+Im\+Gui\+Key\+Pressed}} (\+\_\+\+\_\+attribute\+\_\+\+\_\+((unused)) IEntity $\ast$event\+Entity, IEvent\+Data $\ast$sendor)
+\item 
+void \mbox{\hyperlink{namespaceLaughTaleEngine_aa62c9bc51d0fb168f0cd179d944900d2}{Laugh\+Tale\+Engine\+::\+Im\+Gui\+Key\+Released}} (\+\_\+\+\_\+attribute\+\_\+\+\_\+((unused)) IEntity $\ast$event\+Entity, IEvent\+Data $\ast$sendor)
+\item 
+void \mbox{\hyperlink{namespaceLaughTaleEngine_aaa48c947af7ba92a844cad4bfd1673c3}{Laugh\+Tale\+Engine\+::\+Im\+Gui\+Key\+Typed}} (\+\_\+\+\_\+attribute\+\_\+\+\_\+((unused)) IEntity $\ast$event\+Entity, IEvent\+Data $\ast$sendor)
+\item 
+void \mbox{\hyperlink{namespaceLaughTaleEngine_a0198a219a4a63f5c0ce3ac5202624f35}{Laugh\+Tale\+Engine\+::init\+Im\+Gui}} (GLFWwindow $\ast$window)
+\item 
+void \mbox{\hyperlink{namespaceLaughTaleEngine_ae8f8d2159d757c8d59e70a785f78673a}{Laugh\+Tale\+Engine\+::on\+Im\+Gui\+Update}} (window data, on\+Update\+Data $\ast$event\+Data)
+\item 
+void \mbox{\hyperlink{namespaceLaughTaleEngine_a3f32093e24609090172ae6464fcd6338}{Laugh\+Tale\+Engine\+::close\+Im\+Gui}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{ImGuiEvents_8cpp_a764d466a9da0dbe5fc6c81aaa567f984}\label{ImGuiEvents_8cpp_a764d466a9da0dbe5fc6c81aaa567f984}} 
+\index{ImGuiEvents.cpp@{ImGuiEvents.cpp}!IMGUI\_IMPL\_OPENGL\_LOADER\_GLAD@{IMGUI\_IMPL\_OPENGL\_LOADER\_GLAD}}
+\index{IMGUI\_IMPL\_OPENGL\_LOADER\_GLAD@{IMGUI\_IMPL\_OPENGL\_LOADER\_GLAD}!ImGuiEvents.cpp@{ImGuiEvents.cpp}}
+\doxysubsubsection{\texorpdfstring{IMGUI\_IMPL\_OPENGL\_LOADER\_GLAD}{IMGUI\_IMPL\_OPENGL\_LOADER\_GLAD}}
+{\footnotesize\ttfamily \#define IMGUI\+\_\+\+IMPL\+\_\+\+OPENGL\+\_\+\+LOADER\+\_\+\+GLAD}
+

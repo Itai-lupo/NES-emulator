@@ -19,13 +19,14 @@ namespace LaughTaleEngine
 
     enum sondWaves
     {
-        mute,
+        mute = 0,
         sin,
         sowTooth,
         analogSowTooth,
         squre,
         analogSqure,
         triangels,
+        noise,
         speaker
     };
 }

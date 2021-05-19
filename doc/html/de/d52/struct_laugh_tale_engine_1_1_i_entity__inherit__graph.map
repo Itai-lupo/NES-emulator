@@ -1,0 +1,7 @@
+<map id="LaughTaleEngine::IEntity" name="LaughTaleEngine::IEntity">
+<area shape="rect" id="node1" title=" " alt="" coords="131,5,298,32"/>
+<area shape="rect" id="node2" href="$dd/db8/class_im_gui_data.html" title=" " alt="" coords="5,80,91,107"/>
+<area shape="rect" id="node3" href="$d1/d9c/classrender_data.html" title=" " alt="" coords="115,80,202,107"/>
+<area shape="rect" id="node4" href="$d7/d22/classsound_entity.html" title=" " alt="" coords="227,80,317,107"/>
+<area shape="rect" id="node5" href="$dc/d6c/classwindow_entity.html" title=" " alt="" coords="342,80,442,107"/>
+</map>

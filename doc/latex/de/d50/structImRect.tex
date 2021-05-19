@@ -1,0 +1,258 @@
+\hypertarget{structImRect}{}\doxysection{Im\+Rect Struct Reference}
+\label{structImRect}\index{ImRect@{ImRect}}
+
+
+{\ttfamily \#include $<$imgui\+\_\+internal.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structImRect_a57399f36758ed3eb1eb762143401ff54}{Im\+Rect}} ()
+\item 
+\mbox{\hyperlink{structImRect_a2f0ff273434bfd9d22bb699fd7a63a1f}{Im\+Rect}} (const \mbox{\hyperlink{structImVec2}{Im\+Vec2}} \&min, const \mbox{\hyperlink{structImVec2}{Im\+Vec2}} \&max)
+\item 
+\mbox{\hyperlink{structImRect_adfe8d43381f9af8a3e3ea32a3821ab84}{Im\+Rect}} (const \mbox{\hyperlink{structImVec4}{Im\+Vec4}} \&\mbox{\hyperlink{glad_8h_a30522dbcc3e66083fcf2bf64d1fad76a}{v}})
+\item 
+\mbox{\hyperlink{structImRect_a4cd168f1ae088e15db64b95b880f8933}{Im\+Rect}} (float x1, float \mbox{\hyperlink{glad_8h_a48340161068d267815ac3131e9d03def}{y1}}, float \mbox{\hyperlink{glad_8h_ad2cea6eadb01f017f0d57e7edf0ce988}{x2}}, float \mbox{\hyperlink{glad_8h_af7158b5d27f7a6aa4ab9973fcc3a5c20}{y2}})
+\item 
+\mbox{\hyperlink{structImVec2}{Im\+Vec2}} \mbox{\hyperlink{structImRect_aae13f8003184fd84f29d27c3c074cf43}{Get\+Center}} () const
+\item 
+\mbox{\hyperlink{structImVec2}{Im\+Vec2}} \mbox{\hyperlink{structImRect_ae459d9c50003058cfb34519a571aaf33}{Get\+Size}} () const
+\item 
+float \mbox{\hyperlink{structImRect_afa75cb8491f20901c96166d17dcddac4}{Get\+Width}} () const
+\item 
+float \mbox{\hyperlink{structImRect_a748d8ae9cb26508951ec6e2f2df0625b}{Get\+Height}} () const
+\item 
+\mbox{\hyperlink{structImVec2}{Im\+Vec2}} \mbox{\hyperlink{structImRect_a1d4d972329722b51dca4499cb5931b4b}{Get\+TL}} () const
+\item 
+\mbox{\hyperlink{structImVec2}{Im\+Vec2}} \mbox{\hyperlink{structImRect_acae90248a96be4acf1524071fca1c3f3}{Get\+TR}} () const
+\item 
+\mbox{\hyperlink{structImVec2}{Im\+Vec2}} \mbox{\hyperlink{structImRect_a59d9751bc7be6745dddf5b83b9155669}{Get\+BL}} () const
+\item 
+\mbox{\hyperlink{structImVec2}{Im\+Vec2}} \mbox{\hyperlink{structImRect_ad2f2687254beed5a9b19bde0d6fa14f5}{Get\+BR}} () const
+\item 
+bool \mbox{\hyperlink{structImRect_ac583156fd0e9306181fff5d120b262ea}{Contains}} (const \mbox{\hyperlink{structImVec2}{Im\+Vec2}} \&p) const
+\item 
+bool \mbox{\hyperlink{structImRect_ad6043344d8ac30d5f342c71641cfe24b}{Contains}} (const \mbox{\hyperlink{structImRect}{Im\+Rect}} \&\mbox{\hyperlink{glad_8h_abe08814c2f72843fde4d8df41440d5a0}{r}}) const
+\item 
+bool \mbox{\hyperlink{structImRect_a0af3bade3781e5e7c6afdf71ccfb0d43}{Overlaps}} (const \mbox{\hyperlink{structImRect}{Im\+Rect}} \&\mbox{\hyperlink{glad_8h_abe08814c2f72843fde4d8df41440d5a0}{r}}) const
+\item 
+\mbox{\hyperlink{glad_8h_a950fc91edb4504f62f1c577bf4727c29}{void}} \mbox{\hyperlink{structImRect_a68996cb6b16a023f0a051981cd5be89e}{Add}} (const \mbox{\hyperlink{structImVec2}{Im\+Vec2}} \&p)
+\item 
+\mbox{\hyperlink{glad_8h_a950fc91edb4504f62f1c577bf4727c29}{void}} \mbox{\hyperlink{structImRect_ab07f581cc78eee99b42f40f77d9fac8e}{Add}} (const \mbox{\hyperlink{structImRect}{Im\+Rect}} \&\mbox{\hyperlink{glad_8h_abe08814c2f72843fde4d8df41440d5a0}{r}})
+\item 
+\mbox{\hyperlink{glad_8h_a950fc91edb4504f62f1c577bf4727c29}{void}} \mbox{\hyperlink{structImRect_af33a7424c3341d08acd69da30c27c753}{Expand}} (const float amount)
+\item 
+\mbox{\hyperlink{glad_8h_a950fc91edb4504f62f1c577bf4727c29}{void}} \mbox{\hyperlink{structImRect_ac0b0b88fe65725b4694cd7d91d42d382}{Expand}} (const \mbox{\hyperlink{structImVec2}{Im\+Vec2}} \&amount)
+\item 
+\mbox{\hyperlink{glad_8h_a950fc91edb4504f62f1c577bf4727c29}{void}} \mbox{\hyperlink{structImRect_a7f799afba3d1c61212448709d9e1a79b}{Translate}} (const \mbox{\hyperlink{structImVec2}{Im\+Vec2}} \&d)
+\item 
+\mbox{\hyperlink{glad_8h_a950fc91edb4504f62f1c577bf4727c29}{void}} \mbox{\hyperlink{structImRect_a20c399583fc60a1f73715b3c6468a89d}{TranslateX}} (float dx)
+\item 
+\mbox{\hyperlink{glad_8h_a950fc91edb4504f62f1c577bf4727c29}{void}} \mbox{\hyperlink{structImRect_abb777eaa8fd13ad6b7d6dab56d29fe52}{TranslateY}} (float dy)
+\item 
+\mbox{\hyperlink{glad_8h_a950fc91edb4504f62f1c577bf4727c29}{void}} \mbox{\hyperlink{structImRect_ac02d5cf6ce0358aea9ed9df43d368f3f}{Clip\+With}} (const \mbox{\hyperlink{structImRect}{Im\+Rect}} \&\mbox{\hyperlink{glad_8h_abe08814c2f72843fde4d8df41440d5a0}{r}})
+\item 
+\mbox{\hyperlink{glad_8h_a950fc91edb4504f62f1c577bf4727c29}{void}} \mbox{\hyperlink{structImRect_a32a5aaca4161b5ffa3f352d293a449ff}{Clip\+With\+Full}} (const \mbox{\hyperlink{structImRect}{Im\+Rect}} \&\mbox{\hyperlink{glad_8h_abe08814c2f72843fde4d8df41440d5a0}{r}})
+\item 
+\mbox{\hyperlink{glad_8h_a950fc91edb4504f62f1c577bf4727c29}{void}} \mbox{\hyperlink{structImRect_a8fdf75a0c64ff29f65113cd9f8be77ab}{Floor}} ()
+\item 
+bool \mbox{\hyperlink{structImRect_a140efca57832182e2483e5fe4ba50422}{Is\+Inverted}} () const
+\item 
+\mbox{\hyperlink{structImVec4}{Im\+Vec4}} \mbox{\hyperlink{structImRect_a2afeb24632fae3848977ff2772036200}{To\+Vec4}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structImVec2}{Im\+Vec2}} \mbox{\hyperlink{structImRect_af8f3fbf7ec983e03548b88e14ba68aa8}{Min}}
+\item 
+\mbox{\hyperlink{structImVec2}{Im\+Vec2}} \mbox{\hyperlink{structImRect_aad58c13340d320b350a72a037e3f7628}{Max}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structImRect_a57399f36758ed3eb1eb762143401ff54}\label{structImRect_a57399f36758ed3eb1eb762143401ff54}} 
+\index{ImRect@{ImRect}!ImRect@{ImRect}}
+\index{ImRect@{ImRect}!ImRect@{ImRect}}
+\doxysubsubsection{\texorpdfstring{ImRect()}{ImRect()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily Im\+Rect\+::\+Im\+Rect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structImRect_a2f0ff273434bfd9d22bb699fd7a63a1f}\label{structImRect_a2f0ff273434bfd9d22bb699fd7a63a1f}} 
+\index{ImRect@{ImRect}!ImRect@{ImRect}}
+\index{ImRect@{ImRect}!ImRect@{ImRect}}
+\doxysubsubsection{\texorpdfstring{ImRect()}{ImRect()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily Im\+Rect\+::\+Im\+Rect (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structImVec2}{Im\+Vec2}} \&}]{min,  }\item[{const \mbox{\hyperlink{structImVec2}{Im\+Vec2}} \&}]{max }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structImRect_adfe8d43381f9af8a3e3ea32a3821ab84}\label{structImRect_adfe8d43381f9af8a3e3ea32a3821ab84}} 
+\index{ImRect@{ImRect}!ImRect@{ImRect}}
+\index{ImRect@{ImRect}!ImRect@{ImRect}}
+\doxysubsubsection{\texorpdfstring{ImRect()}{ImRect()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily Im\+Rect\+::\+Im\+Rect (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structImVec4}{Im\+Vec4}} \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structImRect_a4cd168f1ae088e15db64b95b880f8933}\label{structImRect_a4cd168f1ae088e15db64b95b880f8933}} 
+\index{ImRect@{ImRect}!ImRect@{ImRect}}
+\index{ImRect@{ImRect}!ImRect@{ImRect}}
+\doxysubsubsection{\texorpdfstring{ImRect()}{ImRect()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily Im\+Rect\+::\+Im\+Rect (\begin{DoxyParamCaption}\item[{float}]{x1,  }\item[{float}]{y1,  }\item[{float}]{x2,  }\item[{float}]{y2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structImRect_ab07f581cc78eee99b42f40f77d9fac8e}\label{structImRect_ab07f581cc78eee99b42f40f77d9fac8e}} 
+\index{ImRect@{ImRect}!Add@{Add}}
+\index{Add@{Add}!ImRect@{ImRect}}
+\doxysubsubsection{\texorpdfstring{Add()}{Add()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{glad_8h_a950fc91edb4504f62f1c577bf4727c29}{void}} Im\+Rect\+::\+Add (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structImRect}{Im\+Rect}} \&}]{r }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structImRect_a68996cb6b16a023f0a051981cd5be89e}\label{structImRect_a68996cb6b16a023f0a051981cd5be89e}} 
+\index{ImRect@{ImRect}!Add@{Add}}
+\index{Add@{Add}!ImRect@{ImRect}}
+\doxysubsubsection{\texorpdfstring{Add()}{Add()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{glad_8h_a950fc91edb4504f62f1c577bf4727c29}{void}} Im\+Rect\+::\+Add (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structImVec2}{Im\+Vec2}} \&}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structImRect_ac02d5cf6ce0358aea9ed9df43d368f3f}\label{structImRect_ac02d5cf6ce0358aea9ed9df43d368f3f}} 
+\index{ImRect@{ImRect}!ClipWith@{ClipWith}}
+\index{ClipWith@{ClipWith}!ImRect@{ImRect}}
+\doxysubsubsection{\texorpdfstring{ClipWith()}{ClipWith()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{glad_8h_a950fc91edb4504f62f1c577bf4727c29}{void}} Im\+Rect\+::\+Clip\+With (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structImRect}{Im\+Rect}} \&}]{r }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structImRect_a32a5aaca4161b5ffa3f352d293a449ff}\label{structImRect_a32a5aaca4161b5ffa3f352d293a449ff}} 
+\index{ImRect@{ImRect}!ClipWithFull@{ClipWithFull}}
+\index{ClipWithFull@{ClipWithFull}!ImRect@{ImRect}}
+\doxysubsubsection{\texorpdfstring{ClipWithFull()}{ClipWithFull()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{glad_8h_a950fc91edb4504f62f1c577bf4727c29}{void}} Im\+Rect\+::\+Clip\+With\+Full (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structImRect}{Im\+Rect}} \&}]{r }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structImRect_ad6043344d8ac30d5f342c71641cfe24b}\label{structImRect_ad6043344d8ac30d5f342c71641cfe24b}} 
+\index{ImRect@{ImRect}!Contains@{Contains}}
+\index{Contains@{Contains}!ImRect@{ImRect}}
+\doxysubsubsection{\texorpdfstring{Contains()}{Contains()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Im\+Rect\+::\+Contains (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structImRect}{Im\+Rect}} \&}]{r }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structImRect_ac583156fd0e9306181fff5d120b262ea}\label{structImRect_ac583156fd0e9306181fff5d120b262ea}} 
+\index{ImRect@{ImRect}!Contains@{Contains}}
+\index{Contains@{Contains}!ImRect@{ImRect}}
+\doxysubsubsection{\texorpdfstring{Contains()}{Contains()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Im\+Rect\+::\+Contains (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structImVec2}{Im\+Vec2}} \&}]{p }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structImRect_af33a7424c3341d08acd69da30c27c753}\label{structImRect_af33a7424c3341d08acd69da30c27c753}} 
+\index{ImRect@{ImRect}!Expand@{Expand}}
+\index{Expand@{Expand}!ImRect@{ImRect}}
+\doxysubsubsection{\texorpdfstring{Expand()}{Expand()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{glad_8h_a950fc91edb4504f62f1c577bf4727c29}{void}} Im\+Rect\+::\+Expand (\begin{DoxyParamCaption}\item[{const float}]{amount }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structImRect_ac0b0b88fe65725b4694cd7d91d42d382}\label{structImRect_ac0b0b88fe65725b4694cd7d91d42d382}} 
+\index{ImRect@{ImRect}!Expand@{Expand}}
+\index{Expand@{Expand}!ImRect@{ImRect}}
+\doxysubsubsection{\texorpdfstring{Expand()}{Expand()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{glad_8h_a950fc91edb4504f62f1c577bf4727c29}{void}} Im\+Rect\+::\+Expand (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structImVec2}{Im\+Vec2}} \&}]{amount }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structImRect_a8fdf75a0c64ff29f65113cd9f8be77ab}\label{structImRect_a8fdf75a0c64ff29f65113cd9f8be77ab}} 
+\index{ImRect@{ImRect}!Floor@{Floor}}
+\index{Floor@{Floor}!ImRect@{ImRect}}
+\doxysubsubsection{\texorpdfstring{Floor()}{Floor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{glad_8h_a950fc91edb4504f62f1c577bf4727c29}{void}} Im\+Rect\+::\+Floor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structImRect_a59d9751bc7be6745dddf5b83b9155669}\label{structImRect_a59d9751bc7be6745dddf5b83b9155669}} 
+\index{ImRect@{ImRect}!GetBL@{GetBL}}
+\index{GetBL@{GetBL}!ImRect@{ImRect}}
+\doxysubsubsection{\texorpdfstring{GetBL()}{GetBL()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structImVec2}{Im\+Vec2}} Im\+Rect\+::\+Get\+BL (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structImRect_ad2f2687254beed5a9b19bde0d6fa14f5}\label{structImRect_ad2f2687254beed5a9b19bde0d6fa14f5}} 
+\index{ImRect@{ImRect}!GetBR@{GetBR}}
+\index{GetBR@{GetBR}!ImRect@{ImRect}}
+\doxysubsubsection{\texorpdfstring{GetBR()}{GetBR()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structImVec2}{Im\+Vec2}} Im\+Rect\+::\+Get\+BR (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structImRect_aae13f8003184fd84f29d27c3c074cf43}\label{structImRect_aae13f8003184fd84f29d27c3c074cf43}} 
+\index{ImRect@{ImRect}!GetCenter@{GetCenter}}
+\index{GetCenter@{GetCenter}!ImRect@{ImRect}}
+\doxysubsubsection{\texorpdfstring{GetCenter()}{GetCenter()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structImVec2}{Im\+Vec2}} Im\+Rect\+::\+Get\+Center (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structImRect_a748d8ae9cb26508951ec6e2f2df0625b}\label{structImRect_a748d8ae9cb26508951ec6e2f2df0625b}} 
+\index{ImRect@{ImRect}!GetHeight@{GetHeight}}
+\index{GetHeight@{GetHeight}!ImRect@{ImRect}}
+\doxysubsubsection{\texorpdfstring{GetHeight()}{GetHeight()}}
+{\footnotesize\ttfamily float Im\+Rect\+::\+Get\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structImRect_ae459d9c50003058cfb34519a571aaf33}\label{structImRect_ae459d9c50003058cfb34519a571aaf33}} 
+\index{ImRect@{ImRect}!GetSize@{GetSize}}
+\index{GetSize@{GetSize}!ImRect@{ImRect}}
+\doxysubsubsection{\texorpdfstring{GetSize()}{GetSize()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structImVec2}{Im\+Vec2}} Im\+Rect\+::\+Get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structImRect_a1d4d972329722b51dca4499cb5931b4b}\label{structImRect_a1d4d972329722b51dca4499cb5931b4b}} 
+\index{ImRect@{ImRect}!GetTL@{GetTL}}
+\index{GetTL@{GetTL}!ImRect@{ImRect}}
+\doxysubsubsection{\texorpdfstring{GetTL()}{GetTL()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structImVec2}{Im\+Vec2}} Im\+Rect\+::\+Get\+TL (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structImRect_acae90248a96be4acf1524071fca1c3f3}\label{structImRect_acae90248a96be4acf1524071fca1c3f3}} 
+\index{ImRect@{ImRect}!GetTR@{GetTR}}
+\index{GetTR@{GetTR}!ImRect@{ImRect}}
+\doxysubsubsection{\texorpdfstring{GetTR()}{GetTR()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structImVec2}{Im\+Vec2}} Im\+Rect\+::\+Get\+TR (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structImRect_afa75cb8491f20901c96166d17dcddac4}\label{structImRect_afa75cb8491f20901c96166d17dcddac4}} 
+\index{ImRect@{ImRect}!GetWidth@{GetWidth}}
+\index{GetWidth@{GetWidth}!ImRect@{ImRect}}
+\doxysubsubsection{\texorpdfstring{GetWidth()}{GetWidth()}}
+{\footnotesize\ttfamily float Im\+Rect\+::\+Get\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structImRect_a140efca57832182e2483e5fe4ba50422}\label{structImRect_a140efca57832182e2483e5fe4ba50422}} 
+\index{ImRect@{ImRect}!IsInverted@{IsInverted}}
+\index{IsInverted@{IsInverted}!ImRect@{ImRect}}
+\doxysubsubsection{\texorpdfstring{IsInverted()}{IsInverted()}}
+{\footnotesize\ttfamily bool Im\+Rect\+::\+Is\+Inverted (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structImRect_a0af3bade3781e5e7c6afdf71ccfb0d43}\label{structImRect_a0af3bade3781e5e7c6afdf71ccfb0d43}} 
+\index{ImRect@{ImRect}!Overlaps@{Overlaps}}
+\index{Overlaps@{Overlaps}!ImRect@{ImRect}}
+\doxysubsubsection{\texorpdfstring{Overlaps()}{Overlaps()}}
+{\footnotesize\ttfamily bool Im\+Rect\+::\+Overlaps (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structImRect}{Im\+Rect}} \&}]{r }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structImRect_a2afeb24632fae3848977ff2772036200}\label{structImRect_a2afeb24632fae3848977ff2772036200}} 
+\index{ImRect@{ImRect}!ToVec4@{ToVec4}}
+\index{ToVec4@{ToVec4}!ImRect@{ImRect}}
+\doxysubsubsection{\texorpdfstring{ToVec4()}{ToVec4()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structImVec4}{Im\+Vec4}} Im\+Rect\+::\+To\+Vec4 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structImRect_a7f799afba3d1c61212448709d9e1a79b}\label{structImRect_a7f799afba3d1c61212448709d9e1a79b}} 
+\index{ImRect@{ImRect}!Translate@{Translate}}
+\index{Translate@{Translate}!ImRect@{ImRect}}
+\doxysubsubsection{\texorpdfstring{Translate()}{Translate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{glad_8h_a950fc91edb4504f62f1c577bf4727c29}{void}} Im\+Rect\+::\+Translate (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structImVec2}{Im\+Vec2}} \&}]{d }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structImRect_a20c399583fc60a1f73715b3c6468a89d}\label{structImRect_a20c399583fc60a1f73715b3c6468a89d}} 
+\index{ImRect@{ImRect}!TranslateX@{TranslateX}}
+\index{TranslateX@{TranslateX}!ImRect@{ImRect}}
+\doxysubsubsection{\texorpdfstring{TranslateX()}{TranslateX()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{glad_8h_a950fc91edb4504f62f1c577bf4727c29}{void}} Im\+Rect\+::\+TranslateX (\begin{DoxyParamCaption}\item[{float}]{dx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structImRect_abb777eaa8fd13ad6b7d6dab56d29fe52}\label{structImRect_abb777eaa8fd13ad6b7d6dab56d29fe52}} 
+\index{ImRect@{ImRect}!TranslateY@{TranslateY}}
+\index{TranslateY@{TranslateY}!ImRect@{ImRect}}
+\doxysubsubsection{\texorpdfstring{TranslateY()}{TranslateY()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{glad_8h_a950fc91edb4504f62f1c577bf4727c29}{void}} Im\+Rect\+::\+TranslateY (\begin{DoxyParamCaption}\item[{float}]{dy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structImRect_aad58c13340d320b350a72a037e3f7628}\label{structImRect_aad58c13340d320b350a72a037e3f7628}} 
+\index{ImRect@{ImRect}!Max@{Max}}
+\index{Max@{Max}!ImRect@{ImRect}}
+\doxysubsubsection{\texorpdfstring{Max}{Max}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structImVec2}{Im\+Vec2}} Im\+Rect\+::\+Max}
+
+\mbox{\Hypertarget{structImRect_af8f3fbf7ec983e03548b88e14ba68aa8}\label{structImRect_af8f3fbf7ec983e03548b88e14ba68aa8}} 
+\index{ImRect@{ImRect}!Min@{Min}}
+\index{Min@{Min}!ImRect@{ImRect}}
+\doxysubsubsection{\texorpdfstring{Min}{Min}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structImVec2}{Im\+Vec2}} Im\+Rect\+::\+Min}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/imgui/\mbox{\hyperlink{imgui__internal_8h}{imgui\+\_\+internal.\+h}}\end{DoxyCompactItemize}

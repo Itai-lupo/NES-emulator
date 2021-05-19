@@ -1,0 +1,99 @@
+\hypertarget{classLaughTaleEngine_1_1soundApi}{}\doxysection{Laugh\+Tale\+Engine\+::sound\+Api Class Reference}
+\label{classLaughTaleEngine_1_1soundApi}\index{LaughTaleEngine::soundApi@{LaughTaleEngine::soundApi}}
+
+
+{\ttfamily \#include $<$sound\+Api.\+h$>$}
+
+Inheritance diagram for Laugh\+Tale\+Engine\+::sound\+Api\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{d9/d21/classLaughTaleEngine_1_1soundApi}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual char $\ast$ \mbox{\hyperlink{classLaughTaleEngine_1_1soundApi_a18aef0877347411c73b06e0825a51e12}{allocate\+\_\+buffer}} ()=0
+\item 
+virtual unsigned int \mbox{\hyperlink{classLaughTaleEngine_1_1soundApi_ac520b2aaf649a818a798e732d640edc1}{get\+\_\+frames\+\_\+per\+\_\+period}} ()=0
+\item 
+virtual unsigned int \mbox{\hyperlink{classLaughTaleEngine_1_1soundApi_af23a2e55d9391256319bacba70693cfe}{get\+\_\+bytes\+\_\+per\+\_\+frame}} ()=0
+\item 
+virtual long \mbox{\hyperlink{classLaughTaleEngine_1_1soundApi_a3c2bd006d32fbfe7bca51ae59054aa49}{capture\+\_\+into\+\_\+buffer}} (char $\ast$buffer, uint64\+\_\+t frames\+\_\+to\+\_\+capture)=0
+\item 
+virtual unsigned int \mbox{\hyperlink{classLaughTaleEngine_1_1soundApi_a878d28805c9ed739819111b9a72aa6a5}{play\+\_\+from\+\_\+buffer}} (char $\ast$buffer, uint64\+\_\+t frames\+\_\+to\+\_\+play)=0
+\item 
+virtual unsigned int \mbox{\hyperlink{classLaughTaleEngine_1_1soundApi_af9d2cb86459c11da84500253f71be530}{get\+Sample\+\_\+rate}} ()=0
+\item 
+virtual unsigned int \mbox{\hyperlink{classLaughTaleEngine_1_1soundApi_acef6be2d9de2be35bc33b5ae1f8e4a0e}{get\+Channels\+Count}} ()=0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classLaughTaleEngine_1_1soundApi_a18aef0877347411c73b06e0825a51e12}\label{classLaughTaleEngine_1_1soundApi_a18aef0877347411c73b06e0825a51e12}} 
+\index{LaughTaleEngine::soundApi@{LaughTaleEngine::soundApi}!allocate\_buffer@{allocate\_buffer}}
+\index{allocate\_buffer@{allocate\_buffer}!LaughTaleEngine::soundApi@{LaughTaleEngine::soundApi}}
+\doxysubsubsection{\texorpdfstring{allocate\_buffer()}{allocate\_buffer()}}
+{\footnotesize\ttfamily virtual char$\ast$ Laugh\+Tale\+Engine\+::sound\+Api\+::allocate\+\_\+buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classLaughTaleEngine_1_1linuxSoundApi_a16b920e33b4c2636917ce213f7316793}{Laugh\+Tale\+Engine\+::linux\+Sound\+Api}}.
+
+\mbox{\Hypertarget{classLaughTaleEngine_1_1soundApi_a3c2bd006d32fbfe7bca51ae59054aa49}\label{classLaughTaleEngine_1_1soundApi_a3c2bd006d32fbfe7bca51ae59054aa49}} 
+\index{LaughTaleEngine::soundApi@{LaughTaleEngine::soundApi}!capture\_into\_buffer@{capture\_into\_buffer}}
+\index{capture\_into\_buffer@{capture\_into\_buffer}!LaughTaleEngine::soundApi@{LaughTaleEngine::soundApi}}
+\doxysubsubsection{\texorpdfstring{capture\_into\_buffer()}{capture\_into\_buffer()}}
+{\footnotesize\ttfamily virtual long Laugh\+Tale\+Engine\+::sound\+Api\+::capture\+\_\+into\+\_\+buffer (\begin{DoxyParamCaption}\item[{char $\ast$}]{buffer,  }\item[{uint64\+\_\+t}]{frames\+\_\+to\+\_\+capture }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{classLaughTaleEngine_1_1soundApi_af23a2e55d9391256319bacba70693cfe}\label{classLaughTaleEngine_1_1soundApi_af23a2e55d9391256319bacba70693cfe}} 
+\index{LaughTaleEngine::soundApi@{LaughTaleEngine::soundApi}!get\_bytes\_per\_frame@{get\_bytes\_per\_frame}}
+\index{get\_bytes\_per\_frame@{get\_bytes\_per\_frame}!LaughTaleEngine::soundApi@{LaughTaleEngine::soundApi}}
+\doxysubsubsection{\texorpdfstring{get\_bytes\_per\_frame()}{get\_bytes\_per\_frame()}}
+{\footnotesize\ttfamily virtual unsigned int Laugh\+Tale\+Engine\+::sound\+Api\+::get\+\_\+bytes\+\_\+per\+\_\+frame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classLaughTaleEngine_1_1linuxSoundApi_a3a0ac628c35cc2cf8e46f77dc6a5adc1}{Laugh\+Tale\+Engine\+::linux\+Sound\+Api}}.
+
+\mbox{\Hypertarget{classLaughTaleEngine_1_1soundApi_ac520b2aaf649a818a798e732d640edc1}\label{classLaughTaleEngine_1_1soundApi_ac520b2aaf649a818a798e732d640edc1}} 
+\index{LaughTaleEngine::soundApi@{LaughTaleEngine::soundApi}!get\_frames\_per\_period@{get\_frames\_per\_period}}
+\index{get\_frames\_per\_period@{get\_frames\_per\_period}!LaughTaleEngine::soundApi@{LaughTaleEngine::soundApi}}
+\doxysubsubsection{\texorpdfstring{get\_frames\_per\_period()}{get\_frames\_per\_period()}}
+{\footnotesize\ttfamily virtual unsigned int Laugh\+Tale\+Engine\+::sound\+Api\+::get\+\_\+frames\+\_\+per\+\_\+period (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classLaughTaleEngine_1_1linuxSoundApi_af68a391073910e865581514928ee8f14}{Laugh\+Tale\+Engine\+::linux\+Sound\+Api}}.
+
+\mbox{\Hypertarget{classLaughTaleEngine_1_1soundApi_acef6be2d9de2be35bc33b5ae1f8e4a0e}\label{classLaughTaleEngine_1_1soundApi_acef6be2d9de2be35bc33b5ae1f8e4a0e}} 
+\index{LaughTaleEngine::soundApi@{LaughTaleEngine::soundApi}!getChannelsCount@{getChannelsCount}}
+\index{getChannelsCount@{getChannelsCount}!LaughTaleEngine::soundApi@{LaughTaleEngine::soundApi}}
+\doxysubsubsection{\texorpdfstring{getChannelsCount()}{getChannelsCount()}}
+{\footnotesize\ttfamily virtual unsigned int Laugh\+Tale\+Engine\+::sound\+Api\+::get\+Channels\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classLaughTaleEngine_1_1linuxSoundApi_ac5823c9a7623b3a763723258af808694}{Laugh\+Tale\+Engine\+::linux\+Sound\+Api}}.
+
+\mbox{\Hypertarget{classLaughTaleEngine_1_1soundApi_af9d2cb86459c11da84500253f71be530}\label{classLaughTaleEngine_1_1soundApi_af9d2cb86459c11da84500253f71be530}} 
+\index{LaughTaleEngine::soundApi@{LaughTaleEngine::soundApi}!getSample\_rate@{getSample\_rate}}
+\index{getSample\_rate@{getSample\_rate}!LaughTaleEngine::soundApi@{LaughTaleEngine::soundApi}}
+\doxysubsubsection{\texorpdfstring{getSample\_rate()}{getSample\_rate()}}
+{\footnotesize\ttfamily virtual unsigned int Laugh\+Tale\+Engine\+::sound\+Api\+::get\+Sample\+\_\+rate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classLaughTaleEngine_1_1linuxSoundApi_a383ce9ea0985ec7fcb8e3b057b5f001b}{Laugh\+Tale\+Engine\+::linux\+Sound\+Api}}.
+
+\mbox{\Hypertarget{classLaughTaleEngine_1_1soundApi_a878d28805c9ed739819111b9a72aa6a5}\label{classLaughTaleEngine_1_1soundApi_a878d28805c9ed739819111b9a72aa6a5}} 
+\index{LaughTaleEngine::soundApi@{LaughTaleEngine::soundApi}!play\_from\_buffer@{play\_from\_buffer}}
+\index{play\_from\_buffer@{play\_from\_buffer}!LaughTaleEngine::soundApi@{LaughTaleEngine::soundApi}}
+\doxysubsubsection{\texorpdfstring{play\_from\_buffer()}{play\_from\_buffer()}}
+{\footnotesize\ttfamily virtual unsigned int Laugh\+Tale\+Engine\+::sound\+Api\+::play\+\_\+from\+\_\+buffer (\begin{DoxyParamCaption}\item[{char $\ast$}]{buffer,  }\item[{uint64\+\_\+t}]{frames\+\_\+to\+\_\+play }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+headers/sound\+Engine/platform/\mbox{\hyperlink{soundApi_8h}{sound\+Api.\+h}}\end{DoxyCompactItemize}

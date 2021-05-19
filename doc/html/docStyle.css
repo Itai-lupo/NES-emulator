@@ -1,0 +1,23 @@
+:root
+{
+    background-color: #111;
+    color: whitesmoke;
+
+}
+
+body, div, span.lineno, .memdoc, tr[class^="memItem"], .mdescLeft, .mdescRight, .memItemLeft, .memItemRight, .memTemplItemLeft, .memTemplItemRight, .memTemplParam  {
+    background-color: #111;
+    color: whitesmoke;
+    margin: 0;
+}
+
+td, #nav-tree {
+    background-color: #111;
+    color: whitesmoke;
+    margin: 0;
+
+}
+
+.memtitle{
+    color: black;
+}

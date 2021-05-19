@@ -1,0 +1,170 @@
+\hypertarget{structImSpan}{}\doxysection{Im\+Span$<$ T $>$ Struct Template Reference}
+\label{structImSpan}\index{ImSpan$<$ T $>$@{ImSpan$<$ T $>$}}
+
+
+{\ttfamily \#include $<$imgui\+\_\+internal.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structImSpan_a7321bafbe082a57c06851713da41c42d}{Im\+Span}} ()
+\item 
+\mbox{\hyperlink{structImSpan_a504d7469748d2ebf782f3993d8f35ad2}{Im\+Span}} (T $\ast$\mbox{\hyperlink{glad_8h_a77bef421a06300ba60fc8c18453bcaef}{data}}, int \mbox{\hyperlink{glad_8h_adead0e00f1033fff2918e18853add2b1}{size}})
+\item 
+\mbox{\hyperlink{structImSpan_abc89fdbfad2b87dd044a197983c4eddb}{Im\+Span}} (T $\ast$\mbox{\hyperlink{glad_8h_a77bef421a06300ba60fc8c18453bcaef}{data}}, T $\ast$data\+\_\+end)
+\item 
+\mbox{\hyperlink{glad_8h_a950fc91edb4504f62f1c577bf4727c29}{void}} \mbox{\hyperlink{structImSpan_a0c07dbc18bebd7d02ca1fb866861506a}{set}} (T $\ast$\mbox{\hyperlink{glad_8h_a77bef421a06300ba60fc8c18453bcaef}{data}}, int \mbox{\hyperlink{glad_8h_adead0e00f1033fff2918e18853add2b1}{size}})
+\item 
+\mbox{\hyperlink{glad_8h_a950fc91edb4504f62f1c577bf4727c29}{void}} \mbox{\hyperlink{structImSpan_aa663983a692baf82e44687cc9a373964}{set}} (T $\ast$\mbox{\hyperlink{glad_8h_a77bef421a06300ba60fc8c18453bcaef}{data}}, T $\ast$data\+\_\+end)
+\item 
+int \mbox{\hyperlink{structImSpan_a88270b885861b27640003f6a8a3effa0}{size}} () const
+\item 
+int \mbox{\hyperlink{structImSpan_a23a632e44927fde363df6191531591f2}{size\+\_\+in\+\_\+bytes}} () const
+\item 
+T \& \mbox{\hyperlink{structImSpan_aaed286a9cac1e66da7339a1f1f3365ee}{operator\mbox{[}$\,$\mbox{]}}} (int i)
+\item 
+const T \& \mbox{\hyperlink{structImSpan_a84f94165e0b21ed2b9310bead0668a07}{operator\mbox{[}$\,$\mbox{]}}} (int i) const
+\item 
+T $\ast$ \mbox{\hyperlink{structImSpan_a4f3db65183b094582006ba5439224358}{begin}} ()
+\item 
+const T $\ast$ \mbox{\hyperlink{structImSpan_abb2e6461d94d0d73b7a6c458b2c1957e}{begin}} () const
+\item 
+T $\ast$ \mbox{\hyperlink{structImSpan_a1cb3c66ef0d5b8b5cde4651df83ff0fb}{end}} ()
+\item 
+const T $\ast$ \mbox{\hyperlink{structImSpan_acae18ccf3579235d6e0bb4dcd2c61dba}{end}} () const
+\item 
+int \mbox{\hyperlink{structImSpan_a7e80a5146acbfac4bb952f80daf3c305}{index\+\_\+from\+\_\+ptr}} (const T $\ast$it) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+T $\ast$ \mbox{\hyperlink{structImSpan_a9cb5f8d45dff07a275c97b4d07915878}{Data}}
+\item 
+T $\ast$ \mbox{\hyperlink{structImSpan_a15a821b2ed71c9e447611cb3fe21d16c}{Data\+End}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structImSpan_a7321bafbe082a57c06851713da41c42d}\label{structImSpan_a7321bafbe082a57c06851713da41c42d}} 
+\index{ImSpan$<$ T $>$@{ImSpan$<$ T $>$}!ImSpan@{ImSpan}}
+\index{ImSpan@{ImSpan}!ImSpan$<$ T $>$@{ImSpan$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{ImSpan()}{ImSpan()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structImSpan}{Im\+Span}}$<$ T $>$\+::\mbox{\hyperlink{structImSpan}{Im\+Span}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structImSpan_a504d7469748d2ebf782f3993d8f35ad2}\label{structImSpan_a504d7469748d2ebf782f3993d8f35ad2}} 
+\index{ImSpan$<$ T $>$@{ImSpan$<$ T $>$}!ImSpan@{ImSpan}}
+\index{ImSpan@{ImSpan}!ImSpan$<$ T $>$@{ImSpan$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{ImSpan()}{ImSpan()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structImSpan}{Im\+Span}}$<$ T $>$\+::\mbox{\hyperlink{structImSpan}{Im\+Span}} (\begin{DoxyParamCaption}\item[{T $\ast$}]{data,  }\item[{int}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structImSpan_abc89fdbfad2b87dd044a197983c4eddb}\label{structImSpan_abc89fdbfad2b87dd044a197983c4eddb}} 
+\index{ImSpan$<$ T $>$@{ImSpan$<$ T $>$}!ImSpan@{ImSpan}}
+\index{ImSpan@{ImSpan}!ImSpan$<$ T $>$@{ImSpan$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{ImSpan()}{ImSpan()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structImSpan}{Im\+Span}}$<$ T $>$\+::\mbox{\hyperlink{structImSpan}{Im\+Span}} (\begin{DoxyParamCaption}\item[{T $\ast$}]{data,  }\item[{T $\ast$}]{data\+\_\+end }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structImSpan_a4f3db65183b094582006ba5439224358}\label{structImSpan_a4f3db65183b094582006ba5439224358}} 
+\index{ImSpan$<$ T $>$@{ImSpan$<$ T $>$}!begin@{begin}}
+\index{begin@{begin}!ImSpan$<$ T $>$@{ImSpan$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T$\ast$ \mbox{\hyperlink{structImSpan}{Im\+Span}}$<$ T $>$\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structImSpan_abb2e6461d94d0d73b7a6c458b2c1957e}\label{structImSpan_abb2e6461d94d0d73b7a6c458b2c1957e}} 
+\index{ImSpan$<$ T $>$@{ImSpan$<$ T $>$}!begin@{begin}}
+\index{begin@{begin}!ImSpan$<$ T $>$@{ImSpan$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+const T$\ast$ \mbox{\hyperlink{structImSpan}{Im\+Span}}$<$ T $>$\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structImSpan_a1cb3c66ef0d5b8b5cde4651df83ff0fb}\label{structImSpan_a1cb3c66ef0d5b8b5cde4651df83ff0fb}} 
+\index{ImSpan$<$ T $>$@{ImSpan$<$ T $>$}!end@{end}}
+\index{end@{end}!ImSpan$<$ T $>$@{ImSpan$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T$\ast$ \mbox{\hyperlink{structImSpan}{Im\+Span}}$<$ T $>$\+::\mbox{\hyperlink{glad_8h_a432111147038972f06e049e18a837002}{end}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structImSpan_acae18ccf3579235d6e0bb4dcd2c61dba}\label{structImSpan_acae18ccf3579235d6e0bb4dcd2c61dba}} 
+\index{ImSpan$<$ T $>$@{ImSpan$<$ T $>$}!end@{end}}
+\index{end@{end}!ImSpan$<$ T $>$@{ImSpan$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+const T$\ast$ \mbox{\hyperlink{structImSpan}{Im\+Span}}$<$ T $>$\+::\mbox{\hyperlink{glad_8h_a432111147038972f06e049e18a837002}{end}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structImSpan_a7e80a5146acbfac4bb952f80daf3c305}\label{structImSpan_a7e80a5146acbfac4bb952f80daf3c305}} 
+\index{ImSpan$<$ T $>$@{ImSpan$<$ T $>$}!index\_from\_ptr@{index\_from\_ptr}}
+\index{index\_from\_ptr@{index\_from\_ptr}!ImSpan$<$ T $>$@{ImSpan$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{index\_from\_ptr()}{index\_from\_ptr()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+int \mbox{\hyperlink{structImSpan}{Im\+Span}}$<$ T $>$\+::index\+\_\+from\+\_\+ptr (\begin{DoxyParamCaption}\item[{const T $\ast$}]{it }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structImSpan_aaed286a9cac1e66da7339a1f1f3365ee}\label{structImSpan_aaed286a9cac1e66da7339a1f1f3365ee}} 
+\index{ImSpan$<$ T $>$@{ImSpan$<$ T $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!ImSpan$<$ T $>$@{ImSpan$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T\& \mbox{\hyperlink{structImSpan}{Im\+Span}}$<$ T $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structImSpan_a84f94165e0b21ed2b9310bead0668a07}\label{structImSpan_a84f94165e0b21ed2b9310bead0668a07}} 
+\index{ImSpan$<$ T $>$@{ImSpan$<$ T $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!ImSpan$<$ T $>$@{ImSpan$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+const T\& \mbox{\hyperlink{structImSpan}{Im\+Span}}$<$ T $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structImSpan_a0c07dbc18bebd7d02ca1fb866861506a}\label{structImSpan_a0c07dbc18bebd7d02ca1fb866861506a}} 
+\index{ImSpan$<$ T $>$@{ImSpan$<$ T $>$}!set@{set}}
+\index{set@{set}!ImSpan$<$ T $>$@{ImSpan$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{glad_8h_a950fc91edb4504f62f1c577bf4727c29}{void}} \mbox{\hyperlink{structImSpan}{Im\+Span}}$<$ T $>$\+::set (\begin{DoxyParamCaption}\item[{T $\ast$}]{data,  }\item[{int}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structImSpan_aa663983a692baf82e44687cc9a373964}\label{structImSpan_aa663983a692baf82e44687cc9a373964}} 
+\index{ImSpan$<$ T $>$@{ImSpan$<$ T $>$}!set@{set}}
+\index{set@{set}!ImSpan$<$ T $>$@{ImSpan$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{glad_8h_a950fc91edb4504f62f1c577bf4727c29}{void}} \mbox{\hyperlink{structImSpan}{Im\+Span}}$<$ T $>$\+::set (\begin{DoxyParamCaption}\item[{T $\ast$}]{data,  }\item[{T $\ast$}]{data\+\_\+end }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structImSpan_a88270b885861b27640003f6a8a3effa0}\label{structImSpan_a88270b885861b27640003f6a8a3effa0}} 
+\index{ImSpan$<$ T $>$@{ImSpan$<$ T $>$}!size@{size}}
+\index{size@{size}!ImSpan$<$ T $>$@{ImSpan$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+int \mbox{\hyperlink{structImSpan}{Im\+Span}}$<$ T $>$\+::\mbox{\hyperlink{glad_8h_adead0e00f1033fff2918e18853add2b1}{size}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structImSpan_a23a632e44927fde363df6191531591f2}\label{structImSpan_a23a632e44927fde363df6191531591f2}} 
+\index{ImSpan$<$ T $>$@{ImSpan$<$ T $>$}!size\_in\_bytes@{size\_in\_bytes}}
+\index{size\_in\_bytes@{size\_in\_bytes}!ImSpan$<$ T $>$@{ImSpan$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{size\_in\_bytes()}{size\_in\_bytes()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+int \mbox{\hyperlink{structImSpan}{Im\+Span}}$<$ T $>$\+::size\+\_\+in\+\_\+bytes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structImSpan_a9cb5f8d45dff07a275c97b4d07915878}\label{structImSpan_a9cb5f8d45dff07a275c97b4d07915878}} 
+\index{ImSpan$<$ T $>$@{ImSpan$<$ T $>$}!Data@{Data}}
+\index{Data@{Data}!ImSpan$<$ T $>$@{ImSpan$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Data}{Data}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T$\ast$ \mbox{\hyperlink{structImSpan}{Im\+Span}}$<$ T $>$\+::Data}
+
+\mbox{\Hypertarget{structImSpan_a15a821b2ed71c9e447611cb3fe21d16c}\label{structImSpan_a15a821b2ed71c9e447611cb3fe21d16c}} 
+\index{ImSpan$<$ T $>$@{ImSpan$<$ T $>$}!DataEnd@{DataEnd}}
+\index{DataEnd@{DataEnd}!ImSpan$<$ T $>$@{ImSpan$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{DataEnd}{DataEnd}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T$\ast$ \mbox{\hyperlink{structImSpan}{Im\+Span}}$<$ T $>$\+::Data\+End}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/imgui/\mbox{\hyperlink{imgui__internal_8h}{imgui\+\_\+internal.\+h}}\end{DoxyCompactItemize}
