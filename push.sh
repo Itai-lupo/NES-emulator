@@ -1,6 +1,6 @@
 #!/bin/sh
 
-doxygen doc.conf
+doxygen config/doc.conf
 git add .
 echo "insirt commit desc"
 read buffer

@@ -101,7 +101,7 @@ namespace LaughTaleEngine
         snd_pcm_sframes_t frames_written = snd_pcm_writei(handle, buffer, frames_to_play);
 
         if (frames_written == -EPIPE) {
-            snd_pcm_recover(handle, -EPIPE, 0);
+            snd_pcm_recover(handle, -EPIPE, 1);
             snd_pcm_prepare(handle);
             return -EPIPE;
         }

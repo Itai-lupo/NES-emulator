@@ -6,12 +6,52 @@
 
 namespace LaughTaleEngine
 {
+    struct sondSampelData
+    {
+        double time;
+        double freq;
+        double innerFanqFreq = 0.0;
+        double innerFanqAmp = 0.0;
+        int16_t micAmp;
+        sondSampelData(){} 
+
+        sondSampelData(double time, double freq): 
+            time(time), freq(freq) {}
+            
+        sondSampelData(double time, double freq, double innerFanqAmp, double innerFanqFreq): 
+            time(time), freq(freq), innerFanqFreq(innerFanqFreq), innerFanqAmp(innerFanqAmp) {}
+
+
+        sondSampelData(double time, double freq, int16_t micAmp): 
+            time(time), freq(freq), micAmp(micAmp) {} 
+
+        sondSampelData(int16_t micAmp): 
+            micAmp(micAmp) {} 
+
+    };
+
+    class osc
+    {
+        public:
+            static double w(int freq);
+
+            static double mute(sondSampelData data);
+            static double sin(sondSampelData data);
+            static double sowTooth(sondSampelData data);
+            static double analogSowTooth(sondSampelData data);
+            static double squre(sondSampelData data);
+            static double analogSqure(sondSampelData data);
+            static double triangels(sondSampelData data);
+            static double noise(sondSampelData data);
+            static double speaker(sondSampelData data);
+    };
+
     class envelope
     {
         private:
             apoEnvelopeId id;
             sondWaves mod;
-            std::function<double(double time, int freq, int16_t micAmp)> waveSampelCalculator;
+            std::function<double(sondSampelData data)> waveSampelCalculator;
 
         protected:
             double attackTime;
@@ -26,17 +66,7 @@ namespace LaughTaleEngine
             bool trigerdOnce = false;
             double freq;
 
-            static double w(int freq);
-
-            static double mute(double time = 0.0, double freq = 0.0, int16_t micAmp = 0.0);
-            static double sin(double time, double freq, int16_t micAmp = 0.0);
-            static double sowTooth(double time, double freq, int16_t micAmp = 0.0);
-            static double analogSowTooth(double time, double freq, int16_t micAmp = 0.0);
-            static double squre(double time, double freq, int16_t micAmp = 0.0);
-            static double analogSqure(double time, double freq, int16_t micAmp = 0.0);
-            static double triangels(double time, double freq, int16_t micAmp = 0.0);
-            static double noise(double time = 0.0, double freq = 0.0, int16_t micAmp = 0.0);
-            static double speaker(double time, double freq, int16_t micAmp);
+            
 
             double MultiplayerIfNoteIsOn(double deltaTime);
             double MultiplayerIfNoteIsOff(double lifeTime, double deltaTime);

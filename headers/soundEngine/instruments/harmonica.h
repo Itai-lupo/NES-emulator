@@ -33,13 +33,13 @@ namespace LaughTaleEngine
                 for (double n = 1.0; n < 10.0; n++)
                 {
                     instrumentAmp += 
-                        1.00 * glm::sin((2 * n-1) * w(256 * pow(d12thRootOf2, freq * 1)) * time + 0.001 * 256 * pow(d12thRootOf2, freq * 1) * glm::sin(w(4.0 ) * time) ) / ( 2 * n - 1) +
-                        0.60 * glm::sin((2 * n-1) * w(256 * pow(d12thRootOf2, freq * 2)) * time + 0.001 * 256 * pow(d12thRootOf2, freq * 2) * glm::sin(w(8.0 ) * time) ) / ( 2 * n - 1) +
-                        0.20 * glm::sin((2 * n-1) * w(256 * pow(d12thRootOf2, freq * 3)) * time + 0.001 * 256 * pow(d12thRootOf2, freq * 3) * glm::sin(w(16.0) * time) ) / ( 2 * n - 1);
+                        1.00 * glm::sin((2 * n-1) * osc::w(256 * pow(d12thRootOf2, freq * 1)) * time + 0.001 * 256 * pow(d12thRootOf2, freq * 1) * glm::sin(osc::w(4.0 ) * time) ) / ( 2 * n - 1) +
+                        0.60 * glm::sin((2 * n-1) * osc::w(256 * pow(d12thRootOf2, freq * 2)) * time + 0.001 * 256 * pow(d12thRootOf2, freq * 2) * glm::sin(osc::w(8.0 ) * time) ) / ( 2 * n - 1) +
+                        0.20 * glm::sin((2 * n-1) * osc::w(256 * pow(d12thRootOf2, freq * 3)) * time + 0.001 * 256 * pow(d12thRootOf2, freq * 3) * glm::sin(osc::w(16.0) * time) ) / ( 2 * n - 1);
 
                 }
                 
-                instrumentAmp +=  0.05 * envelope::noise();
+                instrumentAmp +=  0.05 * osc::noise({});
                 return envelopeAmp * instrumentAmp * masterVolume;
             }
             

@@ -6,64 +6,67 @@
 
 namespace LaughTaleEngine
 {
-    double envelope::w(int freq)
+    double osc::w(int freq)
     {
         return freq * 2.0 * glm::pi<double>();
     }
 
-    double envelope::mute( __attribute__((unused)) double time, __attribute__((unused)) double freq, __attribute__((unused)) int16_t micAmp) 
+    double osc::mute(__attribute__((unused)) sondSampelData data) 
     {
         return 0.0;
     }
 
-    double envelope::sin(double time, double freq, __attribute__((unused)) int16_t micAmp)
+    double osc::sin(sondSampelData data)
     {
-        return glm::sin( w(freq) * time);
+        if(data.innerFanqAmp != 0.0)
+            return glm::sin( w(data.freq) * data.time + data.innerFanqAmp * w(data.freq) * osc::sin({data.time, data.innerFanqFreq }));    
+        else
+            return glm::sin( w(data.freq) * data.time);
     }
 
-    double envelope::sowTooth(double time, double freq, __attribute__((unused)) int16_t micAmp)
+    double osc::sowTooth(sondSampelData data)
     {
-        return (2.0 / glm::pi<double>()) * (freq * glm::pi<double>() * fmod(time, 1.0 / freq) - (glm::pi<double>() / 2.0)); 
+        return (2.0 / glm::pi<double>()) * (data.freq * glm::pi<double>() * fmod(data.time, 1.0 / data.freq) - (glm::pi<double>() / 2.0)); 
     }
 
-    double envelope::analogSowTooth(double time, double freq, __attribute__((unused)) int16_t micAmp)
+    double osc::analogSowTooth(sondSampelData data)
     {
         double res = 0.0;
 
         for (double n = 1.0; n < 40.0; n++)
-            res += glm::sin( time * w(n  * freq))/n;
+            res += glm::sin( data.time * w(n  * data.freq) + data.innerFanqAmp * w(data.freq) * sin({data.time, data.innerFanqFreq }))/n;
 
         return res * (1.7 / glm::pi<double>());
     }
 
-    double envelope::squre(double time, double freq, __attribute__((unused)) int16_t micAmp)
+    double osc::squre(sondSampelData data)
     {
-        return glm::sin(w(freq) * time) > 0 ? 1: -1; 
+        return glm::sin(w(data.freq) * data.time + data.innerFanqAmp * w(data.freq) * sin({data.time, data.innerFanqFreq })) > 0 ? 1: -1; 
     }
 
-    double envelope::analogSqure(double time, double freq, __attribute__((unused)) int16_t micAmp)
+    double osc::analogSqure(sondSampelData data)
     {
         double res = 0.0;
 
         for (double n = 1.0; n < 40.0; n++)
-            res += glm::sin((2 * n-1) * w(freq) * time) / ( 2 * n - 1);
+            res += glm::sin((2 * n-1) * w(data.freq) * data.time + data.innerFanqAmp * w(data.freq) * sin({data.time, data.innerFanqFreq })) / ( 2 * n - 1);
 
         return res * (3.3 / glm::pi<double>());
     }
 
-    double envelope::triangels(double time, double freq, __attribute__((unused)) int16_t micAmp )
+    double osc::triangels(sondSampelData data )
     {
-        return asin(glm::sin(w(freq) * time)) * (2.0 / glm::pi<double>());
+        return asin(glm::sin(w(data.freq) * data.time) + data.innerFanqAmp * w(data.freq) * sin({data.time, data.innerFanqFreq })) * (2.0 / glm::pi<double>());
     }
 
-    double envelope::noise(__attribute__((unused)) double time , __attribute__((unused)) double freq , __attribute__((unused)) int16_t micAmp )
+    double osc::noise(__attribute__((unused)) sondSampelData data)
     {
         return 2.0 * (rand() / RAND_MAX) - 1.0;
     }
 
-    double envelope::speaker(double time, double freq, int16_t micAmp)
+    double osc::speaker(sondSampelData data)
     {
-        return micAmp / (pow(2, (2 * 8) - 1) - 1);
+        return data.micAmp / (pow(2, (2 * 8) - 1) - 1);
     }
 
     envelope *envelope::setSondWaveType(sondWaves mod)
@@ -71,31 +74,31 @@ namespace LaughTaleEngine
         switch (mod)
         {
             case sondWaves::mute:
-                waveSampelCalculator = mute;
+                waveSampelCalculator = osc::mute;
                 break;
             case sondWaves::sin:
-                waveSampelCalculator = sin;
+                waveSampelCalculator = osc::sin;
                 break;
             case sondWaves::sowTooth:
-                waveSampelCalculator = sowTooth;
+                waveSampelCalculator = osc::sowTooth;
                 break;
             case sondWaves::analogSowTooth:
-                waveSampelCalculator = analogSowTooth;
+                waveSampelCalculator = osc::analogSowTooth;
                 break;
             case sondWaves::squre:
-                waveSampelCalculator = squre;
+                waveSampelCalculator = osc::squre;
                 break;
             case sondWaves::analogSqure:
-                waveSampelCalculator = analogSqure;
+                waveSampelCalculator = osc::analogSqure;
                 break;
             case sondWaves::triangels:
-                waveSampelCalculator = triangels;
+                waveSampelCalculator = osc::triangels;
                 break;
             case sondWaves::noise:
-                waveSampelCalculator = noise;
+                waveSampelCalculator = osc::noise;
                 break;
             case sondWaves::speaker:
-                waveSampelCalculator = speaker;
+                waveSampelCalculator = osc::speaker;
                 break;
             default:
                 LAUGHTALE_ENGINR_LOG_FATAL("that sholdnt happen, recived value not in enum");
@@ -127,8 +130,10 @@ namespace LaughTaleEngine
         double amp = getEnvelopeAmpMultiplayer(time);
 
         amp = ( amp > 0.0001) * amp;
+                LAUGHTALE_ENGINR_LOG_INFO("A");
 
-        return amp * waveSampelCalculator(time, freq, micAmp) * masterVolume;
+        sondSampelData sampelData(time, freq, micAmp);
+        return amp * waveSampelCalculator(sampelData) * masterVolume;
     }
 
     double envelope::getEnvelopeAmpMultiplayer(double time)

@@ -47,6 +47,11 @@ namespace LaughTaleEngine
         free(speaker);
     }
 
+    double clap(double v)
+    {
+        return v * (v >= -1 && v <= 1) + (v > 1) - (v < -1);
+    }
+
     void soundEngine::threadLoop()
     {
         time = 0.0;
@@ -58,7 +63,7 @@ namespace LaughTaleEngine
 
             for(int16_t *i = (int16_t*)buffer; i < buffer +  speaker->get_frames_per_period(); i++)
             {
-                *i = soundSynthesizer::genrateSampel(time, *i) * (pow(2, (2 * 8) - 1) - 1);
+                *i = clap(soundSynthesizer::genrateSampel(time, *i)) * (pow(2, (2 * 8) - 1) - 1);
                 time += 1/(double)speaker->getSample_rate();
             }
 

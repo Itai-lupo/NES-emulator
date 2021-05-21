@@ -6,6 +6,7 @@
 #include <glm/glm.hpp>
 #include <glm/gtc/constants.hpp>
 #include "imgui.h"
+#include "drum.h"
 #include "guitar.h"
 
 using namespace LaughTaleEngine;
@@ -22,61 +23,12 @@ class soundEntity : public IEntity
         }
 
         apoEnvelopeId envIds[17][8];
-        guitar *g;
+        apoSequencerAndRythemManer::drum *g;
         sondWaves mod;
         int f;
         int key;
 };
 
-
-const double dOctaveBaseFrequency = 110.0; 
-const double d12thRootOf2 = pow(2.0, 1.0 / 12.0);
-
-void onKeyPressed(IEntity *eventEntity, IEventData *sendor)
-{
-    KeyData *e = static_cast<KeyData *>(sendor);
-    soundEntity *data = static_cast<soundEntity *>(eventEntity);
-    // for (int k = 0; k < 17; k++)
-    // {
-    //     if (("ZSXCFVGBNJMK,L.;/"[k]) == e->key)
-    //     {	
-    //         data->f = dOctaveBaseFrequency * pow(d12thRootOf2, k);
-    //         if(data->envIds[k][data->mod] == 1000)
-    //         {
-    //             envelope *newEnv = (new bell())->setFrequency(k);
-    //             data->envIds[k][data->mod] = soundSynthesizer::addEnvelope( newEnv );
-    //         }
-    //         LAUGHTALE_ENGINR_LOG_INFO(data->envIds[k][data->mod]);
-    //         soundSynthesizer::noteOn(data->envIds[k][data->mod]);
-    //     }
-    // }
-
-    // for (int k = 0; k < 10; k++)
-    // {
-    //     if (("012345678"[k]) == e->key)
-    //     {	
-    //         data->mod = (sondWaves)k;
-    //     }
-    // }
-
-    data->g->strummingDown();
-}
-
-void onKeyReleased(IEntity *eventEntity, IEventData *sendor)
-{
-    KeyData *e = static_cast<KeyData *>(sendor);
-    soundEntity *data = static_cast<soundEntity *>(eventEntity);
-    
-    // for (int k = 0; k < 17; k++)
-    // {
-    //     if (("ZSXCFVGBNJMK,L.;/"[k]) == e->key)
-    //     {	
-    //         soundSynthesizer::noteOff(data->envIds[k][data->mod]);
-    //     }
-    // }
-
-    
-}
 
 void onImGUI(IEntity *eventEntity, IEventData *sendor)
 {
@@ -110,18 +62,17 @@ TEST(SoundEngine, soundInterface)
 {
     app::init();
     soundEntity *e = new soundEntity();
-    e->g = new guitar();
     
     entityTaleId id = entityManger::addEntity(e);
     windowPieceId win1 =  windowManger::addWindow("win 1", true);
 
-    eventManger::addEvent(events::KeyPressed, onKeyPressed, id, win1);
-    eventManger::addEvent(events::KeyReleased, onKeyReleased, id, win1);
     eventManger::addEvent(events::AppRender, onAppRender, id, win1);
     eventManger::addEvent(events::ImGuiRender, onImGUI, id);
 
     eventManger::addEvent(events::WindowClose, closeApp);
-
+    e->g = new apoSequencerAndRythemManer::drum();
+    apoSequencerAndRythemManer::bellRing* bell = new apoSequencerAndRythemManer::bellRing();
+    apoSequencerAndRythemManer::guitar* g = new apoSequencerAndRythemManer::guitar();
     app::run();
     app::close();
     exit(0);

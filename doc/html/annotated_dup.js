@@ -1,6 +1,16 @@
 var annotated_dup =
 [
     [ "LaughTaleEngine", "db/d49/namespace_laugh_tale_engine.html", [
+      [ "apoSequencerAndRythemManer", "da/d64/namespace_laugh_tale_engine_1_1apo_sequencer_and_rythem_maner.html", [
+        [ "guitarString", "d0/d2f/class_laugh_tale_engine_1_1apo_sequencer_and_rythem_maner_1_1guitar_string.html", "d0/d2f/class_laugh_tale_engine_1_1apo_sequencer_and_rythem_maner_1_1guitar_string" ],
+        [ "bell", "d4/d1d/class_laugh_tale_engine_1_1apo_sequencer_and_rythem_maner_1_1bell.html", "d4/d1d/class_laugh_tale_engine_1_1apo_sequencer_and_rythem_maner_1_1bell" ],
+        [ "bellRing", "d9/d07/class_laugh_tale_engine_1_1apo_sequencer_and_rythem_maner_1_1bell_ring.html", "d9/d07/class_laugh_tale_engine_1_1apo_sequencer_and_rythem_maner_1_1bell_ring" ],
+        [ "drumKick", "da/db2/class_laugh_tale_engine_1_1apo_sequencer_and_rythem_maner_1_1drum_kick.html", "da/db2/class_laugh_tale_engine_1_1apo_sequencer_and_rythem_maner_1_1drum_kick" ],
+        [ "drum", "db/dd7/class_laugh_tale_engine_1_1apo_sequencer_and_rythem_maner_1_1drum.html", "db/dd7/class_laugh_tale_engine_1_1apo_sequencer_and_rythem_maner_1_1drum" ],
+        [ "guitar", "d8/dc5/class_laugh_tale_engine_1_1apo_sequencer_and_rythem_maner_1_1guitar.html", "d8/dc5/class_laugh_tale_engine_1_1apo_sequencer_and_rythem_maner_1_1guitar" ],
+        [ "note", "de/d98/struct_laugh_tale_engine_1_1apo_sequencer_and_rythem_maner_1_1note.html", "de/d98/struct_laugh_tale_engine_1_1apo_sequencer_and_rythem_maner_1_1note" ],
+        [ "sequencer", "d1/d13/class_laugh_tale_engine_1_1apo_sequencer_and_rythem_maner_1_1sequencer.html", "d1/d13/class_laugh_tale_engine_1_1apo_sequencer_and_rythem_maner_1_1sequencer" ]
+      ] ],
       [ "app", "d9/d89/class_laugh_tale_engine_1_1app.html", null ],
       [ "IEntity", "dd/d4a/struct_laugh_tale_engine_1_1_i_entity.html", "dd/d4a/struct_laugh_tale_engine_1_1_i_entity" ],
       [ "entityManger", "df/dc8/class_laugh_tale_engine_1_1entity_manger.html", null ],
@@ -37,10 +47,9 @@ var annotated_dup =
       [ "VertexBufferLayout", "d3/d28/class_laugh_tale_engine_1_1_vertex_buffer_layout.html", "d3/d28/class_laugh_tale_engine_1_1_vertex_buffer_layout" ],
       [ "VertexBuffer", "df/d41/class_laugh_tale_engine_1_1_vertex_buffer.html", "df/d41/class_laugh_tale_engine_1_1_vertex_buffer" ],
       [ "VertexBufferManger", "dd/ddf/class_laugh_tale_engine_1_1_vertex_buffer_manger.html", "dd/ddf/class_laugh_tale_engine_1_1_vertex_buffer_manger" ],
+      [ "sondSampelData", "db/d2b/struct_laugh_tale_engine_1_1sond_sampel_data.html", "db/d2b/struct_laugh_tale_engine_1_1sond_sampel_data" ],
+      [ "osc", "d5/de2/class_laugh_tale_engine_1_1osc.html", null ],
       [ "envelope", "d2/d34/class_laugh_tale_engine_1_1envelope.html", "d2/d34/class_laugh_tale_engine_1_1envelope" ],
-      [ "bell", "d0/d6a/class_laugh_tale_engine_1_1bell.html", "d0/d6a/class_laugh_tale_engine_1_1bell" ],
-      [ "guitarString", "de/d84/class_laugh_tale_engine_1_1guitar_string.html", "de/d84/class_laugh_tale_engine_1_1guitar_string" ],
-      [ "guitar", "d6/d62/class_laugh_tale_engine_1_1guitar.html", "d6/d62/class_laugh_tale_engine_1_1guitar" ],
       [ "harmonica", "d5/de5/class_laugh_tale_engine_1_1harmonica.html", "d5/de5/class_laugh_tale_engine_1_1harmonica" ],
       [ "linuxSoundApi", "d8/da6/class_laugh_tale_engine_1_1linux_sound_api.html", "d8/da6/class_laugh_tale_engine_1_1linux_sound_api" ],
       [ "soundApi", "df/d12/class_laugh_tale_engine_1_1sound_api.html", "df/d12/class_laugh_tale_engine_1_1sound_api" ],

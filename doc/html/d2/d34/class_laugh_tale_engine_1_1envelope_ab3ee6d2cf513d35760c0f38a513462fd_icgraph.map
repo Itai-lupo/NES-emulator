@@ -1,8 +1,9 @@
 <map id="LaughTaleEngine::envelope::MultiplayerIfNoteIsOff" name="LaughTaleEngine::envelope::MultiplayerIfNoteIsOff">
-<area shape="rect" id="node1" title=" " alt="" coords="488,104,669,145"/>
-<area shape="rect" id="node2" href="$d2/d34/class_laugh_tale_engine_1_1envelope.html#ad1d68f43a515c1e0bbeb89e22c2c45c2" title=" " alt="" coords="248,104,440,145"/>
-<area shape="rect" id="node3" href="$d2/d34/class_laugh_tale_engine_1_1envelope.html#af93cb799a40b02cd796305751cf9b853" title=" " alt="" coords="12,5,193,47"/>
-<area shape="rect" id="node4" href="$de/d84/class_laugh_tale_engine_1_1guitar_string.html#a95c93c842b02e6760a92839826d2fd44" title=" " alt="" coords="5,71,200,112"/>
-<area shape="rect" id="node5" href="$d0/d6a/class_laugh_tale_engine_1_1bell.html#aae01012045b953c6f8b093dfb62bcee7" title=" " alt="" coords="28,136,177,177"/>
-<area shape="rect" id="node6" href="$d5/de5/class_laugh_tale_engine_1_1harmonica.html#a307ad65f475168a80239b30a4aba9dd1" title=" " alt="" coords="8,201,197,243"/>
+<area shape="rect" id="node1" title=" " alt="" coords="545,159,727,200"/>
+<area shape="rect" id="node2" href="$d2/d34/class_laugh_tale_engine_1_1envelope.html#ad1d68f43a515c1e0bbeb89e22c2c45c2" title=" " alt="" coords="305,159,497,200"/>
+<area shape="rect" id="node3" href="$d2/d34/class_laugh_tale_engine_1_1envelope.html#af93cb799a40b02cd796305751cf9b853" title=" " alt="" coords="41,5,222,47"/>
+<area shape="rect" id="node4" href="$da/db2/class_laugh_tale_engine_1_1apo_sequencer_and_rythem_maner_1_1drum_kick.html#a62165548dd6e08262ec9bfcf2363e779" title=" " alt="" coords="25,71,237,127"/>
+<area shape="rect" id="node5" href="$d0/d2f/class_laugh_tale_engine_1_1apo_sequencer_and_rythem_maner_1_1guitar_string.html#a1a536499cd2423b94ac7ae5e8b638f8c" title=" " alt="" coords="25,151,237,207"/>
+<area shape="rect" id="node6" href="$d4/d1d/class_laugh_tale_engine_1_1apo_sequencer_and_rythem_maner_1_1bell.html#aba19882676412d5bca68e02b53272d58" title=" " alt="" coords="5,232,257,273"/>
+<area shape="rect" id="node7" href="$d5/de5/class_laugh_tale_engine_1_1harmonica.html#a307ad65f475168a80239b30a4aba9dd1" title=" " alt="" coords="37,297,226,339"/>
 </map>

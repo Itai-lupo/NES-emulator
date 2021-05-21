@@ -13,6 +13,7 @@ namespace LaughTaleEngine
         envelopes = new std::vector<envelope *>();
     }
 
+
     void soundSynthesizer::close()
     {
         envelopes->clear();
@@ -42,7 +43,6 @@ namespace LaughTaleEngine
         toAdd->setId(nextId);
         envelopes->push_back(toAdd);
         nextId++;
-        
 
         return toAdd->getId();
     }

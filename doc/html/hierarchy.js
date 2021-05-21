@@ -9,8 +9,9 @@ var hierarchy =
     ] ],
     [ "LaughTaleEngine::entityManger", "df/dc8/class_laugh_tale_engine_1_1entity_manger.html", null ],
     [ "LaughTaleEngine::envelope", "d2/d34/class_laugh_tale_engine_1_1envelope.html", [
-      [ "LaughTaleEngine::bell", "d0/d6a/class_laugh_tale_engine_1_1bell.html", null ],
-      [ "LaughTaleEngine::guitarString", "de/d84/class_laugh_tale_engine_1_1guitar_string.html", null ],
+      [ "LaughTaleEngine::apoSequencerAndRythemManer::bell", "d4/d1d/class_laugh_tale_engine_1_1apo_sequencer_and_rythem_maner_1_1bell.html", null ],
+      [ "LaughTaleEngine::apoSequencerAndRythemManer::drumKick", "da/db2/class_laugh_tale_engine_1_1apo_sequencer_and_rythem_maner_1_1drum_kick.html", null ],
+      [ "LaughTaleEngine::apoSequencerAndRythemManer::guitarString", "d0/d2f/class_laugh_tale_engine_1_1apo_sequencer_and_rythem_maner_1_1guitar_string.html", null ],
       [ "LaughTaleEngine::harmonica", "d5/de5/class_laugh_tale_engine_1_1harmonica.html", null ]
     ] ],
     [ "LaughTaleEngine::event", "d6/d4a/struct_laugh_tale_engine_1_1event.html", null ],
@@ -18,7 +19,6 @@ var hierarchy =
     [ "LaughTaleEngine::GraphicsContext", "d1/da5/class_laugh_tale_engine_1_1_graphics_context.html", [
       [ "LaughTaleEngine::openGLContext", "d7/d4d/class_laugh_tale_engine_1_1open_g_l_context.html", null ]
     ] ],
-    [ "LaughTaleEngine::guitar", "d6/d62/class_laugh_tale_engine_1_1guitar.html", null ],
     [ "LaughTaleEngine::IEntity", "dd/d4a/struct_laugh_tale_engine_1_1_i_entity.html", [
       [ "ImGuiData", "dd/db8/class_im_gui_data.html", null ],
       [ "renderData", "d1/d9c/classrender_data.html", null ],
@@ -41,16 +41,24 @@ var hierarchy =
     [ "LaughTaleEngine::indexBufferManger", "d4/dbe/class_laugh_tale_engine_1_1index_buffer_manger.html", null ],
     [ "LaughTaleEngine::linuxInput", "da/d5d/class_laugh_tale_engine_1_1linux_input.html", null ],
     [ "LaughTaleEngine::logger", "d6/d62/class_laugh_tale_engine_1_1logger.html", null ],
+    [ "LaughTaleEngine::apoSequencerAndRythemManer::note", "de/d98/struct_laugh_tale_engine_1_1apo_sequencer_and_rythem_maner_1_1note.html", null ],
+    [ "LaughTaleEngine::osc", "d5/de2/class_laugh_tale_engine_1_1osc.html", null ],
     [ "LaughTaleEngine::renderApi", "d0/d98/class_laugh_tale_engine_1_1render_api.html", [
       [ "LaughTaleEngine::openGLRenderApi", "d6/d46/class_laugh_tale_engine_1_1open_g_l_render_api.html", null ]
     ] ],
     [ "LaughTaleEngine::renderer", "d6/dea/class_laugh_tale_engine_1_1renderer.html", null ],
     [ "LaughTaleEngine::SceneData", "db/d6b/struct_laugh_tale_engine_1_1_scene_data.html", null ],
+    [ "LaughTaleEngine::apoSequencerAndRythemManer::sequencer", "d1/d13/class_laugh_tale_engine_1_1apo_sequencer_and_rythem_maner_1_1sequencer.html", [
+      [ "LaughTaleEngine::apoSequencerAndRythemManer::bellRing", "d9/d07/class_laugh_tale_engine_1_1apo_sequencer_and_rythem_maner_1_1bell_ring.html", null ],
+      [ "LaughTaleEngine::apoSequencerAndRythemManer::drum", "db/dd7/class_laugh_tale_engine_1_1apo_sequencer_and_rythem_maner_1_1drum.html", null ],
+      [ "LaughTaleEngine::apoSequencerAndRythemManer::guitar", "d8/dc5/class_laugh_tale_engine_1_1apo_sequencer_and_rythem_maner_1_1guitar.html", null ]
+    ] ],
     [ "LaughTaleEngine::shader", "d6/db1/class_laugh_tale_engine_1_1shader.html", [
       [ "LaughTaleEngine::openGLShader", "d8/d0e/class_laugh_tale_engine_1_1open_g_l_shader.html", null ]
     ] ],
     [ "LaughTaleEngine::shaderManger", "db/de7/class_laugh_tale_engine_1_1shader_manger.html", null ],
     [ "LaughTaleEngine::ShaderProgramSource", "dd/ddb/struct_laugh_tale_engine_1_1_shader_program_source.html", null ],
+    [ "LaughTaleEngine::sondSampelData", "db/d2b/struct_laugh_tale_engine_1_1sond_sampel_data.html", null ],
     [ "LaughTaleEngine::soundApi", "df/d12/class_laugh_tale_engine_1_1sound_api.html", [
       [ "LaughTaleEngine::linuxSoundApi", "d8/da6/class_laugh_tale_engine_1_1linux_sound_api.html", null ]
     ] ],

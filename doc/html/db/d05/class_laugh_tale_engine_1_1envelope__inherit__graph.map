@@ -1,6 +1,7 @@
 <map id="LaughTaleEngine::envelope" name="LaughTaleEngine::envelope">
-<area shape="rect" id="node1" title=" " alt="" coords="185,5,367,32"/>
-<area shape="rect" id="node2" href="$d0/d6a/class_laugh_tale_engine_1_1bell.html" title=" " alt="" coords="5,80,155,107"/>
-<area shape="rect" id="node3" href="$de/d84/class_laugh_tale_engine_1_1guitar_string.html" title=" " alt="" coords="179,80,373,107"/>
-<area shape="rect" id="node4" href="$d5/de5/class_laugh_tale_engine_1_1harmonica.html" title=" " alt="" coords="397,80,587,107"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,111,187,138"/>
+<area shape="rect" id="node2" href="$d4/d1d/class_laugh_tale_engine_1_1apo_sequencer_and_rythem_maner_1_1bell.html" title=" " alt="" coords="235,5,447,47"/>
+<area shape="rect" id="node3" href="$da/db2/class_laugh_tale_engine_1_1apo_sequencer_and_rythem_maner_1_1drum_kick.html" title=" " alt="" coords="235,71,447,112"/>
+<area shape="rect" id="node4" href="$d0/d2f/class_laugh_tale_engine_1_1apo_sequencer_and_rythem_maner_1_1guitar_string.html" title=" " alt="" coords="235,136,447,177"/>
+<area shape="rect" id="node5" href="$d5/de5/class_laugh_tale_engine_1_1harmonica.html" title=" " alt="" coords="246,202,435,229"/>
 </map>

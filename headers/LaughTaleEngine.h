@@ -23,3 +23,4 @@
 #include "orthographicCamera.h"
 #include "soundEngine.h"
 #include "soundSynthesizer.h"
+#include "sequencer.h"
