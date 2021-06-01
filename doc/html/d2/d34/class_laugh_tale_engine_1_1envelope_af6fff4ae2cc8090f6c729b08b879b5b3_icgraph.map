@@ -1,9 +1,11 @@
 <map id="LaughTaleEngine::envelope::getId" name="LaughTaleEngine::envelope::getId">
-<area shape="rect" id="node1" title=" " alt="" coords="547,159,728,201"/>
-<area shape="rect" id="node2" href="$d6/d31/class_laugh_tale_engine_1_1sound_synthesizer.html#abe1b51b3fd80d177fdc94719d26dc774" title=" " alt="" coords="265,86,499,127"/>
-<area shape="rect" id="node6" href="$d9/d07/class_laugh_tale_engine_1_1apo_sequencer_and_rythem_maner_1_1bell_ring.html#a904aeeb4b753ba23ac6e8519e1201412" title="PlayBeat &#45; called every beat or bpm time a minut noteOn/Off the instraments here." alt="" coords="276,152,488,208"/>
-<area shape="rect" id="node7" href="$db/dd7/class_laugh_tale_engine_1_1apo_sequencer_and_rythem_maner_1_1drum.html#ad5d4cfc0be2bd8ce810f6279187cca71" title="PlayBeat &#45; called every beat or bpm time a minut noteOn/Off the instraments here." alt="" coords="269,233,495,274"/>
-<area shape="rect" id="node3" href="$d9/d07/class_laugh_tale_engine_1_1apo_sequencer_and_rythem_maner_1_1bell_ring.html#ae15b2b12f740cceb6468ddafb22e77ab" title=" " alt="" coords="5,5,217,61"/>
-<area shape="rect" id="node4" href="$db/dd7/class_laugh_tale_engine_1_1apo_sequencer_and_rythem_maner_1_1drum.html#a4f2995a69a616aaf7ddc7db3c30e65ba" title=" " alt="" coords="5,86,217,127"/>
-<area shape="rect" id="node5" href="$d8/dc5/class_laugh_tale_engine_1_1apo_sequencer_and_rythem_maner_1_1guitar.html#a2bc1c611abdbc98dee42845f09f57c2b" title=" " alt="" coords="5,151,217,193"/>
+<area shape="rect" id="node1" title=" " alt="" coords="571,230,752,271"/>
+<area shape="rect" id="node2" href="$d6/d31/class_laugh_tale_engine_1_1sound_synthesizer.html#abe1b51b3fd80d177fdc94719d26dc774" title=" " alt="" coords="289,119,522,161"/>
+<area shape="rect" id="node7" href="$d9/d07/class_laugh_tale_engine_1_1apo_sequencer_and_rythem_maner_1_1bell_ring.html#a904aeeb4b753ba23ac6e8519e1201412" title="PlayBeat &#45; called every beat or bpm time a minut noteOn/Off the instraments here." alt="" coords="299,185,511,241"/>
+<area shape="rect" id="node8" href="$db/dd7/class_laugh_tale_engine_1_1apo_sequencer_and_rythem_maner_1_1drum.html#ad5d4cfc0be2bd8ce810f6279187cca71" title="PlayBeat &#45; called every beat or bpm time a minut noteOn/Off the instraments here." alt="" coords="293,266,518,307"/>
+<area shape="rect" id="node9" href="$d8/dd3/class_laugh_tale_engine_1_1apo_sequencer_and_rythem_maner_1_1sound_files_player.html#addbe2fc6280ae0eca751392887537f22" title=" " alt="" coords="288,332,523,388"/>
+<area shape="rect" id="node3" href="$d9/d07/class_laugh_tale_engine_1_1apo_sequencer_and_rythem_maner_1_1bell_ring.html#ae15b2b12f740cceb6468ddafb22e77ab" title=" " alt="" coords="17,5,229,61"/>
+<area shape="rect" id="node4" href="$db/dd7/class_laugh_tale_engine_1_1apo_sequencer_and_rythem_maner_1_1drum.html#a4f2995a69a616aaf7ddc7db3c30e65ba" title=" " alt="" coords="17,86,229,127"/>
+<area shape="rect" id="node5" href="$d8/dc5/class_laugh_tale_engine_1_1apo_sequencer_and_rythem_maner_1_1guitar.html#a2bc1c611abdbc98dee42845f09f57c2b" title=" " alt="" coords="17,151,229,193"/>
+<area shape="rect" id="node6" href="$d8/dd3/class_laugh_tale_engine_1_1apo_sequencer_and_rythem_maner_1_1sound_files_player.html#a74ae9fd7db57dd93e50d2eb5ed4ac585" title=" " alt="" coords="5,217,240,273"/>
 </map>

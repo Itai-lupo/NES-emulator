@@ -24,3 +24,4 @@
 #include "soundEngine.h"
 #include "soundSynthesizer.h"
 #include "sequencer.h"
+#include "soundFilesPlayer.h"

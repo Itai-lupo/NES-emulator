@@ -12,6 +12,7 @@ var hierarchy =
       [ "LaughTaleEngine::apoSequencerAndRythemManer::bell", "d4/d1d/class_laugh_tale_engine_1_1apo_sequencer_and_rythem_maner_1_1bell.html", null ],
       [ "LaughTaleEngine::apoSequencerAndRythemManer::drumKick", "da/db2/class_laugh_tale_engine_1_1apo_sequencer_and_rythem_maner_1_1drum_kick.html", null ],
       [ "LaughTaleEngine::apoSequencerAndRythemManer::guitarString", "d0/d2f/class_laugh_tale_engine_1_1apo_sequencer_and_rythem_maner_1_1guitar_string.html", null ],
+      [ "LaughTaleEngine::apoSequencerAndRythemManer::soundFile", "d5/de7/class_laugh_tale_engine_1_1apo_sequencer_and_rythem_maner_1_1sound_file.html", null ],
       [ "LaughTaleEngine::harmonica", "d5/de5/class_laugh_tale_engine_1_1harmonica.html", null ]
     ] ],
     [ "LaughTaleEngine::event", "d6/d4a/struct_laugh_tale_engine_1_1event.html", null ],
@@ -63,6 +64,7 @@ var hierarchy =
       [ "LaughTaleEngine::linuxSoundApi", "d8/da6/class_laugh_tale_engine_1_1linux_sound_api.html", null ]
     ] ],
     [ "LaughTaleEngine::soundEngine", "df/d84/class_laugh_tale_engine_1_1sound_engine.html", null ],
+    [ "LaughTaleEngine::apoSequencerAndRythemManer::soundFilesPlayer", "d8/dd3/class_laugh_tale_engine_1_1apo_sequencer_and_rythem_maner_1_1sound_files_player.html", null ],
     [ "LaughTaleEngine::soundSynthesizer", "d6/d31/class_laugh_tale_engine_1_1sound_synthesizer.html", null ],
     [ "LaughTaleEngine::vertexArray", "db/d75/class_laugh_tale_engine_1_1vertex_array.html", [
       [ "LaughTaleEngine::openGLVertexArray", "de/dbc/class_laugh_tale_engine_1_1open_g_l_vertex_array.html", null ]

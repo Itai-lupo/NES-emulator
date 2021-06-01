@@ -60,6 +60,7 @@ void closeApp(__attribute__((unused)) IEntity *eventEntity, __attribute__((unuse
 
 TEST(SoundEngine, soundInterface)
 {
+    return;
     app::init();
     soundEntity *e = new soundEntity();
     
@@ -75,5 +76,4 @@ TEST(SoundEngine, soundInterface)
     apoSequencerAndRythemManer::guitar* g = new apoSequencerAndRythemManer::guitar();
     app::run();
     app::close();
-    exit(0);
 }

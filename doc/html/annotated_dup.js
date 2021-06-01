@@ -9,7 +9,9 @@ var annotated_dup =
         [ "drum", "db/dd7/class_laugh_tale_engine_1_1apo_sequencer_and_rythem_maner_1_1drum.html", "db/dd7/class_laugh_tale_engine_1_1apo_sequencer_and_rythem_maner_1_1drum" ],
         [ "guitar", "d8/dc5/class_laugh_tale_engine_1_1apo_sequencer_and_rythem_maner_1_1guitar.html", "d8/dc5/class_laugh_tale_engine_1_1apo_sequencer_and_rythem_maner_1_1guitar" ],
         [ "note", "de/d98/struct_laugh_tale_engine_1_1apo_sequencer_and_rythem_maner_1_1note.html", "de/d98/struct_laugh_tale_engine_1_1apo_sequencer_and_rythem_maner_1_1note" ],
-        [ "sequencer", "d1/d13/class_laugh_tale_engine_1_1apo_sequencer_and_rythem_maner_1_1sequencer.html", "d1/d13/class_laugh_tale_engine_1_1apo_sequencer_and_rythem_maner_1_1sequencer" ]
+        [ "sequencer", "d1/d13/class_laugh_tale_engine_1_1apo_sequencer_and_rythem_maner_1_1sequencer.html", "d1/d13/class_laugh_tale_engine_1_1apo_sequencer_and_rythem_maner_1_1sequencer" ],
+        [ "soundFile", "d5/de7/class_laugh_tale_engine_1_1apo_sequencer_and_rythem_maner_1_1sound_file.html", "d5/de7/class_laugh_tale_engine_1_1apo_sequencer_and_rythem_maner_1_1sound_file" ],
+        [ "soundFilesPlayer", "d8/dd3/class_laugh_tale_engine_1_1apo_sequencer_and_rythem_maner_1_1sound_files_player.html", null ]
       ] ],
       [ "app", "d9/d89/class_laugh_tale_engine_1_1app.html", null ],
       [ "IEntity", "dd/d4a/struct_laugh_tale_engine_1_1_i_entity.html", "dd/d4a/struct_laugh_tale_engine_1_1_i_entity" ],

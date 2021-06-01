@@ -47,6 +47,15 @@ namespace LaughTaleEngine
         return toAdd->getId();
     }
 
+    void soundSynthesizer::removeEnvelope(apoEnvelopeId id)
+    {
+        std::remove_if(
+            envelopes->begin(),
+            envelopes->end(),
+            [=](envelope *env) -> bool { return env->getId() == id; }
+        );
+    }
+
     void soundSynthesizer::noteOn(apoEnvelopeId id)
     {
         double time = soundEngine::getTime();

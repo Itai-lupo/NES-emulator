@@ -103,6 +103,8 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:ac96abeb3d7ff82eba84564583535fcde"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abe1b51b3fd80d177fdc94719d26dc774"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../db/d49/namespace_laugh_tale_engine.html#a105044a4171f64ca8e60fc9247c8c0e0">apoEnvelopeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d31/class_laugh_tale_engine_1_1sound_synthesizer.html#abe1b51b3fd80d177fdc94719d26dc774">addEnvelope</a> (<a class="el" href="../../d2/d34/class_laugh_tale_engine_1_1envelope.html">envelope</a> *toAdd)</td></tr>
 <tr class="separator:abe1b51b3fd80d177fdc94719d26dc774"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a402b1b8a943736ab34392b8627621ba7"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d31/class_laugh_tale_engine_1_1sound_synthesizer.html#a402b1b8a943736ab34392b8627621ba7">removeEnvelope</a> (<a class="el" href="../../db/d49/namespace_laugh_tale_engine.html#a105044a4171f64ca8e60fc9247c8c0e0">apoEnvelopeId</a> id)</td></tr>
+<tr class="separator:a402b1b8a943736ab34392b8627621ba7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af49cb1a7af19972a9d9ffd7d8f93f32d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d31/class_laugh_tale_engine_1_1sound_synthesizer.html#af49cb1a7af19972a9d9ffd7d8f93f32d">noteOn</a> (<a class="el" href="../../db/d49/namespace_laugh_tale_engine.html#a105044a4171f64ca8e60fc9247c8c0e0">apoEnvelopeId</a> id)</td></tr>
 <tr class="separator:af49cb1a7af19972a9d9ffd7d8f93f32d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7d5f309bb7b2d389b441018bcc98637e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d31/class_laugh_tale_engine_1_1sound_synthesizer.html#a7d5f309bb7b2d389b441018bcc98637e">noteOff</a> (<a class="el" href="../../db/d49/namespace_laugh_tale_engine.html#a105044a4171f64ca8e60fc9247c8c0e0">apoEnvelopeId</a> id)</td></tr>
@@ -154,10 +156,11 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d6/d31/class_laugh_tale_engine_1_1sound_synthesizer_abe1b51b3fd80d177fdc94719d26dc774_icgraph.png" border="0" usemap="#ad6/d31/class_laugh_tale_engine_1_1sound_synthesizer_abe1b51b3fd80d177fdc94719d26dc774_icgraph" alt=""/></div>
 <map name="ad6/d31/class_laugh_tale_engine_1_1sound_synthesizer_abe1b51b3fd80d177fdc94719d26dc774_icgraph" id="ad6/d31/class_laugh_tale_engine_1_1sound_synthesizer_abe1b51b3fd80d177fdc94719d26dc774_icgraph">
-<area shape="rect" title=" " alt="" coords="265,86,499,127"/>
-<area shape="rect" href="../../d9/d07/class_laugh_tale_engine_1_1apo_sequencer_and_rythem_maner_1_1bell_ring.html#ae15b2b12f740cceb6468ddafb22e77ab" title=" " alt="" coords="5,5,217,61"/>
-<area shape="rect" href="../../db/dd7/class_laugh_tale_engine_1_1apo_sequencer_and_rythem_maner_1_1drum.html#a4f2995a69a616aaf7ddc7db3c30e65ba" title=" " alt="" coords="5,86,217,127"/>
-<area shape="rect" href="../../d8/dc5/class_laugh_tale_engine_1_1apo_sequencer_and_rythem_maner_1_1guitar.html#a2bc1c611abdbc98dee42845f09f57c2b" title=" " alt="" coords="5,151,217,193"/>
+<area shape="rect" title=" " alt="" coords="288,119,521,161"/>
+<area shape="rect" href="../../d9/d07/class_laugh_tale_engine_1_1apo_sequencer_and_rythem_maner_1_1bell_ring.html#ae15b2b12f740cceb6468ddafb22e77ab" title=" " alt="" coords="17,5,229,61"/>
+<area shape="rect" href="../../db/dd7/class_laugh_tale_engine_1_1apo_sequencer_and_rythem_maner_1_1drum.html#a4f2995a69a616aaf7ddc7db3c30e65ba" title=" " alt="" coords="17,86,229,127"/>
+<area shape="rect" href="../../d8/dc5/class_laugh_tale_engine_1_1apo_sequencer_and_rythem_maner_1_1guitar.html#a2bc1c611abdbc98dee42845f09f57c2b" title=" " alt="" coords="17,151,229,193"/>
+<area shape="rect" href="../../d8/dd3/class_laugh_tale_engine_1_1apo_sequencer_and_rythem_maner_1_1sound_files_player.html#a74ae9fd7db57dd93e50d2eb5ed4ac585" title=" " alt="" coords="5,217,240,273"/>
 </map>
 </div>
 
@@ -315,16 +318,16 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    {</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordtype">double</span> time = <a class="code" href="../../df/d84/class_laugh_tale_engine_1_1sound_engine.html#ae9be4305903b53b6bd3ffd80923fbd59">soundEngine::getTime</a>();</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        (*std::find_if(</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            envelopes-&gt;begin(),</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            envelopes-&gt;end(),</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            [=](envelope *env) -&gt; <span class="keywordtype">bool</span> { return env-&gt;getId() == id; }</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        ))-&gt;<a class="code" href="../../d6/d31/class_laugh_tale_engine_1_1sound_synthesizer.html#a7d5f309bb7b2d389b441018bcc98637e">noteOff</a>(time);</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    {</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keywordtype">double</span> time = <a class="code" href="../../df/d84/class_laugh_tale_engine_1_1sound_engine.html#ae9be4305903b53b6bd3ffd80923fbd59">soundEngine::getTime</a>();</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        (*std::find_if(</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            envelopes-&gt;begin(),</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            envelopes-&gt;end(),</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            [=](envelope *env) -&gt; <span class="keywordtype">bool</span> { return env-&gt;getId() == id; }</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        ))-&gt;<a class="code" href="../../d6/d31/class_laugh_tale_engine_1_1sound_synthesizer.html#a7d5f309bb7b2d389b441018bcc98637e">noteOff</a>(time);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    }</div>
 <div class="ttc" id="aclass_laugh_tale_engine_1_1sound_engine_html_ae9be4305903b53b6bd3ffd80923fbd59"><div class="ttname"><a href="../../df/d84/class_laugh_tale_engine_1_1sound_engine.html#ae9be4305903b53b6bd3ffd80923fbd59">LaughTaleEngine::soundEngine::getTime</a></div><div class="ttdeci">static double getTime()</div><div class="ttdef"><b>Definition:</b> soundEngine.h:21</div></div>
-<div class="ttc" id="aclass_laugh_tale_engine_1_1sound_synthesizer_html_a7d5f309bb7b2d389b441018bcc98637e"><div class="ttname"><a href="../../d6/d31/class_laugh_tale_engine_1_1sound_synthesizer.html#a7d5f309bb7b2d389b441018bcc98637e">LaughTaleEngine::soundSynthesizer::noteOff</a></div><div class="ttdeci">static void noteOff(apoEnvelopeId id)</div><div class="ttdef"><b>Definition:</b> soundSynthesizer.cpp:60</div></div>
+<div class="ttc" id="aclass_laugh_tale_engine_1_1sound_synthesizer_html_a7d5f309bb7b2d389b441018bcc98637e"><div class="ttname"><a href="../../d6/d31/class_laugh_tale_engine_1_1sound_synthesizer.html#a7d5f309bb7b2d389b441018bcc98637e">LaughTaleEngine::soundSynthesizer::noteOff</a></div><div class="ttdeci">static void noteOff(apoEnvelopeId id)</div><div class="ttdef"><b>Definition:</b> soundSynthesizer.cpp:69</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -373,15 +376,15 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    {</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordtype">double</span> time = <a class="code" href="../../df/d84/class_laugh_tale_engine_1_1sound_engine.html#ae9be4305903b53b6bd3ffd80923fbd59">soundEngine::getTime</a>();</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        (*std::find_if(</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            envelopes-&gt;begin(),</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            envelopes-&gt;end(),</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            [=](envelope *env) -&gt; <span class="keywordtype">bool</span> { return env-&gt;getId() == id; }</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        ))-&gt;<a class="code" href="../../d6/d31/class_laugh_tale_engine_1_1sound_synthesizer.html#af49cb1a7af19972a9d9ffd7d8f93f32d">noteOn</a>(time);</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    }</div>
-<div class="ttc" id="aclass_laugh_tale_engine_1_1sound_synthesizer_html_af49cb1a7af19972a9d9ffd7d8f93f32d"><div class="ttname"><a href="../../d6/d31/class_laugh_tale_engine_1_1sound_synthesizer.html#af49cb1a7af19972a9d9ffd7d8f93f32d">LaughTaleEngine::soundSynthesizer::noteOn</a></div><div class="ttdeci">static void noteOn(apoEnvelopeId id)</div><div class="ttdef"><b>Definition:</b> soundSynthesizer.cpp:50</div></div>
+<div class="fragment"><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    {</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keywordtype">double</span> time = <a class="code" href="../../df/d84/class_laugh_tale_engine_1_1sound_engine.html#ae9be4305903b53b6bd3ffd80923fbd59">soundEngine::getTime</a>();</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        (*std::find_if(</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            envelopes-&gt;begin(),</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            envelopes-&gt;end(),</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            [=](envelope *env) -&gt; <span class="keywordtype">bool</span> { return env-&gt;getId() == id; }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        ))-&gt;<a class="code" href="../../d6/d31/class_laugh_tale_engine_1_1sound_synthesizer.html#af49cb1a7af19972a9d9ffd7d8f93f32d">noteOn</a>(time);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    }</div>
+<div class="ttc" id="aclass_laugh_tale_engine_1_1sound_synthesizer_html_af49cb1a7af19972a9d9ffd7d8f93f32d"><div class="ttname"><a href="../../d6/d31/class_laugh_tale_engine_1_1sound_synthesizer.html#af49cb1a7af19972a9d9ffd7d8f93f32d">LaughTaleEngine::soundSynthesizer::noteOn</a></div><div class="ttdeci">static void noteOn(apoEnvelopeId id)</div><div class="ttdef"><b>Definition:</b> soundSynthesizer.cpp:59</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -402,6 +405,48 @@ Here is the caller graph for this function:</div>
 <area shape="rect" href="../../d8/dc5/class_laugh_tale_engine_1_1apo_sequencer_and_rythem_maner_1_1guitar.html#aa456fbd50276bc6bbbf31292e17ca138" title=" " alt="" coords="281,151,552,193"/>
 <area shape="rect" href="../../d8/dc5/class_laugh_tale_engine_1_1apo_sequencer_and_rythem_maner_1_1guitar.html#a1359fef3747a14d13d60f851c1615b2c" title=" " alt="" coords="290,217,543,258"/>
 <area shape="rect" href="../../d8/dc5/class_laugh_tale_engine_1_1apo_sequencer_and_rythem_maner_1_1guitar.html#ab3ed183bacf8c64c0294b8c2b318cf4d" title="PlayBeat &#45; called every beat or bpm time a minut noteOn/Off the instraments here." alt="" coords="5,185,233,226"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a402b1b8a943736ab34392b8627621ba7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a402b1b8a943736ab34392b8627621ba7">&#9670;&nbsp;</a></span>removeEnvelope()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LaughTaleEngine::soundSynthesizer::removeEnvelope </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../db/d49/namespace_laugh_tale_engine.html#a105044a4171f64ca8e60fc9247c8c0e0">apoEnvelopeId</a>&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        std::remove_if(</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            envelopes-&gt;begin(),</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            envelopes-&gt;end(),</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            [=](envelope *env) -&gt; <span class="keywordtype">bool</span> { return env-&gt;getId() == id; }</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        );</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    }</div>
+</div><!-- fragment --><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d6/d31/class_laugh_tale_engine_1_1sound_synthesizer_a402b1b8a943736ab34392b8627621ba7_icgraph.png" border="0" usemap="#ad6/d31/class_laugh_tale_engine_1_1sound_synthesizer_a402b1b8a943736ab34392b8627621ba7_icgraph" alt=""/></div>
+<map name="ad6/d31/class_laugh_tale_engine_1_1sound_synthesizer_a402b1b8a943736ab34392b8627621ba7_icgraph" id="ad6/d31/class_laugh_tale_engine_1_1sound_synthesizer_a402b1b8a943736ab34392b8627621ba7_icgraph">
+<area shape="rect" title=" " alt="" coords="288,13,521,54"/>
+<area shape="rect" href="../../d8/dd3/class_laugh_tale_engine_1_1apo_sequencer_and_rythem_maner_1_1sound_files_player.html#addbe2fc6280ae0eca751392887537f22" title=" " alt="" coords="5,5,240,61"/>
 </map>
 </div>
 

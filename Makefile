@@ -26,7 +26,7 @@ INC_FLAGS := $(addprefix -I,$(INC_DIRS))
 
 CPPFLAGS ?=  $(INC_FLAGS)  -MMD -MP  -g -Wall
 TEST_CPP_FLAGE = -lgtest -lgtest_main -lgmock  
-CFLAGS := -lstdc++ -lglog -lGL -lglfw  -lc -lrt -lm -ldl  -lasound
+CFLAGS := -lstdc++ -lglog -lGL -lglfw  -lc -lrt -lm -ldl  -lasound -lmp3lame
 
 CXXFLAGS += -g -Wall -Wextra -pthread
 

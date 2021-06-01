@@ -14,6 +14,10 @@ var dir_5f94115b3c0e412bcbfa4ddebdf1ac56 =
     [ "soundEngine.h", "dd/d05/sound_engine_8h.html", [
       [ "soundEngine", "df/d84/class_laugh_tale_engine_1_1sound_engine.html", null ]
     ] ],
+    [ "soundFilesPlayer.h", "d3/d40/sound_files_player_8h.html", [
+      [ "soundFile", "d5/de7/class_laugh_tale_engine_1_1apo_sequencer_and_rythem_maner_1_1sound_file.html", "d5/de7/class_laugh_tale_engine_1_1apo_sequencer_and_rythem_maner_1_1sound_file" ],
+      [ "soundFilesPlayer", "d8/dd3/class_laugh_tale_engine_1_1apo_sequencer_and_rythem_maner_1_1sound_files_player.html", null ]
+    ] ],
     [ "soundSynthesizer.h", "dc/d35/sound_synthesizer_8h.html", [
       [ "soundSynthesizer", "d6/d31/class_laugh_tale_engine_1_1sound_synthesizer.html", null ]
     ] ]

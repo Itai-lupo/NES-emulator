@@ -1,7 +1,8 @@
 <map id="LaughTaleEngine::envelope::setId" name="LaughTaleEngine::envelope::setId">
-<area shape="rect" id="node1" title=" " alt="" coords="547,86,728,127"/>
-<area shape="rect" id="node2" href="$d6/d31/class_laugh_tale_engine_1_1sound_synthesizer.html#abe1b51b3fd80d177fdc94719d26dc774" title=" " alt="" coords="265,86,499,127"/>
-<area shape="rect" id="node3" href="$d9/d07/class_laugh_tale_engine_1_1apo_sequencer_and_rythem_maner_1_1bell_ring.html#ae15b2b12f740cceb6468ddafb22e77ab" title=" " alt="" coords="5,5,217,61"/>
-<area shape="rect" id="node4" href="$db/dd7/class_laugh_tale_engine_1_1apo_sequencer_and_rythem_maner_1_1drum.html#a4f2995a69a616aaf7ddc7db3c30e65ba" title=" " alt="" coords="5,86,217,127"/>
-<area shape="rect" id="node5" href="$d8/dc5/class_laugh_tale_engine_1_1apo_sequencer_and_rythem_maner_1_1guitar.html#a2bc1c611abdbc98dee42845f09f57c2b" title=" " alt="" coords="5,151,217,193"/>
+<area shape="rect" id="node1" title=" " alt="" coords="569,119,751,161"/>
+<area shape="rect" id="node2" href="$d6/d31/class_laugh_tale_engine_1_1sound_synthesizer.html#abe1b51b3fd80d177fdc94719d26dc774" title=" " alt="" coords="288,119,521,161"/>
+<area shape="rect" id="node3" href="$d9/d07/class_laugh_tale_engine_1_1apo_sequencer_and_rythem_maner_1_1bell_ring.html#ae15b2b12f740cceb6468ddafb22e77ab" title=" " alt="" coords="17,5,229,61"/>
+<area shape="rect" id="node4" href="$db/dd7/class_laugh_tale_engine_1_1apo_sequencer_and_rythem_maner_1_1drum.html#a4f2995a69a616aaf7ddc7db3c30e65ba" title=" " alt="" coords="17,86,229,127"/>
+<area shape="rect" id="node5" href="$d8/dc5/class_laugh_tale_engine_1_1apo_sequencer_and_rythem_maner_1_1guitar.html#a2bc1c611abdbc98dee42845f09f57c2b" title=" " alt="" coords="17,151,229,193"/>
+<area shape="rect" id="node6" href="$d8/dd3/class_laugh_tale_engine_1_1apo_sequencer_and_rythem_maner_1_1sound_files_player.html#a74ae9fd7db57dd93e50d2eb5ed4ac585" title=" " alt="" coords="5,217,240,273"/>
 </map>
