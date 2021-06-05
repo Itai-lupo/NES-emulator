@@ -29,7 +29,7 @@ namespace LaughTaleEngine
 
 	void orthographicCamera::setRotation(float rotation) 
 	{ 
-		rotation = rotation; 
+		this->rotation = rotation; 
 		recalculateViewMatrix(); 
 	}
 }

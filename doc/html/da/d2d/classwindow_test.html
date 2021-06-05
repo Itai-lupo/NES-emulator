@@ -105,6 +105,8 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:ab150ebf55674ef1a1bc2c2045def4ac4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4497926e30ec0448f316074a60a3715d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d2d/classwindow_test.html#a4497926e30ec0448f316074a60a3715d">ImGuiRender</a> (<a class="el" href="../../dd/d4a/struct_laugh_tale_engine_1_1_i_entity.html">IEntity</a> *eventEntity, <a class="el" href="../../dd/db7/struct_laugh_tale_engine_1_1_i_event_data.html">IEventData</a> *sendor)</td></tr>
 <tr class="separator:a4497926e30ec0448f316074a60a3715d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc416cf0631f8279e44a7aeaab2c703a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d2d/classwindow_test.html#adc416cf0631f8279e44a7aeaab2c703a">onKeyPress</a> (<a class="el" href="../../dd/d4a/struct_laugh_tale_engine_1_1_i_entity.html">IEntity</a> *eventEntity, <a class="el" href="../../dd/db7/struct_laugh_tale_engine_1_1_i_event_data.html">IEventData</a> *sendor)</td></tr>
+<tr class="separator:adc416cf0631f8279e44a7aeaab2c703a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a4497926e30ec0448f316074a60a3715d"></a>
@@ -140,12 +142,12 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        {</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            <a class="code" href="../../da/df6/struct_laugh_tale_engine_1_1on_update_data.html">onUpdateData</a> *e = <span class="keyword">static_cast&lt;</span><a class="code" href="../../da/df6/struct_laugh_tale_engine_1_1on_update_data.html">onUpdateData</a> *<span class="keyword">&gt;</span>(sendor);</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            <a class="code" href="../../dd/db8/class_im_gui_data.html">ImGuiData</a> *data = <span class="keyword">static_cast&lt;</span><a class="code" href="../../dd/db8/class_im_gui_data.html">ImGuiData</a>*<span class="keyword">&gt;</span>(eventEntity);</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            ImGui::Text(<span class="stringliteral">&quot;%d&quot;</span>, e-&gt;<a class="code" href="../../da/df6/struct_laugh_tale_engine_1_1on_update_data.html#af1ccf3775e8995b830eb195cb50c2df1">DeltaTime</a>);</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        }</div>
-<div class="ttc" id="aclass_im_gui_data_html"><div class="ttname"><a href="../../dd/db8/class_im_gui_data.html">ImGuiData</a></div><div class="ttdef"><b>Definition:</b> window.test.cpp:10</div></div>
+<div class="fragment"><div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        {</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;            <a class="code" href="../../da/df6/struct_laugh_tale_engine_1_1on_update_data.html">onUpdateData</a> *e = <span class="keyword">static_cast&lt;</span><a class="code" href="../../da/df6/struct_laugh_tale_engine_1_1on_update_data.html">onUpdateData</a> *<span class="keyword">&gt;</span>(sendor);</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;            <a class="code" href="../../dd/db8/class_im_gui_data.html">ImGuiData</a> *data = <span class="keyword">static_cast&lt;</span><a class="code" href="../../dd/db8/class_im_gui_data.html">ImGuiData</a>*<span class="keyword">&gt;</span>(eventEntity);</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;            ImGui::Text(<span class="stringliteral">&quot;%d&quot;</span>, e-&gt;<a class="code" href="../../da/df6/struct_laugh_tale_engine_1_1on_update_data.html#af1ccf3775e8995b830eb195cb50c2df1">DeltaTime</a>);</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        }</div>
+<div class="ttc" id="aclass_im_gui_data_html"><div class="ttname"><a href="../../dd/db8/class_im_gui_data.html">ImGuiData</a></div><div class="ttdef"><b>Definition:</b> window.test.cpp:13</div></div>
 <div class="ttc" id="astruct_laugh_tale_engine_1_1on_update_data_html"><div class="ttname"><a href="../../da/df6/struct_laugh_tale_engine_1_1on_update_data.html">LaughTaleEngine::onUpdateData</a></div><div class="ttdef"><b>Definition:</b> events.h:96</div></div>
 <div class="ttc" id="astruct_laugh_tale_engine_1_1on_update_data_html_af1ccf3775e8995b830eb195cb50c2df1"><div class="ttname"><a href="../../da/df6/struct_laugh_tale_engine_1_1on_update_data.html#af1ccf3775e8995b830eb195cb50c2df1">LaughTaleEngine::onUpdateData::DeltaTime</a></div><div class="ttdeci">short DeltaTime</div><div class="ttdef"><b>Definition:</b> events.h:101</div></div>
 </div><!-- fragment --><div class="dynheader">
@@ -193,11 +195,11 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        {</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            <a class="code" href="../../d7/d88/struct_laugh_tale_engine_1_1mouse_move_data.html">mouseMoveData</a>* sendorData = <span class="keyword">dynamic_cast&lt;</span><a class="code" href="../../d7/d88/struct_laugh_tale_engine_1_1mouse_move_data.html">mouseMoveData</a>*<span class="keyword">&gt;</span>(sendor);</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            eventEntity-&gt;<a class="code" href="../../dd/d4a/struct_laugh_tale_engine_1_1_i_entity.html#a175f8ceea878e8f0cc81a9c6987c0e53">x</a> = sendorData-&gt;<a class="code" href="../../d7/d88/struct_laugh_tale_engine_1_1mouse_move_data.html#a8b8abc52401503afdd584f078d64599b">xPos</a>;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            eventEntity-&gt;<a class="code" href="../../dd/d4a/struct_laugh_tale_engine_1_1_i_entity.html#a442ba2eba6ff2c6bfa4c92a67038e824">y</a> = sendorData-&gt;<a class="code" href="../../d7/d88/struct_laugh_tale_engine_1_1mouse_move_data.html#aa0b4df84f46445b990b49ace197eaf58">yPos</a>;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        }</div>
+<div class="fragment"><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        {</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            <a class="code" href="../../d7/d88/struct_laugh_tale_engine_1_1mouse_move_data.html">mouseMoveData</a>* sendorData = <span class="keyword">dynamic_cast&lt;</span><a class="code" href="../../d7/d88/struct_laugh_tale_engine_1_1mouse_move_data.html">mouseMoveData</a>*<span class="keyword">&gt;</span>(sendor);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            eventEntity-&gt;<a class="code" href="../../dd/d4a/struct_laugh_tale_engine_1_1_i_entity.html#a175f8ceea878e8f0cc81a9c6987c0e53">x</a> = sendorData-&gt;<a class="code" href="../../d7/d88/struct_laugh_tale_engine_1_1mouse_move_data.html#a8b8abc52401503afdd584f078d64599b">xPos</a>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            eventEntity-&gt;<a class="code" href="../../dd/d4a/struct_laugh_tale_engine_1_1_i_entity.html#a442ba2eba6ff2c6bfa4c92a67038e824">y</a> = sendorData-&gt;<a class="code" href="../../d7/d88/struct_laugh_tale_engine_1_1mouse_move_data.html#aa0b4df84f46445b990b49ace197eaf58">yPos</a>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        }</div>
 <div class="ttc" id="astruct_laugh_tale_engine_1_1_i_entity_html_a175f8ceea878e8f0cc81a9c6987c0e53"><div class="ttname"><a href="../../dd/d4a/struct_laugh_tale_engine_1_1_i_entity.html#a175f8ceea878e8f0cc81a9c6987c0e53">LaughTaleEngine::IEntity::x</a></div><div class="ttdeci">int x</div><div class="ttdef"><b>Definition:</b> entity.h:12</div></div>
 <div class="ttc" id="astruct_laugh_tale_engine_1_1_i_entity_html_a442ba2eba6ff2c6bfa4c92a67038e824"><div class="ttname"><a href="../../dd/d4a/struct_laugh_tale_engine_1_1_i_entity.html#a442ba2eba6ff2c6bfa4c92a67038e824">LaughTaleEngine::IEntity::y</a></div><div class="ttdeci">int y</div><div class="ttdef"><b>Definition:</b> entity.h:12</div></div>
 <div class="ttc" id="astruct_laugh_tale_engine_1_1mouse_move_data_html"><div class="ttname"><a href="../../d7/d88/struct_laugh_tale_engine_1_1mouse_move_data.html">LaughTaleEngine::mouseMoveData</a></div><div class="ttdef"><b>Definition:</b> events.h:87</div></div>
@@ -209,6 +211,65 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="../../da/d2d/classwindow_test_a0296ed2fa5ffdb814d5bff64787cec19_icgraph.png" border="0" usemap="#ada/d2d/classwindow_test_a0296ed2fa5ffdb814d5bff64787cec19_icgraph" alt=""/></div>
 <map name="ada/d2d/classwindow_test_a0296ed2fa5ffdb814d5bff64787cec19_icgraph" id="ada/d2d/classwindow_test_a0296ed2fa5ffdb814d5bff64787cec19_icgraph">
 <area shape="rect" title=" " alt="" coords="109,5,385,32"/>
+<area shape="rect" href="../../d3/d00/window_8test_8cpp.html#a17abbb749ed42b0ea711959029a6cc14" title=" " alt="" coords="5,5,61,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="adc416cf0631f8279e44a7aeaab2c703a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc416cf0631f8279e44a7aeaab2c703a">&#9670;&nbsp;</a></span>onKeyPress()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void windowTest::onKeyPress </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dd/d4a/struct_laugh_tale_engine_1_1_i_entity.html">IEntity</a> *&#160;</td>
+          <td class="paramname"><em>eventEntity</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dd/db7/struct_laugh_tale_engine_1_1_i_event_data.html">IEventData</a> *&#160;</td>
+          <td class="paramname"><em>sendor</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        {</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;            <a class="code" href="../../d1/d9c/classrender_data.html">renderData</a> *renderEntity = <span class="keyword">static_cast&lt;</span><a class="code" href="../../d1/d9c/classrender_data.html">renderData</a> *<span class="keyword">&gt;</span>(eventEntity);</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;            <a class="code" href="../../dc/dd6/struct_laugh_tale_engine_1_1_key_data.html">KeyData</a> *e = <span class="keyword">static_cast&lt;</span><a class="code" href="../../dc/dd6/struct_laugh_tale_engine_1_1_key_data.html">KeyData</a> *<span class="keyword">&gt;</span>(sendor);</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160; </div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;            renderEntity-&gt;<a class="code" href="../../d1/d9c/classrender_data.html#a383de2ebe4446130b5645bab5c2966c0">deg</a> += ((char)e-&gt;<a class="code" href="../../dc/dd6/struct_laugh_tale_engine_1_1_key_data.html#af428af02db7e641c8be9ef2acb9578ff">key</a> == <span class="charliteral">&#39;Q&#39;</span>) - ((char)e-&gt;<a class="code" href="../../dc/dd6/struct_laugh_tale_engine_1_1_key_data.html#af428af02db7e641c8be9ef2acb9578ff">key</a> == <span class="charliteral">&#39;E&#39;</span>);</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;            renderEntity-&gt;<a class="code" href="../../d1/d9c/classrender_data.html#a5c2827e56f67fda16d49f4023dea23a7">x</a>   += (float)(((<span class="keywordtype">char</span>)e-&gt;<a class="code" href="../../dc/dd6/struct_laugh_tale_engine_1_1_key_data.html#af428af02db7e641c8be9ef2acb9578ff">key</a> == <span class="charliteral">&#39;D&#39;</span>) - ((<span class="keywordtype">char</span>)e-&gt;<a class="code" href="../../dc/dd6/struct_laugh_tale_engine_1_1_key_data.html#af428af02db7e641c8be9ef2acb9578ff">key</a> == <span class="charliteral">&#39;A&#39;</span>)) / 100;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;            renderEntity-&gt;<a class="code" href="../../d1/d9c/classrender_data.html#a3cbbf0f3747ae9e63d893b5678f7f96c">y</a>   += (float)(((<span class="keywordtype">char</span>)e-&gt;<a class="code" href="../../dc/dd6/struct_laugh_tale_engine_1_1_key_data.html#af428af02db7e641c8be9ef2acb9578ff">key</a> == <span class="charliteral">&#39;S&#39;</span>) - ((<span class="keywordtype">char</span>)e-&gt;<a class="code" href="../../dc/dd6/struct_laugh_tale_engine_1_1_key_data.html#af428af02db7e641c8be9ef2acb9578ff">key</a> == <span class="charliteral">&#39;W&#39;</span>)) / 100;</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        }</div>
+<div class="ttc" id="aclassrender_data_html"><div class="ttname"><a href="../../d1/d9c/classrender_data.html">renderData</a></div><div class="ttdef"><b>Definition:</b> window.test.cpp:19</div></div>
+<div class="ttc" id="aclassrender_data_html_a383de2ebe4446130b5645bab5c2966c0"><div class="ttname"><a href="../../d1/d9c/classrender_data.html#a383de2ebe4446130b5645bab5c2966c0">renderData::deg</a></div><div class="ttdeci">float deg</div><div class="ttdef"><b>Definition:</b> window.test.cpp:28</div></div>
+<div class="ttc" id="aclassrender_data_html_a3cbbf0f3747ae9e63d893b5678f7f96c"><div class="ttname"><a href="../../d1/d9c/classrender_data.html#a3cbbf0f3747ae9e63d893b5678f7f96c">renderData::y</a></div><div class="ttdeci">float y</div><div class="ttdef"><b>Definition:</b> window.test.cpp:29</div></div>
+<div class="ttc" id="aclassrender_data_html_a5c2827e56f67fda16d49f4023dea23a7"><div class="ttname"><a href="../../d1/d9c/classrender_data.html#a5c2827e56f67fda16d49f4023dea23a7">renderData::x</a></div><div class="ttdeci">float x</div><div class="ttdef"><b>Definition:</b> window.test.cpp:29</div></div>
+<div class="ttc" id="astruct_laugh_tale_engine_1_1_key_data_html"><div class="ttname"><a href="../../dc/dd6/struct_laugh_tale_engine_1_1_key_data.html">LaughTaleEngine::KeyData</a></div><div class="ttdef"><b>Definition:</b> events.h:47</div></div>
+<div class="ttc" id="astruct_laugh_tale_engine_1_1_key_data_html_af428af02db7e641c8be9ef2acb9578ff"><div class="ttname"><a href="../../dc/dd6/struct_laugh_tale_engine_1_1_key_data.html#af428af02db7e641c8be9ef2acb9578ff">LaughTaleEngine::KeyData::key</a></div><div class="ttdeci">int key</div><div class="ttdef"><b>Definition:</b> events.h:51</div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../da/d2d/classwindow_test_adc416cf0631f8279e44a7aeaab2c703a_icgraph.png" border="0" usemap="#ada/d2d/classwindow_test_adc416cf0631f8279e44a7aeaab2c703a_icgraph" alt=""/></div>
+<map name="ada/d2d/classwindow_test_adc416cf0631f8279e44a7aeaab2c703a_icgraph" id="ada/d2d/classwindow_test_adc416cf0631f8279e44a7aeaab2c703a_icgraph">
+<area shape="rect" title=" " alt="" coords="109,5,280,32"/>
 <area shape="rect" href="../../d3/d00/window_8test_8cpp.html#a17abbb749ed42b0ea711959029a6cc14" title=" " alt="" coords="5,5,61,32"/>
 </map>
 </div>
@@ -248,45 +309,50 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        {</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            <a class="code" href="../../d1/d9c/classrender_data.html">renderData</a> *renderEntity = <span class="keyword">static_cast&lt;</span><a class="code" href="../../d1/d9c/classrender_data.html">renderData</a> *<span class="keyword">&gt;</span>(eventEntity);</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            <a class="code" href="../../d0/d98/class_laugh_tale_engine_1_1render_api.html">renderApi</a> *api = windowManger::getRenderApi(sendor-&gt;windowId);</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            <a class="code" href="../../d6/dea/class_laugh_tale_engine_1_1renderer.html">renderer</a> *r = windowManger::getRenderer(sendor-&gt;windowId);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            <span class="keywordtype">float</span> mouseX = (float)input::GetMouseX(windowManger::raftelIdToWindowReference(sendor-&gt;windowId)) / windowManger::getWidth(sendor-&gt;windowId);</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            <span class="keywordtype">float</span> mouseY = (float)input::GetMouseY(windowManger::raftelIdToWindowReference(sendor-&gt;windowId)) / windowManger::getHeight(sendor-&gt;windowId);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            api-&gt;<a class="code" href="../../d0/d98/class_laugh_tale_engine_1_1render_api.html#ab72a77330dacba4fee0ccf8156e54173">SetClearColor</a>(glm::vec4((<span class="keywordtype">float</span>)eventEntity-&gt;<a class="code" href="../../dd/d4a/struct_laugh_tale_engine_1_1_i_entity.html#a175f8ceea878e8f0cc81a9c6987c0e53">x</a> / eventEntity-&gt;<a class="code" href="../../dd/d4a/struct_laugh_tale_engine_1_1_i_entity.html#a71320c1323b22a332b0f36b7867e5213">width</a>, (float)eventEntity-&gt;<a class="code" href="../../dd/d4a/struct_laugh_tale_engine_1_1_i_entity.html#a442ba2eba6ff2c6bfa4c92a67038e824">y</a> / eventEntity-&gt;<a class="code" href="../../dd/d4a/struct_laugh_tale_engine_1_1_i_entity.html#a4ffb7ef12235c4d965fea31cf6e5cb1c">hight</a>, 0, 1));</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            api-&gt;<a class="code" href="../../d0/d98/class_laugh_tale_engine_1_1render_api.html#a584d5da18614bc1ff3a5e331df9d4e2b">Clear</a>();</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            windowManger::bindVA(sendor-&gt;windowId, renderEntity-&gt;<a class="code" href="../../d1/d9c/classrender_data.html#aa3aa06831fd92f06ae17d936f7f68a87">vaId</a>);</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            windowManger::bindS(sendor-&gt;windowId, renderEntity-&gt;<a class="code" href="../../d1/d9c/classrender_data.html#a82f80eeef3cf6e01d9312cd84195d922">sId</a>);</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            windowManger::bindIB(sendor-&gt;windowId, renderEntity-&gt;<a class="code" href="../../d1/d9c/classrender_data.html#a5392473d82b1d12bd055462eb3f3c68b">ibId</a>);</div>
+<div class="fragment"><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            <a class="code" href="../../d1/d9c/classrender_data.html">renderData</a> *renderEntity = <span class="keyword">static_cast&lt;</span><a class="code" href="../../d1/d9c/classrender_data.html">renderData</a> *<span class="keyword">&gt;</span>(eventEntity);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            <a class="code" href="../../d0/d98/class_laugh_tale_engine_1_1render_api.html">renderApi</a> *api = windowManger::getRenderApi(sendor-&gt;windowId);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            <a class="code" href="../../d6/dea/class_laugh_tale_engine_1_1renderer.html">renderer</a> *r = windowManger::getRenderer(sendor-&gt;windowId);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            <span class="keywordtype">float</span> mouseX = (float)input::GetMouseX(windowManger::raftelIdToWindowReference(sendor-&gt;windowId)) / windowManger::getWidth(sendor-&gt;windowId);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            <span class="keywordtype">float</span> mouseY = (float)input::GetMouseY(windowManger::raftelIdToWindowReference(sendor-&gt;windowId)) / windowManger::getHeight(sendor-&gt;windowId);</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            </div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <a class="code" href="../../db/de7/class_laugh_tale_engine_1_1shader_manger.html">shaderManger</a> *windowShaderManger = windowManger::getShaderManger(sendor-&gt;windowId);</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <a class="code" href="../../d6/db1/class_laugh_tale_engine_1_1shader.html">shader</a> *s = windowShaderManger-&gt;<a class="code" href="../../db/de7/class_laugh_tale_engine_1_1shader_manger.html#afdb4893d6c59a3f96cb51d72997fb43a">getShader</a>(renderEntity-&gt;<a class="code" href="../../d1/d9c/classrender_data.html#a82f80eeef3cf6e01d9312cd84195d922">sId</a>);</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            s-&gt;<a class="code" href="../../d6/db1/class_laugh_tale_engine_1_1shader.html#a7960bf08b6bb5bccde7ef6a87751871a">setUniform4f</a>(<span class="stringliteral">&quot;colorOffset&quot;</span>, mouseX, 1 - mouseY, 0.0f, 1.0f);</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            s-&gt;<a class="code" href="../../d6/db1/class_laugh_tale_engine_1_1shader.html#ac0bb15f03857aeeeccf436949317d5b4">setUniform1f</a>(<span class="stringliteral">&quot;xOffset&quot;</span>, mouseX * 2 - 1);</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            s-&gt;<a class="code" href="../../d6/db1/class_laugh_tale_engine_1_1shader.html#ac0bb15f03857aeeeccf436949317d5b4">setUniform1f</a>(<span class="stringliteral">&quot;yOffset&quot;</span>, -mouseY * 2 + 1);</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            r-&gt;<a class="code" href="../../d6/dea/class_laugh_tale_engine_1_1renderer.html#a527d6f25b168abccffe1b9eef4d45989">Submit</a>(s, 12);</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        }</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            api-&gt;<a class="code" href="../../d0/d98/class_laugh_tale_engine_1_1render_api.html#ab72a77330dacba4fee0ccf8156e54173">SetClearColor</a>(glm::vec4((<span class="keywordtype">float</span>)eventEntity-&gt;<a class="code" href="../../dd/d4a/struct_laugh_tale_engine_1_1_i_entity.html#a175f8ceea878e8f0cc81a9c6987c0e53">x</a> / eventEntity-&gt;<a class="code" href="../../dd/d4a/struct_laugh_tale_engine_1_1_i_entity.html#a71320c1323b22a332b0f36b7867e5213">width</a>, (float)eventEntity-&gt;<a class="code" href="../../dd/d4a/struct_laugh_tale_engine_1_1_i_entity.html#a442ba2eba6ff2c6bfa4c92a67038e824">y</a> / eventEntity-&gt;<a class="code" href="../../dd/d4a/struct_laugh_tale_engine_1_1_i_entity.html#a4ffb7ef12235c4d965fea31cf6e5cb1c">hight</a>, 0, 1));</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            api-&gt;<a class="code" href="../../d0/d98/class_laugh_tale_engine_1_1render_api.html#a584d5da18614bc1ff3a5e331df9d4e2b">Clear</a>();</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            windowManger::bindVA(sendor-&gt;windowId, renderEntity-&gt;<a class="code" href="../../d1/d9c/classrender_data.html#a796db9e45697733ddd357d3a1de064f5">vaId2</a>);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            windowManger::bindS(sendor-&gt;windowId, renderEntity-&gt;<a class="code" href="../../d1/d9c/classrender_data.html#a82f80eeef3cf6e01d9312cd84195d922">sId</a>);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            windowManger::bindIB(sendor-&gt;windowId, renderEntity-&gt;<a class="code" href="../../d1/d9c/classrender_data.html#a562cfc86bc1dd02033480a10f6403902">ibId2</a>);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            <a class="code" href="../../db/de7/class_laugh_tale_engine_1_1shader_manger.html">shaderManger</a> *windowShaderManger = windowManger::getShaderManger(sendor-&gt;windowId);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            <a class="code" href="../../d6/db1/class_laugh_tale_engine_1_1shader.html">shader</a> *s = windowShaderManger-&gt;<a class="code" href="../../db/de7/class_laugh_tale_engine_1_1shader_manger.html#afdb4893d6c59a3f96cb51d72997fb43a">getShader</a>(renderEntity-&gt;<a class="code" href="../../d1/d9c/classrender_data.html#a82f80eeef3cf6e01d9312cd84195d922">sId</a>);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            s-&gt;<a class="code" href="../../d6/db1/class_laugh_tale_engine_1_1shader.html#a7960bf08b6bb5bccde7ef6a87751871a">setUniform4f</a>(<span class="stringliteral">&quot;colorOffset&quot;</span>, mouseX, 1 - mouseY, 0.0f, 1.0f);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            <a class="code" href="../../d7/d93/class_laugh_tale_engine_1_1core_camera.html">coreCamera</a> *camera = <span class="keyword">new</span> <a class="code" href="../../dd/dc5/class_laugh_tale_engine_1_1orthographic_camera.html">orthographicCamera</a>(-1.6f, 1.6f, -0.9f, 0.9f);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            camera-&gt;<a class="code" href="../../d7/d93/class_laugh_tale_engine_1_1core_camera.html#a30a007d91e6fa52e05fa67aca4740dce">SetPosition</a>({ -(mouseX * 3.2 - 1.6), (mouseY * 1.8 - 0.9), 1.0f});</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            camera-&gt;<a class="code" href="../../d7/d93/class_laugh_tale_engine_1_1core_camera.html#af6afee28c8fd04a3d44bbafeaff5e0bd">setRotation</a>(renderEntity-&gt;<a class="code" href="../../d1/d9c/classrender_data.html#a383de2ebe4446130b5645bab5c2966c0">deg</a>);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            windowManger::setCamera(sendor-&gt;windowId, camera);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            r-&gt;<a class="code" href="../../d6/dea/class_laugh_tale_engine_1_1renderer.html#a8e463b8a9c7ead51728cfc5e1a6228da">Submit</a>(s, 12);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        }</div>
+<div class="ttc" id="aclass_laugh_tale_engine_1_1core_camera_html"><div class="ttname"><a href="../../d7/d93/class_laugh_tale_engine_1_1core_camera.html">LaughTaleEngine::coreCamera</a></div><div class="ttdef"><b>Definition:</b> coreCamera.h:8</div></div>
+<div class="ttc" id="aclass_laugh_tale_engine_1_1core_camera_html_a30a007d91e6fa52e05fa67aca4740dce"><div class="ttname"><a href="../../d7/d93/class_laugh_tale_engine_1_1core_camera.html#a30a007d91e6fa52e05fa67aca4740dce">LaughTaleEngine::coreCamera::SetPosition</a></div><div class="ttdeci">virtual void SetPosition(const glm::vec3 &amp;position)=0</div></div>
+<div class="ttc" id="aclass_laugh_tale_engine_1_1core_camera_html_af6afee28c8fd04a3d44bbafeaff5e0bd"><div class="ttname"><a href="../../d7/d93/class_laugh_tale_engine_1_1core_camera.html#af6afee28c8fd04a3d44bbafeaff5e0bd">LaughTaleEngine::coreCamera::setRotation</a></div><div class="ttdeci">virtual void setRotation(float rotation)=0</div></div>
+<div class="ttc" id="aclass_laugh_tale_engine_1_1orthographic_camera_html"><div class="ttname"><a href="../../dd/dc5/class_laugh_tale_engine_1_1orthographic_camera.html">LaughTaleEngine::orthographicCamera</a></div><div class="ttdef"><b>Definition:</b> orthographicCamera.h:9</div></div>
 <div class="ttc" id="aclass_laugh_tale_engine_1_1render_api_html"><div class="ttname"><a href="../../d0/d98/class_laugh_tale_engine_1_1render_api.html">LaughTaleEngine::renderApi</a></div><div class="ttdef"><b>Definition:</b> renderApi.h:8</div></div>
 <div class="ttc" id="aclass_laugh_tale_engine_1_1render_api_html_a584d5da18614bc1ff3a5e331df9d4e2b"><div class="ttname"><a href="../../d0/d98/class_laugh_tale_engine_1_1render_api.html#a584d5da18614bc1ff3a5e331df9d4e2b">LaughTaleEngine::renderApi::Clear</a></div><div class="ttdeci">virtual void Clear()=0</div></div>
 <div class="ttc" id="aclass_laugh_tale_engine_1_1render_api_html_ab72a77330dacba4fee0ccf8156e54173"><div class="ttname"><a href="../../d0/d98/class_laugh_tale_engine_1_1render_api.html#ab72a77330dacba4fee0ccf8156e54173">LaughTaleEngine::renderApi::SetClearColor</a></div><div class="ttdeci">virtual void SetClearColor(const glm::vec4 &amp;color)=0</div></div>
 <div class="ttc" id="aclass_laugh_tale_engine_1_1renderer_html"><div class="ttname"><a href="../../d6/dea/class_laugh_tale_engine_1_1renderer.html">LaughTaleEngine::renderer</a></div><div class="ttdef"><b>Definition:</b> renderer.h:17</div></div>
-<div class="ttc" id="aclass_laugh_tale_engine_1_1renderer_html_a527d6f25b168abccffe1b9eef4d45989"><div class="ttname"><a href="../../d6/dea/class_laugh_tale_engine_1_1renderer.html#a527d6f25b168abccffe1b9eef4d45989">LaughTaleEngine::renderer::Submit</a></div><div class="ttdeci">void Submit(shader *s, uint32_t count)</div><div class="ttdef"><b>Definition:</b> renderer.cpp:16</div></div>
+<div class="ttc" id="aclass_laugh_tale_engine_1_1renderer_html_a8e463b8a9c7ead51728cfc5e1a6228da"><div class="ttname"><a href="../../d6/dea/class_laugh_tale_engine_1_1renderer.html#a8e463b8a9c7ead51728cfc5e1a6228da">LaughTaleEngine::renderer::Submit</a></div><div class="ttdeci">void Submit(shader *s, uint32_t count, glm::mat4 transform=glm::mat4(1.0f))</div><div class="ttdef"><b>Definition:</b> renderer.cpp:19</div></div>
 <div class="ttc" id="aclass_laugh_tale_engine_1_1shader_html"><div class="ttname"><a href="../../d6/db1/class_laugh_tale_engine_1_1shader.html">LaughTaleEngine::shader</a></div><div class="ttdef"><b>Definition:</b> shader.h:10</div></div>
 <div class="ttc" id="aclass_laugh_tale_engine_1_1shader_html_a7960bf08b6bb5bccde7ef6a87751871a"><div class="ttname"><a href="../../d6/db1/class_laugh_tale_engine_1_1shader.html#a7960bf08b6bb5bccde7ef6a87751871a">LaughTaleEngine::shader::setUniform4f</a></div><div class="ttdeci">virtual void setUniform4f(const std::string &amp;name, float v0, float v1, float v2, float v3)=0</div></div>
-<div class="ttc" id="aclass_laugh_tale_engine_1_1shader_html_ac0bb15f03857aeeeccf436949317d5b4"><div class="ttname"><a href="../../d6/db1/class_laugh_tale_engine_1_1shader.html#ac0bb15f03857aeeeccf436949317d5b4">LaughTaleEngine::shader::setUniform1f</a></div><div class="ttdeci">virtual void setUniform1f(const std::string &amp;name, float value)=0</div></div>
 <div class="ttc" id="aclass_laugh_tale_engine_1_1shader_manger_html"><div class="ttname"><a href="../../db/de7/class_laugh_tale_engine_1_1shader_manger.html">LaughTaleEngine::shaderManger</a></div><div class="ttdef"><b>Definition:</b> shaderManger.h:10</div></div>
 <div class="ttc" id="aclass_laugh_tale_engine_1_1shader_manger_html_afdb4893d6c59a3f96cb51d72997fb43a"><div class="ttname"><a href="../../db/de7/class_laugh_tale_engine_1_1shader_manger.html#afdb4893d6c59a3f96cb51d72997fb43a">LaughTaleEngine::shaderManger::getShader</a></div><div class="ttdeci">shader * getShader(shaderId id)</div><div class="ttdef"><b>Definition:</b> shaderManger.cpp:38</div></div>
-<div class="ttc" id="aclassrender_data_html"><div class="ttname"><a href="../../d1/d9c/classrender_data.html">renderData</a></div><div class="ttdef"><b>Definition:</b> window.test.cpp:16</div></div>
-<div class="ttc" id="aclassrender_data_html_a5392473d82b1d12bd055462eb3f3c68b"><div class="ttname"><a href="../../d1/d9c/classrender_data.html#a5392473d82b1d12bd055462eb3f3c68b">renderData::ibId</a></div><div class="ttdeci">indexBufferId ibId</div><div class="ttdef"><b>Definition:</b> window.test.cpp:19</div></div>
-<div class="ttc" id="aclassrender_data_html_a82f80eeef3cf6e01d9312cd84195d922"><div class="ttname"><a href="../../d1/d9c/classrender_data.html#a82f80eeef3cf6e01d9312cd84195d922">renderData::sId</a></div><div class="ttdeci">shaderId sId</div><div class="ttdef"><b>Definition:</b> window.test.cpp:21</div></div>
-<div class="ttc" id="aclassrender_data_html_aa3aa06831fd92f06ae17d936f7f68a87"><div class="ttname"><a href="../../d1/d9c/classrender_data.html#aa3aa06831fd92f06ae17d936f7f68a87">renderData::vaId</a></div><div class="ttdeci">vertexArrayId vaId</div><div class="ttdef"><b>Definition:</b> window.test.cpp:20</div></div>
+<div class="ttc" id="aclassrender_data_html_a562cfc86bc1dd02033480a10f6403902"><div class="ttname"><a href="../../d1/d9c/classrender_data.html#a562cfc86bc1dd02033480a10f6403902">renderData::ibId2</a></div><div class="ttdeci">indexBufferId ibId2</div><div class="ttdef"><b>Definition:</b> window.test.cpp:25</div></div>
+<div class="ttc" id="aclassrender_data_html_a796db9e45697733ddd357d3a1de064f5"><div class="ttname"><a href="../../d1/d9c/classrender_data.html#a796db9e45697733ddd357d3a1de064f5">renderData::vaId2</a></div><div class="ttdeci">vertexArrayId vaId2</div><div class="ttdef"><b>Definition:</b> window.test.cpp:26</div></div>
+<div class="ttc" id="aclassrender_data_html_a82f80eeef3cf6e01d9312cd84195d922"><div class="ttname"><a href="../../d1/d9c/classrender_data.html#a82f80eeef3cf6e01d9312cd84195d922">renderData::sId</a></div><div class="ttdeci">shaderId sId</div><div class="ttdef"><b>Definition:</b> window.test.cpp:27</div></div>
 <div class="ttc" id="astruct_laugh_tale_engine_1_1_i_entity_html_a4ffb7ef12235c4d965fea31cf6e5cb1c"><div class="ttname"><a href="../../dd/d4a/struct_laugh_tale_engine_1_1_i_entity.html#a4ffb7ef12235c4d965fea31cf6e5cb1c">LaughTaleEngine::IEntity::hight</a></div><div class="ttdeci">int hight</div><div class="ttdef"><b>Definition:</b> entity.h:12</div></div>
 <div class="ttc" id="astruct_laugh_tale_engine_1_1_i_entity_html_a71320c1323b22a332b0f36b7867e5213"><div class="ttname"><a href="../../dd/d4a/struct_laugh_tale_engine_1_1_i_entity.html#a71320c1323b22a332b0f36b7867e5213">LaughTaleEngine::IEntity::width</a></div><div class="ttdeci">int width</div><div class="ttdef"><b>Definition:</b> entity.h:12</div></div>
 </div><!-- fragment --><div class="dynheader">
@@ -294,7 +360,7 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../da/d2d/classwindow_test_afb45f394cbc7c14f78f15d7bb720e0df_cgraph.png" border="0" usemap="#ada/d2d/classwindow_test_afb45f394cbc7c14f78f15d7bb720e0df_cgraph" alt=""/></div>
 <map name="ada/d2d/classwindow_test_afb45f394cbc7c14f78f15d7bb720e0df_cgraph" id="ada/d2d/classwindow_test_afb45f394cbc7c14f78f15d7bb720e0df_cgraph">
-<area shape="rect" title=" " alt="" coords="5,470,191,497"/>
+<area shape="rect" title=" " alt="" coords="5,535,191,562"/>
 <area shape="rect" href="../../da/d17/class_laugh_tale_engine_1_1window_manger.html#ac9ffc0c2e2e8c243e99a26f881fb5475" title=" " alt="" coords="239,5,455,47"/>
 <area shape="rect" href="../../da/d17/class_laugh_tale_engine_1_1window_manger.html#a9803b52f460733ab78aae3c03f1ee97c" title=" " alt="" coords="239,71,455,112"/>
 <area shape="rect" href="../../da/d17/class_laugh_tale_engine_1_1window_manger.html#a13545b139218aba1d2b04ec8145348c0" title=" " alt="" coords="239,136,455,177"/>
@@ -306,14 +372,16 @@ Here is the call graph for this function:</div>
 <area shape="rect" href="../../da/d17/class_laugh_tale_engine_1_1window_manger.html#af876123ce22fc998c60e8d9863c5fee0" title=" " alt="" coords="239,528,455,569"/>
 <area shape="rect" href="../../da/d17/class_laugh_tale_engine_1_1window_manger.html#a33a838e99370c4eaf309b33dd188cb7b" title=" " alt="" coords="239,593,455,635"/>
 <area shape="rect" href="../../da/d17/class_laugh_tale_engine_1_1window_manger.html#acfbb3676c0147d387df530c077ade285" title=" " alt="" coords="239,659,455,700"/>
-<area shape="rect" href="../../d0/d98/class_laugh_tale_engine_1_1render_api.html#ab72a77330dacba4fee0ccf8156e54173" title=" " alt="" coords="255,724,439,765"/>
-<area shape="rect" href="../../d6/db1/class_laugh_tale_engine_1_1shader.html#ac0bb15f03857aeeeccf436949317d5b4" title=" " alt="" coords="263,789,431,831"/>
-<area shape="rect" href="../../d6/db1/class_laugh_tale_engine_1_1shader.html#a7960bf08b6bb5bccde7ef6a87751871a" title=" " alt="" coords="263,855,431,896"/>
-<area shape="rect" href="../../d6/dea/class_laugh_tale_engine_1_1renderer.html#a527d6f25b168abccffe1b9eef4d45989" title=" " alt="" coords="259,920,435,961"/>
-<area shape="rect" href="../../d6/db1/class_laugh_tale_engine_1_1shader.html#aba1e7a8cf4bb45789a29e00395142bc4" title=" " alt="" coords="519,821,687,863"/>
-<area shape="rect" href="../../d0/d98/class_laugh_tale_engine_1_1render_api.html#a1b102e3b35c2955f240ea09393f22639" title=" " alt="" coords="511,887,695,928"/>
-<area shape="rect" href="../../d7/d93/class_laugh_tale_engine_1_1core_camera.html#ac547c86c5fabf2173fb7634069f0d801" title=" " alt="" coords="503,952,703,993"/>
-<area shape="rect" href="../../d6/db1/class_laugh_tale_engine_1_1shader.html#ada4019ac27725e80f2764d6771f9559d" title=" " alt="" coords="519,1017,687,1059"/>
+<area shape="rect" href="../../da/d17/class_laugh_tale_engine_1_1window_manger.html#a0533081a17a2889af0d47231d16d70d4" title=" " alt="" coords="239,724,455,765"/>
+<area shape="rect" href="../../d0/d98/class_laugh_tale_engine_1_1render_api.html#ab72a77330dacba4fee0ccf8156e54173" title=" " alt="" coords="255,789,439,831"/>
+<area shape="rect" href="../../d7/d93/class_laugh_tale_engine_1_1core_camera.html#a30a007d91e6fa52e05fa67aca4740dce" title=" " alt="" coords="247,855,447,896"/>
+<area shape="rect" href="../../d7/d93/class_laugh_tale_engine_1_1core_camera.html#af6afee28c8fd04a3d44bbafeaff5e0bd" title=" " alt="" coords="247,920,447,961"/>
+<area shape="rect" href="../../d6/db1/class_laugh_tale_engine_1_1shader.html#a7960bf08b6bb5bccde7ef6a87751871a" title=" " alt="" coords="263,985,431,1027"/>
+<area shape="rect" href="../../d6/dea/class_laugh_tale_engine_1_1renderer.html#a8e463b8a9c7ead51728cfc5e1a6228da" title=" " alt="" coords="259,1051,435,1092"/>
+<area shape="rect" href="../../d6/db1/class_laugh_tale_engine_1_1shader.html#aba1e7a8cf4bb45789a29e00395142bc4" title=" " alt="" coords="519,952,687,993"/>
+<area shape="rect" href="../../d0/d98/class_laugh_tale_engine_1_1render_api.html#a1b102e3b35c2955f240ea09393f22639" title=" " alt="" coords="511,1017,695,1059"/>
+<area shape="rect" href="../../d7/d93/class_laugh_tale_engine_1_1core_camera.html#ac547c86c5fabf2173fb7634069f0d801" title=" " alt="" coords="503,1083,703,1124"/>
+<area shape="rect" href="../../d6/db1/class_laugh_tale_engine_1_1shader.html#ada4019ac27725e80f2764d6771f9559d" title=" " alt="" coords="519,1148,687,1189"/>
 </map>
 </div>
 <div class="dynheader">
@@ -361,40 +429,61 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        {</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            <a class="code" href="../../d1/d9c/classrender_data.html">renderData</a> *renderEntity = <span class="keyword">static_cast&lt;</span><a class="code" href="../../d1/d9c/classrender_data.html">renderData</a> *<span class="keyword">&gt;</span>(eventEntity);</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            <a class="code" href="../../d0/d98/class_laugh_tale_engine_1_1render_api.html">renderApi</a> *api = windowManger::getRenderApi(sendor-&gt;<a class="code" href="../../dd/db7/struct_laugh_tale_engine_1_1_i_event_data.html#adf79f257057bfa4a047f3f0b70a6d160">windowId</a>);</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            <a class="code" href="../../d6/dea/class_laugh_tale_engine_1_1renderer.html">renderer</a> *r = windowManger::getRenderer(sendor-&gt;<a class="code" href="../../dd/db7/struct_laugh_tale_engine_1_1_i_event_data.html#adf79f257057bfa4a047f3f0b70a6d160">windowId</a>);</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            <span class="keywordtype">float</span> mouseX = </div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                (float)input::GetMouseX(windowManger::raftelIdToWindowReference(sendor-&gt;<a class="code" href="../../dd/db7/struct_laugh_tale_engine_1_1_i_event_data.html#adf79f257057bfa4a047f3f0b70a6d160">windowId</a>)) / </div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                windowManger::getWidth(sendor-&gt;<a class="code" href="../../dd/db7/struct_laugh_tale_engine_1_1_i_event_data.html#adf79f257057bfa4a047f3f0b70a6d160">windowId</a>);</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            <span class="keywordtype">float</span> mouseY = </div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                (float)input::GetMouseY(windowManger::raftelIdToWindowReference(sendor-&gt;<a class="code" href="../../dd/db7/struct_laugh_tale_engine_1_1_i_event_data.html#adf79f257057bfa4a047f3f0b70a6d160">windowId</a>)) / </div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                windowManger::getHeight(sendor-&gt;<a class="code" href="../../dd/db7/struct_laugh_tale_engine_1_1_i_event_data.html#adf79f257057bfa4a047f3f0b70a6d160">windowId</a>);</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            api-&gt;<a class="code" href="../../d0/d98/class_laugh_tale_engine_1_1render_api.html#ab72a77330dacba4fee0ccf8156e54173">SetClearColor</a>(glm::vec4(mouseX, mouseY, 1, 1));</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            api-&gt;<a class="code" href="../../d0/d98/class_laugh_tale_engine_1_1render_api.html#a584d5da18614bc1ff3a5e331df9d4e2b">Clear</a>();</div>
+<div class="fragment"><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        {</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            <a class="code" href="../../d1/d9c/classrender_data.html">renderData</a> *renderEntity = <span class="keyword">static_cast&lt;</span><a class="code" href="../../d1/d9c/classrender_data.html">renderData</a> *<span class="keyword">&gt;</span>(eventEntity);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            <a class="code" href="../../d0/d98/class_laugh_tale_engine_1_1render_api.html">renderApi</a> *api = windowManger::getRenderApi(sendor-&gt;<a class="code" href="../../dd/db7/struct_laugh_tale_engine_1_1_i_event_data.html#adf79f257057bfa4a047f3f0b70a6d160">windowId</a>);</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            windowManger::bindVA(sendor-&gt;<a class="code" href="../../dd/db7/struct_laugh_tale_engine_1_1_i_event_data.html#adf79f257057bfa4a047f3f0b70a6d160">windowId</a>, renderEntity-&gt;<a class="code" href="../../d1/d9c/classrender_data.html#aa3aa06831fd92f06ae17d936f7f68a87">vaId</a>);</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            windowManger::bindS(sendor-&gt;<a class="code" href="../../dd/db7/struct_laugh_tale_engine_1_1_i_event_data.html#adf79f257057bfa4a047f3f0b70a6d160">windowId</a>, renderEntity-&gt;<a class="code" href="../../d1/d9c/classrender_data.html#a82f80eeef3cf6e01d9312cd84195d922">sId</a>);</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            windowManger::bindIB(sendor-&gt;<a class="code" href="../../dd/db7/struct_laugh_tale_engine_1_1_i_event_data.html#adf79f257057bfa4a047f3f0b70a6d160">windowId</a>, renderEntity-&gt;<a class="code" href="../../d1/d9c/classrender_data.html#a5392473d82b1d12bd055462eb3f3c68b">ibId</a>);</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            </div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            <a class="code" href="../../db/de7/class_laugh_tale_engine_1_1shader_manger.html">shaderManger</a> *windowShaderManger = windowManger::getShaderManger(sendor-&gt;<a class="code" href="../../dd/db7/struct_laugh_tale_engine_1_1_i_event_data.html#adf79f257057bfa4a047f3f0b70a6d160">windowId</a>);</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            <a class="code" href="../../d6/db1/class_laugh_tale_engine_1_1shader.html">shader</a> *s = windowShaderManger-&gt;<a class="code" href="../../db/de7/class_laugh_tale_engine_1_1shader_manger.html#afdb4893d6c59a3f96cb51d72997fb43a">getShader</a>(renderEntity-&gt;<a class="code" href="../../d1/d9c/classrender_data.html#a82f80eeef3cf6e01d9312cd84195d922">sId</a>);</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            s-&gt;<a class="code" href="../../d6/db1/class_laugh_tale_engine_1_1shader.html#a7960bf08b6bb5bccde7ef6a87751871a">setUniform4f</a>(<span class="stringliteral">&quot;colorOffset&quot;</span>, mouseX, 1 - mouseY, 0.0f, 1.0f);</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            s-&gt;<a class="code" href="../../d6/db1/class_laugh_tale_engine_1_1shader.html#ac0bb15f03857aeeeccf436949317d5b4">setUniform1f</a>(<span class="stringliteral">&quot;xOffset&quot;</span>, mouseX * 2 - 1);</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            s-&gt;<a class="code" href="../../d6/db1/class_laugh_tale_engine_1_1shader.html#ac0bb15f03857aeeeccf436949317d5b4">setUniform1f</a>(<span class="stringliteral">&quot;yOffset&quot;</span>, -mouseY * 2 + 1);</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            r-&gt;<a class="code" href="../../d6/dea/class_laugh_tale_engine_1_1renderer.html#a527d6f25b168abccffe1b9eef4d45989">Submit</a>(s, windowManger::getIndexBufferCount(sendor-&gt;<a class="code" href="../../dd/db7/struct_laugh_tale_engine_1_1_i_event_data.html#adf79f257057bfa4a047f3f0b70a6d160">windowId</a>, renderEntity-&gt;<a class="code" href="../../d1/d9c/classrender_data.html#a5392473d82b1d12bd055462eb3f3c68b">ibId</a>));</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        }</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            <span class="keywordtype">float</span> mouseX = </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                (float)input::GetMouseX(windowManger::raftelIdToWindowReference(sendor-&gt;<a class="code" href="../../dd/db7/struct_laugh_tale_engine_1_1_i_event_data.html#adf79f257057bfa4a047f3f0b70a6d160">windowId</a>)) / </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                windowManger::getWidth(sendor-&gt;<a class="code" href="../../dd/db7/struct_laugh_tale_engine_1_1_i_event_data.html#adf79f257057bfa4a047f3f0b70a6d160">windowId</a>);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            <span class="keywordtype">float</span> mouseY = </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                (float)input::GetMouseY(windowManger::raftelIdToWindowReference(sendor-&gt;<a class="code" href="../../dd/db7/struct_laugh_tale_engine_1_1_i_event_data.html#adf79f257057bfa4a047f3f0b70a6d160">windowId</a>)) / </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                windowManger::getHeight(sendor-&gt;<a class="code" href="../../dd/db7/struct_laugh_tale_engine_1_1_i_event_data.html#adf79f257057bfa4a047f3f0b70a6d160">windowId</a>);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            api-&gt;<a class="code" href="../../d0/d98/class_laugh_tale_engine_1_1render_api.html#ab72a77330dacba4fee0ccf8156e54173">SetClearColor</a>(glm::vec4(mouseX, mouseY, 1, 1));</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            api-&gt;<a class="code" href="../../d0/d98/class_laugh_tale_engine_1_1render_api.html#a584d5da18614bc1ff3a5e331df9d4e2b">Clear</a>();</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            <a class="code" href="../../d6/dea/class_laugh_tale_engine_1_1renderer.html">renderer</a> *r = windowManger::getRenderer(sendor-&gt;<a class="code" href="../../dd/db7/struct_laugh_tale_engine_1_1_i_event_data.html#adf79f257057bfa4a047f3f0b70a6d160">windowId</a>);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            <a class="code" href="../../db/de7/class_laugh_tale_engine_1_1shader_manger.html">shaderManger</a> *windowShaderManger = windowManger::getShaderManger(sendor-&gt;<a class="code" href="../../dd/db7/struct_laugh_tale_engine_1_1_i_event_data.html#adf79f257057bfa4a047f3f0b70a6d160">windowId</a>);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            <a class="code" href="../../d6/db1/class_laugh_tale_engine_1_1shader.html">shader</a> *s = windowShaderManger-&gt;<a class="code" href="../../db/de7/class_laugh_tale_engine_1_1shader_manger.html#afdb4893d6c59a3f96cb51d72997fb43a">getShader</a>(renderEntity-&gt;<a class="code" href="../../d1/d9c/classrender_data.html#a82f80eeef3cf6e01d9312cd84195d922">sId</a>);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            windowManger::bindVA(sendor-&gt;<a class="code" href="../../dd/db7/struct_laugh_tale_engine_1_1_i_event_data.html#adf79f257057bfa4a047f3f0b70a6d160">windowId</a>, renderEntity-&gt;<a class="code" href="../../d1/d9c/classrender_data.html#aa3aa06831fd92f06ae17d936f7f68a87">vaId</a>);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            windowManger::bindIB(sendor-&gt;<a class="code" href="../../dd/db7/struct_laugh_tale_engine_1_1_i_event_data.html#adf79f257057bfa4a047f3f0b70a6d160">windowId</a>, renderEntity-&gt;<a class="code" href="../../d1/d9c/classrender_data.html#a5392473d82b1d12bd055462eb3f3c68b">ibId</a>);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            s-&gt;<a class="code" href="../../d6/db1/class_laugh_tale_engine_1_1shader.html#a7960bf08b6bb5bccde7ef6a87751871a">setUniform4f</a>(<span class="stringliteral">&quot;colorOffset&quot;</span>, 1.0f, 1.0f, 0.0f, 1.0f);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;            <span class="keyword">static</span> glm::mat4 scale = glm::scale(glm::mat4(1.0f), glm::vec3(0.1f));</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> x = -10; x &lt; 10; x++)</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;            {</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> y = -10; y &lt; 10; y++)</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;                {</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                    glm::vec3 pos(x * 0.101f, y * 0.101f, 0.0f);</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                    glm::mat4 transform = glm::translate(glm::mat4(1.0f), pos) * scale;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;                    r-&gt;<a class="code" href="../../d6/dea/class_laugh_tale_engine_1_1renderer.html#a8e463b8a9c7ead51728cfc5e1a6228da">Submit</a>(s, windowManger::getIndexBufferCount(sendor-&gt;<a class="code" href="../../dd/db7/struct_laugh_tale_engine_1_1_i_event_data.html#adf79f257057bfa4a047f3f0b70a6d160">windowId</a>, renderEntity-&gt;<a class="code" href="../../d1/d9c/classrender_data.html#a5392473d82b1d12bd055462eb3f3c68b">ibId</a>), transform);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;                }</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            }</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; </div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;            windowManger::bindVA(sendor-&gt;<a class="code" href="../../dd/db7/struct_laugh_tale_engine_1_1_i_event_data.html#adf79f257057bfa4a047f3f0b70a6d160">windowId</a>, renderEntity-&gt;<a class="code" href="../../d1/d9c/classrender_data.html#a796db9e45697733ddd357d3a1de064f5">vaId2</a>);</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;            windowManger::bindS(sendor-&gt;<a class="code" href="../../dd/db7/struct_laugh_tale_engine_1_1_i_event_data.html#adf79f257057bfa4a047f3f0b70a6d160">windowId</a>, renderEntity-&gt;<a class="code" href="../../d1/d9c/classrender_data.html#a82f80eeef3cf6e01d9312cd84195d922">sId</a>);</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;            windowManger::bindIB(sendor-&gt;<a class="code" href="../../dd/db7/struct_laugh_tale_engine_1_1_i_event_data.html#adf79f257057bfa4a047f3f0b70a6d160">windowId</a>, renderEntity-&gt;<a class="code" href="../../d1/d9c/classrender_data.html#a562cfc86bc1dd02033480a10f6403902">ibId2</a>);</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;            </div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;            s-&gt;<a class="code" href="../../d6/db1/class_laugh_tale_engine_1_1shader.html#a7960bf08b6bb5bccde7ef6a87751871a">setUniform4f</a>(<span class="stringliteral">&quot;colorOffset&quot;</span>, mouseX, 1 - mouseY, 0.0f, 1.0f);</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;            </div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;            <a class="code" href="../../d7/d93/class_laugh_tale_engine_1_1core_camera.html">coreCamera</a> *camera = <span class="keyword">new</span> <a class="code" href="../../dd/dc5/class_laugh_tale_engine_1_1orthographic_camera.html">orthographicCamera</a>(-1.6f, 1.6f, -0.9f, 0.9f);            </div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;            camera-&gt;<a class="code" href="../../d7/d93/class_laugh_tale_engine_1_1core_camera.html#af6afee28c8fd04a3d44bbafeaff5e0bd">setRotation</a>(renderEntity-&gt;<a class="code" href="../../d1/d9c/classrender_data.html#a383de2ebe4446130b5645bab5c2966c0">deg</a>);</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;            windowManger::setCamera(sendor-&gt;<a class="code" href="../../dd/db7/struct_laugh_tale_engine_1_1_i_event_data.html#adf79f257057bfa4a047f3f0b70a6d160">windowId</a>, camera);</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;            r-&gt;<a class="code" href="../../d6/dea/class_laugh_tale_engine_1_1renderer.html#a8e463b8a9c7ead51728cfc5e1a6228da">Submit</a>(s, windowManger::getIndexBufferCount(sendor-&gt;<a class="code" href="../../dd/db7/struct_laugh_tale_engine_1_1_i_event_data.html#adf79f257057bfa4a047f3f0b70a6d160">windowId</a>, renderEntity-&gt;<a class="code" href="../../d1/d9c/classrender_data.html#a562cfc86bc1dd02033480a10f6403902">ibId2</a>), glm::translate(glm::mat4(1.0f), { (mouseX * 3.2 - 1.6), -(mouseY * 1.8 - 0.9), 1.0f}) * scale);</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160; </div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        }</div>
+<div class="ttc" id="aclassrender_data_html_a5392473d82b1d12bd055462eb3f3c68b"><div class="ttname"><a href="../../d1/d9c/classrender_data.html#a5392473d82b1d12bd055462eb3f3c68b">renderData::ibId</a></div><div class="ttdeci">indexBufferId ibId</div><div class="ttdef"><b>Definition:</b> window.test.cpp:22</div></div>
+<div class="ttc" id="aclassrender_data_html_aa3aa06831fd92f06ae17d936f7f68a87"><div class="ttname"><a href="../../d1/d9c/classrender_data.html#aa3aa06831fd92f06ae17d936f7f68a87">renderData::vaId</a></div><div class="ttdeci">vertexArrayId vaId</div><div class="ttdef"><b>Definition:</b> window.test.cpp:23</div></div>
 <div class="ttc" id="astruct_laugh_tale_engine_1_1_i_event_data_html_adf79f257057bfa4a047f3f0b70a6d160"><div class="ttname"><a href="../../dd/db7/struct_laugh_tale_engine_1_1_i_event_data.html#adf79f257057bfa4a047f3f0b70a6d160">LaughTaleEngine::IEventData::windowId</a></div><div class="ttdeci">windowPieceId windowId</div><div class="ttdef"><b>Definition:</b> events.h:33</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../da/d2d/classwindow_test_ab150ebf55674ef1a1bc2c2045def4ac4_cgraph.png" border="0" usemap="#ada/d2d/classwindow_test_ab150ebf55674ef1a1bc2c2045def4ac4_cgraph" alt=""/></div>
 <map name="ada/d2d/classwindow_test_ab150ebf55674ef1a1bc2c2045def4ac4_cgraph" id="ada/d2d/classwindow_test_ab150ebf55674ef1a1bc2c2045def4ac4_cgraph">
-<area shape="rect" title=" " alt="" coords="5,503,191,530"/>
+<area shape="rect" title=" " alt="" coords="5,535,191,562"/>
 <area shape="rect" href="../../da/d17/class_laugh_tale_engine_1_1window_manger.html#ac9ffc0c2e2e8c243e99a26f881fb5475" title=" " alt="" coords="239,5,455,47"/>
 <area shape="rect" href="../../da/d17/class_laugh_tale_engine_1_1window_manger.html#a9803b52f460733ab78aae3c03f1ee97c" title=" " alt="" coords="239,71,455,112"/>
 <area shape="rect" href="../../da/d17/class_laugh_tale_engine_1_1window_manger.html#a13545b139218aba1d2b04ec8145348c0" title=" " alt="" coords="239,136,455,177"/>
@@ -407,14 +496,15 @@ Here is the call graph for this function:</div>
 <area shape="rect" href="../../da/d17/class_laugh_tale_engine_1_1window_manger.html#af876123ce22fc998c60e8d9863c5fee0" title=" " alt="" coords="239,593,455,635"/>
 <area shape="rect" href="../../da/d17/class_laugh_tale_engine_1_1window_manger.html#a33a838e99370c4eaf309b33dd188cb7b" title=" " alt="" coords="239,659,455,700"/>
 <area shape="rect" href="../../da/d17/class_laugh_tale_engine_1_1window_manger.html#acfbb3676c0147d387df530c077ade285" title=" " alt="" coords="239,724,455,765"/>
-<area shape="rect" href="../../d0/d98/class_laugh_tale_engine_1_1render_api.html#ab72a77330dacba4fee0ccf8156e54173" title=" " alt="" coords="255,789,439,831"/>
-<area shape="rect" href="../../d6/db1/class_laugh_tale_engine_1_1shader.html#ac0bb15f03857aeeeccf436949317d5b4" title=" " alt="" coords="263,855,431,896"/>
-<area shape="rect" href="../../d6/db1/class_laugh_tale_engine_1_1shader.html#a7960bf08b6bb5bccde7ef6a87751871a" title=" " alt="" coords="263,920,431,961"/>
-<area shape="rect" href="../../d6/dea/class_laugh_tale_engine_1_1renderer.html#a527d6f25b168abccffe1b9eef4d45989" title=" " alt="" coords="259,985,435,1027"/>
-<area shape="rect" href="../../d6/db1/class_laugh_tale_engine_1_1shader.html#aba1e7a8cf4bb45789a29e00395142bc4" title=" " alt="" coords="519,887,687,928"/>
-<area shape="rect" href="../../d0/d98/class_laugh_tale_engine_1_1render_api.html#a1b102e3b35c2955f240ea09393f22639" title=" " alt="" coords="511,952,695,993"/>
-<area shape="rect" href="../../d7/d93/class_laugh_tale_engine_1_1core_camera.html#ac547c86c5fabf2173fb7634069f0d801" title=" " alt="" coords="503,1017,703,1059"/>
-<area shape="rect" href="../../d6/db1/class_laugh_tale_engine_1_1shader.html#ada4019ac27725e80f2764d6771f9559d" title=" " alt="" coords="519,1083,687,1124"/>
+<area shape="rect" href="../../da/d17/class_laugh_tale_engine_1_1window_manger.html#a0533081a17a2889af0d47231d16d70d4" title=" " alt="" coords="239,789,455,831"/>
+<area shape="rect" href="../../d0/d98/class_laugh_tale_engine_1_1render_api.html#ab72a77330dacba4fee0ccf8156e54173" title=" " alt="" coords="255,855,439,896"/>
+<area shape="rect" href="../../d7/d93/class_laugh_tale_engine_1_1core_camera.html#af6afee28c8fd04a3d44bbafeaff5e0bd" title=" " alt="" coords="247,920,447,961"/>
+<area shape="rect" href="../../d6/db1/class_laugh_tale_engine_1_1shader.html#a7960bf08b6bb5bccde7ef6a87751871a" title=" " alt="" coords="263,985,431,1027"/>
+<area shape="rect" href="../../d6/dea/class_laugh_tale_engine_1_1renderer.html#a8e463b8a9c7ead51728cfc5e1a6228da" title=" " alt="" coords="259,1051,435,1092"/>
+<area shape="rect" href="../../d6/db1/class_laugh_tale_engine_1_1shader.html#aba1e7a8cf4bb45789a29e00395142bc4" title=" " alt="" coords="519,952,687,993"/>
+<area shape="rect" href="../../d0/d98/class_laugh_tale_engine_1_1render_api.html#a1b102e3b35c2955f240ea09393f22639" title=" " alt="" coords="511,1017,695,1059"/>
+<area shape="rect" href="../../d7/d93/class_laugh_tale_engine_1_1core_camera.html#ac547c86c5fabf2173fb7634069f0d801" title=" " alt="" coords="503,1083,703,1124"/>
+<area shape="rect" href="../../d6/db1/class_laugh_tale_engine_1_1shader.html#ada4019ac27725e80f2764d6771f9559d" title=" " alt="" coords="519,1148,687,1189"/>
 </map>
 </div>
 <div class="dynheader">
@@ -462,9 +552,9 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        {</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            app::keepRunning = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        }</div>
+<div class="fragment"><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            app::keepRunning = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        }</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -510,11 +600,11 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        {</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            <a class="code" href="../../d3/da4/struct_laugh_tale_engine_1_1_window_resize_data.html">WindowResizeData</a>* sendorData = <span class="keyword">dynamic_cast&lt;</span><a class="code" href="../../d3/da4/struct_laugh_tale_engine_1_1_window_resize_data.html">WindowResizeData</a>*<span class="keyword">&gt;</span>(sendor);</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            eventEntity-&gt;<a class="code" href="../../dd/d4a/struct_laugh_tale_engine_1_1_i_entity.html#a71320c1323b22a332b0f36b7867e5213">width</a> = sendorData-&gt;<a class="code" href="../../d3/da4/struct_laugh_tale_engine_1_1_window_resize_data.html#ac39c39264b76bc9092c30b84778bfeed">windowWidth</a>;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            eventEntity-&gt;<a class="code" href="../../dd/d4a/struct_laugh_tale_engine_1_1_i_entity.html#a4ffb7ef12235c4d965fea31cf6e5cb1c">hight</a> = sendorData-&gt;<a class="code" href="../../d3/da4/struct_laugh_tale_engine_1_1_window_resize_data.html#a6cf4134ba773178225c389e10e941682">windowHeight</a>;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        }</div>
+<div class="fragment"><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            <a class="code" href="../../d3/da4/struct_laugh_tale_engine_1_1_window_resize_data.html">WindowResizeData</a>* sendorData = <span class="keyword">dynamic_cast&lt;</span><a class="code" href="../../d3/da4/struct_laugh_tale_engine_1_1_window_resize_data.html">WindowResizeData</a>*<span class="keyword">&gt;</span>(sendor);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            eventEntity-&gt;<a class="code" href="../../dd/d4a/struct_laugh_tale_engine_1_1_i_entity.html#a71320c1323b22a332b0f36b7867e5213">width</a> = sendorData-&gt;<a class="code" href="../../d3/da4/struct_laugh_tale_engine_1_1_window_resize_data.html#ac39c39264b76bc9092c30b84778bfeed">windowWidth</a>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            eventEntity-&gt;<a class="code" href="../../dd/d4a/struct_laugh_tale_engine_1_1_i_entity.html#a4ffb7ef12235c4d965fea31cf6e5cb1c">hight</a> = sendorData-&gt;<a class="code" href="../../d3/da4/struct_laugh_tale_engine_1_1_window_resize_data.html#a6cf4134ba773178225c389e10e941682">windowHeight</a>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        }</div>
 <div class="ttc" id="astruct_laugh_tale_engine_1_1_window_resize_data_html"><div class="ttname"><a href="../../d3/da4/struct_laugh_tale_engine_1_1_window_resize_data.html">LaughTaleEngine::WindowResizeData</a></div><div class="ttdef"><b>Definition:</b> events.h:37</div></div>
 <div class="ttc" id="astruct_laugh_tale_engine_1_1_window_resize_data_html_a6cf4134ba773178225c389e10e941682"><div class="ttname"><a href="../../d3/da4/struct_laugh_tale_engine_1_1_window_resize_data.html#a6cf4134ba773178225c389e10e941682">LaughTaleEngine::WindowResizeData::windowHeight</a></div><div class="ttdeci">int windowHeight</div><div class="ttdef"><b>Definition:</b> events.h:41</div></div>
 <div class="ttc" id="astruct_laugh_tale_engine_1_1_window_resize_data_html_ac39c39264b76bc9092c30b84778bfeed"><div class="ttname"><a href="../../d3/da4/struct_laugh_tale_engine_1_1_window_resize_data.html#ac39c39264b76bc9092c30b84778bfeed">LaughTaleEngine::WindowResizeData::windowWidth</a></div><div class="ttdeci">int windowWidth</div><div class="ttdef"><b>Definition:</b> events.h:41</div></div>

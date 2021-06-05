@@ -1,5 +1,5 @@
 <map id="TEST" name="TEST">
-<area shape="rect" id="node1" title=" " alt="" coords="5,1076,61,1103"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,1102,61,1128"/>
 <area shape="rect" id="node2" href="$da/d17/class_laugh_tale_engine_1_1window_manger.html#a299031b3ffb4b65db840baf235410f79" title=" " alt="" coords="125,71,370,98"/>
 <area shape="rect" id="node3" href="$da/d17/class_laugh_tale_engine_1_1window_manger.html#a403018be8ea19c9cf7c8f52857a360a5" title=" " alt="" coords="442,64,658,105"/>
 <area shape="rect" id="node4" href="$da/d17/class_laugh_tale_engine_1_1window_manger.html#aecc06f0a328ee4e7225caf1e9a9cdc32" title=" " alt="" coords="139,122,355,164"/>
@@ -10,13 +10,14 @@
 <area shape="rect" id="node17" href="$da/d2d/classwindow_test.html#a4497926e30ec0448f316074a60a3715d" title=" " alt="" coords="159,1076,335,1103"/>
 <area shape="rect" id="node18" href="$d9/d89/class_laugh_tale_engine_1_1app.html#aec4ee9f9ed7ae95fb2931270c9861f6e" title=" " alt="" coords="172,650,323,692"/>
 <area shape="rect" id="node25" href="$da/d2d/classwindow_test.html#a0296ed2fa5ffdb814d5bff64787cec19" title=" " alt="" coords="109,1127,385,1154"/>
-<area shape="rect" id="node26" href="$da/d2d/classwindow_test.html#afb45f394cbc7c14f78f15d7bb720e0df" title=" " alt="" coords="155,1612,340,1639"/>
-<area shape="rect" id="node42" href="$da/d2d/classwindow_test.html#ab150ebf55674ef1a1bc2c2045def4ac4" title=" " alt="" coords="155,1663,340,1690"/>
-<area shape="rect" id="node44" href="$da/d17/class_laugh_tale_engine_1_1window_manger.html#a6d097ecff0840c1c026cf1e0b88b6a28" title=" " alt="" coords="139,1714,355,1756"/>
-<area shape="rect" id="node45" href="$d9/d89/class_laugh_tale_engine_1_1app.html#af43a6bc9822997c70a28ba8f78a9ce85" title=" " alt="" coords="159,1780,335,1807"/>
-<area shape="rect" id="node48" href="$da/d17/class_laugh_tale_engine_1_1window_manger.html#a0533081a17a2889af0d47231d16d70d4" title=" " alt="" coords="139,1832,355,1873"/>
-<area shape="rect" id="node49" href="$da/d2d/classwindow_test.html#a7c1a2dcb693f5f398ae332d96ed72628" title=" " alt="" coords="157,1898,337,1924"/>
-<area shape="rect" id="node50" href="$da/d2d/classwindow_test.html#a63c326631564f515f322ea4d2468bbb5" title=" " alt="" coords="154,1948,341,1975"/>
+<area shape="rect" id="node26" href="$da/d2d/classwindow_test.html#adc416cf0631f8279e44a7aeaab2c703a" title=" " alt="" coords="162,1178,333,1204"/>
+<area shape="rect" id="node27" href="$da/d2d/classwindow_test.html#afb45f394cbc7c14f78f15d7bb720e0df" title=" " alt="" coords="155,1728,340,1755"/>
+<area shape="rect" id="node39" href="$da/d17/class_laugh_tale_engine_1_1window_manger.html#a0533081a17a2889af0d47231d16d70d4" title=" " alt="" coords="442,2284,658,2325"/>
+<area shape="rect" id="node45" href="$da/d2d/classwindow_test.html#ab150ebf55674ef1a1bc2c2045def4ac4" title=" " alt="" coords="155,1678,340,1704"/>
+<area shape="rect" id="node47" href="$da/d17/class_laugh_tale_engine_1_1window_manger.html#a6d097ecff0840c1c026cf1e0b88b6a28" title=" " alt="" coords="139,1830,355,1872"/>
+<area shape="rect" id="node48" href="$d9/d89/class_laugh_tale_engine_1_1app.html#af43a6bc9822997c70a28ba8f78a9ce85" title=" " alt="" coords="159,1896,335,1923"/>
+<area shape="rect" id="node49" href="$da/d2d/classwindow_test.html#a7c1a2dcb693f5f398ae332d96ed72628" title=" " alt="" coords="157,1947,337,1974"/>
+<area shape="rect" id="node50" href="$da/d2d/classwindow_test.html#a63c326631564f515f322ea4d2468bbb5" title=" " alt="" coords="154,1998,341,2024"/>
 <area shape="rect" id="node8" href="$db/d49/namespace_laugh_tale_engine.html#ad5371afa9f2e0aecd1819e7d47f9c159" title=" " alt="" coords="455,324,645,365"/>
 <area shape="rect" id="node9" href="$db/d49/namespace_laugh_tale_engine.html#aa614ec4112e9353b786be44fe70d87e3" title=" " alt="" coords="455,389,645,430"/>
 <area shape="rect" id="node11" href="$df/dc8/class_laugh_tale_engine_1_1entity_manger.html#a3ceba32e8088e579731ab9d709cbd031" title=" " alt="" coords="448,846,652,888"/>
@@ -31,22 +32,21 @@
 <area shape="rect" id="node22" href="$d6/d31/class_laugh_tale_engine_1_1sound_synthesizer.html#a261fc80cbe9ed021d183afc45eea6cee" title=" " alt="" coords="433,716,667,757"/>
 <area shape="rect" id="node23" href="$da/d17/class_laugh_tale_engine_1_1window_manger.html#a14cbc747a1cb607686a42f689921bcd5" title=" " alt="" coords="442,454,658,496"/>
 <area shape="rect" id="node24" href="$d6/d62/class_laugh_tale_engine_1_1logger.html#a22db5ad444b9c0e6baa9364021c70bff" title=" " alt="" coords="468,781,632,822"/>
-<area shape="rect" id="node27" href="$da/d17/class_laugh_tale_engine_1_1window_manger.html#ac9ffc0c2e2e8c243e99a26f881fb5475" title=" " alt="" coords="442,1826,658,1868"/>
-<area shape="rect" id="node28" href="$da/d17/class_laugh_tale_engine_1_1window_manger.html#a9803b52f460733ab78aae3c03f1ee97c" title=" " alt="" coords="442,1892,658,1933"/>
-<area shape="rect" id="node29" href="$da/d17/class_laugh_tale_engine_1_1window_manger.html#a13545b139218aba1d2b04ec8145348c0" title=" " alt="" coords="442,1957,658,1998"/>
-<area shape="rect" id="node30" href="$d0/d98/class_laugh_tale_engine_1_1render_api.html#a584d5da18614bc1ff3a5e331df9d4e2b" title=" " alt="" coords="458,2022,642,2064"/>
-<area shape="rect" id="node31" href="$da/d17/class_laugh_tale_engine_1_1window_manger.html#ac17c2f8fed9d1e5e4b2b843ff74c8ecc" title=" " alt="" coords="442,2088,658,2129"/>
-<area shape="rect" id="node32" href="$da/d17/class_laugh_tale_engine_1_1window_manger.html#aef60d7ab21c2800574d7789dc2d64167" title=" " alt="" coords="442,2153,658,2194"/>
-<area shape="rect" id="node33" href="$da/d17/class_laugh_tale_engine_1_1window_manger.html#abe765855fc4379ebc2dab82dc161e9ed" title=" " alt="" coords="442,1238,658,1280"/>
-<area shape="rect" id="node34" href="$db/de7/class_laugh_tale_engine_1_1shader_manger.html#afdb4893d6c59a3f96cb51d72997fb43a" title=" " alt="" coords="445,1304,655,1345"/>
-<area shape="rect" id="node35" href="$da/d17/class_laugh_tale_engine_1_1window_manger.html#af876123ce22fc998c60e8d9863c5fee0" title=" " alt="" coords="442,1369,658,1410"/>
-<area shape="rect" id="node36" href="$da/d17/class_laugh_tale_engine_1_1window_manger.html#a33a838e99370c4eaf309b33dd188cb7b" title=" " alt="" coords="442,1434,658,1476"/>
-<area shape="rect" id="node37" href="$da/d17/class_laugh_tale_engine_1_1window_manger.html#acfbb3676c0147d387df530c077ade285" title=" " alt="" coords="442,1500,658,1541"/>
-<area shape="rect" id="node38" href="$d0/d98/class_laugh_tale_engine_1_1render_api.html#ab72a77330dacba4fee0ccf8156e54173" title=" " alt="" coords="458,1565,642,1606"/>
-<area shape="rect" id="node39" href="$d6/db1/class_laugh_tale_engine_1_1shader.html#ac0bb15f03857aeeeccf436949317d5b4" title=" " alt="" coords="466,1630,634,1672"/>
-<area shape="rect" id="node40" href="$d6/db1/class_laugh_tale_engine_1_1shader.html#a7960bf08b6bb5bccde7ef6a87751871a" title=" " alt="" coords="466,1696,634,1737"/>
-<area shape="rect" id="node41" href="$d6/dea/class_laugh_tale_engine_1_1renderer.html#a527d6f25b168abccffe1b9eef4d45989" title=" " alt="" coords="462,1761,638,1802"/>
-<area shape="rect" id="node43" href="$da/d17/class_laugh_tale_engine_1_1window_manger.html#ab79f959646f41c09e5e041bef6bdfd5f" title=" " alt="" coords="442,2218,658,2260"/>
-<area shape="rect" id="node46" href="$db/d49/namespace_laugh_tale_engine.html#a5b29e47a6baeef942bfe666100788fc1" title=" " alt="" coords="462,2284,638,2311"/>
-<area shape="rect" id="node47" href="$d9/dd1/class_laugh_tale_engine_1_1event_manger.html#a8a9e4374e9f8420ab46842cb0fdae650" title=" " alt="" coords="448,2336,652,2377"/>
+<area shape="rect" id="node28" href="$da/d17/class_laugh_tale_engine_1_1window_manger.html#ac9ffc0c2e2e8c243e99a26f881fb5475" title=" " alt="" coords="442,1892,658,1933"/>
+<area shape="rect" id="node29" href="$da/d17/class_laugh_tale_engine_1_1window_manger.html#a9803b52f460733ab78aae3c03f1ee97c" title=" " alt="" coords="442,1957,658,1998"/>
+<area shape="rect" id="node30" href="$da/d17/class_laugh_tale_engine_1_1window_manger.html#a13545b139218aba1d2b04ec8145348c0" title=" " alt="" coords="442,2022,658,2064"/>
+<area shape="rect" id="node31" href="$d0/d98/class_laugh_tale_engine_1_1render_api.html#a584d5da18614bc1ff3a5e331df9d4e2b" title=" " alt="" coords="458,2088,642,2129"/>
+<area shape="rect" id="node32" href="$da/d17/class_laugh_tale_engine_1_1window_manger.html#ac17c2f8fed9d1e5e4b2b843ff74c8ecc" title=" " alt="" coords="442,2153,658,2194"/>
+<area shape="rect" id="node33" href="$da/d17/class_laugh_tale_engine_1_1window_manger.html#aef60d7ab21c2800574d7789dc2d64167" title=" " alt="" coords="442,2218,658,2260"/>
+<area shape="rect" id="node34" href="$da/d17/class_laugh_tale_engine_1_1window_manger.html#abe765855fc4379ebc2dab82dc161e9ed" title=" " alt="" coords="442,1304,658,1345"/>
+<area shape="rect" id="node35" href="$db/de7/class_laugh_tale_engine_1_1shader_manger.html#afdb4893d6c59a3f96cb51d72997fb43a" title=" " alt="" coords="445,1369,655,1410"/>
+<area shape="rect" id="node36" href="$da/d17/class_laugh_tale_engine_1_1window_manger.html#af876123ce22fc998c60e8d9863c5fee0" title=" " alt="" coords="442,1434,658,1476"/>
+<area shape="rect" id="node37" href="$da/d17/class_laugh_tale_engine_1_1window_manger.html#a33a838e99370c4eaf309b33dd188cb7b" title=" " alt="" coords="442,1500,658,1541"/>
+<area shape="rect" id="node38" href="$da/d17/class_laugh_tale_engine_1_1window_manger.html#acfbb3676c0147d387df530c077ade285" title=" " alt="" coords="442,1565,658,1606"/>
+<area shape="rect" id="node40" href="$d0/d98/class_laugh_tale_engine_1_1render_api.html#ab72a77330dacba4fee0ccf8156e54173" title=" " alt="" coords="458,1630,642,1672"/>
+<area shape="rect" id="node41" href="$d7/d93/class_laugh_tale_engine_1_1core_camera.html#a30a007d91e6fa52e05fa67aca4740dce" title=" " alt="" coords="450,2349,650,2390"/>
+<area shape="rect" id="node42" href="$d7/d93/class_laugh_tale_engine_1_1core_camera.html#af6afee28c8fd04a3d44bbafeaff5e0bd" title=" " alt="" coords="450,1696,650,1737"/>
+<area shape="rect" id="node43" href="$d6/db1/class_laugh_tale_engine_1_1shader.html#a7960bf08b6bb5bccde7ef6a87751871a" title=" " alt="" coords="466,1761,634,1802"/>
+<area shape="rect" id="node44" href="$d6/dea/class_laugh_tale_engine_1_1renderer.html#a8e463b8a9c7ead51728cfc5e1a6228da" title=" " alt="" coords="462,1826,638,1868"/>
+<area shape="rect" id="node46" href="$da/d17/class_laugh_tale_engine_1_1window_manger.html#ab79f959646f41c09e5e041bef6bdfd5f" title=" " alt="" coords="442,1238,658,1280"/>
 </map>

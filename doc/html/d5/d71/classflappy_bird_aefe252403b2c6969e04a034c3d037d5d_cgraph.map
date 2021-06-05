@@ -1,0 +1,17 @@
+<map id="flappyBird::SetUp" name="flappyBird::SetUp">
+<area shape="rect" id="node1" title=" " alt="" coords="5,261,131,287"/>
+<area shape="rect" id="node2" href="$df/dc8/class_laugh_tale_engine_1_1entity_manger.html#a7def74bb5d5d0b339300180a12f8c6c6" title=" " alt="" coords="179,5,383,47"/>
+<area shape="rect" id="node3" href="$d9/dd1/class_laugh_tale_engine_1_1event_manger.html#abcea36f5710e35dc816f1e1d461a1de1" title=" " alt="" coords="718,160,922,201"/>
+<area shape="rect" id="node4" href="$d9/d89/class_laugh_tale_engine_1_1app.html#aec4ee9f9ed7ae95fb2931270c9861f6e" title=" " alt="" coords="205,253,356,295"/>
+<area shape="rect" id="node13" href="$d5/d71/classflappy_bird.html#aaf4cafbbd29d7533d05819f8974abbbf" title=" " alt="" coords="212,319,349,346"/>
+<area shape="rect" id="node14" href="$d5/d71/classflappy_bird.html#ada1acfad69d7ca8ff48853d429be54f1" title=" " alt="" coords="209,446,353,473"/>
+<area shape="rect" id="node5" href="$df/dc8/class_laugh_tale_engine_1_1entity_manger.html#a72a2c494f339a0adf84ddc04c53d2656" title=" " alt="" coords="445,123,649,164"/>
+<area shape="rect" id="node6" href="$d9/dd1/class_laugh_tale_engine_1_1event_manger.html#a34a06491a8b28decd91798bedaa11dfb" title=" " alt="" coords="445,188,649,229"/>
+<area shape="rect" id="node7" href="$df/d84/class_laugh_tale_engine_1_1sound_engine.html#a7cf83b7706ca13511a42853dd98b8362" title=" " alt="" coords="445,253,649,295"/>
+<area shape="rect" id="node8" href="$d6/d31/class_laugh_tale_engine_1_1sound_synthesizer.html#a261fc80cbe9ed021d183afc45eea6cee" title=" " alt="" coords="431,319,664,360"/>
+<area shape="rect" id="node9" href="$da/d17/class_laugh_tale_engine_1_1window_manger.html#a14cbc747a1cb607686a42f689921bcd5" title=" " alt="" coords="439,384,655,425"/>
+<area shape="rect" id="node12" href="$d6/d62/class_laugh_tale_engine_1_1logger.html#a22db5ad444b9c0e6baa9364021c70bff" title=" " alt="" coords="465,449,629,491"/>
+<area shape="rect" id="node10" href="$da/d17/class_laugh_tale_engine_1_1window_manger.html#ac6b3f36b0e280e61d106f2fdc47df8e1" title=" " alt="" coords="712,352,928,393"/>
+<area shape="rect" id="node11" href="$da/d17/class_laugh_tale_engine_1_1window_manger.html#af5276d8e50e1f6a86a48b8512d095a63" title=" " alt="" coords="712,417,928,459"/>
+<area shape="rect" id="node15" href="$d9/dd1/class_laugh_tale_engine_1_1event_manger.html#a425867df36aeb35524a670a53f3ee0ff" title=" " alt="" coords="445,515,649,556"/>
+</map>

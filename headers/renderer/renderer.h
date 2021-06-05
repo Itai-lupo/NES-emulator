@@ -25,7 +25,7 @@ namespace LaughTaleEngine
             void beginScene(coreCamera *camera);
             void endScene();
 
-            void Submit(shader *s, uint32_t count);
+            void Submit(shader *s, uint32_t count, glm::mat4 transform = glm::mat4(1.0f));
     };
     
     

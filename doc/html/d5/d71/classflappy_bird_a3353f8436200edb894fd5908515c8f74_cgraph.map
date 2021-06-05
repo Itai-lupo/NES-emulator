@@ -1,0 +1,10 @@
+<map id="flappyBird::TearDown" name="flappyBird::TearDown">
+<area shape="rect" id="node1" title=" " alt="" coords="5,177,152,203"/>
+<area shape="rect" id="node2" href="$d9/d89/class_laugh_tale_engine_1_1app.html#ae0600bd7d78c1276c220b3a93f5bd376" title=" " alt="" coords="200,169,351,211"/>
+<area shape="rect" id="node3" href="$df/dc8/class_laugh_tale_engine_1_1entity_manger.html#a3ceba32e8088e579731ab9d709cbd031" title=" " alt="" coords="413,5,617,47"/>
+<area shape="rect" id="node4" href="$d9/dd1/class_laugh_tale_engine_1_1event_manger.html#a3493122a7ee2cfcc18970447664c067f" title=" " alt="" coords="413,71,617,112"/>
+<area shape="rect" id="node5" href="$df/d84/class_laugh_tale_engine_1_1sound_engine.html#ad7c03b24b04737b5da1de706d1557a44" title=" " alt="" coords="413,136,617,177"/>
+<area shape="rect" id="node6" href="$d6/d31/class_laugh_tale_engine_1_1sound_synthesizer.html#ad4c2986e38b867dad680c447d9794991" title=" " alt="" coords="399,201,632,243"/>
+<area shape="rect" id="node7" href="$d6/d62/class_laugh_tale_engine_1_1logger.html#a4c3ef502f6105a31a16c9df67ece1953" title=" " alt="" coords="433,267,597,308"/>
+<area shape="rect" id="node8" href="$da/d17/class_laugh_tale_engine_1_1window_manger.html#accf42f24c30bfbb04bea8e9435cae082" title=" " alt="" coords="407,332,623,373"/>
+</map>

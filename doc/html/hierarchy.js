@@ -22,6 +22,9 @@ var hierarchy =
     ] ],
     [ "LaughTaleEngine::IEntity", "dd/d4a/struct_laugh_tale_engine_1_1_i_entity.html", [
       [ "ImGuiData", "dd/db8/class_im_gui_data.html", null ],
+      [ "bird", "da/dee/classbird.html", null ],
+      [ "flappyBird", "d5/d71/classflappy_bird.html", null ],
+      [ "pilar", "d1/d69/classpilar.html", null ],
       [ "renderData", "d1/d9c/classrender_data.html", null ],
       [ "soundEntity", "d7/d22/classsound_entity.html", null ],
       [ "windowEntity", "dc/d6c/classwindow_entity.html", null ]
@@ -66,6 +69,9 @@ var hierarchy =
     [ "LaughTaleEngine::soundEngine", "df/d84/class_laugh_tale_engine_1_1sound_engine.html", null ],
     [ "LaughTaleEngine::apoSequencerAndRythemManer::soundFilesPlayer", "d8/dd3/class_laugh_tale_engine_1_1apo_sequencer_and_rythem_maner_1_1sound_files_player.html", null ],
     [ "LaughTaleEngine::soundSynthesizer", "d6/d31/class_laugh_tale_engine_1_1sound_synthesizer.html", null ],
+    [ "testing::Test", null, [
+      [ "flappyBird", "d5/d71/classflappy_bird.html", null ]
+    ] ],
     [ "LaughTaleEngine::vertexArray", "db/d75/class_laugh_tale_engine_1_1vertex_array.html", [
       [ "LaughTaleEngine::openGLVertexArray", "de/dbc/class_laugh_tale_engine_1_1open_g_l_vertex_array.html", null ]
     ] ],

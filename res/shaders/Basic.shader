@@ -7,11 +7,10 @@ layout(location = 0) in vec4 postion;
 out vec2 v_TextCoord;
 
 uniform mat4 viewProjection;
-uniform float xOffset;
-uniform float yOffset;
+uniform mat4 transform;
 
 void main(){
-   gl_Position = viewProjection * vec4(postion.x + xOffset, postion.y + yOffset, 0.0f, 1.0f);
+   gl_Position = viewProjection * transform * postion;
    v_TextCoord.xy = postion.xy;
 };
 

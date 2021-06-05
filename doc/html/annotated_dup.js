@@ -63,7 +63,10 @@ var annotated_dup =
       [ "linuxWindow", "d3/d04/class_laugh_tale_engine_1_1linux_window.html", "d3/d04/class_laugh_tale_engine_1_1linux_window" ],
       [ "windowManger", "da/d17/class_laugh_tale_engine_1_1window_manger.html", null ]
     ] ],
+    [ "bird", "da/dee/classbird.html", "da/dee/classbird" ],
+    [ "flappyBird", "d5/d71/classflappy_bird.html", "d5/d71/classflappy_bird" ],
     [ "ImGuiData", "dd/db8/class_im_gui_data.html", "dd/db8/class_im_gui_data" ],
+    [ "pilar", "d1/d69/classpilar.html", "d1/d69/classpilar" ],
     [ "renderData", "d1/d9c/classrender_data.html", "d1/d9c/classrender_data" ],
     [ "soundEntity", "d7/d22/classsound_entity.html", "d7/d22/classsound_entity" ],
     [ "testEventData", "d8/d35/structtest_event_data.html", "d8/d35/structtest_event_data" ],

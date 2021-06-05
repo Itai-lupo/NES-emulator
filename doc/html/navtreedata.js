@@ -60,9 +60,9 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"d6/db1/class_laugh_tale_engine_1_1shader.html#ae60a6d1d4dc6d87864e144211213627d",
-"db/dd2/events_8h.html#a0e35437d5f6988dc624d59aeff54b6bba95ab8b514b94b3feef14295ff0bcdf09",
-"dd/ddf/class_laugh_tale_engine_1_1_vertex_buffer_manger.html#a4a959699e8d9f42696035ff269442121"
+"d6/d99/class_laugh_tale_engine_1_1_open_g_l_vertex_buffer.html#a793f8b8281e000ac7d17557276bf5d58",
+"db/d6b/struct_laugh_tale_engine_1_1_scene_data.html",
+"dd/db7/struct_laugh_tale_engine_1_1_i_event_data.html#a0f09bea45f071dc79729aa2fa281969e"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
