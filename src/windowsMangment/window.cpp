@@ -110,7 +110,7 @@ namespace LaughTaleEngine
         if(w != nullptr)
             w->makeContextCurrent((windowPtr)windowId);
 
-        LAUGHTALE_ENGINR_CONDTION_LOG_ERROR("faild to bind Context: no window with id: " << windowId, w == NULL);
+        LAUGHTALE_ENGINR_CONDTION_LOG_ERROR("faild to bind Context: no window with id: " << windowId, w == nullptr);
         
     }
 
@@ -181,7 +181,7 @@ namespace LaughTaleEngine
         if(vbm != nullptr)
             vbm->bind(id);
 
-        LAUGHTALE_ENGINR_CONDTION_LOG_ERROR("faild to bind vb: no window with id: " << windowId, w == NULL);
+        LAUGHTALE_ENGINR_CONDTION_LOG_ERROR("faild to bind vb: no window with id: " << windowId, w == nullptr);
     }
 
     void windowManger::bindIB(windowPieceId windowId, indexBufferId id)
@@ -194,7 +194,7 @@ namespace LaughTaleEngine
         if(m != nullptr)
             m->bind(id);
 
-        LAUGHTALE_ENGINR_CONDTION_LOG_ERROR("faild to bind index buffer: no window with id: " << windowId, w == NULL);
+        LAUGHTALE_ENGINR_CONDTION_LOG_ERROR("faild to bind index buffer: no window with id: " << windowId, w == nullptr);
     }
 
     void windowManger::bindVA(windowPieceId windowId, vertexArrayId id)
@@ -208,7 +208,7 @@ namespace LaughTaleEngine
         if(m != nullptr)
             return m->bind(id);
 
-        LAUGHTALE_ENGINR_CONDTION_LOG_ERROR("faild to bind vertex array: no window with id: " << windowId, w == NULL);
+        LAUGHTALE_ENGINR_CONDTION_LOG_ERROR("faild to bind vertex array: no window with id: " << windowId, w == nullptr);
         return findWinById(windowId)->getVertexArrayManger()->bind(id);
     }
 
@@ -220,7 +220,7 @@ namespace LaughTaleEngine
             sm = w->getShaderManger();
         if(sm != nullptr)
             sm->bind(id);
-        LAUGHTALE_ENGINR_CONDTION_LOG_ERROR("faild to bind vertex array: no window with id: " << windowId, w == NULL);
+        LAUGHTALE_ENGINR_CONDTION_LOG_ERROR("faild to bind vertex array: no window with id: " << windowId, w == nullptr);
         
     }
 
@@ -233,7 +233,7 @@ namespace LaughTaleEngine
         if(vbm != nullptr)
             vbm->pushElement(id, data);
 
-        LAUGHTALE_ENGINR_CONDTION_LOG_ERROR("faild to pushElement vb: no window with id: " << windowId, w == NULL);
+        LAUGHTALE_ENGINR_CONDTION_LOG_ERROR("faild to pushElement vb: no window with id: " << windowId, w == nullptr);
     }
 
     void windowManger::addBuffer(windowPieceId windowId, vertexArrayId id, vertexBufferId vbId)
@@ -254,7 +254,7 @@ namespace LaughTaleEngine
         if(vam != nullptr && vb != nullptr)
             vam->addBuffer(id, vb);
 
-        LAUGHTALE_ENGINR_CONDTION_LOG_ERROR("faild to addBuffer vb: no window with id: " << windowId, w == NULL);
+        LAUGHTALE_ENGINR_CONDTION_LOG_ERROR("faild to addBuffer vb: no window with id: " << windowId, w == nullptr);
     }
 
     shaderManger *windowManger::getShaderManger(windowPieceId windowId)
@@ -290,7 +290,7 @@ namespace LaughTaleEngine
         if(m != nullptr)
             return m->getCount(id);
 
-        LAUGHTALE_ENGINR_CONDTION_LOG_ERROR("faild to found index buffer: no window with id: " << windowId, w == NULL);
+        LAUGHTALE_ENGINR_CONDTION_LOG_ERROR("faild to found index buffer: no window with id: " << windowId, w == nullptr);
         return 0;
     }
 

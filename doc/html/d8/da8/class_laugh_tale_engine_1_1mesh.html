@@ -116,6 +116,8 @@ Collaboration diagram for LaughTaleEngine::mesh:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a0bb2b2f8e371327ca87077510fe35f94"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/da8/class_laugh_tale_engine_1_1mesh.html#a0bb2b2f8e371327ca87077510fe35f94">mesh</a> (<a class="el" href="../../db/d49/namespace_laugh_tale_engine.html#a3caa0738b4b73e3f3adda6903f45d4a7">windowPieceId</a> windowId)</td></tr>
 <tr class="separator:a0bb2b2f8e371327ca87077510fe35f94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a4fd6883d6a1dcfc65a2490e6fe1fa1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/da8/class_laugh_tale_engine_1_1mesh.html#a3a4fd6883d6a1dcfc65a2490e6fe1fa1">~mesh</a> ()</td></tr>
+<tr class="separator:a3a4fd6883d6a1dcfc65a2490e6fe1fa1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae51cd8ec446b346f3a7b24eed7d9afd6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/da8/class_laugh_tale_engine_1_1mesh.html#ae51cd8ec446b346f3a7b24eed7d9afd6">setShader</a> (const char *path)</td></tr>
 <tr class="separator:ae51cd8ec446b346f3a7b24eed7d9afd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6b1d0c16d305ee2f236ba95d9b80a731"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/da8/class_laugh_tale_engine_1_1mesh.html#a6b1d0c16d305ee2f236ba95d9b80a731">setShader</a> (<a class="el" href="../../db/d49/namespace_laugh_tale_engine.html#a389b0b76e2fc7aab22044ada38f1bcbd">shaderId</a> <a class="el" href="../../dd/d4a/struct_laugh_tale_engine_1_1_i_entity.html#a14abecdfad3fa9ab97655af721ddce7a">id</a>)</td></tr>
@@ -180,7 +182,34 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;: IEntity(), windowId(windowId){}</div>
+<div class="fragment"><div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;: IEntity(), windowId(windowId){}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a3a4fd6883d6a1dcfc65a2490e6fe1fa1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a4fd6883d6a1dcfc65a2490e6fe1fa1">&#9670;&nbsp;</a></span>~mesh()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">LaughTaleEngine::mesh::~mesh </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;{<a class="code" href="../../d1/d8c/logger_8h.html#a70645337545523faca46e49a3180d5f7">LAUGHTALE_ENGINR_LOG_INFO</a>(<span class="stringliteral">&quot;destroy mesh with id: &quot;</span> &lt;&lt; <span class="keywordtype">id</span>);}</div>
+<div class="ttc" id="alogger_8h_html_a70645337545523faca46e49a3180d5f7"><div class="ttname"><a href="../../d1/d8c/logger_8h.html#a70645337545523faca46e49a3180d5f7">LAUGHTALE_ENGINR_LOG_INFO</a></div><div class="ttdeci">#define LAUGHTALE_ENGINR_LOG_INFO(toLog)</div><div class="ttdef"><b>Definition:</b> logger.h:6</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -219,10 +248,9 @@ Here is the call graph for this function:</div>
 <area shape="rect" href="../../d4/dbe/class_laugh_tale_engine_1_1index_buffer_manger.html#ac52d6cbc2b33bba0b984e66634a51dc8" title=" " alt="" coords="489,5,684,47"/>
 <area shape="rect" href="../../da/d17/class_laugh_tale_engine_1_1window_manger.html#a403018be8ea19c9cf7c8f52857a360a5" title=" " alt="" coords="479,71,695,112"/>
 <area shape="rect" href="../../db/de7/class_laugh_tale_engine_1_1shader_manger.html#a088794831d022f4c7027d635a10cad50" title=" " alt="" coords="481,201,692,243"/>
-<area shape="rect" href="../../d6/db1/class_laugh_tale_engine_1_1shader.html#aba1e7a8cf4bb45789a29e00395142bc4" title=" " alt="" coords="764,267,932,308"/>
-<area shape="rect" href="../../db/de7/class_laugh_tale_engine_1_1shader_manger.html#afdb4893d6c59a3f96cb51d72997fb43a" title=" " alt="" coords="743,201,953,243"/>
+<area shape="rect" href="../../d6/db1/class_laugh_tale_engine_1_1shader.html#aba1e7a8cf4bb45789a29e00395142bc4" title=" " alt="" coords="764,168,932,209"/>
+<area shape="rect" href="../../db/de7/class_laugh_tale_engine_1_1shader_manger.html#afdb4893d6c59a3f96cb51d72997fb43a" title=" " alt="" coords="743,233,953,275"/>
 <area shape="rect" href="../../d0/df2/class_laugh_tale_engine_1_1vertex_array_manger.html#a5c39790433e3e38c9c8ecbfd76849758" title=" " alt="" coords="489,136,685,177"/>
-<area shape="rect" href="../../db/d75/class_laugh_tale_engine_1_1vertex_array.html#a4771609b11ee4241c2f26a9409578008" title=" " alt="" coords="750,136,946,177"/>
 </map>
 </div>
 
@@ -242,9 +270,9 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    {</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="keywordflow">return</span>  <a class="code" href="../../da/d17/class_laugh_tale_engine_1_1window_manger.html#ab79f959646f41c09e5e041bef6bdfd5f">windowManger::getIndexBufferCount</a>(windowId, IBId);</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    {</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="keywordflow">return</span>  <a class="code" href="../../da/d17/class_laugh_tale_engine_1_1window_manger.html#ab79f959646f41c09e5e041bef6bdfd5f">windowManger::getIndexBufferCount</a>(windowId, IBId);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    }</div>
 <div class="ttc" id="aclass_laugh_tale_engine_1_1window_manger_html_ab79f959646f41c09e5e041bef6bdfd5f"><div class="ttname"><a href="../../da/d17/class_laugh_tale_engine_1_1window_manger.html#ab79f959646f41c09e5e041bef6bdfd5f">LaughTaleEngine::windowManger::getIndexBufferCount</a></div><div class="ttdeci">static uint32_t getIndexBufferCount(windowPieceId windowId, indexBufferId id)</div><div class="ttdef"><b>Definition:</b> window.cpp:283</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -291,7 +319,7 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;{ <span class="keywordflow">return</span> material; }</div>
+<div class="fragment"><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;{ <span class="keywordflow">return</span> material; }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -310,10 +338,15 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 <div class="fragment"><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    {</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keywordflow">return</span>  <a class="code" href="../../da/d17/class_laugh_tale_engine_1_1window_manger.html#af876123ce22fc998c60e8d9863c5fee0">windowManger::getShaderManger</a>(windowId)-&gt;<a class="code" href="../../db/de7/class_laugh_tale_engine_1_1shader_manger.html#afdb4893d6c59a3f96cb51d72997fb43a">getShader</a>(ShaderId);</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    }</div>
-<div class="ttc" id="aclass_laugh_tale_engine_1_1shader_manger_html_afdb4893d6c59a3f96cb51d72997fb43a"><div class="ttname"><a href="../../db/de7/class_laugh_tale_engine_1_1shader_manger.html#afdb4893d6c59a3f96cb51d72997fb43a">LaughTaleEngine::shaderManger::getShader</a></div><div class="ttdeci">shader * getShader(shaderId id)</div><div class="ttdef"><b>Definition:</b> shaderManger.cpp:39</div></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        shaderManger *m =  <a class="code" href="../../da/d17/class_laugh_tale_engine_1_1window_manger.html#af876123ce22fc998c60e8d9863c5fee0">windowManger::getShaderManger</a>(windowId);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keywordflow">if</span>(m != <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            <span class="keywordflow">return</span>  m-&gt;getShader(ShaderId);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <a class="code" href="../../d1/d8c/logger_8h.html#aae4cf1bd083983040d4d6572a9b0d8bf">LAUGHTALE_ENGINR_LOG_ERROR</a>(<span class="stringliteral">&quot;coulden get mesh shader&quot;</span>);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;        </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    }</div>
 <div class="ttc" id="aclass_laugh_tale_engine_1_1window_manger_html_af876123ce22fc998c60e8d9863c5fee0"><div class="ttname"><a href="../../da/d17/class_laugh_tale_engine_1_1window_manger.html#af876123ce22fc998c60e8d9863c5fee0">LaughTaleEngine::windowManger::getShaderManger</a></div><div class="ttdeci">static shaderManger * getShaderManger(windowPieceId windowId)</div><div class="ttdef"><b>Definition:</b> window.cpp:260</div></div>
+<div class="ttc" id="alogger_8h_html_aae4cf1bd083983040d4d6572a9b0d8bf"><div class="ttname"><a href="../../d1/d8c/logger_8h.html#aae4cf1bd083983040d4d6572a9b0d8bf">LAUGHTALE_ENGINR_LOG_ERROR</a></div><div class="ttdeci">#define LAUGHTALE_ENGINR_LOG_ERROR(toLog)</div><div class="ttdef"><b>Definition:</b> logger.h:8</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -329,15 +362,15 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d8/da8/class_laugh_tale_engine_1_1mesh_a62813e25532d7523d942018a96203846_icgraph.png" border="0" usemap="#ad8/da8/class_laugh_tale_engine_1_1mesh_a62813e25532d7523d942018a96203846_icgraph" alt=""/></div>
 <map name="ad8/da8/class_laugh_tale_engine_1_1mesh_a62813e25532d7523d942018a96203846_icgraph" id="ad8/da8/class_laugh_tale_engine_1_1mesh_a62813e25532d7523d942018a96203846_icgraph">
-<area shape="rect" title=" " alt="" coords="713,64,875,105"/>
-<area shape="rect" href="../../d8/da8/class_laugh_tale_engine_1_1mesh.html#a2855c67d293eb02736ee4510558c0e3b" title=" " alt="" coords="280,5,441,47"/>
-<area shape="rect" href="../../d8/da8/class_laugh_tale_engine_1_1mesh.html#a9778fa65198efb77026914ec75ca6b1e" title=" " alt="" coords="497,64,658,105"/>
-<area shape="rect" href="../../d6/dea/class_laugh_tale_engine_1_1renderer.html#aee1eaf1e26b8f9423e3368cb575610ca" title=" " alt="" coords="489,129,665,171"/>
-<area shape="rect" href="../../da/dee/classbird.html#a6b56afda6374e3ca12a903cd0aa21bb4" title=" " alt="" coords="5,67,77,94"/>
-<area shape="rect" href="../../d1/d69/classpilar.html#a2a9b8757ec997e8e62be5c1cb2c133da" title=" " alt="" coords="139,66,218,93"/>
-<area shape="rect" href="../../da/dee/classbird.html#a42a6012a9fe17c5a6223349991899664" title=" " alt="" coords="301,122,421,149"/>
-<area shape="rect" href="../../d1/d69/classpilar.html#a4aa7b430cf7e816c51fdfa8147420a30" title=" " alt="" coords="305,71,416,98"/>
-<area shape="rect" href="../../da/dee/classbird.html#a5a2390b688ceb8a82112940f243d92c9" title=" " alt="" coords="125,118,232,145"/>
+<area shape="rect" title=" " alt="" coords="713,51,875,92"/>
+<area shape="rect" href="../../da/dee/classbird.html#a6b56afda6374e3ca12a903cd0aa21bb4" title=" " alt="" coords="5,29,77,56"/>
+<area shape="rect" href="../../d8/da8/class_laugh_tale_engine_1_1mesh.html#a2855c67d293eb02736ee4510558c0e3b" title=" " alt="" coords="280,22,441,63"/>
+<area shape="rect" href="../../d8/da8/class_laugh_tale_engine_1_1mesh.html#a9778fa65198efb77026914ec75ca6b1e" title=" " alt="" coords="497,80,658,122"/>
+<area shape="rect" href="../../d6/dea/class_laugh_tale_engine_1_1renderer.html#aee1eaf1e26b8f9423e3368cb575610ca" title=" " alt="" coords="489,146,665,187"/>
+<area shape="rect" href="../../d1/d69/classpilar.html#a2a9b8757ec997e8e62be5c1cb2c133da" title=" " alt="" coords="139,81,218,108"/>
+<area shape="rect" href="../../da/dee/classbird.html#a42a6012a9fe17c5a6223349991899664" title=" " alt="" coords="301,138,421,165"/>
+<area shape="rect" href="../../d1/d69/classpilar.html#a4aa7b430cf7e816c51fdfa8147420a30" title=" " alt="" coords="305,88,416,114"/>
+<area shape="rect" href="../../da/dee/classbird.html#a5a2390b688ceb8a82112940f243d92c9" title=" " alt="" coords="125,136,232,162"/>
 </map>
 </div>
 
@@ -365,7 +398,7 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;{ <span class="keywordflow">return</span> transform; }</div>
+<div class="fragment"><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;{ <span class="keywordflow">return</span> transform; }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -433,7 +466,7 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;{ <span class="keywordflow">return</span> windowId; }</div>
+<div class="fragment"><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;{ <span class="keywordflow">return</span> windowId; }</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -542,12 +575,12 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    {</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <a class="code" href="../../da/d17/class_laugh_tale_engine_1_1window_manger.html#a403018be8ea19c9cf7c8f52857a360a5">windowManger::bindContext</a>(windowId);</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <a class="code" href="../../da/d17/class_laugh_tale_engine_1_1window_manger.html#a9803b52f460733ab78aae3c03f1ee97c">windowManger::bindS</a>(windowId, ShaderId);</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <a class="code" href="../../d8/da8/class_laugh_tale_engine_1_1mesh.html#a62813e25532d7523d942018a96203846">getShader</a>()-&gt;<a class="code" href="../../d6/db1/class_laugh_tale_engine_1_1shader.html#a7960bf08b6bb5bccde7ef6a87751871a">setUniform4f</a>(<span class="stringliteral">&quot;colorOffset&quot;</span>, material.r, material.g, material.b, material.a);</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        this-&gt;material = material; </div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    {</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <a class="code" href="../../da/d17/class_laugh_tale_engine_1_1window_manger.html#a403018be8ea19c9cf7c8f52857a360a5">windowManger::bindContext</a>(windowId);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <a class="code" href="../../da/d17/class_laugh_tale_engine_1_1window_manger.html#a9803b52f460733ab78aae3c03f1ee97c">windowManger::bindS</a>(windowId, ShaderId);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <a class="code" href="../../d8/da8/class_laugh_tale_engine_1_1mesh.html#a62813e25532d7523d942018a96203846">getShader</a>()-&gt;<a class="code" href="../../d6/db1/class_laugh_tale_engine_1_1shader.html#a7960bf08b6bb5bccde7ef6a87751871a">setUniform4f</a>(<span class="stringliteral">&quot;colorOffset&quot;</span>, material.r, material.g, material.b, material.a);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        this-&gt;material = material; </div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    }</div>
 <div class="ttc" id="aclass_laugh_tale_engine_1_1mesh_html_a62813e25532d7523d942018a96203846"><div class="ttname"><a href="../../d8/da8/class_laugh_tale_engine_1_1mesh.html#a62813e25532d7523d942018a96203846">LaughTaleEngine::mesh::getShader</a></div><div class="ttdeci">shader * getShader()</div><div class="ttdef"><b>Definition:</b> mesh.cpp:74</div></div>
 <div class="ttc" id="aclass_laugh_tale_engine_1_1shader_html_a7960bf08b6bb5bccde7ef6a87751871a"><div class="ttname"><a href="../../d6/db1/class_laugh_tale_engine_1_1shader.html#a7960bf08b6bb5bccde7ef6a87751871a">LaughTaleEngine::shader::setUniform4f</a></div><div class="ttdeci">virtual void setUniform4f(const std::string &amp;name, float v0, float v1, float v2, float v3)=0</div></div>
 <div class="ttc" id="aclass_laugh_tale_engine_1_1window_manger_html_a403018be8ea19c9cf7c8f52857a360a5"><div class="ttname"><a href="../../da/d17/class_laugh_tale_engine_1_1window_manger.html#a403018be8ea19c9cf7c8f52857a360a5">LaughTaleEngine::windowManger::bindContext</a></div><div class="ttdeci">static void bindContext(windowPieceId windowId)</div><div class="ttdef"><b>Definition:</b> window.cpp:107</div></div>
@@ -661,13 +694,14 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    {</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <a class="code" href="../../da/d17/class_laugh_tale_engine_1_1window_manger.html#a403018be8ea19c9cf7c8f52857a360a5">windowManger::bindContext</a>(windowId);</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <a class="code" href="../../da/d17/class_laugh_tale_engine_1_1window_manger.html#a9803b52f460733ab78aae3c03f1ee97c">windowManger::bindS</a>(windowId, ShaderId);</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <a class="code" href="../../d8/da8/class_laugh_tale_engine_1_1mesh.html#a62813e25532d7523d942018a96203846">getShader</a>()-&gt;<a class="code" href="../../d6/db1/class_laugh_tale_engine_1_1shader.html#ada4019ac27725e80f2764d6771f9559d">setUniformMat4f</a>(<span class="stringliteral">&quot;transform&quot;</span>, transform);</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        this-&gt;transform = transform; </div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    }</div>
-<div class="ttc" id="aclass_laugh_tale_engine_1_1shader_html_ada4019ac27725e80f2764d6771f9559d"><div class="ttname"><a href="../../d6/db1/class_laugh_tale_engine_1_1shader.html#ada4019ac27725e80f2764d6771f9559d">LaughTaleEngine::shader::setUniformMat4f</a></div><div class="ttdeci">virtual void setUniformMat4f(const std::string &amp;name, const glm::mat4 &amp;value)=0</div></div>
+<div class="fragment"><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    {</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <a class="code" href="../../da/d17/class_laugh_tale_engine_1_1window_manger.html#a403018be8ea19c9cf7c8f52857a360a5">windowManger::bindContext</a>(windowId);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <a class="code" href="../../da/d17/class_laugh_tale_engine_1_1window_manger.html#a9803b52f460733ab78aae3c03f1ee97c">windowManger::bindS</a>(windowId, ShaderId);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        shader *s = <a class="code" href="../../d8/da8/class_laugh_tale_engine_1_1mesh.html#a62813e25532d7523d942018a96203846">getShader</a>();</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="keywordflow">if</span>(s != <span class="keyword">nullptr</span>) </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            s-&gt;setUniformMat4f(<span class="stringliteral">&quot;transform&quot;</span>, transform);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        this-&gt;transform = transform; </div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    }</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -734,7 +768,6 @@ Here is the call graph for this function:</div>
 <area shape="rect" href="../../df/d41/class_laugh_tale_engine_1_1_vertex_buffer.html#aca1d6f2b3a0b9e2f355122d70d1637d1" title=" " alt="" coords="772,5,975,47"/>
 <area shape="rect" href="../../d0/df2/class_laugh_tale_engine_1_1vertex_array_manger.html#a5a230c4472bcce7b88d4f3824a569596" title=" " alt="" coords="518,136,714,177"/>
 <area shape="rect" href="../../dd/ddf/class_laugh_tale_engine_1_1_vertex_buffer_manger.html#a4a959699e8d9f42696035ff269442121" title=" " alt="" coords="515,201,717,243"/>
-<area shape="rect" href="../../db/d75/class_laugh_tale_engine_1_1vertex_array.html#a456accf529b0cd47f79a796feb711cb6" title=" " alt="" coords="775,136,971,177"/>
 </map>
 </div>
 <div class="dynheader">

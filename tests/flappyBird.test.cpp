@@ -14,7 +14,6 @@
 #include "drum.h"
 #include "bell.h"
 
-
 #include <cstdlib>
 #include <ctime>
 
@@ -101,12 +100,16 @@ class pilar: public LaughTaleEngine::IEntity
         static void onUpdate(LaughTaleEngine::IEntity *eventEntity, LaughTaleEngine::IEventData *sendor)
         {
             pilar *p = static_cast<pilar *>(eventEntity);
+            if(p == nullptr) return;
+
             LaughTaleEngine::onUpdateData *eventData = static_cast<LaughTaleEngine::onUpdateData *>(sendor);
 
             p->pilarX -= 0.5f * ((float)eventData->DeltaTime) / 1000;
             if(p->pilarX < -1.7f)
                 p->endOfScreen = true;
 
+            if(p->pilarTopMesh == nullptr || p->pilarTopMesh == NULL) return;
+            if(p->pilarBottomMesh == nullptr|| p->pilarBottomMesh == NULL) return;
             p->pilarTopMesh->setTransform(glm::translate(glm::mat4(1.0f), { p->pilarX,  1 + p->pilarHight + PILAR_HOLE_HALF_HIGHT, 0.0f}));
             p->pilarBottomMesh->setTransform(glm::translate(glm::mat4(1.0f), { p->pilarX, -1 + p->pilarHight - PILAR_HOLE_HALF_HIGHT, 0.0f}));
         }
@@ -120,11 +123,11 @@ class bird: public LaughTaleEngine::IEntity
         float birdPostions[6 * 5] = 
         {
              0.00f,     0.10f,  0.0f,   0.5f,   1.0f,
-             0.085f,    0.05f,  0.0f,   1.0f,   0.6f,
-             0.085f,   -0.05f,  0.0f,   1.0f,   0.3f,
+             0.085f,    0.05f,  0.0f,   1.0f,   0.75f,
+             0.085f,   -0.05f,  0.0f,   1.0f,   0.25f,
              0.00f,    -0.10f,  0.0f,   0.5f,   0.0f,
-            -0.085f,   -0.05f,  0.0f,   0.0f,   0.3f,
-            -0.085f,    0.05f,  0.0f,   0.0f,   0.6f
+            -0.085f,   -0.05f,  0.0f,   0.0f,   0.25f,
+            -0.085f,    0.05f,  0.0f,   0.0f,   0.75f
         };
 
 
@@ -164,6 +167,9 @@ class bird: public LaughTaleEngine::IEntity
             LaughTaleEngine::renderLoop::addMesh(birdMesh);
             LaughTaleEngine::renderLoop::active(birdMesh->id);
 
+            LaughTaleEngine::openGLTexture *t = new LaughTaleEngine::openGLTexture("res/textures/Logo.png");
+            t->bind();
+            birdMesh->getShader()->setUniform1i("texture", 0);
             playerEntityId = LaughTaleEngine::entityManger::addEntity(this);
 
             updateId = LaughTaleEngine::eventManger::addEvent(LaughTaleEngine::events::AppUpdate, bird::onUpdate, playerEntityId, gameWindowId);
@@ -248,9 +254,9 @@ class flappyBird : public ::testing::Test, public LaughTaleEngine::IEntity
             if(game->pilars.size() > 0 && game->pilars[0]->endOfScreen)
             {
                 pilar *temp = game->pilars[0];
+                LaughTaleEngine::eventManger::removeEvent(LaughTaleEngine::events::AppRender, temp->onUpdateId);
                 LaughTaleEngine::renderLoop::remove(temp->pilarTopMesh->id);
                 LaughTaleEngine::renderLoop::remove(temp->pilarBottomMesh->id);
-                LaughTaleEngine::eventManger::removeEvent(LaughTaleEngine::events::AppRender, temp->onUpdateId);
                 game->pilars.erase(game->pilars.begin());
                 free(temp);
             }

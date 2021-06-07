@@ -73,7 +73,12 @@ namespace LaughTaleEngine
 
     shader *mesh::getShader()
     {
-        return  windowManger::getShaderManger(windowId)->getShader(ShaderId);
+        
+        shaderManger *m =  windowManger::getShaderManger(windowId);
+        if(m != nullptr)
+            return  m->getShader(ShaderId);
+        LAUGHTALE_ENGINR_LOG_ERROR("coulden get mesh shader");
+        return nullptr;        
     }
 
     uint32_t mesh::getCount()
@@ -85,7 +90,9 @@ namespace LaughTaleEngine
     {
         windowManger::bindContext(windowId);
         windowManger::bindS(windowId, ShaderId);
-        getShader()->setUniformMat4f("transform", transform);
+        shader *s = getShader();
+        if(s != nullptr) 
+            s->setUniformMat4f("transform", transform);
         this->transform = transform; 
     }
     

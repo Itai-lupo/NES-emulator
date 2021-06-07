@@ -12,7 +12,7 @@ namespace LaughTaleEngine
             openGLContext(GLFWwindow* windowHandle)
                 :windowHandle(windowHandle)
             {
-                LAUGHTALE_ENGINR_CONDTION_LOG_ERROR("Window handle is null!", windowHandle == NULL);
+                LAUGHTALE_ENGINR_CONDTION_LOG_ERROR("Window handle is null!", windowHandle == nullptr);
             }
 
             virtual void Init() override;

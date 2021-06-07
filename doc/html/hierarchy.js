@@ -75,6 +75,9 @@ var hierarchy =
     [ "testing::Test", null, [
       [ "flappyBird", "d5/d71/classflappy_bird.html", null ]
     ] ],
+    [ "LaughTaleEngine::texture", "d5/dc3/class_laugh_tale_engine_1_1texture.html", [
+      [ "LaughTaleEngine::openGLTexture", "d0/d26/class_laugh_tale_engine_1_1open_g_l_texture.html", null ]
+    ] ],
     [ "LaughTaleEngine::vertexArray", "db/d75/class_laugh_tale_engine_1_1vertex_array.html", [
       [ "LaughTaleEngine::openGLVertexArray", "de/dbc/class_laugh_tale_engine_1_1open_g_l_vertex_array.html", null ]
     ] ],

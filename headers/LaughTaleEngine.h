@@ -27,3 +27,4 @@
 #include "soundFilesPlayer.h"
 #include "mesh.h"
 #include "renderLoop.h"
+#include "openGLTexture.h"

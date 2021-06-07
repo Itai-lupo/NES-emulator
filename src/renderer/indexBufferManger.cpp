@@ -1,5 +1,6 @@
 #include "indexBufferManger.h"
 #include <algorithm>
+#include "logger.h"
 
 namespace LaughTaleEngine
 {
@@ -29,28 +30,46 @@ namespace LaughTaleEngine
 
     void indexBufferManger::bind(indexBufferId id)
     {
-        (*std::find_if(
+        std::vector<indexBuffer *>::iterator ib = std::find_if(
             indexBuffers->begin(),
             indexBuffers->end(),
             [=](indexBuffer *ib) -> bool { return ib->RendererID == id; }
-        ))->bind();
+        );
+
+        if(ib != indexBuffers->end())
+            (*ib)->bind();
+        
+        LAUGHTALE_ENGINR_CONDTION_LOG_ERROR("faild to bind index buffer: no index buffer with id" << id, ib == indexBuffers->end());
     }
 
     void indexBufferManger::unbind(indexBufferId id)
     {
-        (*std::find_if(
+        std::vector<indexBuffer *>::iterator ib = std::find_if(
             indexBuffers->begin(),
-            indexBuffers->end(),
+            indexBuffers->end(),            
             [=](indexBuffer *ib) -> bool { return ib->RendererID == id; }
-        ))->unbind();
+
+        );
+
+        if(ib != indexBuffers->end())
+            (*ib)->unbind();
+        
+        LAUGHTALE_ENGINR_CONDTION_LOG_ERROR("faild to unbind index buffer: no index buffer with id" << id, ib == indexBuffers->end());
     }
 
     uint32_t indexBufferManger::getCount(indexBufferId id)
     {
-        return (*std::find_if(
+
+        std::vector<indexBuffer *>::iterator ib = std::find_if(
             indexBuffers->begin(),
             indexBuffers->end(),
             [=](indexBuffer *ib) -> bool { return ib->RendererID == id; }
-        ))->getCount();
+        );
+
+        if(ib != indexBuffers->end())
+            return (*ib)->getCount();
+        
+        LAUGHTALE_ENGINR_CONDTION_LOG_ERROR("no index buffer with id" << id, ib == indexBuffers->end());
+        return 0;
     }
 }

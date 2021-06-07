@@ -44,7 +44,7 @@ namespace LaughTaleEngine
     {
         mesh *meshToActive = getMesh(id);
 
-        if(meshToActive != NULL && !meshToActive->isActive)
+        if(meshToActive != nullptr && !meshToActive->isActive)
         {
             meshToActive->onRenderId = eventManger::addEvent( events::AppRender, renderMesh, meshToActive->id, meshToActive->getWindowId());
             meshToActive->isActive = true;
@@ -56,7 +56,7 @@ namespace LaughTaleEngine
     {
         mesh *meshToDeActive = getMesh(id);
         
-        if(meshToDeActive != NULL && !meshToDeActive->isActive)
+        if(meshToDeActive != nullptr && !meshToDeActive->isActive)
         {
             eventManger::removeEvent(events::AppRender, meshToDeActive->onRenderId);
             meshToDeActive->isActive = false;    
@@ -67,10 +67,10 @@ namespace LaughTaleEngine
     void renderLoop::remove(entityTaleId id)
     {
         mesh *meshToRemove = getMesh(id);
-        entityManger::removeEntityById(meshToRemove->id);
         if(meshToRemove->isActive)
             eventManger::removeEvent(events::AppRender, meshToRemove->onRenderId);
         
+        entityManger::removeEntityById(meshToRemove->id);
         std::remove_if(
             meshs->begin(),
             meshs->end(),

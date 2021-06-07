@@ -136,7 +136,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <div class="fragment"><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{ <a class="code" href="../../d4/dbe/class_laugh_tale_engine_1_1index_buffer_manger.html#a51bafac4aae1ef49376c5ac69069ebbd">init</a>(); }</div>
-<div class="ttc" id="aclass_laugh_tale_engine_1_1index_buffer_manger_html_a51bafac4aae1ef49376c5ac69069ebbd"><div class="ttname"><a href="../../d4/dbe/class_laugh_tale_engine_1_1index_buffer_manger.html#a51bafac4aae1ef49376c5ac69069ebbd">LaughTaleEngine::indexBufferManger::init</a></div><div class="ttdeci">void init()</div><div class="ttdef"><b>Definition:</b> indexBufferManger.cpp:6</div></div>
+<div class="ttc" id="aclass_laugh_tale_engine_1_1index_buffer_manger_html_a51bafac4aae1ef49376c5ac69069ebbd"><div class="ttname"><a href="../../d4/dbe/class_laugh_tale_engine_1_1index_buffer_manger.html#a51bafac4aae1ef49376c5ac69069ebbd">LaughTaleEngine::indexBufferManger::init</a></div><div class="ttdeci">void init()</div><div class="ttdef"><b>Definition:</b> indexBufferManger.cpp:7</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -172,7 +172,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 <div class="fragment"><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;{ <a class="code" href="../../d4/dbe/class_laugh_tale_engine_1_1index_buffer_manger.html#a25f0d5f3a14c1de3612577f424ae06e8">close</a>(); }</div>
-<div class="ttc" id="aclass_laugh_tale_engine_1_1index_buffer_manger_html_a25f0d5f3a14c1de3612577f424ae06e8"><div class="ttname"><a href="../../d4/dbe/class_laugh_tale_engine_1_1index_buffer_manger.html#a25f0d5f3a14c1de3612577f424ae06e8">LaughTaleEngine::indexBufferManger::close</a></div><div class="ttdeci">void close()</div><div class="ttdef"><b>Definition:</b> indexBufferManger.cpp:11</div></div>
+<div class="ttc" id="aclass_laugh_tale_engine_1_1index_buffer_manger_html_a25f0d5f3a14c1de3612577f424ae06e8"><div class="ttname"><a href="../../d4/dbe/class_laugh_tale_engine_1_1index_buffer_manger.html#a25f0d5f3a14c1de3612577f424ae06e8">LaughTaleEngine::indexBufferManger::close</a></div><div class="ttdeci">void close()</div><div class="ttdef"><b>Definition:</b> indexBufferManger.cpp:12</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -201,12 +201,12 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    {</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        indexBufferToAdd-&gt;RendererID = indexBufferToAdd-&gt;init();</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        indexBuffers-&gt;push_back(indexBufferToAdd);</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keywordflow">return</span> indexBufferToAdd-&gt;RendererID;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        indexBufferToAdd-&gt;RendererID = indexBufferToAdd-&gt;init();</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        indexBuffers-&gt;push_back(indexBufferToAdd);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keywordflow">return</span> indexBufferToAdd-&gt;RendererID;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    }</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -243,14 +243,19 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    {</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        (*std::find_if(</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            indexBuffers-&gt;begin(),</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            indexBuffers-&gt;end(),</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            [=](indexBuffer *ib) -&gt; <span class="keywordtype">bool</span> { return ib-&gt;RendererID == id; }</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        ))-&gt;<a class="code" href="../../d4/dbe/class_laugh_tale_engine_1_1index_buffer_manger.html#ac52d6cbc2b33bba0b984e66634a51dc8">bind</a>();</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    }</div>
-<div class="ttc" id="aclass_laugh_tale_engine_1_1index_buffer_manger_html_ac52d6cbc2b33bba0b984e66634a51dc8"><div class="ttname"><a href="../../d4/dbe/class_laugh_tale_engine_1_1index_buffer_manger.html#ac52d6cbc2b33bba0b984e66634a51dc8">LaughTaleEngine::indexBufferManger::bind</a></div><div class="ttdeci">void bind(indexBufferId id)</div><div class="ttdef"><b>Definition:</b> indexBufferManger.cpp:30</div></div>
+<div class="fragment"><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        std::vector&lt;indexBuffer *&gt;::iterator ib = std::find_if(</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            indexBuffers-&gt;begin(),</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            indexBuffers-&gt;end(),</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            [=](indexBuffer *ib) -&gt; <span class="keywordtype">bool</span> { return ib-&gt;RendererID == id; }</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        );</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keywordflow">if</span>(ib != indexBuffers-&gt;end())</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            (*ib)-&gt;bind();</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <a class="code" href="../../d1/d8c/logger_8h.html#a030a2caf9f43b4e2926c659309f955ef">LAUGHTALE_ENGINR_CONDTION_LOG_ERROR</a>(<span class="stringliteral">&quot;faild to bind index buffer: no index buffer with id&quot;</span> &lt;&lt; <span class="keywordtype">id</span>, ib == indexBuffers-&gt;end());</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    }</div>
+<div class="ttc" id="alogger_8h_html_a030a2caf9f43b4e2926c659309f955ef"><div class="ttname"><a href="../../d1/d8c/logger_8h.html#a030a2caf9f43b4e2926c659309f955ef">LAUGHTALE_ENGINR_CONDTION_LOG_ERROR</a></div><div class="ttdeci">#define LAUGHTALE_ENGINR_CONDTION_LOG_ERROR(toLog, condition)</div><div class="ttdef"><b>Definition:</b> logger.h:12</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -281,15 +286,15 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    {</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        std::for_each(</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;            indexBuffers-&gt;begin(),</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;            indexBuffers-&gt;end(),</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;            [](indexBuffer *ib){ free(ib); }</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        );</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        indexBuffers-&gt;clear();</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        free(indexBuffers);</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    {</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        std::for_each(</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;            indexBuffers-&gt;begin(),</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;            indexBuffers-&gt;end(),</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;            [](indexBuffer *ib){ free(ib); }</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        );</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        indexBuffers-&gt;clear();</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        free(indexBuffers);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    }</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -317,13 +322,20 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    {</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordflow">return</span> (*std::find_if(</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            indexBuffers-&gt;begin(),</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            indexBuffers-&gt;end(),</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            [=](indexBuffer *ib) -&gt; <span class="keywordtype">bool</span> { return ib-&gt;RendererID == id; }</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        ))-&gt;getCount();</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        std::vector&lt;indexBuffer *&gt;::iterator ib = std::find_if(</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            indexBuffers-&gt;begin(),</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            indexBuffers-&gt;end(),</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            [=](indexBuffer *ib) -&gt; <span class="keywordtype">bool</span> { return ib-&gt;RendererID == id; }</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        );</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordflow">if</span>(ib != indexBuffers-&gt;end())</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            <span class="keywordflow">return</span> (*ib)-&gt;getCount();</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <a class="code" href="../../d1/d8c/logger_8h.html#a030a2caf9f43b4e2926c659309f955ef">LAUGHTALE_ENGINR_CONDTION_LOG_ERROR</a>(<span class="stringliteral">&quot;no index buffer with id&quot;</span> &lt;&lt; <span class="keywordtype">id</span>, ib == indexBuffers-&gt;end());</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    }</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -354,9 +366,9 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    {</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;        indexBuffers = <span class="keyword">new</span> std::vector&lt;indexBuffer *&gt;();</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    {</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        indexBuffers = <span class="keyword">new</span> std::vector&lt;indexBuffer *&gt;();</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    }</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -384,14 +396,19 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    {</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        (*std::find_if(</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            indexBuffers-&gt;begin(),</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            indexBuffers-&gt;end(),</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            [=](indexBuffer *ib) -&gt; <span class="keywordtype">bool</span> { return ib-&gt;RendererID == id; }</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        ))-&gt;<a class="code" href="../../d4/dbe/class_laugh_tale_engine_1_1index_buffer_manger.html#a2f7ee84ea70d867d4933b79cd09bcb0d">unbind</a>();</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    }</div>
-<div class="ttc" id="aclass_laugh_tale_engine_1_1index_buffer_manger_html_a2f7ee84ea70d867d4933b79cd09bcb0d"><div class="ttname"><a href="../../d4/dbe/class_laugh_tale_engine_1_1index_buffer_manger.html#a2f7ee84ea70d867d4933b79cd09bcb0d">LaughTaleEngine::indexBufferManger::unbind</a></div><div class="ttdeci">void unbind(indexBufferId id)</div><div class="ttdef"><b>Definition:</b> indexBufferManger.cpp:39</div></div>
+<div class="fragment"><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    {</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        std::vector&lt;indexBuffer *&gt;::iterator ib = std::find_if(</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            indexBuffers-&gt;begin(),</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            indexBuffers-&gt;end(),            </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            [=](indexBuffer *ib) -&gt; <span class="keywordtype">bool</span> { return ib-&gt;RendererID == id; }</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        );</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordflow">if</span>(ib != indexBuffers-&gt;end())</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            (*ib)-&gt;unbind();</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <a class="code" href="../../d1/d8c/logger_8h.html#a030a2caf9f43b4e2926c659309f955ef">LAUGHTALE_ENGINR_CONDTION_LOG_ERROR</a>(<span class="stringliteral">&quot;faild to unbind index buffer: no index buffer with id&quot;</span> &lt;&lt; <span class="keywordtype">id</span>, ib == indexBuffers-&gt;end());</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>

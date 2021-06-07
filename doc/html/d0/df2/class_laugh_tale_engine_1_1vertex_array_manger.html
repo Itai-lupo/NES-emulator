@@ -253,30 +253,21 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 <div class="fragment"><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    {</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        vertexArray *va = (*std::find_if(</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        std::vector&lt;vertexArray *&gt;::iterator va = std::find_if(</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            vertexArrays-&gt;begin(),</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            vertexArrays-&gt;end(),</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            [=](vertexArray *va) -&gt; <span class="keywordtype">bool</span> { return va-&gt;rendererId == id; }</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        ));</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        );</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keywordflow">if</span>(va != NULL)</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            va-&gt;AddBuffer(vb);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keywordflow">if</span>(va != vertexArrays-&gt;end())</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            (*va)-&gt;AddBuffer(vb);</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <a class="code" href="../../d1/d8c/logger_8h.html#a030a2caf9f43b4e2926c659309f955ef">LAUGHTALE_ENGINR_CONDTION_LOG_ERROR</a>(<span class="stringliteral">&quot;no vertext array with id: &quot;</span> &lt;&lt; <span class="keywordtype">id</span>, va == NULL);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <a class="code" href="../../d1/d8c/logger_8h.html#a030a2caf9f43b4e2926c659309f955ef">LAUGHTALE_ENGINR_CONDTION_LOG_ERROR</a>(<span class="stringliteral">&quot;no vertext array with id: &quot;</span> &lt;&lt; <span class="keywordtype">id</span>, va == vertexArrays-&gt;end());</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        </div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    }    </div>
 <div class="ttc" id="alogger_8h_html_a030a2caf9f43b4e2926c659309f955ef"><div class="ttname"><a href="../../d1/d8c/logger_8h.html#a030a2caf9f43b4e2926c659309f955ef">LAUGHTALE_ENGINR_CONDTION_LOG_ERROR</a></div><div class="ttdeci">#define LAUGHTALE_ENGINR_CONDTION_LOG_ERROR(toLog, condition)</div><div class="ttdef"><b>Definition:</b> logger.h:12</div></div>
 </div><!-- fragment --><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../d0/df2/class_laugh_tale_engine_1_1vertex_array_manger_a5a230c4472bcce7b88d4f3824a569596_cgraph.png" border="0" usemap="#ad0/df2/class_laugh_tale_engine_1_1vertex_array_manger_a5a230c4472bcce7b88d4f3824a569596_cgraph" alt=""/></div>
-<map name="ad0/df2/class_laugh_tale_engine_1_1vertex_array_manger_a5a230c4472bcce7b88d4f3824a569596_cgraph" id="ad0/df2/class_laugh_tale_engine_1_1vertex_array_manger_a5a230c4472bcce7b88d4f3824a569596_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,201,47"/>
-<area shape="rect" href="../../db/d75/class_laugh_tale_engine_1_1vertex_array.html#a456accf529b0cd47f79a796feb711cb6" title=" " alt="" coords="249,5,445,47"/>
-</map>
-</div>
-<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d0/df2/class_laugh_tale_engine_1_1vertex_array_manger_a5a230c4472bcce7b88d4f3824a569596_icgraph.png" border="0" usemap="#ad0/df2/class_laugh_tale_engine_1_1vertex_array_manger_a5a230c4472bcce7b88d4f3824a569596_icgraph" alt=""/></div>
@@ -308,27 +299,18 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 <div class="fragment"><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    {</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        vertexArray *va = (*std::find_if(</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        std::vector&lt;vertexArray *&gt;::iterator va = std::find_if(</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            vertexArrays-&gt;begin(),</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            vertexArrays-&gt;end(),</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            [=](vertexArray *va) -&gt; <span class="keywordtype">bool</span> { return va-&gt;rendererId == id; }</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        ));</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        );</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keywordflow">if</span>(va != NULL)</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            va-&gt;bind();</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keywordflow">if</span>(va != vertexArrays-&gt;end())</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            (*va)-&gt;bind();</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <a class="code" href="../../d1/d8c/logger_8h.html#a030a2caf9f43b4e2926c659309f955ef">LAUGHTALE_ENGINR_CONDTION_LOG_ERROR</a>(<span class="stringliteral">&quot;no vertext array with id: &quot;</span> &lt;&lt; <span class="keywordtype">id</span>, va == NULL);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <a class="code" href="../../d1/d8c/logger_8h.html#a030a2caf9f43b4e2926c659309f955ef">LAUGHTALE_ENGINR_CONDTION_LOG_ERROR</a>(<span class="stringliteral">&quot;no vertext array with id: &quot;</span> &lt;&lt; <span class="keywordtype">id</span>, va == vertexArrays-&gt;end());</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    }    </div>
 </div><!-- fragment --><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../d0/df2/class_laugh_tale_engine_1_1vertex_array_manger_a5c39790433e3e38c9c8ecbfd76849758_cgraph.png" border="0" usemap="#ad0/df2/class_laugh_tale_engine_1_1vertex_array_manger_a5c39790433e3e38c9c8ecbfd76849758_cgraph" alt=""/></div>
-<map name="ad0/df2/class_laugh_tale_engine_1_1vertex_array_manger_a5c39790433e3e38c9c8ecbfd76849758_cgraph" id="ad0/df2/class_laugh_tale_engine_1_1vertex_array_manger_a5c39790433e3e38c9c8ecbfd76849758_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,201,47"/>
-<area shape="rect" href="../../db/d75/class_laugh_tale_engine_1_1vertex_array.html#a4771609b11ee4241c2f26a9409578008" title=" " alt="" coords="249,5,445,47"/>
-</map>
-</div>
-<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d0/df2/class_laugh_tale_engine_1_1vertex_array_manger_a5c39790433e3e38c9c8ecbfd76849758_icgraph.png" border="0" usemap="#ad0/df2/class_laugh_tale_engine_1_1vertex_array_manger_a5c39790433e3e38c9c8ecbfd76849758_icgraph" alt=""/></div>
@@ -418,27 +400,18 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 <div class="fragment"><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    {</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        vertexArray *va = (*std::find_if(</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        std::vector&lt;vertexArray *&gt;::iterator va = std::find_if(</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            vertexArrays-&gt;begin(),</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            vertexArrays-&gt;end(),</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            [=](vertexArray *va) -&gt; <span class="keywordtype">bool</span> { return va-&gt;rendererId == id; }</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        ));</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        );</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keywordflow">if</span>(va != NULL)</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            va-&gt;unbind();</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keywordflow">if</span>(va != vertexArrays-&gt;end())</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            (*va)-&gt;unbind();</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        </div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <a class="code" href="../../d1/d8c/logger_8h.html#a030a2caf9f43b4e2926c659309f955ef">LAUGHTALE_ENGINR_CONDTION_LOG_ERROR</a>(<span class="stringliteral">&quot;no vertext array with id: &quot;</span> &lt;&lt; <span class="keywordtype">id</span>, va == NULL);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <a class="code" href="../../d1/d8c/logger_8h.html#a030a2caf9f43b4e2926c659309f955ef">LAUGHTALE_ENGINR_CONDTION_LOG_ERROR</a>(<span class="stringliteral">&quot;no vertext array with id: &quot;</span> &lt;&lt; <span class="keywordtype">id</span>, va == vertexArrays-&gt;end());</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    }    </div>
-</div><!-- fragment --><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../d0/df2/class_laugh_tale_engine_1_1vertex_array_manger_aa072a48c8396e10e5374ead1f6eaed29_cgraph.png" border="0" usemap="#ad0/df2/class_laugh_tale_engine_1_1vertex_array_manger_aa072a48c8396e10e5374ead1f6eaed29_cgraph" alt=""/></div>
-<map name="ad0/df2/class_laugh_tale_engine_1_1vertex_array_manger_aa072a48c8396e10e5374ead1f6eaed29_cgraph" id="ad0/df2/class_laugh_tale_engine_1_1vertex_array_manger_aa072a48c8396e10e5374ead1f6eaed29_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,201,47"/>
-<area shape="rect" href="../../db/d75/class_laugh_tale_engine_1_1vertex_array.html#a4302889e271ad9801470f7bc63aacb41" title=" " alt="" coords="249,5,445,47"/>
-</map>
-</div>
-
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>

@@ -228,10 +228,11 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <div class="fragment"><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    {</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        shader *s = toRender-&gt;getShader();</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        s-&gt;bind();</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        s-&gt;setUniformMat4f(<span class="stringliteral">&quot;viewProjection&quot;</span>, data.<a class="code" href="../../db/d6b/struct_laugh_tale_engine_1_1_scene_data.html#a0650ada41651e8a276d7ea043908f5fc">camera</a>-&gt;<a class="code" href="../../d7/d93/class_laugh_tale_engine_1_1core_camera.html#ac547c86c5fabf2173fb7634069f0d801">getViewProjectionMatrix</a>());</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        api-&gt;<a class="code" href="../../d0/d98/class_laugh_tale_engine_1_1render_api.html#a1b102e3b35c2955f240ea09393f22639">DrawIndexed</a>(toRender-&gt;getCount());</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    }</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keywordflow">if</span>(s == <span class="keyword">nullptr</span>) <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        s-&gt;bind();</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        s-&gt;setUniformMat4f(<span class="stringliteral">&quot;viewProjection&quot;</span>, data.<a class="code" href="../../db/d6b/struct_laugh_tale_engine_1_1_scene_data.html#a0650ada41651e8a276d7ea043908f5fc">camera</a>-&gt;<a class="code" href="../../d7/d93/class_laugh_tale_engine_1_1core_camera.html#ac547c86c5fabf2173fb7634069f0d801">getViewProjectionMatrix</a>());</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        api-&gt;<a class="code" href="../../d0/d98/class_laugh_tale_engine_1_1render_api.html#a1b102e3b35c2955f240ea09393f22639">DrawIndexed</a>(toRender-&gt;getCount());</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    }</div>
 <div class="ttc" id="aclass_laugh_tale_engine_1_1core_camera_html_ac547c86c5fabf2173fb7634069f0d801"><div class="ttname"><a href="../../d7/d93/class_laugh_tale_engine_1_1core_camera.html#ac547c86c5fabf2173fb7634069f0d801">LaughTaleEngine::coreCamera::getViewProjectionMatrix</a></div><div class="ttdeci">virtual const glm::mat4 &amp; getViewProjectionMatrix()=0</div></div>
 <div class="ttc" id="aclass_laugh_tale_engine_1_1render_api_html_a1b102e3b35c2955f240ea09393f22639"><div class="ttname"><a href="../../d0/d98/class_laugh_tale_engine_1_1render_api.html#a1b102e3b35c2955f240ea09393f22639">LaughTaleEngine::renderApi::DrawIndexed</a></div><div class="ttdeci">virtual void DrawIndexed(uint32_t count)=0</div></div>
 </div><!-- fragment --><div class="dynheader">

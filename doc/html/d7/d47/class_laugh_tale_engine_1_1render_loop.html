@@ -137,7 +137,7 @@ Static Public Member Functions</h2></td></tr>
 <div class="fragment"><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    {</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        mesh *meshToActive = <a class="code" href="../../d7/d47/class_laugh_tale_engine_1_1render_loop.html#a399266be595cba9b692daf55616bfaaf">getMesh</a>(<span class="keywordtype">id</span>);</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordflow">if</span>(meshToActive != NULL &amp;&amp; !meshToActive-&gt;isActive)</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordflow">if</span>(meshToActive != <span class="keyword">nullptr</span> &amp;&amp; !meshToActive-&gt;isActive)</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        {</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            meshToActive-&gt;onRenderId = <a class="code" href="../../d9/dd1/class_laugh_tale_engine_1_1event_manger.html#abcea36f5710e35dc816f1e1d461a1de1">eventManger::addEvent</a>( <a class="code" href="../../db/d49/namespace_laugh_tale_engine.html#a0e35437d5f6988dc624d59aeff54b6bba7b31aecaaf2694e5b456788390739a70">events::AppRender</a>, renderMesh, meshToActive-&gt;id, meshToActive-&gt;getWindowId());</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            meshToActive-&gt;isActive = <span class="keyword">true</span>;</div>
@@ -305,7 +305,7 @@ Here is the caller graph for this function:</div>
 <div class="fragment"><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    {</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        mesh *meshToDeActive = <a class="code" href="../../d7/d47/class_laugh_tale_engine_1_1render_loop.html#a399266be595cba9b692daf55616bfaaf">getMesh</a>(<span class="keywordtype">id</span>);</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordflow">if</span>(meshToDeActive != NULL &amp;&amp; !meshToDeActive-&gt;isActive)</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordflow">if</span>(meshToDeActive != <span class="keyword">nullptr</span> &amp;&amp; !meshToDeActive-&gt;isActive)</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        {</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            <a class="code" href="../../d9/dd1/class_laugh_tale_engine_1_1event_manger.html#a425867df36aeb35524a670a53f3ee0ff">eventManger::removeEvent</a>(<a class="code" href="../../db/d49/namespace_laugh_tale_engine.html#a0e35437d5f6988dc624d59aeff54b6bba7b31aecaaf2694e5b456788390739a70">events::AppRender</a>, meshToDeActive-&gt;onRenderId);</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            meshToDeActive-&gt;isActive = <span class="keyword">false</span>;    </div>
@@ -437,10 +437,10 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <div class="fragment"><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    {</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        mesh *meshToRemove = <a class="code" href="../../d7/d47/class_laugh_tale_engine_1_1render_loop.html#a399266be595cba9b692daf55616bfaaf">getMesh</a>(<span class="keywordtype">id</span>);</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <a class="code" href="../../df/dc8/class_laugh_tale_engine_1_1entity_manger.html#a0bf7cd0edceb47916e7788a834614491">entityManger::removeEntityById</a>(meshToRemove-&gt;id);</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keywordflow">if</span>(meshToRemove-&gt;isActive)</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            <a class="code" href="../../d9/dd1/class_laugh_tale_engine_1_1event_manger.html#a425867df36aeb35524a670a53f3ee0ff">eventManger::removeEvent</a>(<a class="code" href="../../db/d49/namespace_laugh_tale_engine.html#a0e35437d5f6988dc624d59aeff54b6bba7b31aecaaf2694e5b456788390739a70">events::AppRender</a>, meshToRemove-&gt;onRenderId);</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordflow">if</span>(meshToRemove-&gt;isActive)</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            <a class="code" href="../../d9/dd1/class_laugh_tale_engine_1_1event_manger.html#a425867df36aeb35524a670a53f3ee0ff">eventManger::removeEvent</a>(<a class="code" href="../../db/d49/namespace_laugh_tale_engine.html#a0e35437d5f6988dc624d59aeff54b6bba7b31aecaaf2694e5b456788390739a70">events::AppRender</a>, meshToRemove-&gt;onRenderId);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <a class="code" href="../../df/dc8/class_laugh_tale_engine_1_1entity_manger.html#a0bf7cd0edceb47916e7788a834614491">entityManger::removeEntityById</a>(meshToRemove-&gt;id);</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        std::remove_if(</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            meshs-&gt;begin(),</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            meshs-&gt;end(),</div>

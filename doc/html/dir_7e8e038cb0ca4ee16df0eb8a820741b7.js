@@ -20,5 +20,8 @@ var dir_7e8e038cb0ca4ee16df0eb8a820741b7 =
     [ "renderer.h", "d6/d85/renderer_8h.html", [
       [ "SceneData", "db/d6b/struct_laugh_tale_engine_1_1_scene_data.html", "db/d6b/struct_laugh_tale_engine_1_1_scene_data" ],
       [ "renderer", "d6/dea/class_laugh_tale_engine_1_1renderer.html", "d6/dea/class_laugh_tale_engine_1_1renderer" ]
+    ] ],
+    [ "texture.h", "df/dba/texture_8h.html", [
+      [ "texture", "d5/dc3/class_laugh_tale_engine_1_1texture.html", "d5/dc3/class_laugh_tale_engine_1_1texture" ]
     ] ]
 ];

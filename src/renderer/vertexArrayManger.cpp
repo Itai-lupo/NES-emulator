@@ -24,46 +24,46 @@ namespace LaughTaleEngine
     
     void vertexArrayManger::addBuffer(vertexArrayId id,  VertexBuffer *vb)
     {
-        vertexArray *va = (*std::find_if(
+        std::vector<vertexArray *>::iterator va = std::find_if(
             vertexArrays->begin(),
             vertexArrays->end(),
             [=](vertexArray *va) -> bool { return va->rendererId == id; }
-        ));
+        );
 
-        if(va != NULL)
-            va->AddBuffer(vb);
+        if(va != vertexArrays->end())
+            (*va)->AddBuffer(vb);
         
-        LAUGHTALE_ENGINR_CONDTION_LOG_ERROR("no vertext array with id: " << id, va == NULL);
+        LAUGHTALE_ENGINR_CONDTION_LOG_ERROR("no vertext array with id: " << id, va == vertexArrays->end());
 
         
     }    
     
     void vertexArrayManger::bind(vertexArrayId id)
     {
-        vertexArray *va = (*std::find_if(
+        std::vector<vertexArray *>::iterator va = std::find_if(
             vertexArrays->begin(),
             vertexArrays->end(),
             [=](vertexArray *va) -> bool { return va->rendererId == id; }
-        ));
+        );
 
-        if(va != NULL)
-            va->bind();
+        if(va != vertexArrays->end())
+            (*va)->bind();
         
-        LAUGHTALE_ENGINR_CONDTION_LOG_ERROR("no vertext array with id: " << id, va == NULL);
+        LAUGHTALE_ENGINR_CONDTION_LOG_ERROR("no vertext array with id: " << id, va == vertexArrays->end());
     }    
     
     void vertexArrayManger::unbind(vertexArrayId id)
     {
-        vertexArray *va = (*std::find_if(
+        std::vector<vertexArray *>::iterator va = std::find_if(
             vertexArrays->begin(),
             vertexArrays->end(),
             [=](vertexArray *va) -> bool { return va->rendererId == id; }
-        ));
+        );
 
-        if(va != NULL)
-            va->unbind();
+        if(va != vertexArrays->end())
+            (*va)->unbind();
         
-        LAUGHTALE_ENGINR_CONDTION_LOG_ERROR("no vertext array with id: " << id, va == NULL);
+        LAUGHTALE_ENGINR_CONDTION_LOG_ERROR("no vertext array with id: " << id, va == vertexArrays->end());
     }    
     
 }
