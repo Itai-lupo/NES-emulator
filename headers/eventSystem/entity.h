@@ -8,8 +8,7 @@ namespace LaughTaleEngine
     struct IEntity
     {
         public:
-            IEntity(){}
-            int x = 0, y = 0, z = 0, width = 0, hight = 0;
+            virtual ~IEntity() = default;
             
             entityTaleId id;
     };

@@ -3,6 +3,7 @@
 #include "vertexArray.h"
 #include "shader.h"
 #include "coreCamera.h"
+#include "mesh.h"
 
 
 namespace LaughTaleEngine
@@ -26,6 +27,7 @@ namespace LaughTaleEngine
             void endScene();
 
             void Submit(shader *s, uint32_t count, glm::mat4 transform = glm::mat4(1.0f));
+            void Submit(mesh *toRender);
     };
     
     

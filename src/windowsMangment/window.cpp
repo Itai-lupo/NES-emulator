@@ -63,7 +63,7 @@ namespace LaughTaleEngine
         windowEntity *windowEntityData = new windowEntity(newWin);
         entityTaleId windowEntityId = entityManger::addEntity(dynamic_cast<windowEntity*>(windowEntityData));
         eventManger::addEvent(events::WindowResize, onWindowResize, windowEntityId, newWin->id);
-        eventManger::addEvent(events::WindowClose, onWindowClose, -1, newWin->id);
+        // eventManger::addEvent(events::WindowClose, onWindowClose, -1, newWin->id);
         
         return newWin->id;
     }
@@ -143,7 +143,12 @@ namespace LaughTaleEngine
 
     void windowManger::bindS(windowPieceId windowId, shaderId id)
     {
-        findWinById(windowId)->getShaderManger()->bind(id);
+        window *w = findWinById(windowId);
+        shaderManger *sm;
+        if(w != NULL)
+            sm = w->getShaderManger();
+        if(sm != NULL)
+            sm->bind(id);
     }
 
     void windowManger::pushElement(windowPieceId windowId, vertexBufferId id, VertexBufferElement data)
@@ -161,6 +166,18 @@ namespace LaughTaleEngine
     shaderManger *windowManger::getShaderManger(windowPieceId windowId)
     {
         return static_cast<shaderManger *>(findWinById(windowId)->getShaderManger());
+    }
+
+    VertexBufferManger *windowManger::getVertexBufferManger(windowPieceId windowId)
+    {
+        return static_cast<VertexBufferManger *>(findWinById(windowId)->getVertexBufferManger());   
+    }
+
+
+    vertexArrayManger *windowManger::getVertexArrayManger(windowPieceId windowId)
+    {
+        return static_cast<vertexArrayManger *>(findWinById(windowId)->getVertexArrayManger());
+        
     }
 
     uint32_t windowManger::getIndexBufferCount(windowPieceId windowId, indexBufferId id)

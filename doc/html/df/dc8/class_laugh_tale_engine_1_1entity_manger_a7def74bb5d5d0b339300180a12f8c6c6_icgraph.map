@@ -1,9 +1,10 @@
 <map id="LaughTaleEngine::entityManger::addEntity" name="LaughTaleEngine::entityManger::addEntity">
-<area shape="rect" id="node1" title=" " alt="" coords="373,115,577,156"/>
-<area shape="rect" id="node2" href="$da/d17/class_laugh_tale_engine_1_1window_manger.html#a2e629f7bac37c554d2bf8efe15cc0c89" title=" " alt="" coords="109,5,325,47"/>
-<area shape="rect" id="node4" href="$da/dee/classbird.html#a6b56afda6374e3ca12a903cd0aa21bb4" title=" " alt="" coords="181,71,253,98"/>
-<area shape="rect" id="node5" href="$d1/d69/classpilar.html#a2a9b8757ec997e8e62be5c1cb2c133da" title=" " alt="" coords="178,122,257,149"/>
-<area shape="rect" id="node6" href="$d5/d71/classflappy_bird.html#aefe252403b2c6969e04a034c3d037d5d" title=" " alt="" coords="155,173,280,199"/>
-<area shape="rect" id="node7" href="$dc/dc2/init_event_system_8test_8cpp.html#a4e7ac8c5e496af4bb67cce25e9b6b801" title=" " alt="" coords="189,223,245,250"/>
-<area shape="rect" id="node3" href="$db/d41/sound_engine_8test_8cpp.html#afbf0b113fc00899615ae64ad5bcb71a7" title=" " alt="" coords="5,13,61,39"/>
+<area shape="rect" id="node1" title=" " alt="" coords="396,126,600,167"/>
+<area shape="rect" id="node2" href="$d7/d47/class_laugh_tale_engine_1_1render_loop.html#a497d832b6779dd4db220ce1ad12b6d34" title=" " alt="" coords="143,38,337,79"/>
+<area shape="rect" id="node3" href="$da/dee/classbird.html#a6b56afda6374e3ca12a903cd0aa21bb4" title=" " alt="" coords="9,16,81,42"/>
+<area shape="rect" id="node4" href="$d1/d69/classpilar.html#a2a9b8757ec997e8e62be5c1cb2c133da" title=" " alt="" coords="5,85,84,112"/>
+<area shape="rect" id="node5" href="$da/d17/class_laugh_tale_engine_1_1window_manger.html#a2e629f7bac37c554d2bf8efe15cc0c89" title=" " alt="" coords="132,155,348,196"/>
+<area shape="rect" id="node7" href="$d5/d71/classflappy_bird.html#aefe252403b2c6969e04a034c3d037d5d" title=" " alt="" coords="177,221,303,248"/>
+<area shape="rect" id="node8" href="$dc/dc2/init_event_system_8test_8cpp.html#a4e7ac8c5e496af4bb67cce25e9b6b801" title=" " alt="" coords="212,272,268,298"/>
+<area shape="rect" id="node6" href="$db/d41/sound_engine_8test_8cpp.html#afbf0b113fc00899615ae64ad5bcb71a7" title=" " alt="" coords="17,162,73,189"/>
 </map>

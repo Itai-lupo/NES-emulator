@@ -28,4 +28,3 @@ DLLS:
 vendor code:
     glad
     imgui
-    openMP3

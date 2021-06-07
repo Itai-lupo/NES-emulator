@@ -103,6 +103,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a3dfa8300fcac730e09c3337bbe553b31"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e463b8a9c7ead51728cfc5e1a6228da"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dea/class_laugh_tale_engine_1_1renderer.html#a8e463b8a9c7ead51728cfc5e1a6228da">Submit</a> (<a class="el" href="../../d6/db1/class_laugh_tale_engine_1_1shader.html">shader</a> *s, uint32_t count, glm::mat4 transform=glm::mat4(1.0f))</td></tr>
 <tr class="separator:a8e463b8a9c7ead51728cfc5e1a6228da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee1eaf1e26b8f9423e3368cb575610ca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dea/class_laugh_tale_engine_1_1renderer.html#aee1eaf1e26b8f9423e3368cb575610ca">Submit</a> (<a class="el" href="../../d8/da8/class_laugh_tale_engine_1_1mesh.html">mesh</a> *toRender)</td></tr>
+<tr class="separator:aee1eaf1e26b8f9423e3368cb575610ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a7254792da9faecad2ae2b904e54f4305"></a>
@@ -128,8 +130,8 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;                                    :</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                api(api){}</div>
+<div class="fragment"><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                                    :</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;                api(api){}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -157,7 +159,7 @@ Public Member Functions</h2></td></tr>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    }</div>
 <div class="ttc" id="aclass_laugh_tale_engine_1_1render_api_html_a584d5da18614bc1ff3a5e331df9d4e2b"><div class="ttname"><a href="../../d0/d98/class_laugh_tale_engine_1_1render_api.html#a584d5da18614bc1ff3a5e331df9d4e2b">LaughTaleEngine::renderApi::Clear</a></div><div class="ttdeci">virtual void Clear()=0</div></div>
 <div class="ttc" id="aclass_laugh_tale_engine_1_1render_api_html_ab72a77330dacba4fee0ccf8156e54173"><div class="ttname"><a href="../../d0/d98/class_laugh_tale_engine_1_1render_api.html#ab72a77330dacba4fee0ccf8156e54173">LaughTaleEngine::renderApi::SetClearColor</a></div><div class="ttdeci">virtual void SetClearColor(const glm::vec4 &amp;color)=0</div></div>
-<div class="ttc" id="astruct_laugh_tale_engine_1_1_scene_data_html_a0650ada41651e8a276d7ea043908f5fc"><div class="ttname"><a href="../../db/d6b/struct_laugh_tale_engine_1_1_scene_data.html#a0650ada41651e8a276d7ea043908f5fc">LaughTaleEngine::SceneData::camera</a></div><div class="ttdeci">coreCamera * camera</div><div class="ttdef"><b>Definition:</b> renderer.h:13</div></div>
+<div class="ttc" id="astruct_laugh_tale_engine_1_1_scene_data_html_a0650ada41651e8a276d7ea043908f5fc"><div class="ttname"><a href="../../db/d6b/struct_laugh_tale_engine_1_1_scene_data.html#a0650ada41651e8a276d7ea043908f5fc">LaughTaleEngine::SceneData::camera</a></div><div class="ttdeci">coreCamera * camera</div><div class="ttdef"><b>Definition:</b> renderer.h:14</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -209,8 +211,51 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a id="aee1eaf1e26b8f9423e3368cb575610ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee1eaf1e26b8f9423e3368cb575610ca">&#9670;&nbsp;</a></span>Submit() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LaughTaleEngine::renderer::Submit </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d8/da8/class_laugh_tale_engine_1_1mesh.html">mesh</a> *&#160;</td>
+          <td class="paramname"><em>toRender</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        shader *s = toRender-&gt;getShader();</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        s-&gt;bind();</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        s-&gt;setUniformMat4f(<span class="stringliteral">&quot;viewProjection&quot;</span>, data.<a class="code" href="../../db/d6b/struct_laugh_tale_engine_1_1_scene_data.html#a0650ada41651e8a276d7ea043908f5fc">camera</a>-&gt;<a class="code" href="../../d7/d93/class_laugh_tale_engine_1_1core_camera.html#ac547c86c5fabf2173fb7634069f0d801">getViewProjectionMatrix</a>());</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        api-&gt;<a class="code" href="../../d0/d98/class_laugh_tale_engine_1_1render_api.html#a1b102e3b35c2955f240ea09393f22639">DrawIndexed</a>(toRender-&gt;getCount());</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    }</div>
+<div class="ttc" id="aclass_laugh_tale_engine_1_1core_camera_html_ac547c86c5fabf2173fb7634069f0d801"><div class="ttname"><a href="../../d7/d93/class_laugh_tale_engine_1_1core_camera.html#ac547c86c5fabf2173fb7634069f0d801">LaughTaleEngine::coreCamera::getViewProjectionMatrix</a></div><div class="ttdeci">virtual const glm::mat4 &amp; getViewProjectionMatrix()=0</div></div>
+<div class="ttc" id="aclass_laugh_tale_engine_1_1render_api_html_a1b102e3b35c2955f240ea09393f22639"><div class="ttname"><a href="../../d0/d98/class_laugh_tale_engine_1_1render_api.html#a1b102e3b35c2955f240ea09393f22639">LaughTaleEngine::renderApi::DrawIndexed</a></div><div class="ttdeci">virtual void DrawIndexed(uint32_t count)=0</div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d6/dea/class_laugh_tale_engine_1_1renderer_aee1eaf1e26b8f9423e3368cb575610ca_cgraph.png" border="0" usemap="#ad6/dea/class_laugh_tale_engine_1_1renderer_aee1eaf1e26b8f9423e3368cb575610ca_cgraph" alt=""/></div>
+<map name="ad6/dea/class_laugh_tale_engine_1_1renderer_aee1eaf1e26b8f9423e3368cb575610ca_cgraph" id="ad6/dea/class_laugh_tale_engine_1_1renderer_aee1eaf1e26b8f9423e3368cb575610ca_cgraph">
+<area shape="rect" title=" " alt="" coords="5,169,181,211"/>
+<area shape="rect" href="../../d6/db1/class_laugh_tale_engine_1_1shader.html#aba1e7a8cf4bb45789a29e00395142bc4" title=" " alt="" coords="245,5,413,47"/>
+<area shape="rect" href="../../d0/d98/class_laugh_tale_engine_1_1render_api.html#a1b102e3b35c2955f240ea09393f22639" title=" " alt="" coords="237,71,421,112"/>
+<area shape="rect" href="../../d8/da8/class_laugh_tale_engine_1_1mesh.html#a1baad4f6faaa4303d09e60cb6e614ef4" title=" " alt="" coords="249,136,410,177"/>
+<area shape="rect" href="../../d8/da8/class_laugh_tale_engine_1_1mesh.html#a62813e25532d7523d942018a96203846" title=" " alt="" coords="249,201,410,243"/>
+<area shape="rect" href="../../d7/d93/class_laugh_tale_engine_1_1core_camera.html#ac547c86c5fabf2173fb7634069f0d801" title=" " alt="" coords="229,267,429,308"/>
+<area shape="rect" href="../../d6/db1/class_laugh_tale_engine_1_1shader.html#ada4019ac27725e80f2764d6771f9559d" title=" " alt="" coords="245,332,413,373"/>
+<area shape="rect" href="../../da/d17/class_laugh_tale_engine_1_1window_manger.html#ab79f959646f41c09e5e041bef6bdfd5f" title=" " alt="" coords="477,136,693,177"/>
+<area shape="rect" href="../../db/de7/class_laugh_tale_engine_1_1shader_manger.html#afdb4893d6c59a3f96cb51d72997fb43a" title=" " alt="" coords="480,201,691,243"/>
+<area shape="rect" href="../../da/d17/class_laugh_tale_engine_1_1window_manger.html#af876123ce22fc998c60e8d9863c5fee0" title=" " alt="" coords="477,267,693,308"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="a8e463b8a9c7ead51728cfc5e1a6228da"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8e463b8a9c7ead51728cfc5e1a6228da">&#9670;&nbsp;</a></span>Submit()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e463b8a9c7ead51728cfc5e1a6228da">&#9670;&nbsp;</a></span>Submit() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -246,8 +291,6 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        s-&gt;setUniformMat4f(<span class="stringliteral">&quot;transform&quot;</span>, transform);</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        api-&gt;<a class="code" href="../../d0/d98/class_laugh_tale_engine_1_1render_api.html#a1b102e3b35c2955f240ea09393f22639">DrawIndexed</a>(count);</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    }</div>
-<div class="ttc" id="aclass_laugh_tale_engine_1_1core_camera_html_ac547c86c5fabf2173fb7634069f0d801"><div class="ttname"><a href="../../d7/d93/class_laugh_tale_engine_1_1core_camera.html#ac547c86c5fabf2173fb7634069f0d801">LaughTaleEngine::coreCamera::getViewProjectionMatrix</a></div><div class="ttdeci">virtual const glm::mat4 &amp; getViewProjectionMatrix()=0</div></div>
-<div class="ttc" id="aclass_laugh_tale_engine_1_1render_api_html_a1b102e3b35c2955f240ea09393f22639"><div class="ttname"><a href="../../d0/d98/class_laugh_tale_engine_1_1render_api.html#a1b102e3b35c2955f240ea09393f22639">LaughTaleEngine::renderApi::DrawIndexed</a></div><div class="ttdeci">virtual void DrawIndexed(uint32_t count)=0</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -265,16 +308,10 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d6/dea/class_laugh_tale_engine_1_1renderer_a8e463b8a9c7ead51728cfc5e1a6228da_icgraph.png" border="0" usemap="#ad6/dea/class_laugh_tale_engine_1_1renderer_a8e463b8a9c7ead51728cfc5e1a6228da_icgraph" alt=""/></div>
 <map name="ad6/dea/class_laugh_tale_engine_1_1renderer_a8e463b8a9c7ead51728cfc5e1a6228da_icgraph" id="ad6/dea/class_laugh_tale_engine_1_1renderer_a8e463b8a9c7ead51728cfc5e1a6228da_icgraph">
-<area shape="rect" title=" " alt="" coords="524,74,700,115"/>
-<area shape="rect" href="../../da/d2d/classwindow_test.html#afb45f394cbc7c14f78f15d7bb720e0df" title=" " alt="" coords="291,5,476,32"/>
-<area shape="rect" href="../../da/d2d/classwindow_test.html#ab150ebf55674ef1a1bc2c2045def4ac4" title=" " alt="" coords="291,56,476,83"/>
-<area shape="rect" href="../../da/dee/classbird.html#a30dadba6fbaf93221f2ba778f1f2eb23" title=" " alt="" coords="328,107,439,133"/>
-<area shape="rect" href="../../d1/d69/classpilar.html#a891d3b3ff5c5d92d9dc97b2a9b865e5d" title=" " alt="" coords="325,157,441,184"/>
-<area shape="rect" href="../../d3/d00/window_8test_8cpp.html#a17abbb749ed42b0ea711959029a6cc14" title=" " alt="" coords="159,31,215,57"/>
-<area shape="rect" href="../../da/dee/classbird.html#a8f139eff21624bd8a9a6da385ec5baa5" title=" " alt="" coords="134,107,241,133"/>
-<area shape="rect" href="../../da/dee/classbird.html#a6b56afda6374e3ca12a903cd0aa21bb4" title=" " alt="" coords="9,107,81,133"/>
-<area shape="rect" href="../../d1/d69/classpilar.html#ac39e224588adcd3afa36bb20bb001d55" title=" " alt="" coords="132,157,243,184"/>
-<area shape="rect" href="../../d1/d69/classpilar.html#a2a9b8757ec997e8e62be5c1cb2c133da" title=" " alt="" coords="5,157,84,184"/>
+<area shape="rect" title=" " alt="" coords="343,23,519,65"/>
+<area shape="rect" href="../../da/d2d/classwindow_test.html#afb45f394cbc7c14f78f15d7bb720e0df" title=" " alt="" coords="109,5,295,32"/>
+<area shape="rect" href="../../da/d2d/classwindow_test.html#ab150ebf55674ef1a1bc2c2045def4ac4" title=" " alt="" coords="109,56,295,83"/>
+<area shape="rect" href="../../d3/d00/window_8test_8cpp.html#a17abbb749ed42b0ea711959029a6cc14" title=" " alt="" coords="5,31,61,57"/>
 </map>
 </div>
 

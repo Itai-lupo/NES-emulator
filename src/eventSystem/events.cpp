@@ -14,6 +14,11 @@ namespace LaughTaleEngine
 
     void eventManger:: close()
     {
+        for (size_t i = 0; i < events::events_MAX; i++)
+        {
+            eventManger::eventList[i].clear();
+        }
+        
         eventManger::nextEventId = 0;
     }
 

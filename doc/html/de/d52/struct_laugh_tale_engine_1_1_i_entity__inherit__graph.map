@@ -1,10 +1,12 @@
 <map id="LaughTaleEngine::IEntity" name="LaughTaleEngine::IEntity">
-<area shape="rect" id="node1" title=" " alt="" coords="226,5,393,32"/>
-<area shape="rect" id="node2" href="$dd/db8/class_im_gui_data.html" title=" " alt="" coords="5,80,91,107"/>
-<area shape="rect" id="node3" href="$da/dee/classbird.html" title=" " alt="" coords="115,80,157,107"/>
-<area shape="rect" id="node4" href="$d5/d71/classflappy_bird.html" title=" " alt="" coords="181,80,261,107"/>
-<area shape="rect" id="node5" href="$d1/d69/classpilar.html" title=" " alt="" coords="286,80,333,107"/>
-<area shape="rect" id="node6" href="$d1/d9c/classrender_data.html" title=" " alt="" coords="357,80,443,107"/>
-<area shape="rect" id="node7" href="$d7/d22/classsound_entity.html" title=" " alt="" coords="468,80,559,107"/>
-<area shape="rect" id="node8" href="$dc/d6c/classwindow_entity.html" title=" " alt="" coords="583,80,683,107"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,208,172,235"/>
+<area shape="rect" id="node2" href="$dd/db8/class_im_gui_data.html" title=" " alt="" coords="258,5,343,32"/>
+<area shape="rect" id="node3" href="$d8/da8/class_laugh_tale_engine_1_1mesh.html" title=" " alt="" coords="220,56,381,83"/>
+<area shape="rect" id="node4" href="$da/dee/classbird.html" title=" " alt="" coords="279,107,322,133"/>
+<area shape="rect" id="node5" href="$d5/d71/classflappy_bird.html" title=" " alt="" coords="261,157,341,184"/>
+<area shape="rect" id="node6" href="$d1/d69/classpilar.html" title=" " alt="" coords="277,208,324,235"/>
+<area shape="rect" id="node7" href="$d1/d9c/classrender_data.html" title=" " alt="" coords="257,259,344,285"/>
+<area shape="rect" id="node8" href="$d7/d22/classsound_entity.html" title=" " alt="" coords="255,309,346,336"/>
+<area shape="rect" id="node9" href="$df/d5c/structtest_entity.html" title=" " alt="" coords="261,360,340,387"/>
+<area shape="rect" id="node10" href="$dc/d6c/classwindow_entity.html" title=" " alt="" coords="251,411,351,437"/>
 </map>

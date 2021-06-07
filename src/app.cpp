@@ -11,6 +11,7 @@
 #include "shaderManger.h"
 #include "soundEngine.h"
 #include "soundSynthesizer.h"
+#include "renderLoop.h"   
 
 #include <chrono>
 #include <string>
@@ -31,17 +32,19 @@ namespace LaughTaleEngine
         windowManger::init();
         soundEngine::init();
         soundSynthesizer::init();
+        renderLoop::init();
     }
 
     void app::close()
     {
         keepRunning = false;
-        logger::close();
-        eventManger::close();
-        entityManger::close();
-        windowManger::close();
         soundEngine::close();
         soundSynthesizer::close();
+        renderLoop::close();
+        eventManger::close();
+        logger::close();
+        entityManger::close();
+        windowManger::close();
     }
 
 

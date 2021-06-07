@@ -25,3 +25,5 @@
 #include "soundSynthesizer.h"
 #include "sequencer.h"
 #include "soundFilesPlayer.h"
+#include "mesh.h"
+#include "renderLoop.h"

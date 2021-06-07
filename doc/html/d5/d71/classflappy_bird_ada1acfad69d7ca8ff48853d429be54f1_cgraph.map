@@ -1,4 +1,7 @@
 <map id="flappyBird::onUpdate" name="flappyBird::onUpdate">
-<area shape="rect" id="node1" title=" " alt="" coords="5,13,149,39"/>
-<area shape="rect" id="node2" href="$d9/dd1/class_laugh_tale_engine_1_1event_manger.html#a425867df36aeb35524a670a53f3ee0ff" title=" " alt="" coords="197,5,401,47"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,111,149,138"/>
+<area shape="rect" id="node2" href="$d7/d47/class_laugh_tale_engine_1_1render_loop.html#addd26d3081b434221ecc387e0d049ad2" title=" " alt="" coords="197,73,391,115"/>
+<area shape="rect" id="node5" href="$d9/dd1/class_laugh_tale_engine_1_1event_manger.html#a425867df36aeb35524a670a53f3ee0ff" title=" " alt="" coords="439,136,643,177"/>
+<area shape="rect" id="node3" href="$d7/d47/class_laugh_tale_engine_1_1render_loop.html#a399266be595cba9b692daf55616bfaaf" title=" " alt="" coords="444,5,637,47"/>
+<area shape="rect" id="node4" href="$df/dc8/class_laugh_tale_engine_1_1entity_manger.html#a0bf7cd0edceb47916e7788a834614491" title=" " alt="" coords="439,71,643,112"/>
 </map>

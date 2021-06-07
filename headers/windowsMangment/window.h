@@ -80,6 +80,9 @@ namespace LaughTaleEngine
 
             static shaderManger *getShaderManger(windowPieceId windowId);
 
+            static VertexBufferManger *getVertexBufferManger(windowPieceId windowId);
+            static vertexArrayManger *getVertexArrayManger(windowPieceId windowId);
+
             static uint32_t getIndexBufferCount(windowPieceId windowId, indexBufferId id);
 
             static renderApi *getRenderApi(windowPieceId windowId);

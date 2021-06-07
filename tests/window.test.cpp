@@ -18,6 +18,7 @@ class ImGuiData: public IEntity
 class renderData: public IEntity
 {
     public:
+        int width, hight; 
         vertexBufferId vbId;
         indexBufferId ibId;
         vertexArrayId vaId;
@@ -36,15 +37,19 @@ class windowTest
         static void mouseMoveDatacallbackWin1(IEntity *eventEntity, IEventData *sendor)
         {
             mouseMoveData* sendorData = dynamic_cast<mouseMoveData*>(sendor);
-            eventEntity->x = sendorData->xPos;
-            eventEntity->y = sendorData->yPos;
+            renderData *renderEntity = static_cast<renderData *>(eventEntity);
+
+            renderEntity->x = sendorData->xPos;
+            renderEntity->y = sendorData->yPos;
         }
 
         static void WindowResize (IEntity *eventEntity, IEventData *sendor)
         {
             WindowResizeData* sendorData = dynamic_cast<WindowResizeData*>(sendor);
-            eventEntity->width = sendorData->windowWidth;
-            eventEntity->hight = sendorData->windowHeight;
+            renderData *renderEntity = static_cast<renderData *>(eventEntity);
+
+            renderEntity->width = sendorData->windowWidth;
+            renderEntity->hight = sendorData->windowHeight;
         }
 
         static void WindowClose(__attribute__((unused)) IEntity *eventEntity, __attribute__((unused)) IEventData *sendor)
@@ -54,7 +59,7 @@ class windowTest
 
         static void onRenderWin1(IEntity *eventEntity, __attribute__((unused)) IEventData *sendor)
         {
-
+            
             renderData *renderEntity = static_cast<renderData *>(eventEntity);
             renderApi *api = windowManger::getRenderApi(sendor->windowId);
             renderer *r = windowManger::getRenderer(sendor->windowId);
@@ -62,7 +67,7 @@ class windowTest
             float mouseX = (float)input::GetMouseX(windowManger::raftelIdToWindowReference(sendor->windowId)) / windowManger::getWidth(sendor->windowId);
             float mouseY = (float)input::GetMouseY(windowManger::raftelIdToWindowReference(sendor->windowId)) / windowManger::getHeight(sendor->windowId);
             
-            api->SetClearColor(glm::vec4((float)eventEntity->x / eventEntity->width, (float)eventEntity->y / eventEntity->hight, 0, 1));
+            api->SetClearColor(glm::vec4((float)renderEntity->x / renderEntity->width, (float)renderEntity->y / renderEntity->hight, 0, 1));
             api->Clear();
 
             
