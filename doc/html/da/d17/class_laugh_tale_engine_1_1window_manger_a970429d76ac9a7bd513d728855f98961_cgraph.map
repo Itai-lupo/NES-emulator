@@ -1,4 +1,6 @@
 <map id="LaughTaleEngine::windowManger::add" name="LaughTaleEngine::windowManger::add">
-<area shape="rect" id="node1" title=" " alt="" coords="5,13,251,39"/>
-<area shape="rect" id="node2" href="$da/d17/class_laugh_tale_engine_1_1window_manger.html#a403018be8ea19c9cf7c8f52857a360a5" title=" " alt="" coords="299,5,515,47"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,42,251,69"/>
+<area shape="rect" id="node2" href="$db/de7/class_laugh_tale_engine_1_1shader_manger.html#abeb7f56a0f4d325e652fdb6b9439459c" title=" " alt="" coords="299,13,539,39"/>
+<area shape="rect" id="node4" href="$da/d17/class_laugh_tale_engine_1_1window_manger.html#a403018be8ea19c9cf7c8f52857a360a5" title=" " alt="" coords="311,64,527,105"/>
+<area shape="rect" id="node3" href="$d6/db1/class_laugh_tale_engine_1_1shader.html#a534acd3fcc3083294ac53d4c7fb7377c" title=" " alt="" coords="587,5,755,47"/>
 </map>

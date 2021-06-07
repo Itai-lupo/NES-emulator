@@ -185,9 +185,9 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="../../d0/d98/class_laugh_tale_engine_1_1render_api.html#a584d5da18614bc1ff3a5e331df9d4e2b">LaughTaleEngine::renderApi</a>.</p>
-<div class="fragment"><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    {</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    {</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -216,9 +216,10 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="../../d0/d98/class_laugh_tale_engine_1_1render_api.html#a1b102e3b35c2955f240ea09393f22639">LaughTaleEngine::renderApi</a>.</p>
-<div class="fragment"><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    {</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        glDrawElements(GL_TRIANGLES, count, GL_UNSIGNED_INT, <span class="keyword">nullptr</span>);</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <a class="code" href="../../d4/dbe/handle_open_gl_errors_8h.html#add165165c35549fda9fb0100e16e9739">GL_CALL</a>(glDrawElements(GL_TRIANGLES, count, GL_UNSIGNED_INT, <span class="keyword">nullptr</span>));</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    }</div>
+<div class="ttc" id="ahandle_open_gl_errors_8h_html_add165165c35549fda9fb0100e16e9739"><div class="ttname"><a href="../../d4/dbe/handle_open_gl_errors_8h.html#add165165c35549fda9fb0100e16e9739">GL_CALL</a></div><div class="ttdeci">#define GL_CALL(x)</div><div class="ttdef"><b>Definition:</b> handleOpenGlErrors.h:4</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -247,9 +248,9 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="../../d0/d98/class_laugh_tale_engine_1_1render_api.html#ab72a77330dacba4fee0ccf8156e54173">LaughTaleEngine::renderApi</a>.</p>
-<div class="fragment"><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    {</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;        glClearColor(color.r, color.g, color.b, color.a);</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    {</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        glClearColor(color.r, color.g, color.b, color.a);</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>

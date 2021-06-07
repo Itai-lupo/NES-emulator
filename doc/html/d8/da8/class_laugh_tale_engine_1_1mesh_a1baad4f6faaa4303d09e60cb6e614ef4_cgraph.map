@@ -1,4 +1,6 @@
 <map id="LaughTaleEngine::mesh::getCount" name="LaughTaleEngine::mesh::getCount">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,167,47"/>
-<area shape="rect" id="node2" href="$da/d17/class_laugh_tale_engine_1_1window_manger.html#ab79f959646f41c09e5e041bef6bdfd5f" title=" " alt="" coords="215,5,431,47"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,39,167,80"/>
+<area shape="rect" id="node2" href="$da/d17/class_laugh_tale_engine_1_1window_manger.html#ab79f959646f41c09e5e041bef6bdfd5f" title=" " alt="" coords="215,39,431,80"/>
+<area shape="rect" id="node3" href="$da/d17/class_laugh_tale_engine_1_1window_manger.html#a403018be8ea19c9cf7c8f52857a360a5" title=" " alt="" coords="479,5,695,47"/>
+<area shape="rect" id="node4" href="$d4/dbe/class_laugh_tale_engine_1_1index_buffer_manger.html#a189db8ace3251bdcc047df387e83f88d" title=" " alt="" coords="489,71,684,112"/>
 </map>

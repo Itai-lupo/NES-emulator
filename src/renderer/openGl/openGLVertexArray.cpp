@@ -29,7 +29,7 @@ namespace LaughTaleEngine
         for(const auto& element : elements)
         {
             GL_CALL(glEnableVertexAttribArray(i));
-            GL_CALL(glVertexAttribPointer(i, element.count, element.type, element.normalized,  vb->GetStride(), (const void*)offset));
+            GL_CALL(glVertexAttribPointer(i, element.count, element.type, element.normalized ? GL_TRUE : GL_FALSE,  vb->GetStride(), (const void*)offset));
             offset += element.count * element.sizeOfType;
             i++;
         }

@@ -1,6 +1,9 @@
 <map id="LaughTaleEngine::VertexBufferManger::getVB" name="LaughTaleEngine::VertexBufferManger::getVB">
-<area shape="rect" id="node1" title=" " alt="" coords="341,23,544,65"/>
-<area shape="rect" id="node2" href="$d8/da8/class_laugh_tale_engine_1_1mesh.html#a3ab1067cf737bb84a1f50e80f098cd50" title=" " alt="" coords="132,23,293,65"/>
-<area shape="rect" id="node3" href="$da/dee/classbird.html#a6b56afda6374e3ca12a903cd0aa21bb4" title=" " alt="" coords="9,5,81,32"/>
-<area shape="rect" id="node4" href="$d1/d69/classpilar.html#a2a9b8757ec997e8e62be5c1cb2c133da" title=" " alt="" coords="5,56,84,83"/>
+<area shape="rect" id="node1" title=" " alt="" coords="605,41,808,83"/>
+<area shape="rect" id="node2" href="$da/d17/class_laugh_tale_engine_1_1window_manger.html#aecc06f0a328ee4e7225caf1e9a9cdc32" title=" " alt="" coords="341,71,557,112"/>
+<area shape="rect" id="node7" href="$d8/da8/class_laugh_tale_engine_1_1mesh.html#a3ab1067cf737bb84a1f50e80f098cd50" title=" " alt="" coords="132,5,293,47"/>
+<area shape="rect" id="node3" href="$d8/da8/class_laugh_tale_engine_1_1mesh.html#a8214df8db5232bd1597a07779b0f9c0a" title=" " alt="" coords="132,71,293,112"/>
+<area shape="rect" id="node6" href="$d3/d00/window_8test_8cpp.html#a17abbb749ed42b0ea711959029a6cc14" title=" " alt="" coords="185,137,241,163"/>
+<area shape="rect" id="node4" href="$da/dee/classbird.html#a6b56afda6374e3ca12a903cd0aa21bb4" title=" " alt="" coords="9,17,81,43"/>
+<area shape="rect" id="node5" href="$d1/d69/classpilar.html#a2a9b8757ec997e8e62be5c1cb2c133da" title=" " alt="" coords="5,71,84,98"/>
 </map>

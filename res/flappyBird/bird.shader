@@ -2,16 +2,17 @@
 #version 330 core 
 
 
-layout(location = 0) in vec4 postion;
+layout(location = 0) in vec3 postion;
+layout(location = 1) in vec2 texCoord;
 
-out vec2 v_TextCoord;
+out vec2 textCoord;
 
 uniform mat4 viewProjection;
 uniform mat4 transform;
 
 void main(){
-   gl_Position = viewProjection * transform * postion;
-   v_TextCoord.xy = postion.xy;
+   gl_Position = viewProjection * transform * vec4(postion, 1.0);
+   textCoord = texCoord;
 };
 
 
@@ -22,10 +23,10 @@ void main(){
 
 layout(location = 0) out vec4 color;
 
-in vec2 v_TextCoord;
+in vec2 textCoord;
 
 uniform vec4 colorOffset;
 
 void main(){
-   color = vec4( v_TextCoord.x, ( (v_TextCoord.y + 0.1f)*5.0f)  + colorOffset.y, colorOffset.z, 1.0f);
+   color = vec4( textCoord.x, textCoord.y  + colorOffset.y, colorOffset.z, 1.0f);
 };

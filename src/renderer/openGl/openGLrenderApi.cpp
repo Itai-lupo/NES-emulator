@@ -1,5 +1,6 @@
 #include "openGLrenderApi.h"
 #include "glad/glad.h"
+#include "handleOpenGlErrors.h"
 
 namespace LaughTaleEngine
 {
@@ -15,7 +16,7 @@ namespace LaughTaleEngine
 
     void openGLRenderApi::DrawIndexed(uint32_t count)
     {
-        glDrawElements(GL_TRIANGLES, count, GL_UNSIGNED_INT, nullptr);
+        GL_CALL(glDrawElements(GL_TRIANGLES, count, GL_UNSIGNED_INT, nullptr));
     }
 
 }

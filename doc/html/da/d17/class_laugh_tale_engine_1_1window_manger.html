@@ -186,19 +186,30 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    {</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        <a class="code" href="../../da/d17/class_laugh_tale_engine_1_1window_manger.html#a403018be8ea19c9cf7c8f52857a360a5">bindContext</a>(windowId);</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../d8/d8e/window_8cpp.html#a717c50c5129d7422ac9babe657f70ec1">findWinById</a>(windowId)-&gt;getIndexBufferManger()-&gt;add(data);</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    }</div>
-<div class="ttc" id="aclass_laugh_tale_engine_1_1window_manger_html_a403018be8ea19c9cf7c8f52857a360a5"><div class="ttname"><a href="../../da/d17/class_laugh_tale_engine_1_1window_manger.html#a403018be8ea19c9cf7c8f52857a360a5">LaughTaleEngine::windowManger::bindContext</a></div><div class="ttdeci">static void bindContext(windowPieceId windowId)</div><div class="ttdef"><b>Definition:</b> window.cpp:98</div></div>
+<div class="fragment"><div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    {</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        <a class="code" href="../../da/d17/class_laugh_tale_engine_1_1window_manger.html#a403018be8ea19c9cf7c8f52857a360a5">bindContext</a>(windowId);</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        window *w = <a class="code" href="../../d8/d8e/window_8cpp.html#a717c50c5129d7422ac9babe657f70ec1">findWinById</a>(windowId);</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        indexBufferManger *m = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        <span class="keywordflow">if</span>(w != <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;            m = w-&gt;getIndexBufferManger();</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        <span class="keywordflow">if</span>(m != <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;            <span class="keywordflow">return</span> m-&gt;add(data);</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160; </div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        <a class="code" href="../../d1/d8c/logger_8h.html#aae4cf1bd083983040d4d6572a9b0d8bf">LAUGHTALE_ENGINR_LOG_ERROR</a>(<span class="stringliteral">&quot;faild to add index buffer: no window with id: &quot;</span> &lt;&lt; windowId);</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    }</div>
+<div class="ttc" id="aclass_laugh_tale_engine_1_1window_manger_html_a403018be8ea19c9cf7c8f52857a360a5"><div class="ttname"><a href="../../da/d17/class_laugh_tale_engine_1_1window_manger.html#a403018be8ea19c9cf7c8f52857a360a5">LaughTaleEngine::windowManger::bindContext</a></div><div class="ttdeci">static void bindContext(windowPieceId windowId)</div><div class="ttdef"><b>Definition:</b> window.cpp:107</div></div>
+<div class="ttc" id="alogger_8h_html_aae4cf1bd083983040d4d6572a9b0d8bf"><div class="ttname"><a href="../../d1/d8c/logger_8h.html#aae4cf1bd083983040d4d6572a9b0d8bf">LAUGHTALE_ENGINR_LOG_ERROR</a></div><div class="ttdeci">#define LAUGHTALE_ENGINR_LOG_ERROR(toLog)</div><div class="ttdef"><b>Definition:</b> logger.h:8</div></div>
 <div class="ttc" id="awindow_8cpp_html_a717c50c5129d7422ac9babe657f70ec1"><div class="ttname"><a href="../../d8/d8e/window_8cpp.html#a717c50c5129d7422ac9babe657f70ec1">findWinById</a></div><div class="ttdeci">#define findWinById(windowId)</div><div class="ttdef"><b>Definition:</b> window.cpp:8</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../da/d17/class_laugh_tale_engine_1_1window_manger_aa87f53610abd8471ce0423ebae15f346_cgraph.png" border="0" usemap="#ada/d17/class_laugh_tale_engine_1_1window_manger_aa87f53610abd8471ce0423ebae15f346_cgraph" alt=""/></div>
 <map name="ada/d17/class_laugh_tale_engine_1_1window_manger_aa87f53610abd8471ce0423ebae15f346_cgraph" id="ada/d17/class_laugh_tale_engine_1_1window_manger_aa87f53610abd8471ce0423ebae15f346_cgraph">
-<area shape="rect" title=" " alt="" coords="5,13,251,39"/>
-<area shape="rect" href="../../da/d17/class_laugh_tale_engine_1_1window_manger.html#a403018be8ea19c9cf7c8f52857a360a5" title=" " alt="" coords="299,5,515,47"/>
+<area shape="rect" title=" " alt="" coords="5,46,251,73"/>
+<area shape="rect" href="../../d4/dbe/class_laugh_tale_engine_1_1index_buffer_manger.html#ac244f9e07507d6d128b368e8a961099b" title=" " alt="" coords="309,5,504,47"/>
+<area shape="rect" href="../../da/d17/class_laugh_tale_engine_1_1window_manger.html#a403018be8ea19c9cf7c8f52857a360a5" title=" " alt="" coords="299,71,515,112"/>
+<area shape="rect" href="../../df/df2/class_laugh_tale_engine_1_1index_buffer.html#a7d1d313dd793918fb13ec29a18394202" title=" " alt="" coords="563,5,757,47"/>
 </map>
 </div>
 
@@ -237,17 +248,27 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    {</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        <a class="code" href="../../da/d17/class_laugh_tale_engine_1_1window_manger.html#a403018be8ea19c9cf7c8f52857a360a5">bindContext</a>(windowId);</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../d8/d8e/window_8cpp.html#a717c50c5129d7422ac9babe657f70ec1">findWinById</a>(windowId)-&gt;getShaderManger()-&gt;add(data);</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    {</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        <a class="code" href="../../da/d17/class_laugh_tale_engine_1_1window_manger.html#a403018be8ea19c9cf7c8f52857a360a5">bindContext</a>(windowId);</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        window *w = <a class="code" href="../../d8/d8e/window_8cpp.html#a717c50c5129d7422ac9babe657f70ec1">findWinById</a>(windowId);</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        shaderManger *m = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        <span class="keywordflow">if</span>(w != <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;            m = w-&gt;getShaderManger();</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        <span class="keywordflow">if</span>(m != <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;            <span class="keywordflow">return</span> m-&gt;add(data);</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160; </div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        <a class="code" href="../../d1/d8c/logger_8h.html#aae4cf1bd083983040d4d6572a9b0d8bf">LAUGHTALE_ENGINR_LOG_ERROR</a>(<span class="stringliteral">&quot;faild to add shader: no window with id: &quot;</span> &lt;&lt; windowId);</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    }</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../da/d17/class_laugh_tale_engine_1_1window_manger_a970429d76ac9a7bd513d728855f98961_cgraph.png" border="0" usemap="#ada/d17/class_laugh_tale_engine_1_1window_manger_a970429d76ac9a7bd513d728855f98961_cgraph" alt=""/></div>
 <map name="ada/d17/class_laugh_tale_engine_1_1window_manger_a970429d76ac9a7bd513d728855f98961_cgraph" id="ada/d17/class_laugh_tale_engine_1_1window_manger_a970429d76ac9a7bd513d728855f98961_cgraph">
-<area shape="rect" title=" " alt="" coords="5,13,251,39"/>
-<area shape="rect" href="../../da/d17/class_laugh_tale_engine_1_1window_manger.html#a403018be8ea19c9cf7c8f52857a360a5" title=" " alt="" coords="299,5,515,47"/>
+<area shape="rect" title=" " alt="" coords="5,42,251,69"/>
+<area shape="rect" href="../../db/de7/class_laugh_tale_engine_1_1shader_manger.html#abeb7f56a0f4d325e652fdb6b9439459c" title=" " alt="" coords="299,13,539,39"/>
+<area shape="rect" href="../../da/d17/class_laugh_tale_engine_1_1window_manger.html#a403018be8ea19c9cf7c8f52857a360a5" title=" " alt="" coords="311,64,527,105"/>
+<area shape="rect" href="../../d6/db1/class_laugh_tale_engine_1_1shader.html#a534acd3fcc3083294ac53d4c7fb7377c" title=" " alt="" coords="587,5,755,47"/>
 </map>
 </div>
 
@@ -286,17 +307,27 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    {</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        <a class="code" href="../../da/d17/class_laugh_tale_engine_1_1window_manger.html#a403018be8ea19c9cf7c8f52857a360a5">bindContext</a>(windowId);</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../d8/d8e/window_8cpp.html#a717c50c5129d7422ac9babe657f70ec1">findWinById</a>(windowId)-&gt;getVertexArrayManger()-&gt;add(data);</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    {</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        <a class="code" href="../../da/d17/class_laugh_tale_engine_1_1window_manger.html#a403018be8ea19c9cf7c8f52857a360a5">bindContext</a>(windowId);</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        window *w = <a class="code" href="../../d8/d8e/window_8cpp.html#a717c50c5129d7422ac9babe657f70ec1">findWinById</a>(windowId);</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        vertexArrayManger *m = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        <span class="keywordflow">if</span>(w != <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;            m = w-&gt;getVertexArrayManger();</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        <span class="keywordflow">if</span>(m != <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;            <span class="keywordflow">return</span> m-&gt;add(data);</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160; </div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        <a class="code" href="../../d1/d8c/logger_8h.html#aae4cf1bd083983040d4d6572a9b0d8bf">LAUGHTALE_ENGINR_LOG_ERROR</a>(<span class="stringliteral">&quot;faild to add vertex array: no window with id: &quot;</span> &lt;&lt; windowId);</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    }</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../da/d17/class_laugh_tale_engine_1_1window_manger_a6028855d83b6d158e1f30e63d46b4966_cgraph.png" border="0" usemap="#ada/d17/class_laugh_tale_engine_1_1window_manger_a6028855d83b6d158e1f30e63d46b4966_cgraph" alt=""/></div>
 <map name="ada/d17/class_laugh_tale_engine_1_1window_manger_a6028855d83b6d158e1f30e63d46b4966_cgraph" id="ada/d17/class_laugh_tale_engine_1_1window_manger_a6028855d83b6d158e1f30e63d46b4966_cgraph">
-<area shape="rect" title=" " alt="" coords="5,13,251,39"/>
-<area shape="rect" href="../../da/d17/class_laugh_tale_engine_1_1window_manger.html#a403018be8ea19c9cf7c8f52857a360a5" title=" " alt="" coords="299,5,515,47"/>
+<area shape="rect" title=" " alt="" coords="5,46,251,73"/>
+<area shape="rect" href="../../d0/df2/class_laugh_tale_engine_1_1vertex_array_manger.html#a8c248d581b7f2f84d4fdf13dbb6c8e0e" title=" " alt="" coords="309,5,505,47"/>
+<area shape="rect" href="../../da/d17/class_laugh_tale_engine_1_1window_manger.html#a403018be8ea19c9cf7c8f52857a360a5" title=" " alt="" coords="299,71,515,112"/>
+<area shape="rect" href="../../db/d75/class_laugh_tale_engine_1_1vertex_array.html#a4a9dbb6766284622404ed35c8e962f6a" title=" " alt="" coords="563,5,759,47"/>
 </map>
 </div>
 
@@ -335,17 +366,27 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    {</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <a class="code" href="../../da/d17/class_laugh_tale_engine_1_1window_manger.html#a403018be8ea19c9cf7c8f52857a360a5">bindContext</a>(windowId);</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../d8/d8e/window_8cpp.html#a717c50c5129d7422ac9babe657f70ec1">findWinById</a>(windowId)-&gt;getVertexBufferManger()-&gt;add(data);</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    {</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        <a class="code" href="../../da/d17/class_laugh_tale_engine_1_1window_manger.html#a403018be8ea19c9cf7c8f52857a360a5">bindContext</a>(windowId);</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        window *w = <a class="code" href="../../d8/d8e/window_8cpp.html#a717c50c5129d7422ac9babe657f70ec1">findWinById</a>(windowId);</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        VertexBufferManger *vbm = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        <span class="keywordflow">if</span>(w != <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;            vbm = w-&gt;getVertexBufferManger();</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        <span class="keywordflow">if</span>(vbm != <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;            <span class="keywordflow">return</span> vbm-&gt;add(data);</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160; </div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        <a class="code" href="../../d1/d8c/logger_8h.html#aae4cf1bd083983040d4d6572a9b0d8bf">LAUGHTALE_ENGINR_LOG_ERROR</a>(<span class="stringliteral">&quot;faild to add vb: no window with id: &quot;</span> &lt;&lt; windowId);</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    }</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../da/d17/class_laugh_tale_engine_1_1window_manger_a299031b3ffb4b65db840baf235410f79_cgraph.png" border="0" usemap="#ada/d17/class_laugh_tale_engine_1_1window_manger_a299031b3ffb4b65db840baf235410f79_cgraph" alt=""/></div>
 <map name="ada/d17/class_laugh_tale_engine_1_1window_manger_a299031b3ffb4b65db840baf235410f79_cgraph" id="ada/d17/class_laugh_tale_engine_1_1window_manger_a299031b3ffb4b65db840baf235410f79_cgraph">
-<area shape="rect" title=" " alt="" coords="5,13,251,39"/>
-<area shape="rect" href="../../da/d17/class_laugh_tale_engine_1_1window_manger.html#a403018be8ea19c9cf7c8f52857a360a5" title=" " alt="" coords="299,5,515,47"/>
+<area shape="rect" title=" " alt="" coords="5,46,251,73"/>
+<area shape="rect" href="../../dd/ddf/class_laugh_tale_engine_1_1_vertex_buffer_manger.html#addb645f9e36d02628e2f7ac426963fa4" title=" " alt="" coords="305,5,508,47"/>
+<area shape="rect" href="../../da/d17/class_laugh_tale_engine_1_1window_manger.html#a403018be8ea19c9cf7c8f52857a360a5" title=" " alt="" coords="299,71,515,112"/>
+<area shape="rect" href="../../df/d41/class_laugh_tale_engine_1_1_vertex_buffer.html#aca1d6f2b3a0b9e2f355122d70d1637d1" title=" " alt="" coords="563,5,765,47"/>
 </map>
 </div>
 <div class="dynheader">
@@ -405,18 +446,36 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    {</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        <a class="code" href="../../da/d17/class_laugh_tale_engine_1_1window_manger.html#a403018be8ea19c9cf7c8f52857a360a5">bindContext</a>(windowId);</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        VertexBuffer *vb = <span class="keyword">static_cast&lt;</span>VertexBufferManger *<span class="keyword">&gt;</span>(<a class="code" href="../../d8/d8e/window_8cpp.html#a717c50c5129d7422ac9babe657f70ec1">findWinById</a>(windowId)-&gt;getVertexBufferManger())-&gt;getVB(vbId);</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        <a class="code" href="../../d8/d8e/window_8cpp.html#a717c50c5129d7422ac9babe657f70ec1">findWinById</a>(windowId)-&gt;getVertexArrayManger()-&gt;addBuffer(<span class="keywordtype">id</span>, vb);</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    {</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;        <a class="code" href="../../da/d17/class_laugh_tale_engine_1_1window_manger.html#a403018be8ea19c9cf7c8f52857a360a5">bindContext</a>(windowId);</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;        window *w = <a class="code" href="../../d8/d8e/window_8cpp.html#a717c50c5129d7422ac9babe657f70ec1">findWinById</a>(windowId);</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;        VertexBufferManger *vbm = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;        vertexArrayManger *vam = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;        VertexBuffer *vb = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;        </div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;        <span class="keywordflow">if</span>(w != <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;        {</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;            vbm = w-&gt;getVertexBufferManger();</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;            vam = w-&gt;getVertexArrayManger();</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;        }</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;        <span class="keywordflow">if</span>(vbm != <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;            vb = vbm-&gt;getVB(vbId);</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;        <span class="keywordflow">if</span>(vam != <span class="keyword">nullptr</span> &amp;&amp; vb != <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;            vam-&gt;addBuffer(<span class="keywordtype">id</span>, vb);</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160; </div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;        <a class="code" href="../../d1/d8c/logger_8h.html#a030a2caf9f43b4e2926c659309f955ef">LAUGHTALE_ENGINR_CONDTION_LOG_ERROR</a>(<span class="stringliteral">&quot;faild to addBuffer vb: no window with id: &quot;</span> &lt;&lt; windowId, w == NULL);</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    }</div>
+<div class="ttc" id="alogger_8h_html_a030a2caf9f43b4e2926c659309f955ef"><div class="ttname"><a href="../../d1/d8c/logger_8h.html#a030a2caf9f43b4e2926c659309f955ef">LAUGHTALE_ENGINR_CONDTION_LOG_ERROR</a></div><div class="ttdeci">#define LAUGHTALE_ENGINR_CONDTION_LOG_ERROR(toLog, condition)</div><div class="ttdef"><b>Definition:</b> logger.h:12</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../da/d17/class_laugh_tale_engine_1_1window_manger_aecc06f0a328ee4e7225caf1e9a9cdc32_cgraph.png" border="0" usemap="#ada/d17/class_laugh_tale_engine_1_1window_manger_aecc06f0a328ee4e7225caf1e9a9cdc32_cgraph" alt=""/></div>
 <map name="ada/d17/class_laugh_tale_engine_1_1window_manger_aecc06f0a328ee4e7225caf1e9a9cdc32_cgraph" id="ada/d17/class_laugh_tale_engine_1_1window_manger_aecc06f0a328ee4e7225caf1e9a9cdc32_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,221,47"/>
-<area shape="rect" href="../../da/d17/class_laugh_tale_engine_1_1window_manger.html#a403018be8ea19c9cf7c8f52857a360a5" title=" " alt="" coords="269,5,485,47"/>
+<area shape="rect" title=" " alt="" coords="5,71,221,112"/>
+<area shape="rect" href="../../d0/df2/class_laugh_tale_engine_1_1vertex_array_manger.html#a5a230c4472bcce7b88d4f3824a569596" title=" " alt="" coords="279,5,475,47"/>
+<area shape="rect" href="../../da/d17/class_laugh_tale_engine_1_1window_manger.html#a403018be8ea19c9cf7c8f52857a360a5" title=" " alt="" coords="269,71,485,112"/>
+<area shape="rect" href="../../dd/ddf/class_laugh_tale_engine_1_1_vertex_buffer_manger.html#a4a959699e8d9f42696035ff269442121" title=" " alt="" coords="276,136,479,177"/>
+<area shape="rect" href="../../db/d75/class_laugh_tale_engine_1_1vertex_array.html#a456accf529b0cd47f79a796feb711cb6" title=" " alt="" coords="533,5,729,47"/>
 </map>
 </div>
 <div class="dynheader">
@@ -549,29 +608,42 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    {</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <a class="code" href="../../d8/d8e/window_8cpp.html#a717c50c5129d7422ac9babe657f70ec1">findWinById</a>(windowId)-&gt;makeContextCurrent((windowPtr)windowId);</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    {</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        window *w = <a class="code" href="../../d8/d8e/window_8cpp.html#a717c50c5129d7422ac9babe657f70ec1">findWinById</a>(windowId);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        <span class="keywordflow">if</span>(w != <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            w-&gt;makeContextCurrent((windowPtr)windowId);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        <a class="code" href="../../d1/d8c/logger_8h.html#a030a2caf9f43b4e2926c659309f955ef">LAUGHTALE_ENGINR_CONDTION_LOG_ERROR</a>(<span class="stringliteral">&quot;faild to bind Context: no window with id: &quot;</span> &lt;&lt; windowId, w == NULL);</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        </div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    }</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../da/d17/class_laugh_tale_engine_1_1window_manger_a403018be8ea19c9cf7c8f52857a360a5_icgraph.png" border="0" usemap="#ada/d17/class_laugh_tale_engine_1_1window_manger_a403018be8ea19c9cf7c8f52857a360a5_icgraph" alt=""/></div>
 <map name="ada/d17/class_laugh_tale_engine_1_1window_manger_a403018be8ea19c9cf7c8f52857a360a5_icgraph" id="ada/d17/class_laugh_tale_engine_1_1window_manger_a403018be8ea19c9cf7c8f52857a360a5_icgraph">
-<area shape="rect" title=" " alt="" coords="783,303,999,345"/>
-<area shape="rect" href="../../da/d17/class_laugh_tale_engine_1_1window_manger.html#a299031b3ffb4b65db840baf235410f79" title=" " alt="" coords="489,311,735,337"/>
-<area shape="rect" href="../../d3/d00/window_8test_8cpp.html#a17abbb749ed42b0ea711959029a6cc14" title=" " alt="" coords="333,435,389,461"/>
-<area shape="rect" href="../../da/d17/class_laugh_tale_engine_1_1window_manger.html#aecc06f0a328ee4e7225caf1e9a9cdc32" title=" " alt="" coords="504,369,720,410"/>
-<area shape="rect" href="../../d8/da8/class_laugh_tale_engine_1_1mesh.html#a2855c67d293eb02736ee4510558c0e3b" title=" " alt="" coords="280,107,441,149"/>
-<area shape="rect" href="../../d8/da8/class_laugh_tale_engine_1_1mesh.html#a9778fa65198efb77026914ec75ca6b1e" title=" " alt="" coords="531,49,693,90"/>
-<area shape="rect" href="../../d8/da8/class_laugh_tale_engine_1_1mesh.html#a2714219270f8c4f3431d1f9a4c0e899f" title=" " alt="" coords="280,173,441,214"/>
-<area shape="rect" href="../../d8/da8/class_laugh_tale_engine_1_1mesh.html#ae51cd8ec446b346f3a7b24eed7d9afd6" title=" " alt="" coords="280,238,441,279"/>
-<area shape="rect" href="../../d8/da8/class_laugh_tale_engine_1_1mesh.html#a8214df8db5232bd1597a07779b0f9c0a" title=" " alt="" coords="280,369,441,410"/>
-<area shape="rect" href="../../d8/da8/class_laugh_tale_engine_1_1mesh.html#ae0254d10a09017894e20fa64bc816b64" title=" " alt="" coords="280,303,441,345"/>
-<area shape="rect" href="../../da/dee/classbird.html#a6b56afda6374e3ca12a903cd0aa21bb4" title=" " alt="" coords="5,213,77,240"/>
-<area shape="rect" href="../../d1/d69/classpilar.html#a2a9b8757ec997e8e62be5c1cb2c133da" title=" " alt="" coords="139,213,218,240"/>
-<area shape="rect" href="../../da/dee/classbird.html#a42a6012a9fe17c5a6223349991899664" title=" " alt="" coords="301,5,421,32"/>
-<area shape="rect" href="../../d1/d69/classpilar.html#a4aa7b430cf7e816c51fdfa8147420a30" title=" " alt="" coords="305,56,416,83"/>
-<area shape="rect" href="../../da/dee/classbird.html#a5a2390b688ceb8a82112940f243d92c9" title=" " alt="" coords="125,32,232,59"/>
+<area shape="rect" title=" " alt="" coords="913,352,1129,393"/>
+<area shape="rect" href="../../da/d17/class_laugh_tale_engine_1_1window_manger.html#a299031b3ffb4b65db840baf235410f79" title=" " alt="" coords="356,217,601,243"/>
+<area shape="rect" href="../../d3/d00/window_8test_8cpp.html#a17abbb749ed42b0ea711959029a6cc14" title=" " alt="" coords="192,435,248,462"/>
+<area shape="rect" href="../../da/d17/class_laugh_tale_engine_1_1window_manger.html#aecc06f0a328ee4e7225caf1e9a9cdc32" title=" " alt="" coords="371,319,587,360"/>
+<area shape="rect" href="../../da/d17/class_laugh_tale_engine_1_1window_manger.html#ac9ffc0c2e2e8c243e99a26f881fb5475" title=" " alt="" coords="649,436,865,477"/>
+<area shape="rect" href="../../da/d17/class_laugh_tale_engine_1_1window_manger.html#a13545b139218aba1d2b04ec8145348c0" title=" " alt="" coords="649,501,865,543"/>
+<area shape="rect" href="../../da/d17/class_laugh_tale_engine_1_1window_manger.html#ab79f959646f41c09e5e041bef6bdfd5f" title=" " alt="" coords="649,567,865,608"/>
+<area shape="rect" href="../../d8/da8/class_laugh_tale_engine_1_1mesh.html#a2855c67d293eb02736ee4510558c0e3b" title=" " alt="" coords="139,5,301,47"/>
+<area shape="rect" href="../../d8/da8/class_laugh_tale_engine_1_1mesh.html#a9778fa65198efb77026914ec75ca6b1e" title=" " alt="" coords="677,268,838,309"/>
+<area shape="rect" href="../../d8/da8/class_laugh_tale_engine_1_1mesh.html#a2714219270f8c4f3431d1f9a4c0e899f" title=" " alt="" coords="139,123,301,164"/>
+<area shape="rect" href="../../d8/da8/class_laugh_tale_engine_1_1mesh.html#ae51cd8ec446b346f3a7b24eed7d9afd6" title=" " alt="" coords="139,188,301,229"/>
+<area shape="rect" href="../../d8/da8/class_laugh_tale_engine_1_1mesh.html#a8214df8db5232bd1597a07779b0f9c0a" title=" " alt="" coords="139,319,301,360"/>
+<area shape="rect" href="../../d8/da8/class_laugh_tale_engine_1_1mesh.html#ae0254d10a09017894e20fa64bc816b64" title=" " alt="" coords="139,253,301,295"/>
+<area shape="rect" href="../../da/dee/classbird.html#a6b56afda6374e3ca12a903cd0aa21bb4" title=" " alt="" coords="9,225,81,251"/>
+<area shape="rect" href="../../d1/d69/classpilar.html#a2a9b8757ec997e8e62be5c1cb2c133da" title=" " alt="" coords="5,167,84,194"/>
+<area shape="rect" href="../../d8/da8/class_laugh_tale_engine_1_1mesh.html#a4a61af0709b38e37735c871d17026531" title=" " alt="" coords="398,436,559,477"/>
+<area shape="rect" href="../../da/d2d/classwindow_test.html#afb45f394cbc7c14f78f15d7bb720e0df" title=" " alt="" coords="386,502,571,529"/>
+<area shape="rect" href="../../da/d2d/classwindow_test.html#ab150ebf55674ef1a1bc2c2045def4ac4" title=" " alt="" coords="386,553,571,579"/>
+<area shape="rect" href="../../d8/da8/class_laugh_tale_engine_1_1mesh.html#a1baad4f6faaa4303d09e60cb6e614ef4" title=" " alt="" coords="398,604,559,645"/>
+<area shape="rect" href="../../d6/dea/class_laugh_tale_engine_1_1renderer.html#aee1eaf1e26b8f9423e3368cb575610ca" title=" " alt="" coords="132,604,308,645"/>
+<area shape="rect" href="../../da/dee/classbird.html#a42a6012a9fe17c5a6223349991899664" title=" " alt="" coords="419,267,539,294"/>
+<area shape="rect" href="../../d1/d69/classpilar.html#a4aa7b430cf7e816c51fdfa8147420a30" title=" " alt="" coords="423,119,534,146"/>
+<area shape="rect" href="../../da/dee/classbird.html#a5a2390b688ceb8a82112940f243d92c9" title=" " alt="" coords="167,385,273,411"/>
 </map>
 </div>
 
@@ -610,10 +682,28 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    {</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../d8/d8e/window_8cpp.html#a717c50c5129d7422ac9babe657f70ec1">findWinById</a>(windowId)-&gt;getIndexBufferManger()-&gt;bind(<span class="keywordtype">id</span>);</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    {</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        <a class="code" href="../../da/d17/class_laugh_tale_engine_1_1window_manger.html#a403018be8ea19c9cf7c8f52857a360a5">bindContext</a>(windowId);</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        window *w = <a class="code" href="../../d8/d8e/window_8cpp.html#a717c50c5129d7422ac9babe657f70ec1">findWinById</a>(windowId);</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        indexBufferManger *m = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        <span class="keywordflow">if</span>(w != <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;            m = w-&gt;getIndexBufferManger();</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        <span class="keywordflow">if</span>(m != <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;            m-&gt;bind(<span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160; </div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        <a class="code" href="../../d1/d8c/logger_8h.html#a030a2caf9f43b4e2926c659309f955ef">LAUGHTALE_ENGINR_CONDTION_LOG_ERROR</a>(<span class="stringliteral">&quot;faild to bind index buffer: no window with id: &quot;</span> &lt;&lt; windowId, w == NULL);</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    }</div>
 </div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../da/d17/class_laugh_tale_engine_1_1window_manger_ac9ffc0c2e2e8c243e99a26f881fb5475_cgraph.png" border="0" usemap="#ada/d17/class_laugh_tale_engine_1_1window_manger_ac9ffc0c2e2e8c243e99a26f881fb5475_cgraph" alt=""/></div>
+<map name="ada/d17/class_laugh_tale_engine_1_1window_manger_ac9ffc0c2e2e8c243e99a26f881fb5475_cgraph" id="ada/d17/class_laugh_tale_engine_1_1window_manger_ac9ffc0c2e2e8c243e99a26f881fb5475_cgraph">
+<area shape="rect" title=" " alt="" coords="5,39,221,80"/>
+<area shape="rect" href="../../d4/dbe/class_laugh_tale_engine_1_1index_buffer_manger.html#ac52d6cbc2b33bba0b984e66634a51dc8" title=" " alt="" coords="280,5,475,47"/>
+<area shape="rect" href="../../da/d17/class_laugh_tale_engine_1_1window_manger.html#a403018be8ea19c9cf7c8f52857a360a5" title=" " alt="" coords="269,71,485,112"/>
+</map>
+</div>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../da/d17/class_laugh_tale_engine_1_1window_manger_ac9ffc0c2e2e8c243e99a26f881fb5475_icgraph.png" border="0" usemap="#ada/d17/class_laugh_tale_engine_1_1window_manger_ac9ffc0c2e2e8c243e99a26f881fb5475_icgraph" alt=""/></div>
@@ -661,21 +751,25 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    {</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        window *w = <a class="code" href="../../d8/d8e/window_8cpp.html#a717c50c5129d7422ac9babe657f70ec1">findWinById</a>(windowId);</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        shaderManger *sm;</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        <span class="keywordflow">if</span>(w != NULL)</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;            sm = w-&gt;getShaderManger();</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        <span class="keywordflow">if</span>(sm != NULL)</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;            sm-&gt;bind(<span class="keywordtype">id</span>);</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    {</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;        window *w = <a class="code" href="../../d8/d8e/window_8cpp.html#a717c50c5129d7422ac9babe657f70ec1">findWinById</a>(windowId);</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;        shaderManger *sm = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;        <span class="keywordflow">if</span>(w != <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;            sm = w-&gt;getShaderManger();</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        <span class="keywordflow">if</span>(sm != <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;            sm-&gt;bind(<span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        <a class="code" href="../../d1/d8c/logger_8h.html#a030a2caf9f43b4e2926c659309f955ef">LAUGHTALE_ENGINR_CONDTION_LOG_ERROR</a>(<span class="stringliteral">&quot;faild to bind vertex array: no window with id: &quot;</span> &lt;&lt; windowId, w == NULL);</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        </div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    }</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../da/d17/class_laugh_tale_engine_1_1window_manger_a9803b52f460733ab78aae3c03f1ee97c_cgraph.png" border="0" usemap="#ada/d17/class_laugh_tale_engine_1_1window_manger_a9803b52f460733ab78aae3c03f1ee97c_cgraph" alt=""/></div>
 <map name="ada/d17/class_laugh_tale_engine_1_1window_manger_a9803b52f460733ab78aae3c03f1ee97c_cgraph" id="ada/d17/class_laugh_tale_engine_1_1window_manger_a9803b52f460733ab78aae3c03f1ee97c_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,221,47"/>
-<area shape="rect" href="../../db/de7/class_laugh_tale_engine_1_1shader_manger.html#a088794831d022f4c7027d635a10cad50" title=" " alt="" coords="269,5,480,47"/>
+<area shape="rect" title=" " alt="" coords="5,39,221,80"/>
+<area shape="rect" href="../../db/de7/class_laugh_tale_engine_1_1shader_manger.html#a088794831d022f4c7027d635a10cad50" title=" " alt="" coords="269,39,480,80"/>
+<area shape="rect" href="../../d6/db1/class_laugh_tale_engine_1_1shader.html#aba1e7a8cf4bb45789a29e00395142bc4" title=" " alt="" coords="549,5,717,47"/>
+<area shape="rect" href="../../db/de7/class_laugh_tale_engine_1_1shader_manger.html#afdb4893d6c59a3f96cb51d72997fb43a" title=" " alt="" coords="528,71,739,112"/>
 </map>
 </div>
 <div class="dynheader">
@@ -733,10 +827,31 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    {</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../d8/d8e/window_8cpp.html#a717c50c5129d7422ac9babe657f70ec1">findWinById</a>(windowId)-&gt;getVertexArrayManger()-&gt;bind(<span class="keywordtype">id</span>);</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    {</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160; </div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        <a class="code" href="../../da/d17/class_laugh_tale_engine_1_1window_manger.html#a403018be8ea19c9cf7c8f52857a360a5">bindContext</a>(windowId);</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        window *w = <a class="code" href="../../d8/d8e/window_8cpp.html#a717c50c5129d7422ac9babe657f70ec1">findWinById</a>(windowId);</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        vertexArrayManger *m = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        <span class="keywordflow">if</span>(w != <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;            m = w-&gt;getVertexArrayManger();</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;        <span class="keywordflow">if</span>(m != <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;            <span class="keywordflow">return</span> m-&gt;bind(<span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160; </div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;        <a class="code" href="../../d1/d8c/logger_8h.html#a030a2caf9f43b4e2926c659309f955ef">LAUGHTALE_ENGINR_CONDTION_LOG_ERROR</a>(<span class="stringliteral">&quot;faild to bind vertex array: no window with id: &quot;</span> &lt;&lt; windowId, w == NULL);</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../d8/d8e/window_8cpp.html#a717c50c5129d7422ac9babe657f70ec1">findWinById</a>(windowId)-&gt;getVertexArrayManger()-&gt;bind(<span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    }</div>
 </div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../da/d17/class_laugh_tale_engine_1_1window_manger_a13545b139218aba1d2b04ec8145348c0_cgraph.png" border="0" usemap="#ada/d17/class_laugh_tale_engine_1_1window_manger_a13545b139218aba1d2b04ec8145348c0_cgraph" alt=""/></div>
+<map name="ada/d17/class_laugh_tale_engine_1_1window_manger_a13545b139218aba1d2b04ec8145348c0_cgraph" id="ada/d17/class_laugh_tale_engine_1_1window_manger_a13545b139218aba1d2b04ec8145348c0_cgraph">
+<area shape="rect" title=" " alt="" coords="5,39,221,80"/>
+<area shape="rect" href="../../d0/df2/class_laugh_tale_engine_1_1vertex_array_manger.html#a5c39790433e3e38c9c8ecbfd76849758" title=" " alt="" coords="279,5,475,47"/>
+<area shape="rect" href="../../da/d17/class_laugh_tale_engine_1_1window_manger.html#a403018be8ea19c9cf7c8f52857a360a5" title=" " alt="" coords="269,71,485,112"/>
+<area shape="rect" href="../../db/d75/class_laugh_tale_engine_1_1vertex_array.html#a4771609b11ee4241c2f26a9409578008" title=" " alt="" coords="533,5,729,47"/>
+</map>
+</div>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../da/d17/class_laugh_tale_engine_1_1window_manger_a13545b139218aba1d2b04ec8145348c0_icgraph.png" border="0" usemap="#ada/d17/class_laugh_tale_engine_1_1window_manger_a13545b139218aba1d2b04ec8145348c0_icgraph" alt=""/></div>
@@ -784,10 +899,26 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    {</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../d8/d8e/window_8cpp.html#a717c50c5129d7422ac9babe657f70ec1">findWinById</a>(windowId)-&gt;getVertexBufferManger()-&gt;bind(<span class="keywordtype">id</span>);</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    }</div>
-</div><!-- fragment -->
+<div class="fragment"><div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    {</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        window *w = <a class="code" href="../../d8/d8e/window_8cpp.html#a717c50c5129d7422ac9babe657f70ec1">findWinById</a>(windowId);</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        VertexBufferManger *vbm = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        <span class="keywordflow">if</span>(w != <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;            vbm = w-&gt;getVertexBufferManger();</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        <span class="keywordflow">if</span>(vbm != <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;            vbm-&gt;bind(<span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160; </div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        <a class="code" href="../../d1/d8c/logger_8h.html#a030a2caf9f43b4e2926c659309f955ef">LAUGHTALE_ENGINR_CONDTION_LOG_ERROR</a>(<span class="stringliteral">&quot;faild to bind vb: no window with id: &quot;</span> &lt;&lt; windowId, w == NULL);</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    }</div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../da/d17/class_laugh_tale_engine_1_1window_manger_a50918bdba62170cc6837fd6629d431a8_cgraph.png" border="0" usemap="#ada/d17/class_laugh_tale_engine_1_1window_manger_a50918bdba62170cc6837fd6629d431a8_cgraph" alt=""/></div>
+<map name="ada/d17/class_laugh_tale_engine_1_1window_manger_a50918bdba62170cc6837fd6629d431a8_cgraph" id="ada/d17/class_laugh_tale_engine_1_1window_manger_a50918bdba62170cc6837fd6629d431a8_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,221,47"/>
+<area shape="rect" href="../../dd/ddf/class_laugh_tale_engine_1_1_vertex_buffer_manger.html#a0b91eb421570633cb02b54293ca1f9bc" title=" " alt="" coords="269,5,472,47"/>
+</map>
+</div>
+
 </div>
 </div>
 <a id="accf42f24c30bfbb04bea8e9435cae082"></a>
@@ -850,9 +981,14 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    { </div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../d8/d8e/window_8cpp.html#a717c50c5129d7422ac9babe657f70ec1">findWinById</a>(windowId)-&gt;Height;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    { </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        window *w = <a class="code" href="../../d8/d8e/window_8cpp.html#a717c50c5129d7422ac9babe657f70ec1">findWinById</a>(windowId);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="keywordflow">if</span>(w != <span class="keyword">nullptr</span>)            </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="../../d8/d8e/window_8cpp.html#a717c50c5129d7422ac9babe657f70ec1">findWinById</a>(windowId)-&gt;Height;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <a class="code" href="../../d1/d8c/logger_8h.html#aae4cf1bd083983040d4d6572a9b0d8bf">LAUGHTALE_ENGINR_LOG_ERROR</a>(<span class="stringliteral">&quot;no window with id: &quot;</span> &lt;&lt; windowId);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    }</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -900,10 +1036,29 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    {</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../d8/d8e/window_8cpp.html#a717c50c5129d7422ac9babe657f70ec1">findWinById</a>(windowId)-&gt;getIndexBufferManger()-&gt;getCount(<span class="keywordtype">id</span>);</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    {</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;        <a class="code" href="../../da/d17/class_laugh_tale_engine_1_1window_manger.html#a403018be8ea19c9cf7c8f52857a360a5">bindContext</a>(windowId);</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;        window *w = <a class="code" href="../../d8/d8e/window_8cpp.html#a717c50c5129d7422ac9babe657f70ec1">findWinById</a>(windowId);</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;        indexBufferManger *m = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;        <span class="keywordflow">if</span>(w != <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;            m = w-&gt;getIndexBufferManger();</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;        <span class="keywordflow">if</span>(m != <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;            <span class="keywordflow">return</span> m-&gt;getCount(<span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160; </div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;        <a class="code" href="../../d1/d8c/logger_8h.html#a030a2caf9f43b4e2926c659309f955ef">LAUGHTALE_ENGINR_CONDTION_LOG_ERROR</a>(<span class="stringliteral">&quot;faild to found index buffer: no window with id: &quot;</span> &lt;&lt; windowId, w == NULL);</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    }</div>
 </div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../da/d17/class_laugh_tale_engine_1_1window_manger_ab79f959646f41c09e5e041bef6bdfd5f_cgraph.png" border="0" usemap="#ada/d17/class_laugh_tale_engine_1_1window_manger_ab79f959646f41c09e5e041bef6bdfd5f_cgraph" alt=""/></div>
+<map name="ada/d17/class_laugh_tale_engine_1_1window_manger_ab79f959646f41c09e5e041bef6bdfd5f_cgraph" id="ada/d17/class_laugh_tale_engine_1_1window_manger_ab79f959646f41c09e5e041bef6bdfd5f_cgraph">
+<area shape="rect" title=" " alt="" coords="5,39,221,80"/>
+<area shape="rect" href="../../da/d17/class_laugh_tale_engine_1_1window_manger.html#a403018be8ea19c9cf7c8f52857a360a5" title=" " alt="" coords="269,5,485,47"/>
+<area shape="rect" href="../../d4/dbe/class_laugh_tale_engine_1_1index_buffer_manger.html#a189db8ace3251bdcc047df387e83f88d" title=" " alt="" coords="280,71,475,112"/>
+</map>
+</div>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../da/d17/class_laugh_tale_engine_1_1window_manger_ab79f959646f41c09e5e041bef6bdfd5f_icgraph.png" border="0" usemap="#ada/d17/class_laugh_tale_engine_1_1window_manger_ab79f959646f41c09e5e041bef6bdfd5f_icgraph" alt=""/></div>
@@ -941,9 +1096,11 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    {</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../d8/d8e/window_8cpp.html#a717c50c5129d7422ac9babe657f70ec1">findWinById</a>(windowId)-&gt;getRenderApi();</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    {</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;        window *w = <a class="code" href="../../d8/d8e/window_8cpp.html#a717c50c5129d7422ac9babe657f70ec1">findWinById</a>(windowId);</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;        <span class="keywordflow">if</span>(w != <span class="keyword">nullptr</span>) <span class="keywordflow">return</span> w-&gt;getRenderApi();</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    }</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -983,9 +1140,11 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    {</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../d8/d8e/window_8cpp.html#a717c50c5129d7422ac9babe657f70ec1">findWinById</a>(windowId)-&gt;getRenderer();</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    {</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;        window *w = <a class="code" href="../../d8/d8e/window_8cpp.html#a717c50c5129d7422ac9babe657f70ec1">findWinById</a>(windowId);</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;        <span class="keywordflow">if</span>(w != <span class="keyword">nullptr</span>) <span class="keywordflow">return</span> w-&gt;getRenderer();</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    }</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1023,9 +1182,11 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    {</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>shaderManger *<span class="keyword">&gt;</span>(<a class="code" href="../../d8/d8e/window_8cpp.html#a717c50c5129d7422ac9babe657f70ec1">findWinById</a>(windowId)-&gt;getShaderManger());</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    {</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;        window *w = <a class="code" href="../../d8/d8e/window_8cpp.html#a717c50c5129d7422ac9babe657f70ec1">findWinById</a>(windowId);</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;        <span class="keywordflow">if</span>(w != <span class="keyword">nullptr</span>) <span class="keywordflow">return</span> w-&gt;getShaderManger();</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    }</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1072,10 +1233,12 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    {</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>vertexArrayManger *<span class="keyword">&gt;</span>(<a class="code" href="../../d8/d8e/window_8cpp.html#a717c50c5129d7422ac9babe657f70ec1">findWinById</a>(windowId)-&gt;getVertexArrayManger());</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        </div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    {</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;        window *w = <a class="code" href="../../d8/d8e/window_8cpp.html#a717c50c5129d7422ac9babe657f70ec1">findWinById</a>(windowId);</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;        <span class="keywordflow">if</span>(w != <span class="keyword">nullptr</span>) <span class="keywordflow">return</span> w-&gt;getVertexArrayManger();</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;        </div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1102,9 +1265,11 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    {</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>VertexBufferManger *<span class="keyword">&gt;</span>(<a class="code" href="../../d8/d8e/window_8cpp.html#a717c50c5129d7422ac9babe657f70ec1">findWinById</a>(windowId)-&gt;getVertexBufferManger());   </div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    {</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;        window *w = <a class="code" href="../../d8/d8e/window_8cpp.html#a717c50c5129d7422ac9babe657f70ec1">findWinById</a>(windowId);</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;        <span class="keywordflow">if</span>(w != <span class="keyword">nullptr</span>) <span class="keywordflow">return</span> w-&gt;getVertexBufferManger();</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;   </div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    }</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1142,9 +1307,13 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    { </div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../d8/d8e/window_8cpp.html#a717c50c5129d7422ac9babe657f70ec1">findWinById</a>(windowId)-&gt;Width;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    {</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        window *w = <a class="code" href="../../d8/d8e/window_8cpp.html#a717c50c5129d7422ac9babe657f70ec1">findWinById</a>(windowId);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <span class="keywordflow">if</span>(w != <span class="keyword">nullptr</span>)            </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="../../d8/d8e/window_8cpp.html#a717c50c5129d7422ac9babe657f70ec1">findWinById</a>(windowId)-&gt;Width;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <a class="code" href="../../d1/d8c/logger_8h.html#aae4cf1bd083983040d4d6572a9b0d8bf">LAUGHTALE_ENGINR_LOG_ERROR</a>(<span class="stringliteral">&quot;no window with id: &quot;</span> &lt;&lt; windowId);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    }</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1371,10 +1540,26 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    {</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        <a class="code" href="../../d8/d8e/window_8cpp.html#a717c50c5129d7422ac9babe657f70ec1">findWinById</a>(windowId)-&gt;getVertexBufferManger()-&gt;pushElement(<span class="keywordtype">id</span>, data);</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    {</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;        window *w = <a class="code" href="../../d8/d8e/window_8cpp.html#a717c50c5129d7422ac9babe657f70ec1">findWinById</a>(windowId);</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;        VertexBufferManger *vbm = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        <span class="keywordflow">if</span>(w != <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;            vbm = w-&gt;getVertexBufferManger();</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;        <span class="keywordflow">if</span>(vbm != <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;            vbm-&gt;pushElement(<span class="keywordtype">id</span>, data);</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160; </div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;        <a class="code" href="../../d1/d8c/logger_8h.html#a030a2caf9f43b4e2926c659309f955ef">LAUGHTALE_ENGINR_CONDTION_LOG_ERROR</a>(<span class="stringliteral">&quot;faild to pushElement vb: no window with id: &quot;</span> &lt;&lt; windowId, w == NULL);</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    }</div>
 </div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../da/d17/class_laugh_tale_engine_1_1window_manger_a6d097ecff0840c1c026cf1e0b88b6a28_cgraph.png" border="0" usemap="#ada/d17/class_laugh_tale_engine_1_1window_manger_a6d097ecff0840c1c026cf1e0b88b6a28_cgraph" alt=""/></div>
+<map name="ada/d17/class_laugh_tale_engine_1_1window_manger_a6d097ecff0840c1c026cf1e0b88b6a28_cgraph" id="ada/d17/class_laugh_tale_engine_1_1window_manger_a6d097ecff0840c1c026cf1e0b88b6a28_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,221,47"/>
+<area shape="rect" href="../../dd/ddf/class_laugh_tale_engine_1_1_vertex_buffer_manger.html#aaff84e50e0bf66abca6b341e5fd5bcc3" title=" " alt="" coords="269,5,472,47"/>
+</map>
+</div>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../da/d17/class_laugh_tale_engine_1_1window_manger_a6d097ecff0840c1c026cf1e0b88b6a28_icgraph.png" border="0" usemap="#ada/d17/class_laugh_tale_engine_1_1window_manger_a6d097ecff0840c1c026cf1e0b88b6a28_icgraph" alt=""/></div>
@@ -1464,9 +1649,11 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    {</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;        <a class="code" href="../../d8/d8e/window_8cpp.html#a717c50c5129d7422ac9babe657f70ec1">findWinById</a>(windowId)-&gt;setCamera(cam);</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;    {</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;        </div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;        window *w = <a class="code" href="../../d8/d8e/window_8cpp.html#a717c50c5129d7422ac9babe657f70ec1">findWinById</a>(windowId);</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;        <span class="keywordflow">if</span>(w != <span class="keyword">nullptr</span>) w-&gt;setCamera(cam);</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;    }</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">

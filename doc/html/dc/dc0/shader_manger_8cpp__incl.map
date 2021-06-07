@@ -1,11 +1,13 @@
 <map id="src/renderer/shaderManger.cpp" name="src/renderer/shaderManger.cpp">
-<area shape="rect" id="node1" title=" " alt="" coords="111,5,313,32"/>
-<area shape="rect" id="node2" href="$de/dca/shader_manger_8h.html" title=" " alt="" coords="96,80,211,107"/>
-<area shape="rect" id="node9" title=" " alt="" coords="235,80,309,107"/>
-<area shape="rect" id="node3" title=" " alt="" coords="5,229,64,256"/>
-<area shape="rect" id="node4" href="$d1/df4/shader_8h.html" title=" " alt="" coords="155,155,226,181"/>
-<area shape="rect" id="node5" href="$d5/dc4/core_8h.html" title=" " alt="" coords="88,229,147,256"/>
-<area shape="rect" id="node8" title=" " alt="" coords="251,229,344,256"/>
-<area shape="rect" id="node7" title=" " alt="" coords="171,229,226,256"/>
-<area shape="rect" id="node6" title=" " alt="" coords="87,304,148,331"/>
+<area shape="rect" id="node1" title=" " alt="" coords="213,5,414,32"/>
+<area shape="rect" id="node2" href="$de/dca/shader_manger_8h.html" title=" " alt="" coords="131,80,245,107"/>
+<area shape="rect" id="node9" href="$d1/d8c/logger_8h.html" title=" " alt="" coords="280,80,347,107"/>
+<area shape="rect" id="node11" title=" " alt="" coords="371,80,445,107"/>
+<area shape="rect" id="node3" title=" " alt="" coords="205,229,264,256"/>
+<area shape="rect" id="node4" href="$d1/df4/shader_8h.html" title=" " alt="" coords="153,155,223,181"/>
+<area shape="rect" id="node5" href="$d5/dc4/core_8h.html" title=" " alt="" coords="123,229,181,256"/>
+<area shape="rect" id="node8" title=" " alt="" coords="5,229,99,256"/>
+<area shape="rect" id="node7" title=" " alt="" coords="289,229,343,256"/>
+<area shape="rect" id="node6" title=" " alt="" coords="121,304,183,331"/>
+<area shape="rect" id="node10" title=" " alt="" coords="351,155,454,181"/>
 </map>

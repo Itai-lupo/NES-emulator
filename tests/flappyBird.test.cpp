@@ -29,12 +29,12 @@
 class pilar: public LaughTaleEngine::IEntity
 {
     private:
-        float pilarPostions[8] = 
+        float pilarPostions[20] = 
         {
-             PILAR_HOLE_HALF_WIDTH, -1.0f,
-            -PILAR_HOLE_HALF_WIDTH, -1.0f,
-            -PILAR_HOLE_HALF_WIDTH,  1.0f,
-             PILAR_HOLE_HALF_WIDTH,  1.0f
+             PILAR_HOLE_HALF_WIDTH, -1.0f, 0.0f, 0.0f, 0.0f, 
+            -PILAR_HOLE_HALF_WIDTH, -1.0f, 0.0f, 0.0f, 0.0f,
+            -PILAR_HOLE_HALF_WIDTH,  1.0f, 0.0f, 0.0f, 0.0f,
+             PILAR_HOLE_HALF_WIDTH,  1.0f, 0.0f, 0.0f, 0.0f
         };
 
 
@@ -69,13 +69,16 @@ class pilar: public LaughTaleEngine::IEntity
             pilarTopMesh->setShader("res/shaders/Basic.shader");
             pilarBottomMesh->setShader("res/shaders/Basic.shader");
 
-            pilarTopMesh->setVertexBuffer(pilarPostions, 2 * 4 * sizeof(float));
-            pilarBottomMesh->setVertexBuffer(pilarPostions, 2 * 4 * sizeof(float));
+            pilarTopMesh->setVertexBuffer(pilarPostions, 5 * 4 * sizeof(float));
+            pilarBottomMesh->setVertexBuffer(pilarPostions, 5 * 4 * sizeof(float));
 
             pilarTopMesh->setIndexBuffer(birdIndices, 6);
             pilarBottomMesh->setIndexBuffer(birdIndices, 6);
             
+            pilarTopMesh->getVertexBuffer()->pushElement({LT_FLOAT, 3, false, 4});
             pilarTopMesh->getVertexBuffer()->pushElement({LT_FLOAT, 2, false, 4});
+            
+            pilarBottomMesh->getVertexBuffer()->pushElement({LT_FLOAT, 3, false, 4});
             pilarBottomMesh->getVertexBuffer()->pushElement({LT_FLOAT, 2, false, 4});
 
             pilarTopMesh->setVertexArray();
@@ -114,14 +117,14 @@ class pilar: public LaughTaleEngine::IEntity
 class bird: public LaughTaleEngine::IEntity
 {
     private:
-        float birdPostions[12] = 
+        float birdPostions[6 * 5] = 
         {
-             0.0f ,    0.1f,
-             0.085f,    0.05f,
-             0.085f,   -0.05f,
-             0.0f ,   -0.1f,
-            -0.085f,   -0.05f,
-            -0.085f,    0.05f
+             0.00f,     0.10f,  0.0f,   0.5f,   1.0f,
+             0.085f,    0.05f,  0.0f,   1.0f,   0.6f,
+             0.085f,   -0.05f,  0.0f,   1.0f,   0.3f,
+             0.00f,    -0.10f,  0.0f,   0.5f,   0.0f,
+            -0.085f,   -0.05f,  0.0f,   0.0f,   0.3f,
+            -0.085f,    0.05f,  0.0f,   0.0f,   0.6f
         };
 
 
@@ -149,9 +152,10 @@ class bird: public LaughTaleEngine::IEntity
 
             birdMesh->setShader("res/flappyBird/bird.shader");
 
-            birdMesh->setVertexBuffer(birdPostions, 2 * 6 * sizeof(float));
+            birdMesh->setVertexBuffer(birdPostions, 6 * 5 * sizeof(float));
             birdMesh->setIndexBuffer(birdIndices, 12);
 
+            birdMesh->getVertexBuffer()->pushElement({LT_FLOAT, 3, false, 4});
             birdMesh->getVertexBuffer()->pushElement({LT_FLOAT, 2, false, 4});
 
             birdMesh->setVertexArray();

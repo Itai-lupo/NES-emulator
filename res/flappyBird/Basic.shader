@@ -2,7 +2,7 @@
 #version 330 core 
 
 
-layout(location = 0) in vec4 postion;
+layout(location = 0) in vec3 postion;
 
 out vec2 v_TextCoord;
 
@@ -10,7 +10,7 @@ uniform mat4 viewProjection;
 uniform mat4 transform;
 
 void main(){
-   gl_Position = viewProjection * transform * postion;
+   gl_Position = viewProjection * transform * vec4(postion, 1.0);
    v_TextCoord.xy = postion.xy;
 };
 

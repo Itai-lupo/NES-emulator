@@ -1,6 +1,7 @@
 #include "vertexArrayManger.h"
 #include "VertexBufferManger.h"
 #include "algorithm"
+#include "logger.h"
 
 namespace LaughTaleEngine
 {
@@ -23,28 +24,46 @@ namespace LaughTaleEngine
     
     void vertexArrayManger::addBuffer(vertexArrayId id,  VertexBuffer *vb)
     {
-        (*std::find_if(
+        vertexArray *va = (*std::find_if(
             vertexArrays->begin(),
             vertexArrays->end(),
             [=](vertexArray *va) -> bool { return va->rendererId == id; }
-        ))->AddBuffer(vb);
+        ));
+
+        if(va != NULL)
+            va->AddBuffer(vb);
+        
+        LAUGHTALE_ENGINR_CONDTION_LOG_ERROR("no vertext array with id: " << id, va == NULL);
+
+        
     }    
     
     void vertexArrayManger::bind(vertexArrayId id)
     {
-        (*std::find_if(
+        vertexArray *va = (*std::find_if(
             vertexArrays->begin(),
             vertexArrays->end(),
             [=](vertexArray *va) -> bool { return va->rendererId == id; }
-        ))->bind();
+        ));
+
+        if(va != NULL)
+            va->bind();
+        
+        LAUGHTALE_ENGINR_CONDTION_LOG_ERROR("no vertext array with id: " << id, va == NULL);
     }    
     
     void vertexArrayManger::unbind(vertexArrayId id)
     {
-        (*std::find_if(
+        vertexArray *va = (*std::find_if(
             vertexArrays->begin(),
             vertexArrays->end(),
             [=](vertexArray *va) -> bool { return va->rendererId == id; }
-        ))->unbind();
-    }
+        ));
+
+        if(va != NULL)
+            va->unbind();
+        
+        LAUGHTALE_ENGINR_CONDTION_LOG_ERROR("no vertext array with id: " << id, va == NULL);
+    }    
+    
 }

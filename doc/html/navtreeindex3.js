@@ -1,5 +1,6 @@
 var NAVTREEINDEX3 =
 {
+"dd/d40/class_laugh_tale_engine_1_1core_window.html#a247933d8e842dfa86d18aa441b4db0d2":[1,0,0,48,16],
 "dd/d40/class_laugh_tale_engine_1_1core_window.html#a267b26cbaf53f6cb816a5b4360a3ea07":[1,0,0,48,19],
 "dd/d40/class_laugh_tale_engine_1_1core_window.html#a29ac94a570e2f8c2e8490c8d46aa8b74":[1,0,0,48,20],
 "dd/d40/class_laugh_tale_engine_1_1core_window.html#a2c6835fe8f01b8b6b307dc78355cf972":[1,0,0,48,10],
@@ -172,8 +173,8 @@ var NAVTREEINDEX3 =
 "functions_e.html":[1,3,0,4],
 "functions_enum.html":[1,3,3],
 "functions_f.html":[1,3,0,5],
-"functions_func.html":[1,3,1],
 "functions_func.html":[1,3,1,0],
+"functions_func.html":[1,3,1],
 "functions_func_b.html":[1,3,1,1],
 "functions_func_c.html":[1,3,1,2],
 "functions_func_d.html":[1,3,1,3],

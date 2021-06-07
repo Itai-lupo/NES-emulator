@@ -25,7 +25,7 @@ namespace LaughTaleEngine
 
     void mesh::setVertexBuffer(float *vertexs, uint32_t size)
     {
-        VertexBuffer *VB = new OpenGLVertexBuffer(vertexs, 2 * 6 * sizeof(float));
+        VertexBuffer *VB = new OpenGLVertexBuffer(vertexs, size);
         VBId = LaughTaleEngine::windowManger::add(windowId, VB);
     }
 

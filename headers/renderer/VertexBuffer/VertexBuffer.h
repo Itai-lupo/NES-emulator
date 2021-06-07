@@ -10,6 +10,9 @@ namespace LaughTaleEngine
         unsigned int count;
         unsigned char normalized; 
         unsigned int sizeOfType;
+
+        VertexBufferElement(unsigned int type, unsigned int count, unsigned char normalized, unsigned int sizeOfType):
+            type(type), count(count), normalized(normalized), sizeOfType(sizeOfType){}
     };
 
     class VertexBufferLayout

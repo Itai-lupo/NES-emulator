@@ -15,7 +15,7 @@ var searchData=
   ['vertexarraymanger_2eh_592',['vertexArrayManger.h',['../d5/d70/vertex_array_manger_8h.html',1,'']]],
   ['vertexbuffer_593',['VertexBuffer',['../df/d41/class_laugh_tale_engine_1_1_vertex_buffer.html',1,'LaughTaleEngine::VertexBuffer'],['../df/d41/class_laugh_tale_engine_1_1_vertex_buffer.html#a21a2cbbe072ec698fc8a1bbe5093100c',1,'LaughTaleEngine::VertexBuffer::VertexBuffer()']]],
   ['vertexbuffer_2eh_594',['VertexBuffer.h',['../d4/d84/_vertex_buffer_8h.html',1,'']]],
-  ['vertexbufferelement_595',['VertexBufferElement',['../dd/d0c/struct_laugh_tale_engine_1_1_vertex_buffer_element.html',1,'LaughTaleEngine']]],
+  ['vertexbufferelement_595',['VertexBufferElement',['../dd/d0c/struct_laugh_tale_engine_1_1_vertex_buffer_element.html',1,'LaughTaleEngine::VertexBufferElement'],['../dd/d0c/struct_laugh_tale_engine_1_1_vertex_buffer_element.html#a32bdda8f34361bea4c1cbfbc3670aecd',1,'LaughTaleEngine::VertexBufferElement::VertexBufferElement()']]],
   ['vertexbufferid_596',['vertexBufferId',['../db/d49/namespace_laugh_tale_engine.html#a613aeb0e534a90cfb6a4542be7c38cca',1,'LaughTaleEngine']]],
   ['vertexbufferlayout_597',['VertexBufferLayout',['../d3/d28/class_laugh_tale_engine_1_1_vertex_buffer_layout.html',1,'LaughTaleEngine::VertexBufferLayout'],['../d3/d28/class_laugh_tale_engine_1_1_vertex_buffer_layout.html#a9b9673badffdf833100901b03d6ed589',1,'LaughTaleEngine::VertexBufferLayout::VertexBufferLayout()']]],
   ['vertexbuffermanger_598',['VertexBufferManger',['../dd/ddf/class_laugh_tale_engine_1_1_vertex_buffer_manger.html',1,'LaughTaleEngine::VertexBufferManger'],['../dd/ddf/class_laugh_tale_engine_1_1_vertex_buffer_manger.html#a01b7ce652d378488b372a7f43590dc59',1,'LaughTaleEngine::VertexBufferManger::VertexBufferManger()']]],

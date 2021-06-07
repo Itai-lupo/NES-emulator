@@ -1,4 +1,5 @@
 #include "shaderManger.h"
+#include "logger.h"
 #include <algorithm>
 
 namespace LaughTaleEngine
@@ -46,57 +47,52 @@ namespace LaughTaleEngine
 
     void shaderManger::bind(shaderId id)
     {
-       (*std::find_if(
-            shaders->begin(),
-            shaders->end(),
-            [=](shader *i) -> bool { return i->rendererID == id; }
-        ))->bind();
+       shader *s = getShader(id);
+        
+        if(s != NULL) s->bind();
+        LAUGHTALE_ENGINR_CONDTION_LOG_ERROR("faild to bind shader: no shader with id: " << id, s == NULL);
+
     }
 
     void shaderManger::unbind(shaderId id)
     {
-        (*std::find_if(
-            shaders->begin(),
-            shaders->end(),
-            [=](shader *i) -> bool { return i->rendererID == id; }
-        ))->unbind();
+        shader *s = getShader(id);
+        
+        if(s != NULL) s->unbind();
+        LAUGHTALE_ENGINR_CONDTION_LOG_ERROR("faild to unbind shader: no shader with id: " << id, s == NULL);
     }
 
     
     void shaderManger::setUniform1i(shaderId id, const std::string& name, int value)
     {
-        (*std::find_if(
-            shaders->begin(),
-            shaders->end(),
-            [=](shader *i) -> bool { return id == i->rendererID; }
-        ))->setUniform1i(name, value);
+        shader *s = getShader(id);
+        
+        if(s != NULL) s->setUniform1i(name, value);
+        LAUGHTALE_ENGINR_CONDTION_LOG_ERROR("faild to setUniform1i shader: no shader with id: " << id, s == NULL);
     }
     
     void shaderManger::setUniform1f(shaderId id, const std::string& name, float value)
     {
-        (*std::find_if(
-            shaders->begin(),
-            shaders->end(),
-            [=](shader *i) -> bool { return id == i->rendererID; }
-        ))->setUniform1f(name, value);
+        shader *s = getShader(id);
+        
+        if(s != NULL) s->setUniform1f(name, value);
+        LAUGHTALE_ENGINR_CONDTION_LOG_ERROR("faild to setUniform1f shader: no shader with id: " << id, s == NULL);
     }
     
     void shaderManger::setUniform4f(shaderId id, const std::string& name, float v0, float v1, float v2, float v3)
     {
-        (*std::find_if(
-            shaders->begin(),
-            shaders->end(),
-            [=](shader *i) -> bool { return id == i->rendererID; }
-        ))->setUniform4f(name, v0, v1, v2, v3);
+        shader *s = getShader(id);
+        
+        if(s != NULL) s->setUniform4f(name, v0, v1, v2, v3);
+        LAUGHTALE_ENGINR_CONDTION_LOG_ERROR("faild to setUniform4f shader: no shader with id: " << id, s == NULL);
     }
     
     void shaderManger::setUniformMat4f(shaderId id, const std::string& name, const glm::mat4 &value)
     {
-        (*std::find_if(
-            shaders->begin(),
-            shaders->end(),
-            [=](shader *i) -> bool { return id == i->rendererID; }
-        ))->setUniformMat4f(name, value);
+        shader *s = getShader(id);
+        
+        if(s != NULL) s->setUniformMat4f(name, value);
+        LAUGHTALE_ENGINR_CONDTION_LOG_ERROR("faild to setUniformMat4f shader: no shader with id: " << id, s == NULL);
     }
 
 }
