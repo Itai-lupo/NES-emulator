@@ -135,7 +135,7 @@ Static Public Member Functions</h2></td></tr>
 <div class="fragment"><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    {</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        eventToAdd-&gt;id = eventManger::nextEventId;</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        eventManger::nextEventId++;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        eventManger::eventList[eventToAdd-&gt;getEventType()].push_back(*eventToAdd); </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        eventManger::eventList[eventToAdd-&gt;getEventType()].push_back(eventToAdd); </div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keywordflow">return</span> eventToAdd-&gt;id;</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    }</div>
 </div><!-- fragment --><div class="dynheader">
@@ -289,7 +289,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 <div class="fragment"><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    {</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        eventManger::eventList = <span class="keyword">new</span> std::vector&lt;event&gt;[<a class="code" href="../../db/d49/namespace_laugh_tale_engine.html#a0e35437d5f6988dc624d59aeff54b6bba16ab97c4d1e60d8a1b5f7c804269f190">events::events_MAX</a>];</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        eventManger::eventList = <span class="keyword">new</span> std::vector&lt;event*&gt;[<a class="code" href="../../db/d49/namespace_laugh_tale_engine.html#a0e35437d5f6988dc624d59aeff54b6bba16ab97c4d1e60d8a1b5f7c804269f190">events::events_MAX</a>];</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    }</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -341,27 +341,25 @@ Here is the caller graph for this function:</div>
 <div class="fragment"><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    {</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keywordflow">for</span> (uint64_t i = 0; i &lt; eventManger::eventList[eventType].size(); i++)</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        {</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <span class="keywordflow">if</span> (eventManger::eventList[eventType][i].<span class="keywordtype">id</span> == eventToRemove)</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <span class="keywordflow">if</span> (eventManger::eventList[eventType][i]-&gt;<span class="keywordtype">id</span> == eventToRemove)</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            {</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                eventManger::eventList[eventType].erase(eventManger::eventList[eventType].begin() + i);</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                <span class="keywordflow">return</span>;</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            }   </div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        }        </div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    }</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <a class="code" href="../../d1/d8c/logger_8h.html#ac50547ba95023ba6994629f68b4a39d4">LAUGHTALE_ENGINR_LOG_WARNING</a>(<span class="stringliteral">&quot;faild to remove event&quot;</span>);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    }</div>
+<div class="ttc" id="alogger_8h_html_ac50547ba95023ba6994629f68b4a39d4"><div class="ttname"><a href="../../d1/d8c/logger_8h.html#ac50547ba95023ba6994629f68b4a39d4">LAUGHTALE_ENGINR_LOG_WARNING</a></div><div class="ttdeci">#define LAUGHTALE_ENGINR_LOG_WARNING(toLog)</div><div class="ttdef"><b>Definition:</b> logger.h:7</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d9/dd1/class_laugh_tale_engine_1_1event_manger_a425867df36aeb35524a670a53f3ee0ff_icgraph.png" border="0" usemap="#ad9/dd1/class_laugh_tale_engine_1_1event_manger_a425867df36aeb35524a670a53f3ee0ff_icgraph" alt=""/></div>
 <map name="ad9/dd1/class_laugh_tale_engine_1_1event_manger_a425867df36aeb35524a670a53f3ee0ff_icgraph" id="ad9/dd1/class_laugh_tale_engine_1_1event_manger_a425867df36aeb35524a670a53f3ee0ff_icgraph">
-<area shape="rect" title=" " alt="" coords="640,118,844,159"/>
-<area shape="rect" href="../../d7/d47/class_laugh_tale_engine_1_1render_loop.html#a601530ce1c74dcc07017d1f63c0ca273" title=" " alt="" coords="399,23,592,65"/>
-<area shape="rect" href="../../d7/d47/class_laugh_tale_engine_1_1render_loop.html#acec2ee56dd3cfbe0af2905e5ac632e94" title=" " alt="" coords="399,89,592,130"/>
-<area shape="rect" href="../../d5/d71/classflappy_bird.html#ada1acfad69d7ca8ff48853d429be54f1" title=" " alt="" coords="203,184,347,211"/>
-<area shape="rect" href="../../d7/d47/class_laugh_tale_engine_1_1render_loop.html#addd26d3081b434221ecc387e0d049ad2" title=" " alt="" coords="399,206,592,247"/>
-<area shape="rect" href="../../d9/d89/class_laugh_tale_engine_1_1app.html#ae0600bd7d78c1276c220b3a93f5bd376" title=" " alt="" coords="200,23,351,65"/>
-<area shape="rect" href="../../d5/d71/classflappy_bird.html#a3353f8436200edb894fd5908515c8f74" title=" " alt="" coords="5,5,152,32"/>
-<area shape="rect" href="../../dc/dc2/init_event_system_8test_8cpp.html#ade06e6476a6ad085e91be7cf3f0babda" title=" " alt="" coords="51,56,107,83"/>
-<area shape="rect" href="../../d5/d71/classflappy_bird.html#aefe252403b2c6969e04a034c3d037d5d" title=" " alt="" coords="16,184,141,211"/>
+<area shape="rect" title=" " alt="" coords="612,64,816,105"/>
+<area shape="rect" href="../../d7/d47/class_laugh_tale_engine_1_1render_loop.html#acec2ee56dd3cfbe0af2905e5ac632e94" title=" " alt="" coords="371,5,564,47"/>
+<area shape="rect" href="../../d5/d71/classflappy_bird.html#ada1acfad69d7ca8ff48853d429be54f1" title=" " alt="" coords="179,101,323,127"/>
+<area shape="rect" href="../../d7/d47/class_laugh_tale_engine_1_1render_loop.html#addd26d3081b434221ecc387e0d049ad2" title=" " alt="" coords="371,123,564,164"/>
+<area shape="rect" href="../../d5/d71/classflappy_bird.html#aefe252403b2c6969e04a034c3d037d5d" title=" " alt="" coords="5,101,131,127"/>
 </map>
 </div>
 
@@ -406,19 +404,24 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    {</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        sendor-&gt;eventType = eventType;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        sendor-&gt;windowId = windowID;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordflow">for</span>(event e : eventManger::eventList[eventType]) </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        {</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            <span class="keywordflow">if</span>(windowID == 0 || e.getWindowID() == 0 || e.getWindowID() == windowID)</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            {</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                IEntity *a = <a class="code" href="../../df/dc8/class_laugh_tale_engine_1_1entity_manger.html#ac6a9e85f08df11aea7dcc7ccb21cf6ca">entityManger::getEntityById</a>(e.getEntityID()); </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                e.trigerEvent(a, sendor);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            }</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        }</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    }</div>
-<div class="ttc" id="aclass_laugh_tale_engine_1_1entity_manger_html_ac6a9e85f08df11aea7dcc7ccb21cf6ca"><div class="ttname"><a href="../../df/dc8/class_laugh_tale_engine_1_1entity_manger.html#ac6a9e85f08df11aea7dcc7ccb21cf6ca">LaughTaleEngine::entityManger::getEntityById</a></div><div class="ttdeci">static IEntity * getEntityById(entityTaleId id)</div><div class="ttdef"><b>Definition:</b> entity.cpp:29</div></div>
+<div class="fragment"><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    {</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        sendor-&gt;eventType = eventType;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        sendor-&gt;windowId = windowID;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordflow">for</span>(event *e : eventManger::eventList[eventType]) </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            <span class="keywordflow">if</span>(windowID == 0 || e-&gt;getWindowID() == 0 || e-&gt;getWindowID() == windowID)</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                IEntity *a = <a class="code" href="../../df/dc8/class_laugh_tale_engine_1_1entity_manger.html#ac6a9e85f08df11aea7dcc7ccb21cf6ca">entityManger::getEntityById</a>(e-&gt;getEntityID()); </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                <span class="keywordflow">if</span>((e-&gt;getEntityID() != -1 &amp;&amp; a != <span class="keyword">nullptr</span>) || e-&gt;getEntityID() == (<a class="code" href="../../db/d49/namespace_laugh_tale_engine.html#aed4508d0ca6653c50331b2c90932ff95">entityTaleId</a>)-1)</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                    e-&gt;trigerEvent(a, sendor);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                    <a class="code" href="../../d1/d8c/logger_8h.html#aae4cf1bd083983040d4d6572a9b0d8bf">LAUGHTALE_ENGINR_LOG_ERROR</a>(<span class="stringliteral">&quot;entity wasnt found:&quot;</span> &lt;&lt; e-&gt;getEntityID() &lt;&lt; <span class="stringliteral">&quot;, &quot;</span> &lt;&lt; e-&gt;id);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        }</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    }</div>
+<div class="ttc" id="aclass_laugh_tale_engine_1_1entity_manger_html_ac6a9e85f08df11aea7dcc7ccb21cf6ca"><div class="ttname"><a href="../../df/dc8/class_laugh_tale_engine_1_1entity_manger.html#ac6a9e85f08df11aea7dcc7ccb21cf6ca">LaughTaleEngine::entityManger::getEntityById</a></div><div class="ttdeci">static IEntity * getEntityById(entityTaleId id)</div><div class="ttdef"><b>Definition:</b> entity.cpp:30</div></div>
+<div class="ttc" id="alogger_8h_html_aae4cf1bd083983040d4d6572a9b0d8bf"><div class="ttname"><a href="../../d1/d8c/logger_8h.html#aae4cf1bd083983040d4d6572a9b0d8bf">LAUGHTALE_ENGINR_LOG_ERROR</a></div><div class="ttdeci">#define LAUGHTALE_ENGINR_LOG_ERROR(toLog)</div><div class="ttdef"><b>Definition:</b> logger.h:8</div></div>
+<div class="ttc" id="anamespace_laugh_tale_engine_html_aed4508d0ca6653c50331b2c90932ff95"><div class="ttname"><a href="../../db/d49/namespace_laugh_tale_engine.html#aed4508d0ca6653c50331b2c90932ff95">LaughTaleEngine::entityTaleId</a></div><div class="ttdeci">uint32_t entityTaleId</div><div class="ttdef"><b>Definition:</b> core.h:7</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">

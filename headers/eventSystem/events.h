@@ -127,7 +127,7 @@ namespace LaughTaleEngine
     class eventManger
     {
         private:
-            static std::vector<event> *eventList;
+            static std::vector<event*> *eventList;
             static uint32_t nextEventId;
         public:
             static void init();

@@ -130,12 +130,12 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    {</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        entityToAdd-&gt;id = entityManger::nextEventId;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        entityManger::nextEventId++;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        entityManger::entitys.push_back(entityToAdd);</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keywordflow">return</span> entityToAdd-&gt;id;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        entityToAdd-&gt;id = entityManger::nextEventId;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        entityManger::nextEventId++;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        entityManger::entitys.push_back(entityToAdd);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keywordflow">return</span> entityToAdd-&gt;id;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    }</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -176,10 +176,10 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    {</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        entityManger::entitys.clear();</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        entityManger::nextEventId = 0;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        entityManger::entitys.clear();</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        entityManger::nextEventId = 0;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    }</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -217,15 +217,21 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    {</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keywordflow">for</span> (uint64_t i = 0; i &lt; entityManger::entitys.size(); i++)</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        {</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            <span class="keywordflow">if</span>(entityManger::entitys[i]-&gt;<span class="keywordtype">id</span>  == <span class="keywordtype">id</span>)</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                <span class="keywordflow">return</span> entityManger::entitys[i];</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        }</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keywordflow">return</span>  <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        IEntity *e = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keywordtype">int</span> j = -1;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keywordflow">for</span> (uint64_t i = 0; i &lt; entityManger::entitys.size(); i++)</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            <span class="keywordflow">if</span>(entityManger::entitys[i]-&gt;<span class="keywordtype">id</span>  == <span class="keywordtype">id</span>){</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                <a class="code" href="../../d1/d8c/logger_8h.html#a030a2caf9f43b4e2926c659309f955ef">LAUGHTALE_ENGINR_CONDTION_LOG_ERROR</a>(<span class="stringliteral">&quot;2 with the same id: (&quot;</span> &lt;&lt; j &lt;&lt; <span class="stringliteral">&quot;, &quot;</span> &lt;&lt; i &lt;&lt; <span class="stringliteral">&quot;) with id: &quot;</span> &lt;&lt; <span class="keywordtype">id</span>  , j != -1);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                j = i;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                e = entityManger::entitys[i];</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            }</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        }</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keywordflow">return</span>  e;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    }</div>
+<div class="ttc" id="alogger_8h_html_a030a2caf9f43b4e2926c659309f955ef"><div class="ttname"><a href="../../d1/d8c/logger_8h.html#a030a2caf9f43b4e2926c659309f955ef">LAUGHTALE_ENGINR_CONDTION_LOG_ERROR</a></div><div class="ttdeci">#define LAUGHTALE_ENGINR_CONDTION_LOG_ERROR(toLog, condition)</div><div class="ttdef"><b>Definition:</b> logger.h:12</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -274,9 +280,9 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    {</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        entityManger::entitys = std::vector&lt;IEntity*&gt;();</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    {</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        entityManger::entitys = std::vector&lt;IEntity*&gt;();</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    }</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -314,29 +320,24 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    {</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keywordflow">for</span> (uint64_t i = 0; i &lt; entityManger::entitys.size(); i++)</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        {</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            <span class="keywordflow">if</span>(entityManger::entitys[i]-&gt;<span class="keywordtype">id</span>  == <span class="keywordtype">id</span>)</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            {</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                entityManger::entitys.erase(entityManger::entitys.begin() + i);</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            }</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        }</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordflow">for</span> (uint64_t i = 0; i &lt; entityManger::entitys.size(); i++)</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            <span class="keywordflow">if</span>(entityManger::entitys[i]-&gt;<span class="keywordtype">id</span>  == <span class="keywordtype">id</span>)</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                entityManger::entitys.erase(entityManger::entitys.begin() + i);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            }</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        }</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    }</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../df/dc8/class_laugh_tale_engine_1_1entity_manger_a0bf7cd0edceb47916e7788a834614491_icgraph.png" border="0" usemap="#adf/dc8/class_laugh_tale_engine_1_1entity_manger_a0bf7cd0edceb47916e7788a834614491_icgraph" alt=""/></div>
 <map name="adf/dc8/class_laugh_tale_engine_1_1entity_manger_a0bf7cd0edceb47916e7788a834614491_icgraph" id="adf/dc8/class_laugh_tale_engine_1_1entity_manger_a0bf7cd0edceb47916e7788a834614491_icgraph">
-<area shape="rect" title=" " alt="" coords="640,74,844,115"/>
-<area shape="rect" href="../../d7/d47/class_laugh_tale_engine_1_1render_loop.html#a601530ce1c74dcc07017d1f63c0ca273" title=" " alt="" coords="399,41,592,82"/>
-<area shape="rect" href="../../d7/d47/class_laugh_tale_engine_1_1render_loop.html#addd26d3081b434221ecc387e0d049ad2" title=" " alt="" coords="399,106,592,147"/>
-<area shape="rect" href="../../d9/d89/class_laugh_tale_engine_1_1app.html#ae0600bd7d78c1276c220b3a93f5bd376" title=" " alt="" coords="200,41,351,82"/>
-<area shape="rect" href="../../d5/d71/classflappy_bird.html#a3353f8436200edb894fd5908515c8f74" title=" " alt="" coords="5,5,152,32"/>
-<area shape="rect" href="../../dc/dc2/init_event_system_8test_8cpp.html#ade06e6476a6ad085e91be7cf3f0babda" title=" " alt="" coords="51,56,107,83"/>
-<area shape="rect" href="../../d5/d71/classflappy_bird.html#ada1acfad69d7ca8ff48853d429be54f1" title=" " alt="" coords="203,113,347,140"/>
-<area shape="rect" href="../../d5/d71/classflappy_bird.html#aefe252403b2c6969e04a034c3d037d5d" title=" " alt="" coords="16,113,141,140"/>
+<area shape="rect" title=" " alt="" coords="612,5,816,47"/>
+<area shape="rect" href="../../d5/d71/classflappy_bird.html#ada1acfad69d7ca8ff48853d429be54f1" title=" " alt="" coords="179,13,323,39"/>
+<area shape="rect" href="../../d7/d47/class_laugh_tale_engine_1_1render_loop.html#addd26d3081b434221ecc387e0d049ad2" title=" " alt="" coords="371,35,564,76"/>
+<area shape="rect" href="../../d5/d71/classflappy_bird.html#aefe252403b2c6969e04a034c3d037d5d" title=" " alt="" coords="5,13,131,39"/>
 </map>
 </div>
 

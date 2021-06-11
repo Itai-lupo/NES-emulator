@@ -1,11 +1,7 @@
 <map id="LaughTaleEngine::eventManger::removeEvent" name="LaughTaleEngine::eventManger::removeEvent">
-<area shape="rect" id="node1" title=" " alt="" coords="640,118,844,159"/>
-<area shape="rect" id="node2" href="$d7/d47/class_laugh_tale_engine_1_1render_loop.html#a601530ce1c74dcc07017d1f63c0ca273" title=" " alt="" coords="399,23,592,65"/>
-<area shape="rect" id="node6" href="$d7/d47/class_laugh_tale_engine_1_1render_loop.html#acec2ee56dd3cfbe0af2905e5ac632e94" title=" " alt="" coords="399,89,592,130"/>
-<area shape="rect" id="node7" href="$d5/d71/classflappy_bird.html#ada1acfad69d7ca8ff48853d429be54f1" title=" " alt="" coords="203,184,347,211"/>
-<area shape="rect" id="node9" href="$d7/d47/class_laugh_tale_engine_1_1render_loop.html#addd26d3081b434221ecc387e0d049ad2" title=" " alt="" coords="399,206,592,247"/>
-<area shape="rect" id="node3" href="$d9/d89/class_laugh_tale_engine_1_1app.html#ae0600bd7d78c1276c220b3a93f5bd376" title=" " alt="" coords="200,23,351,65"/>
-<area shape="rect" id="node4" href="$d5/d71/classflappy_bird.html#a3353f8436200edb894fd5908515c8f74" title=" " alt="" coords="5,5,152,32"/>
-<area shape="rect" id="node5" href="$dc/dc2/init_event_system_8test_8cpp.html#ade06e6476a6ad085e91be7cf3f0babda" title=" " alt="" coords="51,56,107,83"/>
-<area shape="rect" id="node8" href="$d5/d71/classflappy_bird.html#aefe252403b2c6969e04a034c3d037d5d" title=" " alt="" coords="16,184,141,211"/>
+<area shape="rect" id="node1" title=" " alt="" coords="612,64,816,105"/>
+<area shape="rect" id="node2" href="$d7/d47/class_laugh_tale_engine_1_1render_loop.html#acec2ee56dd3cfbe0af2905e5ac632e94" title=" " alt="" coords="371,5,564,47"/>
+<area shape="rect" id="node3" href="$d5/d71/classflappy_bird.html#ada1acfad69d7ca8ff48853d429be54f1" title=" " alt="" coords="179,101,323,127"/>
+<area shape="rect" id="node5" href="$d7/d47/class_laugh_tale_engine_1_1render_loop.html#addd26d3081b434221ecc387e0d049ad2" title=" " alt="" coords="371,123,564,164"/>
+<area shape="rect" id="node4" href="$d5/d71/classflappy_bird.html#aefe252403b2c6969e04a034c3d037d5d" title=" " alt="" coords="5,101,131,127"/>
 </map>

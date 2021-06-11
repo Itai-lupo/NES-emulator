@@ -91,7 +91,9 @@
         "renderer.h": "c",
         "vertexarray.h": "c",
         "shadermanger.h": "c",
-        "corecamera.h": "c"
+        "corecamera.h": "c",
+        "numbers": "cpp",
+        "semaphore": "cpp"
     },
     "files.exclude": {
         "build/": true,

@@ -15,12 +15,7 @@ namespace LaughTaleEngine
     
     void renderLoop::close()
     {
-        for ( mesh *m: *meshs)
-        {
-            entityManger::removeEntityById(m->id);
-            if(m->isActive)
-               eventManger::removeEvent(events::AppRender, m->onRenderId);
-        }
+        meshs->clear();
         
     }       
 
@@ -28,16 +23,15 @@ namespace LaughTaleEngine
     {
         LaughTaleEngine::mesh *meshToRender = static_cast<LaughTaleEngine::mesh *>(eventEntity);
         LaughTaleEngine::renderer *r = LaughTaleEngine::windowManger::getRenderer(meshToRender->getWindowId());
-            
-        meshToRender->bind();            
+        
         r->Submit(meshToRender);
     }
 
     entityTaleId renderLoop::addMesh(mesh *meshToAdd)
     {
+        entityManger::addEntity(meshToAdd);
         meshs->push_back(meshToAdd);
-        meshToAdd->id = entityManger::addEntity(meshToAdd);
-        return meshToAdd->id;
+        return meshToAdd->getId();
     }
     
     void renderLoop::active(entityTaleId id)
@@ -46,7 +40,7 @@ namespace LaughTaleEngine
 
         if(meshToActive != nullptr && !meshToActive->isActive)
         {
-            meshToActive->onRenderId = eventManger::addEvent( events::AppRender, renderMesh, meshToActive->id, meshToActive->getWindowId());
+            meshToActive->onRenderId = eventManger::addEvent( events::AppRender, renderMesh, meshToActive->getId(), meshToActive->getWindowId());
             meshToActive->isActive = true;
         }
 
@@ -67,16 +61,16 @@ namespace LaughTaleEngine
     void renderLoop::remove(entityTaleId id)
     {
         mesh *meshToRemove = getMesh(id);
+
         if(meshToRemove->isActive)
             eventManger::removeEvent(events::AppRender, meshToRemove->onRenderId);
         
-        entityManger::removeEntityById(meshToRemove->id);
+        entityManger::removeEntityById(meshToRemove->getId());
         std::remove_if(
             meshs->begin(),
             meshs->end(),
-            [=](mesh *m) -> bool { return m->id == id; }
+            [=](mesh *m) -> bool { return m->getId() == id; }
         );
-
     }
 
     mesh *renderLoop::getMesh(entityTaleId id)
@@ -84,7 +78,7 @@ namespace LaughTaleEngine
         return *std::find_if(
             meshs->begin(),
             meshs->end(),
-            [=](mesh *m) -> bool { return m->id == id; }
+            [=](mesh *m) -> bool { return m->getId() == id; }
         );
     }
 

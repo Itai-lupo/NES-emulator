@@ -12,6 +12,7 @@
 #include "soundEngine.h"
 #include "soundSynthesizer.h"
 #include "renderLoop.h"   
+#include "materialsManger.h"
 
 #include <chrono>
 #include <string>
@@ -33,6 +34,7 @@ namespace LaughTaleEngine
         soundEngine::init();
         soundSynthesizer::init();
         renderLoop::init();
+        materialsManger::init();
     }
 
     void app::close()
@@ -45,6 +47,7 @@ namespace LaughTaleEngine
         logger::close();
         entityManger::close();
         windowManger::close();
+        materialsManger::close();
     }
 
 

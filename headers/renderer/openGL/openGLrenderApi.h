@@ -11,6 +11,7 @@ namespace LaughTaleEngine
                 None = 0, OpenGL = 1
             };
         public:
+            virtual void init() override;
             virtual void SetClearColor(const glm::vec4& color) override;
             virtual void Clear() override;
 

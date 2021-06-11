@@ -1,6 +1,7 @@
 #include "entity.h"
 #include <stdlib.h>
 
+#include "logger.h"
 namespace LaughTaleEngine
 {
     std::vector<IEntity*> entityManger::entitys = std::vector<IEntity*>();
@@ -28,13 +29,18 @@ namespace LaughTaleEngine
 
     IEntity *entityManger::getEntityById(entityTaleId id)
     {
+        IEntity *e = nullptr;
+        int j = -1;
         for (uint64_t i = 0; i < entityManger::entitys.size(); i++)
         {
-            if(entityManger::entitys[i]->id  == id)
-                return entityManger::entitys[i];
+            if(entityManger::entitys[i]->id  == id){
+                LAUGHTALE_ENGINR_CONDTION_LOG_ERROR("2 with the same id: (" << j << ", " << i << ") with id: " << id  , j != -1);
+                j = i;
+                e = entityManger::entitys[i];
+            }
         }
         
-        return  nullptr;
+        return  e;
     }
 
     void entityManger::removeEntityById(entityTaleId id)
@@ -44,7 +50,6 @@ namespace LaughTaleEngine
             if(entityManger::entitys[i]->id  == id)
             {
                 entityManger::entitys.erase(entityManger::entitys.begin() + i);
-                return;
             }
         }
     }

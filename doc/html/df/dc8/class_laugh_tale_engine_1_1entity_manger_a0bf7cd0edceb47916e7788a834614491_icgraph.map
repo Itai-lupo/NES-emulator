@@ -1,10 +1,6 @@
 <map id="LaughTaleEngine::entityManger::removeEntityById" name="LaughTaleEngine::entityManger::removeEntityById">
-<area shape="rect" id="node1" title=" " alt="" coords="640,74,844,115"/>
-<area shape="rect" id="node2" href="$d7/d47/class_laugh_tale_engine_1_1render_loop.html#a601530ce1c74dcc07017d1f63c0ca273" title=" " alt="" coords="399,41,592,82"/>
-<area shape="rect" id="node6" href="$d7/d47/class_laugh_tale_engine_1_1render_loop.html#addd26d3081b434221ecc387e0d049ad2" title=" " alt="" coords="399,106,592,147"/>
-<area shape="rect" id="node3" href="$d9/d89/class_laugh_tale_engine_1_1app.html#ae0600bd7d78c1276c220b3a93f5bd376" title=" " alt="" coords="200,41,351,82"/>
-<area shape="rect" id="node4" href="$d5/d71/classflappy_bird.html#a3353f8436200edb894fd5908515c8f74" title=" " alt="" coords="5,5,152,32"/>
-<area shape="rect" id="node5" href="$dc/dc2/init_event_system_8test_8cpp.html#ade06e6476a6ad085e91be7cf3f0babda" title=" " alt="" coords="51,56,107,83"/>
-<area shape="rect" id="node7" href="$d5/d71/classflappy_bird.html#ada1acfad69d7ca8ff48853d429be54f1" title=" " alt="" coords="203,113,347,140"/>
-<area shape="rect" id="node8" href="$d5/d71/classflappy_bird.html#aefe252403b2c6969e04a034c3d037d5d" title=" " alt="" coords="16,113,141,140"/>
+<area shape="rect" id="node1" title=" " alt="" coords="612,5,816,47"/>
+<area shape="rect" id="node2" href="$d5/d71/classflappy_bird.html#ada1acfad69d7ca8ff48853d429be54f1" title=" " alt="" coords="179,13,323,39"/>
+<area shape="rect" id="node4" href="$d7/d47/class_laugh_tale_engine_1_1render_loop.html#addd26d3081b434221ecc387e0d049ad2" title=" " alt="" coords="371,35,564,76"/>
+<area shape="rect" id="node3" href="$d5/d71/classflappy_bird.html#aefe252403b2c6969e04a034c3d037d5d" title=" " alt="" coords="5,13,131,39"/>
 </map>

@@ -12,7 +12,7 @@ uniform mat4 transform;
 
 void main(){
    gl_Position = viewProjection * transform * vec4(postion, 1.0);
-   textureCoord = texCoord;
+   textureCoord = (texCoord - 0.15)/2.2 + 0.15*2.2;
 };
 
 
@@ -28,6 +28,9 @@ uniform sampler2D textureSampler;
 uniform vec4 colorOffset;
 
 void main(){
-   color = vec4( textureCoord.x, textureCoord.y  + colorOffset.y, colorOffset.z, 1.0f);
-   color = texture(textureSampler, textureCoord);
+   if(texture(textureSampler, textureCoord).a != 0.0)
+      color = vec4( textureCoord.x, textureCoord.y , 0.0, 1.0);
+   else
+      color = vec4(0.0);
+   color += texture(textureSampler, textureCoord);
 };

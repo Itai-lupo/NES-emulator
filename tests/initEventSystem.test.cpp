@@ -44,7 +44,7 @@ TEST(eventSystem, addAndCallEvent)
     try
     {
         eventCallbackFunc callback = [](IEntity *eventEntity, IEventData *sendor){
-            EXPECT_EQ(0, eventEntity->id) << "wrong entity id";
+            EXPECT_EQ(0, eventEntity->getId()) << "wrong entity id";
             EXPECT_EQ(1, dynamic_cast<testEventData*>(sendor)->id) << "wrong event id";
             dynamic_cast<testEntity*>(eventEntity)->x = 10;
         };
@@ -74,7 +74,7 @@ TEST(eventSystem, EventWithMoreThenOneCallback)
     try
     {
         eventCallbackFunc callback = [](IEntity *eventEntity, IEventData *sendor){
-            EXPECT_EQ(0, eventEntity->id) << "wrong entity id";
+            EXPECT_EQ(0, eventEntity->getId()) << "wrong entity id";
             EXPECT_EQ(1, dynamic_cast<testEventData*>(sendor)->id) << "wrong event id";
             dynamic_cast<testEntity*>(eventEntity)->x++;
         };
@@ -115,21 +115,21 @@ TEST(eventSystem, fewEntityWithFewEvents)
         eventCallbackFunc callback = [](IEntity *eventEntity, IEventData *sendor){
             testEntity *t = dynamic_cast<testEntity*>(eventEntity);
 
-            EXPECT_EQ(0, eventEntity->id) << "wrong entity id on 1";
+            EXPECT_EQ(0, eventEntity->getId()) << "wrong entity id on 1";
             EXPECT_EQ(1,  dynamic_cast<testEventData*>(sendor)->id) << "wrong event id on 1";
             t->x++;
         };
         
         eventCallbackFunc callback2 = [](IEntity *eventEntity, IEventData *sendor){
             testEntity *t = dynamic_cast<testEntity*>(eventEntity);
-            EXPECT_EQ(1, eventEntity->id) << "wrong entity id on 2";
+            EXPECT_EQ(1, eventEntity->getId()) << "wrong entity id on 2";
             EXPECT_EQ(1,  dynamic_cast<testEventData*>(sendor)->id) << "wrong event id on 2";
             t->x++;
         };
 
         eventCallbackFunc callback3 = [](IEntity *eventEntity, IEventData *sendor){
             testEntity *t = dynamic_cast <testEntity*>(eventEntity);
-            EXPECT_EQ(2, eventEntity->id) << "wrong entity id on 3";
+            EXPECT_EQ(2, eventEntity->getId()) << "wrong entity id on 3";
             EXPECT_EQ(1, dynamic_cast<testEventData*>(sendor)->id) << "wrong event id pn 3";
             t->x++;
         };

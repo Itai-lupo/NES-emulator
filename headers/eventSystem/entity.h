@@ -5,13 +5,7 @@
 
 namespace LaughTaleEngine
 {
-    struct IEntity
-    {
-        public:
-            virtual ~IEntity() = default;
-            
-            entityTaleId id;
-    };
+    struct IEntity;
 
     class entityManger
     {
@@ -26,4 +20,17 @@ namespace LaughTaleEngine
             static void removeEntityById(entityTaleId id);
 
     };
+
+    struct IEntity
+    {
+        private:
+            entityTaleId id;
+            friend entityManger;
+
+        public:
+            entityTaleId getId(){ return id; }
+            virtual ~IEntity() = default;
+            
+    };
+
 }

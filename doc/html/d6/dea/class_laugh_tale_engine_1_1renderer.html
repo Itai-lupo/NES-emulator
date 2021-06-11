@@ -112,9 +112,6 @@ Public Member Functions</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">LaughTaleEngine::renderer::renderer </td>
@@ -124,15 +121,22 @@ Public Member Functions</h2></td></tr>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                                    :</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;                api(api){}</div>
-</div><!-- fragment -->
+<div class="fragment"><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;                                    : api(api)</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    {</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;        api-&gt;<a class="code" href="../../d0/d98/class_laugh_tale_engine_1_1render_api.html#ae0dfbd98c3ab84869a1e3dddee4caa06">init</a>();</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    }</div>
+<div class="ttc" id="aclass_laugh_tale_engine_1_1render_api_html_ae0dfbd98c3ab84869a1e3dddee4caa06"><div class="ttname"><a href="../../d0/d98/class_laugh_tale_engine_1_1render_api.html#ae0dfbd98c3ab84869a1e3dddee4caa06">LaughTaleEngine::renderApi::init</a></div><div class="ttdeci">virtual void init()=0</div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d6/dea/class_laugh_tale_engine_1_1renderer_a7254792da9faecad2ae2b904e54f4305_cgraph.png" border="0" usemap="#ad6/dea/class_laugh_tale_engine_1_1renderer_a7254792da9faecad2ae2b904e54f4305_cgraph" alt=""/></div>
+<map name="ad6/dea/class_laugh_tale_engine_1_1renderer_a7254792da9faecad2ae2b904e54f4305_cgraph" id="ad6/dea/class_laugh_tale_engine_1_1renderer_a7254792da9faecad2ae2b904e54f4305_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,181,47"/>
+<area shape="rect" href="../../d0/d98/class_laugh_tale_engine_1_1render_api.html#ae0dfbd98c3ab84869a1e3dddee4caa06" title=" " alt="" coords="229,5,413,47"/>
+</map>
+</div>
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -151,12 +155,11 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    {</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        api-&gt;<a class="code" href="../../d0/d98/class_laugh_tale_engine_1_1render_api.html#ab72a77330dacba4fee0ccf8156e54173">SetClearColor</a>(glm::vec4(0.2f, 0.2f, 0.2f, 1));</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        api-&gt;<a class="code" href="../../d0/d98/class_laugh_tale_engine_1_1render_api.html#a584d5da18614bc1ff3a5e331df9d4e2b">Clear</a>();</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        data.<a class="code" href="../../db/d6b/struct_laugh_tale_engine_1_1_scene_data.html#a0650ada41651e8a276d7ea043908f5fc">camera</a> = camera;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    {</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        api-&gt;<a class="code" href="../../d0/d98/class_laugh_tale_engine_1_1render_api.html#ab72a77330dacba4fee0ccf8156e54173">SetClearColor</a>(glm::vec4(0.2f, 0.2f, 0.2f, 1));</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        api-&gt;<a class="code" href="../../d0/d98/class_laugh_tale_engine_1_1render_api.html#a584d5da18614bc1ff3a5e331df9d4e2b">Clear</a>();</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        data.<a class="code" href="../../db/d6b/struct_laugh_tale_engine_1_1_scene_data.html#a0650ada41651e8a276d7ea043908f5fc">camera</a> = camera;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    }</div>
 <div class="ttc" id="aclass_laugh_tale_engine_1_1render_api_html_a584d5da18614bc1ff3a5e331df9d4e2b"><div class="ttname"><a href="../../d0/d98/class_laugh_tale_engine_1_1render_api.html#a584d5da18614bc1ff3a5e331df9d4e2b">LaughTaleEngine::renderApi::Clear</a></div><div class="ttdeci">virtual void Clear()=0</div></div>
 <div class="ttc" id="aclass_laugh_tale_engine_1_1render_api_html_ab72a77330dacba4fee0ccf8156e54173"><div class="ttname"><a href="../../d0/d98/class_laugh_tale_engine_1_1render_api.html#ab72a77330dacba4fee0ccf8156e54173">LaughTaleEngine::renderApi::SetClearColor</a></div><div class="ttdeci">virtual void SetClearColor(const glm::vec4 &amp;color)=0</div></div>
 <div class="ttc" id="astruct_laugh_tale_engine_1_1_scene_data_html_a0650ada41651e8a276d7ea043908f5fc"><div class="ttname"><a href="../../db/d6b/struct_laugh_tale_engine_1_1_scene_data.html#a0650ada41651e8a276d7ea043908f5fc">LaughTaleEngine::SceneData::camera</a></div><div class="ttdeci">coreCamera * camera</div><div class="ttdef"><b>Definition:</b> renderer.h:14</div></div>
@@ -196,9 +199,9 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    {</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    }</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -226,13 +229,11 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    {</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        shader *s = toRender-&gt;getShader();</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keywordflow">if</span>(s == <span class="keyword">nullptr</span>) <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        s-&gt;bind();</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        s-&gt;setUniformMat4f(<span class="stringliteral">&quot;viewProjection&quot;</span>, data.<a class="code" href="../../db/d6b/struct_laugh_tale_engine_1_1_scene_data.html#a0650ada41651e8a276d7ea043908f5fc">camera</a>-&gt;<a class="code" href="../../d7/d93/class_laugh_tale_engine_1_1core_camera.html#ac547c86c5fabf2173fb7634069f0d801">getViewProjectionMatrix</a>());</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        api-&gt;<a class="code" href="../../d0/d98/class_laugh_tale_engine_1_1render_api.html#a1b102e3b35c2955f240ea09393f22639">DrawIndexed</a>(toRender-&gt;getCount());</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        toRender-&gt;bind();</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        toRender-&gt;getShader()-&gt;setUniformMat4f(<span class="stringliteral">&quot;viewProjection&quot;</span>, data.<a class="code" href="../../db/d6b/struct_laugh_tale_engine_1_1_scene_data.html#a0650ada41651e8a276d7ea043908f5fc">camera</a>-&gt;<a class="code" href="../../d7/d93/class_laugh_tale_engine_1_1core_camera.html#ac547c86c5fabf2173fb7634069f0d801">getViewProjectionMatrix</a>());</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        api-&gt;<a class="code" href="../../d0/d98/class_laugh_tale_engine_1_1render_api.html#a1b102e3b35c2955f240ea09393f22639">DrawIndexed</a>(toRender-&gt;getCount());</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    }</div>
 <div class="ttc" id="aclass_laugh_tale_engine_1_1core_camera_html_ac547c86c5fabf2173fb7634069f0d801"><div class="ttname"><a href="../../d7/d93/class_laugh_tale_engine_1_1core_camera.html#ac547c86c5fabf2173fb7634069f0d801">LaughTaleEngine::coreCamera::getViewProjectionMatrix</a></div><div class="ttdeci">virtual const glm::mat4 &amp; getViewProjectionMatrix()=0</div></div>
 <div class="ttc" id="aclass_laugh_tale_engine_1_1render_api_html_a1b102e3b35c2955f240ea09393f22639"><div class="ttname"><a href="../../d0/d98/class_laugh_tale_engine_1_1render_api.html#a1b102e3b35c2955f240ea09393f22639">LaughTaleEngine::renderApi::DrawIndexed</a></div><div class="ttdeci">virtual void DrawIndexed(uint32_t count)=0</div></div>
 </div><!-- fragment --><div class="dynheader">
@@ -240,18 +241,26 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d6/dea/class_laugh_tale_engine_1_1renderer_aee1eaf1e26b8f9423e3368cb575610ca_cgraph.png" border="0" usemap="#ad6/dea/class_laugh_tale_engine_1_1renderer_aee1eaf1e26b8f9423e3368cb575610ca_cgraph" alt=""/></div>
 <map name="ad6/dea/class_laugh_tale_engine_1_1renderer_aee1eaf1e26b8f9423e3368cb575610ca_cgraph" id="ad6/dea/class_laugh_tale_engine_1_1renderer_aee1eaf1e26b8f9423e3368cb575610ca_cgraph">
-<area shape="rect" title=" " alt="" coords="5,169,181,211"/>
-<area shape="rect" href="../../d6/db1/class_laugh_tale_engine_1_1shader.html#aba1e7a8cf4bb45789a29e00395142bc4" title=" " alt="" coords="245,5,413,47"/>
-<area shape="rect" href="../../d0/d98/class_laugh_tale_engine_1_1render_api.html#a1b102e3b35c2955f240ea09393f22639" title=" " alt="" coords="237,71,421,112"/>
-<area shape="rect" href="../../d8/da8/class_laugh_tale_engine_1_1mesh.html#a1baad4f6faaa4303d09e60cb6e614ef4" title=" " alt="" coords="249,136,410,177"/>
-<area shape="rect" href="../../d8/da8/class_laugh_tale_engine_1_1mesh.html#a62813e25532d7523d942018a96203846" title=" " alt="" coords="249,201,410,243"/>
-<area shape="rect" href="../../d7/d93/class_laugh_tale_engine_1_1core_camera.html#ac547c86c5fabf2173fb7634069f0d801" title=" " alt="" coords="229,267,429,308"/>
-<area shape="rect" href="../../d6/db1/class_laugh_tale_engine_1_1shader.html#ada4019ac27725e80f2764d6771f9559d" title=" " alt="" coords="245,332,413,373"/>
-<area shape="rect" href="../../da/d17/class_laugh_tale_engine_1_1window_manger.html#ab79f959646f41c09e5e041bef6bdfd5f" title=" " alt="" coords="477,136,693,177"/>
-<area shape="rect" href="../../da/d17/class_laugh_tale_engine_1_1window_manger.html#a403018be8ea19c9cf7c8f52857a360a5" title=" " alt="" coords="741,104,957,145"/>
-<area shape="rect" href="../../d4/dbe/class_laugh_tale_engine_1_1index_buffer_manger.html#a189db8ace3251bdcc047df387e83f88d" title=" " alt="" coords="752,169,947,211"/>
-<area shape="rect" href="../../db/de7/class_laugh_tale_engine_1_1shader_manger.html#afdb4893d6c59a3f96cb51d72997fb43a" title=" " alt="" coords="480,201,691,243"/>
-<area shape="rect" href="../../da/d17/class_laugh_tale_engine_1_1window_manger.html#af876123ce22fc998c60e8d9863c5fee0" title=" " alt="" coords="477,267,693,308"/>
+<area shape="rect" title=" " alt="" coords="5,355,181,396"/>
+<area shape="rect" href="../../d8/da8/class_laugh_tale_engine_1_1mesh.html#a4a61af0709b38e37735c871d17026531" title=" " alt="" coords="249,169,410,211"/>
+<area shape="rect" href="../../d8/da8/class_laugh_tale_engine_1_1mesh.html#a62813e25532d7523d942018a96203846" title=" " alt="" coords="505,332,666,373"/>
+<area shape="rect" href="../../d0/d98/class_laugh_tale_engine_1_1render_api.html#a1b102e3b35c2955f240ea09393f22639" title=" " alt="" coords="237,384,421,425"/>
+<area shape="rect" href="../../d8/da8/class_laugh_tale_engine_1_1mesh.html#a1baad4f6faaa4303d09e60cb6e614ef4" title=" " alt="" coords="249,267,410,308"/>
+<area shape="rect" href="../../d7/d93/class_laugh_tale_engine_1_1core_camera.html#ac547c86c5fabf2173fb7634069f0d801" title=" " alt="" coords="229,449,429,491"/>
+<area shape="rect" href="../../d6/db1/class_laugh_tale_engine_1_1shader.html#ada4019ac27725e80f2764d6771f9559d" title=" " alt="" coords="245,515,413,556"/>
+<area shape="rect" href="../../d1/dda/class_laugh_tale_engine_1_1materials_manger.html#a9c1b9d6d32b17c191546faff37d17b68" title=" " alt="" coords="494,5,677,47"/>
+<area shape="rect" href="../../da/d17/class_laugh_tale_engine_1_1window_manger.html#ac9ffc0c2e2e8c243e99a26f881fb5475" title=" " alt="" coords="477,136,693,177"/>
+<area shape="rect" href="../../da/d17/class_laugh_tale_engine_1_1window_manger.html#a9803b52f460733ab78aae3c03f1ee97c" title=" " alt="" coords="477,71,693,112"/>
+<area shape="rect" href="../../da/d17/class_laugh_tale_engine_1_1window_manger.html#a13545b139218aba1d2b04ec8145348c0" title=" " alt="" coords="477,201,693,243"/>
+<area shape="rect" href="../../d4/dbe/class_laugh_tale_engine_1_1index_buffer_manger.html#ac52d6cbc2b33bba0b984e66634a51dc8" title=" " alt="" coords="752,77,947,119"/>
+<area shape="rect" href="../../da/d17/class_laugh_tale_engine_1_1window_manger.html#a403018be8ea19c9cf7c8f52857a360a5" title=" " alt="" coords="741,208,957,249"/>
+<area shape="rect" href="../../db/de7/class_laugh_tale_engine_1_1shader_manger.html#a088794831d022f4c7027d635a10cad50" title=" " alt="" coords="744,12,955,53"/>
+<area shape="rect" href="../../d6/db1/class_laugh_tale_engine_1_1shader.html#aba1e7a8cf4bb45789a29e00395142bc4" title=" " alt="" coords="1027,12,1195,53"/>
+<area shape="rect" href="../../db/de7/class_laugh_tale_engine_1_1shader_manger.html#afdb4893d6c59a3f96cb51d72997fb43a" title=" " alt="" coords="1005,204,1216,245"/>
+<area shape="rect" href="../../d0/df2/class_laugh_tale_engine_1_1vertex_array_manger.html#a5c39790433e3e38c9c8ecbfd76849758" title=" " alt="" coords="751,143,947,184"/>
+<area shape="rect" href="../../da/d17/class_laugh_tale_engine_1_1window_manger.html#af876123ce22fc998c60e8d9863c5fee0" title=" " alt="" coords="741,391,957,432"/>
+<area shape="rect" href="../../da/d17/class_laugh_tale_engine_1_1window_manger.html#ab79f959646f41c09e5e041bef6bdfd5f" title=" " alt="" coords="477,267,693,308"/>
+<area shape="rect" href="../../d4/dbe/class_laugh_tale_engine_1_1index_buffer_manger.html#a189db8ace3251bdcc047df387e83f88d" title=" " alt="" coords="752,273,947,315"/>
 </map>
 </div>
 
@@ -288,12 +297,12 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    {</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        s-&gt;bind();</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        s-&gt;setUniformMat4f(<span class="stringliteral">&quot;viewProjection&quot;</span>, data.<a class="code" href="../../db/d6b/struct_laugh_tale_engine_1_1_scene_data.html#a0650ada41651e8a276d7ea043908f5fc">camera</a>-&gt;<a class="code" href="../../d7/d93/class_laugh_tale_engine_1_1core_camera.html#ac547c86c5fabf2173fb7634069f0d801">getViewProjectionMatrix</a>());</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        s-&gt;setUniformMat4f(<span class="stringliteral">&quot;transform&quot;</span>, transform);</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        api-&gt;<a class="code" href="../../d0/d98/class_laugh_tale_engine_1_1render_api.html#a1b102e3b35c2955f240ea09393f22639">DrawIndexed</a>(count);</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        s-&gt;bind();</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        s-&gt;setUniformMat4f(<span class="stringliteral">&quot;viewProjection&quot;</span>, data.<a class="code" href="../../db/d6b/struct_laugh_tale_engine_1_1_scene_data.html#a0650ada41651e8a276d7ea043908f5fc">camera</a>-&gt;<a class="code" href="../../d7/d93/class_laugh_tale_engine_1_1core_camera.html#ac547c86c5fabf2173fb7634069f0d801">getViewProjectionMatrix</a>());</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        s-&gt;setUniformMat4f(<span class="stringliteral">&quot;transform&quot;</span>, transform);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        api-&gt;<a class="code" href="../../d0/d98/class_laugh_tale_engine_1_1render_api.html#a1b102e3b35c2955f240ea09393f22639">DrawIndexed</a>(count);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    }</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">

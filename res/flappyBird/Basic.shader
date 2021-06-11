@@ -3,15 +3,17 @@
 
 
 layout(location = 0) in vec3 postion;
+layout(location = 1) in vec2 texCoord;
 
-out vec2 v_TextCoord;
+out vec2 textCoord;
 
 uniform mat4 viewProjection;
 uniform mat4 transform;
 
 void main(){
    gl_Position = viewProjection * transform * vec4(postion, 1.0);
-   v_TextCoord.xy = postion.xy;
+   textCoord = texCoord;
+
 };
 
 
@@ -22,10 +24,16 @@ void main(){
 
 layout(location = 0) out vec4 color;
 
-in vec2 v_TextCoord;
-
+in vec2 textCoord;
+uniform sampler2D textureSampler;
 uniform vec4 colorOffset;
 
 void main(){
-   color = vec4( v_TextCoord.x  + colorOffset.x, v_TextCoord.y + v_TextCoord.x, v_TextCoord.y + colorOffset.y, 1.0f);
+   if(texture(textureSampler, textCoord).rgb != vec3(0.0))
+      color = vec4( textCoord.x  + colorOffset.x, textCoord.y + textCoord.x, textCoord.y + colorOffset.y, 1.0f);
+   else
+      color = vec4(0.0);
+
+   color += texture(textureSampler, textCoord);
+
 };

@@ -131,8 +131,8 @@ namespace LaughTaleEngine {
 		}
 		
 		data->setRenderApi(rApi);
-		data->setRenderer(new renderer(rApi));
 		data->context->Init();
+		data->setRenderer(new renderer(rApi));
 		glfwSetWindowUserPointer(Window, data);
 
 		glfwSetWindowSizeCallback(Window, WindowSizeCallback);

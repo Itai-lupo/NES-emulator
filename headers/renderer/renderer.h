@@ -20,8 +20,7 @@ namespace LaughTaleEngine
             SceneData data;
             renderApi *api;
         public:
-            renderer(renderApi *api):
-                api(api){}
+            renderer(renderApi *api);
                 
             void beginScene(coreCamera *camera);
             void endScene();

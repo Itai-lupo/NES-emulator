@@ -1,4 +1,3 @@
-#pragma once
 #include "mesh.h"
 #include "entity.h"
 #include "core.h"
@@ -6,6 +5,8 @@
 #include "openGLVertexBuffer.h"
 #include "openGLVertexArray.h"
 #include "openGLIndexBuffer.h"
+#include "materialsManger.h"
+#include "texture2DMatrial.h"
 #include "window.h"
 
 namespace LaughTaleEngine
@@ -64,6 +65,7 @@ namespace LaughTaleEngine
         windowManger::bindVA(windowId, VAId);
         windowManger::bindS(windowId, ShaderId);
         windowManger::bindIB(windowId, IBId);
+        materialsManger::bind(materialId, getShader());
     }
 
     VertexBuffer *mesh::getVertexBuffer()
@@ -96,12 +98,20 @@ namespace LaughTaleEngine
         this->transform = transform; 
     }
     
-    void mesh::setmaterial(glm::vec4 material)
+    void mesh::setmaterialColor(const glm::vec4 material)
     {
         windowManger::bindContext(windowId);
         windowManger::bindS(windowId, ShaderId);
         getShader()->setUniform4f("colorOffset", material.r, material.g, material.b, material.a);
         this->material = material; 
+    }
+
+    void mesh::setmaterial(const std::string& path)
+    {
+        this->materialId = materialsManger::addMatrial(new LaughTaleEngine::texture2DMatrial(path));
+        windowManger::bindContext(windowId);
+
+        materialsManger::bind(materialId, getShader());
     }
 
     mesh::mesh(windowPieceId windowId): IEntity(), windowId(windowId){}
