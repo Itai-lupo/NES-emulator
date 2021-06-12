@@ -8,7 +8,7 @@ namespace LaughTaleEngine
         private:
         public:
             openGLTexture(const std::string& path);
-
+            ~openGLTexture();
             virtual void bind(uint32_t slot = 0) override;
     };
 }

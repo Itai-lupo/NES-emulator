@@ -47,9 +47,7 @@ var hierarchy =
     [ "LaughTaleEngine::indexBufferManger", "d4/dbe/class_laugh_tale_engine_1_1index_buffer_manger.html", null ],
     [ "LaughTaleEngine::linuxInput", "da/d5d/class_laugh_tale_engine_1_1linux_input.html", null ],
     [ "LaughTaleEngine::logger", "d6/d62/class_laugh_tale_engine_1_1logger.html", null ],
-    [ "LaughTaleEngine::material", "d2/dbe/class_laugh_tale_engine_1_1material.html", [
-      [ "LaughTaleEngine::texture2DMatrial", "d8/d56/class_laugh_tale_engine_1_1texture2_d_matrial.html", null ]
-    ] ],
+    [ "LaughTaleEngine::material", "d2/dbe/class_laugh_tale_engine_1_1material.html", null ],
     [ "LaughTaleEngine::materialsManger", "d1/dda/class_laugh_tale_engine_1_1materials_manger.html", null ],
     [ "LaughTaleEngine::apoSequencerAndRythemManer::note", "de/d98/struct_laugh_tale_engine_1_1apo_sequencer_and_rythem_maner_1_1note.html", null ],
     [ "LaughTaleEngine::osc", "d5/de2/class_laugh_tale_engine_1_1osc.html", null ],

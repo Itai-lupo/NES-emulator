@@ -83,11 +83,8 @@ class pilar: public LaughTaleEngine::IEntity
             pilarTopMesh->setVertexArray();
             pilarBottomMesh->setVertexArray();
 
-            pilarTopMesh->setmaterial("res/textures/5_star.png");
-            pilarBottomMesh->setmaterial("res/textures/5_star.png");
-
-            pilarTopMesh->setmaterialColor({1.0f, 1.0f, 0.0f, 1.0f});
-            pilarBottomMesh->setmaterialColor({0.0f, 1.0f, 1.0f, 1.0f});
+            pilarTopMesh->setMaterial("res/textures/5_star.png", {1.0f, 1.0f, 0.0f, 1.0f});
+            pilarBottomMesh->setMaterial("res/textures/5_star.png", {0.0f, 1.0f, 1.0f, 1.0f});
 
             LaughTaleEngine::renderLoop::addMesh(pilarTopMesh);
             LaughTaleEngine::renderLoop::active(pilarTopMesh->getId());
@@ -143,6 +140,8 @@ class bird: public LaughTaleEngine::IEntity
         };
 
         LaughTaleEngine::mesh *birdMesh;
+        static inline LaughTaleEngine::materialId starMat;
+        static inline LaughTaleEngine::materialId logoMat;
     public:
         LaughTaleEngine::eventLaughId updateId;
         LaughTaleEngine::eventLaughId onKeyId;
@@ -157,6 +156,9 @@ class bird: public LaughTaleEngine::IEntity
         {
             birdMesh = new LaughTaleEngine::mesh(gameWindowId);
 
+            starMat = LaughTaleEngine::materialsManger::addMatrial(new LaughTaleEngine::material("res/textures/5_star.png"));
+            logoMat = LaughTaleEngine::materialsManger::addMatrial(new LaughTaleEngine::material("res/textures/Logo.png"));
+
             birdMesh->setShader("res/flappyBird/bird.shader");
 
             birdMesh->setVertexBuffer(birdPostions, 6 * 5 * sizeof(float));
@@ -167,7 +169,7 @@ class bird: public LaughTaleEngine::IEntity
 
             birdMesh->setVertexArray();
 
-            birdMesh->setmaterial("res/textures/Logo.png");
+            birdMesh->setMaterial(logoMat);
             LaughTaleEngine::renderLoop::addMesh(birdMesh);
             LaughTaleEngine::renderLoop::active(birdMesh->getId());
 
@@ -208,7 +210,7 @@ class bird: public LaughTaleEngine::IEntity
             bird *player = static_cast<bird *>(eventEntity);
             player->speed = 1.25f;
             player->birdMesh->setShader(( player->star? "res/flappyBird/bird.shader": "res/flappyBird/Basic.shader"));
-            player->birdMesh->setmaterial(( player->star? "res/textures/Logo.png": "res/textures/5_star.png"));
+            player->birdMesh->setMaterial(( player->star? logoMat: starMat));
             player->star = !player->star;
         }
 };

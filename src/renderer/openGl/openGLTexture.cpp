@@ -8,7 +8,7 @@
 
 namespace LaughTaleEngine
 {
-    openGLTexture::openGLTexture(const std::string& path)
+    openGLTexture::openGLTexture(const std::string& path): texture(path)
     {
         stbi_set_flip_vertically_on_load(1);
         uint8_t *buffer = stbi_load(path.c_str(), (int*)&width, (int*)&height, &channels, 4);
@@ -25,6 +25,11 @@ namespace LaughTaleEngine
         
         if(buffer)
             stbi_image_free(buffer);
+    }
+
+    openGLTexture::~openGLTexture()
+    {
+        glDeleteTextures(1, &id);
     }
 
     void openGLTexture::bind(uint32_t slot)

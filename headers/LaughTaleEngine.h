@@ -29,4 +29,4 @@
 #include "renderLoop.h"
 #include "openGLTexture.h"
 #include "materialsManger.h"
-#include "texture2DMatrial.h"
+#include "material.h"

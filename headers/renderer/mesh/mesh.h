@@ -19,10 +19,9 @@ namespace LaughTaleEngine
         indexBufferId IBId;
         vertexArrayId VAId;
         shaderId      ShaderId;
-        matrialId materialId;
+        materialId    mateId;
 
         glm::mat4     transform;
-        glm::vec4     material;
     
     public:
         bool isActive = false;
@@ -43,15 +42,15 @@ namespace LaughTaleEngine
         void setVertexArray();
         void setVertexArray(vertexArrayId id);
 
-        void bind();
+        void bind(std::vector<uint32_t> textureSlots = {});
 
         glm::mat4 getTransform(){ return transform; }
-        glm::vec4  getmaterial(){ return material; }
+        materialId  getMaterialId(){ return mateId; }
 
         void setTransform(glm::mat4 transform);
 
-        void setmaterialColor(const glm::vec4 material);
-        void setmaterial(const std::string& path);
+        void setMaterial(const std::string& path, glm::vec4 color);
+        void setMaterial(materialId material);
 
 
         VertexBuffer *getVertexBuffer();

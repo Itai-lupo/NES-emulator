@@ -10,13 +10,14 @@ namespace LaughTaleEngine
     {
         private:
             static std::vector<material *> *materials;
-            static matrialId nextId;
+            static materialId nextId;
         public:
             static void init();
             static void close();
 
-            static matrialId addMatrial(material *toAdd);
-            static void bind(matrialId id, shader *shaderToBindTo);
+            static materialId addMatrial(material *toAdd);
+            static void bind(materialId id, shader *shaderToBindTo, std::vector<uint32_t> textureSlots = {});
+            static material *getMaterial(materialId id);
     };
     
 

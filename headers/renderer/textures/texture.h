@@ -7,12 +7,15 @@ namespace LaughTaleEngine
     class texture
     {
         protected:
-            uint32_t id;
+            const std::string& path;
+            textureId id;
             uint32_t width, height;
             int channels;
         public:
+            texture(const std::string& path): path(path){}
             virtual ~texture() = default;
 
             virtual void bind(uint32_t slot = 0) = 0;
+            textureId getId(){ return id; }
     };
 }

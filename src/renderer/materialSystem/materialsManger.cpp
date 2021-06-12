@@ -6,7 +6,7 @@
 namespace LaughTaleEngine
 {
     std::vector<material *> *materialsManger::materials;
-    matrialId materialsManger::nextId = 0;
+    materialId materialsManger::nextId = 0;
 
     void materialsManger::init()
     {
@@ -19,7 +19,7 @@ namespace LaughTaleEngine
     }
 
 
-    matrialId materialsManger::addMatrial(material *toAdd)
+    materialId materialsManger::addMatrial(material *toAdd)
     {
         materials->push_back(toAdd);
         toAdd->id = nextId;
@@ -27,18 +27,32 @@ namespace LaughTaleEngine
         return toAdd->id; 
     }
 
-    void materialsManger::bind(matrialId id, shader *shaderToBindTo)
+    void materialsManger::bind(materialId id, shader *shaderToBindTo, std::vector<uint32_t> textureSlots)
     {
-        std::vector<material *>::iterator m;
-        m =  std::find_if(
+        std::vector<material *>::iterator m =  std::find_if(
             materials->begin(),
             materials->end(),
             [=] (material *m) -> bool { return m->id == id; }
         );
         if(m != materials->end())
-            return (*m)->bind(shaderToBindTo);
+            return (*m)->bind(shaderToBindTo, textureSlots);
         
         LAUGHTALE_ENGINR_LOG_WARNING("faild to bind matrial: matrial wasn't found");
+    }
+
+    material *materialsManger::getMaterial(materialId id)
+    {
+        std::vector<material *>::iterator m =  std::find_if(
+            materials->begin(),
+            materials->end(),
+            [=] (material *m) -> bool { return m->id == id; }
+        );
+
+        if(m != materials->end())
+            return (*m);
+        
+        LAUGHTALE_ENGINR_LOG_WARNING("faild to get matrial: matrial wasn't found");
+        return nullptr;
     }
 
     

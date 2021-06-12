@@ -26,11 +26,11 @@ layout(location = 0) out vec4 color;
 
 in vec2 textCoord;
 uniform sampler2D textureSampler;
-uniform vec4 colorOffset;
+uniform vec4 baseColor;
 
 void main(){
    if(texture(textureSampler, textCoord).rgb != vec3(0.0))
-      color = vec4( textCoord.x  + colorOffset.x, textCoord.y + textCoord.x, textCoord.y + colorOffset.y, 1.0f);
+      color = vec4( textCoord.x  + baseColor.x, textCoord.y + textCoord.x, textCoord.y + baseColor.y, 1.0f);
    else
       color = vec4(0.0);
 

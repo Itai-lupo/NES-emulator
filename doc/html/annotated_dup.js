@@ -33,7 +33,6 @@ var annotated_dup =
       [ "indexBufferManger", "d4/dbe/class_laugh_tale_engine_1_1index_buffer_manger.html", "d4/dbe/class_laugh_tale_engine_1_1index_buffer_manger" ],
       [ "material", "d2/dbe/class_laugh_tale_engine_1_1material.html", "d2/dbe/class_laugh_tale_engine_1_1material" ],
       [ "materialsManger", "d1/dda/class_laugh_tale_engine_1_1materials_manger.html", null ],
-      [ "texture2DMatrial", "d8/d56/class_laugh_tale_engine_1_1texture2_d_matrial.html", "d8/d56/class_laugh_tale_engine_1_1texture2_d_matrial" ],
       [ "mesh", "d8/da8/class_laugh_tale_engine_1_1mesh.html", "d8/da8/class_laugh_tale_engine_1_1mesh" ],
       [ "renderLoop", "d7/d47/class_laugh_tale_engine_1_1render_loop.html", null ],
       [ "openGLContext", "d7/d4d/class_laugh_tale_engine_1_1open_g_l_context.html", "d7/d4d/class_laugh_tale_engine_1_1open_g_l_context" ],

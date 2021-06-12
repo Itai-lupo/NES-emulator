@@ -11,7 +11,8 @@ namespace LaughTaleEngine
     typedef uint32_t shaderId;
     typedef uint64_t windowPieceId;
     typedef uint32_t apoEnvelopeId;
-    typedef uint32_t matrialId;
+    typedef uint32_t materialId;
+    typedef uint32_t textureId;
 
     enum renderAPI
     {

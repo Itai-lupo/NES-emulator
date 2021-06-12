@@ -25,7 +25,7 @@ layout(location = 0) out vec4 color;
 
 in vec2 textureCoord;
 uniform sampler2D textureSampler;
-uniform vec4 colorOffset;
+uniform vec4 rgba;
 
 void main(){
    if(texture(textureSampler, textureCoord).a != 0.0)

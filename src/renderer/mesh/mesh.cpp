@@ -6,14 +6,16 @@
 #include "openGLVertexArray.h"
 #include "openGLIndexBuffer.h"
 #include "materialsManger.h"
-#include "texture2DMatrial.h"
+#include "material.h"
 #include "window.h"
 
 namespace LaughTaleEngine
 {
+    mesh::mesh(windowPieceId windowId): IEntity(), windowId(windowId){}
+
+
     void mesh::setShader(const char *path)
     {
-        
         shader *s = new openGLShader(path);
         ShaderId = windowManger::add(windowId, s);
     }
@@ -22,7 +24,6 @@ namespace LaughTaleEngine
     {
         ShaderId = id;
     }
-
 
     void mesh::setVertexBuffer(float *vertexs, uint32_t size)
     {
@@ -60,12 +61,12 @@ namespace LaughTaleEngine
         VAId = id;
     }
 
-    void mesh::bind()
+    void mesh::bind(std::vector<uint32_t> textureSlots)
     {
         windowManger::bindVA(windowId, VAId);
         windowManger::bindS(windowId, ShaderId);
         windowManger::bindIB(windowId, IBId);
-        materialsManger::bind(materialId, getShader());
+        materialsManger::bind(mateId, getShader(), textureSlots);
     }
 
     VertexBuffer *mesh::getVertexBuffer()
@@ -98,21 +99,21 @@ namespace LaughTaleEngine
         this->transform = transform; 
     }
     
-    void mesh::setmaterialColor(const glm::vec4 material)
+    void mesh::setMaterial(const std::string& path, glm::vec4 color)
     {
-        windowManger::bindContext(windowId);
-        windowManger::bindS(windowId, ShaderId);
-        getShader()->setUniform4f("colorOffset", material.r, material.g, material.b, material.a);
-        this->material = material; 
-    }
-
-    void mesh::setmaterial(const std::string& path)
-    {
-        this->materialId = materialsManger::addMatrial(new LaughTaleEngine::texture2DMatrial(path));
+        mateId = materialsManger::addMatrial(new material(path, color));
         windowManger::bindContext(windowId);
 
-        materialsManger::bind(materialId, getShader());
+        materialsManger::bind(mateId, getShader());
     }
 
-    mesh::mesh(windowPieceId windowId): IEntity(), windowId(windowId){}
+    void mesh::setMaterial(materialId material)
+    {
+        mateId = material;
+        windowManger::bindContext(windowId);
+
+        materialsManger::bind(mateId, getShader());
+    }
+    
+
 }

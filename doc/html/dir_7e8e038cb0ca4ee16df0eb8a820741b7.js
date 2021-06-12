@@ -5,6 +5,7 @@ var dir_7e8e038cb0ca4ee16df0eb8a820741b7 =
     [ "mesh", "dir_bbe197fc1ff7fbdc150781b9ac9b8d0b.html", "dir_bbe197fc1ff7fbdc150781b9ac9b8d0b" ],
     [ "openGL", "dir_c8fa22f8148b4d0bf62ab9cf6ab2a749.html", "dir_c8fa22f8148b4d0bf62ab9cf6ab2a749" ],
     [ "Shader", "dir_a93f4de65173bad682dae028370af3c7.html", "dir_a93f4de65173bad682dae028370af3c7" ],
+    [ "textures", "dir_5f9da329f9bf54c70644b1cb48f6349f.html", "dir_5f9da329f9bf54c70644b1cb48f6349f" ],
     [ "VertexArray", "dir_45c468efcf484d42347bc0192bd8560b.html", "dir_45c468efcf484d42347bc0192bd8560b" ],
     [ "VertexBuffer", "dir_a185e7b2a9317169aa7efaed0afe7536.html", "dir_a185e7b2a9317169aa7efaed0afe7536" ],
     [ "graphicsContext.h", "d3/d9e/graphics_context_8h.html", [
@@ -21,8 +22,5 @@ var dir_7e8e038cb0ca4ee16df0eb8a820741b7 =
     [ "renderer.h", "d6/d85/renderer_8h.html", [
       [ "SceneData", "db/d6b/struct_laugh_tale_engine_1_1_scene_data.html", "db/d6b/struct_laugh_tale_engine_1_1_scene_data" ],
       [ "renderer", "d6/dea/class_laugh_tale_engine_1_1renderer.html", "d6/dea/class_laugh_tale_engine_1_1renderer" ]
-    ] ],
-    [ "texture.h", "df/dba/texture_8h.html", [
-      [ "texture", "d5/dc3/class_laugh_tale_engine_1_1texture.html", "d5/dc3/class_laugh_tale_engine_1_1texture" ]
     ] ]
 ];

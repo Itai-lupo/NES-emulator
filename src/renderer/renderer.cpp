@@ -30,7 +30,7 @@ namespace LaughTaleEngine
 
     void renderer::Submit(mesh *toRender )
     {
-        toRender->bind();
+        toRender->bind({0});
         toRender->getShader()->setUniformMat4f("viewProjection", data.camera->getViewProjectionMatrix());
         api->DrawIndexed(toRender->getCount());
     }
