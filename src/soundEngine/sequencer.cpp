@@ -40,7 +40,7 @@ namespace LaughTaleEngine
         {
             songOn = false;
             songThread->join();
-            free(songThread);
+            delete songThread;
         }
     }
 }

@@ -22,7 +22,7 @@ namespace LaughTaleEngine
     material::~material()
     {
         if(tex != nullptr)
-            free(tex);
+            delete tex;
     }
 
     void material::bind(shader *s)

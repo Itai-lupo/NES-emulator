@@ -14,10 +14,10 @@ namespace LaughTaleEngine
         std::for_each(
             indexBuffers->begin(),
             indexBuffers->end(),
-            [](indexBuffer *ib){ free(ib); }
+            [](indexBuffer *ib){ delete ib; }
         );
         indexBuffers->clear();
-        free(indexBuffers);
+        delete indexBuffers;
     }
 
     indexBufferId indexBufferManger::add(indexBuffer * indexBufferToAdd)

@@ -268,7 +268,7 @@ class flappyBird : public ::testing::Test, public LaughTaleEngine::IEntity
                 LaughTaleEngine::renderLoop::remove(temp->pilarBottomMesh->getId());
 
                 game->pilars.erase(game->pilars.begin());
-                free(temp);
+                delete temp;
             }
 
             game->player->failed = 

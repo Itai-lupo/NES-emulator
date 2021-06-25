@@ -428,11 +428,11 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <a class="code" href="../../d9/dd1/class_laugh_tale_engine_1_1event_manger.html#a425867df36aeb35524a670a53f3ee0ff">eventManger::removeEvent</a>(<a class="code" href="../../db/d49/namespace_laugh_tale_engine.html#a0e35437d5f6988dc624d59aeff54b6bba7b31aecaaf2694e5b456788390739a70">events::AppRender</a>, meshToRemove-&gt;onRenderId);</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        </div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <a class="code" href="../../df/dc8/class_laugh_tale_engine_1_1entity_manger.html#a0bf7cd0edceb47916e7788a834614491">entityManger::removeEntityById</a>(meshToRemove-&gt;getId());</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        std::remove_if(</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        meshs-&gt;erase(std::remove_if(</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            meshs-&gt;begin(),</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            meshs-&gt;end(),</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            [=](mesh *m) -&gt; <span class="keywordtype">bool</span> { return m-&gt;getId() == id; }</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        );</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        ), meshs-&gt;end());</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    }</div>
 <div class="ttc" id="aclass_laugh_tale_engine_1_1entity_manger_html_a0bf7cd0edceb47916e7788a834614491"><div class="ttname"><a href="../../df/dc8/class_laugh_tale_engine_1_1entity_manger.html#a0bf7cd0edceb47916e7788a834614491">LaughTaleEngine::entityManger::removeEntityById</a></div><div class="ttdeci">static void removeEntityById(entityTaleId id)</div><div class="ttdef"><b>Definition:</b> entity.cpp:46</div></div>
 </div><!-- fragment --><div class="dynheader">

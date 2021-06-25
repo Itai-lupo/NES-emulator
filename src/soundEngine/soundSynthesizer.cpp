@@ -49,11 +49,11 @@ namespace LaughTaleEngine
 
     void soundSynthesizer::removeEnvelope(apoEnvelopeId id)
     {
-        std::remove_if(
+        envelopes->erase(std::remove_if(
             envelopes->begin(),
             envelopes->end(),
             [=](envelope *env) -> bool { return env->getId() == id; }
-        );
+        ), envelopes->end());
     }
 
     void soundSynthesizer::noteOn(apoEnvelopeId id)

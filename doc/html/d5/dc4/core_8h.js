@@ -1,10 +1,12 @@
 var core_8h =
 [
     [ "apoEnvelopeId", "d5/dc4/core_8h.html#a105044a4171f64ca8e60fc9247c8c0e0", null ],
+    [ "connectionId", "d5/dc4/core_8h.html#a8d5b17e5d8eb4cee0c507d14657d24a0", null ],
     [ "entityTaleId", "d5/dc4/core_8h.html#aed4508d0ca6653c50331b2c90932ff95", null ],
     [ "eventLaughId", "d5/dc4/core_8h.html#aa5a36da072461b112a628ff4d7663715", null ],
     [ "indexBufferId", "d5/dc4/core_8h.html#a07826fbf8b6d7ad673b280baa70f639f", null ],
     [ "materialId", "d5/dc4/core_8h.html#ab2b675932cf55718ec3ed4cdfbdff27b", null ],
+    [ "packetId", "d5/dc4/core_8h.html#a8a2f429c04746177b037bc9ce4394e08", null ],
     [ "shaderId", "d5/dc4/core_8h.html#a389b0b76e2fc7aab22044ada38f1bcbd", null ],
     [ "textureId", "d5/dc4/core_8h.html#a016d6607f42a694c777cebdc114fa8ba", null ],
     [ "vertexArrayId", "d5/dc4/core_8h.html#abdf7e17967c36a3bc3590fe5f1d7e9a3", null ],

@@ -24,7 +24,7 @@ namespace LaughTaleEngine
     bool windowManger::VSync = false;
     static std::vector<window*> windows = std::vector<window*>();
 
-    void windowManger::setVSync(bool enabled){ window::setVSync(VSync = enabled); }
+    void windowManger::setVSync(bool enabled){ window::setVSync(enabled); VSync = enabled; }
 
     void windowManger::init(){
         eventManger::addEvent(events::AppUpdate, onUpdate, -1);
@@ -47,11 +47,11 @@ namespace LaughTaleEngine
     {
         findWinById(sendor->windowId)->Shutdown(windowManger::getWindow(sendor->windowId));
 
-        std::remove_if(
+        windows.erase(std::remove_if(
             windows.begin(), 
             windows.end(), 
             [=](window *win)-> bool { return win->id == sendor->windowId; }
-        );
+        ), windows.end());
     }
 
     windowPieceId windowManger::addWindow(const std::string& title, bool useImGui, unsigned int width, unsigned int height, renderAPI renderAPIType)
@@ -63,7 +63,7 @@ namespace LaughTaleEngine
         windowEntity *windowEntityData = new windowEntity(newWin);
         entityTaleId windowEntityId = entityManger::addEntity(dynamic_cast<windowEntity*>(windowEntityData));
         eventManger::addEvent(events::WindowResize, onWindowResize, windowEntityId, newWin->id);
-        // eventManger::addEvent(events::WindowClose, onWindowClose, -1, newWin->id);
+        eventManger::addEvent(events::WindowClose, onWindowClose, -1, newWin->id);
         
         return newWin->id;
     }

@@ -124,7 +124,7 @@ $(document).ready(function(){initNavTree('d3/d40/sound_files_player_8h_source.ht
 <div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="../../d8/dd3/class_laugh_tale_engine_1_1apo_sequencer_and_rythem_maner_1_1sound_files_player.html#addbe2fc6280ae0eca751392887537f22">   35</a></span>&#160;                <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="../../d8/dd3/class_laugh_tale_engine_1_1apo_sequencer_and_rythem_maner_1_1sound_files_player.html#addbe2fc6280ae0eca751392887537f22">stopPlayingFile</a>()</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                {</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                    <a class="code" href="../../d6/d31/class_laugh_tale_engine_1_1sound_synthesizer.html#a402b1b8a943736ab34392b8627621ba7">soundSynthesizer::removeEnvelope</a>(file-&gt;<a class="code" href="../../d2/d34/class_laugh_tale_engine_1_1envelope.html#af6fff4ae2cc8090f6c729b08b879b5b3">getId</a>());</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                    free(file);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                    <span class="keyword">delete</span> file;</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                }</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        };</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        </div>
@@ -142,7 +142,7 @@ $(document).ready(function(){initNavTree('d3/d40/sound_files_player_8h_source.ht
 <div class="ttc" id="aclass_laugh_tale_engine_1_1sound_synthesizer_html_a402b1b8a943736ab34392b8627621ba7"><div class="ttname"><a href="../../d6/d31/class_laugh_tale_engine_1_1sound_synthesizer.html#a402b1b8a943736ab34392b8627621ba7">LaughTaleEngine::soundSynthesizer::removeEnvelope</a></div><div class="ttdeci">static void removeEnvelope(apoEnvelopeId id)</div><div class="ttdef"><b>Definition:</b> soundSynthesizer.cpp:50</div></div>
 <div class="ttc" id="aclass_laugh_tale_engine_1_1sound_synthesizer_html_abe1b51b3fd80d177fdc94719d26dc774"><div class="ttname"><a href="../../d6/d31/class_laugh_tale_engine_1_1sound_synthesizer.html#abe1b51b3fd80d177fdc94719d26dc774">LaughTaleEngine::soundSynthesizer::addEnvelope</a></div><div class="ttdeci">static apoEnvelopeId addEnvelope(envelope *toAdd)</div><div class="ttdef"><b>Definition:</b> soundSynthesizer.cpp:41</div></div>
 <div class="ttc" id="aenvelope_8h_html"><div class="ttname"><a href="../../da/d92/envelope_8h.html">envelope.h</a></div></div>
-<div class="ttc" id="anamespace_laugh_tale_engine_html"><div class="ttname"><a href="../../db/d49/namespace_laugh_tale_engine.html">LaughTaleEngine</a></div><div class="ttdef"><b>Definition:</b> app.cpp:22</div></div>
+<div class="ttc" id="anamespace_laugh_tale_engine_html"><div class="ttname"><a href="../../db/d49/namespace_laugh_tale_engine.html">LaughTaleEngine</a></div><div class="ttdef"><b>Definition:</b> app.cpp:23</div></div>
 <div class="ttc" id="asound_synthesizer_8h_html"><div class="ttname"><a href="../../dc/d35/sound_synthesizer_8h.html">soundSynthesizer.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

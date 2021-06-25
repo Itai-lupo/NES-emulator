@@ -233,14 +233,15 @@ Here is the caller graph for this function:</div>
 <map name="add/ddf/class_laugh_tale_engine_1_1_vertex_buffer_manger_addb645f9e36d02628e2f7ac426963fa4_icgraph" id="add/ddf/class_laugh_tale_engine_1_1_vertex_buffer_manger_addb645f9e36d02628e2f7ac426963fa4_icgraph">
 <area shape="rect" title=" " alt="" coords="764,136,967,177"/>
 <area shape="rect" href="../../da/d17/class_laugh_tale_engine_1_1window_manger.html#a299031b3ffb4b65db840baf235410f79" title=" " alt="" coords="471,143,716,170"/>
-<area shape="rect" href="../../d8/da8/class_laugh_tale_engine_1_1mesh.html#a2714219270f8c4f3431d1f9a4c0e899f" title=" " alt="" coords="261,136,423,177"/>
+<area shape="rect" href="../../d8/da8/class_laugh_tale_engine_1_1mesh.html#a2714219270f8c4f3431d1f9a4c0e899f" title=" " alt="" coords="261,5,423,47"/>
 <area shape="rect" href="../../d8/da8/class_laugh_tale_engine_1_1mesh.html#ae51cd8ec446b346f3a7b24eed7d9afd6" title=" " alt="" coords="261,201,423,243"/>
-<area shape="rect" href="../../d8/da8/class_laugh_tale_engine_1_1mesh.html#a8214df8db5232bd1597a07779b0f9c0a" title=" " alt="" coords="261,5,423,47"/>
+<area shape="rect" href="../../d8/da8/class_laugh_tale_engine_1_1mesh.html#a8214df8db5232bd1597a07779b0f9c0a" title=" " alt="" coords="261,136,423,177"/>
 <area shape="rect" href="../../d8/da8/class_laugh_tale_engine_1_1mesh.html#ae0254d10a09017894e20fa64bc816b64" title=" " alt="" coords="261,71,423,112"/>
 <area shape="rect" href="../../d3/d00/window_8test_8cpp.html#a17abbb749ed42b0ea711959029a6cc14" title=" " alt="" coords="314,267,370,294"/>
-<area shape="rect" href="../../da/dee/classbird.html#a6b56afda6374e3ca12a903cd0aa21bb4" title=" " alt="" coords="5,158,77,185"/>
-<area shape="rect" href="../../d1/d69/classpilar.html#a2a9b8757ec997e8e62be5c1cb2c133da" title=" " alt="" coords="130,107,209,134"/>
-<area shape="rect" href="../../da/dee/classbird.html#a83956b6357112e4319b907ad45beda7e" title=" " alt="" coords="125,259,213,286"/>
+<area shape="rect" href="../../da/dee/classbird.html#a6b56afda6374e3ca12a903cd0aa21bb4" title=" " alt="" coords="5,179,77,206"/>
+<area shape="rect" href="../../d1/d69/classpilar.html#a2a9b8757ec997e8e62be5c1cb2c133da" title=" " alt="" coords="130,78,209,105"/>
+<area shape="rect" href="../../d0/dd3/network_manger_8test_8cpp.html#a694d31198f53727b698f47d94e41db6b" title=" " alt="" coords="141,129,197,155"/>
+<area shape="rect" href="../../da/dee/classbird.html#a83956b6357112e4319b907ad45beda7e" title=" " alt="" coords="125,230,213,257"/>
 </map>
 </div>
 
@@ -340,7 +341,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        std::for_each(</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;            VertexBuffers-&gt;begin(), </div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;            VertexBuffers-&gt;end(),</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;            [](VertexBuffer *vb){ free(vb); }</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;            [](VertexBuffer *vb){ delete vb; }</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        );</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        VertexBuffers-&gt;clear();</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    }</div>
@@ -433,13 +434,14 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../dd/ddf/class_laugh_tale_engine_1_1_vertex_buffer_manger_a4a959699e8d9f42696035ff269442121_icgraph.png" border="0" usemap="#add/ddf/class_laugh_tale_engine_1_1_vertex_buffer_manger_a4a959699e8d9f42696035ff269442121_icgraph" alt=""/></div>
 <map name="add/ddf/class_laugh_tale_engine_1_1_vertex_buffer_manger_a4a959699e8d9f42696035ff269442121_icgraph" id="add/ddf/class_laugh_tale_engine_1_1_vertex_buffer_manger_a4a959699e8d9f42696035ff269442121_icgraph">
-<area shape="rect" title=" " alt="" coords="605,41,808,83"/>
-<area shape="rect" href="../../da/d17/class_laugh_tale_engine_1_1window_manger.html#aecc06f0a328ee4e7225caf1e9a9cdc32" title=" " alt="" coords="341,71,557,112"/>
-<area shape="rect" href="../../d8/da8/class_laugh_tale_engine_1_1mesh.html#a3ab1067cf737bb84a1f50e80f098cd50" title=" " alt="" coords="132,5,293,47"/>
-<area shape="rect" href="../../d8/da8/class_laugh_tale_engine_1_1mesh.html#a8214df8db5232bd1597a07779b0f9c0a" title=" " alt="" coords="132,71,293,112"/>
-<area shape="rect" href="../../d3/d00/window_8test_8cpp.html#a17abbb749ed42b0ea711959029a6cc14" title=" " alt="" coords="185,137,241,163"/>
-<area shape="rect" href="../../da/dee/classbird.html#a6b56afda6374e3ca12a903cd0aa21bb4" title=" " alt="" coords="9,17,81,43"/>
-<area shape="rect" href="../../d1/d69/classpilar.html#a2a9b8757ec997e8e62be5c1cb2c133da" title=" " alt="" coords="5,71,84,98"/>
+<area shape="rect" title=" " alt="" coords="605,51,808,93"/>
+<area shape="rect" href="../../da/d17/class_laugh_tale_engine_1_1window_manger.html#aecc06f0a328ee4e7225caf1e9a9cdc32" title=" " alt="" coords="341,81,557,122"/>
+<area shape="rect" href="../../d8/da8/class_laugh_tale_engine_1_1mesh.html#a3ab1067cf737bb84a1f50e80f098cd50" title=" " alt="" coords="132,15,293,57"/>
+<area shape="rect" href="../../d8/da8/class_laugh_tale_engine_1_1mesh.html#a8214df8db5232bd1597a07779b0f9c0a" title=" " alt="" coords="132,81,293,122"/>
+<area shape="rect" href="../../d3/d00/window_8test_8cpp.html#a17abbb749ed42b0ea711959029a6cc14" title=" " alt="" coords="185,147,241,173"/>
+<area shape="rect" href="../../da/dee/classbird.html#a6b56afda6374e3ca12a903cd0aa21bb4" title=" " alt="" coords="9,5,81,32"/>
+<area shape="rect" href="../../d1/d69/classpilar.html#a2a9b8757ec997e8e62be5c1cb2c133da" title=" " alt="" coords="5,56,84,83"/>
+<area shape="rect" href="../../d0/dd3/network_manger_8test_8cpp.html#a694d31198f53727b698f47d94e41db6b" title=" " alt="" coords="17,107,73,133"/>
 </map>
 </div>
 
@@ -536,11 +538,11 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 <div class="fragment"><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    {</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        std::remove_if(</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        VertexBuffers-&gt;erase(std::remove_if(</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            VertexBuffers-&gt;begin(), </div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            VertexBuffers-&gt;end(),</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            [=](VertexBuffer * vb)-&gt; <span class="keywordtype">bool</span> { return vb-&gt;RendererID == vbToRemove; }</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        );</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        ), VertexBuffers-&gt;end());</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>

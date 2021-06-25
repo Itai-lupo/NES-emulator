@@ -30,3 +30,5 @@
 #include "openGLTexture.h"
 #include "materialsManger.h"
 #include "material.h"
+#include "packet.h"
+#include "connectionsManager.h"

@@ -35,7 +35,7 @@ namespace LaughTaleEngine
                 static void stopPlayingFile()
                 {
                     soundSynthesizer::removeEnvelope(file->getId());
-                    free(file);
+                    delete file;
                 }
         };
         

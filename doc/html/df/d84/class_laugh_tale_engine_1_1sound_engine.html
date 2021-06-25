@@ -127,9 +127,9 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <div class="fragment"><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    {</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        soundThread-&gt;join();</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        free(soundThread);</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        free(microphone);</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        free(speaker);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keyword">delete</span> soundThread;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keyword">delete</span> microphone;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keyword">delete</span> speaker;</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    }</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>

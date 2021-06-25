@@ -93,7 +93,10 @@
         "shadermanger.h": "c",
         "corecamera.h": "c",
         "numbers": "cpp",
-        "semaphore": "cpp"
+        "semaphore": "cpp",
+        "any": "cpp",
+        "*.ipp": "cpp",
+        "coroutine": "cpp"
     },
     "files.exclude": {
         "build/": true,

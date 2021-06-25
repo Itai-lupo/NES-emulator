@@ -57,6 +57,7 @@ namespace LaughTaleEngine
         {
             if(windowID == 0 || e->getWindowID() == 0 || e->getWindowID() == windowID)
             {
+                sendor->id = e->id;
                 IEntity *a = entityManger::getEntityById(e->getEntityID()); 
                 if((e->getEntityID() != -1 && a != nullptr) || e->getEntityID() == (entityTaleId)-1)
                     e->trigerEvent(a, sendor);
@@ -65,4 +66,27 @@ namespace LaughTaleEngine
             }
         }
     }
+
+    void eventManger::trigerEventById(eventLaughId id, IEventData *sendor)
+    {
+        for(uint32_t eventType = 0; eventType < events::events_MAX; eventType++) 
+        {
+            for(event *e : eventManger::eventList[eventType]) 
+            {
+                if( e->id == id)
+                {
+                    sendor->id = e->id;
+                    IEntity *a = entityManger::getEntityById(e->getEntityID()); 
+                    if((e->getEntityID() != (entityTaleId)-1 && a != nullptr) || e->getEntityID() == (entityTaleId)-1)
+                        e->trigerEvent(a, sendor);
+                    else
+                        LAUGHTALE_ENGINR_LOG_ERROR("entity wasnt found:" << e->getEntityID() << ", " << e->id);
+                    return;
+                }
+            }
+        }
+        LAUGHTALE_ENGINR_LOG_ERROR("event wasnt found:" << id);
+
+    }
+
 }

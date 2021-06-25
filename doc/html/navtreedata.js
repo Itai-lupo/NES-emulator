@@ -43,7 +43,8 @@ var NAVTREE =
         [ "All", "functions.html", "functions_dup" ],
         [ "Functions", "functions_func.html", "functions_func" ],
         [ "Variables", "functions_vars.html", null ],
-        [ "Enumerations", "functions_enum.html", null ]
+        [ "Enumerations", "functions_enum.html", null ],
+        [ "Related Functions", "functions_rela.html", null ]
       ] ]
     ] ],
     [ "Files", "files.html", [
@@ -51,6 +52,7 @@ var NAVTREE =
       [ "File Members", "globals.html", [
         [ "All", "globals.html", null ],
         [ "Functions", "globals_func.html", null ],
+        [ "Variables", "globals_vars.html", null ],
         [ "Macros", "globals_defs.html", null ]
       ] ]
     ] ]
@@ -60,10 +62,10 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"d5/dc4/core_8h_source.html",
-"db/d2b/struct_laugh_tale_engine_1_1sond_sampel_data.html#a5f8597e2abddd5aea894211cc1cff3df",
-"dc/d0e/keycodes_8h.html#afac621f8995e392172becd8473e8d18a",
-"functions_p.html"
+"d5/dc3/class_laugh_tale_engine_1_1texture.html#a8c4f0fd9b3b5ef2074c8386d3da2a49d",
+"d9/dc9/flappy_bird_8test_8cpp.html#a63d8492c3bd7811780cc765e506c3789",
+"dc/d0e/keycodes_8h.html#a6e52f171aa57863cce6bd9b535638491",
+"df/df7/open_g_lrender_api_8cpp.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -13,6 +13,8 @@ namespace LaughTaleEngine
     typedef uint32_t apoEnvelopeId;
     typedef uint32_t materialId;
     typedef uint32_t textureId;
+    typedef uint32_t packetId;
+    typedef uint32_t connectionId;
 
     enum renderAPI
     {

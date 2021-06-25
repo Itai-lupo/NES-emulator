@@ -30,6 +30,9 @@ var events_8h =
       [ "MouseMoved", "db/dd2/events_8h.html#a0e35437d5f6988dc624d59aeff54b6bba3c31d87fbd019d57be06a02f5e7ffc8e", null ],
       [ "MouseScrolled", "db/dd2/events_8h.html#a0e35437d5f6988dc624d59aeff54b6bba95ab8b514b94b3feef14295ff0bcdf09", null ],
       [ "ImGuiRender", "db/dd2/events_8h.html#a0e35437d5f6988dc624d59aeff54b6bbad418c7c600554090b2f2756a6aa71097", null ],
+      [ "serverConnection", "db/dd2/events_8h.html#a0e35437d5f6988dc624d59aeff54b6bba4ac122578cac621469dca3e5a9875478", null ],
+      [ "messageReceived", "db/dd2/events_8h.html#a0e35437d5f6988dc624d59aeff54b6bba098ef4ff7b88738cc1087574d71a569a", null ],
+      [ "messageSent", "db/dd2/events_8h.html#a0e35437d5f6988dc624d59aeff54b6bba87937f9eacf37eee81002cd82d79649e", null ],
       [ "events_MAX", "db/dd2/events_8h.html#a0e35437d5f6988dc624d59aeff54b6bba16ab97c4d1e60d8a1b5f7c804269f190", null ]
     ] ]
 ];

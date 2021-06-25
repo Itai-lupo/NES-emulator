@@ -42,9 +42,9 @@ namespace LaughTaleEngine
     void soundEngine::close()
     {
         soundThread->join();
-        free(soundThread);
-        free(microphone);
-        free(speaker);
+        delete soundThread;
+        delete microphone;
+        delete speaker;
     }
 
     double clap(double v)

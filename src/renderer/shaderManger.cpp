@@ -14,7 +14,7 @@ namespace LaughTaleEngine
         std::for_each(
             shaders->begin(),
             shaders->end(),
-            [](shader *i){ free(i); }
+            [](shader *i){ delete i; }
         );
         shaders->clear();
     }
@@ -29,11 +29,11 @@ namespace LaughTaleEngine
 
     void shaderManger::remove(shaderId shaderToRemove)
     {
-        std::remove_if(
+        shaders->erase(std::remove_if(
             shaders->begin(),
             shaders->end(),
             [=](shader *i) -> bool { return i->rendererID == shaderToRemove; }
-        );
+        ), shaders->end());
     }
 
     shader *shaderManger::getShader(shaderId id)

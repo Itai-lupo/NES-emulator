@@ -13,6 +13,17 @@ var annotated_dup =
         [ "soundFile", "d5/de7/class_laugh_tale_engine_1_1apo_sequencer_and_rythem_maner_1_1sound_file.html", "d5/de7/class_laugh_tale_engine_1_1apo_sequencer_and_rythem_maner_1_1sound_file" ],
         [ "soundFilesPlayer", "d8/dd3/class_laugh_tale_engine_1_1apo_sequencer_and_rythem_maner_1_1sound_files_player.html", null ]
       ] ],
+      [ "goingMarryNetworkManger", "d6/df6/namespace_laugh_tale_engine_1_1going_marry_network_manger.html", [
+        [ "asioNetworkInterface", "d2/d87/class_laugh_tale_engine_1_1going_marry_network_manger_1_1asio_network_interface.html", "d2/d87/class_laugh_tale_engine_1_1going_marry_network_manger_1_1asio_network_interface" ],
+        [ "connectionData", "d7/d3d/struct_laugh_tale_engine_1_1going_marry_network_manger_1_1connection_data.html", "d7/d3d/struct_laugh_tale_engine_1_1going_marry_network_manger_1_1connection_data" ],
+        [ "connection", "d7/dc2/class_laugh_tale_engine_1_1going_marry_network_manger_1_1connection.html", "d7/dc2/class_laugh_tale_engine_1_1going_marry_network_manger_1_1connection" ],
+        [ "connectionsManager", "d7/d1f/class_laugh_tale_engine_1_1going_marry_network_manger_1_1connections_manager.html", null ],
+        [ "networkInterface", "de/dbb/class_laugh_tale_engine_1_1going_marry_network_manger_1_1network_interface.html", "de/dbb/class_laugh_tale_engine_1_1going_marry_network_manger_1_1network_interface" ],
+        [ "byteStream", "d0/ddf/class_laugh_tale_engine_1_1going_marry_network_manger_1_1byte_stream.html", "d0/ddf/class_laugh_tale_engine_1_1going_marry_network_manger_1_1byte_stream" ],
+        [ "packetHeader", "d7/d35/struct_laugh_tale_engine_1_1going_marry_network_manger_1_1packet_header.html", "d7/d35/struct_laugh_tale_engine_1_1going_marry_network_manger_1_1packet_header" ],
+        [ "packetBody", "df/de1/struct_laugh_tale_engine_1_1going_marry_network_manger_1_1packet_body.html", null ],
+        [ "packet", "db/ddf/struct_laugh_tale_engine_1_1going_marry_network_manger_1_1packet.html", "db/ddf/struct_laugh_tale_engine_1_1going_marry_network_manger_1_1packet" ]
+      ] ],
       [ "app", "d9/d89/class_laugh_tale_engine_1_1app.html", null ],
       [ "entityManger", "df/dc8/class_laugh_tale_engine_1_1entity_manger.html", null ],
       [ "IEntity", "dd/d4a/struct_laugh_tale_engine_1_1_i_entity.html", "dd/d4a/struct_laugh_tale_engine_1_1_i_entity" ],

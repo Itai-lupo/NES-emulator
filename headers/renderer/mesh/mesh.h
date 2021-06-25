@@ -28,7 +28,7 @@ namespace LaughTaleEngine
         eventLaughId onRenderId;
 
         mesh(windowPieceId windowId);
-        ~mesh(){LAUGHTALE_ENGINR_LOG_INFO("destroy mesh with id: " << getId());}
+        ~mesh(){}
 
         void setShader(const char *path);
         void setShader(shaderId id);

@@ -14,7 +14,7 @@ namespace LaughTaleEngine
         std::for_each(
             VertexBuffers->begin(), 
             VertexBuffers->end(),
-            [](VertexBuffer *vb){ free(vb); }
+            [](VertexBuffer *vb){ delete vb; }
         );
         VertexBuffers->clear();
     }
@@ -47,11 +47,11 @@ namespace LaughTaleEngine
 
     void VertexBufferManger::remove(vertexBufferId vbToRemove)
     {
-        std::remove_if(
+        VertexBuffers->erase(std::remove_if(
             VertexBuffers->begin(), 
             VertexBuffers->end(),
             [=](VertexBuffer * vb)-> bool { return vb->RendererID == vbToRemove; }
-        );
+        ), VertexBuffers->end());
     }
 
     void VertexBufferManger::changeData(vertexBufferId vbId, const void *data, uint32_t size)

@@ -66,11 +66,11 @@ namespace LaughTaleEngine
             eventManger::removeEvent(events::AppRender, meshToRemove->onRenderId);
         
         entityManger::removeEntityById(meshToRemove->getId());
-        std::remove_if(
+        meshs->erase(std::remove_if(
             meshs->begin(),
             meshs->end(),
             [=](mesh *m) -> bool { return m->getId() == id; }
-        );
+        ), meshs->end());
     }
 
     mesh *renderLoop::getMesh(entityTaleId id)

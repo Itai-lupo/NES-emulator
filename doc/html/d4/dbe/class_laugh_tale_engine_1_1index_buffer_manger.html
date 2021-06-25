@@ -291,10 +291,10 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        std::for_each(</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;            indexBuffers-&gt;begin(),</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;            indexBuffers-&gt;end(),</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;            [](indexBuffer *ib){ free(ib); }</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;            [](indexBuffer *ib){ delete ib; }</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        );</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        indexBuffers-&gt;clear();</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        free(indexBuffers);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keyword">delete</span> indexBuffers;</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    }</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>

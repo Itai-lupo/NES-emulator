@@ -436,11 +436,11 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 <div class="fragment"><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    {</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        std::remove_if(</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        envelopes-&gt;erase(std::remove_if(</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            envelopes-&gt;begin(),</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            envelopes-&gt;end(),</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            [=](envelope *env) -&gt; <span class="keywordtype">bool</span> { return env-&gt;getId() == id; }</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        );</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        ), envelopes-&gt;end());</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    }</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>

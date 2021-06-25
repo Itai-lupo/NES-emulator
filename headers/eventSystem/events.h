@@ -20,6 +20,7 @@ namespace LaughTaleEngine
 		KeyPressed, KeyReleased, KeyRepeat, KeyTyped,
 		MouseButtonPressed, MouseButtonReleased, MouseMoved, MouseScrolled,
         ImGuiRender,
+        serverConnection, messageReceived, messageSent, 
         events_MAX
     };
 
@@ -31,6 +32,7 @@ namespace LaughTaleEngine
         virtual ~IEventData() {}
         events eventType;
         windowPieceId windowId;
+        eventLaughId id;
     };
     
     struct WindowResizeData: public IEventData
@@ -134,8 +136,9 @@ namespace LaughTaleEngine
             static void close();
             static eventLaughId addEvent(events eventType, eventCallbackFunc callback, entityTaleId entityID = -1, windowPieceId windowID = 0);
             static eventLaughId addEvent(event *eventToAdd);
-            static void trigerEvent(events eventType, IEventData *sendor, windowPieceId windowID = 0);
             static void removeEvent(events eventType, eventLaughId eventToRemove);
+            static void trigerEvent(events eventType, IEventData *sendor, windowPieceId windowID = 0);
+            static void trigerEventById(eventLaughId id, IEventData *sendor);
 
     };
 }
