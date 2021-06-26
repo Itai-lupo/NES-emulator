@@ -33,25 +33,14 @@ namespace LaughTaleEngine::goingMarryNetworkManger
 
     }
 
-    void asioNetworkInterface::reciveHeader(packetHeader *buffer)
+    void asioNetworkInterface::reciveData(const byteStream& data)
     {
-
+        LAUGHTALE_ENGINR_LOG_INFO(asio::read(*socketConnction, asio::mutable_buffer((void *)&data.body[0], data.body.size())));
     }
-
-    void asioNetworkInterface::reciveBody(packet *buffer)
-    {
-
-    }
-
-    void asioNetworkInterface::sendData(packet *data)
-    {
-
-    }    
 
     void asioNetworkInterface::sendData(const byteStream& data)
     {
-        LAUGHTALE_ENGINR_LOG_INFO(data);
-        LAUGHTALE_ENGINR_LOG_INFO(asio::write(*socketConnction, asio::buffer(data.getData(), data.getSize() - 1)));
+        LAUGHTALE_ENGINR_LOG_INFO(asio::write(*socketConnction, asio::buffer(data.getData(), data.getSize())));
     }
 
     void asioNetworkInterface::initContext()

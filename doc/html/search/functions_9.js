@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['linuxsoundapi_1021',['linuxSoundApi',['../d8/da6/class_laugh_tale_engine_1_1linux_sound_api.html#aca93bd6320c8645907f77caa20ac7a33',1,'LaughTaleEngine::linuxSoundApi']]],
-  ['linuxwindow_1022',['linuxWindow',['../d3/d04/class_laugh_tale_engine_1_1linux_window.html#a96f406ddad7b73f8b51355e87951aff1',1,'LaughTaleEngine::linuxWindow']]]
+  ['keycallback_1063',['KeyCallback',['../db/d49/namespace_laugh_tale_engine.html#afbf78b42fa320bc4b2f9d0d459ac1ba5',1,'LaughTaleEngine']]],
+  ['keydata_1064',['KeyData',['../dc/dd6/struct_laugh_tale_engine_1_1_key_data.html#af4d8de859e2fc3b244234343e12f3c9f',1,'LaughTaleEngine::KeyData']]],
+  ['keytypeddata_1065',['keyTypedData',['../dc/d3f/struct_laugh_tale_engine_1_1key_typed_data.html#aace25b24c19454f1c9cb83c1b9ab39cc',1,'LaughTaleEngine::keyTypedData']]]
 ];

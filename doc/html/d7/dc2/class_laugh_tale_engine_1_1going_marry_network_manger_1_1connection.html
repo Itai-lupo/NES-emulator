@@ -95,8 +95,8 @@ $(document).ready(function(){initNavTree('d7/dc2/class_laugh_tale_engine_1_1goin
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a23394b1a5b906f5a7f040a34b9094b70"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dc2/class_laugh_tale_engine_1_1going_marry_network_manger_1_1connection.html#a23394b1a5b906f5a7f040a34b9094b70">connection</a> (const std::string &amp;ip, uint32_t port)</td></tr>
-<tr class="separator:a23394b1a5b906f5a7f040a34b9094b70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6318dcefd0c2a622eb60512e6236f4d9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dc2/class_laugh_tale_engine_1_1going_marry_network_manger_1_1connection.html#a6318dcefd0c2a622eb60512e6236f4d9">connection</a> (const std::string &amp;ip, uint32_t port, <a class="el" href="../../d2/d83/class_laugh_tale_engine_1_1going_marry_network_manger_1_1data_formatter.html">dataFormatter</a> *messageFormat, <a class="el" href="../../d3/d51/class_laugh_tale_engine_1_1going_marry_network_manger_1_1data_cryptographer.html">dataCryptographer</a> *dataEncryption)</td></tr>
+<tr class="separator:a6318dcefd0c2a622eb60512e6236f4d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3912c28e8022208941b8ad0a1c9d0f88"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dc2/class_laugh_tale_engine_1_1going_marry_network_manger_1_1connection.html#a3912c28e8022208941b8ad0a1c9d0f88">~connection</a> ()</td></tr>
 <tr class="separator:a3912c28e8022208941b8ad0a1c9d0f88"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a744ecaf9bd8e58ce7aa15479714d756b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d49/namespace_laugh_tale_engine.html#a8d5b17e5d8eb4cee0c507d14657d24a0">connectionId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dc2/class_laugh_tale_engine_1_1going_marry_network_manger_1_1connection.html#a744ecaf9bd8e58ce7aa15479714d756b">getId</a> ()</td></tr>
@@ -105,8 +105,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:afe9e9d9330a6f000add4fec7d6c45c50"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a23394b1a5b906f5a7f040a34b9094b70"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a23394b1a5b906f5a7f040a34b9094b70">&#9670;&nbsp;</a></span>connection()</h2>
+<a id="a6318dcefd0c2a622eb60512e6236f4d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6318dcefd0c2a622eb60512e6236f4d9">&#9670;&nbsp;</a></span>connection()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -121,7 +121,19 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>port</em>&#160;</td>
+          <td class="paramname"><em>port</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d2/d83/class_laugh_tale_engine_1_1going_marry_network_manger_1_1data_formatter.html">dataFormatter</a> *&#160;</td>
+          <td class="paramname"><em>messageFormat</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d3/d51/class_laugh_tale_engine_1_1going_marry_network_manger_1_1data_cryptographer.html">dataCryptographer</a> *&#160;</td>
+          <td class="paramname"><em>dataEncryption</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -130,10 +142,11 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;                                                            : ip(ip), port(port)</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    {</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        listeningThread = <span class="keyword">new</span> std::thread(&amp;connection::connectAndListen, <span class="keyword">this</span>);</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;                                                                                                                             : </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        ip(ip), port(port), messageFormat(messageFormat), dataEncryption(dataEncryption)</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    {</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        listeningThread = <span class="keyword">new</span> std::thread(&amp;connection::connectAndListen, <span class="keyword">this</span>);</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -151,11 +164,11 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    {</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        shouldListen = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        listeningThread-&gt;join();</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="keyword">delete</span> listeningThread;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        shouldListen = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="comment">// listeningThread-&gt;join();</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="comment">// delete listeningThread;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -182,14 +195,14 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;{ <span class="keywordflow">return</span> id; }</div>
+<div class="fragment"><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;{ <span class="keywordflow">return</span> id; }</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d7/dc2/class_laugh_tale_engine_1_1going_marry_network_manger_1_1connection_a744ecaf9bd8e58ce7aa15479714d756b_icgraph.png" border="0" usemap="#ad7/dc2/class_laugh_tale_engine_1_1going_marry_network_manger_1_1connection_a744ecaf9bd8e58ce7aa15479714d756b_icgraph" alt=""/></div>
 <map name="ad7/dc2/class_laugh_tale_engine_1_1going_marry_network_manger_1_1connection_a744ecaf9bd8e58ce7aa15479714d756b_icgraph" id="ad7/dc2/class_laugh_tale_engine_1_1going_marry_network_manger_1_1connection_a744ecaf9bd8e58ce7aa15479714d756b_icgraph">
 <area shape="rect" title=" " alt="" coords="400,13,623,54"/>
-<area shape="rect" href="../../d7/d1f/class_laugh_tale_engine_1_1going_marry_network_manger_1_1connections_manager.html#a2a3ed2f66991a51d615211bfb78a4b3a" title=" " alt="" coords="109,5,352,61"/>
+<area shape="rect" href="../../d7/d1f/class_laugh_tale_engine_1_1going_marry_network_manger_1_1connections_manager.html#a67e9949e26de76538e80639d6e4488e4" title=" " alt="" coords="109,5,352,61"/>
 <area shape="rect" href="../../d0/dd3/network_manger_8test_8cpp.html#a694d31198f53727b698f47d94e41db6b" title=" " alt="" coords="5,20,61,47"/>
 </map>
 </div>
@@ -211,9 +224,9 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    {</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    }</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">

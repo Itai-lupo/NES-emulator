@@ -1,5 +1,6 @@
 <map id="LaughTaleEngine::goingMarryNetworkManger::connectionsManager::sendData" name="LaughTaleEngine::goingMarryNetworkManger::connectionsManager::sendData">
-<area shape="rect" id="node1" title=" " alt="" coords="5,43,248,99"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,85,248,141"/>
 <area shape="rect" id="node2" href="$d7/d1f/class_laugh_tale_engine_1_1going_marry_network_manger_1_1connections_manager.html#ab36edda4caa80bd545b4a8042d77f27e" title=" " alt="" coords="296,5,539,61"/>
-<area shape="rect" id="node3" href="$d7/dc2/class_laugh_tale_engine_1_1going_marry_network_manger_1_1connection.html#afe9e9d9330a6f000add4fec7d6c45c50" title=" " alt="" coords="307,86,528,127"/>
+<area shape="rect" id="node3" href="$d7/d35/struct_laugh_tale_engine_1_1going_marry_network_manger_1_1packet_header.html#ae8fb27a7dc2cc4b40d41a18a778e767a" title=" " alt="" coords="316,85,519,141"/>
+<area shape="rect" id="node4" href="$d7/dc2/class_laugh_tale_engine_1_1going_marry_network_manger_1_1connection.html#afe9e9d9330a6f000add4fec7d6c45c50" title=" " alt="" coords="307,166,528,207"/>
 </map>

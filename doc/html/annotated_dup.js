@@ -16,12 +16,16 @@ var annotated_dup =
       [ "goingMarryNetworkManger", "d6/df6/namespace_laugh_tale_engine_1_1going_marry_network_manger.html", [
         [ "asioNetworkInterface", "d2/d87/class_laugh_tale_engine_1_1going_marry_network_manger_1_1asio_network_interface.html", "d2/d87/class_laugh_tale_engine_1_1going_marry_network_manger_1_1asio_network_interface" ],
         [ "connectionData", "d7/d3d/struct_laugh_tale_engine_1_1going_marry_network_manger_1_1connection_data.html", "d7/d3d/struct_laugh_tale_engine_1_1going_marry_network_manger_1_1connection_data" ],
+        [ "connectionReadData", "dd/da8/struct_laugh_tale_engine_1_1going_marry_network_manger_1_1connection_read_data.html", "dd/da8/struct_laugh_tale_engine_1_1going_marry_network_manger_1_1connection_read_data" ],
         [ "connection", "d7/dc2/class_laugh_tale_engine_1_1going_marry_network_manger_1_1connection.html", "d7/dc2/class_laugh_tale_engine_1_1going_marry_network_manger_1_1connection" ],
         [ "connectionsManager", "d7/d1f/class_laugh_tale_engine_1_1going_marry_network_manger_1_1connections_manager.html", null ],
+        [ "dataCryptographer", "d3/d51/class_laugh_tale_engine_1_1going_marry_network_manger_1_1data_cryptographer.html", "d3/d51/class_laugh_tale_engine_1_1going_marry_network_manger_1_1data_cryptographer" ],
+        [ "noEncrption", "dd/d0d/class_laugh_tale_engine_1_1going_marry_network_manger_1_1no_encrption.html", "dd/d0d/class_laugh_tale_engine_1_1going_marry_network_manger_1_1no_encrption" ],
+        [ "dataFormatter", "d2/d83/class_laugh_tale_engine_1_1going_marry_network_manger_1_1data_formatter.html", "d2/d83/class_laugh_tale_engine_1_1going_marry_network_manger_1_1data_formatter" ],
         [ "networkInterface", "de/dbb/class_laugh_tale_engine_1_1going_marry_network_manger_1_1network_interface.html", "de/dbb/class_laugh_tale_engine_1_1going_marry_network_manger_1_1network_interface" ],
-        [ "byteStream", "d0/ddf/class_laugh_tale_engine_1_1going_marry_network_manger_1_1byte_stream.html", "d0/ddf/class_laugh_tale_engine_1_1going_marry_network_manger_1_1byte_stream" ],
+        [ "byteStream", "d3/d25/struct_laugh_tale_engine_1_1going_marry_network_manger_1_1byte_stream.html", "d3/d25/struct_laugh_tale_engine_1_1going_marry_network_manger_1_1byte_stream" ],
         [ "packetHeader", "d7/d35/struct_laugh_tale_engine_1_1going_marry_network_manger_1_1packet_header.html", "d7/d35/struct_laugh_tale_engine_1_1going_marry_network_manger_1_1packet_header" ],
-        [ "packetBody", "df/de1/struct_laugh_tale_engine_1_1going_marry_network_manger_1_1packet_body.html", null ],
+        [ "packetBody", "df/de1/struct_laugh_tale_engine_1_1going_marry_network_manger_1_1packet_body.html", "df/de1/struct_laugh_tale_engine_1_1going_marry_network_manger_1_1packet_body" ],
         [ "packet", "db/ddf/struct_laugh_tale_engine_1_1going_marry_network_manger_1_1packet.html", "db/ddf/struct_laugh_tale_engine_1_1going_marry_network_manger_1_1packet" ]
       ] ],
       [ "app", "d9/d89/class_laugh_tale_engine_1_1app.html", null ],
@@ -80,6 +84,9 @@ var annotated_dup =
       [ "linuxWindow", "d3/d04/class_laugh_tale_engine_1_1linux_window.html", "d3/d04/class_laugh_tale_engine_1_1linux_window" ],
       [ "windowManger", "da/d17/class_laugh_tale_engine_1_1window_manger.html", null ]
     ] ],
+    [ "basicBody", "de/d04/structbasic_body.html", "de/d04/structbasic_body" ],
+    [ "basicDataFormat", "d4/dc8/classbasic_data_format.html", null ],
+    [ "basicHeader", "de/d39/structbasic_header.html", "de/d39/structbasic_header" ],
     [ "bird", "da/dee/classbird.html", "da/dee/classbird" ],
     [ "flappyBird", "d5/d71/classflappy_bird.html", "d5/d71/classflappy_bird" ],
     [ "ImGuiData", "dd/db8/class_im_gui_data.html", "dd/db8/class_im_gui_data" ],

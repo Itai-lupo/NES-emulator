@@ -6,7 +6,8 @@
 
 namespace LaughTaleEngine::goingMarryNetworkManger
 {
-    connection::connection(const std::string& ip, uint32_t port): ip(ip), port(port)
+    connection::connection(const std::string& ip, uint32_t port, dataFormatter *messageFormat, dataCryptographer *dataEncryption): 
+        ip(ip), port(port), messageFormat(messageFormat), dataEncryption(dataEncryption)
     {
         listeningThread = new std::thread(&connection::connectAndListen, this);
     }
@@ -14,8 +15,8 @@ namespace LaughTaleEngine::goingMarryNetworkManger
     connection::~connection()
     {
         shouldListen = false;
-        listeningThread->join();
-        delete listeningThread;
+        // listeningThread->join();
+        // delete listeningThread;
     }
 
 
@@ -34,16 +35,34 @@ namespace LaughTaleEngine::goingMarryNetworkManger
     void connection::connect()
     {
         networkConnction = new asioNetworkInterface(ip, port);
-        connectionData *serverData = new connectionData(ip, port, networkConnction);
+        id = networkConnction->getPort();
+        connectionData *serverData = new connectionData(id, ip, port, networkConnction);
         if(networkConnction->isConnected())
             eventManger::trigerEvent(events::serverConnection, serverData);
+        delete serverData;
     }
 
     void connection::listen()
     {
         while(networkConnction->isConnected())
         {
-            // LAUGHTALE_ENGINR_LOG_INFO("connected");
+            packet data;
+            byteStream buffer;
+
+            buffer.body.resize(messageFormat->getHeaderSize());
+            networkConnction->reciveData(buffer);
+            dataEncryption->decodeHeader(buffer);
+            messageFormat->formatRecivedHeader(buffer, data);
+            
+            buffer.body.resize(data.header->getContentLength());
+            networkConnction->reciveData(buffer);
+            dataEncryption->decodeBody(buffer);
+            messageFormat->formatRecivedBody(buffer, data);
+
+            LAUGHTALE_ENGINR_LOG_INFO(data);
+            connectionReadData *recivedData = new connectionReadData(data, id, ip, port, networkConnction);
+            eventManger::trigerEvent(events::messageReceived, recivedData);
+            delete recivedData;
         }
     }
 

@@ -1,7 +1,7 @@
 var hierarchy =
 [
     [ "LaughTaleEngine::app", "d9/d89/class_laugh_tale_engine_1_1app.html", null ],
-    [ "LaughTaleEngine::goingMarryNetworkManger::byteStream", "d0/ddf/class_laugh_tale_engine_1_1going_marry_network_manger_1_1byte_stream.html", null ],
+    [ "LaughTaleEngine::goingMarryNetworkManger::byteStream", "d3/d25/struct_laugh_tale_engine_1_1going_marry_network_manger_1_1byte_stream.html", null ],
     [ "LaughTaleEngine::goingMarryNetworkManger::connection", "d7/dc2/class_laugh_tale_engine_1_1going_marry_network_manger_1_1connection.html", null ],
     [ "LaughTaleEngine::goingMarryNetworkManger::connectionsManager", "d7/d1f/class_laugh_tale_engine_1_1going_marry_network_manger_1_1connections_manager.html", null ],
     [ "LaughTaleEngine::coreCamera", "d7/d93/class_laugh_tale_engine_1_1core_camera.html", [
@@ -9,6 +9,12 @@ var hierarchy =
     ] ],
     [ "LaughTaleEngine::coreWindow", "dd/d40/class_laugh_tale_engine_1_1core_window.html", [
       [ "LaughTaleEngine::linuxWindow", "d3/d04/class_laugh_tale_engine_1_1linux_window.html", null ]
+    ] ],
+    [ "LaughTaleEngine::goingMarryNetworkManger::dataCryptographer", "d3/d51/class_laugh_tale_engine_1_1going_marry_network_manger_1_1data_cryptographer.html", [
+      [ "LaughTaleEngine::goingMarryNetworkManger::noEncrption", "dd/d0d/class_laugh_tale_engine_1_1going_marry_network_manger_1_1no_encrption.html", null ]
+    ] ],
+    [ "LaughTaleEngine::goingMarryNetworkManger::dataFormatter", "d2/d83/class_laugh_tale_engine_1_1going_marry_network_manger_1_1data_formatter.html", [
+      [ "basicDataFormat", "d4/dc8/classbasic_data_format.html", null ]
     ] ],
     [ "LaughTaleEngine::entityManger", "df/dc8/class_laugh_tale_engine_1_1entity_manger.html", null ],
     [ "LaughTaleEngine::envelope", "d2/d34/class_laugh_tale_engine_1_1envelope.html", [
@@ -37,7 +43,9 @@ var hierarchy =
     [ "LaughTaleEngine::IEventData", "dd/db7/struct_laugh_tale_engine_1_1_i_event_data.html", [
       [ "LaughTaleEngine::KeyData", "dc/dd6/struct_laugh_tale_engine_1_1_key_data.html", null ],
       [ "LaughTaleEngine::WindowResizeData", "d3/da4/struct_laugh_tale_engine_1_1_window_resize_data.html", null ],
-      [ "LaughTaleEngine::goingMarryNetworkManger::connectionData", "d7/d3d/struct_laugh_tale_engine_1_1going_marry_network_manger_1_1connection_data.html", null ],
+      [ "LaughTaleEngine::goingMarryNetworkManger::connectionData", "d7/d3d/struct_laugh_tale_engine_1_1going_marry_network_manger_1_1connection_data.html", [
+        [ "LaughTaleEngine::goingMarryNetworkManger::connectionReadData", "dd/da8/struct_laugh_tale_engine_1_1going_marry_network_manger_1_1connection_read_data.html", null ]
+      ] ],
       [ "LaughTaleEngine::keyTypedData", "dc/d3f/struct_laugh_tale_engine_1_1key_typed_data.html", null ],
       [ "LaughTaleEngine::mouseClickData", "d1/d70/struct_laugh_tale_engine_1_1mouse_click_data.html", null ],
       [ "LaughTaleEngine::mouseMoveData", "d7/d88/struct_laugh_tale_engine_1_1mouse_move_data.html", null ],
@@ -59,8 +67,12 @@ var hierarchy =
     [ "LaughTaleEngine::apoSequencerAndRythemManer::note", "de/d98/struct_laugh_tale_engine_1_1apo_sequencer_and_rythem_maner_1_1note.html", null ],
     [ "LaughTaleEngine::osc", "d5/de2/class_laugh_tale_engine_1_1osc.html", null ],
     [ "LaughTaleEngine::goingMarryNetworkManger::packet", "db/ddf/struct_laugh_tale_engine_1_1going_marry_network_manger_1_1packet.html", null ],
-    [ "LaughTaleEngine::goingMarryNetworkManger::packetBody", "df/de1/struct_laugh_tale_engine_1_1going_marry_network_manger_1_1packet_body.html", null ],
-    [ "LaughTaleEngine::goingMarryNetworkManger::packetHeader", "d7/d35/struct_laugh_tale_engine_1_1going_marry_network_manger_1_1packet_header.html", null ],
+    [ "LaughTaleEngine::goingMarryNetworkManger::packetBody", "df/de1/struct_laugh_tale_engine_1_1going_marry_network_manger_1_1packet_body.html", [
+      [ "basicBody", "de/d04/structbasic_body.html", null ]
+    ] ],
+    [ "LaughTaleEngine::goingMarryNetworkManger::packetHeader", "d7/d35/struct_laugh_tale_engine_1_1going_marry_network_manger_1_1packet_header.html", [
+      [ "basicHeader", "de/d39/structbasic_header.html", null ]
+    ] ],
     [ "LaughTaleEngine::renderApi", "d0/d98/class_laugh_tale_engine_1_1render_api.html", [
       [ "LaughTaleEngine::openGLRenderApi", "d6/d46/class_laugh_tale_engine_1_1open_g_l_render_api.html", null ]
     ] ],

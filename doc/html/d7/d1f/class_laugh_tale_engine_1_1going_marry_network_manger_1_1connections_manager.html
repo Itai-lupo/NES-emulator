@@ -99,8 +99,8 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:acc2d43220d914675701920e581dd2bd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad883b87b347f60bb543c908746ce3b1d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d1f/class_laugh_tale_engine_1_1going_marry_network_manger_1_1connections_manager.html#ad883b87b347f60bb543c908746ce3b1d">close</a> ()</td></tr>
 <tr class="separator:ad883b87b347f60bb543c908746ce3b1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2a3ed2f66991a51d615211bfb78a4b3a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../db/d49/namespace_laugh_tale_engine.html#a8d5b17e5d8eb4cee0c507d14657d24a0">connectionId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d1f/class_laugh_tale_engine_1_1going_marry_network_manger_1_1connections_manager.html#a2a3ed2f66991a51d615211bfb78a4b3a">addConnection</a> (const std::string &amp;ip, uint32_t port)</td></tr>
-<tr class="separator:a2a3ed2f66991a51d615211bfb78a4b3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67e9949e26de76538e80639d6e4488e4"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../db/d49/namespace_laugh_tale_engine.html#a8d5b17e5d8eb4cee0c507d14657d24a0">connectionId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d1f/class_laugh_tale_engine_1_1going_marry_network_manger_1_1connections_manager.html#a67e9949e26de76538e80639d6e4488e4">addConnection</a> (const std::string &amp;ip, uint32_t port, <a class="el" href="../../d2/d83/class_laugh_tale_engine_1_1going_marry_network_manger_1_1data_formatter.html">dataFormatter</a> *messageFormat, <a class="el" href="../../d3/d51/class_laugh_tale_engine_1_1going_marry_network_manger_1_1data_cryptographer.html">dataCryptographer</a> *dataEncryption=new <a class="el" href="../../dd/d0d/class_laugh_tale_engine_1_1going_marry_network_manger_1_1no_encrption.html">noEncrption</a>())</td></tr>
+<tr class="separator:a67e9949e26de76538e80639d6e4488e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0782f5288a40a85b9de523c182b905a5"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d1f/class_laugh_tale_engine_1_1going_marry_network_manger_1_1connections_manager.html#a0782f5288a40a85b9de523c182b905a5">removeConnection</a> (<a class="el" href="../../db/d49/namespace_laugh_tale_engine.html#a8d5b17e5d8eb4cee0c507d14657d24a0">connectionId</a> id)</td></tr>
 <tr class="separator:a0782f5288a40a85b9de523c182b905a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab36edda4caa80bd545b4a8042d77f27e"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d7/dc2/class_laugh_tale_engine_1_1going_marry_network_manger_1_1connection.html">connection</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d1f/class_laugh_tale_engine_1_1going_marry_network_manger_1_1connections_manager.html#ab36edda4caa80bd545b4a8042d77f27e">getConnection</a> (<a class="el" href="../../db/d49/namespace_laugh_tale_engine.html#a8d5b17e5d8eb4cee0c507d14657d24a0">connectionId</a> id)</td></tr>
@@ -109,8 +109,8 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:a6b27794ac9ced9bdf68ebe3fcd4a6bb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a2a3ed2f66991a51d615211bfb78a4b3a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2a3ed2f66991a51d615211bfb78a4b3a">&#9670;&nbsp;</a></span>addConnection()</h2>
+<a id="a67e9949e26de76538e80639d6e4488e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67e9949e26de76538e80639d6e4488e4">&#9670;&nbsp;</a></span>addConnection()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -128,7 +128,19 @@ Static Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>port</em>&#160;</td>
+          <td class="paramname"><em>port</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d2/d83/class_laugh_tale_engine_1_1going_marry_network_manger_1_1data_formatter.html">dataFormatter</a> *&#160;</td>
+          <td class="paramname"><em>messageFormat</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d3/d51/class_laugh_tale_engine_1_1going_marry_network_manger_1_1data_cryptographer.html">dataCryptographer</a> *&#160;</td>
+          <td class="paramname"><em>dataEncryption</em> = <code>new&#160;<a class="el" href="../../dd/d0d/class_laugh_tale_engine_1_1going_marry_network_manger_1_1no_encrption.html">noEncrption</a>()</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -142,16 +154,16 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    {</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        connection *newCon = <span class="keyword">new</span> connection(ip, port);</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        connections-&gt;push_back(newCon);</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keywordflow">return</span> newCon-&gt;getId();</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        connection *newCon = <span class="keyword">new</span> connection(ip, port, messageFormat, dataEncryption);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        connections-&gt;push_back(newCon);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keywordflow">return</span> newCon-&gt;getId();</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    }</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../d7/d1f/class_laugh_tale_engine_1_1going_marry_network_manger_1_1connections_manager_a2a3ed2f66991a51d615211bfb78a4b3a_cgraph.png" border="0" usemap="#ad7/d1f/class_laugh_tale_engine_1_1going_marry_network_manger_1_1connections_manager_a2a3ed2f66991a51d615211bfb78a4b3a_cgraph" alt=""/></div>
-<map name="ad7/d1f/class_laugh_tale_engine_1_1going_marry_network_manger_1_1connections_manager_a2a3ed2f66991a51d615211bfb78a4b3a_cgraph" id="ad7/d1f/class_laugh_tale_engine_1_1going_marry_network_manger_1_1connections_manager_a2a3ed2f66991a51d615211bfb78a4b3a_cgraph">
+<div class="center"><img src="../../d7/d1f/class_laugh_tale_engine_1_1going_marry_network_manger_1_1connections_manager_a67e9949e26de76538e80639d6e4488e4_cgraph.png" border="0" usemap="#ad7/d1f/class_laugh_tale_engine_1_1going_marry_network_manger_1_1connections_manager_a67e9949e26de76538e80639d6e4488e4_cgraph" alt=""/></div>
+<map name="ad7/d1f/class_laugh_tale_engine_1_1going_marry_network_manger_1_1connections_manager_a67e9949e26de76538e80639d6e4488e4_cgraph" id="ad7/d1f/class_laugh_tale_engine_1_1going_marry_network_manger_1_1connections_manager_a67e9949e26de76538e80639d6e4488e4_cgraph">
 <area shape="rect" title=" " alt="" coords="5,5,248,61"/>
 <area shape="rect" href="../../d7/dc2/class_laugh_tale_engine_1_1going_marry_network_manger_1_1connection.html#a744ecaf9bd8e58ce7aa15479714d756b" title=" " alt="" coords="296,13,519,54"/>
 </map>
@@ -159,8 +171,8 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../d7/d1f/class_laugh_tale_engine_1_1going_marry_network_manger_1_1connections_manager_a2a3ed2f66991a51d615211bfb78a4b3a_icgraph.png" border="0" usemap="#ad7/d1f/class_laugh_tale_engine_1_1going_marry_network_manger_1_1connections_manager_a2a3ed2f66991a51d615211bfb78a4b3a_icgraph" alt=""/></div>
-<map name="ad7/d1f/class_laugh_tale_engine_1_1going_marry_network_manger_1_1connections_manager_a2a3ed2f66991a51d615211bfb78a4b3a_icgraph" id="ad7/d1f/class_laugh_tale_engine_1_1going_marry_network_manger_1_1connections_manager_a2a3ed2f66991a51d615211bfb78a4b3a_icgraph">
+<div class="center"><img src="../../d7/d1f/class_laugh_tale_engine_1_1going_marry_network_manger_1_1connections_manager_a67e9949e26de76538e80639d6e4488e4_icgraph.png" border="0" usemap="#ad7/d1f/class_laugh_tale_engine_1_1going_marry_network_manger_1_1connections_manager_a67e9949e26de76538e80639d6e4488e4_icgraph" alt=""/></div>
+<map name="ad7/d1f/class_laugh_tale_engine_1_1going_marry_network_manger_1_1connections_manager_a67e9949e26de76538e80639d6e4488e4_icgraph" id="ad7/d1f/class_laugh_tale_engine_1_1going_marry_network_manger_1_1connections_manager_a67e9949e26de76538e80639d6e4488e4_icgraph">
 <area shape="rect" title=" " alt="" coords="109,5,352,61"/>
 <area shape="rect" href="../../d0/dd3/network_manger_8test_8cpp.html#a694d31198f53727b698f47d94e41db6b" title=" " alt="" coords="5,20,61,47"/>
 </map>
@@ -190,16 +202,16 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    {</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        std::for_each(</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            connections-&gt;begin(),</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            connections-&gt;end(),</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            [](connection *con){ delete con; }</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        );</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        connections-&gt;clear();</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keyword">delete</span> connections;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        std::for_each(</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            connections-&gt;begin(),</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            connections-&gt;end(),</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            [](connection *con){ delete con; }</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        );</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        connections-&gt;clear();</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keyword">delete</span> connections;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    }</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -237,18 +249,18 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    {</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        std::vector&lt;connection*&gt;::iterator found = std::find_if(</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            connections-&gt;begin(),</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            connections-&gt;end(),</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            [=](connection *con) -&gt; <span class="keywordtype">bool</span> { return con-&gt;getId() == id; }</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        );</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordflow">if</span>(found != connections-&gt;end())</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            <span class="keywordflow">return</span> *found;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <a class="code" href="../../d1/d8c/logger_8h.html#ac50547ba95023ba6994629f68b4a39d4">LAUGHTALE_ENGINR_LOG_WARNING</a>(<span class="stringliteral">&quot;connection with id: &quot;</span> &lt;&lt; <span class="keywordtype">id</span> &lt;&lt; <span class="stringliteral">&quot; was&#39;nt found&quot;</span>);</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        std::vector&lt;connection*&gt;::iterator found = std::find_if(</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            connections-&gt;begin(),</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            connections-&gt;end(),</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            [=](connection *con) -&gt; <span class="keywordtype">bool</span> { return con-&gt;getId() == id; }</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        );</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keywordflow">if</span>(found != connections-&gt;end())</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            <span class="keywordflow">return</span> *found;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <a class="code" href="../../d1/d8c/logger_8h.html#ac50547ba95023ba6994629f68b4a39d4">LAUGHTALE_ENGINR_LOG_WARNING</a>(<span class="stringliteral">&quot;connection with id: &quot;</span> &lt;&lt; <span class="keywordtype">id</span> &lt;&lt; <span class="stringliteral">&quot; was&#39;nt found&quot;</span>);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    }</div>
 <div class="ttc" id="alogger_8h_html_ac50547ba95023ba6994629f68b4a39d4"><div class="ttname"><a href="../../d1/d8c/logger_8h.html#ac50547ba95023ba6994629f68b4a39d4">LAUGHTALE_ENGINR_LOG_WARNING</a></div><div class="ttdeci">#define LAUGHTALE_ENGINR_LOG_WARNING(toLog)</div><div class="ttdef"><b>Definition:</b> logger.h:7</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -285,9 +297,9 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    {</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        connections = <span class="keyword">new</span> std::vector&lt;connection *&gt;();</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        connections = <span class="keyword">new</span> std::vector&lt;connection *&gt;();</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    }</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -325,16 +337,16 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    {</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        connection *toRemove = <a class="code" href="../../d7/d1f/class_laugh_tale_engine_1_1going_marry_network_manger_1_1connections_manager.html#ab36edda4caa80bd545b4a8042d77f27e">getConnection</a>(<span class="keywordtype">id</span>);</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keyword">delete</span> toRemove;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        connections-&gt;erase(std::remove_if(</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            connections-&gt;begin(),</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            connections-&gt;end(), </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            [=] (connection *con) -&gt; <span class="keywordtype">bool</span> { return con-&gt;getId() == id; }</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        ), connections-&gt;end());</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    }</div>
-<div class="ttc" id="aclass_laugh_tale_engine_1_1going_marry_network_manger_1_1connections_manager_html_ab36edda4caa80bd545b4a8042d77f27e"><div class="ttname"><a href="../../d7/d1f/class_laugh_tale_engine_1_1going_marry_network_manger_1_1connections_manager.html#ab36edda4caa80bd545b4a8042d77f27e">LaughTaleEngine::goingMarryNetworkManger::connectionsManager::getConnection</a></div><div class="ttdeci">static connection * getConnection(connectionId id)</div><div class="ttdef"><b>Definition:</b> connectionsManager.cpp:47</div></div>
+<div class="fragment"><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        connection *toRemove = <a class="code" href="../../d7/d1f/class_laugh_tale_engine_1_1going_marry_network_manger_1_1connections_manager.html#ab36edda4caa80bd545b4a8042d77f27e">getConnection</a>(<span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keyword">delete</span> toRemove;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        connections-&gt;erase(std::remove_if(</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            connections-&gt;begin(),</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            connections-&gt;end(), </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            [=] (connection *con) -&gt; <span class="keywordtype">bool</span> { return con-&gt;getId() == id; }</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        ), connections-&gt;end());</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    }</div>
+<div class="ttc" id="aclass_laugh_tale_engine_1_1going_marry_network_manger_1_1connections_manager_html_ab36edda4caa80bd545b4a8042d77f27e"><div class="ttname"><a href="../../d7/d1f/class_laugh_tale_engine_1_1going_marry_network_manger_1_1connections_manager.html#ab36edda4caa80bd545b4a8042d77f27e">LaughTaleEngine::goingMarryNetworkManger::connectionsManager::getConnection</a></div><div class="ttdeci">static connection * getConnection(connectionId id)</div><div class="ttdef"><b>Definition:</b> connectionsManager.cpp:50</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -380,23 +392,24 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    {</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        connection* con = <a class="code" href="../../d7/d1f/class_laugh_tale_engine_1_1going_marry_network_manger_1_1connections_manager.html#ab36edda4caa80bd545b4a8042d77f27e">getConnection</a>(<span class="keywordtype">id</span>);</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keywordflow">if</span>(con == <span class="keyword">nullptr</span>){</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <a class="code" href="../../d1/d8c/logger_8h.html#aae4cf1bd083983040d4d6572a9b0d8bf">LAUGHTALE_ENGINR_LOG_ERROR</a>(<span class="stringliteral">&quot;could not send packet: &quot;</span> &lt;&lt; data-&gt;header.id &lt;&lt; <span class="stringliteral">&quot;, connection with id: &quot;</span> &lt;&lt; <span class="keywordtype">id</span> &lt;&lt;  <span class="stringliteral">&quot; was&#39;nt found&quot;</span>);</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        }</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        con-&gt;send(data);</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    {</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        connection* con = <a class="code" href="../../d7/d1f/class_laugh_tale_engine_1_1going_marry_network_manger_1_1connections_manager.html#ab36edda4caa80bd545b4a8042d77f27e">getConnection</a>(<span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keywordflow">if</span>(con == <span class="keyword">nullptr</span>){</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            <a class="code" href="../../d1/d8c/logger_8h.html#aae4cf1bd083983040d4d6572a9b0d8bf">LAUGHTALE_ENGINR_LOG_ERROR</a>(<span class="stringliteral">&quot;could not send packet: &quot;</span> &lt;&lt; data-&gt;header-&gt;getContentId() &lt;&lt; <span class="stringliteral">&quot;, connection with id: &quot;</span> &lt;&lt; <span class="keywordtype">id</span> &lt;&lt;  <span class="stringliteral">&quot; was&#39;nt found&quot;</span>);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        }</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        con-&gt;send(data);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    }</div>
 <div class="ttc" id="alogger_8h_html_aae4cf1bd083983040d4d6572a9b0d8bf"><div class="ttname"><a href="../../d1/d8c/logger_8h.html#aae4cf1bd083983040d4d6572a9b0d8bf">LAUGHTALE_ENGINR_LOG_ERROR</a></div><div class="ttdeci">#define LAUGHTALE_ENGINR_LOG_ERROR(toLog)</div><div class="ttdef"><b>Definition:</b> logger.h:8</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d7/d1f/class_laugh_tale_engine_1_1going_marry_network_manger_1_1connections_manager_a6b27794ac9ced9bdf68ebe3fcd4a6bb9_cgraph.png" border="0" usemap="#ad7/d1f/class_laugh_tale_engine_1_1going_marry_network_manger_1_1connections_manager_a6b27794ac9ced9bdf68ebe3fcd4a6bb9_cgraph" alt=""/></div>
 <map name="ad7/d1f/class_laugh_tale_engine_1_1going_marry_network_manger_1_1connections_manager_a6b27794ac9ced9bdf68ebe3fcd4a6bb9_cgraph" id="ad7/d1f/class_laugh_tale_engine_1_1going_marry_network_manger_1_1connections_manager_a6b27794ac9ced9bdf68ebe3fcd4a6bb9_cgraph">
-<area shape="rect" title=" " alt="" coords="5,43,248,99"/>
+<area shape="rect" title=" " alt="" coords="5,85,248,141"/>
 <area shape="rect" href="../../d7/d1f/class_laugh_tale_engine_1_1going_marry_network_manger_1_1connections_manager.html#ab36edda4caa80bd545b4a8042d77f27e" title=" " alt="" coords="296,5,539,61"/>
-<area shape="rect" href="../../d7/dc2/class_laugh_tale_engine_1_1going_marry_network_manger_1_1connection.html#afe9e9d9330a6f000add4fec7d6c45c50" title=" " alt="" coords="307,86,528,127"/>
+<area shape="rect" href="../../d7/d35/struct_laugh_tale_engine_1_1going_marry_network_manger_1_1packet_header.html#ae8fb27a7dc2cc4b40d41a18a778e767a" title=" " alt="" coords="316,85,519,141"/>
+<area shape="rect" href="../../d7/dc2/class_laugh_tale_engine_1_1going_marry_network_manger_1_1connection.html#afe9e9d9330a6f000add4fec7d6c45c50" title=" " alt="" coords="307,166,528,207"/>
 </map>
 </div>
 

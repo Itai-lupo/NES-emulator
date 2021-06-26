@@ -26,11 +26,10 @@ namespace LaughTaleEngine::goingMarryNetworkManger
             asioNetworkInterface(const std::string& ip, uint32_t port);
 
             virtual ~asioNetworkInterface() override;
-            virtual void reciveHeader(packetHeader *buffer) override;
-            virtual void reciveBody(packet *buffer) override;
-            virtual void sendData(packet *data) override;
+            virtual void reciveData(const byteStream& data) override;
             virtual void sendData(const byteStream& data) override;
 
             virtual bool isConnected() override { return connected; }
+            virtual uint32_t getPort() { return socketConnction->local_endpoint().port(); };
     };
 }

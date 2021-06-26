@@ -19,7 +19,7 @@ namespace LaughTaleEngine::goingMarryNetworkManger
             static void init();
             static void close();
 
-            static connectionId addConnection(const std::string& ip, uint32_t port);
+            static connectionId addConnection(const std::string& ip, uint32_t port, dataFormatter *messageFormat, dataCryptographer *dataEncryption = new noEncrption());
             static void removeConnection(connectionId id);
             static connection *getConnection(connectionId id);
             

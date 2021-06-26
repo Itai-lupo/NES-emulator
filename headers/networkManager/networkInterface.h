@@ -8,12 +8,11 @@ namespace LaughTaleEngine::goingMarryNetworkManger
     {
         public:
             virtual ~networkInterface() = default;
-
-            virtual void reciveHeader(packetHeader *buffer) = 0;
-            virtual void reciveBody(packet *buffer) = 0;
-            virtual void sendData(packet *data) = 0;
+            
+            virtual void reciveData(const byteStream& data) = 0;
             virtual void sendData(const byteStream& data) = 0;
 
             virtual bool isConnected() = 0;
+            virtual uint32_t getPort() = 0;
     };
 }

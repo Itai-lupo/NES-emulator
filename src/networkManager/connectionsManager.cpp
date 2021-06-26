@@ -4,6 +4,8 @@
 #include "logger.h"
 #include "mesh.h"
 
+
+
 namespace LaughTaleEngine::goingMarryNetworkManger
 {
 
@@ -26,9 +28,10 @@ namespace LaughTaleEngine::goingMarryNetworkManger
         delete connections;
     }
 
-    connectionId connectionsManager::addConnection(const std::string& ip, uint32_t port)
+    connectionId connectionsManager::addConnection(
+        const std::string& ip, uint32_t port, dataFormatter *messageFormat, dataCryptographer *dataEncryption)
     {
-        connection *newCon = new connection(ip, port);
+        connection *newCon = new connection(ip, port, messageFormat, dataEncryption);
         connections->push_back(newCon);
         return newCon->getId();
     }
@@ -62,7 +65,7 @@ namespace LaughTaleEngine::goingMarryNetworkManger
     {
         connection* con = getConnection(id);
         if(con == nullptr){
-            LAUGHTALE_ENGINR_LOG_ERROR("could not send packet: " << data->header.id << ", connection with id: " << id <<  " was'nt found");
+            LAUGHTALE_ENGINR_LOG_ERROR("could not send packet: " << data->header->getContentId() << ", connection with id: " << id <<  " was'nt found");
             return;
         }
         con->send(data);
