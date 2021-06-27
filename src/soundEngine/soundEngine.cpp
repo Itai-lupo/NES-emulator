@@ -34,6 +34,7 @@ namespace LaughTaleEngine
 
     void soundEngine::init()
     {
+        soundSynthesizer::init();
         microphone = new linuxSoundApi("plughw:1,0,0", 44100, 1, 64, SND_PCM_FORMAT_S16_LE, SND_PCM_STREAM_CAPTURE);
         speaker = new linuxSoundApi("default", 44100, 1, 64, SND_PCM_FORMAT_S16_LE, SND_PCM_STREAM_PLAYBACK);
         soundThread = new std::thread(threadLoop);
@@ -41,6 +42,7 @@ namespace LaughTaleEngine
 
     void soundEngine::close()
     {
+        soundSynthesizer::close();
         soundThread->join();
         delete soundThread;
         delete microphone;

@@ -28,19 +28,49 @@ namespace LaughTaleEngine::goingMarryNetworkManger
         }
     }
 
+    void asioNetworkInterface::fullClose()
+    {
+        socketConnction->close();
+  
+        if(!contextInitialized) return;
+
+        asioContext.stop();
+        if (contextThread.joinable()) contextThread.join();
+
+        contextInitialized = false;      
+    }
+
+    void asioNetworkInterface::close()
+    {
+        socketConnction->close();
+    }
+
     asioNetworkInterface::~asioNetworkInterface()
     {
-
+        free(socketConnction);
     }
 
     void asioNetworkInterface::reciveData(const byteStream& data)
     {
-        LAUGHTALE_ENGINR_LOG_INFO(asio::read(*socketConnction, asio::mutable_buffer((void *)&data.body[0], data.body.size())));
+        try
+        {
+            asio::read(*socketConnction, asio::mutable_buffer((void *)&data.body[0], data.body.size()));
+        }
+        catch(const std::exception& e)
+        {
+            std::cerr << e.what() << '\n';
+        }
     }
 
     void asioNetworkInterface::sendData(const byteStream& data)
     {
-        LAUGHTALE_ENGINR_LOG_INFO(asio::write(*socketConnction, asio::buffer(data.getData(), data.getSize())));
+        if(!isConnected())
+        {
+            LAUGHTALE_ENGINR_LOG_WARNING("failed to send data, connecteion close");
+            return;
+        }
+
+        asio::write(*socketConnction, asio::buffer(data.getData(), data.getSize()));
     }
 
     void asioNetworkInterface::initContext()
@@ -48,5 +78,4 @@ namespace LaughTaleEngine::goingMarryNetworkManger
         contextThread = std::thread([&]() { asioContext.run(); });
         contextInitialized = true;        
     }
-
 }

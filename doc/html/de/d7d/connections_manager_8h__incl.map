@@ -1,19 +1,19 @@
 <map id="headers/networkManager/connectionsManager.h" name="headers/networkManager/connectionsManager.h">
-<area shape="rect" id="node1" title=" " alt="" coords="381,5,549,47"/>
-<area shape="rect" id="node2" href="$d5/dc4/core_8h.html" title=" " alt="" coords="743,319,801,345"/>
-<area shape="rect" id="node4" href="$d1/d06/network_interface_8h.html" title=" " alt="" coords="27,169,157,196"/>
-<area shape="rect" id="node5" title=" " alt="" coords="121,319,175,345"/>
-<area shape="rect" id="node6" href="$d3/d76/packet_8h.html" title=" " alt="" coords="305,244,377,271"/>
-<area shape="rect" id="node8" title=" " alt="" coords="528,319,587,345"/>
-<area shape="rect" id="node11" title=" " alt="" coords="832,169,891,196"/>
-<area shape="rect" id="node12" href="$d4/d67/connection_8h.html" title=" " alt="" coords="417,95,513,121"/>
-<area shape="rect" id="node3" title=" " alt="" coords="741,393,803,420"/>
-<area shape="rect" id="node7" title=" " alt="" coords="211,319,283,345"/>
-<area shape="rect" id="node9" title=" " alt="" coords="307,319,376,345"/>
-<area shape="rect" id="node10" title=" " alt="" coords="400,319,461,345"/>
-<area shape="rect" id="node13" href="$db/dd2/events_8h.html" title=" " alt="" coords="685,169,757,196"/>
-<area shape="rect" id="node16" href="$d1/dc2/data_formatter_8h.html" title=" " alt="" coords="334,169,447,196"/>
-<area shape="rect" id="node17" href="$d3/d40/data_cryptographer_8h.html" title=" " alt="" coords="472,169,611,196"/>
-<area shape="rect" id="node14" title=" " alt="" coords="638,319,717,345"/>
-<area shape="rect" id="node15" href="$d8/d83/entity_8h.html" title=" " alt="" coords="621,244,683,271"/>
+<area shape="rect" id="node1" title=" " alt="" coords="177,5,345,47"/>
+<area shape="rect" id="node2" href="$d5/dc4/core_8h.html" title=" " alt="" coords="751,319,810,345"/>
+<area shape="rect" id="node4" href="$d1/d06/network_interface_8h.html" title=" " alt="" coords="26,169,157,196"/>
+<area shape="rect" id="node5" title=" " alt="" coords="201,319,256,345"/>
+<area shape="rect" id="node6" href="$d3/d76/packet_8h.html" title=" " alt="" coords="451,244,523,271"/>
+<area shape="rect" id="node8" title=" " alt="" coords="885,319,943,345"/>
+<area shape="rect" id="node11" title=" " alt="" coords="231,169,290,196"/>
+<area shape="rect" id="node12" href="$d4/d67/connection_8h.html" title=" " alt="" coords="439,95,535,121"/>
+<area shape="rect" id="node3" title=" " alt="" coords="750,393,811,420"/>
+<area shape="rect" id="node7" title=" " alt="" coords="542,319,614,345"/>
+<area shape="rect" id="node9" title=" " alt="" coords="363,319,433,345"/>
+<area shape="rect" id="node10" title=" " alt="" coords="457,319,518,345"/>
+<area shape="rect" id="node13" href="$db/dd2/events_8h.html" title=" " alt="" coords="865,169,937,196"/>
+<area shape="rect" id="node14" title=" " alt="" coords="981,319,1060,345"/>
+<area shape="rect" id="node16" href="$d1/dc2/data_formatter_8h.html" title=" " alt="" coords="579,169,692,196"/>
+<area shape="rect" id="node17" href="$d3/d40/data_cryptographer_8h.html" title=" " alt="" coords="365,169,503,196"/>
+<area shape="rect" id="node15" href="$d8/d83/entity_8h.html" title=" " alt="" coords="869,244,932,271"/>
 </map>

@@ -24,6 +24,7 @@ namespace LaughTaleEngine {
 			static bool isOpen(GLFWwindow* Window);
 			static void setVSync(bool enabled);
 			static void makeContextCurrent(GLFWwindow* Window);
+			
 			GLFWwindow* Window;
 			GraphicsContext *context;
 	};

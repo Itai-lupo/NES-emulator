@@ -106,6 +106,10 @@ Inheritance diagram for LaughTaleEngine::goingMarryNetworkManger::networkInterfa
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a99b6be26e78f3c562210dc126f9db4ee"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dbb/class_laugh_tale_engine_1_1going_marry_network_manger_1_1network_interface.html#a99b6be26e78f3c562210dc126f9db4ee">~networkInterface</a> ()=default</td></tr>
 <tr class="separator:a99b6be26e78f3c562210dc126f9db4ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3bc8044eb134addda9dff41538c4047"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dbb/class_laugh_tale_engine_1_1going_marry_network_manger_1_1network_interface.html#ab3bc8044eb134addda9dff41538c4047">close</a> ()=0</td></tr>
+<tr class="separator:ab3bc8044eb134addda9dff41538c4047"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49d6bf8f3aae484f63a9ddd1c5df18d7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dbb/class_laugh_tale_engine_1_1going_marry_network_manger_1_1network_interface.html#a49d6bf8f3aae484f63a9ddd1c5df18d7">fullClose</a> ()=0</td></tr>
+<tr class="separator:a49d6bf8f3aae484f63a9ddd1c5df18d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad700c08dc802c7bf1b9187695b0d7c86"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dbb/class_laugh_tale_engine_1_1going_marry_network_manger_1_1network_interface.html#ad700c08dc802c7bf1b9187695b0d7c86">reciveData</a> (const <a class="el" href="../../d3/d25/struct_laugh_tale_engine_1_1going_marry_network_manger_1_1byte_stream.html">byteStream</a> &amp;data)=0</td></tr>
 <tr class="separator:ad700c08dc802c7bf1b9187695b0d7c86"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a72a85033e4fa58faade0576f6745cf88"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dbb/class_laugh_tale_engine_1_1going_marry_network_manger_1_1network_interface.html#a72a85033e4fa58faade0576f6745cf88">sendData</a> (const <a class="el" href="../../d3/d25/struct_laugh_tale_engine_1_1going_marry_network_manger_1_1byte_stream.html">byteStream</a> &amp;data)=0</td></tr>
@@ -142,6 +146,79 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="ab3bc8044eb134addda9dff41538c4047"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3bc8044eb134addda9dff41538c4047">&#9670;&nbsp;</a></span>close()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void LaughTaleEngine::goingMarryNetworkManger::networkInterface::close </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="../../d2/d87/class_laugh_tale_engine_1_1going_marry_network_manger_1_1asio_network_interface.html#a1249ee513d9483f168f4bdf2403a3a58">LaughTaleEngine::goingMarryNetworkManger::asioNetworkInterface</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../de/dbb/class_laugh_tale_engine_1_1going_marry_network_manger_1_1network_interface_ab3bc8044eb134addda9dff41538c4047_icgraph.png" border="0" usemap="#ade/dbb/class_laugh_tale_engine_1_1going_marry_network_manger_1_1network_interface_ab3bc8044eb134addda9dff41538c4047_icgraph" alt=""/></div>
+<map name="ade/dbb/class_laugh_tale_engine_1_1going_marry_network_manger_1_1network_interface_ab3bc8044eb134addda9dff41538c4047_icgraph" id="ade/dbb/class_laugh_tale_engine_1_1going_marry_network_manger_1_1network_interface_ab3bc8044eb134addda9dff41538c4047_icgraph">
+<area shape="rect" title=" " alt="" coords="247,13,505,54"/>
+<area shape="rect" href="../../d7/dc2/class_laugh_tale_engine_1_1going_marry_network_manger_1_1connection.html#a3912c28e8022208941b8ad0a1c9d0f88" title=" " alt="" coords="5,5,199,61"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a49d6bf8f3aae484f63a9ddd1c5df18d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49d6bf8f3aae484f63a9ddd1c5df18d7">&#9670;&nbsp;</a></span>fullClose()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void LaughTaleEngine::goingMarryNetworkManger::networkInterface::fullClose </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="../../d2/d87/class_laugh_tale_engine_1_1going_marry_network_manger_1_1asio_network_interface.html#ac4dba3f9d0c90ef79605e994dcc857dd">LaughTaleEngine::goingMarryNetworkManger::asioNetworkInterface</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../de/dbb/class_laugh_tale_engine_1_1going_marry_network_manger_1_1network_interface_a49d6bf8f3aae484f63a9ddd1c5df18d7_icgraph.png" border="0" usemap="#ade/dbb/class_laugh_tale_engine_1_1going_marry_network_manger_1_1network_interface_a49d6bf8f3aae484f63a9ddd1c5df18d7_icgraph" alt=""/></div>
+<map name="ade/dbb/class_laugh_tale_engine_1_1going_marry_network_manger_1_1network_interface_a49d6bf8f3aae484f63a9ddd1c5df18d7_icgraph" id="ade/dbb/class_laugh_tale_engine_1_1going_marry_network_manger_1_1network_interface_a49d6bf8f3aae484f63a9ddd1c5df18d7_icgraph">
+<area shape="rect" title=" " alt="" coords="537,5,756,61"/>
+<area shape="rect" href="../../d7/dc2/class_laugh_tale_engine_1_1going_marry_network_manger_1_1connection.html#af5b5c41b9826ffd3f0a76318054d50b7" title=" " alt="" coords="296,5,489,61"/>
+<area shape="rect" href="../../d7/d1f/class_laugh_tale_engine_1_1going_marry_network_manger_1_1connections_manager.html#a0782f5288a40a85b9de523c182b905a5" title=" " alt="" coords="5,5,248,61"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="adfc184f499e995df370773cb5ad80e68"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adfc184f499e995df370773cb5ad80e68">&#9670;&nbsp;</a></span>getPort()</h2>
 
@@ -165,7 +242,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="../../d2/d87/class_laugh_tale_engine_1_1going_marry_network_manger_1_1asio_network_interface.html#a6117b9bc5f2d3576db6da643944d4b88">LaughTaleEngine::goingMarryNetworkManger::asioNetworkInterface</a>.</p>
+<p>Implemented in <a class="el" href="../../d2/d87/class_laugh_tale_engine_1_1going_marry_network_manger_1_1asio_network_interface.html#a0553ae13dca2d3681e67d4b24ae65024">LaughTaleEngine::goingMarryNetworkManger::asioNetworkInterface</a>.</p>
 
 </div>
 </div>
@@ -254,10 +331,10 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../de/dbb/class_laugh_tale_engine_1_1going_marry_network_manger_1_1network_interface_a72a85033e4fa58faade0576f6745cf88_icgraph.png" border="0" usemap="#ade/dbb/class_laugh_tale_engine_1_1going_marry_network_manger_1_1network_interface_a72a85033e4fa58faade0576f6745cf88_icgraph" alt=""/></div>
 <map name="ade/dbb/class_laugh_tale_engine_1_1going_marry_network_manger_1_1network_interface_a72a85033e4fa58faade0576f6745cf88_icgraph" id="ade/dbb/class_laugh_tale_engine_1_1going_marry_network_manger_1_1network_interface_a72a85033e4fa58faade0576f6745cf88_icgraph">
-<area shape="rect" title=" " alt="" coords="284,16,503,72"/>
-<area shape="rect" href="../../d0/dd3/network_manger_8test_8cpp.html#a64928116e367db72c2daf0246fb1ab2e" title=" " alt="" coords="111,5,234,32"/>
-<area shape="rect" href="../../d0/dd3/network_manger_8test_8cpp.html#ac925dd82f2621e1d40dbb9478f2237a5" title=" " alt="" coords="109,56,236,83"/>
-<area shape="rect" href="../../d0/dd3/network_manger_8test_8cpp.html#a694d31198f53727b698f47d94e41db6b" title=" " alt="" coords="5,31,61,57"/>
+<area shape="rect" title=" " alt="" coords="669,5,888,61"/>
+<area shape="rect" href="../../d7/dc2/class_laugh_tale_engine_1_1going_marry_network_manger_1_1connection.html#a4d2c50df0779dcd96062fc97893c9abb" title=" " alt="" coords="400,13,621,54"/>
+<area shape="rect" href="../../d7/d1f/class_laugh_tale_engine_1_1going_marry_network_manger_1_1connections_manager.html#a0a998b849149712bdc6706848c373b6a" title=" " alt="" coords="109,5,352,61"/>
+<area shape="rect" href="../../d0/dd3/network_manger_8test_8cpp.html#a694d31198f53727b698f47d94e41db6b" title=" " alt="" coords="5,20,61,47"/>
 </map>
 </div>
 

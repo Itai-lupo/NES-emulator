@@ -196,7 +196,8 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d6/d31/class_laugh_tale_engine_1_1sound_synthesizer_ad4c2986e38b867dad680c447d9794991_icgraph.png" border="0" usemap="#ad6/d31/class_laugh_tale_engine_1_1sound_synthesizer_ad4c2986e38b867dad680c447d9794991_icgraph" alt=""/></div>
 <map name="ad6/d31/class_laugh_tale_engine_1_1sound_synthesizer_ad4c2986e38b867dad680c447d9794991_icgraph" id="ad6/d31/class_laugh_tale_engine_1_1sound_synthesizer_ad4c2986e38b867dad680c447d9794991_icgraph">
-<area shape="rect" title=" " alt="" coords="399,23,632,65"/>
+<area shape="rect" title=" " alt="" coords="651,23,884,65"/>
+<area shape="rect" href="../../df/d84/class_laugh_tale_engine_1_1sound_engine.html#ad7c03b24b04737b5da1de706d1557a44" title=" " alt="" coords="399,23,603,65"/>
 <area shape="rect" href="../../d9/d89/class_laugh_tale_engine_1_1app.html#ae0600bd7d78c1276c220b3a93f5bd376" title=" " alt="" coords="200,23,351,65"/>
 <area shape="rect" href="../../d5/d71/classflappy_bird.html#a3353f8436200edb894fd5908515c8f74" title=" " alt="" coords="5,5,152,32"/>
 <area shape="rect" href="../../dc/dc2/init_event_system_8test_8cpp.html#ade06e6476a6ad085e91be7cf3f0babda" title=" " alt="" coords="51,56,107,83"/>
@@ -242,10 +243,10 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keywordtype">double</span> res = 0.0;</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keywordtype">double</span> active = 0;</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">double</span> lastActive = 0;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keywordflow">for</span> (envelope *i : *envelopes)</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keywordflow">for</span> (uint64_t i = 0; i &lt; envelopes-&gt;size(); i++)</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        {</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            <span class="keywordtype">double</span> amp = i-&gt;getSampelAmp(time, micAmp);</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            active += i-&gt;isActive(time);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            <span class="keywordtype">double</span> amp = (*envelopes)[i]-&gt;getSampelAmp(time, micAmp);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            active += (*envelopes)[i]-&gt;isActive(time);</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            res += amp;</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        }</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        </div>
@@ -288,7 +289,8 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d6/d31/class_laugh_tale_engine_1_1sound_synthesizer_a261fc80cbe9ed021d183afc45eea6cee_icgraph.png" border="0" usemap="#ad6/d31/class_laugh_tale_engine_1_1sound_synthesizer_a261fc80cbe9ed021d183afc45eea6cee_icgraph" alt=""/></div>
 <map name="ad6/d31/class_laugh_tale_engine_1_1sound_synthesizer_a261fc80cbe9ed021d183afc45eea6cee_icgraph" id="ad6/d31/class_laugh_tale_engine_1_1sound_synthesizer_a261fc80cbe9ed021d183afc45eea6cee_icgraph">
-<area shape="rect" title=" " alt="" coords="377,23,611,65"/>
+<area shape="rect" title=" " alt="" coords="629,23,863,65"/>
+<area shape="rect" href="../../df/d84/class_laugh_tale_engine_1_1sound_engine.html#a7cf83b7706ca13511a42853dd98b8362" title=" " alt="" coords="377,23,581,65"/>
 <area shape="rect" href="../../d9/d89/class_laugh_tale_engine_1_1app.html#aec4ee9f9ed7ae95fb2931270c9861f6e" title=" " alt="" coords="179,23,329,65"/>
 <area shape="rect" href="../../d5/d71/classflappy_bird.html#aefe252403b2c6969e04a034c3d037d5d" title=" " alt="" coords="5,5,131,32"/>
 <area shape="rect" href="../../dc/dc2/init_event_system_8test_8cpp.html#ade06e6476a6ad085e91be7cf3f0babda" title=" " alt="" coords="40,56,96,83"/>

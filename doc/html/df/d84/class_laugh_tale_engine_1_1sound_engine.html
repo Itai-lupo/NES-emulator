@@ -125,13 +125,24 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    {</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        soundThread-&gt;join();</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keyword">delete</span> soundThread;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keyword">delete</span> microphone;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keyword">delete</span> speaker;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <a class="code" href="../../d6/d31/class_laugh_tale_engine_1_1sound_synthesizer.html#ad4c2986e38b867dad680c447d9794991">soundSynthesizer::close</a>();</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        soundThread-&gt;join();</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keyword">delete</span> soundThread;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keyword">delete</span> microphone;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keyword">delete</span> speaker;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    }</div>
+<div class="ttc" id="aclass_laugh_tale_engine_1_1sound_synthesizer_html_ad4c2986e38b867dad680c447d9794991"><div class="ttname"><a href="../../d6/d31/class_laugh_tale_engine_1_1sound_synthesizer.html#ad4c2986e38b867dad680c447d9794991">LaughTaleEngine::soundSynthesizer::close</a></div><div class="ttdeci">static void close()</div><div class="ttdef"><b>Definition:</b> soundSynthesizer.cpp:17</div></div>
 </div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../df/d84/class_laugh_tale_engine_1_1sound_engine_ad7c03b24b04737b5da1de706d1557a44_cgraph.png" border="0" usemap="#adf/d84/class_laugh_tale_engine_1_1sound_engine_ad7c03b24b04737b5da1de706d1557a44_cgraph" alt=""/></div>
+<map name="adf/d84/class_laugh_tale_engine_1_1sound_engine_ad7c03b24b04737b5da1de706d1557a44_cgraph" id="adf/d84/class_laugh_tale_engine_1_1sound_engine_ad7c03b24b04737b5da1de706d1557a44_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,209,47"/>
+<area shape="rect" href="../../d6/d31/class_laugh_tale_engine_1_1sound_synthesizer.html#ad4c2986e38b867dad680c447d9794991" title=" " alt="" coords="257,5,491,47"/>
+</map>
+</div>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../df/d84/class_laugh_tale_engine_1_1sound_engine_ad7c03b24b04737b5da1de706d1557a44_icgraph.png" border="0" usemap="#adf/d84/class_laugh_tale_engine_1_1sound_engine_ad7c03b24b04737b5da1de706d1557a44_icgraph" alt=""/></div>
@@ -214,11 +225,22 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 <div class="fragment"><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    {</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        microphone = <span class="keyword">new</span> linuxSoundApi(<span class="stringliteral">&quot;plughw:1,0,0&quot;</span>, 44100, 1, 64, SND_PCM_FORMAT_S16_LE, SND_PCM_STREAM_CAPTURE);</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        speaker = <span class="keyword">new</span> linuxSoundApi(<span class="stringliteral">&quot;default&quot;</span>, 44100, 1, 64, SND_PCM_FORMAT_S16_LE, SND_PCM_STREAM_PLAYBACK);</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        soundThread = <span class="keyword">new</span> std::thread(threadLoop);</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    }</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <a class="code" href="../../d6/d31/class_laugh_tale_engine_1_1sound_synthesizer.html#a261fc80cbe9ed021d183afc45eea6cee">soundSynthesizer::init</a>();</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        microphone = <span class="keyword">new</span> linuxSoundApi(<span class="stringliteral">&quot;plughw:1,0,0&quot;</span>, 44100, 1, 64, SND_PCM_FORMAT_S16_LE, SND_PCM_STREAM_CAPTURE);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        speaker = <span class="keyword">new</span> linuxSoundApi(<span class="stringliteral">&quot;default&quot;</span>, 44100, 1, 64, SND_PCM_FORMAT_S16_LE, SND_PCM_STREAM_PLAYBACK);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        soundThread = <span class="keyword">new</span> std::thread(threadLoop);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    }</div>
+<div class="ttc" id="aclass_laugh_tale_engine_1_1sound_synthesizer_html_a261fc80cbe9ed021d183afc45eea6cee"><div class="ttname"><a href="../../d6/d31/class_laugh_tale_engine_1_1sound_synthesizer.html#a261fc80cbe9ed021d183afc45eea6cee">LaughTaleEngine::soundSynthesizer::init</a></div><div class="ttdeci">static void init()</div><div class="ttdef"><b>Definition:</b> soundSynthesizer.cpp:11</div></div>
 </div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../df/d84/class_laugh_tale_engine_1_1sound_engine_a7cf83b7706ca13511a42853dd98b8362_cgraph.png" border="0" usemap="#adf/d84/class_laugh_tale_engine_1_1sound_engine_a7cf83b7706ca13511a42853dd98b8362_cgraph" alt=""/></div>
+<map name="adf/d84/class_laugh_tale_engine_1_1sound_engine_a7cf83b7706ca13511a42853dd98b8362_cgraph" id="adf/d84/class_laugh_tale_engine_1_1sound_engine_a7cf83b7706ca13511a42853dd98b8362_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,209,47"/>
+<area shape="rect" href="../../d6/d31/class_laugh_tale_engine_1_1sound_synthesizer.html#a261fc80cbe9ed021d183afc45eea6cee" title=" " alt="" coords="257,5,491,47"/>
+</map>
+</div>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../df/d84/class_laugh_tale_engine_1_1sound_engine_a7cf83b7706ca13511a42853dd98b8362_icgraph.png" border="0" usemap="#adf/d84/class_laugh_tale_engine_1_1sound_engine_a7cf83b7706ca13511a42853dd98b8362_icgraph" alt=""/></div>

@@ -39,6 +39,8 @@ namespace LaughTaleEngine::goingMarryNetworkManger
     void connectionsManager::removeConnection(connectionId id)
     {
         connection *toRemove = getConnection(id);
+        if(connections->size() == 1)
+            toRemove->fullClose();
         delete toRemove;
         connections->erase(std::remove_if(
             connections->begin(),
@@ -61,15 +63,13 @@ namespace LaughTaleEngine::goingMarryNetworkManger
         return nullptr;
     }
 
-    void connectionsManager::sendData(connectionId id, packet *data)
+    void connectionsManager::sendData(connectionId id, packet& data)
     {
         connection* con = getConnection(id);
         if(con == nullptr){
-            LAUGHTALE_ENGINR_LOG_ERROR("could not send packet: " << data->header->getContentId() << ", connection with id: " << id <<  " was'nt found");
+            LAUGHTALE_ENGINR_LOG_ERROR("could not send packet: " << data << ", connection with id: " << id <<  " was'nt found");
             return;
         }
         con->send(data);
     }
-
-
 }

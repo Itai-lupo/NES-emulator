@@ -16,6 +16,7 @@ namespace LaughTaleEngine
             virtual void Clear() override;
 
             virtual void DrawIndexed(uint32_t count) override;
+            virtual void SetViewport(int x, int y, int width, int height) override;
     };    
 }
 

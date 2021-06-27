@@ -134,7 +134,8 @@ namespace LaughTaleEngine {
 		data->context->Init();
 		data->setRenderer(new renderer(rApi));
 		glfwSetWindowUserPointer(Window, data);
-
+		
+		
 		glfwSetWindowSizeCallback(Window, WindowSizeCallback);
 		glfwSetWindowCloseCallback(Window, WindowCloseCallback);
 		glfwSetKeyCallback(Window, KeyCallback);
@@ -145,6 +146,7 @@ namespace LaughTaleEngine {
 
 		if(data->useImGui)
 			initImGui(Window);
+
 
 	}
 
@@ -161,7 +163,7 @@ namespace LaughTaleEngine {
 		onUpdateData *eventData = static_cast<onUpdateData *>(sendor);
 
 		makeContextCurrent(data->Window);
-		data->winRenderer->beginScene(data->camera);
+		data->winRenderer->beginScene(data->getCamera());
 
 		eventManger::trigerEvent(events::AppRender, eventData, data->id);
 		

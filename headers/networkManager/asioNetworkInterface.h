@@ -28,8 +28,10 @@ namespace LaughTaleEngine::goingMarryNetworkManger
             virtual ~asioNetworkInterface() override;
             virtual void reciveData(const byteStream& data) override;
             virtual void sendData(const byteStream& data) override;
-
+            virtual void close() override;
+            virtual void fullClose() override;
+            
             virtual bool isConnected() override { return connected; }
-            virtual uint32_t getPort() { return socketConnction->local_endpoint().port(); };
+            virtual uint32_t getPort() override { return socketConnction->local_endpoint().port(); };
     };
 }

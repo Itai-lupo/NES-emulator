@@ -9,6 +9,9 @@ namespace LaughTaleEngine::goingMarryNetworkManger
         public:
             virtual ~networkInterface() = default;
             
+            virtual void close() = 0;
+            virtual void fullClose() = 0;
+            
             virtual void reciveData(const byteStream& data) = 0;
             virtual void sendData(const byteStream& data) = 0;
 

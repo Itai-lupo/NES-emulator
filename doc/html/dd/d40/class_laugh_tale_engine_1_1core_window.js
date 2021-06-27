@@ -1,6 +1,7 @@
 var class_laugh_tale_engine_1_1core_window =
 [
     [ "coreWindow", "dd/d40/class_laugh_tale_engine_1_1core_window.html#af8b90814e8924a57901e8c0b4203e026", null ],
+    [ "getCamera", "dd/d40/class_laugh_tale_engine_1_1core_window.html#addcdf803d882ba613441ad9965256f29", null ],
     [ "getIndexBufferManger", "dd/d40/class_laugh_tale_engine_1_1core_window.html#a31734b036e4827dbd94318c72820d2a8", null ],
     [ "getRenderApi", "dd/d40/class_laugh_tale_engine_1_1core_window.html#a133defe032e2502b7a88acfe97ad8c2c", null ],
     [ "getRenderer", "dd/d40/class_laugh_tale_engine_1_1core_window.html#a72e4bce05412b356ce4850a68ab06f0b", null ],

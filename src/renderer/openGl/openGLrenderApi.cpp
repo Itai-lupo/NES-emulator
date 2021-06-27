@@ -25,4 +25,10 @@ namespace LaughTaleEngine
         GL_CALL(glDrawElements(GL_TRIANGLES, count, GL_UNSIGNED_INT, nullptr));
     }
 
+    void openGLRenderApi::SetViewport(int x, int y, int width, int height)
+    {
+        glViewport(x, y, width, height);
+    }
+
+
 }

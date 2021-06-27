@@ -1,7 +1,4 @@
 <map id="onServerMessage" name="onServerMessage">
-<area shape="rect" id="node1" title=" " alt="" coords="5,140,132,167"/>
-<area shape="rect" id="node2" href="$d7/d35/struct_laugh_tale_engine_1_1going_marry_network_manger_1_1packet_header.html#ae8fb27a7dc2cc4b40d41a18a778e767a" title=" " alt="" coords="188,5,391,61"/>
-<area shape="rect" id="node3" href="$d7/d35/struct_laugh_tale_engine_1_1going_marry_network_manger_1_1packet_header.html#aca1ccf49f44c0a8786f5a3d1fc8acc65" title=" " alt="" coords="188,85,391,141"/>
-<area shape="rect" id="node4" href="$df/de1/struct_laugh_tale_engine_1_1going_marry_network_manger_1_1packet_body.html#a76c7e2ec794bfa68a9501d5412d4ce5c" title=" " alt="" coords="193,165,386,221"/>
-<area shape="rect" id="node5" href="$de/dbb/class_laugh_tale_engine_1_1going_marry_network_manger_1_1network_interface.html#a72a85033e4fa58faade0576f6745cf88" title=" " alt="" coords="180,245,399,301"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,20,132,47"/>
+<area shape="rect" id="node2" href="$df/de1/struct_laugh_tale_engine_1_1going_marry_network_manger_1_1packet_body.html#a76c7e2ec794bfa68a9501d5412d4ce5c" title=" " alt="" coords="180,5,373,61"/>
 </map>

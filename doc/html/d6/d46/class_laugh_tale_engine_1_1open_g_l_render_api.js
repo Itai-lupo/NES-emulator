@@ -7,5 +7,6 @@ var class_laugh_tale_engine_1_1open_g_l_render_api =
     [ "Clear", "d6/d46/class_laugh_tale_engine_1_1open_g_l_render_api.html#a1df1ce7f02c2af8194ae637e671dfec2", null ],
     [ "DrawIndexed", "d6/d46/class_laugh_tale_engine_1_1open_g_l_render_api.html#a7d2fb71a51c11ea36a7950045f88ccc8", null ],
     [ "init", "d6/d46/class_laugh_tale_engine_1_1open_g_l_render_api.html#a050e99f41db73bf77417866954f5341b", null ],
-    [ "SetClearColor", "d6/d46/class_laugh_tale_engine_1_1open_g_l_render_api.html#a94a99fb2a3605f23741220776e85ccf3", null ]
+    [ "SetClearColor", "d6/d46/class_laugh_tale_engine_1_1open_g_l_render_api.html#a94a99fb2a3605f23741220776e85ccf3", null ],
+    [ "SetViewport", "d6/d46/class_laugh_tale_engine_1_1open_g_l_render_api.html#a5a1d3312ff151eb514d7f4eb343e8801", null ]
 ];

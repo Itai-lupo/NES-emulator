@@ -42,5 +42,6 @@ namespace LaughTaleEngine {
 			void setRenderApi(renderApi *rApi){ Api = rApi; }
 			void setRenderer(renderer *r){ winRenderer = r; }
 			void setCamera(coreCamera *cam){ camera = cam; }
+			coreCamera *getCamera(){ return camera; }
 	};
 }

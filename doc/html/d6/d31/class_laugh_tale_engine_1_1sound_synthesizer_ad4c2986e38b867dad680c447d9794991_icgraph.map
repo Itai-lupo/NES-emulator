@@ -1,6 +1,7 @@
 <map id="LaughTaleEngine::soundSynthesizer::close" name="LaughTaleEngine::soundSynthesizer::close">
-<area shape="rect" id="node1" title=" " alt="" coords="399,23,632,65"/>
-<area shape="rect" id="node2" href="$d9/d89/class_laugh_tale_engine_1_1app.html#ae0600bd7d78c1276c220b3a93f5bd376" title=" " alt="" coords="200,23,351,65"/>
-<area shape="rect" id="node3" href="$d5/d71/classflappy_bird.html#a3353f8436200edb894fd5908515c8f74" title=" " alt="" coords="5,5,152,32"/>
-<area shape="rect" id="node4" href="$dc/dc2/init_event_system_8test_8cpp.html#ade06e6476a6ad085e91be7cf3f0babda" title=" " alt="" coords="51,56,107,83"/>
+<area shape="rect" id="node1" title=" " alt="" coords="651,23,884,65"/>
+<area shape="rect" id="node2" href="$df/d84/class_laugh_tale_engine_1_1sound_engine.html#ad7c03b24b04737b5da1de706d1557a44" title=" " alt="" coords="399,23,603,65"/>
+<area shape="rect" id="node3" href="$d9/d89/class_laugh_tale_engine_1_1app.html#ae0600bd7d78c1276c220b3a93f5bd376" title=" " alt="" coords="200,23,351,65"/>
+<area shape="rect" id="node4" href="$d5/d71/classflappy_bird.html#a3353f8436200edb894fd5908515c8f74" title=" " alt="" coords="5,5,152,32"/>
+<area shape="rect" id="node5" href="$dc/dc2/init_event_system_8test_8cpp.html#ade06e6476a6ad085e91be7cf3f0babda" title=" " alt="" coords="51,56,107,83"/>
 </map>

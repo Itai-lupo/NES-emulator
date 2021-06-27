@@ -129,6 +129,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a1df1ce7f02c2af8194ae637e671dfec2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7d2fb71a51c11ea36a7950045f88ccc8"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d46/class_laugh_tale_engine_1_1open_g_l_render_api.html#a7d2fb71a51c11ea36a7950045f88ccc8">DrawIndexed</a> (uint32_t count) override</td></tr>
 <tr class="separator:a7d2fb71a51c11ea36a7950045f88ccc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a1d3312ff151eb514d7f4eb343e8801"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d46/class_laugh_tale_engine_1_1open_g_l_render_api.html#a5a1d3312ff151eb514d7f4eb343e8801">SetViewport</a> (int x, int y, int width, int height) override</td></tr>
+<tr class="separator:a5a1d3312ff151eb514d7f4eb343e8801"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Enumeration Documentation</h2>
 <a id="a0bd5563f63bc28144fde32092c796a5e"></a>
@@ -284,6 +286,59 @@ Public Member Functions</h2></td></tr>
 <div class="fragment"><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    {</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <a class="code" href="../../d4/dbe/handle_open_gl_errors_8h.html#add165165c35549fda9fb0100e16e9739">GL_CALL</a>(glClearColor(color.r, color.g, color.b, color.a));</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a5a1d3312ff151eb514d7f4eb343e8801"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a1d3312ff151eb514d7f4eb343e8801">&#9670;&nbsp;</a></span>SetViewport()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LaughTaleEngine::openGLRenderApi::SetViewport </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>height</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="../../d0/d98/class_laugh_tale_engine_1_1render_api.html#a495fc3a4d7187191c7c832d407acefeb">LaughTaleEngine::renderApi</a>.</p>
+<div class="fragment"><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        glViewport(x, y, width, height);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>

@@ -32,6 +32,11 @@ struct basicHeader: public packetHeader
 
 struct basicBody: public packetBody
 {
+    basicBody(byteStream data): data(data)
+    {
+
+    }
+
     byteStream data;
     virtual void *getData() override
     {
@@ -41,7 +46,7 @@ struct basicBody: public packetBody
     virtual std::string toString() override
     {
         std::ostringstream str;
-        str << data;
+        str << data << "";
         return str.str();
     }
 
@@ -62,20 +67,19 @@ class basicDataFormat: public dataFormatter
 
     virtual void formatRecivedBody(byteStream& data, packet& formatedData) override
     {
-        basicBody *temp = new basicBody();
-        temp->data = data;
+        basicBody *temp = new basicBody(data);
         formatedData.body = temp;
     }
 
     
     virtual void formatHeaderToSend(byteStream& buffer, packet& dataToSend) override
     {
-
+        buffer << dataToSend.header->getContentLength() << dataToSend.header->getContentId();
     }
 
     virtual void formatBodyToSend(byteStream& buffer, packet& dataToSend) override
     {
-
+        buffer = *(byteStream *)dataToSend.body->getData();
     }
 
 };
@@ -83,12 +87,12 @@ class basicDataFormat: public dataFormatter
 using namespace LaughTaleEngine;
 float birdPostions[6 * 5] = 
 {
-        0.00f,     0.10f,  0.0f,   0.5f,   1.0f,
-        0.085f,    0.05f,  0.0f,   1.0f,   0.75f,
-        0.085f,   -0.05f,  0.0f,   1.0f,   0.25f,
-        0.00f,    -0.10f,  0.0f,   0.5f,   0.0f,
-        -0.085f,   -0.05f,  0.0f,   0.0f,   0.25f,
-        -0.085f,    0.05f,  0.0f,   0.0f,   0.75f
+     0.000f,    0.10f,  0.0f,   0.5f,   1.0f,
+     0.085f,    0.05f,  0.0f,   1.0f,   0.75f,
+     0.085f,   -0.05f,  0.0f,   1.0f,   0.25f,
+     0.000f,   -0.10f,  0.0f,   0.5f,   0.0f,
+    -0.085f,   -0.05f,  0.0f,   0.0f,   0.25f,
+    -0.085f,    0.05f,  0.0f,   0.0f,   0.75f
 };
 
 
@@ -107,45 +111,46 @@ void onWindowClose(__attribute__((unused)) IEntity *eventEntity, __attribute__((
 
 void onServerConnect(__attribute__((unused)) IEntity *eventEntity, IEventData *sendor)
 {
-    connectionData *eventData = 
-        dynamic_cast<connectionData *>(sendor);
+    connectionData *eventData = dynamic_cast<connectionData *>(sendor);
 
     LAUGHTALE_ENGINR_LOG_INFO("Server Connected");
 
-    byteStream headerData;
+    packet toSend;
     byteStream bodyData;
-    basicHeader head;
+    basicHeader *head = new basicHeader();
 
     bodyData << "hello world";
     bodyData.body.resize(bodyData.getSize() - 1);
 
-    head.id = 1;
-    head.contentLength = bodyData.getSize();
-    headerData << head.contentLength << head.id;
-
-    eventData->networkConnction->sendData(headerData);
-    eventData->networkConnction->sendData(bodyData);
+    head->id = 1;
+    head->contentLength = bodyData.getSize();
+    
+    toSend.header = head;
+    toSend.body = new basicBody(bodyData);
+    eventData->send(toSend);
 }
 
 void onServerMessage(__attribute__((unused)) IEntity *eventEntity, IEventData *sendor)
 {
-    connectionReadData *eventData = 
-        dynamic_cast<connectionReadData *>(sendor);
+    connectionReadData *eventData = dynamic_cast<connectionReadData *>(sendor);
 
-    LAUGHTALE_ENGINR_LOG_INFO("Server Message " << eventData->data);
-    packetHeader *head = eventData->data.header;
+    LAUGHTALE_ENGINR_LOG_INFO("Server Message: " << std::endl << eventData->data);
+    basicHeader *head = dynamic_cast<basicHeader *>(eventData->data.header);
     
-    byteStream headerData;
     byteStream bodyData = *(byteStream *)eventData->data.body->getData();
     bodyData << '!' << '!';
-    headerData << head->getContentLength() + 2 << head->getContentId();
 
-    eventData->networkConnction->sendData(headerData);
-    eventData->networkConnction->sendData(bodyData);
+    head->contentLength += 2;
+    head->id += 1;
+
+    eventData->data.header = head;
+    eventData->data.body = new basicBody(bodyData);
+    eventData->send(eventData->data);
 }
 
 TEST(networkManger, decoder)
 {
+    return; // test should only be active when you test the net manger becose it will stop all the other test and requrie a server
     app::init();
     eventManger::addEvent(events::WindowClose, onWindowClose);
     
@@ -169,10 +174,28 @@ TEST(networkManger, decoder)
     eventManger::addEvent(events::messageReceived, onServerMessage);
     
     connectionId testConId = connectionsManager::addConnection("localhost", 80, new basicDataFormat());
-    // packet *dataToSend = new packet(0, &birdMesh);
+    packet toSend;
+    byteStream bodyData;
+    basicHeader *head = new basicHeader();
 
+    bodyData << "hello server";
+    bodyData.body.resize(bodyData.getSize() - 1);
 
-    // connectionsManager::sendData(testConId, dataToSend);
+    head->id = 1;
+    head->contentLength = bodyData.getSize();
+    
+    toSend.header = head;
+    toSend.body = new basicBody(bodyData);
+    connectionsManager::sendData(testConId, toSend);
+    bodyData << " hello client";
+    head->id = 1;
+    head->contentLength = bodyData.getSize();
+    
+    toSend.header = head;
+
+    toSend.body = new basicBody(bodyData);
+    std::this_thread::sleep_for(std::chrono::seconds(1));
+    connectionsManager::sendData(testConId, toSend);
 
     app::run();
 

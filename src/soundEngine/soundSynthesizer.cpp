@@ -24,10 +24,10 @@ namespace LaughTaleEngine
         double res = 0.0;
         double active = 0;
         static double lastActive = 0;
-        for (envelope *i : *envelopes)
+        for (uint64_t i = 0; i < envelopes->size(); i++)
         {
-            double amp = i->getSampelAmp(time, micAmp);
-            active += i->isActive(time);
+            double amp = (*envelopes)[i]->getSampelAmp(time, micAmp);
+            active += (*envelopes)[i]->isActive(time);
             res += amp;
         }
         

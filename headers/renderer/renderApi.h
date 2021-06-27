@@ -13,6 +13,7 @@ namespace LaughTaleEngine
             virtual void Clear() = 0;
 
             virtual void DrawIndexed(uint32_t count) = 0;
+            virtual void SetViewport(int x, int y, int width, int height) = 0;
     };    
 }
 

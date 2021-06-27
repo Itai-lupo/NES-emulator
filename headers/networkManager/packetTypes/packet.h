@@ -75,7 +75,7 @@ namespace LaughTaleEngine::goingMarryNetworkManger
             
         friend std::ostream& operator << (std::ostream& os, const packet& msg)
         {
-            os << "Header" << msg.header->toString() << std::endl << "Body: " << msg.body->toString();
+            os << "Header: \n\t" << msg.header->toString() << std::endl << "Body: \n\t" << msg.body->toString();
             return os;
         }
     };

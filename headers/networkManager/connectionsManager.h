@@ -23,6 +23,6 @@ namespace LaughTaleEngine::goingMarryNetworkManger
             static void removeConnection(connectionId id);
             static connection *getConnection(connectionId id);
             
-            static void sendData(connectionId id, packet *data);
+            static void sendData(connectionId id, packet& data);
     };    
 }

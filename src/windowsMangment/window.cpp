@@ -41,6 +41,7 @@ namespace LaughTaleEngine
 
         entityData->win->Width = sendorData->windowWidth;
         entityData->win->Height = sendorData->windowHeight;
+        entityData->win->getRenderApi()->SetViewport(0, 0, sendorData->windowWidth, sendorData->windowHeight);
     }
 
     void onWindowClose(IEntity *eventEntity, IEventData *sendor)

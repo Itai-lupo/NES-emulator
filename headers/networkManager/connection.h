@@ -7,6 +7,7 @@
 #include "events.h"
 #include "dataFormatter.h"
 #include "dataCryptographer.h"
+#include <functional>
 
 namespace LaughTaleEngine::goingMarryNetworkManger
 {
@@ -15,31 +16,31 @@ namespace LaughTaleEngine::goingMarryNetworkManger
         connectionId conId;
         std::string ip;
         uint32_t port;
-        networkInterface *networkConnction;
+        std::function<void(packet& data)> send;
 
-       connectionData(connectionId conId, const std::string& ip, uint32_t port, networkInterface *networkConnction): 
-        conId(conId), ip(ip), port(port), networkConnction(networkConnction){}
+       connectionData(connectionId conId, const std::string& ip, uint32_t port, std::function<void(packet& data)> send): 
+        conId(conId), ip(ip), port(port), send(send){}
     };
 
     struct connectionReadData: public connectionData
     {
         packet data;
 
-       connectionReadData(packet data, connectionId conId, const std::string& ip, uint32_t port, networkInterface *networkConnction): 
-        connectionData(conId, ip, port, networkConnction), data(data){}
+       connectionReadData(packet data, connectionId conId, const std::string& ip, uint32_t port, std::function<void(packet& data)> send): 
+        connectionData(conId, ip, port, send), data(data){}
     };
     
     class connection
     {
         private:
-            connectionId id;
+            bool canSend = false;
+            connectionId id = 0;
             std::thread *listeningThread;
             networkInterface *networkConnction;
             dataFormatter *messageFormat;
             dataCryptographer *dataEncryption;
             bool shouldListen = true;
             
-            void connectAndListen();
             void connect();
             void listen();
 
@@ -51,7 +52,8 @@ namespace LaughTaleEngine::goingMarryNetworkManger
             ~connection();
 
             connectionId getId(){ return id; }
+            void fullClose(){ networkConnction->fullClose(); }
 
-            void send(packet *data);
+            void send(packet& data);
     };    
 }

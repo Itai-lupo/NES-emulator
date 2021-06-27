@@ -9,26 +9,36 @@ namespace LaughTaleEngine::goingMarryNetworkManger
     connection::connection(const std::string& ip, uint32_t port, dataFormatter *messageFormat, dataCryptographer *dataEncryption): 
         ip(ip), port(port), messageFormat(messageFormat), dataEncryption(dataEncryption)
     {
-        listeningThread = new std::thread(&connection::connectAndListen, this);
+        connect();
+        listeningThread = new std::thread(&connection::listen, this);
     }
     
     connection::~connection()
     {
         shouldListen = false;
-        // listeningThread->join();
-        // delete listeningThread;
+        networkConnction->close();
+        listeningThread->join();
+        delete networkConnction;
+        delete listeningThread;
     }
 
 
-    void connection::send(packet *data)
+    void connection::send(packet& data)
     {
+        byteStream buffer;
+        while (!canSend){}
+        
+        canSend = false;
+        messageFormat->formatHeaderToSend(buffer, data);
+        dataEncryption->encodeHeader(buffer);
 
-    }
+        networkConnction->sendData(buffer);
+        
+        messageFormat->formatBodyToSend(buffer, data);
+        dataEncryption->encodeBody(buffer);
 
-    void connection::connectAndListen()
-    {
-        connect();
-        listen();
+        networkConnction->sendData(buffer);
+        canSend = true;
 
     }
 
@@ -36,7 +46,9 @@ namespace LaughTaleEngine::goingMarryNetworkManger
     {
         networkConnction = new asioNetworkInterface(ip, port);
         id = networkConnction->getPort();
-        connectionData *serverData = new connectionData(id, ip, port, networkConnction);
+        connectionData *serverData = new connectionData(id, ip, port, [&, this](packet& data){ this->send(data); } );
+        canSend = true;
+
         if(networkConnction->isConnected())
             eventManger::trigerEvent(events::serverConnection, serverData);
         delete serverData;
@@ -44,7 +56,7 @@ namespace LaughTaleEngine::goingMarryNetworkManger
 
     void connection::listen()
     {
-        while(networkConnction->isConnected())
+        while(networkConnction->isConnected() && shouldListen)
         {
             packet data;
             byteStream buffer;
@@ -59,11 +71,11 @@ namespace LaughTaleEngine::goingMarryNetworkManger
             dataEncryption->decodeBody(buffer);
             messageFormat->formatRecivedBody(buffer, data);
 
-            LAUGHTALE_ENGINR_LOG_INFO(data);
-            connectionReadData *recivedData = new connectionReadData(data, id, ip, port, networkConnction);
+            connectionReadData *recivedData = new connectionReadData(data, id, ip, port,
+             [&, this](packet& data){ this->send(data); } 
+             );
             eventManger::trigerEvent(events::messageReceived, recivedData);
             delete recivedData;
         }
     }
-
 }

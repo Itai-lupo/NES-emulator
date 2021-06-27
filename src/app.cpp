@@ -33,7 +33,6 @@ namespace LaughTaleEngine
         entityManger::init();
         windowManger::init();
         soundEngine::init();
-        soundSynthesizer::init();
         renderLoop::init();
         materialsManger::init();
         goingMarryNetworkManger::connectionsManager::init();
@@ -43,7 +42,6 @@ namespace LaughTaleEngine
     {
         keepRunning = false;
         soundEngine::close();
-        soundSynthesizer::close();
         renderLoop::close();
         eventManger::close();
         entityManger::close();
