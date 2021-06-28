@@ -103,6 +103,8 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d9f/struct_laugh_tale_engine_1_1camera_entity.html">cameraEntity</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d89/class_laugh_tale_engine_1_1app.html">app</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dc8/class_laugh_tale_engine_1_1entity_manger.html">entityManger</a></td></tr>
@@ -131,7 +133,11 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d93/class_laugh_tale_engine_1_1core_camera.html">coreCamera</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dda/class_laugh_tale_engine_1_1core_camera_controler.html">coreCameraControler</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dc5/class_laugh_tale_engine_1_1orthographic_camera.html">orthographicCamera</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dee/class_laugh_tale_engine_1_1orthographic_camera_controler.html">orthographicCameraControler</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/da5/class_laugh_tale_engine_1_1_graphics_context.html">GraphicsContext</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -751,11 +757,11 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    {</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        mouseMoveData *eventData = <span class="keyword">new</span> mouseMoveData(xPos, yPos, (<a class="code" href="../../db/d49/namespace_laugh_tale_engine.html#a3caa0738b4b73e3f3adda6903f45d4a7">windowPieceId</a>)window);</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        eventManger::trigerEvent(<a class="code" href="../../db/d49/namespace_laugh_tale_engine.html#a0e35437d5f6988dc624d59aeff54b6bba3c31d87fbd019d57be06a02f5e7ffc8e">events::MouseMoved</a>, eventData, (<a class="code" href="../../db/d49/namespace_laugh_tale_engine.html#a3caa0738b4b73e3f3adda6903f45d4a7">windowPieceId</a>)window);</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        mouseMoveData *eventData = <span class="keyword">new</span> mouseMoveData(xPos, yPos, (<a class="code" href="../../db/d49/namespace_laugh_tale_engine.html#a3caa0738b4b73e3f3adda6903f45d4a7">windowPieceId</a>)window);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        eventManger::trigerEvent(<a class="code" href="../../db/d49/namespace_laugh_tale_engine.html#a0e35437d5f6988dc624d59aeff54b6bba3c31d87fbd019d57be06a02f5e7ffc8e">events::MouseMoved</a>, eventData, (<a class="code" href="../../db/d49/namespace_laugh_tale_engine.html#a3caa0738b4b73e3f3adda6903f45d4a7">windowPieceId</a>)window);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    }</div>
 <div class="ttc" id="anamespace_laugh_tale_engine_html_a3caa0738b4b73e3f3adda6903f45d4a7"><div class="ttname"><a href="../../db/d49/namespace_laugh_tale_engine.html#a3caa0738b4b73e3f3adda6903f45d4a7">LaughTaleEngine::windowPieceId</a></div><div class="ttdeci">uint64_t windowPieceId</div><div class="ttdef"><b>Definition:</b> core.h:12</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -1186,17 +1192,17 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    {</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        KeyData *eventData = <span class="keyword">new</span> KeyData(key, scancode, mods, (<a class="code" href="../../db/d49/namespace_laugh_tale_engine.html#a3caa0738b4b73e3f3adda6903f45d4a7">windowPieceId</a>)window);</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="comment">// that a branceles switch </span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        eventData-&gt;eventType = (<a class="code" href="../../db/d49/namespace_laugh_tale_engine.html#a0e35437d5f6988dc624d59aeff54b6bb">events</a>)(</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            (action == GLFW_PRESS) * <a class="code" href="../../db/d49/namespace_laugh_tale_engine.html#a0e35437d5f6988dc624d59aeff54b6bba537790406166fe9feeed7022d1a9241b">events::KeyPressed</a> + </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            (action == GLFW_RELEASE) * <a class="code" href="../../db/d49/namespace_laugh_tale_engine.html#a0e35437d5f6988dc624d59aeff54b6bbadc26b1e4848924ab1d20f67e701b4b2a">events::KeyReleased</a> + </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            (action == GLFW_REPEAT) * <a class="code" href="../../db/d49/namespace_laugh_tale_engine.html#a0e35437d5f6988dc624d59aeff54b6bba131ae2ae9ae8e5c72e7b0e8c40aec805">events::KeyRepeat</a>);</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        eventManger::trigerEvent(eventData-&gt;eventType, eventData, (<a class="code" href="../../db/d49/namespace_laugh_tale_engine.html#a3caa0738b4b73e3f3adda6903f45d4a7">windowPieceId</a>)window);</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        KeyData *eventData = <span class="keyword">new</span> KeyData(key, scancode, mods, (<a class="code" href="../../db/d49/namespace_laugh_tale_engine.html#a3caa0738b4b73e3f3adda6903f45d4a7">windowPieceId</a>)window);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="comment">// that a branceles switch </span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        eventData-&gt;eventType = (<a class="code" href="../../db/d49/namespace_laugh_tale_engine.html#a0e35437d5f6988dc624d59aeff54b6bb">events</a>)(</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            (action == GLFW_PRESS) * <a class="code" href="../../db/d49/namespace_laugh_tale_engine.html#a0e35437d5f6988dc624d59aeff54b6bba537790406166fe9feeed7022d1a9241b">events::KeyPressed</a> + </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            (action == GLFW_RELEASE) * <a class="code" href="../../db/d49/namespace_laugh_tale_engine.html#a0e35437d5f6988dc624d59aeff54b6bbadc26b1e4848924ab1d20f67e701b4b2a">events::KeyReleased</a> + </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            (action == GLFW_REPEAT) * <a class="code" href="../../db/d49/namespace_laugh_tale_engine.html#a0e35437d5f6988dc624d59aeff54b6bba131ae2ae9ae8e5c72e7b0e8c40aec805">events::KeyRepeat</a>);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        eventManger::trigerEvent(eventData-&gt;eventType, eventData, (<a class="code" href="../../db/d49/namespace_laugh_tale_engine.html#a3caa0738b4b73e3f3adda6903f45d4a7">windowPieceId</a>)window);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    }</div>
 <div class="ttc" id="anamespace_laugh_tale_engine_html_a0e35437d5f6988dc624d59aeff54b6bb"><div class="ttname"><a href="../../db/d49/namespace_laugh_tale_engine.html#a0e35437d5f6988dc624d59aeff54b6bb">LaughTaleEngine::events</a></div><div class="ttdeci">events</div><div class="ttdef"><b>Definition:</b> events.h:16</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -1257,17 +1263,17 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    {</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        mouseClickData *eventData = <span class="keyword">new</span> mouseClickData(button, mods, (<a class="code" href="../../db/d49/namespace_laugh_tale_engine.html#a3caa0738b4b73e3f3adda6903f45d4a7">windowPieceId</a>)window);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        eventData-&gt;eventType = (<a class="code" href="../../db/d49/namespace_laugh_tale_engine.html#a0e35437d5f6988dc624d59aeff54b6bb">events</a>)(</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            (action == GLFW_PRESS) * <a class="code" href="../../db/d49/namespace_laugh_tale_engine.html#a0e35437d5f6988dc624d59aeff54b6bba9e47c8d43ec2f2721bda5b951ad7911a">events::MouseButtonPressed</a> + </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            (action == GLFW_RELEASE) * <a class="code" href="../../db/d49/namespace_laugh_tale_engine.html#a0e35437d5f6988dc624d59aeff54b6bba1bb1fd30235f9a9943eb02a419c90650">events::MouseButtonReleased</a></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        );</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        eventManger::trigerEvent(eventData-&gt;eventType, eventData, (<a class="code" href="../../db/d49/namespace_laugh_tale_engine.html#a3caa0738b4b73e3f3adda6903f45d4a7">windowPieceId</a>)window);</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <a class="code" href="../../d1/d8c/logger_8h.html#a70645337545523faca46e49a3180d5f7">LAUGHTALE_ENGINR_LOG_INFO</a>(<span class="stringliteral">&quot;MouseButtonCallback&quot;</span>);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        mouseClickData *eventData = <span class="keyword">new</span> mouseClickData(button, mods, (<a class="code" href="../../db/d49/namespace_laugh_tale_engine.html#a3caa0738b4b73e3f3adda6903f45d4a7">windowPieceId</a>)window);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        eventData-&gt;eventType = (<a class="code" href="../../db/d49/namespace_laugh_tale_engine.html#a0e35437d5f6988dc624d59aeff54b6bb">events</a>)(</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            (action == GLFW_PRESS) * <a class="code" href="../../db/d49/namespace_laugh_tale_engine.html#a0e35437d5f6988dc624d59aeff54b6bba9e47c8d43ec2f2721bda5b951ad7911a">events::MouseButtonPressed</a> + </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            (action == GLFW_RELEASE) * <a class="code" href="../../db/d49/namespace_laugh_tale_engine.html#a0e35437d5f6988dc624d59aeff54b6bba1bb1fd30235f9a9943eb02a419c90650">events::MouseButtonReleased</a></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        );</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        eventManger::trigerEvent(eventData-&gt;eventType, eventData, (<a class="code" href="../../db/d49/namespace_laugh_tale_engine.html#a3caa0738b4b73e3f3adda6903f45d4a7">windowPieceId</a>)window);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <a class="code" href="../../d1/d8c/logger_8h.html#a70645337545523faca46e49a3180d5f7">LAUGHTALE_ENGINR_LOG_INFO</a>(<span class="stringliteral">&quot;MouseButtonCallback&quot;</span>);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    }</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1513,13 +1519,13 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    {</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        mouseScrollData *eventData = <span class="keyword">new</span> mouseScrollData(xOffset, yOffset, (<a class="code" href="../../db/d49/namespace_laugh_tale_engine.html#a3caa0738b4b73e3f3adda6903f45d4a7">windowPieceId</a>)window);</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        eventManger::trigerEvent(<a class="code" href="../../db/d49/namespace_laugh_tale_engine.html#a0e35437d5f6988dc624d59aeff54b6bba95ab8b514b94b3feef14295ff0bcdf09">events::MouseScrolled</a>, eventData, (<a class="code" href="../../db/d49/namespace_laugh_tale_engine.html#a3caa0738b4b73e3f3adda6903f45d4a7">windowPieceId</a>)window);</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <a class="code" href="../../d1/d8c/logger_8h.html#a70645337545523faca46e49a3180d5f7">LAUGHTALE_ENGINR_LOG_INFO</a>(<span class="stringliteral">&quot;ScrollCallback&quot;</span>);</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    {</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        mouseScrollData *eventData = <span class="keyword">new</span> mouseScrollData(xOffset, yOffset, (<a class="code" href="../../db/d49/namespace_laugh_tale_engine.html#a3caa0738b4b73e3f3adda6903f45d4a7">windowPieceId</a>)window);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        eventManger::trigerEvent(<a class="code" href="../../db/d49/namespace_laugh_tale_engine.html#a0e35437d5f6988dc624d59aeff54b6bba95ab8b514b94b3feef14295ff0bcdf09">events::MouseScrolled</a>, eventData, (<a class="code" href="../../db/d49/namespace_laugh_tale_engine.html#a3caa0738b4b73e3f3adda6903f45d4a7">windowPieceId</a>)window);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <a class="code" href="../../d1/d8c/logger_8h.html#a70645337545523faca46e49a3180d5f7">LAUGHTALE_ENGINR_LOG_INFO</a>(<span class="stringliteral">&quot;ScrollCallback&quot;</span>);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    }</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1567,10 +1573,10 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    {</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        keyTypedData *eventData = <span class="keyword">new</span> keyTypedData(keycode, (<a class="code" href="../../db/d49/namespace_laugh_tale_engine.html#a3caa0738b4b73e3f3adda6903f45d4a7">windowPieceId</a>)window);</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        eventManger::trigerEvent(<a class="code" href="../../db/d49/namespace_laugh_tale_engine.html#a0e35437d5f6988dc624d59aeff54b6bba570522f28d5a2023862d1a7599102647">events::KeyTyped</a>, eventData, (<a class="code" href="../../db/d49/namespace_laugh_tale_engine.html#a3caa0738b4b73e3f3adda6903f45d4a7">windowPieceId</a>)window);</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    {</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        keyTypedData *eventData = <span class="keyword">new</span> keyTypedData(keycode, (<a class="code" href="../../db/d49/namespace_laugh_tale_engine.html#a3caa0738b4b73e3f3adda6903f45d4a7">windowPieceId</a>)window);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        eventManger::trigerEvent(<a class="code" href="../../db/d49/namespace_laugh_tale_engine.html#a0e35437d5f6988dc624d59aeff54b6bba570522f28d5a2023862d1a7599102647">events::KeyTyped</a>, eventData, (<a class="code" href="../../db/d49/namespace_laugh_tale_engine.html#a3caa0738b4b73e3f3adda6903f45d4a7">windowPieceId</a>)window);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    }</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1608,13 +1614,13 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    {</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        IEventData *eventData = <span class="keyword">new</span> IEventData(<a class="code" href="../../db/d49/namespace_laugh_tale_engine.html#a0e35437d5f6988dc624d59aeff54b6bba8888b3030a5fe7cb1d4c4b0d81336eb9">events::WindowClose</a>);</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        eventManger::trigerEvent(<a class="code" href="../../db/d49/namespace_laugh_tale_engine.html#a0e35437d5f6988dc624d59aeff54b6bba8888b3030a5fe7cb1d4c4b0d81336eb9">events::WindowClose</a>, eventData, (<a class="code" href="../../db/d49/namespace_laugh_tale_engine.html#a3caa0738b4b73e3f3adda6903f45d4a7">windowPieceId</a>)window);</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <a class="code" href="../../d1/d8c/logger_8h.html#a70645337545523faca46e49a3180d5f7">LAUGHTALE_ENGINR_LOG_INFO</a>(<span class="stringliteral">&quot;WindowCloseCallback&quot;</span>);</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        IEventData *eventData = <span class="keyword">new</span> IEventData(<a class="code" href="../../db/d49/namespace_laugh_tale_engine.html#a0e35437d5f6988dc624d59aeff54b6bba8888b3030a5fe7cb1d4c4b0d81336eb9">events::WindowClose</a>);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        eventManger::trigerEvent(<a class="code" href="../../db/d49/namespace_laugh_tale_engine.html#a0e35437d5f6988dc624d59aeff54b6bba8888b3030a5fe7cb1d4c4b0d81336eb9">events::WindowClose</a>, eventData, (<a class="code" href="../../db/d49/namespace_laugh_tale_engine.html#a3caa0738b4b73e3f3adda6903f45d4a7">windowPieceId</a>)window);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <a class="code" href="../../d1/d8c/logger_8h.html#a70645337545523faca46e49a3180d5f7">LAUGHTALE_ENGINR_LOG_INFO</a>(<span class="stringliteral">&quot;WindowCloseCallback&quot;</span>);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    }</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1668,15 +1674,15 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    {</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        WindowResizeData *eventData = <span class="keyword">new</span> WindowResizeData(width, height, (<a class="code" href="../../db/d49/namespace_laugh_tale_engine.html#a3caa0738b4b73e3f3adda6903f45d4a7">windowPieceId</a>)window);</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        eventManger::trigerEvent(<a class="code" href="../../db/d49/namespace_laugh_tale_engine.html#a0e35437d5f6988dc624d59aeff54b6bbafa80c22a90d8c279cd790b8f985e9db1">events::WindowResize</a>, eventData, (<a class="code" href="../../db/d49/namespace_laugh_tale_engine.html#a3caa0738b4b73e3f3adda6903f45d4a7">windowPieceId</a>)window);</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <a class="code" href="../../d1/d8c/logger_8h.html#a70645337545523faca46e49a3180d5f7">LAUGHTALE_ENGINR_LOG_INFO</a>(</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            <span class="stringliteral">&quot;WindowSizeCallback &quot;</span> + </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            std::to_string(width) + <span class="stringliteral">&quot;, &quot;</span> + </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            std::to_string(height));</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        WindowResizeData *eventData = <span class="keyword">new</span> WindowResizeData(width, height, (<a class="code" href="../../db/d49/namespace_laugh_tale_engine.html#a3caa0738b4b73e3f3adda6903f45d4a7">windowPieceId</a>)window);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        eventManger::trigerEvent(<a class="code" href="../../db/d49/namespace_laugh_tale_engine.html#a0e35437d5f6988dc624d59aeff54b6bbafa80c22a90d8c279cd790b8f985e9db1">events::WindowResize</a>, eventData, (<a class="code" href="../../db/d49/namespace_laugh_tale_engine.html#a3caa0738b4b73e3f3adda6903f45d4a7">windowPieceId</a>)window);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <a class="code" href="../../d1/d8c/logger_8h.html#a70645337545523faca46e49a3180d5f7">LAUGHTALE_ENGINR_LOG_INFO</a>(</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            <span class="stringliteral">&quot;WindowSizeCallback &quot;</span> + </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            std::to_string(width) + <span class="stringliteral">&quot;, &quot;</span> + </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            std::to_string(height));</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    }</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">

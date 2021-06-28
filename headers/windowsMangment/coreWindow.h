@@ -10,6 +10,7 @@
 #include "renderApi.h"
 #include "renderer.h"
 #include "coreCamera.h"
+#include "coreCameraControler.h"
 
 namespace LaughTaleEngine {
 
@@ -22,7 +23,7 @@ namespace LaughTaleEngine {
 			shaderManger *sManger;
 			renderApi *Api;
 			renderer *winRenderer;
-			coreCamera *camera;
+			coreCameraControler *cameraControler;
 
 		public:
 			coreWindow(const std::string& title, unsigned int width, unsigned int height, bool useImGui, renderAPI renderAPIType);
@@ -39,9 +40,13 @@ namespace LaughTaleEngine {
 			shaderManger *getShaderManger(){ return sManger; };
 			renderApi *getRenderApi(){ return Api; };
 			renderer *getRenderer(){ return winRenderer; };
+			coreCamera *getCamera(){ return cameraControler->getCamera(); }
 			void setRenderApi(renderApi *rApi){ Api = rApi; }
 			void setRenderer(renderer *r){ winRenderer = r; }
-			void setCamera(coreCamera *cam){ camera = cam; }
-			coreCamera *getCamera(){ return camera; }
+			void setCamera(coreCameraControler *cameraControler)
+			{ 
+				delete 	this->cameraControler;
+				this->cameraControler = cameraControler; 
+			}
 	};
 }

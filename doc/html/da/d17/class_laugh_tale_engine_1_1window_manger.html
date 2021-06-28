@@ -149,8 +149,8 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:aef60d7ab21c2800574d7789dc2d64167"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abe765855fc4379ebc2dab82dc161e9ed"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d6/dea/class_laugh_tale_engine_1_1renderer.html">renderer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d17/class_laugh_tale_engine_1_1window_manger.html#abe765855fc4379ebc2dab82dc161e9ed">getRenderer</a> (<a class="el" href="../../db/d49/namespace_laugh_tale_engine.html#a3caa0738b4b73e3f3adda6903f45d4a7">windowPieceId</a> windowId)</td></tr>
 <tr class="separator:abe765855fc4379ebc2dab82dc161e9ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0533081a17a2889af0d47231d16d70d4"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d17/class_laugh_tale_engine_1_1window_manger.html#a0533081a17a2889af0d47231d16d70d4">setCamera</a> (<a class="el" href="../../db/d49/namespace_laugh_tale_engine.html#a3caa0738b4b73e3f3adda6903f45d4a7">windowPieceId</a> windowId, <a class="el" href="../../d7/d93/class_laugh_tale_engine_1_1core_camera.html">coreCamera</a> *cam)</td></tr>
-<tr class="separator:a0533081a17a2889af0d47231d16d70d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15e713545649bfcad2e0fdb7ad7dcdda"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d17/class_laugh_tale_engine_1_1window_manger.html#a15e713545649bfcad2e0fdb7ad7dcdda">setCamera</a> (<a class="el" href="../../db/d49/namespace_laugh_tale_engine.html#a3caa0738b4b73e3f3adda6903f45d4a7">windowPieceId</a> windowId, <a class="el" href="../../df/dda/class_laugh_tale_engine_1_1core_camera_controler.html">coreCameraControler</a> *cam)</td></tr>
+<tr class="separator:a15e713545649bfcad2e0fdb7ad7dcdda"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="aa87f53610abd8471ce0423ebae15f346"></a>
@@ -1459,7 +1459,7 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;{ <span class="keywordflow">return</span> VSync; };</div>
+<div class="fragment"><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;{ <span class="keywordflow">return</span> VSync; };</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1632,8 +1632,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a0533081a17a2889af0d47231d16d70d4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0533081a17a2889af0d47231d16d70d4">&#9670;&nbsp;</a></span>setCamera()</h2>
+<a id="a15e713545649bfcad2e0fdb7ad7dcdda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15e713545649bfcad2e0fdb7ad7dcdda">&#9670;&nbsp;</a></span>setCamera()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1650,7 +1650,7 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../d7/d93/class_laugh_tale_engine_1_1core_camera.html">coreCamera</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="../../df/dda/class_laugh_tale_engine_1_1core_camera_controler.html">coreCameraControler</a> *&#160;</td>
           <td class="paramname"><em>cam</em>&#160;</td>
         </tr>
         <tr>
@@ -1668,13 +1668,14 @@ Here is the caller graph for this function:</div>
 <div class="fragment"><div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;    {</div>
 <div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;        </div>
 <div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;        window *w = <a class="code" href="../../d8/d8e/window_8cpp.html#a717c50c5129d7422ac9babe657f70ec1">findWinById</a>(windowId);</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;        <span class="keywordflow">if</span>(w != <span class="keyword">nullptr</span>) w-&gt;setCamera(cam);</div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;    }</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;        <span class="keywordflow">if</span>(w == <span class="keyword">nullptr</span>) <span class="keywordflow">return</span>; </div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;        w-&gt;setCamera(cam);</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;    }</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../da/d17/class_laugh_tale_engine_1_1window_manger_a0533081a17a2889af0d47231d16d70d4_icgraph.png" border="0" usemap="#ada/d17/class_laugh_tale_engine_1_1window_manger_a0533081a17a2889af0d47231d16d70d4_icgraph" alt=""/></div>
-<map name="ada/d17/class_laugh_tale_engine_1_1window_manger_a0533081a17a2889af0d47231d16d70d4_icgraph" id="ada/d17/class_laugh_tale_engine_1_1window_manger_a0533081a17a2889af0d47231d16d70d4_icgraph">
+<div class="center"><img src="../../da/d17/class_laugh_tale_engine_1_1window_manger_a15e713545649bfcad2e0fdb7ad7dcdda_icgraph.png" border="0" usemap="#ada/d17/class_laugh_tale_engine_1_1window_manger_a15e713545649bfcad2e0fdb7ad7dcdda_icgraph" alt=""/></div>
+<map name="ada/d17/class_laugh_tale_engine_1_1window_manger_a15e713545649bfcad2e0fdb7ad7dcdda_icgraph" id="ada/d17/class_laugh_tale_engine_1_1window_manger_a15e713545649bfcad2e0fdb7ad7dcdda_icgraph">
 <area shape="rect" title=" " alt="" coords="343,49,559,90"/>
 <area shape="rect" href="../../da/d2d/classwindow_test.html#afb45f394cbc7c14f78f15d7bb720e0df" title=" " alt="" coords="109,5,295,32"/>
 <area shape="rect" href="../../da/d2d/classwindow_test.html#ab150ebf55674ef1a1bc2c2045def4ac4" title=" " alt="" coords="109,56,295,83"/>

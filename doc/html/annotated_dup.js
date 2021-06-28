@@ -28,6 +28,7 @@ var annotated_dup =
         [ "packetBody", "df/de1/struct_laugh_tale_engine_1_1going_marry_network_manger_1_1packet_body.html", "df/de1/struct_laugh_tale_engine_1_1going_marry_network_manger_1_1packet_body" ],
         [ "packet", "db/ddf/struct_laugh_tale_engine_1_1going_marry_network_manger_1_1packet.html", "db/ddf/struct_laugh_tale_engine_1_1going_marry_network_manger_1_1packet" ]
       ] ],
+      [ "cameraEntity", "df/d9f/struct_laugh_tale_engine_1_1camera_entity.html", "df/d9f/struct_laugh_tale_engine_1_1camera_entity" ],
       [ "app", "d9/d89/class_laugh_tale_engine_1_1app.html", null ],
       [ "entityManger", "df/dc8/class_laugh_tale_engine_1_1entity_manger.html", null ],
       [ "IEntity", "dd/d4a/struct_laugh_tale_engine_1_1_i_entity.html", "dd/d4a/struct_laugh_tale_engine_1_1_i_entity" ],
@@ -42,7 +43,9 @@ var annotated_dup =
       [ "event", "d6/d4a/struct_laugh_tale_engine_1_1event.html", "d6/d4a/struct_laugh_tale_engine_1_1event" ],
       [ "eventManger", "d9/dd1/class_laugh_tale_engine_1_1event_manger.html", null ],
       [ "coreCamera", "d7/d93/class_laugh_tale_engine_1_1core_camera.html", "d7/d93/class_laugh_tale_engine_1_1core_camera" ],
+      [ "coreCameraControler", "df/dda/class_laugh_tale_engine_1_1core_camera_controler.html", "df/dda/class_laugh_tale_engine_1_1core_camera_controler" ],
       [ "orthographicCamera", "dd/dc5/class_laugh_tale_engine_1_1orthographic_camera.html", "dd/dc5/class_laugh_tale_engine_1_1orthographic_camera" ],
+      [ "orthographicCameraControler", "d9/dee/class_laugh_tale_engine_1_1orthographic_camera_controler.html", "d9/dee/class_laugh_tale_engine_1_1orthographic_camera_controler" ],
       [ "GraphicsContext", "d1/da5/class_laugh_tale_engine_1_1_graphics_context.html", "d1/da5/class_laugh_tale_engine_1_1_graphics_context" ],
       [ "indexBuffer", "df/df2/class_laugh_tale_engine_1_1index_buffer.html", "df/df2/class_laugh_tale_engine_1_1index_buffer" ],
       [ "indexBufferManger", "d4/dbe/class_laugh_tale_engine_1_1index_buffer_manger.html", "d4/dbe/class_laugh_tale_engine_1_1index_buffer_manger" ],

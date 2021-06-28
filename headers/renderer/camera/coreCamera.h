@@ -7,6 +7,8 @@ namespace LaughTaleEngine
     class coreCamera
     {
         public:
+            virtual void SetProjection(float left, float right, float bottom, float top) = 0;
+
 
             virtual const glm::vec3& getPosition() = 0;
             virtual void SetPosition(const glm::vec3& position) = 0;

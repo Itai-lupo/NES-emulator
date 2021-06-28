@@ -20,7 +20,7 @@
 #include "shaderManger.h"
 #include "openGLShader.h"
 #include "shaderTypes.h"
-#include "orthographicCamera.h"
+#include "orthographicCameraControler.h"
 #include "soundEngine.h"
 #include "soundSynthesizer.h"
 #include "sequencer.h"

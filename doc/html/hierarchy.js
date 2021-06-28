@@ -7,6 +7,9 @@ var hierarchy =
     [ "LaughTaleEngine::coreCamera", "d7/d93/class_laugh_tale_engine_1_1core_camera.html", [
       [ "LaughTaleEngine::orthographicCamera", "dd/dc5/class_laugh_tale_engine_1_1orthographic_camera.html", null ]
     ] ],
+    [ "LaughTaleEngine::coreCameraControler", "df/dda/class_laugh_tale_engine_1_1core_camera_controler.html", [
+      [ "LaughTaleEngine::orthographicCameraControler", "d9/dee/class_laugh_tale_engine_1_1orthographic_camera_controler.html", null ]
+    ] ],
     [ "LaughTaleEngine::coreWindow", "dd/d40/class_laugh_tale_engine_1_1core_window.html", [
       [ "LaughTaleEngine::linuxWindow", "d3/d04/class_laugh_tale_engine_1_1linux_window.html", null ]
     ] ],
@@ -31,6 +34,7 @@ var hierarchy =
     ] ],
     [ "LaughTaleEngine::IEntity", "dd/d4a/struct_laugh_tale_engine_1_1_i_entity.html", [
       [ "ImGuiData", "dd/db8/class_im_gui_data.html", null ],
+      [ "LaughTaleEngine::cameraEntity", "df/d9f/struct_laugh_tale_engine_1_1camera_entity.html", null ],
       [ "LaughTaleEngine::mesh", "d8/da8/class_laugh_tale_engine_1_1mesh.html", null ],
       [ "bird", "da/dee/classbird.html", null ],
       [ "flappyBird", "d5/d71/classflappy_bird.html", null ],

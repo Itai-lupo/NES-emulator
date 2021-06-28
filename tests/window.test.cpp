@@ -78,10 +78,10 @@ class windowTest
             shaderManger *windowShaderManger = windowManger::getShaderManger(sendor->windowId);
             shader *s = windowShaderManger->getShader(renderEntity->sId);
             s->setUniform4f("colorOffset", mouseX, 1 - mouseY, 0.0f, 1.0f);
-            coreCamera *camera = new orthographicCamera(-1.6f, 1.6f, -0.9f, 0.9f);
-            camera->SetPosition({ -(mouseX * 3.2 - 1.6), (mouseY * 1.8 - 0.9), 1.0f});
+            orthographicCameraControler *camera = new orthographicCameraControler(1.6f/0.9f, sendor->windowId);
+            camera->getCamera()->SetPosition({ -(mouseX * 3.2 - 1.6), (mouseY * 1.8 - 0.9), 1.0f});
 
-            camera->setRotation(renderEntity->deg);
+            camera->getCamera()->setRotation(renderEntity->deg);
             windowManger::setCamera(sendor->windowId, camera);
 
             r->Submit(s, 12);
@@ -127,8 +127,8 @@ class windowTest
             
             s->setUniform4f("colorOffset", mouseX, 1 - mouseY, 0.0f, 1.0f);
             
-            coreCamera *camera = new orthographicCamera(-1.6f, 1.6f, -0.9f, 0.9f);            
-            camera->setRotation(renderEntity->deg);
+            orthographicCameraControler *camera = new orthographicCameraControler(1.6f / 0.9f, sendor->windowId);            
+            camera->getCamera()->setRotation(renderEntity->deg);
             windowManger::setCamera(sendor->windowId, camera);
 
             r->Submit(s, windowManger::getIndexBufferCount(sendor->windowId, renderEntity->ibId2), glm::translate(glm::mat4(1.0f), { (mouseX * 3.2 - 1.6), -(mouseY * 1.8 - 0.9), 1.0f}) * scale);
@@ -190,9 +190,9 @@ TEST(window, openWindowAndUseEvent)
     windowPieceId win1 =  windowManger::addWindow("win 1", true);
     windowPieceId win2 = windowManger::addWindow("win 2");
 
-    windowManger::setCamera(win1, new orthographicCamera(-1.6f, 1.6f, -0.9f, 0.9f));
+    windowManger::setCamera(win1, new orthographicCameraControler(1.6f / 0.9f, win1));
 
-    windowManger::setCamera(win2, new orthographicCamera(-1.6f, 1.6f, -0.9f, 0.9f));
+    windowManger::setCamera(win2, new orthographicCameraControler(1.6f / 0.9f, win2));
 
     renderData *win1RenderData = new renderData();
     renderData *win2RenderData = new renderData();

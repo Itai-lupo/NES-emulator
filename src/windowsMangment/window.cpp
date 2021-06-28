@@ -309,11 +309,12 @@ namespace LaughTaleEngine
         return nullptr;
     }
 
-    void windowManger::setCamera(windowPieceId windowId, coreCamera *cam)
+    void windowManger::setCamera(windowPieceId windowId, coreCameraControler *cam)
     {
         
         window *w = findWinById(windowId);
-        if(w != nullptr) w->setCamera(cam);
+        if(w == nullptr) return; 
+        w->setCamera(cam);
     }
 
 }

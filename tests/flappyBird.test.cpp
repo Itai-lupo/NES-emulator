@@ -95,9 +95,8 @@ class pilar: public LaughTaleEngine::IEntity
             
             LaughTaleEngine::entityTaleId pilarEntityId = LaughTaleEngine::entityManger::addEntity(dynamic_cast<IEntity*>(this));
             onUpdateId = LaughTaleEngine::eventManger::addEvent(LaughTaleEngine::events::AppRender, onUpdate, pilarEntityId, gameWindowId);
-            
-
         }
+        
 
         static void onUpdate(LaughTaleEngine::IEntity *eventEntity, LaughTaleEngine::IEventData *sendor)
         {
@@ -231,7 +230,7 @@ class flappyBird : public ::testing::Test, public LaughTaleEngine::IEntity
             gameWindowId =  LaughTaleEngine::windowManger::addWindow("flappyBird");
             debugInfoWindowId = LaughTaleEngine::windowManger::addWindow("debug Info Window", true, 600, 600);
 
-            LaughTaleEngine::windowManger::setCamera(gameWindowId, new LaughTaleEngine::orthographicCamera(-1.6f, 1.6f, -0.9f, 0.9f));
+            LaughTaleEngine::windowManger::setCamera(gameWindowId, new LaughTaleEngine::orthographicCameraControler(1.6f / 0.9f, gameWindowId));
             LaughTaleEngine::windowManger::bindContext(gameWindowId);
 
         }

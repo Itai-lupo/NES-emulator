@@ -15,6 +15,7 @@
 #include "indexBufferManger.h"
 #include "renderApi.h"
 #include "renderer.h"
+#include "coreCameraControler.h"
 #include "coreCamera.h"
 
 #if defined(_WIN32) || defined(_WIN64) // Windows
@@ -63,8 +64,7 @@ namespace LaughTaleEngine
             static bool isVSync(){ return VSync; };
 
             static void bindContext(windowPieceId windowId);
-
-
+            
             static vertexBufferId add(windowPieceId windowId, VertexBuffer *data);
             static indexBufferId add(windowPieceId windowId, indexBuffer *data);
             static vertexArrayId add(windowPieceId windowId, vertexArray *data);
@@ -87,7 +87,7 @@ namespace LaughTaleEngine
 
             static renderApi *getRenderApi(windowPieceId windowId);
             static renderer *getRenderer(windowPieceId windowId);
-            static void setCamera(windowPieceId windowId, coreCamera *cam);
+            static void setCamera(windowPieceId windowId, coreCameraControler *cam);
     };
 }
     

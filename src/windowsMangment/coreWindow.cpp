@@ -3,6 +3,7 @@
 #include "VertexBufferManger.h"
 #include "indexBufferManger.h"
 #include "shaderManger.h"
+#include "orthographicCameraControler.h"
 
 namespace LaughTaleEngine {
 
@@ -13,6 +14,7 @@ namespace LaughTaleEngine {
         vbManger = new VertexBufferManger();
         ibManger = new indexBufferManger();
         sManger = new shaderManger();
+        LAUGHTALE_ENGINR_LOG_INFO(id)
     }
 
 }

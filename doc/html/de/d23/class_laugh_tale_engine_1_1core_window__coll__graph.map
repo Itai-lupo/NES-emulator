@@ -1,10 +1,10 @@
 <map id="LaughTaleEngine::coreWindow" name="LaughTaleEngine::coreWindow">
-<area shape="rect" id="node1" title=" " alt="" coords="341,173,543,200"/>
+<area shape="rect" id="node1" title=" " alt="" coords="365,181,567,208"/>
 <area shape="rect" id="node2" href="$db/de7/class_laugh_tale_engine_1_1shader_manger.html" title=" " alt="" coords="5,5,216,32"/>
 <area shape="rect" id="node3" href="$dd/ddf/class_laugh_tale_engine_1_1_vertex_buffer_manger.html" title=" " alt="" coords="9,57,212,98"/>
-<area shape="rect" id="node4" href="$d7/d93/class_laugh_tale_engine_1_1core_camera.html" title=" " alt="" coords="11,123,211,149"/>
-<area shape="rect" id="node5" href="$d0/d98/class_laugh_tale_engine_1_1render_api.html" title=" " alt="" coords="19,173,203,200"/>
-<area shape="rect" id="node6" href="$d0/df2/class_laugh_tale_engine_1_1vertex_array_manger.html" title=" " alt="" coords="13,225,209,266"/>
-<area shape="rect" id="node7" href="$d4/dbe/class_laugh_tale_engine_1_1index_buffer_manger.html" title=" " alt="" coords="13,290,208,331"/>
-<area shape="rect" id="node8" href="$d6/dea/class_laugh_tale_engine_1_1renderer.html" title=" " alt="" coords="23,356,199,383"/>
+<area shape="rect" id="node4" href="$d0/d98/class_laugh_tale_engine_1_1render_api.html" title=" " alt="" coords="19,123,203,149"/>
+<area shape="rect" id="node5" href="$df/dda/class_laugh_tale_engine_1_1core_camera_controler.html" title=" " alt="" coords="11,174,211,215"/>
+<area shape="rect" id="node6" href="$d0/df2/class_laugh_tale_engine_1_1vertex_array_manger.html" title=" " alt="" coords="13,239,209,281"/>
+<area shape="rect" id="node7" href="$d4/dbe/class_laugh_tale_engine_1_1index_buffer_manger.html" title=" " alt="" coords="13,305,208,346"/>
+<area shape="rect" id="node8" href="$d6/dea/class_laugh_tale_engine_1_1renderer.html" title=" " alt="" coords="23,371,199,397"/>
 </map>

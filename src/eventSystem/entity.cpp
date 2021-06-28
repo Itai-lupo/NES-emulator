@@ -52,6 +52,7 @@ namespace LaughTaleEngine
                 entityManger::entitys.erase(entityManger::entitys.begin() + i);
             }
         }
+        
     }
 
 }

@@ -19,6 +19,8 @@ namespace LaughTaleEngine
 
         public:
             orthographicCamera(float left, float right, float bottom, float top);
+            
+            virtual void SetProjection(float left, float right, float bottom, float top) override;
 
             virtual const glm::vec3& getPosition()  override { return position; }
             virtual void SetPosition(const glm::vec3& position)  override;

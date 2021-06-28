@@ -5,7 +5,6 @@
 using namespace LaughTaleEngine;
 using namespace goingMarryNetworkManger;
 
-
 struct basicHeader: public packetHeader
 {
     uint32_t contentLength;
@@ -155,7 +154,7 @@ TEST(networkManger, decoder)
     eventManger::addEvent(events::WindowClose, onWindowClose);
     
     windowPieceId gameWindowId =  windowManger::addWindow("flappyBird");
-    windowManger::setCamera(gameWindowId, new orthographicCamera(-1.6f, 1.6f, -0.9f, 0.9f));
+    windowManger::setCamera(gameWindowId, new orthographicCameraControler(1.6f / 0.9f, gameWindowId));
     windowManger::bindContext(gameWindowId);
 
     mesh birdMesh(gameWindowId);

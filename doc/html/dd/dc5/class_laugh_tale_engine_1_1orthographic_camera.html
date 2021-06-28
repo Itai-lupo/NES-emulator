@@ -115,6 +115,8 @@ Collaboration diagram for LaughTaleEngine::orthographicCamera:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:abc875911ff75c243213294244bfde38a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dc5/class_laugh_tale_engine_1_1orthographic_camera.html#abc875911ff75c243213294244bfde38a">orthographicCamera</a> (float left, float right, float bottom, float top)</td></tr>
 <tr class="separator:abc875911ff75c243213294244bfde38a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6538cb1be17c23d34e47b1e4a60293df"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dc5/class_laugh_tale_engine_1_1orthographic_camera.html#a6538cb1be17c23d34e47b1e4a60293df">SetProjection</a> (float left, float right, float bottom, float top) override</td></tr>
+<tr class="separator:a6538cb1be17c23d34e47b1e4a60293df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad0d2db0e77e006e0940d29209eeea8b2"><td class="memItemLeft" align="right" valign="top">virtual const glm::vec3 &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dc5/class_laugh_tale_engine_1_1orthographic_camera.html#ad0d2db0e77e006e0940d29209eeea8b2">getPosition</a> () override</td></tr>
 <tr class="separator:ad0d2db0e77e006e0940d29209eeea8b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2de68d27644a6c70d83bb29912161d70"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dc5/class_laugh_tale_engine_1_1orthographic_camera.html#a2de68d27644a6c70d83bb29912161d70">SetPosition</a> (const glm::vec3 &amp;position) override</td></tr>
@@ -200,7 +202,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="../../d7/d93/class_laugh_tale_engine_1_1core_camera.html#a9d541bfb0e637cfabdc9271b676502d2">LaughTaleEngine::coreCamera</a>.</p>
-<div class="fragment"><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;{ <span class="keywordflow">return</span> position; }</div>
+<div class="fragment"><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{ <span class="keywordflow">return</span> position; }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -228,7 +230,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="../../d7/d93/class_laugh_tale_engine_1_1core_camera.html#ac8cbdd781d10870c67c76ae94e42c1d8">LaughTaleEngine::coreCamera</a>.</p>
-<div class="fragment"><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;{ <span class="keywordflow">return</span> projectionMatrix; }</div>
+<div class="fragment"><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{ <span class="keywordflow">return</span> projectionMatrix; }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -256,7 +258,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="../../d7/d93/class_laugh_tale_engine_1_1core_camera.html#a63fca4d58b34c82cdbc648a92127bbe1">LaughTaleEngine::coreCamera</a>.</p>
-<div class="fragment"><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{ <span class="keywordflow">return</span> rotation; }</div>
+<div class="fragment"><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{ <span class="keywordflow">return</span> rotation; }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -284,7 +286,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="../../d7/d93/class_laugh_tale_engine_1_1core_camera.html#a6a7b80da20d1d5b84062575fce78e0ec">LaughTaleEngine::coreCamera</a>.</p>
-<div class="fragment"><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;{ <span class="keywordflow">return</span> viewMatrix; }</div>
+<div class="fragment"><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;{ <span class="keywordflow">return</span> viewMatrix; }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -312,7 +314,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="../../d7/d93/class_laugh_tale_engine_1_1core_camera.html#ac547c86c5fabf2173fb7634069f0d801">LaughTaleEngine::coreCamera</a>.</p>
-<div class="fragment"><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{ <span class="keywordflow">return</span> viewProjectionMatrix; }</div>
+<div class="fragment"><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;{ <span class="keywordflow">return</span> viewProjectionMatrix; }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -341,10 +343,64 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="../../d7/d93/class_laugh_tale_engine_1_1core_camera.html#a30a007d91e6fa52e05fa67aca4740dce">LaughTaleEngine::coreCamera</a>.</p>
-<div class="fragment"><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    {</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        this-&gt;position = position; </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        recalculateViewMatrix(); </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        this-&gt;position = position; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        recalculateViewMatrix(); </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a6538cb1be17c23d34e47b1e4a60293df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6538cb1be17c23d34e47b1e4a60293df">&#9670;&nbsp;</a></span>SetProjection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LaughTaleEngine::orthographicCamera::SetProjection </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>left</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>right</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>bottom</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>top</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="../../d7/d93/class_laugh_tale_engine_1_1core_camera.html#a337a1e3ccf6aae366623c2930244f5e5">LaughTaleEngine::coreCamera</a>.</p>
+<div class="fragment"><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        projectionMatrix = glm::ortho(left, right, bottom, top, -1.0f, 1.0f);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        viewProjectionMatrix = projectionMatrix * viewMatrix;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -373,10 +429,10 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="../../d7/d93/class_laugh_tale_engine_1_1core_camera.html#af6afee28c8fd04a3d44bbafeaff5e0bd">LaughTaleEngine::coreCamera</a>.</p>
-<div class="fragment"><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    { </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        this-&gt;rotation = rotation; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        recalculateViewMatrix(); </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    { </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        this-&gt;rotation = rotation; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        recalculateViewMatrix(); </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>

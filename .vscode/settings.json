@@ -96,7 +96,8 @@
         "semaphore": "cpp",
         "any": "cpp",
         "*.ipp": "cpp",
-        "coroutine": "cpp"
+        "coroutine": "cpp",
+        "corecameracontroler.h": "c"
     },
     "files.exclude": {
         "build/": true,

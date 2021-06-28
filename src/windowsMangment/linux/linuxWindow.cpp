@@ -8,6 +8,7 @@
 #include "openGLContext.h"
 #include "openGLrenderApi.h"
 #include "renderer.h"
+#include "orthographicCameraControler.h"
 #include <string>
 
 namespace LaughTaleEngine {
@@ -147,6 +148,7 @@ namespace LaughTaleEngine {
 		if(data->useImGui)
 			initImGui(Window);
 
+        data->cameraControler = new orthographicCameraControler((float)data->Width/(float)data->Height, data->id);
 
 	}
 
