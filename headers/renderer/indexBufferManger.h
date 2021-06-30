@@ -2,7 +2,7 @@
 #include <vector>
 #include "core.h"
 
-namespace LaughTaleEngine
+namespace LTE
 {
     class indexBuffer
     {

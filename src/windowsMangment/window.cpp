@@ -12,14 +12,14 @@
             [=](window *win)-> bool { return win->id == windowId; }     \
         ))
 
-class windowEntity: public LaughTaleEngine::IEntity
+class windowEntity: public LTE::IEntity
 {
     public:
         windowEntity(window *win): win(win) {}
         window *win;
 };
 
-namespace LaughTaleEngine
+namespace LTE
 {
     bool windowManger::VSync = false;
     static std::vector<window*> windows = std::vector<window*>();
@@ -27,14 +27,18 @@ namespace LaughTaleEngine
     void windowManger::setVSync(bool enabled){ window::setVSync(enabled); VSync = enabled; }
 
     void windowManger::init(){
-        eventManger::addEvent(events::AppUpdate, onUpdate, -1);
+        event *onAppUpdateEvent = event::eventBuilder::startBuilding()->
+                            setEventType(events::AppUpdate)->
+                            setEventCallback(onUpdate)->build();
+           
+        eventManger::addEvent(onAppUpdateEvent);
 
         setVSync(true);
     }
     
     void windowManger::close(){}    
 
-    void onWindowResize(IEntity *eventEntity, IEventData *sendor)
+    void onWindowResize(IEntity *eventEntity, coreEventData *sendor)
     {
         WindowResizeData* sendorData = dynamic_cast<WindowResizeData*>(sendor);
         windowEntity* entityData = static_cast<windowEntity*>(eventEntity);
@@ -44,7 +48,7 @@ namespace LaughTaleEngine
         entityData->win->getRenderApi()->SetViewport(0, 0, sendorData->windowWidth, sendorData->windowHeight);
     }
 
-    void onWindowClose(IEntity *eventEntity, IEventData *sendor)
+    void onWindowClose(IEntity *eventEntity, coreEventData *sendor)
     {
         findWinById(sendor->windowId)->Shutdown(windowManger::getWindow(sendor->windowId));
 
@@ -63,13 +67,24 @@ namespace LaughTaleEngine
 
         windowEntity *windowEntityData = new windowEntity(newWin);
         entityTaleId windowEntityId = entityManger::addEntity(dynamic_cast<windowEntity*>(windowEntityData));
-        eventManger::addEvent(events::WindowResize, onWindowResize, windowEntityId, newWin->id);
-        eventManger::addEvent(events::WindowClose, onWindowClose, -1, newWin->id);
+
+        event *onWindowResizeEvent = event::eventBuilder::startBuilding()->
+                            setEventType(events::WindowResize)->
+                            setEventCallback(onWindowResize)->setEntityID(windowEntityId)->setWindowId(newWin->id)->build();
+           
+
+        event *onWindowCloseEvent = event::eventBuilder::startBuilding()->
+                            setEventType(events::WindowClose)->
+                            setEventCallback(onWindowClose)->setWindowId(newWin->id)->build();
+           
+
+        eventManger::addEvent(onWindowResizeEvent);
+        eventManger::addEvent(onWindowCloseEvent);
         
         return newWin->id;
     }
 
-    void windowManger::onUpdate(__attribute__((unused)) IEntity *eventEntity, IEventData *sendor)
+    void windowManger::onUpdate(__attribute__((unused)) IEntity *eventEntity, coreEventData *sendor)
     {
         for(window *win: windows)
         {

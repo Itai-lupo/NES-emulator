@@ -1,7 +1,7 @@
 #pragma once
 #include "indexBufferManger.h"
 
-namespace LaughTaleEngine
+namespace LTE
 {
     class openGLIndexBuffer : public indexBuffer
     {

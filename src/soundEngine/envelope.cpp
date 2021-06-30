@@ -4,7 +4,7 @@
 #include <glm/gtc/constants.hpp>
 #include <algorithm>
 
-namespace LaughTaleEngine
+namespace LTE
 {
     double osc::w(int freq)
     {

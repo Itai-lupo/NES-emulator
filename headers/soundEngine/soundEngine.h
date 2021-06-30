@@ -3,7 +3,7 @@
 #include "core.h"
 #include "envelope.h"
 
-namespace LaughTaleEngine
+namespace LTE
 {
     class soundEngine
     {

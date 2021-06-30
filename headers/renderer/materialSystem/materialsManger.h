@@ -3,7 +3,7 @@
 #include "shader.h"
 #include <vector>
 
-namespace LaughTaleEngine
+namespace LTE
 {
     class material;
     class materialsManger

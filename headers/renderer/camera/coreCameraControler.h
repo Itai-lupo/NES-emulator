@@ -1,6 +1,6 @@
 #pragma once
 #include "coreCamera.h"
-namespace LaughTaleEngine
+namespace LTE
 {
     class coreCameraControler
     {

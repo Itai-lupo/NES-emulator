@@ -12,7 +12,7 @@
 #include "coreCamera.h"
 #include "coreCameraControler.h"
 
-namespace LaughTaleEngine {
+namespace LTE {
 
 	class coreWindow
 	{

@@ -4,7 +4,7 @@
 #include "vertexArray.h"
 #include <vector>
 
-namespace LaughTaleEngine
+namespace LTE
 {
     class vertexArrayManger
     {

@@ -1,0 +1,11 @@
+<map id="LTE::envelope::getId" name="LTE::envelope::getId">
+<area shape="rect" id="node1" title=" " alt="" coords="515,210,657,237"/>
+<area shape="rect" id="node2" href="$d2/dff/class_l_t_e_1_1sound_synthesizer.html#a04255924d76b7babffe16e7b749830f6" title=" " alt="" coords="284,104,443,145"/>
+<area shape="rect" id="node7" href="$d8/d36/class_l_t_e_1_1apo_sequencer_and_rythem_maner_1_1bell_ring.html#ac47c226a6ba5fe3a45d7801488fa9cfb" title="PlayBeat &#45; called every beat or bpm time a minut noteOn/Off the instraments here." alt="" coords="260,169,467,211"/>
+<area shape="rect" id="node8" href="$d2/d24/class_l_t_e_1_1apo_sequencer_and_rythem_maner_1_1drum.html#a24197c5b3831d3597be3e8f5cafabe82" title="PlayBeat &#45; called every beat or bpm time a minut noteOn/Off the instraments here." alt="" coords="260,235,467,276"/>
+<area shape="rect" id="node9" href="$d5/d40/class_l_t_e_1_1apo_sequencer_and_rythem_maner_1_1sound_files_player.html#a57f1f3c790b7dedb4c26896d077366ab" title=" " alt="" coords="260,301,467,357"/>
+<area shape="rect" id="node3" href="$d8/d36/class_l_t_e_1_1apo_sequencer_and_rythem_maner_1_1bell_ring.html#a35cc71e33eeebe976876673f30a2ca10" title=" " alt="" coords="5,5,212,47"/>
+<area shape="rect" id="node4" href="$d2/d24/class_l_t_e_1_1apo_sequencer_and_rythem_maner_1_1drum.html#acbd1fe75394c50c316a792fa097e2cae" title=" " alt="" coords="5,71,212,112"/>
+<area shape="rect" id="node5" href="$d3/d3f/class_l_t_e_1_1apo_sequencer_and_rythem_maner_1_1guitar.html#a128d5a426bf6f55d6516c0bb1d2d2ef3" title=" " alt="" coords="5,136,212,177"/>
+<area shape="rect" id="node6" href="$d5/d40/class_l_t_e_1_1apo_sequencer_and_rythem_maner_1_1sound_files_player.html#a3d8f65ebc2ede12691396a2eafd7a05a" title=" " alt="" coords="5,202,212,258"/>
+</map>

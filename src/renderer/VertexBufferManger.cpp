@@ -2,7 +2,7 @@
 #include "algorithm"
 #include "logger.h"
 
-namespace LaughTaleEngine
+namespace LTE
 {
     void VertexBufferManger::init()
     {

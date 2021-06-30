@@ -2,7 +2,7 @@
 #include <utility>
 
 struct GLFWwindow;
-namespace LaughTaleEngine
+namespace LTE
 {
     class linuxInput
     {

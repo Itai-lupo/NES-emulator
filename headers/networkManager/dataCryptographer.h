@@ -1,7 +1,7 @@
 #pragma once 
 #include "packet.h"
 
-namespace LaughTaleEngine::goingMarryNetworkManger
+namespace LTE::goingMarryNetworkManger
 {
     class dataCryptographer
     {

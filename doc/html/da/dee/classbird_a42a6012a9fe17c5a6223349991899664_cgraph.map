@@ -1,12 +1,12 @@
 <map id="bird::movePlayer" name="bird::movePlayer">
-<area shape="rect" id="node1" title=" " alt="" coords="5,111,125,138"/>
-<area shape="rect" id="node2" href="$d8/da8/class_laugh_tale_engine_1_1mesh.html#a9778fa65198efb77026914ec75ca6b1e" title=" " alt="" coords="173,104,335,145"/>
-<area shape="rect" id="node3" href="$da/d17/class_laugh_tale_engine_1_1window_manger.html#a403018be8ea19c9cf7c8f52857a360a5" title=" " alt="" coords="383,5,599,47"/>
-<area shape="rect" id="node4" href="$da/d17/class_laugh_tale_engine_1_1window_manger.html#a9803b52f460733ab78aae3c03f1ee97c" title=" " alt="" coords="383,71,599,112"/>
-<area shape="rect" id="node8" href="$d8/da8/class_laugh_tale_engine_1_1mesh.html#a62813e25532d7523d942018a96203846" title=" " alt="" coords="410,136,571,177"/>
-<area shape="rect" id="node10" href="$d6/db1/class_laugh_tale_engine_1_1shader.html#ada4019ac27725e80f2764d6771f9559d" title=" " alt="" coords="407,201,575,243"/>
-<area shape="rect" id="node5" href="$db/de7/class_laugh_tale_engine_1_1shader_manger.html#a088794831d022f4c7027d635a10cad50" title=" " alt="" coords="649,71,860,112"/>
-<area shape="rect" id="node6" href="$d6/db1/class_laugh_tale_engine_1_1shader.html#aba1e7a8cf4bb45789a29e00395142bc4" title=" " alt="" coords="932,68,1100,109"/>
-<area shape="rect" id="node7" href="$db/de7/class_laugh_tale_engine_1_1shader_manger.html#afdb4893d6c59a3f96cb51d72997fb43a" title=" " alt="" coords="911,133,1121,175"/>
-<area shape="rect" id="node9" href="$da/d17/class_laugh_tale_engine_1_1window_manger.html#af876123ce22fc998c60e8d9863c5fee0" title=" " alt="" coords="647,192,863,233"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,107,125,134"/>
+<area shape="rect" id="node2" href="$d0/d6c/class_l_t_e_1_1mesh.html#a64085d515dc58adb5f034b8a340f9978" title=" " alt="" coords="173,107,344,134"/>
+<area shape="rect" id="node3" href="$de/de3/class_l_t_e_1_1window_manger.html#ab5b89b56f700da583be78516d5673a0b" title=" " alt="" coords="417,5,566,47"/>
+<area shape="rect" id="node4" href="$de/de3/class_l_t_e_1_1window_manger.html#a1836712000460802e91b92c2e7461c1e" title=" " alt="" coords="417,71,566,112"/>
+<area shape="rect" id="node8" href="$d0/d6c/class_l_t_e_1_1mesh.html#ad4f695d5d345082b215087dd2fabf404" title=" " alt="" coords="415,137,568,163"/>
+<area shape="rect" id="node10" href="$d1/d2e/class_l_t_e_1_1shader.html#a6a0919a106978831d33317c4de4dbd7d" title=" " alt="" coords="392,187,591,214"/>
+<area shape="rect" id="node5" href="$d0/d7b/class_l_t_e_1_1shader_manger.html#aa5d817a609edfb9252c6d0411fdff349" title=" " alt="" coords="639,78,807,105"/>
+<area shape="rect" id="node6" href="$d1/d2e/class_l_t_e_1_1shader.html#a92783c68affd61b5a3259e35b9e84a49" title=" " alt="" coords="864,74,989,101"/>
+<area shape="rect" id="node7" href="$d0/d7b/class_l_t_e_1_1shader_manger.html#a3262e7a5c8cafedbdd7a7a713e60f74c" title=" " alt="" coords="855,125,999,167"/>
+<area shape="rect" id="node9" href="$de/de3/class_l_t_e_1_1window_manger.html#aa5d1183abd1a1193fd10925c89f2d50b" title=" " alt="" coords="648,184,797,225"/>
 </map>

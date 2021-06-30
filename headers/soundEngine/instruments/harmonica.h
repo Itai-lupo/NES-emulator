@@ -2,7 +2,7 @@
 #include "core.h"
 #include "envelope.h"
 
-namespace LaughTaleEngine
+namespace LTE
 {
     class harmonica : public envelope
     {

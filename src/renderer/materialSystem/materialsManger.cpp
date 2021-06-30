@@ -3,7 +3,7 @@
 #include "logger.h"
 #include "material.h"
 
-namespace LaughTaleEngine
+namespace LTE
 {
     std::vector<material *> *materialsManger::materials;
     materialId materialsManger::nextId = 0;

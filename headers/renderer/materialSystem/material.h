@@ -6,7 +6,7 @@
 #include <string>
 #include "glm/glm.hpp"
 
-namespace LaughTaleEngine
+namespace LTE
 {
     class material
     {

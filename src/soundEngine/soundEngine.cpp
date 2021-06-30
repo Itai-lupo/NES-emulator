@@ -22,7 +22,7 @@
     #error "platform not supported"
 #endif
 
-namespace LaughTaleEngine
+namespace LTE
 {
     std::thread *soundEngine::soundThread;
 

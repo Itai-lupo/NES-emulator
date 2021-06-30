@@ -4,7 +4,7 @@
 #include "logger.h"
 #include "asioNetworkInterface.h"
 
-namespace LaughTaleEngine::goingMarryNetworkManger
+namespace LTE::goingMarryNetworkManger
 {
     connection::connection(const std::string& ip, uint32_t port, dataFormatter *messageFormat, dataCryptographer *dataEncryption): 
         ip(ip), port(port), messageFormat(messageFormat), dataEncryption(dataEncryption)
@@ -48,9 +48,9 @@ namespace LaughTaleEngine::goingMarryNetworkManger
         id = networkConnction->getPort();
         connectionData *serverData = new connectionData(id, ip, port, [&, this](packet& data){ this->send(data); } );
         canSend = true;
-
+        serverData->eventType = events::serverConnection;
         if(networkConnction->isConnected())
-            eventManger::trigerEvent(events::serverConnection, serverData);
+            eventManger::trigerEvent(serverData);
         delete serverData;
     }
 
@@ -74,7 +74,8 @@ namespace LaughTaleEngine::goingMarryNetworkManger
             connectionReadData *recivedData = new connectionReadData(data, id, ip, port,
              [&, this](packet& data){ this->send(data); } 
              );
-            eventManger::trigerEvent(events::messageReceived, recivedData);
+            recivedData->eventType = events::messageReceived;
+            eventManger::trigerEvent(recivedData);
             delete recivedData;
         }
     }

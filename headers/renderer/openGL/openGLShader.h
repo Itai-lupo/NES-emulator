@@ -5,7 +5,7 @@
 #include <glm/glm.hpp>
 
 
-namespace LaughTaleEngine
+namespace LTE
 {
     struct ShaderProgramSource
     {

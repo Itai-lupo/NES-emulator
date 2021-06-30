@@ -2,7 +2,7 @@
 #include "core.h"
 #include <glm/glm.hpp>
 
-namespace LaughTaleEngine
+namespace LTE
 {
     class coreCamera
     {

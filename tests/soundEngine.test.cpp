@@ -9,7 +9,7 @@
 #include "drum.h"
 #include "guitar.h"
 
-using namespace LaughTaleEngine;
+using namespace LTE;
 
 
 class soundEntity : public IEntity
@@ -30,7 +30,7 @@ class soundEntity : public IEntity
 };
 
 
-void onImGUI(IEntity *eventEntity, IEventData *sendor)
+void onImGUI(IEntity *eventEntity, coreEventData *sendor)
 {
     soundEntity *e = static_cast<soundEntity *>(eventEntity);
     ImGui::Text("sound control");
@@ -45,7 +45,7 @@ void onImGUI(IEntity *eventEntity, IEventData *sendor)
 }
 
 
-void onAppRender(IEntity *eventEntity, IEventData *sendor)
+void onAppRender(IEntity *eventEntity, coreEventData *sendor)
 {
     renderApi *api = windowManger::getRenderApi(sendor->windowId);
     api->SetClearColor(glm::vec4(0.5f, 0.5f, 0.5f, 0.7f));
@@ -53,7 +53,7 @@ void onAppRender(IEntity *eventEntity, IEventData *sendor)
 
 }
 
-void closeApp(__attribute__((unused)) IEntity *eventEntity, __attribute__((unused)) IEventData *sendor)
+void closeApp(__attribute__((unused)) IEntity *eventEntity, __attribute__((unused)) coreEventData *sendor)
 {
     app::keepRunning = false;
 }
@@ -67,10 +67,25 @@ TEST(SoundEngine, soundInterface)
     entityTaleId id = entityManger::addEntity(e);
     windowPieceId win1 =  windowManger::addWindow("win 1", true);
 
-    eventManger::addEvent(events::AppRender, onAppRender, id, win1);
-    eventManger::addEvent(events::ImGuiRender, onImGUI, id);
+    event *onRenderEvent = event::eventBuilder::startBuilding()->
+        setEventType(events::AppRender)->
+        setEventCallback(onAppRender)->
+        setEntityID(id)->
+        setWindowId(win1)->build();
 
-    eventManger::addEvent(events::WindowClose, closeApp);
+    event *onImGuiRenderEvent = event::eventBuilder::startBuilding()->
+        setEventType(events::ImGuiRender)->
+        setEventCallback(onImGUI)->
+        setEntityID(id)->build();
+    
+    event *onWindowCloseEvent = event::eventBuilder::startBuilding()->
+        setEventType(events::WindowClose)->
+        setEventCallback(closeApp)->build();
+
+    eventManger::addEvent(onRenderEvent);
+    eventManger::addEvent(onImGuiRenderEvent);
+
+    eventManger::addEvent(onWindowCloseEvent);
     e->g = new apoSequencerAndRythemManer::drum();
     apoSequencerAndRythemManer::bellRing* bell = new apoSequencerAndRythemManer::bellRing();
     apoSequencerAndRythemManer::guitar* g = new apoSequencerAndRythemManer::guitar();

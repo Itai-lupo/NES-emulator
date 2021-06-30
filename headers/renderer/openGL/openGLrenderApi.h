@@ -1,7 +1,7 @@
 #pragma once
 #include "renderApi.h"
 
-namespace LaughTaleEngine
+namespace LTE
 {
     class openGLRenderApi: public renderApi
     {

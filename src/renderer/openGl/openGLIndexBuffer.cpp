@@ -2,7 +2,7 @@
 #include "handleOpenGlErrors.h"
 #include "glad/glad.h"
 
-namespace LaughTaleEngine
+namespace LTE
 {
     indexBufferId openGLIndexBuffer::init()
     {

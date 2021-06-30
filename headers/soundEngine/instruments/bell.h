@@ -4,7 +4,7 @@
 #include "logger.h"
 #include "sequencer.h"
 
-namespace LaughTaleEngine
+namespace LTE
 {
     namespace apoSequencerAndRythemManer
     {

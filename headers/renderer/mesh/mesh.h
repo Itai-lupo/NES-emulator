@@ -8,7 +8,7 @@
 #include <glm/ext.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 
-namespace LaughTaleEngine
+namespace LTE
 {
     class mesh: public IEntity
     {

@@ -2,7 +2,7 @@
 #include "core.h"
 #include "VertexBuffer.h"
 
-namespace LaughTaleEngine
+namespace LTE
 {
     class vertexArray
     {

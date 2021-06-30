@@ -8,7 +8,7 @@
 
 
 struct GLFWwindow;
-namespace LaughTaleEngine {
+namespace LTE {
 
 	class linuxWindow: public coreWindow
 	{

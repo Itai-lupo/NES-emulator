@@ -6,13 +6,13 @@
 #include "entity.h"
 #include "events.h"
 
-namespace LaughTaleEngine
+namespace LTE
 {
     class renderLoop
     {
     private:
         static std::vector<mesh *> *meshs;
-        static void renderMesh(LaughTaleEngine::IEntity *eventEntity, LaughTaleEngine::IEventData *sendor);
+        static void renderMesh(LTE::IEntity *eventEntity, LTE::coreEventData *sendor);
     public:
         static void init();
         static void close();

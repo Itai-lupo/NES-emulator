@@ -13,7 +13,7 @@
 #define LAUGHTALE_ENGINR_CONDTION_LOG_FATAL(toLog, condition) LOG_IF(FATAL, condition) << toLog;
 
 
-namespace LaughTaleEngine
+namespace LTE
 {
     class logger
     {

@@ -2,7 +2,7 @@
 #include "logger.h"
 #include "entity.h"
 
-namespace LaughTaleEngine
+namespace LTE
 {
     struct cameraEntity: IEntity
     {
@@ -18,7 +18,7 @@ namespace LaughTaleEngine
 
     };
 
-    void orthographicCameraControler::OnMouseScrolled(IEntity *cameraInfo, IEventData *sendor)
+    void orthographicCameraControler::OnMouseScrolled(IEntity *cameraInfo, coreEventData *sendor)
     {
         cameraEntity *camera = dynamic_cast<cameraEntity *>(cameraInfo);  
         mouseScrollData *eventData = dynamic_cast<mouseScrollData *>(sendor);
@@ -29,7 +29,7 @@ namespace LaughTaleEngine
 		camera->camera->SetProjection(-(*camera->aspectRatio) * (*camera->zoomLevel), (*camera->aspectRatio) * (*camera->zoomLevel), -(*camera->zoomLevel), (*camera->zoomLevel));
     }
 
-    void orthographicCameraControler::OnWindowResized(IEntity *cameraInfo, IEventData *sendor)
+    void orthographicCameraControler::OnWindowResized(IEntity *cameraInfo, coreEventData *sendor)
     {
         cameraEntity *camera = dynamic_cast<cameraEntity *>(cameraInfo);  
         WindowResizeData *eventData = dynamic_cast<WindowResizeData *>(sendor);
@@ -38,7 +38,7 @@ namespace LaughTaleEngine
 		(*camera->camera).SetProjection(-(*camera->aspectRatio) * (*camera->zoomLevel), (*camera->aspectRatio) * (*camera->zoomLevel), -(*camera->zoomLevel), (*camera->zoomLevel));
     }
 
-    void orthographicCameraControler::OnUpdate(IEntity *cameraInfo, IEventData *sendor)
+    void orthographicCameraControler::OnUpdate(IEntity *cameraInfo, coreEventData *sendor)
     {
         cameraEntity *camera = dynamic_cast<cameraEntity *>(cameraInfo);  
         onUpdateData *eventData = dynamic_cast<onUpdateData *>(sendor);   
@@ -60,9 +60,25 @@ namespace LaughTaleEngine
         cam->cameraRotationSpeed = &cameraRotationSpeed;
 
         CameraEntityId = entityManger::addEntity(cam);
-        OnUpdateId = eventManger::addEvent(events::AppUpdate, OnUpdate, CameraEntityId);
-        OnMouseScrolledId = eventManger::addEvent(events::MouseScrolled, OnMouseScrolled, CameraEntityId, window);
-        OnWindowResizedId = eventManger::addEvent(events::WindowResize, OnWindowResized, CameraEntityId, window);
+
+        event *onAppUpdateEvent = event::eventBuilder::startBuilding()->
+            setEventType(events::AppUpdate)->
+            setEventCallback(OnUpdate)->setEntityID(CameraEntityId)->
+            setWindowId(window)->build();
+
+        event *OnMouseScrolledEvent = event::eventBuilder::startBuilding()->
+            setEventType(events::MouseScrolled)->
+            setEventCallback(OnMouseScrolled)->setEntityID(CameraEntityId)->
+            setWindowId(window)->build();
+
+        event *OnWindowResizedEvent = event::eventBuilder::startBuilding()->
+            setEventType(events::WindowResize)->
+            setEventCallback(OnMouseScrolled)->setEntityID(CameraEntityId)->
+            setWindowId(window)->build();
+
+        OnUpdateId = eventManger::addEvent(onAppUpdateEvent);
+        OnMouseScrolledId = eventManger::addEvent(OnMouseScrolledEvent);
+        OnWindowResizedId = eventManger::addEvent(OnWindowResizedEvent);
     }
 
     orthographicCameraControler::~orthographicCameraControler()

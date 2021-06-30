@@ -2,7 +2,7 @@
 #include <string>
 #include "core.h"
 
-namespace LaughTaleEngine
+namespace LTE
 {
     class texture
     {

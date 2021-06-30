@@ -1,13 +1,13 @@
 <map id="flappyBird::TearDown" name="flappyBird::TearDown">
-<area shape="rect" id="node1" title=" " alt="" coords="5,242,152,269"/>
-<area shape="rect" id="node2" href="$d9/d89/class_laugh_tale_engine_1_1app.html#ae0600bd7d78c1276c220b3a93f5bd376" title=" " alt="" coords="200,235,351,276"/>
-<area shape="rect" id="node3" href="$df/dc8/class_laugh_tale_engine_1_1entity_manger.html#a3ceba32e8088e579731ab9d709cbd031" title=" " alt="" coords="437,5,641,47"/>
-<area shape="rect" id="node4" href="$d9/dd1/class_laugh_tale_engine_1_1event_manger.html#a3493122a7ee2cfcc18970447664c067f" title=" " alt="" coords="437,71,641,112"/>
-<area shape="rect" id="node5" href="$d7/d1f/class_laugh_tale_engine_1_1going_marry_network_manger_1_1connections_manager.html#ad883b87b347f60bb543c908746ce3b1d" title=" " alt="" coords="399,136,680,177"/>
-<area shape="rect" id="node6" href="$d1/dda/class_laugh_tale_engine_1_1materials_manger.html#a7e163e00e4f98288ad97260e01c44dc2" title=" " alt="" coords="448,201,631,243"/>
-<area shape="rect" id="node7" href="$d7/d47/class_laugh_tale_engine_1_1render_loop.html#a601530ce1c74dcc07017d1f63c0ca273" title=" " alt="" coords="443,267,636,308"/>
-<area shape="rect" id="node8" href="$df/d84/class_laugh_tale_engine_1_1sound_engine.html#ad7c03b24b04737b5da1de706d1557a44" title=" " alt="" coords="437,332,641,373"/>
-<area shape="rect" id="node10" href="$d6/d62/class_laugh_tale_engine_1_1logger.html#a4c3ef502f6105a31a16c9df67ece1953" title=" " alt="" coords="457,397,621,439"/>
-<area shape="rect" id="node11" href="$da/d17/class_laugh_tale_engine_1_1window_manger.html#accf42f24c30bfbb04bea8e9435cae082" title=" " alt="" coords="431,463,647,504"/>
-<area shape="rect" id="node9" href="$d6/d31/class_laugh_tale_engine_1_1sound_synthesizer.html#ad4c2986e38b867dad680c447d9794991" title=" " alt="" coords="728,332,961,373"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,225,152,251"/>
+<area shape="rect" id="node2" href="$d0/d13/class_l_t_e_1_1app.html#ae0f06737b2f489eace03ada49ae7b4d5" title=" " alt="" coords="200,225,315,251"/>
+<area shape="rect" id="node3" href="$de/d44/class_l_t_e_1_1entity_manger.html#a36e406876304ba1cff334e6f8849e4eb" title=" " alt="" coords="399,5,537,47"/>
+<area shape="rect" id="node4" href="$d5/d7c/class_l_t_e_1_1event_manger.html#a2bae0fc540e166323381f7a8196ab083" title=" " alt="" coords="384,71,552,98"/>
+<area shape="rect" id="node5" href="$d6/db4/class_l_t_e_1_1going_marry_network_manger_1_1connections_manager.html#ad6b7a657b5288a88f53fc94d442af0b4" title=" " alt="" coords="363,123,573,164"/>
+<area shape="rect" id="node6" href="$df/d4f/class_l_t_e_1_1materials_manger.html#a8b8ed9bdc8b605a34e400ef063bbbaaa" title=" " alt="" coords="393,188,543,229"/>
+<area shape="rect" id="node7" href="$d7/d77/class_l_t_e_1_1render_loop.html#ab049b8e6228ae0c4ac325cee52595c6e" title=" " alt="" coords="389,254,547,281"/>
+<area shape="rect" id="node8" href="$de/d01/class_l_t_e_1_1sound_engine.html#ac22cd141150c6a59ef28993c06936837" title=" " alt="" coords="384,305,552,331"/>
+<area shape="rect" id="node10" href="$d3/d08/class_l_t_e_1_1logger.html#ae651e5c9c40cb1a56ad4c0c7df3930fd" title=" " alt="" coords="404,355,532,382"/>
+<area shape="rect" id="node11" href="$de/de3/class_l_t_e_1_1window_manger.html#a6ecf67fe5928e63ba34ea590f5f41cee" title=" " alt="" coords="393,407,543,448"/>
+<area shape="rect" id="node9" href="$d2/dff/class_l_t_e_1_1sound_synthesizer.html#a9cab8478ac0f4e5ff40c3b515016cd07" title=" " alt="" coords="621,297,780,339"/>
 </map>

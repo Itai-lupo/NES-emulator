@@ -1,6 +1,6 @@
 #pragma once
 
-namespace LaughTaleEngine
+namespace LTE
 {
     class soundApi
     {

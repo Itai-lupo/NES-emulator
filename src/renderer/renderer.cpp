@@ -1,6 +1,6 @@
 #include "renderer.h"
 
-namespace LaughTaleEngine
+namespace LTE
 {
     renderer::renderer(renderApi *api): api(api)
     {

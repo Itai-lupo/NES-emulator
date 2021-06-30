@@ -1,7 +1,7 @@
 #pragma once
 #include "vertexArray.h"
 
-namespace LaughTaleEngine
+namespace LTE
 {
     class openGLVertexArray: public vertexArray
     {

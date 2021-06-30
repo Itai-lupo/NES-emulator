@@ -4,7 +4,7 @@
 
 #include <algorithm>
 
-namespace LaughTaleEngine
+namespace LTE
 {
     std::vector<mesh *> *renderLoop::meshs;
 
@@ -19,10 +19,10 @@ namespace LaughTaleEngine
         
     }       
 
-    void renderLoop::renderMesh(LaughTaleEngine::IEntity *eventEntity, LaughTaleEngine::IEventData *sendor)
+    void renderLoop::renderMesh(LTE::IEntity *eventEntity, LTE::coreEventData *sendor)
     {
-        LaughTaleEngine::mesh *meshToRender = static_cast<LaughTaleEngine::mesh *>(eventEntity);
-        LaughTaleEngine::renderer *r = LaughTaleEngine::windowManger::getRenderer(meshToRender->getWindowId());
+        LTE::mesh *meshToRender = static_cast<LTE::mesh *>(eventEntity);
+        LTE::renderer *r = LTE::windowManger::getRenderer(meshToRender->getWindowId());
         
         r->Submit(meshToRender);
     }
@@ -40,7 +40,12 @@ namespace LaughTaleEngine
 
         if(meshToActive != nullptr && !meshToActive->isActive)
         {
-            meshToActive->onRenderId = eventManger::addEvent( events::AppRender, renderMesh, meshToActive->getId(), meshToActive->getWindowId());
+            event *onAppRenderEvent = event::eventBuilder::startBuilding()->
+                            setEventType(events::AppRender)->
+                            setEventCallback(renderMesh)->setEntityID(meshToActive->getId())->
+                            setWindowId(meshToActive->getWindowId())->build();
+          
+            meshToActive->onRenderId = eventManger::addEvent(onAppRenderEvent);
             meshToActive->isActive = true;
         }
 

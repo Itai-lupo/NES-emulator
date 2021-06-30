@@ -25,8 +25,8 @@
 #elif defined(__linux__) // linux
     #include "linuxWindow.h"
     #include "linuxInput.h"
-    typedef LaughTaleEngine::linuxWindow window;
-    typedef LaughTaleEngine::linuxInput input;
+    typedef LTE::linuxWindow window;
+    typedef LTE::linuxInput input;
     typedef GLFWwindow* windowPtr;
 #elif defined(__APPLE__) && defined(__MACH__) // Apple OSX and iOS (Darwin)
     #include <TargetConditionals.h>
@@ -39,7 +39,7 @@
     #error "platform not supported"
 #endif
 
-namespace LaughTaleEngine
+namespace LTE
 {
     class windowManger
     {
@@ -50,7 +50,7 @@ namespace LaughTaleEngine
             static void close();
             
             static windowPieceId addWindow(const std::string& title = "raftel engine", bool useImGui = false, unsigned int width = 1280, unsigned int height = 720, renderAPI renderAPIType = renderAPI::OpenGL);
-            static void onUpdate(IEntity *eventEntity, IEventData *sendor);
+            static void onUpdate(IEntity *eventEntity, coreEventData *sendor);
 
             static window *getWindow(windowPieceId windowId);
 

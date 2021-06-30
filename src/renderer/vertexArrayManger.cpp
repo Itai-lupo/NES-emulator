@@ -3,7 +3,7 @@
 #include "algorithm"
 #include "logger.h"
 
-namespace LaughTaleEngine
+namespace LTE
 {
     void vertexArrayManger::init()
     {

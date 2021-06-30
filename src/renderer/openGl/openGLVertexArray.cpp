@@ -5,7 +5,7 @@
 #include "logger.h"
 #include <string>
 
-namespace LaughTaleEngine
+namespace LTE
 {
     openGLVertexArray::~openGLVertexArray()
     {

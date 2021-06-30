@@ -2,7 +2,7 @@
 #include <string>
 #include <thread>
 #include <vector>
-namespace LaughTaleEngine
+namespace LTE
 {
     namespace apoSequencerAndRythemManer
     {

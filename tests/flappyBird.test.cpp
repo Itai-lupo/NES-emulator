@@ -25,7 +25,7 @@
 
 #define PILAR_SPAWN_RATE 0.5f
 
-class pilar: public LaughTaleEngine::IEntity
+class pilar: public LTE::IEntity
 {
     private:
         float pilarPostions[20] = 
@@ -45,24 +45,24 @@ class pilar: public LaughTaleEngine::IEntity
         
 
     public:
-        LaughTaleEngine::mesh *pilarBottomMesh;
-        LaughTaleEngine::mesh *pilarTopMesh;
-        LaughTaleEngine::eventLaughId onRenderId1;
-        LaughTaleEngine::eventLaughId onRenderId2;
-        LaughTaleEngine::eventLaughId onUpdateId;
+        LTE::mesh *pilarBottomMesh;
+        LTE::mesh *pilarTopMesh;
+        LTE::eventLaughId onRenderId1;
+        LTE::eventLaughId onRenderId2;
+        LTE::eventLaughId onUpdateId;
 
         float pilarHight = 0.0f;
         float pilarX = 1.7f;
         bool endOfScreen = false;
 
-        pilar(LaughTaleEngine::windowPieceId  gameWindowId)
+        pilar(LTE::windowPieceId  gameWindowId)
         {
             std::srand(std::time(nullptr));
             
             pilarHight = (rand() / (RAND_MAX + 1.0f) - 0.5f) * 0.7;
 
-            pilarTopMesh = new LaughTaleEngine::mesh(gameWindowId);
-            pilarBottomMesh = new LaughTaleEngine::mesh(gameWindowId);
+            pilarTopMesh = new LTE::mesh(gameWindowId);
+            pilarBottomMesh = new LTE::mesh(gameWindowId);
 
 
             pilarTopMesh->setShader("res/flappyBird/Basic.shader");
@@ -86,22 +86,26 @@ class pilar: public LaughTaleEngine::IEntity
             pilarTopMesh->setMaterial("res/textures/5_star.png", {1.0f, 1.0f, 0.0f, 1.0f});
             pilarBottomMesh->setMaterial("res/textures/5_star.png", {0.0f, 1.0f, 1.0f, 1.0f});
 
-            LaughTaleEngine::renderLoop::addMesh(pilarTopMesh);
-            LaughTaleEngine::renderLoop::active(pilarTopMesh->getId());
+            LTE::renderLoop::addMesh(pilarTopMesh);
+            LTE::renderLoop::active(pilarTopMesh->getId());
             
-            LaughTaleEngine::renderLoop::addMesh(pilarBottomMesh);
-            LaughTaleEngine::renderLoop::active(pilarBottomMesh->getId());
+            LTE::renderLoop::addMesh(pilarBottomMesh);
+            LTE::renderLoop::active(pilarBottomMesh->getId());
             
             
-            LaughTaleEngine::entityTaleId pilarEntityId = LaughTaleEngine::entityManger::addEntity(dynamic_cast<IEntity*>(this));
-            onUpdateId = LaughTaleEngine::eventManger::addEvent(LaughTaleEngine::events::AppRender, onUpdate, pilarEntityId, gameWindowId);
+            LTE::entityTaleId pilarEntityId = LTE::entityManger::addEntity(dynamic_cast<IEntity*>(this));
+            LTE::event *onUpdateEvent = LTE::event::eventBuilder::startBuilding()->
+                            setEventType(LTE::events::AppRender)->
+                            setEventCallback(onUpdate)->setEntityID(pilarEntityId)->setWindowId(gameWindowId)->build();
+           
+            onUpdateId = LTE::eventManger::addEvent(onUpdateEvent);
         }
         
 
-        static void onUpdate(LaughTaleEngine::IEntity *eventEntity, LaughTaleEngine::IEventData *sendor)
+        static void onUpdate(LTE::IEntity *eventEntity, LTE::coreEventData *sendor)
         {
             pilar *p = static_cast<pilar *>(eventEntity);
-            LaughTaleEngine::onUpdateData *eventData = static_cast<LaughTaleEngine::onUpdateData *>(sendor);
+            LTE::onUpdateData *eventData = static_cast<LTE::onUpdateData *>(sendor);
 
             p->pilarX -= 0.5f * ((float)eventData->DeltaTime) / 1000;
             if(p->pilarX < -1.7f)
@@ -116,7 +120,7 @@ class pilar: public LaughTaleEngine::IEntity
         
 };
 
-class bird: public LaughTaleEngine::IEntity
+class bird: public LTE::IEntity
 {
     private:
         float birdPostions[6 * 5] = 
@@ -138,25 +142,25 @@ class bird: public LaughTaleEngine::IEntity
             1, 4, 5
         };
 
-        LaughTaleEngine::mesh *birdMesh;
-        static inline LaughTaleEngine::materialId starMat;
-        static inline LaughTaleEngine::materialId logoMat;
+        LTE::mesh *birdMesh;
+        static inline LTE::materialId starMat;
+        static inline LTE::materialId logoMat;
     public:
-        LaughTaleEngine::eventLaughId updateId;
-        LaughTaleEngine::eventLaughId onKeyId;
+        LTE::eventLaughId updateId;
+        LTE::eventLaughId onKeyId;
 
-        LaughTaleEngine::entityTaleId playerEntityId;
+        LTE::entityTaleId playerEntityId;
         float birdHight;
         float speed = 0;
         bool failed = false;
         bool star = false;
 
-        bird(LaughTaleEngine::windowPieceId  gameWindowId)
+        bird(LTE::windowPieceId  gameWindowId)
         {
-            birdMesh = new LaughTaleEngine::mesh(gameWindowId);
+            birdMesh = new LTE::mesh(gameWindowId);
 
-            starMat = LaughTaleEngine::materialsManger::addMatrial(new LaughTaleEngine::material("res/textures/5_star.png"));
-            logoMat = LaughTaleEngine::materialsManger::addMatrial(new LaughTaleEngine::material("res/textures/Logo.png"));
+            starMat = LTE::materialsManger::addMatrial(new LTE::material("res/textures/5_star.png"));
+            logoMat = LTE::materialsManger::addMatrial(new LTE::material("res/textures/Logo.png"));
 
             birdMesh->setShader("res/flappyBird/bird.shader");
 
@@ -169,14 +173,23 @@ class bird: public LaughTaleEngine::IEntity
             birdMesh->setVertexArray();
 
             birdMesh->setMaterial(logoMat);
-            LaughTaleEngine::renderLoop::addMesh(birdMesh);
-            LaughTaleEngine::renderLoop::active(birdMesh->getId());
+            LTE::renderLoop::addMesh(birdMesh);
+            LTE::renderLoop::active(birdMesh->getId());
 
             
-            playerEntityId = LaughTaleEngine::entityManger::addEntity(this);
+            playerEntityId = LTE::entityManger::addEntity(this);
+            
+            LTE::event *onUpdateEvent = LTE::event::eventBuilder::startBuilding()->
+                            setEventType(LTE::events::AppUpdate)->
+                            setEventCallback(bird::onUpdate)->setEntityID(playerEntityId)->build();
+            
+            LTE::event *onKeyPressedEvent = LTE::event::eventBuilder::startBuilding()->
+                            setEventType(LTE::events::KeyPressed)->
+                            setEventCallback(bird::onKey)->setEntityID(playerEntityId)->setWindowId(gameWindowId)->build();
 
-            updateId = LaughTaleEngine::eventManger::addEvent(LaughTaleEngine::events::AppUpdate, bird::onUpdate, playerEntityId, gameWindowId);
-            onKeyId = LaughTaleEngine::eventManger::addEvent(LaughTaleEngine::events::KeyPressed, bird::onKey, playerEntityId, gameWindowId);
+            updateId = LTE::eventManger::addEvent(onUpdateEvent);
+            onKeyId = LTE::eventManger::addEvent(onKeyPressedEvent);
+            LAUGHTALE_ENGINR_LOG_INFO(updateId)
         }
 
         static void movePlayer(bird *player, short DeltaTime)
@@ -195,17 +208,17 @@ class bird: public LaughTaleEngine::IEntity
             
         }
 
-        static void onUpdate(LaughTaleEngine::IEntity *eventEntity, LaughTaleEngine::IEventData *sendor)
+        static void onUpdate(LTE::IEntity *eventEntity, LTE::coreEventData *sendor)
         {
             bird *player = static_cast<bird *>(eventEntity);
-            LaughTaleEngine::onUpdateData *eventData = static_cast<LaughTaleEngine::onUpdateData *>(sendor);
+            LTE::onUpdateData *eventData = static_cast<LTE::onUpdateData *>(sendor);
               
             movePlayer(player, eventData->DeltaTime);
         }
 
-        static void onKey(LaughTaleEngine::IEntity *eventEntity, __attribute__((unused)) LaughTaleEngine::IEventData *sendor)
+        static void onKey(LTE::IEntity *eventEntity, __attribute__((unused)) LTE::coreEventData *sendor)
         {
-            LaughTaleEngine::KeyData *eventData = dynamic_cast<LaughTaleEngine::KeyData *>(sendor);
+            LTE::KeyData *eventData = dynamic_cast<LTE::KeyData *>(sendor);
             bird *player = static_cast<bird *>(eventEntity);
             player->speed = 1.25f;
             player->birdMesh->setShader(( player->star? "res/flappyBird/bird.shader": "res/flappyBird/Basic.shader"));
@@ -214,36 +227,33 @@ class bird: public LaughTaleEngine::IEntity
         }
 };
 
-class flappyBird : public ::testing::Test, public LaughTaleEngine::IEntity
+class flappyBird : public ::testing::Test, public LTE::IEntity
 {
-    private:
-        LaughTaleEngine::eventLaughId updateId;
-        LaughTaleEngine::eventLaughId imGuiId;
-        
+    private:        
         bird *player;
         std::vector<pilar *> pilars;
-        LaughTaleEngine::windowPieceId gameWindowId;
-        LaughTaleEngine::windowPieceId debugInfoWindowId;
+        LTE::windowPieceId gameWindowId;
+        LTE::windowPieceId debugInfoWindowId;
         
         void initWindows()
         {
-            gameWindowId =  LaughTaleEngine::windowManger::addWindow("flappyBird");
-            debugInfoWindowId = LaughTaleEngine::windowManger::addWindow("debug Info Window", true, 600, 600);
+            gameWindowId =  LTE::windowManger::addWindow("flappyBird");
+            debugInfoWindowId = LTE::windowManger::addWindow("debug Info Window", true, 600, 600);
 
-            LaughTaleEngine::windowManger::setCamera(gameWindowId, new LaughTaleEngine::orthographicCameraControler(1.6f / 0.9f, gameWindowId));
-            LaughTaleEngine::windowManger::bindContext(gameWindowId);
+            LTE::windowManger::setCamera(gameWindowId, new LTE::orthographicCameraControler(1.6f / 0.9f, gameWindowId));
+            LTE::windowManger::bindContext(gameWindowId);
 
         }
 
-        static void WindowClose(__attribute__((unused)) LaughTaleEngine::IEntity *eventEntity, __attribute__((unused)) LaughTaleEngine::IEventData *sendor)
+        static void WindowClose(__attribute__((unused)) LTE::IEntity *eventEntity, __attribute__((unused)) LTE::coreEventData *sendor)
         {
-            LaughTaleEngine::app::keepRunning = false;
+            LTE::app::keepRunning = false;
         }
 
     public:
-        static void onImGui(LaughTaleEngine::IEntity *eventEntity, __attribute__((unused)) LaughTaleEngine::IEventData *sendor)
+        static void onImGui(LTE::IEntity *eventEntity, __attribute__((unused)) LTE::coreEventData *sendor)
         {
-            LaughTaleEngine::onUpdateData *eventData = static_cast<LaughTaleEngine::onUpdateData *>(sendor);
+            LTE::onUpdateData *eventData = static_cast<LTE::onUpdateData *>(sendor);
             bird *player = static_cast<bird *>(eventEntity);
             ImGui::Text("player speed: %d", player->speed);
             ImGui::Text("player hight: %f", player->birdHight);
@@ -253,18 +263,18 @@ class flappyBird : public ::testing::Test, public LaughTaleEngine::IEntity
                 
         }
 
-        static void onUpdate(LaughTaleEngine::IEntity *eventEntity, __attribute__((unused)) LaughTaleEngine::IEventData *sendor)
+        static void onUpdate(LTE::IEntity *eventEntity, __attribute__((unused)) LTE::coreEventData *sendor)
         {
             flappyBird *game = static_cast<flappyBird *>(eventEntity);
-            LaughTaleEngine::onUpdateData *eventData = static_cast<LaughTaleEngine::onUpdateData *>(sendor);
+            LTE::onUpdateData *eventData = static_cast<LTE::onUpdateData *>(sendor);
             
             if(game->pilars.size() > 0 && (game->pilars[0]->endOfScreen || game->pilars[0]->pilarX < -1.7f))
             {
                 pilar *temp = game->pilars[0];
-                LaughTaleEngine::entityManger::removeEntityById(temp->getId());
-                LaughTaleEngine::eventManger::removeEvent(LaughTaleEngine::events::AppRender, temp->onUpdateId);
-                LaughTaleEngine::renderLoop::remove(temp->pilarTopMesh->getId());
-                LaughTaleEngine::renderLoop::remove(temp->pilarBottomMesh->getId());
+                LTE::entityManger::removeEntityById(temp->getId());
+                LTE::eventManger::removeEvent(LTE::events::AppRender, temp->onUpdateId);
+                LTE::renderLoop::remove(temp->pilarTopMesh->getId());
+                LTE::renderLoop::remove(temp->pilarBottomMesh->getId());
 
                 game->pilars.erase(game->pilars.begin());
                 delete temp;
@@ -281,21 +291,33 @@ class flappyBird : public ::testing::Test, public LaughTaleEngine::IEntity
         
         void SetUp()
         { 
-            LaughTaleEngine::app::init();
+            LTE::app::init();
             initWindows();
 
-            LaughTaleEngine::entityTaleId gameEntityId = LaughTaleEngine::entityManger::addEntity(this);
+            LTE::entityTaleId gameEntityId = LTE::entityManger::addEntity(this);
             player = new bird(gameWindowId);
             pilars.push_back(new pilar(gameWindowId));
 
-            updateId = LaughTaleEngine::eventManger::addEvent(LaughTaleEngine::events::AppUpdate, onUpdate, gameEntityId, gameWindowId);
-            LaughTaleEngine::eventManger::addEvent(LaughTaleEngine::events::WindowClose, WindowClose);
-            imGuiId = LaughTaleEngine::eventManger::addEvent(LaughTaleEngine::events::ImGuiRender, onImGui, player->playerEntityId, debugInfoWindowId);
+            LTE::event *onAppUpdateEvent = LTE::event::eventBuilder::startBuilding()->
+                setEventType(LTE::events::AppUpdate)->
+                setEventCallback(onUpdate)->setEntityID(gameEntityId)->build();
+
+            LTE::event *onWindowCloseEvent = LTE::event::eventBuilder::startBuilding()->
+                setEventType(LTE::events::WindowClose)->
+                setEventCallback(WindowClose)->build();
+
+            LTE::event *onImGuiRenderEvent = LTE::event::eventBuilder::startBuilding()->
+                setEventType(LTE::events::ImGuiRender)->
+                setEventCallback(onImGui)->setEntityID(player->playerEntityId)->setWindowId(debugInfoWindowId)->build();
+
+            LTE::eventManger::addEvent(onAppUpdateEvent);
+            LTE::eventManger::addEvent(onWindowCloseEvent);
+            LTE::eventManger::addEvent(onImGuiRenderEvent);
         }
 
         void TearDown() 
         { 
-            LaughTaleEngine::app::close();
+            LTE::app::close();
         }
 };
 
@@ -305,6 +327,6 @@ class flappyBird : public ::testing::Test, public LaughTaleEngine::IEntity
 TEST_F(flappyBird, testGames)
 {
     std::this_thread::sleep_for(std::chrono::milliseconds(500));
-    LaughTaleEngine::app::run();
+    LTE::app::run();
 
 }

@@ -11,7 +11,7 @@
 #include "orthographicCameraControler.h"
 #include <string>
 
-namespace LaughTaleEngine {
+namespace LTE {
 	
 	static bool s_GLFWInitialized = false;
 
@@ -19,7 +19,7 @@ namespace LaughTaleEngine {
 	{
 		WindowResizeData *eventData = new WindowResizeData(width, height, (windowPieceId)window);
 		
-		eventManger::trigerEvent(events::WindowResize, eventData, (windowPieceId)window);
+		eventManger::trigerEvent(eventData);
 		LAUGHTALE_ENGINR_LOG_INFO(
 			"WindowSizeCallback " + 
 			std::to_string(width) + ", " + 
@@ -28,9 +28,10 @@ namespace LaughTaleEngine {
 
 	void WindowCloseCallback(GLFWwindow* window)
 	{
-		IEventData *eventData = new IEventData(events::WindowClose);
-		
-		eventManger::trigerEvent(events::WindowClose, eventData, (windowPieceId)window);
+		coreEventData *eventData = new coreEventData(events::WindowClose);
+		eventData->eventType = events::WindowClose;
+		eventData->windowId = (windowPieceId)window;
+		eventManger::trigerEvent(eventData);
 
 		LAUGHTALE_ENGINR_LOG_INFO("WindowCloseCallback");
 	}
@@ -45,7 +46,7 @@ namespace LaughTaleEngine {
 			(action == GLFW_RELEASE) * events::KeyReleased + 
 			(action == GLFW_REPEAT) * events::KeyRepeat);
 
-		eventManger::trigerEvent(eventData->eventType, eventData, (windowPieceId)window);
+		eventManger::trigerEvent(eventData);
 	}
 
 	void MouseButtonCallback(GLFWwindow* window, int button, int action, int mods)
@@ -57,7 +58,7 @@ namespace LaughTaleEngine {
 			(action == GLFW_RELEASE) * events::MouseButtonReleased
 		);
 
-		eventManger::trigerEvent(eventData->eventType, eventData, (windowPieceId)window);
+		eventManger::trigerEvent(eventData);
 		LAUGHTALE_ENGINR_LOG_INFO("MouseButtonCallback");
 	}
 
@@ -65,7 +66,7 @@ namespace LaughTaleEngine {
 	{
 		mouseScrollData *eventData = new mouseScrollData(xOffset, yOffset, (windowPieceId)window);
 
-		eventManger::trigerEvent(events::MouseScrolled, eventData, (windowPieceId)window);
+		eventManger::trigerEvent(eventData);
 
 		LAUGHTALE_ENGINR_LOG_INFO("ScrollCallback");
 	}
@@ -73,14 +74,14 @@ namespace LaughTaleEngine {
 	void CursorPosCallback(GLFWwindow* window, double xPos, double yPos)
 	{
 		mouseMoveData *eventData = new mouseMoveData(xPos, yPos, (windowPieceId)window);
-		eventManger::trigerEvent(events::MouseMoved, eventData, (windowPieceId)window);
+		eventManger::trigerEvent(eventData);
 
 	}
 
 	void SetCharCallback(GLFWwindow* window, unsigned int keycode)
 	{
 		keyTypedData *eventData = new keyTypedData(keycode, (windowPieceId)window);
-		eventManger::trigerEvent(events::KeyTyped, eventData, (windowPieceId)window);
+		eventManger::trigerEvent(eventData);
 	}
 
 	void linuxWindow::Init(linuxWindow *data)
@@ -163,11 +164,12 @@ namespace LaughTaleEngine {
 	void linuxWindow::onUpdate(linuxWindow *data, void *sendor)
 	{
 		onUpdateData *eventData = static_cast<onUpdateData *>(sendor);
-
+		eventData->eventType = events::AppRender;
+		eventData->windowId = data->id;
 		makeContextCurrent(data->Window);
 		data->winRenderer->beginScene(data->getCamera());
 
-		eventManger::trigerEvent(events::AppRender, eventData, data->id);
+		eventManger::trigerEvent(eventData);
 		
 		if(data->useImGui)
 			onImGuiUpdate(*data, eventData);
@@ -176,6 +178,7 @@ namespace LaughTaleEngine {
 
 		data->context->SwapBuffers();
         glfwPollEvents();
+		eventData->eventType = events::AppUpdate;
 	}
 
 	bool linuxWindow::isOpen(GLFWwindow* window)

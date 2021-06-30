@@ -4,7 +4,7 @@
 #include <glm/gtx/string_cast.hpp>
 #include "logger.h"
 
-namespace LaughTaleEngine
+namespace LTE
 {
     orthographicCamera::orthographicCamera(float left, float right, float bottom, float top)
 		: projectionMatrix(glm::ortho(left, right, bottom, top, -1.0f, 1.0f)), viewMatrix(1.0f)

@@ -3,7 +3,7 @@
 #include <algorithm>
 #include "logger.h"
 
-namespace LaughTaleEngine
+namespace LTE
 {
     std::vector<envelope *> *soundSynthesizer::envelopes;
     apoEnvelopeId soundSynthesizer::nextId;

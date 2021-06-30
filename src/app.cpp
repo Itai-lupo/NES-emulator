@@ -19,7 +19,7 @@
 #include <string>
 
 
-namespace LaughTaleEngine
+namespace LTE
 {
     bool app::keepRunning = true;
     
@@ -27,7 +27,7 @@ namespace LaughTaleEngine
     {
         keepRunning = true;
         std::string pathToLogs =  "./logs/";
-        std::string projectName =  "LaughTaleEngine";
+        std::string projectName =  "LTE";
         logger::init(pathToLogs, projectName);
         eventManger::init();
         entityManger::init();
@@ -67,7 +67,7 @@ namespace LaughTaleEngine
             now = getTime();
             updateData->DeltaTime = now - updateData->currentTime;
             updateData->currentTime = now;
-            eventManger::trigerEvent(events::AppUpdate, updateData);
+            eventManger::trigerEvent(updateData);
         }
         
     }

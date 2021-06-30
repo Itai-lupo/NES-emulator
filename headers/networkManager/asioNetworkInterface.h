@@ -10,7 +10,7 @@
 #include <asio/ts/internet.hpp>
 
 
-namespace LaughTaleEngine::goingMarryNetworkManger
+namespace LTE::goingMarryNetworkManger
 {
     class asioNetworkInterface: public networkInterface
     {

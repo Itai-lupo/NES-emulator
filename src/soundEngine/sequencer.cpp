@@ -2,7 +2,7 @@
 #include "soundEngine.h"
 #include <chrono>
 #include "logger.h"
-namespace LaughTaleEngine
+namespace LTE
 {
     namespace apoSequencerAndRythemManer
     {

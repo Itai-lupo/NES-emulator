@@ -5,7 +5,7 @@
 
 #include "logger.h"
 #include "linuxSoundApi.h"
-namespace LaughTaleEngine
+namespace LTE
 {
     linuxSoundApi::linuxSoundApi(
             std::string device_name,

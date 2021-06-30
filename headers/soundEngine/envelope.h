@@ -4,7 +4,7 @@
 #include <functional>
 #include <string>
 
-namespace LaughTaleEngine
+namespace LTE
 {
     struct sondSampelData
     {

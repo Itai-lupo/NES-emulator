@@ -3,7 +3,7 @@
 #include <vector>
 #include "VertexBuffer.h"
 
-namespace LaughTaleEngine
+namespace LTE
 {
     class VertexBufferManger
     {

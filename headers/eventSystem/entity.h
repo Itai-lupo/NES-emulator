@@ -3,7 +3,7 @@
 #include <vector>
 #include "core.h"
 
-namespace LaughTaleEngine
+namespace LTE
 {
     struct IEntity;
 

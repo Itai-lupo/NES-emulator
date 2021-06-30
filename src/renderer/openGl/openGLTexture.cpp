@@ -6,7 +6,7 @@
 #include "handleOpenGlErrors.h"
 
 
-namespace LaughTaleEngine
+namespace LTE
 {
     openGLTexture::openGLTexture(const std::string& path): texture(path)
     {

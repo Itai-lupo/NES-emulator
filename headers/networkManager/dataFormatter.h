@@ -2,7 +2,7 @@
 #include "packet.h"
 
 
-namespace LaughTaleEngine::goingMarryNetworkManger
+namespace LTE::goingMarryNetworkManger
 {
     class dataFormatter
     {

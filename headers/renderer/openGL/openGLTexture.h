@@ -1,7 +1,7 @@
 #pragma once
 #include "texture.h"
 
-namespace LaughTaleEngine
+namespace LTE
 {
     class openGLTexture: public texture
     {

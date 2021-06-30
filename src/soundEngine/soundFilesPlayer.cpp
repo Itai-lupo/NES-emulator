@@ -1,5 +1,5 @@
 #include "soundFilesPlayer.h"
-namespace LaughTaleEngine
+namespace LTE
 {
     namespace apoSequencerAndRythemManer
     {

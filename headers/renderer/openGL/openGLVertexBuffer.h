@@ -1,7 +1,7 @@
 #pragma once
 #include "VertexBuffer.h"
 
-namespace LaughTaleEngine
+namespace LTE
 {
 
     class OpenGLVertexBuffer: public VertexBuffer

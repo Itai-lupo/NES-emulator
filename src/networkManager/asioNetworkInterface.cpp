@@ -1,7 +1,7 @@
 #include "asioNetworkInterface.h"
 #include "logger.h"
 
-namespace LaughTaleEngine::goingMarryNetworkManger
+namespace LTE::goingMarryNetworkManger
 {
     bool asioNetworkInterface::contextInitialized = false;
     asio::io_context  asioNetworkInterface::asioContext;

@@ -7,7 +7,7 @@
 #include "packet.h"
 #include "connection.h"
 
-namespace LaughTaleEngine::goingMarryNetworkManger
+namespace LTE::goingMarryNetworkManger
 {
     class connectionsManager
     {

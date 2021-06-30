@@ -2,7 +2,7 @@
 #include <stdlib.h> 
 #include "logger.h"
 
-namespace LaughTaleEngine
+namespace LTE
 {
     std::vector<event*> *eventManger::eventList;
     u_int32_t eventManger::nextEventId = 0;
@@ -20,12 +20,6 @@ namespace LaughTaleEngine
         }
         
         eventManger::nextEventId = 0;
-    }
-
-    eventLaughId eventManger::addEvent(events eventType, eventCallbackFunc callback, entityTaleId entityID, windowPieceId windowID)
-    {
-        event *newEvent = new event(eventType, callback, entityID, windowID);
-        return eventManger::addEvent(newEvent);
     }
 
     eventLaughId eventManger::addEvent(event *eventToAdd)
@@ -49,13 +43,15 @@ namespace LaughTaleEngine
         LAUGHTALE_ENGINR_LOG_WARNING("faild to remove event");
     }
 
-    void eventManger::trigerEvent(events eventType, IEventData *sendor, windowPieceId windowID)
+    void eventManger::trigerEvent(coreEventData *sendor)
     {
-        sendor->eventType = eventType;
-        sendor->windowId = windowID;
-        for(event *e : eventManger::eventList[eventType]) 
+        if(!sendor->eventType)
+            LAUGHTALE_ENGINR_LOG_FATAL("please Spcifay event type" << sendor->eventType);
+
+        events type = sendor->eventType;
+        for(event *e : eventManger::eventList[type]) 
         {
-            if(windowID == 0 || e->getWindowID() == 0 || e->getWindowID() == windowID)
+            if(sendor->windowId == 0 || e->getWindowID() == 0 || e->getWindowID() == sendor->windowId)
             {
                 sendor->id = e->id;
                 IEntity *a = entityManger::getEntityById(e->getEntityID()); 
@@ -63,30 +59,8 @@ namespace LaughTaleEngine
                     e->trigerEvent(a, sendor);
                 else
                     LAUGHTALE_ENGINR_LOG_ERROR("entity wasnt found:" << e->getEntityID() << ", " << e->id);
+
             }
         }
     }
-
-    void eventManger::trigerEventById(eventLaughId id, IEventData *sendor)
-    {
-        for(uint32_t eventType = 0; eventType < events::events_MAX; eventType++) 
-        {
-            for(event *e : eventManger::eventList[eventType]) 
-            {
-                if( e->id == id)
-                {
-                    sendor->id = e->id;
-                    IEntity *a = entityManger::getEntityById(e->getEntityID()); 
-                    if((e->getEntityID() != (entityTaleId)-1 && a != nullptr) || e->getEntityID() == (entityTaleId)-1)
-                        e->trigerEvent(a, sendor);
-                    else
-                        LAUGHTALE_ENGINR_LOG_ERROR("entity wasnt found:" << e->getEntityID() << ", " << e->id);
-                    return;
-                }
-            }
-        }
-        LAUGHTALE_ENGINR_LOG_ERROR("event wasnt found:" << id);
-
-    }
-
 }

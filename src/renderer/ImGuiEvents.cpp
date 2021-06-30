@@ -15,9 +15,9 @@
 #include <GLFW/glfw3.h>
 
 
-namespace LaughTaleEngine 
+namespace LTE 
 {
-    void ImGuiMouseButtonPressed(__attribute__((unused)) IEntity *eventEntity, IEventData *sendor)
+    void ImGuiMouseButtonPressed(__attribute__((unused)) IEntity *eventEntity, coreEventData *sendor)
     {
         mouseClickData *eventData = static_cast<mouseClickData *>(sendor);
 
@@ -25,7 +25,7 @@ namespace LaughTaleEngine
         io.MouseDown[eventData->button] = true;
     }
 
-    void ImGuiMouseButtonReleased(__attribute__((unused)) IEntity *eventEntity, IEventData *sendor)
+    void ImGuiMouseButtonReleased(__attribute__((unused)) IEntity *eventEntity, coreEventData *sendor)
     {
         mouseClickData *eventData = static_cast<mouseClickData *>(sendor);
 
@@ -33,7 +33,7 @@ namespace LaughTaleEngine
         io.MouseDown[eventData->button] = false;
     }
 
-    void ImGuiMouseMoved(__attribute__((unused)) IEntity *eventEntity, IEventData *sendor)
+    void ImGuiMouseMoved(__attribute__((unused)) IEntity *eventEntity, coreEventData *sendor)
     {
         mouseMoveData *eventData = static_cast<mouseMoveData *>(sendor);
 
@@ -41,7 +41,7 @@ namespace LaughTaleEngine
         io.MousePos = ImVec2(eventData->xPos, eventData->yPos);
     }
 
-    void ImGuiMouseScrolled(__attribute__((unused)) IEntity *eventEntity, IEventData *sendor)
+    void ImGuiMouseScrolled(__attribute__((unused)) IEntity *eventEntity, coreEventData *sendor)
     {
         mouseScrollData *eventData = static_cast<mouseScrollData *>(sendor);
 
@@ -50,7 +50,7 @@ namespace LaughTaleEngine
         io.MouseWheel += eventData->yOffset;
     }
 
-    void ImGuiWindowResize(__attribute__((unused)) IEntity *eventEntity, IEventData *sendor)
+    void ImGuiWindowResize(__attribute__((unused)) IEntity *eventEntity, coreEventData *sendor)
     {
         WindowResizeData *eventData = static_cast<WindowResizeData *>(sendor);
         LAUGHTALE_ENGINR_LOG_INFO(
@@ -64,7 +64,7 @@ namespace LaughTaleEngine
         glViewport(0, 0, eventData->windowWidth, eventData->windowHeight);
     }
 
-    void ImGuiKeyPressed(__attribute__((unused)) IEntity *eventEntity, IEventData *sendor)
+    void ImGuiKeyPressed(__attribute__((unused)) IEntity *eventEntity, coreEventData *sendor)
     {
         KeyData *eventData = static_cast<KeyData *>(sendor);
 
@@ -81,7 +81,7 @@ namespace LaughTaleEngine
         LAUGHTALE_ENGINR_LOG_INFO("ImGuiKeyPressed");
     }
 
-    void ImGuiKeyReleased(__attribute__((unused)) IEntity *eventEntity, IEventData *sendor)
+    void ImGuiKeyReleased(__attribute__((unused)) IEntity *eventEntity, coreEventData *sendor)
     {
         KeyData *eventData = static_cast<KeyData *>(sendor);
 
@@ -89,7 +89,7 @@ namespace LaughTaleEngine
         io.KeysDown[eventData->key] = false;
     }
 
-    void ImGuiKeyTyped(__attribute__((unused)) IEntity *eventEntity, IEventData *sendor)
+    void ImGuiKeyTyped(__attribute__((unused)) IEntity *eventEntity, coreEventData *sendor)
     {
         keyTypedData *eventData = static_cast<keyTypedData *>(sendor);
 
@@ -123,7 +123,8 @@ namespace LaughTaleEngine
 		ImGui_ImplGlfw_NewFrame();
 		ImGui::NewFrame();
 
-        eventManger::trigerEvent(events::ImGuiRender, eventData, data.id);
+        eventData->eventType = events::ImGuiRender;
+        eventManger::trigerEvent(eventData);
         
 		io.DisplaySize = ImVec2(data.Width, data.Height);
         ImGui::Render();

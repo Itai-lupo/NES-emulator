@@ -1,7 +1,7 @@
 #pragma once
 #include <cstdint>
 
-namespace LaughTaleEngine
+namespace LTE
 {
     typedef uint32_t eventLaughId;
     typedef uint32_t entityTaleId;

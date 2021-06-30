@@ -2,7 +2,7 @@
 #include <gtest/gtest.h>
 #include <stdlib.h>
 #include <cstring>
-using namespace LaughTaleEngine;
+using namespace LTE;
 using namespace goingMarryNetworkManger;
 
 struct basicHeader: public packetHeader
@@ -83,7 +83,7 @@ class basicDataFormat: public dataFormatter
 
 };
 
-using namespace LaughTaleEngine;
+using namespace LTE;
 float birdPostions[6 * 5] = 
 {
      0.000f,    0.10f,  0.0f,   0.5f,   1.0f,
@@ -103,12 +103,12 @@ unsigned int birdIndices[12] =
     1, 4, 5
 };
 
-void onWindowClose(__attribute__((unused)) IEntity *eventEntity, __attribute__((unused)) IEventData *sendor)
+void onWindowClose(__attribute__((unused)) IEntity *eventEntity, __attribute__((unused)) coreEventData *sendor)
 {
     app::keepRunning = false;
 }
 
-void onServerConnect(__attribute__((unused)) IEntity *eventEntity, IEventData *sendor)
+void onServerConnect(__attribute__((unused)) IEntity *eventEntity, coreEventData *sendor)
 {
     connectionData *eventData = dynamic_cast<connectionData *>(sendor);
 
@@ -129,7 +129,7 @@ void onServerConnect(__attribute__((unused)) IEntity *eventEntity, IEventData *s
     eventData->send(toSend);
 }
 
-void onServerMessage(__attribute__((unused)) IEntity *eventEntity, IEventData *sendor)
+void onServerMessage(__attribute__((unused)) IEntity *eventEntity, coreEventData *sendor)
 {
     connectionReadData *eventData = dynamic_cast<connectionReadData *>(sendor);
 
@@ -151,26 +151,25 @@ TEST(networkManger, decoder)
 {
     return; // test should only be active when you test the net manger becose it will stop all the other test and requrie a server
     app::init();
-    eventManger::addEvent(events::WindowClose, onWindowClose);
-    
-    windowPieceId gameWindowId =  windowManger::addWindow("flappyBird");
-    windowManger::setCamera(gameWindowId, new orthographicCameraControler(1.6f / 0.9f, gameWindowId));
-    windowManger::bindContext(gameWindowId);
 
-    mesh birdMesh(gameWindowId);
-    birdMesh.setShader("res/flappyBird/bird.shader");
 
-    birdMesh.setVertexBuffer(birdPostions, 6 * 5 * sizeof(float));
-    birdMesh.setIndexBuffer(birdIndices, 12);
-    birdMesh.getVertexBuffer()->pushElement({LT_FLOAT, 3, false, 4});
-    birdMesh.getVertexBuffer()->pushElement({LT_FLOAT, 2, false, 4});
-    birdMesh.setVertexArray();
+    event *onWindowCloseEvent = event::eventBuilder::startBuilding()->
+        setEventType(events::WindowClose)->
+        setEventCallback(onWindowClose)->build();
 
-    birdMesh.setMaterial("res/textures/5_star.png", {0.0f, 0.0f, 0.0f, 0.0f});
-    birdMesh.setTransform(glm::translate(glm::mat4(1.0f), { 0.0f,  0.0f, 0.0f}));
 
-    eventManger::addEvent(events::serverConnection, onServerConnect);
-    eventManger::addEvent(events::messageReceived, onServerMessage);
+    event *onServerConnectionEvent = event::eventBuilder::startBuilding()->
+        setEventType(events::serverConnection)->
+        setEventCallback(onServerConnect)->build();
+
+
+    event *onMessageReceived = event::eventBuilder::startBuilding()->
+        setEventType(events::messageReceived)->
+        setEventCallback(onServerMessage)->build();
+
+    eventManger::addEvent(onWindowCloseEvent);
+    eventManger::addEvent(onServerConnectionEvent);
+    eventManger::addEvent(onMessageReceived);
     
     connectionId testConId = connectionsManager::addConnection("localhost", 80, new basicDataFormat());
     packet toSend;

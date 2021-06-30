@@ -9,7 +9,7 @@
 #include <chrono>
 #include <thread>
 
-namespace LaughTaleEngine
+namespace LTE
 {
     namespace apoSequencerAndRythemManer
     {

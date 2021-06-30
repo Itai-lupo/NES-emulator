@@ -6,7 +6,7 @@
 
 
 
-namespace LaughTaleEngine::goingMarryNetworkManger
+namespace LTE::goingMarryNetworkManger
 {
 
     std::vector<connection*> *connectionsManager::connections;

@@ -5,7 +5,7 @@
 #include "entity.h"
 #include "events.h"
 
-namespace LaughTaleEngine
+namespace LTE
 {
     class orthographicCameraControler: public coreCameraControler
     {
@@ -26,9 +26,9 @@ namespace LaughTaleEngine
             eventLaughId OnUpdateId; 
             entityTaleId CameraEntityId;
 
-            static void OnMouseScrolled(IEntity *cameraInfo, IEventData *sendor);
-            static void OnWindowResized(IEntity *cameraInfo, IEventData *sendor);
-            static void OnUpdate(IEntity *cameraInfo, IEventData *sendor);
+            static void OnMouseScrolled(IEntity *cameraInfo, coreEventData *sendor);
+            static void OnWindowResized(IEntity *cameraInfo, coreEventData *sendor);
+            static void OnUpdate(IEntity *cameraInfo, coreEventData *sendor);
 
 
         public:

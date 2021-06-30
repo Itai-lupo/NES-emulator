@@ -3,7 +3,7 @@
 #include <vector>
 #include "logger.h"
 
-namespace LaughTaleEngine
+namespace LTE
 {
     struct VertexBufferElement{
         unsigned int type;

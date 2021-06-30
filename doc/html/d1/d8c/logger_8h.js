@@ -1,6 +1,6 @@
 var logger_8h =
 [
-    [ "logger", "d6/d62/class_laugh_tale_engine_1_1logger.html", null ],
+    [ "logger", "d3/d08/class_l_t_e_1_1logger.html", null ],
     [ "LAUGHTALE_ENGINR_CONDTION_LOG_ERROR", "d1/d8c/logger_8h.html#a030a2caf9f43b4e2926c659309f955ef", null ],
     [ "LAUGHTALE_ENGINR_CONDTION_LOG_FATAL", "d1/d8c/logger_8h.html#a3052079577798185a0dafda4915fa760", null ],
     [ "LAUGHTALE_ENGINR_CONDTION_LOG_INFO", "d1/d8c/logger_8h.html#af88fb42cd54fc3611866b6f8837827e2", null ],

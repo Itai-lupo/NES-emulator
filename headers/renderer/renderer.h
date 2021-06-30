@@ -6,7 +6,7 @@
 #include "mesh.h"
 
 
-namespace LaughTaleEngine
+namespace LTE
 {
 
     struct SceneData

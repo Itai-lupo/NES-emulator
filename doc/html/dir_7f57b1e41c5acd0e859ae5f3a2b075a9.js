@@ -8,7 +8,7 @@ var dir_7f57b1e41c5acd0e859ae5f3a2b075a9 =
     [ "utls", "dir_4a53f2cd8aac51302c6411c2f2500ac2.html", "dir_4a53f2cd8aac51302c6411c2f2500ac2" ],
     [ "windowsMangment", "dir_5eb0907a39cfb0b5a51b2ec9f575bde3.html", "dir_5eb0907a39cfb0b5a51b2ec9f575bde3" ],
     [ "app.h", "d2/d39/app_8h.html", [
-      [ "app", "d9/d89/class_laugh_tale_engine_1_1app.html", null ]
+      [ "app", "d0/d13/class_l_t_e_1_1app.html", null ]
     ] ],
     [ "LaughTaleEngine.h", "de/dd5/_laugh_tale_engine_8h.html", null ]
 ];

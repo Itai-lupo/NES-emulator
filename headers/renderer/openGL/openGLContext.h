@@ -4,7 +4,7 @@
 
 struct GLFWwindow;
 
-namespace LaughTaleEngine
+namespace LTE
 {
     class openGLContext : public GraphicsContext
 	{

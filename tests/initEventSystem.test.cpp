@@ -3,12 +3,12 @@
 #include <vector> 
 #include "LaughTaleEngine.h"
 
-using namespace LaughTaleEngine;
+using namespace LTE;
 
-struct testEventData: public IEventData
+struct testEventData: public coreEventData
 {
     public:
-        testEventData(int id):id(id){}
+        testEventData(int id): coreEventData(events::manualEvent), id(id){}
         int id;
 };
 
@@ -43,7 +43,7 @@ TEST(eventSystem, addAndCallEvent)
 
     try
     {
-        eventCallbackFunc callback = [](IEntity *eventEntity, IEventData *sendor){
+        eventCallbackFunc callback = [](IEntity *eventEntity, coreEventData *sendor){
             EXPECT_EQ(0, eventEntity->getId()) << "wrong entity id";
             EXPECT_EQ(1, dynamic_cast<testEventData*>(sendor)->id) << "wrong event id";
             dynamic_cast<testEntity*>(eventEntity)->x = 10;
@@ -52,12 +52,17 @@ TEST(eventSystem, addAndCallEvent)
         app::init();
         testEntity testE;
         entityTaleId id = entityManger::addEntity(&testE);
-        eventManger::addEvent(events::manualEvent, callback, id);
+        event *event = event::eventBuilder::startBuilding()->
+            setEventType(events::manualEvent)->
+            setEventCallback(callback)->
+            setEntityID(id)->
+            build();
+        eventManger::addEvent(event);
 
         LAUGHTALE_ENGINR_LOG_INFO("event added sucssfly");
 
         testEventData *testEvent = new testEventData(1);
-        eventManger::trigerEvent(events::manualEvent, testEvent);
+        eventManger::trigerEvent(testEvent);
         EXPECT_EQ(10, dynamic_cast<testEntity*>(&testE)->x) << "wrong event id";
 
         app::close();
@@ -73,7 +78,7 @@ TEST(eventSystem, EventWithMoreThenOneCallback)
 
     try
     {
-        eventCallbackFunc callback = [](IEntity *eventEntity, IEventData *sendor){
+        eventCallbackFunc callback = [](IEntity *eventEntity, coreEventData *sendor){
             EXPECT_EQ(0, eventEntity->getId()) << "wrong entity id";
             EXPECT_EQ(1, dynamic_cast<testEventData*>(sendor)->id) << "wrong event id";
             dynamic_cast<testEntity*>(eventEntity)->x++;
@@ -84,9 +89,14 @@ TEST(eventSystem, EventWithMoreThenOneCallback)
         // testE->x = 0;
         // testE->id = 0;
         entityTaleId id =  entityManger::addEntity(testE);
-        eventManger::addEvent(events::manualEvent, callback, id);
-        eventManger::addEvent(events::manualEvent, callback, id);
-        eventManger::addEvent(events::manualEvent, callback, id);
+        event *event = event::eventBuilder::startBuilding()->
+            setEventType(events::manualEvent)->
+            setEventCallback(callback)->
+            setEntityID(id)->
+            build();
+        eventManger::addEvent(event);
+        eventManger::addEvent(event);
+        eventManger::addEvent(event);
 
         LAUGHTALE_ENGINR_LOG_INFO(
             "event added sucssfly: " + 
@@ -94,7 +104,7 @@ TEST(eventSystem, EventWithMoreThenOneCallback)
 
         testEventData *testEvent = new testEventData(1);
 
-        eventManger::trigerEvent(events::manualEvent, testEvent);
+        eventManger::trigerEvent(testEvent);
         EXPECT_EQ(3, dynamic_cast<testEntity *>(testE)->x) << "entity didnt change";
 
         app::close();
@@ -112,7 +122,7 @@ TEST(eventSystem, fewEntityWithFewEvents)
 
     try
     {
-        eventCallbackFunc callback = [](IEntity *eventEntity, IEventData *sendor){
+        eventCallbackFunc callback = [](IEntity *eventEntity, coreEventData *sendor){
             testEntity *t = dynamic_cast<testEntity*>(eventEntity);
 
             EXPECT_EQ(0, eventEntity->getId()) << "wrong entity id on 1";
@@ -120,14 +130,14 @@ TEST(eventSystem, fewEntityWithFewEvents)
             t->x++;
         };
         
-        eventCallbackFunc callback2 = [](IEntity *eventEntity, IEventData *sendor){
+        eventCallbackFunc callback2 = [](IEntity *eventEntity, coreEventData *sendor){
             testEntity *t = dynamic_cast<testEntity*>(eventEntity);
             EXPECT_EQ(1, eventEntity->getId()) << "wrong entity id on 2";
             EXPECT_EQ(1,  dynamic_cast<testEventData*>(sendor)->id) << "wrong event id on 2";
             t->x++;
         };
 
-        eventCallbackFunc callback3 = [](IEntity *eventEntity, IEventData *sendor){
+        eventCallbackFunc callback3 = [](IEntity *eventEntity, coreEventData *sendor){
             testEntity *t = dynamic_cast <testEntity*>(eventEntity);
             EXPECT_EQ(2, eventEntity->getId()) << "wrong entity id on 3";
             EXPECT_EQ(1, dynamic_cast<testEventData*>(sendor)->id) << "wrong event id pn 3";
@@ -144,21 +154,41 @@ TEST(eventSystem, fewEntityWithFewEvents)
         entityTaleId id2 =  entityManger::addEntity(testEntity2);
         entityTaleId id3 =  entityManger::addEntity(testEntity3);
         
-        eventManger::addEvent(events::manualEvent, callback, id);
-        eventManger::addEvent(events::manualEvent, callback, id);
-        eventManger::addEvent(events::manualEvent, callback, id);
-        eventManger::addEvent(events::manualEvent, callback2, id2);
-        eventManger::addEvent(events::manualEvent, callback2, id2);
-        eventManger::addEvent(events::manualEvent, callback2, id2);
-        eventManger::addEvent(events::manualEvent, callback3, id3);
-        eventManger::addEvent(events::manualEvent, callback3, id3);
-        eventManger::addEvent(events::manualEvent, callback3, id3);
+        event *event = event::eventBuilder::startBuilding()->
+            setEventType(events::manualEvent)->
+            setEventCallback(callback)->
+            setEntityID(id)->
+            build();
+
+        eventManger::addEvent(event);
+        eventManger::addEvent(event);
+        eventManger::addEvent(event);
+
+        event = event::eventBuilder::startBuilding()->
+            setEventType(events::manualEvent)->
+            setEventCallback(callback2)->
+            setEntityID(id2)->
+            build();
+
+        eventManger::addEvent(event);
+        eventManger::addEvent(event);
+        eventManger::addEvent(event);
+
+        event = event::eventBuilder::startBuilding()->
+            setEventType(events::manualEvent)->
+            setEventCallback(callback3)->
+            setEntityID(id3)->
+            build();
+
+        eventManger::addEvent(event);
+        eventManger::addEvent(event);
+        eventManger::addEvent(event);
 
     
         LAUGHTALE_ENGINR_LOG_INFO("event added sucssfly: " + std::to_string(id));
 
         testEventData *testEvent = new testEventData(1);
-        eventManger::trigerEvent(events::manualEvent, testEvent);
+        eventManger::trigerEvent(testEvent);
         
         EXPECT_EQ(3, dynamic_cast<testEntity*>(testEntity1)->x) << "entity didnt change on 1";
         EXPECT_EQ(3, dynamic_cast<testEntity*>(testEntity2)->x) << "entity didnt change on 2";

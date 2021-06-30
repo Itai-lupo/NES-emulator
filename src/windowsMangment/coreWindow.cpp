@@ -5,7 +5,7 @@
 #include "shaderManger.h"
 #include "orthographicCameraControler.h"
 
-namespace LaughTaleEngine {
+namespace LTE {
 
     coreWindow::coreWindow(const std::string& title, unsigned int width, unsigned int height, bool useImGui, renderAPI renderAPIType)
         :Title(title), Width(width), Height(height), useImGui(useImGui), renderAPIType(renderAPIType)

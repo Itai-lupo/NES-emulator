@@ -2,7 +2,7 @@
 #include "glad/glad.h"
 #include "handleOpenGlErrors.h"
 
-namespace LaughTaleEngine
+namespace LTE
 {
     void openGLRenderApi::init()
     {

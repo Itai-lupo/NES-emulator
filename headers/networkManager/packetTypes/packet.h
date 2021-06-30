@@ -6,7 +6,7 @@
 #include <memory>
 #include <cstring>
 
-namespace LaughTaleEngine::goingMarryNetworkManger
+namespace LTE::goingMarryNetworkManger
 {
     struct byteStream
     {

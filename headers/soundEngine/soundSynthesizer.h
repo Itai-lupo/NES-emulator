@@ -3,7 +3,7 @@
 #include "envelope.h"
 #include <vector>
 
-namespace LaughTaleEngine
+namespace LTE
 {
     class soundSynthesizer
     {

@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 #include "logger.h"
-namespace LaughTaleEngine
+namespace LTE
 {
     std::vector<IEntity*> entityManger::entitys = std::vector<IEntity*>();
     u_int32_t entityManger::nextEventId = 0;

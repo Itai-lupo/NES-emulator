@@ -3,7 +3,7 @@
 #include "envelope.h"
 #include "soundSynthesizer.h"
 
-namespace LaughTaleEngine
+namespace LTE
 {
     namespace apoSequencerAndRythemManer
     {

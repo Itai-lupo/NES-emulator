@@ -3,7 +3,7 @@
 #include "handleOpenGlErrors.h"
 #include "logger.h"
 
-namespace LaughTaleEngine
+namespace LTE
 {
     vertexBufferId OpenGLVertexBuffer::init()
     {

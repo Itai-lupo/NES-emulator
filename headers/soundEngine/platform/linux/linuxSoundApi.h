@@ -4,7 +4,7 @@
 #include <alsa/asoundlib.h>
 #include "soundApi.h"
 
-namespace LaughTaleEngine
+namespace LTE
 {
     class linuxSoundApi: public soundApi
     {

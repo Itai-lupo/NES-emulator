@@ -1,7 +1,7 @@
 #include "material.h"
 #include "openGLTexture.h"
 
-namespace LaughTaleEngine
+namespace LTE
 {
     material::material(const std::string& textureFilePath, glm::vec4 baseColor)
     {

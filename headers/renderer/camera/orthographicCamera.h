@@ -3,7 +3,7 @@
 #include "coreCamera.h"
 #include <glm/glm.hpp>
 
-namespace LaughTaleEngine
+namespace LTE
 {
     class orthographicCamera: public coreCamera
     {

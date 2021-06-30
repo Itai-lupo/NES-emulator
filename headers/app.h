@@ -1,5 +1,5 @@
 
-namespace LaughTaleEngine{
+namespace LTE{
     class app
     {
         public:

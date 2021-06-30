@@ -2,7 +2,7 @@
 #include <glm/glm.hpp>
 #include "indexBufferManger.h"
 
-namespace LaughTaleEngine
+namespace LTE
 {
     class renderApi
     {

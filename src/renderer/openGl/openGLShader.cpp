@@ -12,7 +12,7 @@
 
 #include "handleOpenGlErrors.h"
 
-namespace LaughTaleEngine
+namespace LTE
 {
     shaderId openGLShader::init()
     {

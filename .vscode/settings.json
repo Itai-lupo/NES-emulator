@@ -97,7 +97,12 @@
         "any": "cpp",
         "*.ipp": "cpp",
         "coroutine": "cpp",
-        "corecameracontroler.h": "c"
+        "corecameracontroler.h": "c",
+        "windowresizedata.h": "c",
+        "mouseclickdata.h": "c",
+        "keytypeddata.h": "c",
+        "mousescrolldata.h": "c",
+        "onupdatedata.h": "c"
     },
     "files.exclude": {
         "build/": true,

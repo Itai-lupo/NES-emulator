@@ -8,10 +8,12 @@
 #include "dataFormatter.h"
 #include "dataCryptographer.h"
 #include <functional>
+#include "coreEventData.h"
+#include "mouseMoveEventData.h"
 
-namespace LaughTaleEngine::goingMarryNetworkManger
+namespace LTE::goingMarryNetworkManger
 {
-    struct connectionData: public IEventData
+    struct connectionData: public coreEventData
     {
         connectionId conId;
         std::string ip;

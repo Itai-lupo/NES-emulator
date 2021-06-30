@@ -1,4 +1,13 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$dd/d40/class_laugh_tale_engine_1_1core_window.html" title=" " alt="" coords="5,5,207,32"/>
-<area shape="rect" id="node2" href="$d3/d04/class_laugh_tale_engine_1_1linux_window.html" title=" " alt="" coords="255,5,457,32"/>
+<area shape="rect" id="node1" href="$d3/d94/struct_l_t_e_1_1core_event_data.html" title=" " alt="" coords="5,224,147,251"/>
+<area shape="rect" id="node2" href="$d2/df7/struct_l_t_e_1_1_key_data.html" title=" " alt="" coords="247,5,353,32"/>
+<area shape="rect" id="node3" href="$d0/d31/struct_l_t_e_1_1_window_resize_data.html" title=" " alt="" coords="215,56,385,83"/>
+<area shape="rect" id="node4" href="$d9/d7b/struct_l_t_e_1_1going_marry_network_manger_1_1connection_data.html" title=" " alt="" coords="195,107,405,149"/>
+<area shape="rect" id="node6" href="$df/d3b/struct_l_t_e_1_1key_typed_data.html" title=" " alt="" coords="231,173,369,200"/>
+<area shape="rect" id="node7" href="$d8/d50/struct_l_t_e_1_1mouse_click_data.html" title=" " alt="" coords="225,224,375,251"/>
+<area shape="rect" id="node8" href="$d6/da3/struct_l_t_e_1_1mouse_move_data.html" title=" " alt="" coords="223,275,377,301"/>
+<area shape="rect" id="node9" href="$d5/d4d/struct_l_t_e_1_1mouse_scroll_data.html" title=" " alt="" coords="223,325,377,352"/>
+<area shape="rect" id="node10" href="$dd/d5d/struct_l_t_e_1_1on_update_data.html" title=" " alt="" coords="231,376,369,403"/>
+<area shape="rect" id="node11" href="$d8/d35/structtest_event_data.html" title=" " alt="" coords="247,427,353,453"/>
+<area shape="rect" id="node5" href="$de/d96/struct_l_t_e_1_1going_marry_network_manger_1_1connection_read_data.html" title=" " alt="" coords="453,107,664,149"/>
 </map>

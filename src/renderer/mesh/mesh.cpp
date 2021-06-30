@@ -9,7 +9,7 @@
 #include "material.h"
 #include "window.h"
 
-namespace LaughTaleEngine
+namespace LTE
 {
     mesh::mesh(windowPieceId windowId): IEntity(), windowId(windowId){}
 
@@ -28,7 +28,7 @@ namespace LaughTaleEngine
     void mesh::setVertexBuffer(float *vertexs, uint32_t size)
     {
         VertexBuffer *VB = new OpenGLVertexBuffer(vertexs, size);
-        VBId = LaughTaleEngine::windowManger::add(windowId, VB);
+        VBId = LTE::windowManger::add(windowId, VB);
     }
 
     void mesh::setVertexBuffer(vertexBufferId id)
@@ -38,8 +38,8 @@ namespace LaughTaleEngine
 
     void mesh::setIndexBuffer(uint32_t *indices, uint32_t count)
     {
-        LaughTaleEngine::indexBuffer *IB = new LaughTaleEngine::openGLIndexBuffer(indices, count);
-        IBId = LaughTaleEngine::windowManger::add(windowId, IB);
+        LTE::indexBuffer *IB = new LTE::openGLIndexBuffer(indices, count);
+        IBId = LTE::windowManger::add(windowId, IB);
     }
 
     void mesh::setIndexBuffer(indexBufferId id)

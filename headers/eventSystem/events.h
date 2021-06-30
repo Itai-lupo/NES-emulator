@@ -3,113 +3,80 @@
 #include <vector>
 #include "core.h"
 #include "entity.h"
+#include "coreEventData.h"
+#include "mouseMoveEventData.h"
+#include "KeyData.h"
+#include "WindowResizeData.h"
+#include "keyTypedData.h"
+#include "mouseClickData.h"
+#include "mouseScrollData.h"
+#include "onUpdateData.h"
+#include "logger.h"
 
-
-
-namespace LaughTaleEngine
+namespace LTE
 {
-    struct event;
-    struct IEventData;
-    typedef std::function<void(IEntity *eventEntity, IEventData *sendor)> eventCallbackFunc;
-
-    enum events
-    {
-        manualEvent,
-        WindowClose, WindowResize, WindowFocus, WindowLostFocus, WindowMoved,
-		AppTick, AppUpdate, AppRender,
-		KeyPressed, KeyReleased, KeyRepeat, KeyTyped,
-		MouseButtonPressed, MouseButtonReleased, MouseMoved, MouseScrolled,
-        ImGuiRender,
-        serverConnection, messageReceived, messageSent, 
-        events_MAX
-    };
-
-    struct IEventData
-    {
-        IEventData(): eventType(manualEvent){}
-
-        IEventData(events eventType): eventType(eventType){}
-        virtual ~IEventData() {}
-        events eventType;
-        windowPieceId windowId;
-        eventLaughId id;
-    };
-    
-    struct WindowResizeData: public IEventData
-    {
-        WindowResizeData(int width, int height, windowPieceId window):
-            IEventData(events::WindowResize), windowWidth(width), windowHeight(height), window(window){}
-
-        int windowWidth, windowHeight;
-        windowPieceId window;
-    };
-    
-    
-    struct KeyData: public IEventData
-    {
-        KeyData(int key, int scancode, int mods, windowPieceId window):
-            IEventData(), key(key), scancode(scancode), mods(mods), window(window){}
-
-        int key, scancode, mods;
-        windowPieceId window;
-
-    };
-
-    struct keyTypedData: public IEventData
-    {
-        keyTypedData(unsigned int keycode, windowPieceId window):
-            keycode(keycode), window(window){}
-
-        unsigned int keycode;
-        windowPieceId window;
-
-    };
-    
-    struct mouseClickData: public IEventData
-    {
-        mouseClickData(int button, int mods, windowPieceId window):
-            IEventData(), button(button), mods(mods), window(window){}
-
-        int button, mods;
-        windowPieceId window;
-
-    };
-
-    struct mouseScrollData: public IEventData
-    {
-        mouseScrollData(double xOffset, double yOffset, windowPieceId window):
-            IEventData(events::MouseScrolled), xOffset(xOffset), yOffset(yOffset), window(window){}
-
-        double xOffset, yOffset;
-        windowPieceId window;
-
-    };
-
-    struct mouseMoveData: public IEventData
-    {
-        mouseMoveData(double xPos, double yPos, windowPieceId window):
-            IEventData(events::MouseScrolled), xPos(xPos), yPos(yPos), window(window) {}
-
-        double xPos, yPos;
-        windowPieceId window;
-    };
-
-    struct onUpdateData: public IEventData
-    {
-        onUpdateData(uint64_t startTime, uint64_t currentTime, short DeltaTime):
-            IEventData(events::AppUpdate), startTime(startTime), currentTime(currentTime), DeltaTime(DeltaTime){}
-
-        uint64_t startTime, currentTime;
-        short DeltaTime;
-    };
+    typedef std::function<void(IEntity *eventEntity, coreEventData *sendor)> eventCallbackFunc;
     
     struct event
     {
         public:
-            event(events eventType,  eventCallbackFunc callback, int entityID, windowPieceId window)
-                :window(window), eventType(eventType), callback(callback), entityID(entityID){};
+            class eventBuilder
+            {
+                private:
+                    static inline eventBuilder *singleton = nullptr;
+                    event *product;
+                    eventBuilder(){}
+                public:
+                    static eventBuilder *startBuilding()
+                    {
+                        if(singleton == nullptr)
+                            singleton = new eventBuilder();
+                        
+                        singleton->rest();
+                        return singleton;
+                    }
 
-            void trigerEvent(IEntity *eventEntity, IEventData *sendor)
+                    eventBuilder *rest()
+                    {
+                        product = new event();
+                        return singleton;
+                    }
+
+                    eventBuilder *setWindowId(windowPieceId window)
+                    {
+                        product->window = window;
+                        return singleton;
+                    }
+                    
+                    eventBuilder *setEventType(events eventType)
+                    {
+                        product->eventType = eventType;
+                        return singleton;
+                    }
+                    
+                    eventBuilder *setEventCallback(eventCallbackFunc  callback)
+                    {
+                        product->callback = callback;
+                        return singleton;
+                    }
+                    
+                    eventBuilder *setEntityID(entityTaleId entityID)
+                    {
+                        product->entityID = entityID;
+                        return singleton;
+                    }
+
+                    event *build()
+                    {
+                        LAUGHTALE_ENGINR_CONDTION_LOG_FATAL("you need to set event type", product->eventType == events::noEvent);
+                        LAUGHTALE_ENGINR_CONDTION_LOG_FATAL("you need to set event callback", !product->callback);
+
+                        return product;
+                    }
+            };
+
+            
+            void trigerEvent(IEntity *eventEntity, coreEventData *sendor)
             {
                 this->callback(eventEntity, sendor);
             }
@@ -120,10 +87,12 @@ namespace LaughTaleEngine
 
             eventLaughId id;
         private:
-            windowPieceId window;
+            windowPieceId window = 0;
             events eventType;
-            eventCallbackFunc  callback;
-            entityTaleId entityID;
+            eventCallbackFunc callback;
+            entityTaleId entityID = -1;
+
+            event(){}
     };
 
     class eventManger
@@ -134,11 +103,8 @@ namespace LaughTaleEngine
         public:
             static void init();
             static void close();
-            static eventLaughId addEvent(events eventType, eventCallbackFunc callback, entityTaleId entityID = -1, windowPieceId windowID = 0);
             static eventLaughId addEvent(event *eventToAdd);
             static void removeEvent(events eventType, eventLaughId eventToRemove);
-            static void trigerEvent(events eventType, IEventData *sendor, windowPieceId windowID = 0);
-            static void trigerEventById(eventLaughId id, IEventData *sendor);
-
+            static void trigerEvent(coreEventData *sendor);
     };
 }

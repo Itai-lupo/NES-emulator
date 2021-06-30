@@ -1,4 +1,4 @@
 var namespaces_dup =
 [
-    [ "LaughTaleEngine", "db/d49/namespace_laugh_tale_engine.html", "db/d49/namespace_laugh_tale_engine" ]
+    [ "LTE", "dc/d59/namespace_l_t_e.html", "dc/d59/namespace_l_t_e" ]
 ];

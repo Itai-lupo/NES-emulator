@@ -2,7 +2,7 @@
 #include "logger.h"
 #include <algorithm>
 
-namespace LaughTaleEngine
+namespace LTE
 {
     void shaderManger::init()
     {
