@@ -12,6 +12,7 @@ namespace LTE
     material::material(const std::string& textureFilePath)
     {
         tex = new openGLTexture(textureFilePath);
+        this->baseColor = {0.0f, 0.0f, 0.0f, 0.0f};
     }
 
     material::material(glm::vec4 baseColor)
@@ -39,6 +40,11 @@ namespace LTE
         s->setUniform4f("baseColor", baseColor.r, baseColor.g, baseColor.b, baseColor.a);
     }
 
+    void material::setTexture(texture *tex)
+    {
+        this->tex = tex;
+    }
+
     void material::setTexture(const std::string& path)
     {
         tex = new openGLTexture(path);
@@ -47,5 +53,10 @@ namespace LTE
     void material::setBaseColor(glm::vec4 baseColor)
     {
         this->baseColor = baseColor;
+    }
+
+    glm::vec4 material::getRGBA()
+    {
+        return this->baseColor;
     }
 }

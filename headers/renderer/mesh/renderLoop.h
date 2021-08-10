@@ -12,7 +12,7 @@ namespace LTE
     {
     private:
         static std::vector<mesh *> *meshs;
-        static void renderMesh(LTE::IEntity *eventEntity, LTE::coreEventData *sendor);
+        static void renderMesh(LTE::gameObject *eventEntity, LTE::coreEventData *sendor);
     public:
         static void init();
         static void close();

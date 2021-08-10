@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>laughtale game engine: headers/renderer/VertexArray/vertexArray.h Source File</title>
+<title>laughtale game engine: headers/vertexArray.h Source File</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -96,31 +96,28 @@ $(document).ready(function(){initNavTree('d3/de4/vertex_array_8h_source.html','.
 <div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="../../df/db4/class_l_t_e_1_1vertex_array.html">    7</a></span>&#160;    <span class="keyword">class </span><a class="code" href="../../df/db4/class_l_t_e_1_1vertex_array.html">vertexArray</a></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    {</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="../../df/db4/class_l_t_e_1_1vertex_array.html#a6a95828f4b4de58c82a0c25200c5a8ff">   10</a></span>&#160;            <a class="code" href="../../dc/d59/namespace_l_t_e.html#a7d91e85b98ad096924555bbe9bf6c42d">vertexArrayId</a> <a class="code" href="../../df/db4/class_l_t_e_1_1vertex_array.html#a6a95828f4b4de58c82a0c25200c5a8ff">rendererId</a>;</div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="../../df/db4/class_l_t_e_1_1vertex_array.html#ac809a00b7f25e657a1af043e296188dc">   11</a></span>&#160;            <span class="keyword">virtual</span> <a class="code" href="../../dc/d59/namespace_l_t_e.html#a7d91e85b98ad096924555bbe9bf6c42d">vertexArrayId</a> <a class="code" href="../../df/db4/class_l_t_e_1_1vertex_array.html#ac809a00b7f25e657a1af043e296188dc">init</a>() = 0;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="../../df/db4/class_l_t_e_1_1vertex_array.html#abe8f7f4901800b1ad1c33c159fa4957c">   13</a></span>&#160;            <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../df/db4/class_l_t_e_1_1vertex_array.html#abe8f7f4901800b1ad1c33c159fa4957c">AddBuffer</a>(<a class="code" href="../../d2/dcd/class_l_t_e_1_1_vertex_buffer.html">VertexBuffer</a> *vb) = 0;</div>
-<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="../../df/db4/class_l_t_e_1_1vertex_array.html#a7468b788c1367c0112dac861eee812ea">   14</a></span>&#160;            <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../df/db4/class_l_t_e_1_1vertex_array.html#a7468b788c1367c0112dac861eee812ea">bind</a>() = 0;</div>
-<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="../../df/db4/class_l_t_e_1_1vertex_array.html#a8de7adca7d6dacc60dcb2972073065ee">   15</a></span>&#160;            <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../df/db4/class_l_t_e_1_1vertex_array.html#a8de7adca7d6dacc60dcb2972073065ee">unbind</a>() = 0;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    };</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;} </div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="../../df/db4/class_l_t_e_1_1vertex_array.html#af38a7de8935d6fb14523d02ab542d936">   10</a></span>&#160;            <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../df/db4/class_l_t_e_1_1vertex_array.html#af38a7de8935d6fb14523d02ab542d936">init</a>() = 0;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="../../df/db4/class_l_t_e_1_1vertex_array.html#abe8f7f4901800b1ad1c33c159fa4957c">   12</a></span>&#160;            <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../df/db4/class_l_t_e_1_1vertex_array.html#abe8f7f4901800b1ad1c33c159fa4957c">AddBuffer</a>(<a class="code" href="../../d2/dcd/class_l_t_e_1_1_vertex_buffer.html">VertexBuffer</a> *vb) = 0;</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="../../df/db4/class_l_t_e_1_1vertex_array.html#a7468b788c1367c0112dac861eee812ea">   13</a></span>&#160;            <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../df/db4/class_l_t_e_1_1vertex_array.html#a7468b788c1367c0112dac861eee812ea">bind</a>() = 0;</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="../../df/db4/class_l_t_e_1_1vertex_array.html#a8de7adca7d6dacc60dcb2972073065ee">   14</a></span>&#160;            <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../df/db4/class_l_t_e_1_1vertex_array.html#a8de7adca7d6dacc60dcb2972073065ee">unbind</a>() = 0;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    };</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;} </div>
 <div class="ttc" id="a_vertex_buffer_8h_html"><div class="ttname"><a href="../../d4/d84/_vertex_buffer_8h.html">VertexBuffer.h</a></div></div>
 <div class="ttc" id="aclass_l_t_e_1_1_vertex_buffer_html"><div class="ttname"><a href="../../d2/dcd/class_l_t_e_1_1_vertex_buffer.html">LTE::VertexBuffer</a></div><div class="ttdef"><b>Definition:</b> VertexBuffer.h:38</div></div>
 <div class="ttc" id="aclass_l_t_e_1_1vertex_array_html"><div class="ttname"><a href="../../df/db4/class_l_t_e_1_1vertex_array.html">LTE::vertexArray</a></div><div class="ttdef"><b>Definition:</b> vertexArray.h:8</div></div>
-<div class="ttc" id="aclass_l_t_e_1_1vertex_array_html_a6a95828f4b4de58c82a0c25200c5a8ff"><div class="ttname"><a href="../../df/db4/class_l_t_e_1_1vertex_array.html#a6a95828f4b4de58c82a0c25200c5a8ff">LTE::vertexArray::rendererId</a></div><div class="ttdeci">vertexArrayId rendererId</div><div class="ttdef"><b>Definition:</b> vertexArray.h:10</div></div>
 <div class="ttc" id="aclass_l_t_e_1_1vertex_array_html_a7468b788c1367c0112dac861eee812ea"><div class="ttname"><a href="../../df/db4/class_l_t_e_1_1vertex_array.html#a7468b788c1367c0112dac861eee812ea">LTE::vertexArray::bind</a></div><div class="ttdeci">virtual void bind()=0</div></div>
 <div class="ttc" id="aclass_l_t_e_1_1vertex_array_html_a8de7adca7d6dacc60dcb2972073065ee"><div class="ttname"><a href="../../df/db4/class_l_t_e_1_1vertex_array.html#a8de7adca7d6dacc60dcb2972073065ee">LTE::vertexArray::unbind</a></div><div class="ttdeci">virtual void unbind()=0</div></div>
 <div class="ttc" id="aclass_l_t_e_1_1vertex_array_html_abe8f7f4901800b1ad1c33c159fa4957c"><div class="ttname"><a href="../../df/db4/class_l_t_e_1_1vertex_array.html#abe8f7f4901800b1ad1c33c159fa4957c">LTE::vertexArray::AddBuffer</a></div><div class="ttdeci">virtual void AddBuffer(VertexBuffer *vb)=0</div></div>
-<div class="ttc" id="aclass_l_t_e_1_1vertex_array_html_ac809a00b7f25e657a1af043e296188dc"><div class="ttname"><a href="../../df/db4/class_l_t_e_1_1vertex_array.html#ac809a00b7f25e657a1af043e296188dc">LTE::vertexArray::init</a></div><div class="ttdeci">virtual vertexArrayId init()=0</div></div>
+<div class="ttc" id="aclass_l_t_e_1_1vertex_array_html_af38a7de8935d6fb14523d02ab542d936"><div class="ttname"><a href="../../df/db4/class_l_t_e_1_1vertex_array.html#af38a7de8935d6fb14523d02ab542d936">LTE::vertexArray::init</a></div><div class="ttdeci">virtual void init()=0</div></div>
 <div class="ttc" id="acore_8h_html"><div class="ttname"><a href="../../d5/dc4/core_8h.html">core.h</a></div></div>
-<div class="ttc" id="anamespace_l_t_e_html"><div class="ttname"><a href="../../dc/d59/namespace_l_t_e.html">LTE</a></div><div class="ttdef"><b>Definition:</b> app.cpp:23</div></div>
-<div class="ttc" id="anamespace_l_t_e_html_a7d91e85b98ad096924555bbe9bf6c42d"><div class="ttname"><a href="../../dc/d59/namespace_l_t_e.html#a7d91e85b98ad096924555bbe9bf6c42d">LTE::vertexArrayId</a></div><div class="ttdeci">uint32_t vertexArrayId</div><div class="ttdef"><b>Definition:</b> core.h:10</div></div>
+<div class="ttc" id="anamespace_l_t_e_html"><div class="ttname"><a href="../../dc/d59/namespace_l_t_e.html">LTE</a></div><div class="ttdef"><b>Definition:</b> app.cpp:19</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_7f57b1e41c5acd0e859ae5f3a2b075a9.html">headers</a></li><li class="navelem"><a class="el" href="../../dir_7e8e038cb0ca4ee16df0eb8a820741b7.html">renderer</a></li><li class="navelem"><a class="el" href="../../dir_45c468efcf484d42347bc0192bd8560b.html">VertexArray</a></li><li class="navelem"><a class="el" href="../../d3/de4/vertex_array_8h.html">vertexArray.h</a></li>
+    <li class="navelem"><a class="el" href="../../dir_7f57b1e41c5acd0e859ae5f3a2b075a9.html">headers</a></li><li class="navelem"><a class="el" href="../../d3/de4/vertex_array_8h.html">vertexArray.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>

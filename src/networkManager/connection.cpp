@@ -4,7 +4,7 @@
 #include "logger.h"
 #include "asioNetworkInterface.h"
 
-namespace LTE::goingMarryNetworkManger
+namespace LTE::GMNM
 {
     connection::connection(const std::string& ip, uint32_t port, dataFormatter *messageFormat, dataCryptographer *dataEncryption): 
         ip(ip), port(port), messageFormat(messageFormat), dataEncryption(dataEncryption)
@@ -48,7 +48,7 @@ namespace LTE::goingMarryNetworkManger
         id = networkConnction->getPort();
         connectionData *serverData = new connectionData(id, ip, port, [&, this](packet& data){ this->send(data); } );
         canSend = true;
-        serverData->eventType = events::serverConnection;
+        serverData->route = "server connection/";
         if(networkConnction->isConnected())
             eventManger::trigerEvent(serverData);
         delete serverData;
@@ -74,7 +74,7 @@ namespace LTE::goingMarryNetworkManger
             connectionReadData *recivedData = new connectionReadData(data, id, ip, port,
              [&, this](packet& data){ this->send(data); } 
              );
-            recivedData->eventType = events::messageReceived;
+            recivedData->route = "message received/";
             eventManger::trigerEvent(recivedData);
             delete recivedData;
         }

@@ -4,16 +4,14 @@ var core_8h =
     [ "connectionId", "d5/dc4/core_8h.html#ac6d5832948f68fe70c846157ac9ad55d", null ],
     [ "entityTaleId", "d5/dc4/core_8h.html#a9a053246fe6d76fb97a3d9e95c94dbda", null ],
     [ "eventLaughId", "d5/dc4/core_8h.html#a0e8bc231377ff780288f8eb847a80328", null ],
-    [ "indexBufferId", "d5/dc4/core_8h.html#a8ca77d02474ac4700057da444fc65bca", null ],
     [ "materialId", "d5/dc4/core_8h.html#af716e48d1fb65bf5074895482525a959", null ],
     [ "packetId", "d5/dc4/core_8h.html#aa2840f977937eeb2d93840e06e78e7b8", null ],
-    [ "shaderId", "d5/dc4/core_8h.html#a240c95c9f25acf9255a4bafa7ca67f1f", null ],
     [ "textureId", "d5/dc4/core_8h.html#a898790d5239608a12252fcc80608e2fa", null ],
-    [ "vertexArrayId", "d5/dc4/core_8h.html#a7d91e85b98ad096924555bbe9bf6c42d", null ],
-    [ "vertexBufferId", "d5/dc4/core_8h.html#a52df8f597871c85d528fe5dd540777fb", null ],
     [ "windowPieceId", "d5/dc4/core_8h.html#a8ae7e0c0e39c6dfb8804ee2eecf2c6c2", null ],
+    [ "cameraControler", "d5/dc4/core_8h.html#a5571205d38aef33eff89fe01be082f51", [
+      [ "orthographicCameraControlerType", "d5/dc4/core_8h.html#a5571205d38aef33eff89fe01be082f51a542be6a955f67c977229578eee455fc7", null ]
+    ] ],
     [ "renderAPI", "d5/dc4/core_8h.html#a9d6d15e418e3a8d3b1d1360b615a375d", [
-      [ "None", "d5/dc4/core_8h.html#a9d6d15e418e3a8d3b1d1360b615a375da70b53999561e400cbfc62aed79b1f1b9", null ],
       [ "OpenGL", "d5/dc4/core_8h.html#a9d6d15e418e3a8d3b1d1360b615a375da48cb9daa41ed1838d1f352a141725d37", null ]
     ] ],
     [ "sondWaves", "d5/dc4/core_8h.html#afdee5b51c7e400b6c32b22c2c909d2b0", [

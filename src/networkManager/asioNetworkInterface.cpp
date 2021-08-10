@@ -1,7 +1,7 @@
 #include "asioNetworkInterface.h"
 #include "logger.h"
 
-namespace LTE::goingMarryNetworkManger
+namespace LTE::GMNM
 {
     bool asioNetworkInterface::contextInitialized = false;
     asio::io_context  asioNetworkInterface::asioContext;

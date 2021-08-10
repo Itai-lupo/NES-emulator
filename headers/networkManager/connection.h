@@ -11,7 +11,7 @@
 #include "coreEventData.h"
 #include "mouseMoveEventData.h"
 
-namespace LTE::goingMarryNetworkManger
+namespace LTE::GMNM
 {
     struct connectionData: public coreEventData
     {

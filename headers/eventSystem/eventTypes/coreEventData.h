@@ -1,29 +1,20 @@
 #pragma once
-#include "coreEventData.h"
+
 
 namespace LTE
 {
-    enum events
-    {
-        noEvent,
-        manualEvent,
-        WindowClose, WindowResize, WindowFocus, WindowLostFocus, WindowMoved,
-		AppTick, AppUpdate, AppRender,
-		KeyPressed, KeyReleased, KeyRepeat, KeyTyped,
-		MouseButtonPressed, MouseButtonReleased, MouseMoved, MouseScrolled,
-        ImGuiRender,
-        serverConnection, messageReceived, messageSent, 
-        events_MAX
-    };
+    class window;
+    
     
     struct coreEventData
     {
-        coreEventData(): eventType(noEvent){}
+        coreEventData(): route("no route"){}
 
-        coreEventData(events eventType): eventType(eventType){}
+        coreEventData(std::string route): route(route){}
         virtual ~coreEventData() {}
-        events eventType;
+        std::string route;
         windowPieceId windowId = 0;
+        window *win = nullptr;
         eventLaughId id;
     };
 }

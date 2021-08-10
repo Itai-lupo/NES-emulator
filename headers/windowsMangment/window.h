@@ -3,91 +3,37 @@
 #include <functional>
 #include <vector>
 
-#include "events.h"
 
 #include "core.h"
-#include "shader.h"
-#include "shaderManger.h"
-#include "vertexArray.h"
-#include "vertexArrayManger.h"
-#include "VertexBuffer.h"
-#include "VertexBufferManger.h"
-#include "indexBufferManger.h"
+#include "operatingSystemInterface.h"
+#include "graphicsContext.h"
+#include "scene.h"
 #include "renderApi.h"
-#include "renderer.h"
-#include "coreCameraControler.h"
-#include "coreCamera.h"
 
-#if defined(_WIN32) || defined(_WIN64) // Windows
+#include "events.h"
+#include "entity.h"
 
-#elif defined(__ANDROID__)  // Android (implies Linux, so it must come first)
+namespace LTE {
+    class coreWindowFactory;
+	class window
+	{
+		private:
+			static inline void onUpdate(gameObject *eventEntity, coreEventData *sendor);
+			static inline void onWindowResize(gameObject *eventEntity, coreEventData *sendor);
 
-#elif defined(__linux__) // linux
-    #include "linuxWindow.h"
-    #include "linuxInput.h"
-    typedef LTE::linuxWindow window;
-    typedef LTE::linuxInput input;
-    typedef GLFWwindow* windowPtr;
-#elif defined(__APPLE__) && defined(__MACH__) // Apple OSX and iOS (Darwin)
-    #include <TargetConditionals.h>
-    #if  TARGET_OS_IPHONE == 1 || TARGET_IPHONE_SIMULATOR == 1// Apple iOS
-    
-    #elif TARGET_OS_MAC == 1 // Apple OSX
-    
-    #endif
-#else
-    #error "platform not supported"
-#endif
+		public:
+			operatingSystemInterface *operatingSystemPipLine;
+			graphicsContext *context; 
+			scene *activeScene;
+			renderApi *renderPipLine;
+            colliderSystem2D *sceneCollider;
 
-namespace LTE
-{
-    class windowManger
-    {
-        private:
-            static bool VSync;
-        public:
-            static void init();
-            static void close();
-            
-            static windowPieceId addWindow(const std::string& title = "raftel engine", bool useImGui = false, unsigned int width = 1280, unsigned int height = 720, renderAPI renderAPIType = renderAPI::OpenGL);
-            static void onUpdate(IEntity *eventEntity, coreEventData *sendor);
 
-            static window *getWindow(windowPieceId windowId);
-
-            static unsigned int getWidth(windowPieceId windowId);
-            static unsigned int getHeight(windowPieceId windowId);
-
-            static windowPtr raftelIdToWindowReference(windowPieceId windowId);
-
-            static void setVSync(bool enabled);
-
-            static bool isVSync(){ return VSync; };
-
-            static void bindContext(windowPieceId windowId);
-            
-            static vertexBufferId add(windowPieceId windowId, VertexBuffer *data);
-            static indexBufferId add(windowPieceId windowId, indexBuffer *data);
-            static vertexArrayId add(windowPieceId windowId, vertexArray *data);
-            static shaderId add(windowPieceId windowId, shader *data);
-
-            static void bindVB(windowPieceId windowId, vertexBufferId id);
-            static void bindIB(windowPieceId windowId, indexBufferId id);
-            static void bindVA(windowPieceId windowId, vertexArrayId id);
-            static void bindS(windowPieceId windowId, shaderId id);
-
-            static void pushElement(windowPieceId windowId, vertexBufferId id, VertexBufferElement data);
-            static void addBuffer(windowPieceId windowId, vertexArrayId id, vertexBufferId vbId);
-
-            static shaderManger *getShaderManger(windowPieceId windowId);
-
-            static VertexBufferManger *getVertexBufferManger(windowPieceId windowId);
-            static vertexArrayManger *getVertexArrayManger(windowPieceId windowId);
-
-            static uint32_t getIndexBufferCount(windowPieceId windowId, indexBufferId id);
-
-            static renderApi *getRenderApi(windowPieceId windowId);
-            static renderer *getRenderer(windowPieceId windowId);
-            static void setCamera(windowPieceId windowId, coreCameraControler *cam);
-    };
+			std::string Title = "laughtale new window";
+			unsigned int Width = 1280, Height = 720;
+			bool useImGui = false;
+			windowPieceId id;
+			void init();
+			~window();
+	};
 }
-    

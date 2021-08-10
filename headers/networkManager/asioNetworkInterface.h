@@ -10,7 +10,7 @@
 #include <asio/ts/internet.hpp>
 
 
-namespace LTE::goingMarryNetworkManger
+namespace LTE::GMNM
 {
     class asioNetworkInterface: public networkInterface
     {

@@ -14,13 +14,12 @@
 
 namespace LTE
 {
-    shaderId openGLShader::init()
+    void openGLShader::init()
     {
         ParseShaders();
         createShader();
 
         GL_CALL(glUseProgram(rendererID));
-        return rendererID;
     }
 
     openGLShader::~openGLShader()

@@ -1,7 +1,7 @@
 #pragma once
 #include <string>
 #include "core.h"
-
+#include "logger.h"
 namespace LTE
 {
     class texture

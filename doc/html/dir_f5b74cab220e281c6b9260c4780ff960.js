@@ -1,6 +1,8 @@
 var dir_f5b74cab220e281c6b9260c4780ff960 =
 [
-    [ "coreEventData.h", "d7/d63/core_event_data_8h.html", "d7/d63/core_event_data_8h" ],
+    [ "coreEventData.h", "d7/d63/core_event_data_8h.html", [
+      [ "coreEventData", "d3/d94/struct_l_t_e_1_1core_event_data.html", "d3/d94/struct_l_t_e_1_1core_event_data" ]
+    ] ],
     [ "KeyData.h", "d7/de1/_key_data_8h.html", [
       [ "KeyData", "d2/df7/struct_l_t_e_1_1_key_data.html", "d2/df7/struct_l_t_e_1_1_key_data" ]
     ] ],

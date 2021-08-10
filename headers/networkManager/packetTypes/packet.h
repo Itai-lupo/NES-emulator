@@ -6,7 +6,7 @@
 #include <memory>
 #include <cstring>
 
-namespace LTE::goingMarryNetworkManger
+namespace LTE::GMNM
 {
     struct byteStream
     {

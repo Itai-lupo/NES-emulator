@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <cstring>
 using namespace LTE;
-using namespace goingMarryNetworkManger;
+using namespace GMNM;
 
 struct basicHeader: public packetHeader
 {
@@ -103,12 +103,12 @@ unsigned int birdIndices[12] =
     1, 4, 5
 };
 
-void onWindowClose(__attribute__((unused)) IEntity *eventEntity, __attribute__((unused)) coreEventData *sendor)
+void onWindowClose(__attribute__((unused)) gameObject *eventEntity, __attribute__((unused)) coreEventData *sendor)
 {
     app::keepRunning = false;
 }
 
-void onServerConnect(__attribute__((unused)) IEntity *eventEntity, coreEventData *sendor)
+void onServerConnect(__attribute__((unused)) gameObject *eventEntity, coreEventData *sendor)
 {
     connectionData *eventData = dynamic_cast<connectionData *>(sendor);
 
@@ -129,7 +129,7 @@ void onServerConnect(__attribute__((unused)) IEntity *eventEntity, coreEventData
     eventData->send(toSend);
 }
 
-void onServerMessage(__attribute__((unused)) IEntity *eventEntity, coreEventData *sendor)
+void onServerMessage(__attribute__((unused)) gameObject *eventEntity, coreEventData *sendor)
 {
     connectionReadData *eventData = dynamic_cast<connectionReadData *>(sendor);
 
@@ -152,24 +152,18 @@ TEST(networkManger, decoder)
     return; // test should only be active when you test the net manger becose it will stop all the other test and requrie a server
     app::init();
 
+    eventManger::startBuildingEvent()->
+            setEventRoute("window close/close app")->
+            setEventCallback(onWindowClose)->add();
 
-    event *onWindowCloseEvent = event::eventBuilder::startBuilding()->
-        setEventType(events::WindowClose)->
-        setEventCallback(onWindowClose)->build();
+    eventManger::startBuildingEvent()->
+            setEventRoute("server connection/send hand shake")->
+            setEventCallback(onServerConnect)->add();
 
+    eventManger::startBuildingEvent()->
+            setEventRoute("message received/respond")->
+            setEventCallback(onServerMessage)->add();
 
-    event *onServerConnectionEvent = event::eventBuilder::startBuilding()->
-        setEventType(events::serverConnection)->
-        setEventCallback(onServerConnect)->build();
-
-
-    event *onMessageReceived = event::eventBuilder::startBuilding()->
-        setEventType(events::messageReceived)->
-        setEventCallback(onServerMessage)->build();
-
-    eventManger::addEvent(onWindowCloseEvent);
-    eventManger::addEvent(onServerConnectionEvent);
-    eventManger::addEvent(onMessageReceived);
     
     connectionId testConId = connectionsManager::addConnection("localhost", 80, new basicDataFormat());
     packet toSend;

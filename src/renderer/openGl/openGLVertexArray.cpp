@@ -12,10 +12,9 @@ namespace LTE
         GL_CALL(glDeleteVertexArrays(1, &rendererId));
     }
 
-    vertexArrayId openGLVertexArray::init()
+    void openGLVertexArray::init()
     {
         GL_CALL(glGenVertexArrays(1, &rendererId));
-        return rendererId;
     }
 
     void openGLVertexArray::AddBuffer(VertexBuffer *vb)

@@ -2,7 +2,7 @@
 
 namespace LTE
 {
-    class GraphicsContext
+    class graphicsContext
 	{
         public:
             virtual void Init() = 0;

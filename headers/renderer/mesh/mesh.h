@@ -3,6 +3,9 @@
 #include "core.h"
 #include "shader.h"
 #include "VertexBuffer.h"
+#include "indexBuffer.h"
+#include "vertexArray.h"
+#include "transform.h"
 
 #include <glm/glm.hpp>
 #include <glm/ext.hpp>
@@ -10,52 +13,50 @@
 
 namespace LTE
 {
-    class mesh: public IEntity
+    class mesh: public component
     {
     private:
-        windowPieceId windowId;
+        entityTaleId id;
 
-        vertexBufferId VBId;
-        indexBufferId IBId;
-        vertexArrayId VAId;
-        shaderId      ShaderId;
-        materialId    mateId;
+        shader *s;
+        VertexBuffer *vb;
+        indexBuffer *ib;
+        vertexArray *va;
 
-        glm::mat4     transform;
+        glm::mat4     trans;
     
     public:
         bool isActive = false;
         eventLaughId onRenderId;
 
-        mesh(windowPieceId windowId);
+        mesh(){}
+        mesh(LTE::windowPieceId winId){ this->winId = winId; }
+
         ~mesh(){}
 
         void setShader(const char *path);
-        void setShader(shaderId id);
 
         void setVertexBuffer(float *vertexs, uint32_t size);
-        void setVertexBuffer(vertexBufferId id);
 
         void setIndexBuffer(uint32_t *indices, uint32_t count);
-        void setIndexBuffer(indexBufferId id);
-
+        
         void setVertexArray();
-        void setVertexArray(vertexArrayId id);
 
         void bind(std::vector<uint32_t> textureSlots = {});
 
-        glm::mat4 getTransform(){ return transform; }
-        materialId  getMaterialId(){ return mateId; }
+        glm::mat4 getTransform(){ return trans; }
+        entityTaleId getId(){ return id; }
 
-        void setTransform(glm::mat4 transform);
-
-        void setMaterial(const std::string& path, glm::vec4 color);
-        void setMaterial(materialId material);
+        void setTransform(glm::mat4 trans);
+        void setTransform(transform *trans);
 
 
         VertexBuffer *getVertexBuffer();
         shader *getShader();
         uint32_t getCount();
-        windowPieceId getWindowId() { return windowId; }
+        windowPieceId getWindowId() { return winId; }
+
+        virtual void init(gameObject *parent) override {}
+        virtual void end() override {}
     };
 }

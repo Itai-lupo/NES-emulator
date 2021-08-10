@@ -6,7 +6,7 @@
 
 
 
-namespace LTE::goingMarryNetworkManger
+namespace LTE::GMNM
 {
 
     std::vector<connection*> *connectionsManager::connections;

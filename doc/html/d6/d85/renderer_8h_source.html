@@ -88,55 +88,40 @@ $(document).ready(function(){initNavTree('d6/d85/renderer_8h_source.html','../..
 </div><!--header-->
 <div class="contents">
 <a href="../../d6/d85/renderer_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../db/d96/render_api_8h.html">renderApi.h</a>&quot;</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d3/de4/vertex_array_8h.html">vertexArray.h</a>&quot;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d1/df4/shader_8h.html">shader.h</a>&quot;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d0/d52/core_camera_8h.html">coreCamera.h</a>&quot;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d8/d3b/mesh_8h.html">mesh.h</a>&quot;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">namespace </span><a class="code" href="../../dc/d59/namespace_l_t_e.html">LTE</a></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;{</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="../../de/d16/struct_l_t_e_1_1_scene_data.html">   12</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="../../de/d16/struct_l_t_e_1_1_scene_data.html">SceneData</a></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    {</div>
-<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="../../de/d16/struct_l_t_e_1_1_scene_data.html#a3d1557a0bf4f42cce04ba37ee5234d31">   14</a></span>&#160;        <a class="code" href="../../dd/d9e/class_l_t_e_1_1core_camera.html">coreCamera</a> *<a class="code" href="../../de/d16/struct_l_t_e_1_1_scene_data.html#a3d1557a0bf4f42cce04ba37ee5234d31">camera</a>;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    };</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="../../d1/d10/class_l_t_e_1_1renderer.html">   17</a></span>&#160;    <span class="keyword">class </span><a class="code" href="../../d1/d10/class_l_t_e_1_1renderer.html">renderer</a></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    {</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            <a class="code" href="../../de/d16/struct_l_t_e_1_1_scene_data.html">SceneData</a> data;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            <a class="code" href="../../df/d3a/class_l_t_e_1_1render_api.html">renderApi</a> *api;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            <a class="code" href="../../d1/d10/class_l_t_e_1_1renderer.html#a6c804295ff0ce4b970a0d46eebd96f8d">renderer</a>(<a class="code" href="../../df/d3a/class_l_t_e_1_1render_api.html">renderApi</a> *api);</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;                </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            <span class="keywordtype">void</span> <a class="code" href="../../d1/d10/class_l_t_e_1_1renderer.html#a79ab95ff9637615f3465137237df558c">beginScene</a>(<a class="code" href="../../dd/d9e/class_l_t_e_1_1core_camera.html">coreCamera</a> *camera);</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            <span class="keywordtype">void</span> <a class="code" href="../../d1/d10/class_l_t_e_1_1renderer.html#aeb0ecfb94fbf43fbf4836504333ed4ad">endScene</a>();</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            <span class="keywordtype">void</span> <a class="code" href="../../d1/d10/class_l_t_e_1_1renderer.html#aa80446df86493630670f253d3e84c052">Submit</a>(<a class="code" href="../../d1/d2e/class_l_t_e_1_1shader.html">shader</a> *s, uint32_t count, glm::mat4 transform = glm::mat4(1.0f));</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            <span class="keywordtype">void</span> <a class="code" href="../../d1/d10/class_l_t_e_1_1renderer.html#aa80446df86493630670f253d3e84c052">Submit</a>(<a class="code" href="../../d0/d6c/class_l_t_e_1_1mesh.html">mesh</a> *toRender);</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    };</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div>
-<div class="ttc" id="aclass_l_t_e_1_1core_camera_html"><div class="ttname"><a href="../../dd/d9e/class_l_t_e_1_1core_camera.html">LTE::coreCamera</a></div><div class="ttdef"><b>Definition:</b> coreCamera.h:8</div></div>
-<div class="ttc" id="aclass_l_t_e_1_1mesh_html"><div class="ttname"><a href="../../d0/d6c/class_l_t_e_1_1mesh.html">LTE::mesh</a></div><div class="ttdef"><b>Definition:</b> mesh.h:14</div></div>
-<div class="ttc" id="aclass_l_t_e_1_1render_api_html"><div class="ttname"><a href="../../df/d3a/class_l_t_e_1_1render_api.html">LTE::renderApi</a></div><div class="ttdef"><b>Definition:</b> renderApi.h:8</div></div>
-<div class="ttc" id="aclass_l_t_e_1_1renderer_html"><div class="ttname"><a href="../../d1/d10/class_l_t_e_1_1renderer.html">LTE::renderer</a></div><div class="ttdef"><b>Definition:</b> renderer.h:18</div></div>
-<div class="ttc" id="aclass_l_t_e_1_1renderer_html_a6c804295ff0ce4b970a0d46eebd96f8d"><div class="ttname"><a href="../../d1/d10/class_l_t_e_1_1renderer.html#a6c804295ff0ce4b970a0d46eebd96f8d">LTE::renderer::renderer</a></div><div class="ttdeci">renderer(renderApi *api)</div><div class="ttdef"><b>Definition:</b> renderer.cpp:5</div></div>
-<div class="ttc" id="aclass_l_t_e_1_1renderer_html_a79ab95ff9637615f3465137237df558c"><div class="ttname"><a href="../../d1/d10/class_l_t_e_1_1renderer.html#a79ab95ff9637615f3465137237df558c">LTE::renderer::beginScene</a></div><div class="ttdeci">void beginScene(coreCamera *camera)</div><div class="ttdef"><b>Definition:</b> renderer.cpp:10</div></div>
-<div class="ttc" id="aclass_l_t_e_1_1renderer_html_aa80446df86493630670f253d3e84c052"><div class="ttname"><a href="../../d1/d10/class_l_t_e_1_1renderer.html#aa80446df86493630670f253d3e84c052">LTE::renderer::Submit</a></div><div class="ttdeci">void Submit(shader *s, uint32_t count, glm::mat4 transform=glm::mat4(1.0f))</div><div class="ttdef"><b>Definition:</b> renderer.cpp:22</div></div>
-<div class="ttc" id="aclass_l_t_e_1_1renderer_html_aeb0ecfb94fbf43fbf4836504333ed4ad"><div class="ttname"><a href="../../d1/d10/class_l_t_e_1_1renderer.html#aeb0ecfb94fbf43fbf4836504333ed4ad">LTE::renderer::endScene</a></div><div class="ttdeci">void endScene()</div><div class="ttdef"><b>Definition:</b> renderer.cpp:17</div></div>
-<div class="ttc" id="aclass_l_t_e_1_1shader_html"><div class="ttname"><a href="../../d1/d2e/class_l_t_e_1_1shader.html">LTE::shader</a></div><div class="ttdef"><b>Definition:</b> shader.h:10</div></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d3/df1/window_8h.html">window.h</a>&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../db/d96/render_api_8h.html">renderApi.h</a>&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d3/de4/vertex_array_8h.html">vertexArray.h</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d1/df4/shader_8h.html">shader.h</a>&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d0/d52/core_camera_8h.html">coreCamera.h</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d8/d3b/mesh_8h.html">mesh.h</a>&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../db/d83/scene_8h.html">scene.h</a>&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">namespace </span><a class="code" href="../../dc/d59/namespace_l_t_e.html">LTE</a></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;{</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="../../d1/d10/class_l_t_e_1_1renderer.html">   13</a></span>&#160;    <span class="keyword">class </span><a class="code" href="../../d1/d10/class_l_t_e_1_1renderer.html">renderer</a></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;            <span class="keyword">static</span> <span class="keyword">inline</span> <a class="code" href="../../d6/d26/class_l_t_e_1_1scene.html">scene</a> *Scene;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;            <span class="keyword">static</span> <span class="keyword">inline</span> <a class="code" href="../../df/d3a/class_l_t_e_1_1render_api.html">renderApi</a> *renderPipLine;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="keyword">public</span>:                </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;            <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="../../d1/d10/class_l_t_e_1_1renderer.html#a4a1e0b610ab3db6b702b87bd5406d0cf">renderScene</a>(<a class="code" href="../../d6/d26/class_l_t_e_1_1scene.html">scene</a> *Scene, <a class="code" href="../../df/d3a/class_l_t_e_1_1render_api.html">renderApi</a> *renderPipLine);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    };</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;}</div>
+<div class="ttc" id="aclass_l_t_e_1_1render_api_html"><div class="ttname"><a href="../../df/d3a/class_l_t_e_1_1render_api.html">LTE::renderApi</a></div><div class="ttdef"><b>Definition:</b> renderApi.h:7</div></div>
+<div class="ttc" id="aclass_l_t_e_1_1renderer_html"><div class="ttname"><a href="../../d1/d10/class_l_t_e_1_1renderer.html">LTE::renderer</a></div><div class="ttdef"><b>Definition:</b> renderer.h:14</div></div>
+<div class="ttc" id="aclass_l_t_e_1_1renderer_html_a4a1e0b610ab3db6b702b87bd5406d0cf"><div class="ttname"><a href="../../d1/d10/class_l_t_e_1_1renderer.html#a4a1e0b610ab3db6b702b87bd5406d0cf">LTE::renderer::renderScene</a></div><div class="ttdeci">static void renderScene(scene *Scene, renderApi *renderPipLine)</div><div class="ttdef"><b>Definition:</b> renderer.cpp:9</div></div>
+<div class="ttc" id="aclass_l_t_e_1_1scene_html"><div class="ttname"><a href="../../d6/d26/class_l_t_e_1_1scene.html">LTE::scene</a></div><div class="ttdef"><b>Definition:</b> scene.h:16</div></div>
 <div class="ttc" id="acore_camera_8h_html"><div class="ttname"><a href="../../d0/d52/core_camera_8h.html">coreCamera.h</a></div></div>
 <div class="ttc" id="amesh_8h_html"><div class="ttname"><a href="../../d8/d3b/mesh_8h.html">mesh.h</a></div></div>
-<div class="ttc" id="anamespace_l_t_e_html"><div class="ttname"><a href="../../dc/d59/namespace_l_t_e.html">LTE</a></div><div class="ttdef"><b>Definition:</b> app.cpp:23</div></div>
+<div class="ttc" id="anamespace_l_t_e_html"><div class="ttname"><a href="../../dc/d59/namespace_l_t_e.html">LTE</a></div><div class="ttdef"><b>Definition:</b> app.cpp:19</div></div>
 <div class="ttc" id="arender_api_8h_html"><div class="ttname"><a href="../../db/d96/render_api_8h.html">renderApi.h</a></div></div>
+<div class="ttc" id="ascene_8h_html"><div class="ttname"><a href="../../db/d83/scene_8h.html">scene.h</a></div></div>
 <div class="ttc" id="ashader_8h_html"><div class="ttname"><a href="../../d1/df4/shader_8h.html">shader.h</a></div></div>
-<div class="ttc" id="astruct_l_t_e_1_1_scene_data_html"><div class="ttname"><a href="../../de/d16/struct_l_t_e_1_1_scene_data.html">LTE::SceneData</a></div><div class="ttdef"><b>Definition:</b> renderer.h:13</div></div>
-<div class="ttc" id="astruct_l_t_e_1_1_scene_data_html_a3d1557a0bf4f42cce04ba37ee5234d31"><div class="ttname"><a href="../../de/d16/struct_l_t_e_1_1_scene_data.html#a3d1557a0bf4f42cce04ba37ee5234d31">LTE::SceneData::camera</a></div><div class="ttdeci">coreCamera * camera</div><div class="ttdef"><b>Definition:</b> renderer.h:14</div></div>
 <div class="ttc" id="avertex_array_8h_html"><div class="ttname"><a href="../../d3/de4/vertex_array_8h.html">vertexArray.h</a></div></div>
+<div class="ttc" id="awindow_8h_html"><div class="ttname"><a href="../../d3/df1/window_8h.html">window.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

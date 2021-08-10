@@ -7,7 +7,7 @@
 #include "packet.h"
 #include "connection.h"
 
-namespace LTE::goingMarryNetworkManger
+namespace LTE::GMNM
 {
     class connectionsManager
     {

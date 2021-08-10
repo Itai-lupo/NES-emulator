@@ -85,13 +85,14 @@ $(document).ready(function(){initNavTree('de/de3/class_l_t_e_1_1window_manger.ht
 <div class="header">
   <div class="summary">
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#friends">Friends</a> &#124;
 <a href="../../d8/d8d/class_l_t_e_1_1window_manger-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">LTE::windowManger Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="../../d3/df1/window_8h_source.html">window.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="../../de/de3/window_manger_8h_source.html">windowManger.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -99,841 +100,17 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:ad294dcc77093b36c11e405d8831f39e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6ecf67fe5928e63ba34ea590f5f41cee"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/de3/class_l_t_e_1_1window_manger.html#a6ecf67fe5928e63ba34ea590f5f41cee">close</a> ()</td></tr>
 <tr class="separator:a6ecf67fe5928e63ba34ea590f5f41cee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a14308fb83186573c28fe62c96e0f07b7"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../dc/d59/namespace_l_t_e.html#a8ae7e0c0e39c6dfb8804ee2eecf2c6c2">windowPieceId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/de3/class_l_t_e_1_1window_manger.html#a14308fb83186573c28fe62c96e0f07b7">addWindow</a> (const std::string &amp;title=&quot;raftel engine&quot;, bool useImGui=false, unsigned int width=1280, unsigned int height=720, <a class="el" href="../../dc/d59/namespace_l_t_e.html#a9d6d15e418e3a8d3b1d1360b615a375d">renderAPI</a> renderAPIType=renderAPI::OpenGL)</td></tr>
-<tr class="separator:a14308fb83186573c28fe62c96e0f07b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aebfe960f9bd8ac496c23122180631553"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/de3/class_l_t_e_1_1window_manger.html#aebfe960f9bd8ac496c23122180631553">onUpdate</a> (<a class="el" href="../../d4/d84/struct_l_t_e_1_1_i_entity.html">IEntity</a> *eventEntity, <a class="el" href="../../d3/d94/struct_l_t_e_1_1core_event_data.html">coreEventData</a> *sendor)</td></tr>
-<tr class="separator:aebfe960f9bd8ac496c23122180631553"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeb94c72d9ef01e6ec53328e2ba972628"><td class="memItemLeft" align="right" valign="top">static window *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/de3/class_l_t_e_1_1window_manger.html#aeb94c72d9ef01e6ec53328e2ba972628">getWindow</a> (<a class="el" href="../../dc/d59/namespace_l_t_e.html#a8ae7e0c0e39c6dfb8804ee2eecf2c6c2">windowPieceId</a> windowId)</td></tr>
+<tr class="memitem:aeb94c72d9ef01e6ec53328e2ba972628"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d4/d38/class_l_t_e_1_1window.html">window</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/de3/class_l_t_e_1_1window_manger.html#aeb94c72d9ef01e6ec53328e2ba972628">getWindow</a> (<a class="el" href="../../dc/d59/namespace_l_t_e.html#a8ae7e0c0e39c6dfb8804ee2eecf2c6c2">windowPieceId</a> windowId)</td></tr>
 <tr class="separator:aeb94c72d9ef01e6ec53328e2ba972628"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a63b6a4ad947eebd24f62c561f3769f44"><td class="memItemLeft" align="right" valign="top">static unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/de3/class_l_t_e_1_1window_manger.html#a63b6a4ad947eebd24f62c561f3769f44">getWidth</a> (<a class="el" href="../../dc/d59/namespace_l_t_e.html#a8ae7e0c0e39c6dfb8804ee2eecf2c6c2">windowPieceId</a> windowId)</td></tr>
-<tr class="separator:a63b6a4ad947eebd24f62c561f3769f44"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af66cd3c4714370977a91d7452ab82ae7"><td class="memItemLeft" align="right" valign="top">static unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/de3/class_l_t_e_1_1window_manger.html#af66cd3c4714370977a91d7452ab82ae7">getHeight</a> (<a class="el" href="../../dc/d59/namespace_l_t_e.html#a8ae7e0c0e39c6dfb8804ee2eecf2c6c2">windowPieceId</a> windowId)</td></tr>
-<tr class="separator:af66cd3c4714370977a91d7452ab82ae7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:add8a9c6c257fb5a1c04393b68cf04364"><td class="memItemLeft" align="right" valign="top">static windowPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/de3/class_l_t_e_1_1window_manger.html#add8a9c6c257fb5a1c04393b68cf04364">raftelIdToWindowReference</a> (<a class="el" href="../../dc/d59/namespace_l_t_e.html#a8ae7e0c0e39c6dfb8804ee2eecf2c6c2">windowPieceId</a> windowId)</td></tr>
-<tr class="separator:add8a9c6c257fb5a1c04393b68cf04364"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0d1dfa36d23b82630bc723f9702671b9"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/de3/class_l_t_e_1_1window_manger.html#a0d1dfa36d23b82630bc723f9702671b9">setVSync</a> (bool enabled)</td></tr>
-<tr class="separator:a0d1dfa36d23b82630bc723f9702671b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab84e537daa7b295437d99dc85b641930"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/de3/class_l_t_e_1_1window_manger.html#ab84e537daa7b295437d99dc85b641930">isVSync</a> ()</td></tr>
-<tr class="separator:ab84e537daa7b295437d99dc85b641930"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab5b89b56f700da583be78516d5673a0b"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/de3/class_l_t_e_1_1window_manger.html#ab5b89b56f700da583be78516d5673a0b">bindContext</a> (<a class="el" href="../../dc/d59/namespace_l_t_e.html#a8ae7e0c0e39c6dfb8804ee2eecf2c6c2">windowPieceId</a> windowId)</td></tr>
-<tr class="separator:ab5b89b56f700da583be78516d5673a0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a11d74175a3306ce25cae68403652a97f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../dc/d59/namespace_l_t_e.html#a52df8f597871c85d528fe5dd540777fb">vertexBufferId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/de3/class_l_t_e_1_1window_manger.html#a11d74175a3306ce25cae68403652a97f">add</a> (<a class="el" href="../../dc/d59/namespace_l_t_e.html#a8ae7e0c0e39c6dfb8804ee2eecf2c6c2">windowPieceId</a> windowId, <a class="el" href="../../d2/dcd/class_l_t_e_1_1_vertex_buffer.html">VertexBuffer</a> *data)</td></tr>
-<tr class="separator:a11d74175a3306ce25cae68403652a97f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab3fe0d36e5489a14df9125992a29abf7"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../dc/d59/namespace_l_t_e.html#a8ca77d02474ac4700057da444fc65bca">indexBufferId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/de3/class_l_t_e_1_1window_manger.html#ab3fe0d36e5489a14df9125992a29abf7">add</a> (<a class="el" href="../../dc/d59/namespace_l_t_e.html#a8ae7e0c0e39c6dfb8804ee2eecf2c6c2">windowPieceId</a> windowId, <a class="el" href="../../d6/d2f/class_l_t_e_1_1index_buffer.html">indexBuffer</a> *data)</td></tr>
-<tr class="separator:ab3fe0d36e5489a14df9125992a29abf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8d9ac94ec6bce30dbb84cee69d858fdc"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../dc/d59/namespace_l_t_e.html#a7d91e85b98ad096924555bbe9bf6c42d">vertexArrayId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/de3/class_l_t_e_1_1window_manger.html#a8d9ac94ec6bce30dbb84cee69d858fdc">add</a> (<a class="el" href="../../dc/d59/namespace_l_t_e.html#a8ae7e0c0e39c6dfb8804ee2eecf2c6c2">windowPieceId</a> windowId, <a class="el" href="../../df/db4/class_l_t_e_1_1vertex_array.html">vertexArray</a> *data)</td></tr>
-<tr class="separator:a8d9ac94ec6bce30dbb84cee69d858fdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a112f331b07ecbd8fd4d6030ad7c88e33"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../dc/d59/namespace_l_t_e.html#a240c95c9f25acf9255a4bafa7ca67f1f">shaderId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/de3/class_l_t_e_1_1window_manger.html#a112f331b07ecbd8fd4d6030ad7c88e33">add</a> (<a class="el" href="../../dc/d59/namespace_l_t_e.html#a8ae7e0c0e39c6dfb8804ee2eecf2c6c2">windowPieceId</a> windowId, <a class="el" href="../../d1/d2e/class_l_t_e_1_1shader.html">shader</a> *data)</td></tr>
-<tr class="separator:a112f331b07ecbd8fd4d6030ad7c88e33"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1bab1c05385f727e5a90ea87b429895d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/de3/class_l_t_e_1_1window_manger.html#a1bab1c05385f727e5a90ea87b429895d">bindVB</a> (<a class="el" href="../../dc/d59/namespace_l_t_e.html#a8ae7e0c0e39c6dfb8804ee2eecf2c6c2">windowPieceId</a> windowId, <a class="el" href="../../dc/d59/namespace_l_t_e.html#a52df8f597871c85d528fe5dd540777fb">vertexBufferId</a> id)</td></tr>
-<tr class="separator:a1bab1c05385f727e5a90ea87b429895d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a34ec769a91b7887fa7131d9a050fb078"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/de3/class_l_t_e_1_1window_manger.html#a34ec769a91b7887fa7131d9a050fb078">bindIB</a> (<a class="el" href="../../dc/d59/namespace_l_t_e.html#a8ae7e0c0e39c6dfb8804ee2eecf2c6c2">windowPieceId</a> windowId, <a class="el" href="../../dc/d59/namespace_l_t_e.html#a8ca77d02474ac4700057da444fc65bca">indexBufferId</a> id)</td></tr>
-<tr class="separator:a34ec769a91b7887fa7131d9a050fb078"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a08a8641beaf615daf975ed204b959a46"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/de3/class_l_t_e_1_1window_manger.html#a08a8641beaf615daf975ed204b959a46">bindVA</a> (<a class="el" href="../../dc/d59/namespace_l_t_e.html#a8ae7e0c0e39c6dfb8804ee2eecf2c6c2">windowPieceId</a> windowId, <a class="el" href="../../dc/d59/namespace_l_t_e.html#a7d91e85b98ad096924555bbe9bf6c42d">vertexArrayId</a> id)</td></tr>
-<tr class="separator:a08a8641beaf615daf975ed204b959a46"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1836712000460802e91b92c2e7461c1e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/de3/class_l_t_e_1_1window_manger.html#a1836712000460802e91b92c2e7461c1e">bindS</a> (<a class="el" href="../../dc/d59/namespace_l_t_e.html#a8ae7e0c0e39c6dfb8804ee2eecf2c6c2">windowPieceId</a> windowId, <a class="el" href="../../dc/d59/namespace_l_t_e.html#a240c95c9f25acf9255a4bafa7ca67f1f">shaderId</a> id)</td></tr>
-<tr class="separator:a1836712000460802e91b92c2e7461c1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ade066b05111eca9509466fffedb0fccb"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/de3/class_l_t_e_1_1window_manger.html#ade066b05111eca9509466fffedb0fccb">pushElement</a> (<a class="el" href="../../dc/d59/namespace_l_t_e.html#a8ae7e0c0e39c6dfb8804ee2eecf2c6c2">windowPieceId</a> windowId, <a class="el" href="../../dc/d59/namespace_l_t_e.html#a52df8f597871c85d528fe5dd540777fb">vertexBufferId</a> id, <a class="el" href="../../d6/d82/struct_l_t_e_1_1_vertex_buffer_element.html">VertexBufferElement</a> data)</td></tr>
-<tr class="separator:ade066b05111eca9509466fffedb0fccb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3d3d7b595c0b4153c875e8c4965829cb"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/de3/class_l_t_e_1_1window_manger.html#a3d3d7b595c0b4153c875e8c4965829cb">addBuffer</a> (<a class="el" href="../../dc/d59/namespace_l_t_e.html#a8ae7e0c0e39c6dfb8804ee2eecf2c6c2">windowPieceId</a> windowId, <a class="el" href="../../dc/d59/namespace_l_t_e.html#a7d91e85b98ad096924555bbe9bf6c42d">vertexArrayId</a> id, <a class="el" href="../../dc/d59/namespace_l_t_e.html#a52df8f597871c85d528fe5dd540777fb">vertexBufferId</a> vbId)</td></tr>
-<tr class="separator:a3d3d7b595c0b4153c875e8c4965829cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa5d1183abd1a1193fd10925c89f2d50b"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d0/d7b/class_l_t_e_1_1shader_manger.html">shaderManger</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/de3/class_l_t_e_1_1window_manger.html#aa5d1183abd1a1193fd10925c89f2d50b">getShaderManger</a> (<a class="el" href="../../dc/d59/namespace_l_t_e.html#a8ae7e0c0e39c6dfb8804ee2eecf2c6c2">windowPieceId</a> windowId)</td></tr>
-<tr class="separator:aa5d1183abd1a1193fd10925c89f2d50b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a04fcc066259d9ddb25efe1917e1454a2"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d1/da9/class_l_t_e_1_1_vertex_buffer_manger.html">VertexBufferManger</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/de3/class_l_t_e_1_1window_manger.html#a04fcc066259d9ddb25efe1917e1454a2">getVertexBufferManger</a> (<a class="el" href="../../dc/d59/namespace_l_t_e.html#a8ae7e0c0e39c6dfb8804ee2eecf2c6c2">windowPieceId</a> windowId)</td></tr>
-<tr class="separator:a04fcc066259d9ddb25efe1917e1454a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af8e69bbdf75031660c1fef892d7961d7"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../dc/d45/class_l_t_e_1_1vertex_array_manger.html">vertexArrayManger</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/de3/class_l_t_e_1_1window_manger.html#af8e69bbdf75031660c1fef892d7961d7">getVertexArrayManger</a> (<a class="el" href="../../dc/d59/namespace_l_t_e.html#a8ae7e0c0e39c6dfb8804ee2eecf2c6c2">windowPieceId</a> windowId)</td></tr>
-<tr class="separator:af8e69bbdf75031660c1fef892d7961d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7451e4b7751a4a137d9e7c58a3a6695e"><td class="memItemLeft" align="right" valign="top">static uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/de3/class_l_t_e_1_1window_manger.html#a7451e4b7751a4a137d9e7c58a3a6695e">getIndexBufferCount</a> (<a class="el" href="../../dc/d59/namespace_l_t_e.html#a8ae7e0c0e39c6dfb8804ee2eecf2c6c2">windowPieceId</a> windowId, <a class="el" href="../../dc/d59/namespace_l_t_e.html#a8ca77d02474ac4700057da444fc65bca">indexBufferId</a> id)</td></tr>
-<tr class="separator:a7451e4b7751a4a137d9e7c58a3a6695e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5350d77976bc8a6069ff5c2f96511866"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../df/d3a/class_l_t_e_1_1render_api.html">renderApi</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/de3/class_l_t_e_1_1window_manger.html#a5350d77976bc8a6069ff5c2f96511866">getRenderApi</a> (<a class="el" href="../../dc/d59/namespace_l_t_e.html#a8ae7e0c0e39c6dfb8804ee2eecf2c6c2">windowPieceId</a> windowId)</td></tr>
-<tr class="separator:a5350d77976bc8a6069ff5c2f96511866"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aae1b28bd6810a8dd25386144873da75b"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d1/d10/class_l_t_e_1_1renderer.html">renderer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/de3/class_l_t_e_1_1window_manger.html#aae1b28bd6810a8dd25386144873da75b">getRenderer</a> (<a class="el" href="../../dc/d59/namespace_l_t_e.html#a8ae7e0c0e39c6dfb8804ee2eecf2c6c2">windowPieceId</a> windowId)</td></tr>
-<tr class="separator:aae1b28bd6810a8dd25386144873da75b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a52bd920a83645aa1b62af20b4b504a9e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/de3/class_l_t_e_1_1window_manger.html#a52bd920a83645aa1b62af20b4b504a9e">setCamera</a> (<a class="el" href="../../dc/d59/namespace_l_t_e.html#a8ae7e0c0e39c6dfb8804ee2eecf2c6c2">windowPieceId</a> windowId, <a class="el" href="../../dc/d6e/class_l_t_e_1_1core_camera_controler.html">coreCameraControler</a> *cam)</td></tr>
-<tr class="separator:a52bd920a83645aa1b62af20b4b504a9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5275759c2b94a203632da626147a557"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../dd/df6/class_l_t_e_1_1core_window_factory.html">coreWindowFactory</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/de3/class_l_t_e_1_1window_manger.html#af5275759c2b94a203632da626147a557">startBuildingWindow</a> ()</td></tr>
+<tr class="separator:af5275759c2b94a203632da626147a557"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:a43cdd3d9940159c039b9d3c4fc4f2281"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/de3/class_l_t_e_1_1window_manger.html#a43cdd3d9940159c039b9d3c4fc4f2281">coreWindowFactory</a></td></tr>
+<tr class="separator:a43cdd3d9940159c039b9d3c4fc4f2281"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="ab3fe0d36e5489a14df9125992a29abf7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab3fe0d36e5489a14df9125992a29abf7">&#9670;&nbsp;</a></span>add() <span class="overload">[1/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../dc/d59/namespace_l_t_e.html#a8ca77d02474ac4700057da444fc65bca">indexBufferId</a> LTE::windowManger::add </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../dc/d59/namespace_l_t_e.html#a8ae7e0c0e39c6dfb8804ee2eecf2c6c2">windowPieceId</a>&#160;</td>
-          <td class="paramname"><em>windowId</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="../../d6/d2f/class_l_t_e_1_1index_buffer.html">indexBuffer</a> *&#160;</td>
-          <td class="paramname"><em>data</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    {</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        <a class="code" href="../../de/de3/class_l_t_e_1_1window_manger.html#ab5b89b56f700da583be78516d5673a0b">bindContext</a>(windowId);</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        window *w = <a class="code" href="../../d8/d8e/window_8cpp.html#a717c50c5129d7422ac9babe657f70ec1">findWinById</a>(windowId);</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        indexBufferManger *m = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        <span class="keywordflow">if</span>(w != <span class="keyword">nullptr</span>)</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;            m = w-&gt;getIndexBufferManger();</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        <span class="keywordflow">if</span>(m != <span class="keyword">nullptr</span>)</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;            <span class="keywordflow">return</span> m-&gt;add(data);</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160; </div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        <a class="code" href="../../d1/d8c/logger_8h.html#aae4cf1bd083983040d4d6572a9b0d8bf">LAUGHTALE_ENGINR_LOG_ERROR</a>(<span class="stringliteral">&quot;faild to add index buffer: no window with id: &quot;</span> &lt;&lt; windowId);</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        <span class="keywordflow">return</span> -1;</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    }</div>
-<div class="ttc" id="aclass_l_t_e_1_1window_manger_html_ab5b89b56f700da583be78516d5673a0b"><div class="ttname"><a href="../../de/de3/class_l_t_e_1_1window_manger.html#ab5b89b56f700da583be78516d5673a0b">LTE::windowManger::bindContext</a></div><div class="ttdeci">static void bindContext(windowPieceId windowId)</div><div class="ttdef"><b>Definition:</b> window.cpp:123</div></div>
-<div class="ttc" id="alogger_8h_html_aae4cf1bd083983040d4d6572a9b0d8bf"><div class="ttname"><a href="../../d1/d8c/logger_8h.html#aae4cf1bd083983040d4d6572a9b0d8bf">LAUGHTALE_ENGINR_LOG_ERROR</a></div><div class="ttdeci">#define LAUGHTALE_ENGINR_LOG_ERROR(toLog)</div><div class="ttdef"><b>Definition:</b> logger.h:8</div></div>
-<div class="ttc" id="awindow_8cpp_html_a717c50c5129d7422ac9babe657f70ec1"><div class="ttname"><a href="../../d8/d8e/window_8cpp.html#a717c50c5129d7422ac9babe657f70ec1">findWinById</a></div><div class="ttdeci">#define findWinById(windowId)</div><div class="ttdef"><b>Definition:</b> window.cpp:8</div></div>
-</div><!-- fragment --><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../de/de3/class_l_t_e_1_1window_manger_ab3fe0d36e5489a14df9125992a29abf7_cgraph.png" border="0" usemap="#ade/de3/class_l_t_e_1_1window_manger_ab3fe0d36e5489a14df9125992a29abf7_cgraph" alt=""/></div>
-<map name="ade/de3/class_l_t_e_1_1window_manger_ab3fe0d36e5489a14df9125992a29abf7_cgraph" id="ade/de3/class_l_t_e_1_1window_manger_ab3fe0d36e5489a14df9125992a29abf7_cgraph">
-<area shape="rect" title=" " alt="" coords="5,35,176,61"/>
-<area shape="rect" href="../../d5/d28/class_l_t_e_1_1index_buffer_manger.html#a2b43c6686a3a585b17ea58b0e3085fe1" title=" " alt="" coords="224,5,416,32"/>
-<area shape="rect" href="../../de/de3/class_l_t_e_1_1window_manger.html#ab5b89b56f700da583be78516d5673a0b" title=" " alt="" coords="245,57,395,98"/>
-<area shape="rect" href="../../d6/d2f/class_l_t_e_1_1index_buffer.html#a03cff5a108facddc93ab8f34cc7f60fe" title=" " alt="" coords="464,5,609,32"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a112f331b07ecbd8fd4d6030ad7c88e33"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a112f331b07ecbd8fd4d6030ad7c88e33">&#9670;&nbsp;</a></span>add() <span class="overload">[2/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../dc/d59/namespace_l_t_e.html#a240c95c9f25acf9255a4bafa7ca67f1f">shaderId</a> LTE::windowManger::add </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../dc/d59/namespace_l_t_e.html#a8ae7e0c0e39c6dfb8804ee2eecf2c6c2">windowPieceId</a>&#160;</td>
-          <td class="paramname"><em>windowId</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="../../d1/d2e/class_l_t_e_1_1shader.html">shader</a> *&#160;</td>
-          <td class="paramname"><em>data</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    {</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        <a class="code" href="../../de/de3/class_l_t_e_1_1window_manger.html#ab5b89b56f700da583be78516d5673a0b">bindContext</a>(windowId);</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        window *w = <a class="code" href="../../d8/d8e/window_8cpp.html#a717c50c5129d7422ac9babe657f70ec1">findWinById</a>(windowId);</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        shaderManger *m = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        <span class="keywordflow">if</span>(w != <span class="keyword">nullptr</span>)</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;            m = w-&gt;getShaderManger();</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        <span class="keywordflow">if</span>(m != <span class="keyword">nullptr</span>)</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;            <span class="keywordflow">return</span> m-&gt;add(data);</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160; </div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        <a class="code" href="../../d1/d8c/logger_8h.html#aae4cf1bd083983040d4d6572a9b0d8bf">LAUGHTALE_ENGINR_LOG_ERROR</a>(<span class="stringliteral">&quot;faild to add shader: no window with id: &quot;</span> &lt;&lt; windowId);</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        <span class="keywordflow">return</span> -1;</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    }</div>
-</div><!-- fragment --><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../de/de3/class_l_t_e_1_1window_manger_a112f331b07ecbd8fd4d6030ad7c88e33_cgraph.png" border="0" usemap="#ade/de3/class_l_t_e_1_1window_manger_a112f331b07ecbd8fd4d6030ad7c88e33_cgraph" alt=""/></div>
-<map name="ade/de3/class_l_t_e_1_1window_manger_a112f331b07ecbd8fd4d6030ad7c88e33_cgraph" id="ade/de3/class_l_t_e_1_1window_manger_a112f331b07ecbd8fd4d6030ad7c88e33_cgraph">
-<area shape="rect" title=" " alt="" coords="5,35,176,61"/>
-<area shape="rect" href="../../d0/d7b/class_l_t_e_1_1shader_manger.html#ab727402e27c197d64a956fe940456e13" title=" " alt="" coords="224,5,389,32"/>
-<area shape="rect" href="../../de/de3/class_l_t_e_1_1window_manger.html#ab5b89b56f700da583be78516d5673a0b" title=" " alt="" coords="232,57,381,98"/>
-<area shape="rect" href="../../d1/d2e/class_l_t_e_1_1shader.html#aa554acb2d51652c2d1135d6332438206" title=" " alt="" coords="437,5,556,32"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a8d9ac94ec6bce30dbb84cee69d858fdc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8d9ac94ec6bce30dbb84cee69d858fdc">&#9670;&nbsp;</a></span>add() <span class="overload">[3/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../dc/d59/namespace_l_t_e.html#a7d91e85b98ad096924555bbe9bf6c42d">vertexArrayId</a> LTE::windowManger::add </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../dc/d59/namespace_l_t_e.html#a8ae7e0c0e39c6dfb8804ee2eecf2c6c2">windowPieceId</a>&#160;</td>
-          <td class="paramname"><em>windowId</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="../../df/db4/class_l_t_e_1_1vertex_array.html">vertexArray</a> *&#160;</td>
-          <td class="paramname"><em>data</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    {</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        <a class="code" href="../../de/de3/class_l_t_e_1_1window_manger.html#ab5b89b56f700da583be78516d5673a0b">bindContext</a>(windowId);</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        window *w = <a class="code" href="../../d8/d8e/window_8cpp.html#a717c50c5129d7422ac9babe657f70ec1">findWinById</a>(windowId);</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        vertexArrayManger *m = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        <span class="keywordflow">if</span>(w != <span class="keyword">nullptr</span>)</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;            m = w-&gt;getVertexArrayManger();</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        <span class="keywordflow">if</span>(m != <span class="keyword">nullptr</span>)</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;            <span class="keywordflow">return</span> m-&gt;add(data);</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160; </div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        <a class="code" href="../../d1/d8c/logger_8h.html#aae4cf1bd083983040d4d6572a9b0d8bf">LAUGHTALE_ENGINR_LOG_ERROR</a>(<span class="stringliteral">&quot;faild to add vertex array: no window with id: &quot;</span> &lt;&lt; windowId);</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        <span class="keywordflow">return</span> -1;</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    }</div>
-</div><!-- fragment --><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../de/de3/class_l_t_e_1_1window_manger_a8d9ac94ec6bce30dbb84cee69d858fdc_cgraph.png" border="0" usemap="#ade/de3/class_l_t_e_1_1window_manger_a8d9ac94ec6bce30dbb84cee69d858fdc_cgraph" alt=""/></div>
-<map name="ade/de3/class_l_t_e_1_1window_manger_a8d9ac94ec6bce30dbb84cee69d858fdc_cgraph" id="ade/de3/class_l_t_e_1_1window_manger_a8d9ac94ec6bce30dbb84cee69d858fdc_cgraph">
-<area shape="rect" title=" " alt="" coords="5,35,176,61"/>
-<area shape="rect" href="../../dc/d45/class_l_t_e_1_1vertex_array_manger.html#a78c00aafcb85e42047b8e2e057201791" title=" " alt="" coords="224,5,417,32"/>
-<area shape="rect" href="../../de/de3/class_l_t_e_1_1window_manger.html#ab5b89b56f700da583be78516d5673a0b" title=" " alt="" coords="246,57,395,98"/>
-<area shape="rect" href="../../df/db4/class_l_t_e_1_1vertex_array.html#ac809a00b7f25e657a1af043e296188dc" title=" " alt="" coords="465,5,612,32"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a11d74175a3306ce25cae68403652a97f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a11d74175a3306ce25cae68403652a97f">&#9670;&nbsp;</a></span>add() <span class="overload">[4/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../dc/d59/namespace_l_t_e.html#a52df8f597871c85d528fe5dd540777fb">vertexBufferId</a> LTE::windowManger::add </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../dc/d59/namespace_l_t_e.html#a8ae7e0c0e39c6dfb8804ee2eecf2c6c2">windowPieceId</a>&#160;</td>
-          <td class="paramname"><em>windowId</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="../../d2/dcd/class_l_t_e_1_1_vertex_buffer.html">VertexBuffer</a> *&#160;</td>
-          <td class="paramname"><em>data</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    {</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        <a class="code" href="../../de/de3/class_l_t_e_1_1window_manger.html#ab5b89b56f700da583be78516d5673a0b">bindContext</a>(windowId);</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        window *w = <a class="code" href="../../d8/d8e/window_8cpp.html#a717c50c5129d7422ac9babe657f70ec1">findWinById</a>(windowId);</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        VertexBufferManger *vbm = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        <span class="keywordflow">if</span>(w != <span class="keyword">nullptr</span>)</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;            vbm = w-&gt;getVertexBufferManger();</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        <span class="keywordflow">if</span>(vbm != <span class="keyword">nullptr</span>)</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;            <span class="keywordflow">return</span> vbm-&gt;add(data);</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160; </div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        <a class="code" href="../../d1/d8c/logger_8h.html#aae4cf1bd083983040d4d6572a9b0d8bf">LAUGHTALE_ENGINR_LOG_ERROR</a>(<span class="stringliteral">&quot;faild to add vb: no window with id: &quot;</span> &lt;&lt; windowId);</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        <span class="keywordflow">return</span> -1;</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    }</div>
-</div><!-- fragment --><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../de/de3/class_l_t_e_1_1window_manger_a11d74175a3306ce25cae68403652a97f_cgraph.png" border="0" usemap="#ade/de3/class_l_t_e_1_1window_manger_a11d74175a3306ce25cae68403652a97f_cgraph" alt=""/></div>
-<map name="ade/de3/class_l_t_e_1_1window_manger_a11d74175a3306ce25cae68403652a97f_cgraph" id="ade/de3/class_l_t_e_1_1window_manger_a11d74175a3306ce25cae68403652a97f_cgraph">
-<area shape="rect" title=" " alt="" coords="5,35,176,61"/>
-<area shape="rect" href="../../d1/da9/class_l_t_e_1_1_vertex_buffer_manger.html#a2ef4a53241c8969456197ca870b6f7c8" title=" " alt="" coords="224,5,423,32"/>
-<area shape="rect" href="../../de/de3/class_l_t_e_1_1window_manger.html#ab5b89b56f700da583be78516d5673a0b" title=" " alt="" coords="249,57,398,98"/>
-<area shape="rect" href="../../d2/dcd/class_l_t_e_1_1_vertex_buffer.html#a54ad2002ed61901bb6984b682eb4025f" title=" " alt="" coords="471,5,623,32"/>
-</map>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../de/de3/class_l_t_e_1_1window_manger_a11d74175a3306ce25cae68403652a97f_icgraph.png" border="0" usemap="#ade/de3/class_l_t_e_1_1window_manger_a11d74175a3306ce25cae68403652a97f_icgraph" alt=""/></div>
-<map name="ade/de3/class_l_t_e_1_1window_manger_a11d74175a3306ce25cae68403652a97f_icgraph" id="ade/de3/class_l_t_e_1_1window_manger_a11d74175a3306ce25cae68403652a97f_icgraph">
-<area shape="rect" title=" " alt="" coords="495,84,665,111"/>
-<area shape="rect" href="../../d0/d6c/class_l_t_e_1_1mesh.html#a1193559063ea1e25c9140488a4170f9d" title=" " alt="" coords="265,109,443,136"/>
-<area shape="rect" href="../../d0/d6c/class_l_t_e_1_1mesh.html#a84bf7231778612b213a213991ab6a16f" title=" " alt="" coords="277,160,431,187"/>
-<area shape="rect" href="../../d0/d6c/class_l_t_e_1_1mesh.html#a40bc457eddc0c07b0495fa53296a32e9" title=" " alt="" coords="263,8,445,35"/>
-<area shape="rect" href="../../d0/d6c/class_l_t_e_1_1mesh.html#ab9726ed6384d67a36b5501bfaa36e6f4" title=" " alt="" coords="261,59,447,85"/>
-<area shape="rect" href="../../da/dee/classbird.html#a2c12cead837f26baa4cff4d63f77119e" title=" " alt="" coords="5,109,77,136"/>
-<area shape="rect" href="../../d1/d69/classpilar.html#a7162f7b5537d06dc4008bff6dc6fec61" title=" " alt="" coords="130,59,209,85"/>
-<area shape="rect" href="../../da/dee/classbird.html#a0b847678b9ee9b086a909789ac2de13a" title=" " alt="" coords="125,211,213,237"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a3d3d7b595c0b4153c875e8c4965829cb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3d3d7b595c0b4153c875e8c4965829cb">&#9670;&nbsp;</a></span>addBuffer()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void LTE::windowManger::addBuffer </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../dc/d59/namespace_l_t_e.html#a8ae7e0c0e39c6dfb8804ee2eecf2c6c2">windowPieceId</a>&#160;</td>
-          <td class="paramname"><em>windowId</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="../../dc/d59/namespace_l_t_e.html#a7d91e85b98ad096924555bbe9bf6c42d">vertexArrayId</a>&#160;</td>
-          <td class="paramname"><em>id</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="../../dc/d59/namespace_l_t_e.html#a52df8f597871c85d528fe5dd540777fb">vertexBufferId</a>&#160;</td>
-          <td class="paramname"><em>vbId</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    {</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;        <a class="code" href="../../de/de3/class_l_t_e_1_1window_manger.html#ab5b89b56f700da583be78516d5673a0b">bindContext</a>(windowId);</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;        window *w = <a class="code" href="../../d8/d8e/window_8cpp.html#a717c50c5129d7422ac9babe657f70ec1">findWinById</a>(windowId);</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;        VertexBufferManger *vbm = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;        vertexArrayManger *vam = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;        VertexBuffer *vb = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;        </div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;        <span class="keywordflow">if</span>(w != <span class="keyword">nullptr</span>)</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;        {</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;            vbm = w-&gt;getVertexBufferManger();</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;            vam = w-&gt;getVertexArrayManger();</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;        }</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;        <span class="keywordflow">if</span>(vbm != <span class="keyword">nullptr</span>)</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;            vb = vbm-&gt;getVB(vbId);</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;        <span class="keywordflow">if</span>(vam != <span class="keyword">nullptr</span> &amp;&amp; vb != <span class="keyword">nullptr</span>)</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;            vam-&gt;addBuffer(<span class="keywordtype">id</span>, vb);</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160; </div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;        <a class="code" href="../../d1/d8c/logger_8h.html#a030a2caf9f43b4e2926c659309f955ef">LAUGHTALE_ENGINR_CONDTION_LOG_ERROR</a>(<span class="stringliteral">&quot;faild to addBuffer vb: no window with id: &quot;</span> &lt;&lt; windowId, w == <span class="keyword">nullptr</span>);</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    }</div>
-<div class="ttc" id="alogger_8h_html_a030a2caf9f43b4e2926c659309f955ef"><div class="ttname"><a href="../../d1/d8c/logger_8h.html#a030a2caf9f43b4e2926c659309f955ef">LAUGHTALE_ENGINR_CONDTION_LOG_ERROR</a></div><div class="ttdeci">#define LAUGHTALE_ENGINR_CONDTION_LOG_ERROR(toLog, condition)</div><div class="ttdef"><b>Definition:</b> logger.h:12</div></div>
-</div><!-- fragment --><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../de/de3/class_l_t_e_1_1window_manger_a3d3d7b595c0b4153c875e8c4965829cb_cgraph.png" border="0" usemap="#ade/de3/class_l_t_e_1_1window_manger_a3d3d7b595c0b4153c875e8c4965829cb_cgraph" alt=""/></div>
-<map name="ade/de3/class_l_t_e_1_1window_manger_a3d3d7b595c0b4153c875e8c4965829cb_cgraph" id="ade/de3/class_l_t_e_1_1window_manger_a3d3d7b595c0b4153c875e8c4965829cb_cgraph">
-<area shape="rect" title=" " alt="" coords="5,71,155,112"/>
-<area shape="rect" href="../../dc/d45/class_l_t_e_1_1vertex_array_manger.html#ae02d0753bac72f9cf3805fe11376532d" title=" " alt="" coords="206,5,370,47"/>
-<area shape="rect" href="../../de/de3/class_l_t_e_1_1window_manger.html#ab5b89b56f700da583be78516d5673a0b" title=" " alt="" coords="213,71,363,112"/>
-<area shape="rect" href="../../d1/da9/class_l_t_e_1_1_vertex_buffer_manger.html#a17ac2d6852eca86819c602599c1d2556" title=" " alt="" coords="203,136,373,177"/>
-</map>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../de/de3/class_l_t_e_1_1window_manger_a3d3d7b595c0b4153c875e8c4965829cb_icgraph.png" border="0" usemap="#ade/de3/class_l_t_e_1_1window_manger_a3d3d7b595c0b4153c875e8c4965829cb_icgraph" alt=""/></div>
-<map name="ade/de3/class_l_t_e_1_1window_manger_a3d3d7b595c0b4153c875e8c4965829cb_icgraph" id="ade/de3/class_l_t_e_1_1window_manger_a3d3d7b595c0b4153c875e8c4965829cb_icgraph">
-<area shape="rect" title=" " alt="" coords="361,23,511,65"/>
-<area shape="rect" href="../../d0/d6c/class_l_t_e_1_1mesh.html#a40bc457eddc0c07b0495fa53296a32e9" title=" " alt="" coords="132,31,313,57"/>
-<area shape="rect" href="../../da/dee/classbird.html#a2c12cead837f26baa4cff4d63f77119e" title=" " alt="" coords="9,5,81,32"/>
-<area shape="rect" href="../../d1/d69/classpilar.html#a7162f7b5537d06dc4008bff6dc6fec61" title=" " alt="" coords="5,56,84,83"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a14308fb83186573c28fe62c96e0f07b7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a14308fb83186573c28fe62c96e0f07b7">&#9670;&nbsp;</a></span>addWindow()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../dc/d59/namespace_l_t_e.html#a8ae7e0c0e39c6dfb8804ee2eecf2c6c2">windowPieceId</a> LTE::windowManger::addWindow </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>title</em> = <code>&quot;raftel&#160;engine&quot;</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>useImGui</em> = <code>false</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">unsigned int&#160;</td>
-          <td class="paramname"><em>width</em> = <code>1280</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">unsigned int&#160;</td>
-          <td class="paramname"><em>height</em> = <code>720</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="../../dc/d59/namespace_l_t_e.html#a9d6d15e418e3a8d3b1d1360b615a375d">renderAPI</a>&#160;</td>
-          <td class="paramname"><em>renderAPIType</em> = <code>renderAPI::OpenGL</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    {</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        window *newWin = <span class="keyword">new</span> window(title, width, height, useImGui, renderAPIType);</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        window::Init(newWin);</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        windows.push_back(newWin);</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <a class="code" href="../../dc/d6c/classwindow_entity.html">windowEntity</a> *windowEntityData = <span class="keyword">new</span> <a class="code" href="../../dc/d6c/classwindow_entity.html">windowEntity</a>(newWin);</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <a class="code" href="../../dc/d59/namespace_l_t_e.html#a9a053246fe6d76fb97a3d9e95c94dbda">entityTaleId</a> windowEntityId = <a class="code" href="../../de/d44/class_l_t_e_1_1entity_manger.html#ac0129f918cf801acd2be1d4d30bc0a38">entityManger::addEntity</a>(<span class="keyword">dynamic_cast&lt;</span><a class="code" href="../../dc/d6c/classwindow_entity.html">windowEntity</a>*<span class="keyword">&gt;</span>(windowEntityData));</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keyword">event</span> *onWindowResizeEvent = <a class="code" href="../../d8/da3/class_l_t_e_1_1event_1_1event_builder.html#a64a91dfac89061c9f0f4e507c30310b0">event::eventBuilder::startBuilding</a>()-&gt;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                            setEventType(<a class="code" href="../../dc/d59/namespace_l_t_e.html#a74b6aa3c900329cf3a4804ff30bec8b2aced1bb57f3b418808d13e59466f04224">events::WindowResize</a>)-&gt;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                            setEventCallback(<a class="code" href="../../dc/d59/namespace_l_t_e.html#a5e9f825bded21af8efa2870ab758a47c">onWindowResize</a>)-&gt;<a class="code" href="../../d8/da3/class_l_t_e_1_1event_1_1event_builder.html#a45e9677dc2c607e6a0d34d0704bc8380">setEntityID</a>(windowEntityId)-&gt;<a class="code" href="../../d8/da3/class_l_t_e_1_1event_1_1event_builder.html#aae7905b56f1b51a112b2941205e80189">setWindowId</a>(newWin-&gt;id)-&gt;<a class="code" href="../../d8/da3/class_l_t_e_1_1event_1_1event_builder.html#a7181fef53bdf5c5aee59c5c4a75cd617">build</a>();</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;           </div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keyword">event</span> *onWindowCloseEvent = <a class="code" href="../../d8/da3/class_l_t_e_1_1event_1_1event_builder.html#a64a91dfac89061c9f0f4e507c30310b0">event::eventBuilder::startBuilding</a>()-&gt;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                            setEventType(<a class="code" href="../../dc/d59/namespace_l_t_e.html#a74b6aa3c900329cf3a4804ff30bec8b2a53581230f22e3b2a485cee249aff6a32">events::WindowClose</a>)-&gt;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                            setEventCallback(<a class="code" href="../../dc/d59/namespace_l_t_e.html#a9fc3f766d424d8310332ecb34f65dc47">onWindowClose</a>)-&gt;<a class="code" href="../../d8/da3/class_l_t_e_1_1event_1_1event_builder.html#aae7905b56f1b51a112b2941205e80189">setWindowId</a>(newWin-&gt;id)-&gt;<a class="code" href="../../d8/da3/class_l_t_e_1_1event_1_1event_builder.html#a7181fef53bdf5c5aee59c5c4a75cd617">build</a>();</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;           </div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <a class="code" href="../../d5/d7c/class_l_t_e_1_1event_manger.html#a477b6dfb06c4db052fdd25f70be60adf">eventManger::addEvent</a>(onWindowResizeEvent);</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <a class="code" href="../../d5/d7c/class_l_t_e_1_1event_manger.html#a477b6dfb06c4db052fdd25f70be60adf">eventManger::addEvent</a>(onWindowCloseEvent);</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        </div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="keywordflow">return</span> newWin-&gt;id;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    }</div>
-<div class="ttc" id="aclass_l_t_e_1_1entity_manger_html_ac0129f918cf801acd2be1d4d30bc0a38"><div class="ttname"><a href="../../de/d44/class_l_t_e_1_1entity_manger.html#ac0129f918cf801acd2be1d4d30bc0a38">LTE::entityManger::addEntity</a></div><div class="ttdeci">static entityTaleId addEntity(IEntity *eventToAdd)</div><div class="ttdef"><b>Definition:</b> entity.cpp:22</div></div>
-<div class="ttc" id="aclass_l_t_e_1_1event_1_1event_builder_html_a45e9677dc2c607e6a0d34d0704bc8380"><div class="ttname"><a href="../../d8/da3/class_l_t_e_1_1event_1_1event_builder.html#a45e9677dc2c607e6a0d34d0704bc8380">LTE::event::eventBuilder::setEntityID</a></div><div class="ttdeci">eventBuilder * setEntityID(entityTaleId entityID)</div><div class="ttdef"><b>Definition:</b> events.h:63</div></div>
-<div class="ttc" id="aclass_l_t_e_1_1event_1_1event_builder_html_a64a91dfac89061c9f0f4e507c30310b0"><div class="ttname"><a href="../../d8/da3/class_l_t_e_1_1event_1_1event_builder.html#a64a91dfac89061c9f0f4e507c30310b0">LTE::event::eventBuilder::startBuilding</a></div><div class="ttdeci">static eventBuilder * startBuilding()</div><div class="ttdef"><b>Definition:</b> events.h:30</div></div>
-<div class="ttc" id="aclass_l_t_e_1_1event_1_1event_builder_html_a7181fef53bdf5c5aee59c5c4a75cd617"><div class="ttname"><a href="../../d8/da3/class_l_t_e_1_1event_1_1event_builder.html#a7181fef53bdf5c5aee59c5c4a75cd617">LTE::event::eventBuilder::build</a></div><div class="ttdeci">event * build()</div><div class="ttdef"><b>Definition:</b> events.h:69</div></div>
-<div class="ttc" id="aclass_l_t_e_1_1event_1_1event_builder_html_aae7905b56f1b51a112b2941205e80189"><div class="ttname"><a href="../../d8/da3/class_l_t_e_1_1event_1_1event_builder.html#aae7905b56f1b51a112b2941205e80189">LTE::event::eventBuilder::setWindowId</a></div><div class="ttdeci">eventBuilder * setWindowId(windowPieceId window)</div><div class="ttdef"><b>Definition:</b> events.h:45</div></div>
-<div class="ttc" id="aclass_l_t_e_1_1event_manger_html_a477b6dfb06c4db052fdd25f70be60adf"><div class="ttname"><a href="../../d5/d7c/class_l_t_e_1_1event_manger.html#a477b6dfb06c4db052fdd25f70be60adf">LTE::eventManger::addEvent</a></div><div class="ttdeci">static eventLaughId addEvent(event *eventToAdd)</div><div class="ttdef"><b>Definition:</b> events.cpp:25</div></div>
-<div class="ttc" id="aclasswindow_entity_html"><div class="ttname"><a href="../../dc/d6c/classwindow_entity.html">windowEntity</a></div><div class="ttdef"><b>Definition:</b> window.cpp:16</div></div>
-<div class="ttc" id="anamespace_l_t_e_html_a5e9f825bded21af8efa2870ab758a47c"><div class="ttname"><a href="../../dc/d59/namespace_l_t_e.html#a5e9f825bded21af8efa2870ab758a47c">LTE::onWindowResize</a></div><div class="ttdeci">void onWindowResize(IEntity *eventEntity, coreEventData *sendor)</div><div class="ttdef"><b>Definition:</b> window.cpp:41</div></div>
-<div class="ttc" id="anamespace_l_t_e_html_a74b6aa3c900329cf3a4804ff30bec8b2a53581230f22e3b2a485cee249aff6a32"><div class="ttname"><a href="../../dc/d59/namespace_l_t_e.html#a74b6aa3c900329cf3a4804ff30bec8b2a53581230f22e3b2a485cee249aff6a32">LTE::WindowClose</a></div><div class="ttdeci">@ WindowClose</div><div class="ttdef"><b>Definition:</b> coreEventData.h:10</div></div>
-<div class="ttc" id="anamespace_l_t_e_html_a74b6aa3c900329cf3a4804ff30bec8b2aced1bb57f3b418808d13e59466f04224"><div class="ttname"><a href="../../dc/d59/namespace_l_t_e.html#a74b6aa3c900329cf3a4804ff30bec8b2aced1bb57f3b418808d13e59466f04224">LTE::WindowResize</a></div><div class="ttdeci">@ WindowResize</div><div class="ttdef"><b>Definition:</b> coreEventData.h:10</div></div>
-<div class="ttc" id="anamespace_l_t_e_html_a9a053246fe6d76fb97a3d9e95c94dbda"><div class="ttname"><a href="../../dc/d59/namespace_l_t_e.html#a9a053246fe6d76fb97a3d9e95c94dbda">LTE::entityTaleId</a></div><div class="ttdeci">uint32_t entityTaleId</div><div class="ttdef"><b>Definition:</b> core.h:7</div></div>
-<div class="ttc" id="anamespace_l_t_e_html_a9fc3f766d424d8310332ecb34f65dc47"><div class="ttname"><a href="../../dc/d59/namespace_l_t_e.html#a9fc3f766d424d8310332ecb34f65dc47">LTE::onWindowClose</a></div><div class="ttdeci">void onWindowClose(IEntity *eventEntity, coreEventData *sendor)</div><div class="ttdef"><b>Definition:</b> window.cpp:51</div></div>
-</div><!-- fragment --><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../de/de3/class_l_t_e_1_1window_manger_a14308fb83186573c28fe62c96e0f07b7_cgraph.png" border="0" usemap="#ade/de3/class_l_t_e_1_1window_manger_a14308fb83186573c28fe62c96e0f07b7_cgraph" alt=""/></div>
-<map name="ade/de3/class_l_t_e_1_1window_manger_a14308fb83186573c28fe62c96e0f07b7_cgraph" id="ade/de3/class_l_t_e_1_1window_manger_a14308fb83186573c28fe62c96e0f07b7_cgraph">
-<area shape="rect" title=" " alt="" coords="5,207,155,248"/>
-<area shape="rect" href="../../de/d44/class_l_t_e_1_1entity_manger.html#ac0129f918cf801acd2be1d4d30bc0a38" title=" " alt="" coords="230,5,367,47"/>
-<area shape="rect" href="../../d5/d7c/class_l_t_e_1_1event_manger.html#a477b6dfb06c4db052fdd25f70be60adf" title=" " alt="" coords="203,71,395,98"/>
-<area shape="rect" href="../../d8/da3/class_l_t_e_1_1event_1_1event_builder.html#a7181fef53bdf5c5aee59c5c4a75cd617" title=" " alt="" coords="215,123,382,164"/>
-<area shape="rect" href="../../dc/d59/namespace_l_t_e.html#a9fc3f766d424d8310332ecb34f65dc47" title=" " alt="" coords="224,189,373,215"/>
-<area shape="rect" href="../../dc/d59/namespace_l_t_e.html#a5e9f825bded21af8efa2870ab758a47c" title=" " alt="" coords="221,239,377,266"/>
-<area shape="rect" href="../../d8/da3/class_l_t_e_1_1event_1_1event_builder.html#a45e9677dc2c607e6a0d34d0704bc8380" title=" " alt="" coords="215,291,382,332"/>
-<area shape="rect" href="../../d8/da3/class_l_t_e_1_1event_1_1event_builder.html#aae7905b56f1b51a112b2941205e80189" title=" " alt="" coords="215,356,382,397"/>
-<area shape="rect" href="../../d8/da3/class_l_t_e_1_1event_1_1event_builder.html#a64a91dfac89061c9f0f4e507c30310b0" title=" " alt="" coords="215,421,382,463"/>
-<area shape="rect" href="../../da/df9/struct_l_t_e_1_1event.html#aa74d00b45763be4768aa2b33bf47c5f8" title=" " alt="" coords="443,71,617,98"/>
-<area shape="rect" href="../../de/de3/class_l_t_e_1_1window_manger.html#aeb94c72d9ef01e6ec53328e2ba972628" title=" " alt="" coords="455,181,605,223"/>
-<area shape="rect" href="../../d8/da3/class_l_t_e_1_1event_1_1event_builder.html#a3c6cb0adae2c79cf4c7581a5b21167e6" title=" " alt="" coords="447,421,613,463"/>
-</map>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../de/de3/class_l_t_e_1_1window_manger_a14308fb83186573c28fe62c96e0f07b7_icgraph.png" border="0" usemap="#ade/de3/class_l_t_e_1_1window_manger_a14308fb83186573c28fe62c96e0f07b7_icgraph" alt=""/></div>
-<map name="ade/de3/class_l_t_e_1_1window_manger_a14308fb83186573c28fe62c96e0f07b7_icgraph" id="ade/de3/class_l_t_e_1_1window_manger_a14308fb83186573c28fe62c96e0f07b7_icgraph">
-<area shape="rect" title=" " alt="" coords="109,5,259,47"/>
-<area shape="rect" href="../../db/d41/sound_engine_8test_8cpp.html#afbf0b113fc00899615ae64ad5bcb71a7" title=" " alt="" coords="5,13,61,39"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="ab5b89b56f700da583be78516d5673a0b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab5b89b56f700da583be78516d5673a0b">&#9670;&nbsp;</a></span>bindContext()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void LTE::windowManger::bindContext </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../dc/d59/namespace_l_t_e.html#a8ae7e0c0e39c6dfb8804ee2eecf2c6c2">windowPieceId</a>&#160;</td>
-          <td class="paramname"><em>windowId</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    {</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        window *w = <a class="code" href="../../d8/d8e/window_8cpp.html#a717c50c5129d7422ac9babe657f70ec1">findWinById</a>(windowId);</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        <span class="keywordflow">if</span>(w != <span class="keyword">nullptr</span>)</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;            w-&gt;makeContextCurrent((windowPtr)windowId);</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        <a class="code" href="../../d1/d8c/logger_8h.html#a030a2caf9f43b4e2926c659309f955ef">LAUGHTALE_ENGINR_CONDTION_LOG_ERROR</a>(<span class="stringliteral">&quot;faild to bind Context: no window with id: &quot;</span> &lt;&lt; windowId, w == <span class="keyword">nullptr</span>);</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        </div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    }</div>
-</div><!-- fragment --><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../de/de3/class_l_t_e_1_1window_manger_ab5b89b56f700da583be78516d5673a0b_icgraph.png" border="0" usemap="#ade/de3/class_l_t_e_1_1window_manger_ab5b89b56f700da583be78516d5673a0b_icgraph" alt=""/></div>
-<map name="ade/de3/class_l_t_e_1_1window_manger_ab5b89b56f700da583be78516d5673a0b_icgraph" id="ade/de3/class_l_t_e_1_1window_manger_ab5b89b56f700da583be78516d5673a0b_icgraph">
-<area shape="rect" title=" " alt="" coords="776,242,925,283"/>
-<area shape="rect" href="../../de/de3/class_l_t_e_1_1window_manger.html#a11d74175a3306ce25cae68403652a97f" title=" " alt="" coords="557,199,728,225"/>
-<area shape="rect" href="../../de/de3/class_l_t_e_1_1window_manger.html#a3d3d7b595c0b4153c875e8c4965829cb" title=" " alt="" coords="568,115,717,157"/>
-<area shape="rect" href="../../de/de3/class_l_t_e_1_1window_manger.html#a34ec769a91b7887fa7131d9a050fb078" title=" " alt="" coords="568,366,717,407"/>
-<area shape="rect" href="../../de/de3/class_l_t_e_1_1window_manger.html#a08a8641beaf615daf975ed204b959a46" title=" " alt="" coords="568,431,717,473"/>
-<area shape="rect" href="../../de/de3/class_l_t_e_1_1window_manger.html#a7451e4b7751a4a137d9e7c58a3a6695e" title=" " alt="" coords="568,301,717,342"/>
-<area shape="rect" href="../../d0/d6c/class_l_t_e_1_1mesh.html#a05bb6dfd0ec764182edd6af9a4bf16ec" title=" " alt="" coords="337,309,496,336"/>
-<area shape="rect" href="../../d0/d6c/class_l_t_e_1_1mesh.html#a64085d515dc58adb5f034b8a340f9978" title=" " alt="" coords="557,56,728,83"/>
-<area shape="rect" href="../../d0/d6c/class_l_t_e_1_1mesh.html#a1193559063ea1e25c9140488a4170f9d" title=" " alt="" coords="327,157,506,184"/>
-<area shape="rect" href="../../d0/d6c/class_l_t_e_1_1mesh.html#a84bf7231778612b213a213991ab6a16f" title=" " alt="" coords="340,259,493,285"/>
-<area shape="rect" href="../../d0/d6c/class_l_t_e_1_1mesh.html#a40bc457eddc0c07b0495fa53296a32e9" title=" " alt="" coords="326,107,507,133"/>
-<area shape="rect" href="../../d0/d6c/class_l_t_e_1_1mesh.html#ab9726ed6384d67a36b5501bfaa36e6f4" title=" " alt="" coords="324,208,509,235"/>
-<area shape="rect" href="../../da/dee/classbird.html#a2c12cead837f26baa4cff4d63f77119e" title=" " alt="" coords="5,208,77,235"/>
-<area shape="rect" href="../../d1/d69/classpilar.html#a7162f7b5537d06dc4008bff6dc6fec61" title=" " alt="" coords="161,157,240,184"/>
-<area shape="rect" href="../../da/dee/classbird.html#a0b847678b9ee9b086a909789ac2de13a" title=" " alt="" coords="157,309,245,336"/>
-<area shape="rect" href="../../d0/d6c/class_l_t_e_1_1mesh.html#aacf2df42b2bd3100dca861a39dcf6e22" title=" " alt="" coords="357,411,476,437"/>
-<area shape="rect" href="../../d1/d10/class_l_t_e_1_1renderer.html#a3eeb2a87b830b61b9885b18c4955adf8" title=" " alt="" coords="125,411,276,437"/>
-<area shape="rect" href="../../d0/d6c/class_l_t_e_1_1mesh.html#a8614c8bf0f0c537f5b48c5c832d4e33d" title=" " alt="" coords="343,360,490,387"/>
-<area shape="rect" href="../../da/dee/classbird.html#a42a6012a9fe17c5a6223349991899664" title=" " alt="" coords="357,5,477,32"/>
-<area shape="rect" href="../../d1/d69/classpilar.html#a9f48dca7c6fc47ad8be35274752e62e7" title=" " alt="" coords="361,56,472,83"/>
-<area shape="rect" href="../../da/dee/classbird.html#a0d2acca30906a8e6b726672706dd99b5" title=" " alt="" coords="147,5,254,32"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a34ec769a91b7887fa7131d9a050fb078"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a34ec769a91b7887fa7131d9a050fb078">&#9670;&nbsp;</a></span>bindIB()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void LTE::windowManger::bindIB </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../dc/d59/namespace_l_t_e.html#a8ae7e0c0e39c6dfb8804ee2eecf2c6c2">windowPieceId</a>&#160;</td>
-          <td class="paramname"><em>windowId</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="../../dc/d59/namespace_l_t_e.html#a8ca77d02474ac4700057da444fc65bca">indexBufferId</a>&#160;</td>
-          <td class="paramname"><em>id</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    {</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        <a class="code" href="../../de/de3/class_l_t_e_1_1window_manger.html#ab5b89b56f700da583be78516d5673a0b">bindContext</a>(windowId);</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        window *w = <a class="code" href="../../d8/d8e/window_8cpp.html#a717c50c5129d7422ac9babe657f70ec1">findWinById</a>(windowId);</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        indexBufferManger *m = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;        <span class="keywordflow">if</span>(w != <span class="keyword">nullptr</span>)</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;            m = w-&gt;getIndexBufferManger();</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;        <span class="keywordflow">if</span>(m != <span class="keyword">nullptr</span>)</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;            m-&gt;bind(<span class="keywordtype">id</span>);</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160; </div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;        <a class="code" href="../../d1/d8c/logger_8h.html#a030a2caf9f43b4e2926c659309f955ef">LAUGHTALE_ENGINR_CONDTION_LOG_ERROR</a>(<span class="stringliteral">&quot;faild to bind index buffer: no window with id: &quot;</span> &lt;&lt; windowId, w == <span class="keyword">nullptr</span>);</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    }</div>
-</div><!-- fragment --><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../de/de3/class_l_t_e_1_1window_manger_a34ec769a91b7887fa7131d9a050fb078_cgraph.png" border="0" usemap="#ade/de3/class_l_t_e_1_1window_manger_a34ec769a91b7887fa7131d9a050fb078_cgraph" alt=""/></div>
-<map name="ade/de3/class_l_t_e_1_1window_manger_a34ec769a91b7887fa7131d9a050fb078_cgraph" id="ade/de3/class_l_t_e_1_1window_manger_a34ec769a91b7887fa7131d9a050fb078_cgraph">
-<area shape="rect" title=" " alt="" coords="5,39,155,80"/>
-<area shape="rect" href="../../d5/d28/class_l_t_e_1_1index_buffer_manger.html#a78d1d7b8867fe4771bd2ff0ce9cc9190" title=" " alt="" coords="203,5,365,47"/>
-<area shape="rect" href="../../de/de3/class_l_t_e_1_1window_manger.html#ab5b89b56f700da583be78516d5673a0b" title=" " alt="" coords="209,71,359,112"/>
-</map>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../de/de3/class_l_t_e_1_1window_manger_a34ec769a91b7887fa7131d9a050fb078_icgraph.png" border="0" usemap="#ade/de3/class_l_t_e_1_1window_manger_a34ec769a91b7887fa7131d9a050fb078_icgraph" alt=""/></div>
-<map name="ade/de3/class_l_t_e_1_1window_manger_a34ec769a91b7887fa7131d9a050fb078_icgraph" id="ade/de3/class_l_t_e_1_1window_manger_a34ec769a91b7887fa7131d9a050fb078_icgraph">
-<area shape="rect" title=" " alt="" coords="371,5,520,47"/>
-<area shape="rect" href="../../d0/d6c/class_l_t_e_1_1mesh.html#aacf2df42b2bd3100dca861a39dcf6e22" title=" " alt="" coords="204,13,323,39"/>
-<area shape="rect" href="../../d1/d10/class_l_t_e_1_1renderer.html#a3eeb2a87b830b61b9885b18c4955adf8" title=" " alt="" coords="5,13,156,39"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a1836712000460802e91b92c2e7461c1e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1836712000460802e91b92c2e7461c1e">&#9670;&nbsp;</a></span>bindS()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void LTE::windowManger::bindS </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../dc/d59/namespace_l_t_e.html#a8ae7e0c0e39c6dfb8804ee2eecf2c6c2">windowPieceId</a>&#160;</td>
-          <td class="paramname"><em>windowId</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="../../dc/d59/namespace_l_t_e.html#a240c95c9f25acf9255a4bafa7ca67f1f">shaderId</a>&#160;</td>
-          <td class="paramname"><em>id</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    {</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;        window *w = <a class="code" href="../../d8/d8e/window_8cpp.html#a717c50c5129d7422ac9babe657f70ec1">findWinById</a>(windowId);</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;        shaderManger *sm = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;        <span class="keywordflow">if</span>(w != <span class="keyword">nullptr</span>)</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;            sm = w-&gt;getShaderManger();</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;        <span class="keywordflow">if</span>(sm != <span class="keyword">nullptr</span>)</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;            sm-&gt;bind(<span class="keywordtype">id</span>);</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;        <a class="code" href="../../d1/d8c/logger_8h.html#a030a2caf9f43b4e2926c659309f955ef">LAUGHTALE_ENGINR_CONDTION_LOG_ERROR</a>(<span class="stringliteral">&quot;faild to bind vertex array: no window with id: &quot;</span> &lt;&lt; windowId, w == <span class="keyword">nullptr</span>);</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;        </div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    }</div>
-</div><!-- fragment --><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../de/de3/class_l_t_e_1_1window_manger_a1836712000460802e91b92c2e7461c1e_cgraph.png" border="0" usemap="#ade/de3/class_l_t_e_1_1window_manger_a1836712000460802e91b92c2e7461c1e_cgraph" alt=""/></div>
-<map name="ade/de3/class_l_t_e_1_1window_manger_a1836712000460802e91b92c2e7461c1e_cgraph" id="ade/de3/class_l_t_e_1_1window_manger_a1836712000460802e91b92c2e7461c1e_cgraph">
-<area shape="rect" title=" " alt="" coords="5,27,155,69"/>
-<area shape="rect" href="../../d0/d7b/class_l_t_e_1_1shader_manger.html#aa5d817a609edfb9252c6d0411fdff349" title=" " alt="" coords="203,35,371,61"/>
-<area shape="rect" href="../../d1/d2e/class_l_t_e_1_1shader.html#a92783c68affd61b5a3259e35b9e84a49" title=" " alt="" coords="428,5,553,32"/>
-<area shape="rect" href="../../d0/d7b/class_l_t_e_1_1shader_manger.html#a3262e7a5c8cafedbdd7a7a713e60f74c" title=" " alt="" coords="419,57,563,98"/>
-</map>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../de/de3/class_l_t_e_1_1window_manger_a1836712000460802e91b92c2e7461c1e_icgraph.png" border="0" usemap="#ade/de3/class_l_t_e_1_1window_manger_a1836712000460802e91b92c2e7461c1e_icgraph" alt=""/></div>
-<map name="ade/de3/class_l_t_e_1_1window_manger_a1836712000460802e91b92c2e7461c1e_icgraph" id="ade/de3/class_l_t_e_1_1window_manger_a1836712000460802e91b92c2e7461c1e_icgraph">
-<area shape="rect" title=" " alt="" coords="697,23,847,65"/>
-<area shape="rect" href="../../d0/d6c/class_l_t_e_1_1mesh.html#aacf2df42b2bd3100dca861a39dcf6e22" title=" " alt="" coords="505,5,623,32"/>
-<area shape="rect" href="../../d0/d6c/class_l_t_e_1_1mesh.html#a64085d515dc58adb5f034b8a340f9978" title=" " alt="" coords="479,56,649,83"/>
-<area shape="rect" href="../../d1/d10/class_l_t_e_1_1renderer.html#a3eeb2a87b830b61b9885b18c4955adf8" title=" " alt="" coords="280,5,431,32"/>
-<area shape="rect" href="../../da/dee/classbird.html#a42a6012a9fe17c5a6223349991899664" title=" " alt="" coords="295,56,415,83"/>
-<area shape="rect" href="../../d1/d69/classpilar.html#a9f48dca7c6fc47ad8be35274752e62e7" title=" " alt="" coords="300,107,411,133"/>
-<area shape="rect" href="../../da/dee/classbird.html#a0d2acca30906a8e6b726672706dd99b5" title=" " alt="" coords="125,56,232,83"/>
-<area shape="rect" href="../../da/dee/classbird.html#a2c12cead837f26baa4cff4d63f77119e" title=" " alt="" coords="5,56,77,83"/>
-<area shape="rect" href="../../d1/d69/classpilar.html#a7162f7b5537d06dc4008bff6dc6fec61" title=" " alt="" coords="139,107,218,133"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a08a8641beaf615daf975ed204b959a46"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a08a8641beaf615daf975ed204b959a46">&#9670;&nbsp;</a></span>bindVA()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void LTE::windowManger::bindVA </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../dc/d59/namespace_l_t_e.html#a8ae7e0c0e39c6dfb8804ee2eecf2c6c2">windowPieceId</a>&#160;</td>
-          <td class="paramname"><em>windowId</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="../../dc/d59/namespace_l_t_e.html#a7d91e85b98ad096924555bbe9bf6c42d">vertexArrayId</a>&#160;</td>
-          <td class="paramname"><em>id</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    {</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160; </div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;        <a class="code" href="../../de/de3/class_l_t_e_1_1window_manger.html#ab5b89b56f700da583be78516d5673a0b">bindContext</a>(windowId);</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;        window *w = <a class="code" href="../../d8/d8e/window_8cpp.html#a717c50c5129d7422ac9babe657f70ec1">findWinById</a>(windowId);</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        vertexArrayManger *m = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;        <span class="keywordflow">if</span>(w != <span class="keyword">nullptr</span>)</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;            m = w-&gt;getVertexArrayManger();</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        <span class="keywordflow">if</span>(m != <span class="keyword">nullptr</span>)</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;            <span class="keywordflow">return</span> m-&gt;bind(<span class="keywordtype">id</span>);</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160; </div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;        <a class="code" href="../../d1/d8c/logger_8h.html#a030a2caf9f43b4e2926c659309f955ef">LAUGHTALE_ENGINR_CONDTION_LOG_ERROR</a>(<span class="stringliteral">&quot;faild to bind vertex array: no window with id: &quot;</span> &lt;&lt; windowId, w == <span class="keyword">nullptr</span>);</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../d8/d8e/window_8cpp.html#a717c50c5129d7422ac9babe657f70ec1">findWinById</a>(windowId)-&gt;getVertexArrayManger()-&gt;bind(<span class="keywordtype">id</span>);</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    }</div>
-</div><!-- fragment --><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../de/de3/class_l_t_e_1_1window_manger_a08a8641beaf615daf975ed204b959a46_cgraph.png" border="0" usemap="#ade/de3/class_l_t_e_1_1window_manger_a08a8641beaf615daf975ed204b959a46_cgraph" alt=""/></div>
-<map name="ade/de3/class_l_t_e_1_1window_manger_a08a8641beaf615daf975ed204b959a46_cgraph" id="ade/de3/class_l_t_e_1_1window_manger_a08a8641beaf615daf975ed204b959a46_cgraph">
-<area shape="rect" title=" " alt="" coords="5,39,155,80"/>
-<area shape="rect" href="../../dc/d45/class_l_t_e_1_1vertex_array_manger.html#a7183701ebcc61671d9cdc19e0010b616" title=" " alt="" coords="203,5,367,47"/>
-<area shape="rect" href="../../de/de3/class_l_t_e_1_1window_manger.html#ab5b89b56f700da583be78516d5673a0b" title=" " alt="" coords="210,71,359,112"/>
-</map>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../de/de3/class_l_t_e_1_1window_manger_a08a8641beaf615daf975ed204b959a46_icgraph.png" border="0" usemap="#ade/de3/class_l_t_e_1_1window_manger_a08a8641beaf615daf975ed204b959a46_icgraph" alt=""/></div>
-<map name="ade/de3/class_l_t_e_1_1window_manger_a08a8641beaf615daf975ed204b959a46_icgraph" id="ade/de3/class_l_t_e_1_1window_manger_a08a8641beaf615daf975ed204b959a46_icgraph">
-<area shape="rect" title=" " alt="" coords="371,5,520,47"/>
-<area shape="rect" href="../../d0/d6c/class_l_t_e_1_1mesh.html#aacf2df42b2bd3100dca861a39dcf6e22" title=" " alt="" coords="204,13,323,39"/>
-<area shape="rect" href="../../d1/d10/class_l_t_e_1_1renderer.html#a3eeb2a87b830b61b9885b18c4955adf8" title=" " alt="" coords="5,13,156,39"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a1bab1c05385f727e5a90ea87b429895d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1bab1c05385f727e5a90ea87b429895d">&#9670;&nbsp;</a></span>bindVB()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void LTE::windowManger::bindVB </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../dc/d59/namespace_l_t_e.html#a8ae7e0c0e39c6dfb8804ee2eecf2c6c2">windowPieceId</a>&#160;</td>
-          <td class="paramname"><em>windowId</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="../../dc/d59/namespace_l_t_e.html#a52df8f597871c85d528fe5dd540777fb">vertexBufferId</a>&#160;</td>
-          <td class="paramname"><em>id</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    {</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        window *w = <a class="code" href="../../d8/d8e/window_8cpp.html#a717c50c5129d7422ac9babe657f70ec1">findWinById</a>(windowId);</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        VertexBufferManger *vbm = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        <span class="keywordflow">if</span>(w != <span class="keyword">nullptr</span>)</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;            vbm = w-&gt;getVertexBufferManger();</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        <span class="keywordflow">if</span>(vbm != <span class="keyword">nullptr</span>)</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;            vbm-&gt;bind(<span class="keywordtype">id</span>);</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160; </div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;        <a class="code" href="../../d1/d8c/logger_8h.html#a030a2caf9f43b4e2926c659309f955ef">LAUGHTALE_ENGINR_CONDTION_LOG_ERROR</a>(<span class="stringliteral">&quot;faild to bind vb: no window with id: &quot;</span> &lt;&lt; windowId, w == <span class="keyword">nullptr</span>);</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    }</div>
-</div><!-- fragment --><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../de/de3/class_l_t_e_1_1window_manger_a1bab1c05385f727e5a90ea87b429895d_cgraph.png" border="0" usemap="#ade/de3/class_l_t_e_1_1window_manger_a1bab1c05385f727e5a90ea87b429895d_cgraph" alt=""/></div>
-<map name="ade/de3/class_l_t_e_1_1window_manger_a1bab1c05385f727e5a90ea87b429895d_cgraph" id="ade/de3/class_l_t_e_1_1window_manger_a1bab1c05385f727e5a90ea87b429895d_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,155,47"/>
-<area shape="rect" href="../../d1/da9/class_l_t_e_1_1_vertex_buffer_manger.html#ae4083ee65bddefa7f82fe2cbb77c81da" title=" " alt="" coords="203,5,373,47"/>
-</map>
-</div>
-
-</div>
-</div>
 <a id="a6ecf67fe5928e63ba34ea590f5f41cee"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6ecf67fe5928e63ba34ea590f5f41cee">&#9670;&nbsp;</a></span>close()</h2>
 
@@ -956,7 +133,7 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;{}    </div>
+<div class="fragment"><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;{}    </div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -965,341 +142,10 @@ Here is the caller graph for this function:</div>
 <area shape="rect" title=" " alt="" coords="363,23,512,65"/>
 <area shape="rect" href="../../d0/d13/class_l_t_e_1_1app.html#ae0f06737b2f489eace03ada49ae7b4d5" title=" " alt="" coords="200,31,315,57"/>
 <area shape="rect" href="../../d5/d71/classflappy_bird.html#a3353f8436200edb894fd5908515c8f74" title=" " alt="" coords="5,5,152,32"/>
-<area shape="rect" href="../../dc/dc2/init_event_system_8test_8cpp.html#ade06e6476a6ad085e91be7cf3f0babda" title=" " alt="" coords="51,56,107,83"/>
+<area shape="rect" href="../../d0/dd3/network_manger_8test_8cpp.html#a694d31198f53727b698f47d94e41db6b" title=" " alt="" coords="51,56,107,83"/>
 </map>
 </div>
 
-</div>
-</div>
-<a id="af66cd3c4714370977a91d7452ab82ae7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af66cd3c4714370977a91d7452ab82ae7">&#9670;&nbsp;</a></span>getHeight()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">unsigned int LTE::windowManger::getHeight </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../dc/d59/namespace_l_t_e.html#a8ae7e0c0e39c6dfb8804ee2eecf2c6c2">windowPieceId</a>&#160;</td>
-          <td class="paramname"><em>windowId</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    { </div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        window *w = <a class="code" href="../../d8/d8e/window_8cpp.html#a717c50c5129d7422ac9babe657f70ec1">findWinById</a>(windowId);</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        <span class="keywordflow">if</span>(w != <span class="keyword">nullptr</span>)            </div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="../../d8/d8e/window_8cpp.html#a717c50c5129d7422ac9babe657f70ec1">findWinById</a>(windowId)-&gt;Height;</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        <a class="code" href="../../d1/d8c/logger_8h.html#aae4cf1bd083983040d4d6572a9b0d8bf">LAUGHTALE_ENGINR_LOG_ERROR</a>(<span class="stringliteral">&quot;no window with id: &quot;</span> &lt;&lt; windowId);</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <span class="keywordflow">return</span> -1;</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    }</div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="a7451e4b7751a4a137d9e7c58a3a6695e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7451e4b7751a4a137d9e7c58a3a6695e">&#9670;&nbsp;</a></span>getIndexBufferCount()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint32_t LTE::windowManger::getIndexBufferCount </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../dc/d59/namespace_l_t_e.html#a8ae7e0c0e39c6dfb8804ee2eecf2c6c2">windowPieceId</a>&#160;</td>
-          <td class="paramname"><em>windowId</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="../../dc/d59/namespace_l_t_e.html#a8ca77d02474ac4700057da444fc65bca">indexBufferId</a>&#160;</td>
-          <td class="paramname"><em>id</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    {</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;        <a class="code" href="../../de/de3/class_l_t_e_1_1window_manger.html#ab5b89b56f700da583be78516d5673a0b">bindContext</a>(windowId);</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;        window *w = <a class="code" href="../../d8/d8e/window_8cpp.html#a717c50c5129d7422ac9babe657f70ec1">findWinById</a>(windowId);</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;        indexBufferManger *m = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;        <span class="keywordflow">if</span>(w != <span class="keyword">nullptr</span>)</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;            m = w-&gt;getIndexBufferManger();</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;        <span class="keywordflow">if</span>(m != <span class="keyword">nullptr</span>)</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;            <span class="keywordflow">return</span> m-&gt;getCount(<span class="keywordtype">id</span>);</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160; </div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;        <a class="code" href="../../d1/d8c/logger_8h.html#a030a2caf9f43b4e2926c659309f955ef">LAUGHTALE_ENGINR_CONDTION_LOG_ERROR</a>(<span class="stringliteral">&quot;faild to found index buffer: no window with id: &quot;</span> &lt;&lt; windowId, w == <span class="keyword">nullptr</span>);</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;    }</div>
-</div><!-- fragment --><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../de/de3/class_l_t_e_1_1window_manger_a7451e4b7751a4a137d9e7c58a3a6695e_cgraph.png" border="0" usemap="#ade/de3/class_l_t_e_1_1window_manger_a7451e4b7751a4a137d9e7c58a3a6695e_cgraph" alt=""/></div>
-<map name="ade/de3/class_l_t_e_1_1window_manger_a7451e4b7751a4a137d9e7c58a3a6695e_cgraph" id="ade/de3/class_l_t_e_1_1window_manger_a7451e4b7751a4a137d9e7c58a3a6695e_cgraph">
-<area shape="rect" title=" " alt="" coords="5,39,155,80"/>
-<area shape="rect" href="../../de/de3/class_l_t_e_1_1window_manger.html#ab5b89b56f700da583be78516d5673a0b" title=" " alt="" coords="209,5,359,47"/>
-<area shape="rect" href="../../d5/d28/class_l_t_e_1_1index_buffer_manger.html#a3cec1924527466093717902574d35c59" title=" " alt="" coords="203,71,365,112"/>
-</map>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../de/de3/class_l_t_e_1_1window_manger_a7451e4b7751a4a137d9e7c58a3a6695e_icgraph.png" border="0" usemap="#ade/de3/class_l_t_e_1_1window_manger_a7451e4b7751a4a137d9e7c58a3a6695e_icgraph" alt=""/></div>
-<map name="ade/de3/class_l_t_e_1_1window_manger_a7451e4b7751a4a137d9e7c58a3a6695e_icgraph" id="ade/de3/class_l_t_e_1_1window_manger_a7451e4b7751a4a137d9e7c58a3a6695e_icgraph">
-<area shape="rect" title=" " alt="" coords="399,5,548,47"/>
-<area shape="rect" href="../../d0/d6c/class_l_t_e_1_1mesh.html#a8614c8bf0f0c537f5b48c5c832d4e33d" title=" " alt="" coords="204,13,351,39"/>
-<area shape="rect" href="../../d1/d10/class_l_t_e_1_1renderer.html#a3eeb2a87b830b61b9885b18c4955adf8" title=" " alt="" coords="5,13,156,39"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a5350d77976bc8a6069ff5c2f96511866"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5350d77976bc8a6069ff5c2f96511866">&#9670;&nbsp;</a></span>getRenderApi()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../df/d3a/class_l_t_e_1_1render_api.html">renderApi</a> * LTE::windowManger::getRenderApi </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../dc/d59/namespace_l_t_e.html#a8ae7e0c0e39c6dfb8804ee2eecf2c6c2">windowPieceId</a>&#160;</td>
-          <td class="paramname"><em>windowId</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;    {</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;        window *w = <a class="code" href="../../d8/d8e/window_8cpp.html#a717c50c5129d7422ac9babe657f70ec1">findWinById</a>(windowId);</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;        <span class="keywordflow">if</span>(w != <span class="keyword">nullptr</span>) <span class="keywordflow">return</span> w-&gt;getRenderApi();</div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;    }</div>
-</div><!-- fragment --><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../de/de3/class_l_t_e_1_1window_manger_a5350d77976bc8a6069ff5c2f96511866_icgraph.png" border="0" usemap="#ade/de3/class_l_t_e_1_1window_manger_a5350d77976bc8a6069ff5c2f96511866_icgraph" alt=""/></div>
-<map name="ade/de3/class_l_t_e_1_1window_manger_a5350d77976bc8a6069ff5c2f96511866_icgraph" id="ade/de3/class_l_t_e_1_1window_manger_a5350d77976bc8a6069ff5c2f96511866_icgraph">
-<area shape="rect" title=" " alt="" coords="259,5,408,47"/>
-<area shape="rect" href="../../db/d41/sound_engine_8test_8cpp.html#ac17b99588ed09d924f6867caf2e9f1cb" title=" " alt="" coords="109,13,211,39"/>
-<area shape="rect" href="../../db/d41/sound_engine_8test_8cpp.html#afbf0b113fc00899615ae64ad5bcb71a7" title=" " alt="" coords="5,13,61,39"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="aae1b28bd6810a8dd25386144873da75b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aae1b28bd6810a8dd25386144873da75b">&#9670;&nbsp;</a></span>getRenderer()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../d1/d10/class_l_t_e_1_1renderer.html">renderer</a> * LTE::windowManger::getRenderer </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../dc/d59/namespace_l_t_e.html#a8ae7e0c0e39c6dfb8804ee2eecf2c6c2">windowPieceId</a>&#160;</td>
-          <td class="paramname"><em>windowId</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;    {</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;        window *w = <a class="code" href="../../d8/d8e/window_8cpp.html#a717c50c5129d7422ac9babe657f70ec1">findWinById</a>(windowId);</div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;        <span class="keywordflow">if</span>(w != <span class="keyword">nullptr</span>) <span class="keywordflow">return</span> w-&gt;getRenderer();</div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;    }</div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="aa5d1183abd1a1193fd10925c89f2d50b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa5d1183abd1a1193fd10925c89f2d50b">&#9670;&nbsp;</a></span>getShaderManger()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../d0/d7b/class_l_t_e_1_1shader_manger.html">shaderManger</a> * LTE::windowManger::getShaderManger </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../dc/d59/namespace_l_t_e.html#a8ae7e0c0e39c6dfb8804ee2eecf2c6c2">windowPieceId</a>&#160;</td>
-          <td class="paramname"><em>windowId</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    {</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;        window *w = <a class="code" href="../../d8/d8e/window_8cpp.html#a717c50c5129d7422ac9babe657f70ec1">findWinById</a>(windowId);</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;        <span class="keywordflow">if</span>(w != <span class="keyword">nullptr</span>) <span class="keywordflow">return</span> w-&gt;getShaderManger();</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    }</div>
-</div><!-- fragment --><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../de/de3/class_l_t_e_1_1window_manger_aa5d1183abd1a1193fd10925c89f2d50b_icgraph.png" border="0" usemap="#ade/de3/class_l_t_e_1_1window_manger_aa5d1183abd1a1193fd10925c89f2d50b_icgraph" alt=""/></div>
-<map name="ade/de3/class_l_t_e_1_1window_manger_aa5d1183abd1a1193fd10925c89f2d50b_icgraph" id="ade/de3/class_l_t_e_1_1window_manger_aa5d1183abd1a1193fd10925c89f2d50b_icgraph">
-<area shape="rect" title=" " alt="" coords="907,74,1056,115"/>
-<area shape="rect" href="../../d0/d6c/class_l_t_e_1_1mesh.html#ad4f695d5d345082b215087dd2fabf404" title=" " alt="" coords="705,81,859,108"/>
-<area shape="rect" href="../../d0/d6c/class_l_t_e_1_1mesh.html#aacf2df42b2bd3100dca861a39dcf6e22" title=" " alt="" coords="513,5,631,32"/>
-<area shape="rect" href="../../d1/d10/class_l_t_e_1_1renderer.html#a3eeb2a87b830b61b9885b18c4955adf8" title=" " alt="" coords="284,31,435,57"/>
-<area shape="rect" href="../../d0/d6c/class_l_t_e_1_1mesh.html#a05bb6dfd0ec764182edd6af9a4bf16ec" title=" " alt="" coords="280,107,439,133"/>
-<area shape="rect" href="../../d0/d6c/class_l_t_e_1_1mesh.html#a64085d515dc58adb5f034b8a340f9978" title=" " alt="" coords="487,157,657,184"/>
-<area shape="rect" href="../../da/dee/classbird.html#a2c12cead837f26baa4cff4d63f77119e" title=" " alt="" coords="5,107,77,133"/>
-<area shape="rect" href="../../da/dee/classbird.html#a0b847678b9ee9b086a909789ac2de13a" title=" " alt="" coords="135,107,223,133"/>
-<area shape="rect" href="../../d1/d69/classpilar.html#a7162f7b5537d06dc4008bff6dc6fec61" title=" " alt="" coords="139,157,218,184"/>
-<area shape="rect" href="../../da/dee/classbird.html#a42a6012a9fe17c5a6223349991899664" title=" " alt="" coords="299,208,419,235"/>
-<area shape="rect" href="../../d1/d69/classpilar.html#a9f48dca7c6fc47ad8be35274752e62e7" title=" " alt="" coords="304,157,415,184"/>
-<area shape="rect" href="../../da/dee/classbird.html#a0d2acca30906a8e6b726672706dd99b5" title=" " alt="" coords="125,208,232,235"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="af8e69bbdf75031660c1fef892d7961d7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af8e69bbdf75031660c1fef892d7961d7">&#9670;&nbsp;</a></span>getVertexArrayManger()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../dc/d45/class_l_t_e_1_1vertex_array_manger.html">vertexArrayManger</a> * LTE::windowManger::getVertexArrayManger </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../dc/d59/namespace_l_t_e.html#a8ae7e0c0e39c6dfb8804ee2eecf2c6c2">windowPieceId</a>&#160;</td>
-          <td class="paramname"><em>windowId</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    {</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;        window *w = <a class="code" href="../../d8/d8e/window_8cpp.html#a717c50c5129d7422ac9babe657f70ec1">findWinById</a>(windowId);</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;        <span class="keywordflow">if</span>(w != <span class="keyword">nullptr</span>) <span class="keywordflow">return</span> w-&gt;getVertexArrayManger();</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;        </div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    }</div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="a04fcc066259d9ddb25efe1917e1454a2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a04fcc066259d9ddb25efe1917e1454a2">&#9670;&nbsp;</a></span>getVertexBufferManger()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../d1/da9/class_l_t_e_1_1_vertex_buffer_manger.html">VertexBufferManger</a> * LTE::windowManger::getVertexBufferManger </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../dc/d59/namespace_l_t_e.html#a8ae7e0c0e39c6dfb8804ee2eecf2c6c2">windowPieceId</a>&#160;</td>
-          <td class="paramname"><em>windowId</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    {</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;        window *w = <a class="code" href="../../d8/d8e/window_8cpp.html#a717c50c5129d7422ac9babe657f70ec1">findWinById</a>(windowId);</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;        <span class="keywordflow">if</span>(w != <span class="keyword">nullptr</span>) <span class="keywordflow">return</span> w-&gt;getVertexBufferManger();</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;   </div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    }</div>
-</div><!-- fragment --><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../de/de3/class_l_t_e_1_1window_manger_a04fcc066259d9ddb25efe1917e1454a2_icgraph.png" border="0" usemap="#ade/de3/class_l_t_e_1_1window_manger_a04fcc066259d9ddb25efe1917e1454a2_icgraph" alt=""/></div>
-<map name="ade/de3/class_l_t_e_1_1window_manger_a04fcc066259d9ddb25efe1917e1454a2_icgraph" id="ade/de3/class_l_t_e_1_1window_manger_a04fcc066259d9ddb25efe1917e1454a2_icgraph">
-<area shape="rect" title=" " alt="" coords="365,23,521,65"/>
-<area shape="rect" href="../../d0/d6c/class_l_t_e_1_1mesh.html#a4b2c2e31703e49a77c93d5fa9a60ec6f" title=" " alt="" coords="132,31,317,57"/>
-<area shape="rect" href="../../da/dee/classbird.html#a2c12cead837f26baa4cff4d63f77119e" title=" " alt="" coords="9,5,81,32"/>
-<area shape="rect" href="../../d1/d69/classpilar.html#a7162f7b5537d06dc4008bff6dc6fec61" title=" " alt="" coords="5,56,84,83"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a63b6a4ad947eebd24f62c561f3769f44"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a63b6a4ad947eebd24f62c561f3769f44">&#9670;&nbsp;</a></span>getWidth()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">unsigned int LTE::windowManger::getWidth </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../dc/d59/namespace_l_t_e.html#a8ae7e0c0e39c6dfb8804ee2eecf2c6c2">windowPieceId</a>&#160;</td>
-          <td class="paramname"><em>windowId</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    {</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        window *w = <a class="code" href="../../d8/d8e/window_8cpp.html#a717c50c5129d7422ac9babe657f70ec1">findWinById</a>(windowId);</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <span class="keywordflow">if</span>(w != <span class="keyword">nullptr</span>)            </div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="../../d8/d8e/window_8cpp.html#a717c50c5129d7422ac9babe657f70ec1">findWinById</a>(windowId)-&gt;Width;</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        <a class="code" href="../../d1/d8c/logger_8h.html#aae4cf1bd083983040d4d6572a9b0d8bf">LAUGHTALE_ENGINR_LOG_ERROR</a>(<span class="stringliteral">&quot;no window with id: &quot;</span> &lt;&lt; windowId);</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        <span class="keywordflow">return</span> -1;</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    }</div>
-</div><!-- fragment -->
 </div>
 </div>
 <a id="aeb94c72d9ef01e6ec53328e2ba972628"></a>
@@ -1312,7 +158,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">window * LTE::windowManger::getWindow </td>
+          <td class="memname"><a class="el" href="../../d4/d38/class_l_t_e_1_1window.html">window</a> * LTE::windowManger::getWindow </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="../../dc/d59/namespace_l_t_e.html#a8ae7e0c0e39c6dfb8804ee2eecf2c6c2">windowPieceId</a>&#160;</td>
           <td class="paramname"><em>windowId</em></td><td>)</td>
@@ -1325,19 +171,33 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    {</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../d8/d8e/window_8cpp.html#a717c50c5129d7422ac9babe657f70ec1">findWinById</a>(windowId);</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    {</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keyword">auto</span> temp = <a class="code" href="../../df/d78/window_manger_8cpp.html#a717c50c5129d7422ac9babe657f70ec1">findWinById</a>(windowId);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordflow">if</span>(temp != windows.end())</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            <span class="keywordflow">return</span> *temp;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <a class="code" href="../../d1/d8c/logger_8h.html#aae4cf1bd083983040d4d6572a9b0d8bf">LAUGHTALE_ENGINR_LOG_ERROR</a>(<span class="stringliteral">&quot;window wasn&#39;t found&quot;</span>)</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        return NULL;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    }</div>
+<div class="ttc" id="alogger_8h_html_aae4cf1bd083983040d4d6572a9b0d8bf"><div class="ttname"><a href="../../d1/d8c/logger_8h.html#aae4cf1bd083983040d4d6572a9b0d8bf">LAUGHTALE_ENGINR_LOG_ERROR</a></div><div class="ttdeci">#define LAUGHTALE_ENGINR_LOG_ERROR(toLog)</div><div class="ttdef"><b>Definition:</b> logger.h:8</div></div>
+<div class="ttc" id="awindow_manger_8cpp_html_a717c50c5129d7422ac9babe657f70ec1"><div class="ttname"><a href="../../df/d78/window_manger_8cpp.html#a717c50c5129d7422ac9babe657f70ec1">findWinById</a></div><div class="ttdeci">#define findWinById(windowId)</div><div class="ttdef"><b>Definition:</b> windowManger.cpp:25</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../de/de3/class_l_t_e_1_1window_manger_aeb94c72d9ef01e6ec53328e2ba972628_icgraph.png" border="0" usemap="#ade/de3/class_l_t_e_1_1window_manger_aeb94c72d9ef01e6ec53328e2ba972628_icgraph" alt=""/></div>
 <map name="ade/de3/class_l_t_e_1_1window_manger_aeb94c72d9ef01e6ec53328e2ba972628_icgraph" id="ade/de3/class_l_t_e_1_1window_manger_aeb94c72d9ef01e6ec53328e2ba972628_icgraph">
-<area shape="rect" title=" " alt="" coords="504,35,653,76"/>
-<area shape="rect" href="../../dc/d59/namespace_l_t_e.html#a9fc3f766d424d8310332ecb34f65dc47" title=" " alt="" coords="307,42,456,69"/>
-<area shape="rect" href="../../de/de3/class_l_t_e_1_1window_manger.html#a14308fb83186573c28fe62c96e0f07b7" title=" " alt="" coords="109,5,259,47"/>
-<area shape="rect" href="../../d0/dd3/network_manger_8test_8cpp.html#a694d31198f53727b698f47d94e41db6b" title=" " alt="" coords="156,71,212,98"/>
-<area shape="rect" href="../../db/d41/sound_engine_8test_8cpp.html#afbf0b113fc00899615ae64ad5bcb71a7" title=" " alt="" coords="5,13,61,39"/>
+<area shape="rect" title=" " alt="" coords="600,217,749,258"/>
+<area shape="rect" href="../../dd/d78/class_l_t_e_1_1squre_collider.html#a214da90fd6a7642d6f770cab8a30cd63" title=" " alt="" coords="380,5,539,32"/>
+<area shape="rect" href="../../d2/df6/class_l_t_e_1_1mesh_renderer.html#afbe517437b1386c5a77d3e087464ee33" title=" " alt="" coords="375,56,543,83"/>
+<area shape="rect" href="../../dd/d78/class_l_t_e_1_1squre_collider.html#a71d67a1449aca68c666f623be4302282" title=" " alt="" coords="394,107,525,149"/>
+<area shape="rect" href="../../d2/df6/class_l_t_e_1_1mesh_renderer.html#a9638e74536e62f96c1ad1e7b524ea3a0" title=" " alt="" coords="377,173,541,200"/>
+<area shape="rect" href="../../d0/d6c/class_l_t_e_1_1mesh.html#a1193559063ea1e25c9140488a4170f9d" title=" " alt="" coords="370,224,549,251"/>
+<area shape="rect" href="../../d0/d6c/class_l_t_e_1_1mesh.html#a84bf7231778612b213a213991ab6a16f" title=" " alt="" coords="383,275,536,301"/>
+<area shape="rect" href="../../d0/d6c/class_l_t_e_1_1mesh.html#a329b7ef6a73e1ccf3f210699c41ca01f" title=" " alt="" coords="374,325,545,352"/>
+<area shape="rect" href="../../d0/d6c/class_l_t_e_1_1mesh.html#a40bc457eddc0c07b0495fa53296a32e9" title=" " alt="" coords="369,376,550,403"/>
+<area shape="rect" href="../../d0/d6c/class_l_t_e_1_1mesh.html#ab9726ed6384d67a36b5501bfaa36e6f4" title=" " alt="" coords="367,427,552,453"/>
+<area shape="rect" href="../../d0/d6c/class_l_t_e_1_1mesh.html#aacf2df42b2bd3100dca861a39dcf6e22" title=" " alt="" coords="200,325,319,352"/>
+<area shape="rect" href="../../d2/df6/class_l_t_e_1_1mesh_renderer.html#a9dd36eaefbaa68f5fc6737d6e21d6c64" title=" " alt="" coords="5,318,152,359"/>
 </map>
 </div>
 
@@ -1365,34 +225,10 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                           {</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keyword">event</span> *onAppUpdateEvent = <a class="code" href="../../d8/da3/class_l_t_e_1_1event_1_1event_builder.html#a64a91dfac89061c9f0f4e507c30310b0">event::eventBuilder::startBuilding</a>()-&gt;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                            setEventType(<a class="code" href="../../dc/d59/namespace_l_t_e.html#a74b6aa3c900329cf3a4804ff30bec8b2ae15282a974ccc98ff066c8b3f4c72c97">events::AppUpdate</a>)-&gt;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                            setEventCallback(<a class="code" href="../../de/de3/class_l_t_e_1_1window_manger.html#aebfe960f9bd8ac496c23122180631553">onUpdate</a>)-&gt;<a class="code" href="../../d8/da3/class_l_t_e_1_1event_1_1event_builder.html#a7181fef53bdf5c5aee59c5c4a75cd617">build</a>();</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;           </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <a class="code" href="../../d5/d7c/class_l_t_e_1_1event_manger.html#a477b6dfb06c4db052fdd25f70be60adf">eventManger::addEvent</a>(onAppUpdateEvent);</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <a class="code" href="../../de/de3/class_l_t_e_1_1window_manger.html#a0d1dfa36d23b82630bc723f9702671b9">setVSync</a>(<span class="keyword">true</span>);</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    }</div>
-<div class="ttc" id="aclass_l_t_e_1_1window_manger_html_a0d1dfa36d23b82630bc723f9702671b9"><div class="ttname"><a href="../../de/de3/class_l_t_e_1_1window_manger.html#a0d1dfa36d23b82630bc723f9702671b9">LTE::windowManger::setVSync</a></div><div class="ttdeci">static void setVSync(bool enabled)</div><div class="ttdef"><b>Definition:</b> window.cpp:27</div></div>
-<div class="ttc" id="aclass_l_t_e_1_1window_manger_html_aebfe960f9bd8ac496c23122180631553"><div class="ttname"><a href="../../de/de3/class_l_t_e_1_1window_manger.html#aebfe960f9bd8ac496c23122180631553">LTE::windowManger::onUpdate</a></div><div class="ttdeci">static void onUpdate(IEntity *eventEntity, coreEventData *sendor)</div><div class="ttdef"><b>Definition:</b> window.cpp:87</div></div>
-<div class="ttc" id="anamespace_l_t_e_html_a74b6aa3c900329cf3a4804ff30bec8b2ae15282a974ccc98ff066c8b3f4c72c97"><div class="ttname"><a href="../../dc/d59/namespace_l_t_e.html#a74b6aa3c900329cf3a4804ff30bec8b2ae15282a974ccc98ff066c8b3f4c72c97">LTE::AppUpdate</a></div><div class="ttdeci">@ AppUpdate</div><div class="ttdef"><b>Definition:</b> coreEventData.h:11</div></div>
+<div class="fragment"><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                           {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        windowFactory = <span class="keyword">new</span> linuxWindowFactory();</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    }</div>
 </div><!-- fragment --><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../de/de3/class_l_t_e_1_1window_manger_ad294dcc77093b36c11e405d8831f39e0_cgraph.png" border="0" usemap="#ade/de3/class_l_t_e_1_1window_manger_ad294dcc77093b36c11e405d8831f39e0_cgraph" alt=""/></div>
-<map name="ade/de3/class_l_t_e_1_1window_manger_ad294dcc77093b36c11e405d8831f39e0_cgraph" id="ade/de3/class_l_t_e_1_1window_manger_ad294dcc77093b36c11e405d8831f39e0_cgraph">
-<area shape="rect" title=" " alt="" coords="5,129,172,156"/>
-<area shape="rect" href="../../d5/d7c/class_l_t_e_1_1event_manger.html#a477b6dfb06c4db052fdd25f70be60adf" title=" " alt="" coords="220,5,412,32"/>
-<area shape="rect" href="../../d8/da3/class_l_t_e_1_1event_1_1event_builder.html#a7181fef53bdf5c5aee59c5c4a75cd617" title=" " alt="" coords="233,57,399,98"/>
-<area shape="rect" href="../../de/de3/class_l_t_e_1_1window_manger.html#aebfe960f9bd8ac496c23122180631553" title=" " alt="" coords="241,122,391,163"/>
-<area shape="rect" href="../../de/de3/class_l_t_e_1_1window_manger.html#a0d1dfa36d23b82630bc723f9702671b9" title=" " alt="" coords="241,187,391,229"/>
-<area shape="rect" href="../../d8/da3/class_l_t_e_1_1event_1_1event_builder.html#a64a91dfac89061c9f0f4e507c30310b0" title=" " alt="" coords="233,253,399,294"/>
-<area shape="rect" href="../../da/df9/struct_l_t_e_1_1event.html#aa74d00b45763be4768aa2b33bf47c5f8" title=" " alt="" coords="460,5,635,32"/>
-<area shape="rect" href="../../d8/da3/class_l_t_e_1_1event_1_1event_builder.html#a3c6cb0adae2c79cf4c7581a5b21167e6" title=" " alt="" coords="464,253,631,294"/>
-</map>
-</div>
-<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../de/de3/class_l_t_e_1_1window_manger_ad294dcc77093b36c11e405d8831f39e0_icgraph.png" border="0" usemap="#ade/de3/class_l_t_e_1_1window_manger_ad294dcc77093b36c11e405d8831f39e0_icgraph" alt=""/></div>
@@ -1400,14 +236,14 @@ Here is the caller graph for this function:</div>
 <area shape="rect" title=" " alt="" coords="327,31,493,57"/>
 <area shape="rect" href="../../d0/d13/class_l_t_e_1_1app.html#ab62cbeaa31b7f861b6938d6b7ac82968" title=" " alt="" coords="179,31,279,57"/>
 <area shape="rect" href="../../d5/d71/classflappy_bird.html#aefe252403b2c6969e04a034c3d037d5d" title=" " alt="" coords="5,5,131,32"/>
-<area shape="rect" href="../../dc/dc2/init_event_system_8test_8cpp.html#ade06e6476a6ad085e91be7cf3f0babda" title=" " alt="" coords="40,56,96,83"/>
+<area shape="rect" href="../../d0/dd3/network_manger_8test_8cpp.html#a694d31198f53727b698f47d94e41db6b" title=" " alt="" coords="40,56,96,83"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="ab84e537daa7b295437d99dc85b641930"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab84e537daa7b295437d99dc85b641930">&#9670;&nbsp;</a></span>isVSync()</h2>
+<a id="af5275759c2b94a203632da626147a557"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5275759c2b94a203632da626147a557">&#9670;&nbsp;</a></span>startBuildingWindow()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1416,7 +252,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static bool LTE::windowManger::isVSync </td>
+          <td class="memname">static <a class="el" href="../../dd/df6/class_l_t_e_1_1core_window_factory.html">coreWindowFactory</a>* LTE::windowManger::startBuildingWindow </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -1428,127 +264,23 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;{ <span class="keywordflow">return</span> VSync; };</div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="aebfe960f9bd8ac496c23122180631553"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aebfe960f9bd8ac496c23122180631553">&#9670;&nbsp;</a></span>onUpdate()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void LTE::windowManger::onUpdate </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d4/d84/struct_l_t_e_1_1_i_entity.html">IEntity</a> *&#160;</td>
-          <td class="paramname"><em>eventEntity</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="../../d3/d94/struct_l_t_e_1_1core_event_data.html">coreEventData</a> *&#160;</td>
-          <td class="paramname"><em>sendor</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    {</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="keywordflow">for</span>(window *win: windows)</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        {</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            win-&gt;onUpdate(win, sendor);</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        }</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    }</div>
-</div><!-- fragment --><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../de/de3/class_l_t_e_1_1window_manger_aebfe960f9bd8ac496c23122180631553_icgraph.png" border="0" usemap="#ade/de3/class_l_t_e_1_1window_manger_aebfe960f9bd8ac496c23122180631553_icgraph" alt=""/></div>
-<map name="ade/de3/class_l_t_e_1_1window_manger_aebfe960f9bd8ac496c23122180631553_icgraph" id="ade/de3/class_l_t_e_1_1window_manger_aebfe960f9bd8ac496c23122180631553_icgraph">
-<area shape="rect" title=" " alt="" coords="541,23,691,65"/>
-<area shape="rect" href="../../de/de3/class_l_t_e_1_1window_manger.html#ad294dcc77093b36c11e405d8831f39e0" title=" " alt="" coords="327,31,493,57"/>
-<area shape="rect" href="../../d0/d13/class_l_t_e_1_1app.html#ab62cbeaa31b7f861b6938d6b7ac82968" title=" " alt="" coords="179,31,279,57"/>
-<area shape="rect" href="../../d5/d71/classflappy_bird.html#aefe252403b2c6969e04a034c3d037d5d" title=" " alt="" coords="5,5,131,32"/>
-<area shape="rect" href="../../dc/dc2/init_event_system_8test_8cpp.html#ade06e6476a6ad085e91be7cf3f0babda" title=" " alt="" coords="40,56,96,83"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="ade066b05111eca9509466fffedb0fccb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ade066b05111eca9509466fffedb0fccb">&#9670;&nbsp;</a></span>pushElement()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void LTE::windowManger::pushElement </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../dc/d59/namespace_l_t_e.html#a8ae7e0c0e39c6dfb8804ee2eecf2c6c2">windowPieceId</a>&#160;</td>
-          <td class="paramname"><em>windowId</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="../../dc/d59/namespace_l_t_e.html#a52df8f597871c85d528fe5dd540777fb">vertexBufferId</a>&#160;</td>
-          <td class="paramname"><em>id</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="../../d6/d82/struct_l_t_e_1_1_vertex_buffer_element.html">VertexBufferElement</a>&#160;</td>
-          <td class="paramname"><em>data</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    {</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;        window *w = <a class="code" href="../../d8/d8e/window_8cpp.html#a717c50c5129d7422ac9babe657f70ec1">findWinById</a>(windowId);</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;        VertexBufferManger *vbm = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;        <span class="keywordflow">if</span>(w != <span class="keyword">nullptr</span>)</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;            vbm = w-&gt;getVertexBufferManger();</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;        <span class="keywordflow">if</span>(vbm != <span class="keyword">nullptr</span>)</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;            vbm-&gt;pushElement(<span class="keywordtype">id</span>, data);</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160; </div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;        <a class="code" href="../../d1/d8c/logger_8h.html#a030a2caf9f43b4e2926c659309f955ef">LAUGHTALE_ENGINR_CONDTION_LOG_ERROR</a>(<span class="stringliteral">&quot;faild to pushElement vb: no window with id: &quot;</span> &lt;&lt; windowId, w == <span class="keyword">nullptr</span>);</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{ <span class="keywordflow">return</span> windowFactory-&gt;<a class="code" href="../../dd/df6/class_l_t_e_1_1core_window_factory.html#a99ca2747cb36be0befdfc555b6c96046">startBuilding</a>(); }</div>
+<div class="ttc" id="aclass_l_t_e_1_1core_window_factory_html_a99ca2747cb36be0befdfc555b6c96046"><div class="ttname"><a href="../../dd/df6/class_l_t_e_1_1core_window_factory.html#a99ca2747cb36be0befdfc555b6c96046">LTE::coreWindowFactory::startBuilding</a></div><div class="ttdeci">coreWindowFactory * startBuilding()</div><div class="ttdef"><b>Definition:</b> coreWindowFactory.cpp:8</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../de/de3/class_l_t_e_1_1window_manger_ade066b05111eca9509466fffedb0fccb_cgraph.png" border="0" usemap="#ade/de3/class_l_t_e_1_1window_manger_ade066b05111eca9509466fffedb0fccb_cgraph" alt=""/></div>
-<map name="ade/de3/class_l_t_e_1_1window_manger_ade066b05111eca9509466fffedb0fccb_cgraph" id="ade/de3/class_l_t_e_1_1window_manger_ade066b05111eca9509466fffedb0fccb_cgraph">
+<div class="center"><img src="../../de/de3/class_l_t_e_1_1window_manger_af5275759c2b94a203632da626147a557_cgraph.png" border="0" usemap="#ade/de3/class_l_t_e_1_1window_manger_af5275759c2b94a203632da626147a557_cgraph" alt=""/></div>
+<map name="ade/de3/class_l_t_e_1_1window_manger_af5275759c2b94a203632da626147a557_cgraph" id="ade/de3/class_l_t_e_1_1window_manger_af5275759c2b94a203632da626147a557_cgraph">
 <area shape="rect" title=" " alt="" coords="5,5,155,47"/>
-<area shape="rect" href="../../d1/da9/class_l_t_e_1_1_vertex_buffer_manger.html#a5f1ee9d74fa9d8e0538ff79ef35b0cc9" title=" " alt="" coords="203,5,373,47"/>
+<area shape="rect" href="../../dd/df6/class_l_t_e_1_1core_window_factory.html#a99ca2747cb36be0befdfc555b6c96046" title=" " alt="" coords="203,5,373,47"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="add8a9c6c257fb5a1c04393b68cf04364"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#add8a9c6c257fb5a1c04393b68cf04364">&#9670;&nbsp;</a></span>raftelIdToWindowReference()</h2>
+<h2 class="groupheader">Friends And Related Function Documentation</h2>
+<a id="a43cdd3d9940159c039b9d3c4fc4f2281"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43cdd3d9940159c039b9d3c4fc4f2281">&#9670;&nbsp;</a></span>coreWindowFactory</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1557,122 +289,21 @@ Here is the call graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">windowPtr LTE::windowManger::raftelIdToWindowReference </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../dc/d59/namespace_l_t_e.html#a8ae7e0c0e39c6dfb8804ee2eecf2c6c2">windowPieceId</a>&#160;</td>
-          <td class="paramname"><em>windowId</em></td><td>)</td>
-          <td></td>
+          <td class="memname">friend class <a class="el" href="../../dd/df6/class_l_t_e_1_1core_window_factory.html">coreWindowFactory</a></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    {</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <span class="keywordflow">return</span> (GLFWwindow*)windowId;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    }</div>
-</div><!-- fragment --><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../de/de3/class_l_t_e_1_1window_manger_add8a9c6c257fb5a1c04393b68cf04364_icgraph.png" border="0" usemap="#ade/de3/class_l_t_e_1_1window_manger_add8a9c6c257fb5a1c04393b68cf04364_icgraph" alt=""/></div>
-<map name="ade/de3/class_l_t_e_1_1window_manger_add8a9c6c257fb5a1c04393b68cf04364_icgraph" id="ade/de3/class_l_t_e_1_1window_manger_add8a9c6c257fb5a1c04393b68cf04364_icgraph">
-<area shape="rect" title=" " alt="" coords="252,115,435,156"/>
-<area shape="rect" href="../../dc/d59/class_l_t_e_1_1linux_input.html#a6806f29e29deb2a2958614fda8ec4dd4" title=" " alt="" coords="15,5,194,47"/>
-<area shape="rect" href="../../dc/d59/class_l_t_e_1_1linux_input.html#ab556783549163bbf917325945eb07dfc" title=" " alt="" coords="11,71,198,98"/>
-<area shape="rect" href="../../dc/d59/class_l_t_e_1_1linux_input.html#a535ca1dade1fc271e40f40d698eb6284" title=" " alt="" coords="11,122,198,149"/>
-<area shape="rect" href="../../dc/d59/class_l_t_e_1_1linux_input.html#ab8ff249389a0d753b1381ef19b81d590" title=" " alt="" coords="5,197,204,223"/>
-<area shape="rect" href="../../dc/d59/class_l_t_e_1_1linux_input.html#a8c85e58836b4273ca82a422524171614" title=" " alt="" coords="21,248,188,289"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a52bd920a83645aa1b62af20b4b504a9e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a52bd920a83645aa1b62af20b4b504a9e">&#9670;&nbsp;</a></span>setCamera()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void LTE::windowManger::setCamera </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../dc/d59/namespace_l_t_e.html#a8ae7e0c0e39c6dfb8804ee2eecf2c6c2">windowPieceId</a>&#160;</td>
-          <td class="paramname"><em>windowId</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="../../dc/d6e/class_l_t_e_1_1core_camera_controler.html">coreCameraControler</a> *&#160;</td>
-          <td class="paramname"><em>cam</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;    {</div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;        </div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;        window *w = <a class="code" href="../../d8/d8e/window_8cpp.html#a717c50c5129d7422ac9babe657f70ec1">findWinById</a>(windowId);</div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;        <span class="keywordflow">if</span>(w == <span class="keyword">nullptr</span>) <span class="keywordflow">return</span>; </div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;        w-&gt;setCamera(cam);</div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;    }</div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="a0d1dfa36d23b82630bc723f9702671b9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0d1dfa36d23b82630bc723f9702671b9">&#9670;&nbsp;</a></span>setVSync()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void LTE::windowManger::setVSync </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>enabled</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{ window::setVSync(enabled); VSync = enabled; }</div>
-</div><!-- fragment --><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../de/de3/class_l_t_e_1_1window_manger_a0d1dfa36d23b82630bc723f9702671b9_icgraph.png" border="0" usemap="#ade/de3/class_l_t_e_1_1window_manger_a0d1dfa36d23b82630bc723f9702671b9_icgraph" alt=""/></div>
-<map name="ade/de3/class_l_t_e_1_1window_manger_a0d1dfa36d23b82630bc723f9702671b9_icgraph" id="ade/de3/class_l_t_e_1_1window_manger_a0d1dfa36d23b82630bc723f9702671b9_icgraph">
-<area shape="rect" title=" " alt="" coords="541,23,691,65"/>
-<area shape="rect" href="../../de/de3/class_l_t_e_1_1window_manger.html#ad294dcc77093b36c11e405d8831f39e0" title=" " alt="" coords="327,31,493,57"/>
-<area shape="rect" href="../../d0/d13/class_l_t_e_1_1app.html#ab62cbeaa31b7f861b6938d6b7ac82968" title=" " alt="" coords="179,31,279,57"/>
-<area shape="rect" href="../../d5/d71/classflappy_bird.html#aefe252403b2c6969e04a034c3d037d5d" title=" " alt="" coords="5,5,131,32"/>
-<area shape="rect" href="../../dc/dc2/init_event_system_8test_8cpp.html#ade06e6476a6ad085e91be7cf3f0babda" title=" " alt="" coords="40,56,96,83"/>
-</map>
-</div>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>headers/windowsMangment/<a class="el" href="../../d3/df1/window_8h_source.html">window.h</a></li>
-<li>src/windowsMangment/<a class="el" href="../../d8/d8e/window_8cpp.html">window.cpp</a></li>
+<li>headers/windowsMangment/<a class="el" href="../../de/de3/window_manger_8h_source.html">windowManger.h</a></li>
+<li>src/windowsMangment/<a class="el" href="../../df/d78/window_manger_8cpp.html">windowManger.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

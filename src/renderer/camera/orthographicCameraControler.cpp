@@ -4,92 +4,68 @@
 
 namespace LTE
 {
-    struct cameraEntity: IEntity
+    void orthographicCameraControler::OnMouseScrolled(gameObject *cameraInfo, coreEventData *sendor)
     {
-        cameraEntity(){}
-        orthographicCamera *camera;
-        float *aspectRatio;
-        float *zoomLevel;
-        bool *useCameraRotation;
-
-        glm::vec3 *cameraPosition;
-        float *cameraRotation;
-        float *cameraTranslationSpeed, *cameraRotationSpeed;
-
-    };
-
-    void orthographicCameraControler::OnMouseScrolled(IEntity *cameraInfo, coreEventData *sendor)
-    {
-        cameraEntity *camera = dynamic_cast<cameraEntity *>(cameraInfo);  
         mouseScrollData *eventData = dynamic_cast<mouseScrollData *>(sendor);
+        orthographicCameraControler *thisCamera = cameraInfo->getComponent<orthographicCameraControler>();
 
-        (*camera->zoomLevel) -= eventData->yOffset * 0.25f;
-		(*camera->zoomLevel) = std::max((*camera->zoomLevel), 0.25f);
-        LAUGHTALE_ENGINR_LOG_INFO((*camera->zoomLevel) << ", " << (*camera->aspectRatio) << ", " << *camera->cameraRotationSpeed);
-		camera->camera->SetProjection(-(*camera->aspectRatio) * (*camera->zoomLevel), (*camera->aspectRatio) * (*camera->zoomLevel), -(*camera->zoomLevel), (*camera->zoomLevel));
+        thisCamera->zoomLevel -= eventData->yOffset * 0.25f;
+		thisCamera->zoomLevel = std::max(thisCamera->zoomLevel, 0.25f);
+
+		thisCamera->camera.SetProjection(-thisCamera->aspectRatio * thisCamera->zoomLevel, thisCamera->aspectRatio * thisCamera->zoomLevel, -thisCamera->zoomLevel, thisCamera->zoomLevel);
     }
 
-    void orthographicCameraControler::OnWindowResized(IEntity *cameraInfo, coreEventData *sendor)
+    void orthographicCameraControler::OnWindowResized(gameObject *cameraInfo, coreEventData *sendor)
     {
-        cameraEntity *camera = dynamic_cast<cameraEntity *>(cameraInfo);  
         WindowResizeData *eventData = dynamic_cast<WindowResizeData *>(sendor);
+        orthographicCameraControler *thisCamera = cameraInfo->getComponent<orthographicCameraControler>();
 
-        (*camera->aspectRatio) = (float)eventData->windowWidth / (float)eventData->windowHeight;
-		(*camera->camera).SetProjection(-(*camera->aspectRatio) * (*camera->zoomLevel), (*camera->aspectRatio) * (*camera->zoomLevel), -(*camera->zoomLevel), (*camera->zoomLevel));
+        thisCamera->aspectRatio = (float)eventData->windowWidth / (float)eventData->windowHeight;
+		thisCamera->camera.SetProjection(-thisCamera->aspectRatio * thisCamera->zoomLevel, thisCamera->aspectRatio * thisCamera->zoomLevel, -thisCamera->zoomLevel, thisCamera->zoomLevel);
     }
 
-    void orthographicCameraControler::OnUpdate(IEntity *cameraInfo, coreEventData *sendor)
+    void orthographicCameraControler::OnUpdate(gameObject *cameraInfo, coreEventData *sendor)
     {
-        cameraEntity *camera = dynamic_cast<cameraEntity *>(cameraInfo);  
         onUpdateData *eventData = dynamic_cast<onUpdateData *>(sendor);   
     }
 
-    orthographicCameraControler::orthographicCameraControler(float aspectRatio, windowPieceId window, bool useCameraRotation)
+    orthographicCameraControler::orthographicCameraControler(float aspectRatio, bool useCameraRotation)
         :aspectRatio(aspectRatio), camera(-aspectRatio * zoomLevel, aspectRatio * zoomLevel, -zoomLevel, zoomLevel), useCameraRotation(useCameraRotation)
     {
 
-        cameraEntity *cam = new cameraEntity();
-        cam->camera = &camera;
-        cam->aspectRatio = &this->aspectRatio;
-
-        cam->zoomLevel = &zoomLevel;
-        cam->useCameraRotation = &useCameraRotation;
-        cam->cameraPosition = &cameraPosition;
-        cam->cameraRotation = &cameraRotation;
-        cam->cameraTranslationSpeed = &cameraTranslationSpeed;
-        cam->cameraRotationSpeed = &cameraRotationSpeed;
-
-        CameraEntityId = entityManger::addEntity(cam);
-
-        event *onAppUpdateEvent = event::eventBuilder::startBuilding()->
-            setEventType(events::AppUpdate)->
-            setEventCallback(OnUpdate)->setEntityID(CameraEntityId)->
-            setWindowId(window)->build();
-
-        event *OnMouseScrolledEvent = event::eventBuilder::startBuilding()->
-            setEventType(events::MouseScrolled)->
-            setEventCallback(OnMouseScrolled)->setEntityID(CameraEntityId)->
-            setWindowId(window)->build();
-
-        event *OnWindowResizedEvent = event::eventBuilder::startBuilding()->
-            setEventType(events::WindowResize)->
-            setEventCallback(OnMouseScrolled)->setEntityID(CameraEntityId)->
-            setWindowId(window)->build();
-
-        OnUpdateId = eventManger::addEvent(onAppUpdateEvent);
-        OnMouseScrolledId = eventManger::addEvent(OnMouseScrolledEvent);
-        OnWindowResizedId = eventManger::addEvent(OnWindowResizedEvent);
     }
 
     orthographicCameraControler::~orthographicCameraControler()
     {
-        eventManger::removeEvent(events::AppUpdate, OnUpdateId);
-        eventManger::removeEvent(events::WindowResize, OnWindowResizedId);
-        eventManger::removeEvent(events::MouseScrolled, OnMouseScrolledId);
-        delete entityManger::getEntityById(CameraEntityId);
-        entityManger::removeEntityById(CameraEntityId);
 
     }
+
+    void orthographicCameraControler::init(gameObject *parent)
+    {
+        OnUpdateId = eventManger::startBuildingEvent()->
+                setEventRoute("App update/move camera " + std::to_string(parentId))->
+                setEventCallback(OnUpdate)->
+                setEntityID(parentId)->
+                setWindowId(winId)->add();
+                
+        OnMouseScrolledId = eventManger::startBuildingEvent()->
+                setEventRoute("Window resize/handel view resize " + std::to_string(parentId))->
+                setEventCallback(OnWindowResized)->
+                setEntityID(parentId)->
+                setWindowId(winId)->add();
+                
+        OnWindowResizedId = eventManger::startBuildingEvent()->
+                setEventRoute("Mouse scrolled/change zoom level " + std::to_string(parentId))->
+                setEventCallback(OnMouseScrolled)->
+                setEntityID(parentId)->
+                setWindowId(winId)->add();
+         
+    }
+    
+    void orthographicCameraControler::end()
+    {     
+    }
+
 
     coreCamera *orthographicCameraControler::getCamera()
     {

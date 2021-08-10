@@ -1,0 +1,17 @@
+<map id="bird::init" name="bird::init">
+<area shape="rect" id="node1" title=" " alt="" coords="5,132,73,159"/>
+<area shape="rect" id="node2" href="$d2/d49/class_l_t_e_1_1game_object.html#a5f513231fa75208d91178c9050ace526" title=" " alt="" coords="133,5,319,32"/>
+<area shape="rect" id="node3" href="$da/dee/classbird.html#a94b2552684760699a3e56c22dd27749a" title=" " alt="" coords="417,56,523,83"/>
+<area shape="rect" id="node5" href="$da/dee/classbird.html#ac9cbc10dae7540d7bf0c70cdeb07482a" title=" " alt="" coords="420,157,520,184"/>
+<area shape="rect" id="node8" href="$da/dee/classbird.html#ab24468a60ed69783fdc86dcb5fb85d55" title=" " alt="" coords="182,107,270,133"/>
+<area shape="rect" id="node9" href="$da/dee/classbird.html#a13ee21c9a389a0e62b10411db6346fc6" title=" " alt="" coords="173,208,279,235"/>
+<area shape="rect" id="node15" href="$d5/d7c/class_l_t_e_1_1event_manger.html#a205c8d664c9d7ce70155f1a125404397" title=" " alt="" coords="121,259,331,301"/>
+<area shape="rect" id="node4" href="$d2/d49/class_l_t_e_1_1game_object.html#a961a8c471148013b767014e0ecaf722e" title=" " alt="" coords="609,107,827,133"/>
+<area shape="rect" id="node6" href="$d6/d08/class_l_t_e_1_1transform.html#a160e68074988f3992b3cc6df921db306" title=" " alt="" coords="629,157,807,184"/>
+<area shape="rect" id="node7" href="$d2/d49/class_l_t_e_1_1game_object.html#a01ac769e5731f9c8e65952743d038539" title=" " alt="" coords="613,259,823,285"/>
+<area shape="rect" id="node10" href="$da/dee/classbird.html#a93a5315078689ab488a1a21639fe7340" title=" " alt="" coords="379,208,561,235"/>
+<area shape="rect" id="node12" href="$da/dee/classbird.html#a11f87780b5c8a41fa86e43a6352c56fa" title=" " alt="" coords="410,259,530,285"/>
+<area shape="rect" id="node11" href="$d6/d08/class_l_t_e_1_1transform.html#abd8d3eca680b8173f7b34daf5bb779bc" title=" " alt="" coords="624,208,812,235"/>
+<area shape="rect" id="node13" href="$d6/d08/class_l_t_e_1_1transform.html#a5a6f72f53b39bacd9cc960b6e7eec3af" title=" " alt="" coords="612,309,824,336"/>
+<area shape="rect" id="node14" href="$d6/d08/class_l_t_e_1_1transform.html#a88ec31c683a58a31514101f7cd31dd67" title=" " alt="" coords="622,360,814,387"/>
+</map>

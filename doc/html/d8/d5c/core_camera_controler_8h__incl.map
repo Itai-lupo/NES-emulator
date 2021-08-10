@@ -1,7 +1,10 @@
 <map id="headers/renderer/camera/coreCameraControler.h" name="headers/renderer/camera/coreCameraControler.h">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,172,47"/>
-<area shape="rect" id="node2" href="$d0/d52/core_camera_8h.html" title=" " alt="" coords="37,95,141,121"/>
-<area shape="rect" id="node3" href="$d5/dc4/core_8h.html" title=" " alt="" coords="10,169,69,196"/>
-<area shape="rect" id="node5" title=" " alt="" coords="93,169,186,196"/>
-<area shape="rect" id="node4" title=" " alt="" coords="9,244,70,271"/>
+<area shape="rect" id="node1" title=" " alt="" coords="99,5,266,47"/>
+<area shape="rect" id="node2" href="$d0/d52/core_camera_8h.html" title=" " alt="" coords="68,95,172,121"/>
+<area shape="rect" id="node6" href="$d6/dcf/component_8h.html" title=" " alt="" coords="197,95,294,121"/>
+<area shape="rect" id="node3" href="$d5/dc4/core_8h.html" title=" " alt="" coords="123,169,181,196"/>
+<area shape="rect" id="node5" title=" " alt="" coords="5,169,99,196"/>
+<area shape="rect" id="node4" title=" " alt="" coords="121,244,183,271"/>
+<area shape="rect" id="node7" title=" " alt="" coords="206,169,285,196"/>
+<area shape="rect" id="node8" title=" " alt="" coords="309,169,368,196"/>
 </map>

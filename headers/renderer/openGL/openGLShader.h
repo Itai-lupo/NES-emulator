@@ -18,6 +18,7 @@ namespace LTE
         private:
                 ShaderProgramSource source;
                 std::unordered_map<std::string, int> m_UniformLoctionCache;
+                uint32_t rendererID;
 
 
                 unsigned int compileShader(unsigned int type, const std::string& source);
@@ -31,7 +32,7 @@ namespace LTE
             
             ~openGLShader();
 
-            virtual shaderId init() override;
+            virtual void init() override;
             virtual void bind() override;
             virtual void unbind() override; 
             virtual void setUniform1i(const std::string& name, int value) override;

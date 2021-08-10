@@ -26,15 +26,19 @@ namespace LTE
             eventLaughId OnUpdateId; 
             entityTaleId CameraEntityId;
 
-            static void OnMouseScrolled(IEntity *cameraInfo, coreEventData *sendor);
-            static void OnWindowResized(IEntity *cameraInfo, coreEventData *sendor);
-            static void OnUpdate(IEntity *cameraInfo, coreEventData *sendor);
+            static void OnMouseScrolled(gameObject *cameraInfo, coreEventData *sendor);
+            static void OnWindowResized(gameObject *cameraInfo, coreEventData *sendor);
+            static void OnUpdate(gameObject *cameraInfo, coreEventData *sendor);
 
 
         public:
-            orthographicCameraControler(float aspectRatio, windowPieceId window, bool useCameraRotation = false);
+            orthographicCameraControler(float aspectRatio, bool useCameraRotation = false);
             ~orthographicCameraControler();
     
             virtual coreCamera *getCamera() override;
+
+            virtual void init(gameObject *parent) override;
+            virtual void end() override;
+
     };
 }

@@ -1,37 +1,46 @@
 #include "renderer.h"
+#include "mesh.h"
+#include "meshRenderer.h"
+
 
 namespace LTE
 {
-    renderer::renderer(renderApi *api): api(api)
-    {
-        api->init();
-    }
 
-    void renderer::beginScene(coreCamera *camera)
+    void renderer::renderScene(scene *Scene, renderApi *renderPipLine)
     {
-        api->SetClearColor(glm::vec4(0.2f, 0.2f, 0.2f, 1));
-        api->Clear();
-        data.camera = camera;
-    }
+        renderPipLine->SetClearColor(Scene->backgroundColor->getRGBA());
+        renderPipLine->Clear();
 
-    void renderer::endScene()
-    {
-
-    }
-
-    void renderer::Submit(shader *s, uint32_t count, glm::mat4 transform )
-    {
-        s->bind();
-        s->setUniformMat4f("viewProjection", data.camera->getViewProjectionMatrix());
-        s->setUniformMat4f("transform", transform);
-        api->DrawIndexed(count);
+        renderer::Scene = Scene;
+        renderer::renderPipLine = renderPipLine;
+        
+        
+        for(gameObject *toRender: *Scene->objects)
+        {
+            toRender->getComponent<meshRenderer>()->render(renderPipLine, Scene->camera->getComponent<coreCameraControler>()->getCamera()->getViewProjectionMatrix());
+        }
     }
 
 
-    void renderer::Submit(mesh *toRender )
-    {
-        toRender->bind({0});
-        toRender->getShader()->setUniformMat4f("viewProjection", data.camera->getViewProjectionMatrix());
-        api->DrawIndexed(toRender->getCount());
-    }
+    // void renderer::Submit(shader *s, uint32_t count, glm::mat4 transform )
+    // {
+    //     s->bind();
+    //     LAUGHTALE_ENGINR_LOG_INFO("A");
+    //     s->setUniformMat4f("viewProjection", data.camera->getViewProjectionMatrix());
+    //     s->setUniformMat4f("transform", transform);
+    //     LAUGHTALE_ENGINR_LOG_INFO("A");
+    //     renderPipLine->DrawIndexed(count);
+    // }
+
+
+    // void renderer::Submit(mesh *toRender )
+    // {
+    //     toRender->bind({0});
+    //     LAUGHTALE_ENGINR_LOG_INFO("A");
+
+    //     toRender->getShader()->setUniformMat4f("viewProjection", Scene->camera->getViewProjectionMatrix());
+    //     LAUGHTALE_ENGINR_LOG_INFO("A");
+
+    //     renderPipLine->DrawIndexed(toRender->getCount());
+    // }
 }

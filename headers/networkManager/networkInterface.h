@@ -2,7 +2,7 @@
 #include <string>
 #include "packet.h"
 
-namespace LTE::goingMarryNetworkManger
+namespace LTE::GMNM
 {
     class networkInterface
     {

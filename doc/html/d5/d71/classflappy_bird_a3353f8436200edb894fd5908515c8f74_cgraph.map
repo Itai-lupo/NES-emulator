@@ -1,13 +1,13 @@
 <map id="flappyBird::TearDown" name="flappyBird::TearDown">
-<area shape="rect" id="node1" title=" " alt="" coords="5,225,152,251"/>
-<area shape="rect" id="node2" href="$d0/d13/class_l_t_e_1_1app.html#ae0f06737b2f489eace03ada49ae7b4d5" title=" " alt="" coords="200,225,315,251"/>
-<area shape="rect" id="node3" href="$de/d44/class_l_t_e_1_1entity_manger.html#a36e406876304ba1cff334e6f8849e4eb" title=" " alt="" coords="399,5,537,47"/>
-<area shape="rect" id="node4" href="$d5/d7c/class_l_t_e_1_1event_manger.html#a2bae0fc540e166323381f7a8196ab083" title=" " alt="" coords="384,71,552,98"/>
-<area shape="rect" id="node5" href="$d6/db4/class_l_t_e_1_1going_marry_network_manger_1_1connections_manager.html#ad6b7a657b5288a88f53fc94d442af0b4" title=" " alt="" coords="363,123,573,164"/>
-<area shape="rect" id="node6" href="$df/d4f/class_l_t_e_1_1materials_manger.html#a8b8ed9bdc8b605a34e400ef063bbbaaa" title=" " alt="" coords="393,188,543,229"/>
-<area shape="rect" id="node7" href="$d7/d77/class_l_t_e_1_1render_loop.html#ab049b8e6228ae0c4ac325cee52595c6e" title=" " alt="" coords="389,254,547,281"/>
-<area shape="rect" id="node8" href="$de/d01/class_l_t_e_1_1sound_engine.html#ac22cd141150c6a59ef28993c06936837" title=" " alt="" coords="384,305,552,331"/>
-<area shape="rect" id="node10" href="$d3/d08/class_l_t_e_1_1logger.html#ae651e5c9c40cb1a56ad4c0c7df3930fd" title=" " alt="" coords="404,355,532,382"/>
-<area shape="rect" id="node11" href="$de/de3/class_l_t_e_1_1window_manger.html#a6ecf67fe5928e63ba34ea590f5f41cee" title=" " alt="" coords="393,407,543,448"/>
-<area shape="rect" id="node9" href="$d2/dff/class_l_t_e_1_1sound_synthesizer.html#a9cab8478ac0f4e5ff40c3b515016cd07" title=" " alt="" coords="621,297,780,339"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,195,152,222"/>
+<area shape="rect" id="node2" href="$d0/d13/class_l_t_e_1_1app.html#ae0f06737b2f489eace03ada49ae7b4d5" title=" " alt="" coords="200,195,315,222"/>
+<area shape="rect" id="node3" href="$de/d44/class_l_t_e_1_1entity_manger.html#a36e406876304ba1cff334e6f8849e4eb" title=" " alt="" coords="406,5,543,47"/>
+<area shape="rect" id="node4" href="$d5/d7c/class_l_t_e_1_1event_manger.html#a2bae0fc540e166323381f7a8196ab083" title=" " alt="" coords="391,71,559,98"/>
+<area shape="rect" id="node6" href="$db/d40/class_l_t_e_1_1_g_m_n_m_1_1connections_manager.html#a7c5cb8c18c0087c64f0f390a8303381d" title=" " alt="" coords="363,123,587,164"/>
+<area shape="rect" id="node7" href="$df/d4f/class_l_t_e_1_1materials_manger.html#a8b8ed9bdc8b605a34e400ef063bbbaaa" title=" " alt="" coords="399,188,550,229"/>
+<area shape="rect" id="node8" href="$de/d01/class_l_t_e_1_1sound_engine.html#ac22cd141150c6a59ef28993c06936837" title=" " alt="" coords="391,254,559,281"/>
+<area shape="rect" id="node10" href="$d3/d08/class_l_t_e_1_1logger.html#ae651e5c9c40cb1a56ad4c0c7df3930fd" title=" " alt="" coords="411,305,539,331"/>
+<area shape="rect" id="node11" href="$de/de3/class_l_t_e_1_1window_manger.html#a6ecf67fe5928e63ba34ea590f5f41cee" title=" " alt="" coords="400,356,549,397"/>
+<area shape="rect" id="node5" href="$d7/d22/class_l_t_e_1_1router.html#aca69970c0dca265325b046f9aef368f0" title=" " alt="" coords="635,71,819,98"/>
+<area shape="rect" id="node9" href="$d2/dff/class_l_t_e_1_1sound_synthesizer.html#a9cab8478ac0f4e5ff40c3b515016cd07" title=" " alt="" coords="647,247,806,288"/>
 </map>

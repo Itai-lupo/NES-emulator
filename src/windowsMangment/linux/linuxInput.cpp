@@ -5,68 +5,38 @@
 
 namespace LTE
 {
-    bool linuxInput::isKeyPressed(int keycode, raftelId windowId)
+    bool linuxInput::isKeyPressed(int keycode)
     {
-        windowPtr win = windowManger::raftelIdToWindowReference(windowId);
-        return isKeyPressed(keycode, win);
-    }
-
-    bool linuxInput::isMouseButtonPressed(int button, raftelId windowId)
-    {
-        windowPtr win = windowManger::raftelIdToWindowReference(windowId);
-        return isMouseButtonPressed(button, win);
-    }
-
-    std::pair<float, float> linuxInput::GetMousePosition(raftelId windowId)
-    {
-        windowPtr win = windowManger::raftelIdToWindowReference(windowId);
-        return GetMousePosition(win);
-    }
-
-    float linuxInput::GetMouseX(raftelId windowId)
-    {
-        windowPtr win = windowManger::raftelIdToWindowReference(windowId);
-        return GetMouseX(win);
-    }
-
-    float linuxInput::GetMouseY(raftelId windowId)
-    {
-        windowPtr win = windowManger::raftelIdToWindowReference(windowId);
-        return GetMouseY(win);
-    }
-
-    bool linuxInput::isKeyPressed(int keycode, windowPtr windowId)
-    {
-        int state = glfwGetKey( windowId, keycode);
+        int state = glfwGetKey( windowPtr, keycode);
 
         return state == GLFW_PRESS || state == GLFW_REPEAT;
     }
 
-    bool linuxInput::isMouseButtonPressed(int button, windowPtr windowId)
+    float linuxInput::GetMouseY()
     {
-        int state = glfwGetMouseButton( windowId, button);
+        double xpos, ypos;
+        glfwGetCursorPos(windowPtr, &xpos, &ypos);
+        return ypos;
+    }
+
+    bool linuxInput::isMouseButtonPressed(int button)
+    {
+        int state = glfwGetMouseButton( windowPtr, button);
 
         return state == GLFW_PRESS;
     }
 
-    std::pair<float, float> linuxInput::GetMousePosition(windowPtr windowId)
+    std::pair<float, float> linuxInput::GetMousePosition()
     {
         double xpos, ypos;
-        glfwGetCursorPos(windowId, &xpos, &ypos);
+        glfwGetCursorPos(windowPtr, &xpos, &ypos);
         return { xpos, ypos };
     }
 
-    float linuxInput::GetMouseX(windowPtr windowId)
+    float linuxInput::GetMouseX()
     {
         double xpos, ypos;
-        glfwGetCursorPos(windowId, &xpos, &ypos);
+        glfwGetCursorPos(windowPtr, &xpos, &ypos);
         return xpos;
-    }
-    
-    float linuxInput::GetMouseY(windowPtr windowId)
-    { 
-        double xpos, ypos;
-        glfwGetCursorPos(windowId, &xpos, &ypos);
-        return ypos;
     }
 }

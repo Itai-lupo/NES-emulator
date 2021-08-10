@@ -1,66 +1,108 @@
 #include "events.h"
 #include <stdlib.h> 
 #include "logger.h"
+#include "windowManger.h"
+#include "window.h"
 
 namespace LTE
 {
-    std::vector<event*> *eventManger::eventList;
+    LTE::router<event*> eventManger::eventList;
     u_int32_t eventManger::nextEventId = 0;
 
     void eventManger::init()
     {
-        eventManger::eventList = new std::vector<event*>[events::events_MAX];
+        eventList.addRoute("Window close/");
+        eventList.addRoute("Window resize/");
+        eventList.addRoute("Window focus/");
+        eventList.addRoute("Window lost focus/");
+        eventList.addRoute("Window moved/");
+
+        eventList.addRoute("App tick/");
+        eventList.addRoute("App update/");
+        eventList.addRoute("App render/");
+        
+        eventList.addRoute("Key pressed/");
+        eventList.addRoute("Key released/");
+        eventList.addRoute("Key repeat/");
+        eventList.addRoute("Key typed/");
+        
+        eventList.addRoute("Mouse button pressed/");
+        eventList.addRoute("Mouse button released/");
+        eventList.addRoute("Mouse moved/");
+        eventList.addRoute("Mouse scrolled/");
+        
+        eventList.addRoute("ImGui render/");
+        
+        eventList.addRoute("server connection/");
+        eventList.addRoute("message received/");
+        eventList.addRoute("message sent/");
+        
+        
     }
 
     void eventManger:: close()
     {
-        for (size_t i = 0; i < events::events_MAX; i++)
-        {
-            eventManger::eventList[i].clear();
-        }
+        
+        eventManger::eventList.clearAndDelete();
         
         eventManger::nextEventId = 0;
     }
 
-    eventLaughId eventManger::addEvent(event *eventToAdd)
+    eventManger::eventBuilder *eventManger::startBuildingEvent()
     {
+        builder.reset();
+        return &builder;
+    }
+
+    void eventManger::addCoustemEventsRoute(const std::string& routeToAdd)
+    {
+        eventManger::eventList.addRoute(routeToAdd);
+    }
+
+    eventLaughId eventManger::addEvent()
+    {
+        event *eventToAdd = builder.getProduct();
         eventToAdd->id = eventManger::nextEventId;
         eventManger::nextEventId++;
-        eventManger::eventList[eventToAdd->getEventType()].push_back(eventToAdd); 
+        eventManger::eventList.addValue(eventToAdd->getEventRoute(), eventToAdd); 
         return eventToAdd->id;
     }
 
-    void eventManger::removeEvent(events eventType, eventLaughId eventToRemove)
+    void eventManger::removeEvent(const std::string& eventRoute)
     {
-        for (uint64_t i = 0; i < eventManger::eventList[eventType].size(); i++)
-        {
-            if (eventManger::eventList[eventType][i]->id == eventToRemove)
-            {
-                eventManger::eventList[eventType].erase(eventManger::eventList[eventType].begin() + i);
-                return;
-            }   
-        }        
-        LAUGHTALE_ENGINR_LOG_WARNING("faild to remove event");
+        eventList.deleteValue(eventRoute);
     }
 
     void eventManger::trigerEvent(coreEventData *sendor)
     {
-        if(!sendor->eventType)
-            LAUGHTALE_ENGINR_LOG_FATAL("please Spcifay event type" << sendor->eventType);
+        if(sendor->route == "")
+            LAUGHTALE_ENGINR_LOG_FATAL("please Spcifay event route");
 
-        events type = sendor->eventType;
-        for(event *e : eventManger::eventList[type]) 
-        {
+        std::string route = sendor->route;
+        
+        eventManger::eventList.itrateFrom([&](event *e){
             if(sendor->windowId == 0 || e->getWindowID() == 0 || e->getWindowID() == sendor->windowId)
             {
+                if(e->getWindowID() != 0){
+                    sendor->windowId = e->getWindowID(); 
+                    sendor->win = windowManger::getWindow(e->getWindowID());
+                }
+
                 sendor->id = e->id;
-                IEntity *a = entityManger::getEntityById(e->getEntityID()); 
-                if((e->getEntityID() != -1 && a != nullptr) || e->getEntityID() == (entityTaleId)-1)
-                    e->trigerEvent(a, sendor);
+                gameObject *eventObject = nullptr;
+
+                if(e->getEntityID() != (entityTaleId)-1 )
+                    eventObject = entityManger::getEntityById(e->getEntityID()); 
+                
+                if( eventObject == nullptr && e->getEntityID() != (entityTaleId)-1)
+                {
+                    LAUGHTALE_ENGINR_LOG_ERROR("entity with id: " << e->getEntityID() << " was'nt found so faild to call event with route: " << e->route);
+                    removeEvent(e->route);
+                }
                 else
-                    LAUGHTALE_ENGINR_LOG_ERROR("entity wasnt found:" << e->getEntityID() << ", " << e->id);
+                    e->trigerEvent(eventObject, sendor);
 
             }
-        }
+        }, sendor->route);
     }
 }

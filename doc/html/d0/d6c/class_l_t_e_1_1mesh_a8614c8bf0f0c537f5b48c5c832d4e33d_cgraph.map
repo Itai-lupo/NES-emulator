@@ -1,6 +1,4 @@
 <map id="LTE::mesh::getCount" name="LTE::mesh::getCount">
-<area shape="rect" id="node1" title=" " alt="" coords="5,46,152,73"/>
-<area shape="rect" id="node2" href="$de/de3/class_l_t_e_1_1window_manger.html#a7451e4b7751a4a137d9e7c58a3a6695e" title=" " alt="" coords="200,39,349,80"/>
-<area shape="rect" id="node3" href="$de/de3/class_l_t_e_1_1window_manger.html#ab5b89b56f700da583be78516d5673a0b" title=" " alt="" coords="404,5,553,47"/>
-<area shape="rect" id="node4" href="$d5/d28/class_l_t_e_1_1index_buffer_manger.html#a3cec1924527466093717902574d35c59" title=" " alt="" coords="397,71,560,112"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,152,32"/>
+<area shape="rect" id="node2" href="$d6/d2f/class_l_t_e_1_1index_buffer.html#afcca135f90433710403e8c6a252e03f0" title=" " alt="" coords="200,5,381,32"/>
 </map>

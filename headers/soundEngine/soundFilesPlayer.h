@@ -35,7 +35,7 @@ namespace LTE
                 static void stopPlayingFile()
                 {
                     soundSynthesizer::removeEnvelope(file->getId());
-                    delete file;
+                    // delete file;
                 }
         };
         

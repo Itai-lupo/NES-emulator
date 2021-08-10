@@ -7,113 +7,85 @@
 #include "openGLIndexBuffer.h"
 #include "materialsManger.h"
 #include "material.h"
-#include "window.h"
+#include "windowManger.h"
 
 namespace LTE
 {
-    mesh::mesh(windowPieceId windowId): IEntity(), windowId(windowId){}
-
-
     void mesh::setShader(const char *path)
     {
-        shader *s = new openGLShader(path);
-        ShaderId = windowManger::add(windowId, s);
-    }
+        windowManger::getWindow(winId)->operatingSystemPipLine->makeContextCurrent();
 
-    void mesh::setShader(shaderId id)
-    {
-        ShaderId = id;
+        s = new openGLShader(path);
+        s->init();
     }
 
     void mesh::setVertexBuffer(float *vertexs, uint32_t size)
     {
-        VertexBuffer *VB = new OpenGLVertexBuffer(vertexs, size);
-        VBId = LTE::windowManger::add(windowId, VB);
-    }
+        windowManger::getWindow(winId)->operatingSystemPipLine->makeContextCurrent();
 
-    void mesh::setVertexBuffer(vertexBufferId id)
-    {
-        VBId = id;
+        vb = new OpenGLVertexBuffer(vertexs, size);
+        vb->init();
     }
 
     void mesh::setIndexBuffer(uint32_t *indices, uint32_t count)
     {
-        LTE::indexBuffer *IB = new LTE::openGLIndexBuffer(indices, count);
-        IBId = LTE::windowManger::add(windowId, IB);
-    }
+        windowManger::getWindow(winId)->operatingSystemPipLine->makeContextCurrent();
 
-    void mesh::setIndexBuffer(indexBufferId id)
-    {
-        IBId = id;
+        ib = new LTE::openGLIndexBuffer(indices, count);
+        ib->init();
     }
-
 
     void mesh::setVertexArray()
     {
-        vertexArray *VA = new openGLVertexArray();
-        VAId = windowManger::add(windowId, VA);
-        
-        windowManger::addBuffer(windowId, VAId, VBId);
-    }
+        windowManger::getWindow(winId)->operatingSystemPipLine->makeContextCurrent();
 
-    void mesh::setVertexArray(vertexArrayId id)
-    {
-        VAId = id;
+        va = new openGLVertexArray();
+        va->init();
+        va->AddBuffer(vb);
     }
 
     void mesh::bind(std::vector<uint32_t> textureSlots)
     {
-        windowManger::bindVA(windowId, VAId);
-        windowManger::bindS(windowId, ShaderId);
-        windowManger::bindIB(windowId, IBId);
-        materialsManger::bind(mateId, getShader(), textureSlots);
+        setTransform(entityManger::getEntityById(parentId)->getTransform());
+        va->bind();
+        s->bind();
+        ib->bind();
     }
 
     VertexBuffer *mesh::getVertexBuffer()
     {
-        return  windowManger::getVertexBufferManger(windowId)->getVB(VBId);
+        return vb;
     }
 
     shader *mesh::getShader()
     {
-        
-        shaderManger *m =  windowManger::getShaderManger(windowId);
-        if(m != nullptr)
-            return  m->getShader(ShaderId);
-        LAUGHTALE_ENGINR_LOG_ERROR("coulden get mesh shader");
-        return nullptr;        
+        return s;        
     }
 
     uint32_t mesh::getCount()
     {
-        return  windowManger::getIndexBufferCount(windowId, IBId);
+        return ib->getCount();
     }
 
-    void mesh::setTransform(glm::mat4 transform)
+    void mesh::setTransform(glm::mat4 trans)
     {
-        windowManger::bindContext(windowId);
-        windowManger::bindS(windowId, ShaderId);
-        shader *s = getShader();
-        if(s != nullptr) 
-            s->setUniformMat4f("transform", transform);
-        this->transform = transform; 
+        windowManger::getWindow(winId)->operatingSystemPipLine->makeContextCurrent();
+        s->bind();
+        s->setUniformMat4f("transform", trans);
+        this->trans = trans; 
     }
-    
-    void mesh::setMaterial(const std::string& path, glm::vec4 color)
+
+
+    void mesh::setTransform(transform *trans)
     {
-        mateId = materialsManger::addMatrial(new material(path, color));
-        windowManger::bindContext(windowId);
+        this->trans =   glm::translate(glm::mat4(1.0f), trans->getPostion()) * 
+                            glm::rotate(glm::mat4(1.0f), trans->getRotation().x, { 1.0f, 0.0f, 0.0f}) *
+                            glm::rotate(glm::mat4(1.0f), trans->getRotation().y, { 0.0f, 1.0f, 0.0f}) *
+                            glm::rotate(glm::mat4(1.0f), trans->getRotation().z, { 0.0f, 0.0f, 1.0f}) *
+                            glm::scale(glm::mat4(1.0f), trans->getScale());
 
-        materialsManger::bind(mateId, getShader());
+        windowManger::getWindow(winId)->operatingSystemPipLine->makeContextCurrent();
+        s->bind();
+        s->setUniformMat4f("transform", this->trans);
     }
-
-    void mesh::setMaterial(materialId material)
-    {
-        mateId = material;
-        windowManger::bindContext(windowId);
-
-        materialsManger::bind(mateId, getShader());
-    }
-    
-
 }

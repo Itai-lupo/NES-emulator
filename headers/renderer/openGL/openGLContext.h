@@ -6,7 +6,7 @@ struct GLFWwindow;
 
 namespace LTE
 {
-    class openGLContext : public GraphicsContext
+    class openGLContext : public graphicsContext
 	{
         public:
             openGLContext(GLFWwindow* windowHandle)

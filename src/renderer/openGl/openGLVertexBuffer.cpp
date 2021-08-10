@@ -5,13 +5,11 @@
 
 namespace LTE
 {
-    vertexBufferId OpenGLVertexBuffer::init()
+    void OpenGLVertexBuffer::init()
     {
         GL_CALL(glGenBuffers(1, &RendererID));
         glBindBuffer(GL_ARRAY_BUFFER, RendererID);
         glBufferData(GL_ARRAY_BUFFER, size, data, GL_STATIC_DRAW);
-
-        return RendererID;
     }
 
     OpenGLVertexBuffer::~OpenGLVertexBuffer()

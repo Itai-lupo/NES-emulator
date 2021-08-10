@@ -1,30 +1,19 @@
 <map id="flappyBird::SetUp" name="flappyBird::SetUp">
-<area shape="rect" id="node1" title=" " alt="" coords="5,609,131,635"/>
-<area shape="rect" id="node2" href="$de/d44/class_l_t_e_1_1entity_manger.html#ac0129f918cf801acd2be1d4d30bc0a38" title=" " alt="" coords="193,5,331,47"/>
-<area shape="rect" id="node3" href="$d5/d7c/class_l_t_e_1_1event_manger.html#a477b6dfb06c4db052fdd25f70be60adf" title=" " alt="" coords="652,67,844,94"/>
-<area shape="rect" id="node5" href="$d8/da3/class_l_t_e_1_1event_1_1event_builder.html#a7181fef53bdf5c5aee59c5c4a75cd617" title=" " alt="" coords="665,119,831,160"/>
-<area shape="rect" id="node6" href="$d0/d13/class_l_t_e_1_1app.html#ab62cbeaa31b7f861b6938d6b7ac82968" title=" " alt="" coords="212,398,312,425"/>
-<area shape="rect" id="node17" href="$d8/da3/class_l_t_e_1_1event_1_1event_builder.html#a64a91dfac89061c9f0f4e507c30310b0" title=" " alt="" coords="665,372,831,413"/>
-<area shape="rect" id="node20" href="$d5/d71/classflappy_bird.html#aee5042720cc46dfec27701c70104068a" title=" " alt="" coords="193,659,331,686"/>
-<area shape="rect" id="node21" href="$d5/d71/classflappy_bird.html#aae7dcad10cc38d93ff3724f70115d204" title=" " alt="" coords="190,710,334,737"/>
-<area shape="rect" id="node27" href="$d8/da3/class_l_t_e_1_1event_1_1event_builder.html#a45e9677dc2c607e6a0d34d0704bc8380" title=" " alt="" coords="179,761,345,803"/>
-<area shape="rect" id="node28" href="$d8/da3/class_l_t_e_1_1event_1_1event_builder.html#aae7905b56f1b51a112b2941205e80189" title=" " alt="" coords="179,827,345,868"/>
-<area shape="rect" id="node4" href="$da/df9/struct_l_t_e_1_1event.html#aa74d00b45763be4768aa2b33bf47c5f8" title=" " alt="" coords="892,67,1067,94"/>
-<area shape="rect" id="node7" href="$de/d44/class_l_t_e_1_1entity_manger.html#a22225c885988d58d0c7cbf399f0b117f" title=" " alt="" coords="421,223,576,250"/>
-<area shape="rect" id="node8" href="$d5/d7c/class_l_t_e_1_1event_manger.html#a9ecc1ecb9f354fc459738f61f7d3e6f2" title=" " alt="" coords="421,274,576,301"/>
-<area shape="rect" id="node9" href="$d6/db4/class_l_t_e_1_1going_marry_network_manger_1_1connections_manager.html#a3a5f698a4769e87d418ef934e5a36909" title=" " alt="" coords="393,325,604,367"/>
-<area shape="rect" id="node10" href="$df/d4f/class_l_t_e_1_1materials_manger.html#ac5990387a4ca87145dba87b8098dbcc4" title=" " alt="" coords="423,391,574,432"/>
-<area shape="rect" id="node11" href="$d7/d77/class_l_t_e_1_1render_loop.html#a25ffc0deca9d7ea21e40666c0b25ccd6" title=" " alt="" coords="427,457,570,483"/>
-<area shape="rect" id="node12" href="$de/d01/class_l_t_e_1_1sound_engine.html#a5d8a53854ed29724942f958999b2f595" title=" " alt="" coords="421,507,576,534"/>
-<area shape="rect" id="node14" href="$de/de3/class_l_t_e_1_1window_manger.html#ad294dcc77093b36c11e405d8831f39e0" title=" " alt="" coords="415,173,582,199"/>
-<area shape="rect" id="node19" href="$d3/d08/class_l_t_e_1_1logger.html#a4a69e456b62e7e8488d991e722df1f56" title=" " alt="" coords="441,558,556,585"/>
-<area shape="rect" id="node13" href="$d2/dff/class_l_t_e_1_1sound_synthesizer.html#a569c46f378859a3364d269a6b49ecfd9" title=" " alt="" coords="669,500,827,541"/>
-<area shape="rect" id="node15" href="$de/de3/class_l_t_e_1_1window_manger.html#aebfe960f9bd8ac496c23122180631553" title=" " alt="" coords="673,184,823,225"/>
-<area shape="rect" id="node16" href="$de/de3/class_l_t_e_1_1window_manger.html#a0d1dfa36d23b82630bc723f9702671b9" title=" " alt="" coords="673,249,823,291"/>
-<area shape="rect" id="node18" href="$d8/da3/class_l_t_e_1_1event_1_1event_builder.html#a3c6cb0adae2c79cf4c7581a5b21167e6" title=" " alt="" coords="896,372,1063,413"/>
-<area shape="rect" id="node22" href="$d4/d84/struct_l_t_e_1_1_i_entity.html#a704cc04217b189a522aa9d3644114640" title=" " alt="" coords="683,819,813,846"/>
-<area shape="rect" id="node23" href="$d7/d77/class_l_t_e_1_1render_loop.html#a7ba4669efdbab1c7858c1fe31142d686" title=" " alt="" coords="414,710,583,737"/>
-<area shape="rect" id="node25" href="$de/d44/class_l_t_e_1_1entity_manger.html#aee58fbaaf78bbea2473b2274053e35fb" title=" " alt="" coords="679,636,817,677"/>
-<area shape="rect" id="node26" href="$d5/d7c/class_l_t_e_1_1event_manger.html#a29b44f380f1aa0ac6a8fb694ef39118b" title=" " alt="" coords="658,753,838,795"/>
-<area shape="rect" id="node24" href="$d7/d77/class_l_t_e_1_1render_loop.html#adcbc98e18b6002952b3180a664de9cd2" title=" " alt="" coords="660,702,836,729"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,349,131,376"/>
+<area shape="rect" id="node2" href="$de/d44/class_l_t_e_1_1entity_manger.html#acf283b437dde2e9300639fa4ee0e55dc" title=" " alt="" coords="215,111,352,153"/>
+<area shape="rect" id="node8" href="$d0/d13/class_l_t_e_1_1app.html#ab62cbeaa31b7f861b6938d6b7ac82968" title=" " alt="" coords="233,349,333,376"/>
+<area shape="rect" id="node17" href="$d5/d7c/class_l_t_e_1_1event_manger.html#a205c8d664c9d7ce70155f1a125404397" title=" " alt="" coords="179,401,388,442"/>
+<area shape="rect" id="node3" href="$d7/dd0/class_l_t_e_1_1game_object_1_1game_object_builder.html#a7da4a36301582e79fce894fe08e3690c" title=" " alt="" coords="447,23,649,65"/>
+<area shape="rect" id="node6" href="$d2/d49/class_l_t_e_1_1game_object.html#a3748afdfe135228a0932ee7fd8e16fd0" title=" " alt="" coords="467,89,629,116"/>
+<area shape="rect" id="node7" href="$d7/dd0/class_l_t_e_1_1game_object_1_1game_object_builder.html#a9bccacc4b4d1b8c2ab081aeaeee23bf1" title=" " alt="" coords="447,141,649,182"/>
+<area shape="rect" id="node4" href="$d9/d4b/class_l_t_e_1_1component.html#a3e5d2369a819e87417e96290a73d2cd1" title=" " alt="" coords="728,5,871,32"/>
+<area shape="rect" id="node5" href="$d9/d4b/class_l_t_e_1_1component.html#ac8bd5fc33467522201550716a235e4df" title=" " alt="" coords="708,56,891,83"/>
+<area shape="rect" id="node9" href="$de/d44/class_l_t_e_1_1entity_manger.html#a22225c885988d58d0c7cbf399f0b117f" title=" " alt="" coords="471,207,625,233"/>
+<area shape="rect" id="node10" href="$d5/d7c/class_l_t_e_1_1event_manger.html#a9ecc1ecb9f354fc459738f61f7d3e6f2" title=" " alt="" coords="471,257,625,284"/>
+<area shape="rect" id="node11" href="$db/d40/class_l_t_e_1_1_g_m_n_m_1_1connections_manager.html#aec513c0c085e0ada94be461af3d8463f" title=" " alt="" coords="436,309,660,350"/>
+<area shape="rect" id="node12" href="$df/d4f/class_l_t_e_1_1materials_manger.html#ac5990387a4ca87145dba87b8098dbcc4" title=" " alt="" coords="473,374,623,415"/>
+<area shape="rect" id="node13" href="$de/d01/class_l_t_e_1_1sound_engine.html#a5d8a53854ed29724942f958999b2f595" title=" " alt="" coords="471,440,625,467"/>
+<area shape="rect" id="node15" href="$de/de3/class_l_t_e_1_1window_manger.html#ad294dcc77093b36c11e405d8831f39e0" title=" " alt="" coords="465,491,631,517"/>
+<area shape="rect" id="node16" href="$d3/d08/class_l_t_e_1_1logger.html#a4a69e456b62e7e8488d991e722df1f56" title=" " alt="" coords="491,541,605,568"/>
+<area shape="rect" id="node14" href="$d2/dff/class_l_t_e_1_1sound_synthesizer.html#a569c46f378859a3364d269a6b49ecfd9" title=" " alt="" coords="720,433,879,474"/>
 </map>

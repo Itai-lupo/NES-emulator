@@ -5,10 +5,6 @@ namespace LTE
 {
     typedef uint32_t eventLaughId;
     typedef uint32_t entityTaleId;
-    typedef uint32_t vertexBufferId;
-    typedef uint32_t indexBufferId;
-    typedef uint32_t vertexArrayId;
-    typedef uint32_t shaderId;
     typedef uint64_t windowPieceId;
     typedef uint32_t apoEnvelopeId;
     typedef uint32_t materialId;
@@ -18,7 +14,13 @@ namespace LTE
 
     enum renderAPI
     {
-        None = 0, OpenGL = 1
+       OpenGL
+    };
+
+    
+    enum cameraControler
+    {
+        orthographicCameraControlerType
     };
 
     enum sondWaves

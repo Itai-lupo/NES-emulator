@@ -17,7 +17,7 @@
 
 namespace LTE 
 {
-    void ImGuiMouseButtonPressed(__attribute__((unused)) IEntity *eventEntity, coreEventData *sendor)
+    void ImGuiMouseButtonPressed(__attribute__((unused)) gameObject *eventEntity, coreEventData *sendor)
     {
         mouseClickData *eventData = static_cast<mouseClickData *>(sendor);
 
@@ -25,7 +25,7 @@ namespace LTE
         io.MouseDown[eventData->button] = true;
     }
 
-    void ImGuiMouseButtonReleased(__attribute__((unused)) IEntity *eventEntity, coreEventData *sendor)
+    void ImGuiMouseButtonReleased(__attribute__((unused)) gameObject *eventEntity, coreEventData *sendor)
     {
         mouseClickData *eventData = static_cast<mouseClickData *>(sendor);
 
@@ -33,7 +33,7 @@ namespace LTE
         io.MouseDown[eventData->button] = false;
     }
 
-    void ImGuiMouseMoved(__attribute__((unused)) IEntity *eventEntity, coreEventData *sendor)
+    void ImGuiMouseMoved(__attribute__((unused)) gameObject *eventEntity, coreEventData *sendor)
     {
         mouseMoveData *eventData = static_cast<mouseMoveData *>(sendor);
 
@@ -41,7 +41,7 @@ namespace LTE
         io.MousePos = ImVec2(eventData->xPos, eventData->yPos);
     }
 
-    void ImGuiMouseScrolled(__attribute__((unused)) IEntity *eventEntity, coreEventData *sendor)
+    void ImGuiMouseScrolled(__attribute__((unused)) gameObject *eventEntity, coreEventData *sendor)
     {
         mouseScrollData *eventData = static_cast<mouseScrollData *>(sendor);
 
@@ -50,7 +50,7 @@ namespace LTE
         io.MouseWheel += eventData->yOffset;
     }
 
-    void ImGuiWindowResize(__attribute__((unused)) IEntity *eventEntity, coreEventData *sendor)
+    void ImGuiWindowResize(__attribute__((unused)) gameObject *eventEntity, coreEventData *sendor)
     {
         WindowResizeData *eventData = static_cast<WindowResizeData *>(sendor);
         LAUGHTALE_ENGINR_LOG_INFO(
@@ -64,7 +64,7 @@ namespace LTE
         glViewport(0, 0, eventData->windowWidth, eventData->windowHeight);
     }
 
-    void ImGuiKeyPressed(__attribute__((unused)) IEntity *eventEntity, coreEventData *sendor)
+    void ImGuiKeyPressed(__attribute__((unused)) gameObject *eventEntity, coreEventData *sendor)
     {
         KeyData *eventData = static_cast<KeyData *>(sendor);
 
@@ -81,7 +81,7 @@ namespace LTE
         LAUGHTALE_ENGINR_LOG_INFO("ImGuiKeyPressed");
     }
 
-    void ImGuiKeyReleased(__attribute__((unused)) IEntity *eventEntity, coreEventData *sendor)
+    void ImGuiKeyReleased(__attribute__((unused)) gameObject *eventEntity, coreEventData *sendor)
     {
         KeyData *eventData = static_cast<KeyData *>(sendor);
 
@@ -89,7 +89,7 @@ namespace LTE
         io.KeysDown[eventData->key] = false;
     }
 
-    void ImGuiKeyTyped(__attribute__((unused)) IEntity *eventEntity, coreEventData *sendor)
+    void ImGuiKeyTyped(__attribute__((unused)) gameObject *eventEntity, coreEventData *sendor)
     {
         keyTypedData *eventData = static_cast<keyTypedData *>(sendor);
 
@@ -101,7 +101,7 @@ namespace LTE
 
     }
 
-    void initImGui(GLFWwindow *window)
+    void initImGui(operatingSystemInterface *operatingSystemPipLine)
     {
         IMGUI_CHECKVERSION();
         ImGui::CreateContext();
@@ -110,23 +110,25 @@ namespace LTE
         ImGuiIO& io = ImGui::GetIO(); (void)io;
 		io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;
 
-        ImGui_ImplGlfw_InitForOpenGL(window, true);
+        ImGui_ImplGlfw_InitForOpenGL((GLFWwindow*)operatingSystemPipLine->getWindowRef(), true);
         ImGui_ImplOpenGL3_Init("#version 410");
 
         LAUGHTALE_ENGINR_LOG_INFO("imgui init successfully");
     }
 
-    void onImGuiUpdate(window data, onUpdateData *eventData)
+    void onImGuiUpdate(window *data, onUpdateData *eventData)
     {
         ImGuiIO& io = ImGui::GetIO();
         ImGui_ImplOpenGL3_NewFrame();
 		ImGui_ImplGlfw_NewFrame();
 		ImGui::NewFrame();
 
-        eventData->eventType = events::ImGuiRender;
+        std::string temp = eventData->route;
+        eventData->route = "ImGui render/";
         eventManger::trigerEvent(eventData);
+        eventData->route = temp;
         
-		io.DisplaySize = ImVec2(data.Width, data.Height);
+		io.DisplaySize = ImVec2(data->Width, data->Height);
         ImGui::Render();
 		ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
     }

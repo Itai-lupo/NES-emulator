@@ -1,15 +1,17 @@
 #pragma once
-#include "indexBufferManger.h"
+#include "indexBuffer.h"
 
 namespace LTE
 {
     class openGLIndexBuffer : public indexBuffer
     {
+        private:
+            uint32_t RendererID;
         public:
             openGLIndexBuffer(unsigned int *ib, unsigned int count)
                 :indexBuffer(ib, count){}
             ~openGLIndexBuffer();
-            indexBufferId init();
+            void init();
             void bind();
             void unbind();
     };

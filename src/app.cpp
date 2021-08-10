@@ -4,14 +4,10 @@
 #include "events.h"
 #include "entity.h"
 #include "logger.h"
-#include "window.h"
-#include "VertexBufferManger.h"
-#include "indexBufferManger.h"
-#include "vertexArrayManger.h"
-#include "shaderManger.h"
+#include "windowManger.h"
+#include "indexBuffer.h"
 #include "soundEngine.h"
 #include "soundSynthesizer.h"
-#include "renderLoop.h"   
 #include "materialsManger.h"
 #include "connectionsManager.h"
 
@@ -33,21 +29,19 @@ namespace LTE
         entityManger::init();
         windowManger::init();
         soundEngine::init();
-        renderLoop::init();
         materialsManger::init();
-        goingMarryNetworkManger::connectionsManager::init();
+        GMNM::connectionsManager::init();
     }
 
     void app::close()
     {
         keepRunning = false;
-        soundEngine::close();
-        renderLoop::close();
         eventManger::close();
         entityManger::close();
+        soundEngine::close();
         windowManger::close();
         materialsManger::close();
-        goingMarryNetworkManger::connectionsManager::close();
+        GMNM::connectionsManager::close();
         logger::close();
     }
 
