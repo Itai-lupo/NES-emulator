@@ -150,9 +150,11 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d5/d7c/class_l_t_e_1_1event_manger_a54a3bf5bfe8f88d87174d0e9a33af63f_icgraph.png" border="0" usemap="#ad5/d7c/class_l_t_e_1_1event_manger_a54a3bf5bfe8f88d87174d0e9a33af63f_icgraph" alt=""/></div>
 <map name="ad5/d7c/class_l_t_e_1_1event_manger_a54a3bf5bfe8f88d87174d0e9a33af63f_icgraph" id="ad5/d7c/class_l_t_e_1_1event_manger_a54a3bf5bfe8f88d87174d0e9a33af63f_icgraph">
-<area shape="rect" title=" " alt="" coords="184,35,395,76"/>
-<area shape="rect" href="../../dd/d78/class_l_t_e_1_1squre_collider.html#a71d67a1449aca68c666f623be4302282" title=" " alt="" coords="5,5,136,47"/>
-<area shape="rect" href="../../d1/d69/classpilar.html#a5766ecde88be62932b9d246eb7772553" title=" " alt="" coords="35,71,106,98"/>
+<area shape="rect" title=" " alt="" coords="431,57,641,98"/>
+<area shape="rect" href="../../d4/d38/class_l_t_e_1_1window.html#ada64ce70730800b0efe780533eb4369c" title=" " alt="" coords="256,5,379,32"/>
+<area shape="rect" href="../../dd/d78/class_l_t_e_1_1squre_collider.html#a71d67a1449aca68c666f623be4302282" title=" " alt="" coords="252,57,383,98"/>
+<area shape="rect" href="../../d1/d69/classpilar.html#a5766ecde88be62932b9d246eb7772553" title=" " alt="" coords="282,123,353,149"/>
+<area shape="rect" href="../../dd/df6/class_l_t_e_1_1core_window_factory.html#a25039407e67703f02381042059accb7e" title=" " alt="" coords="5,5,204,32"/>
 </map>
 </div>
 
@@ -386,49 +388,57 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            <a class="code" href="../../d1/d8c/logger_8h.html#a9d905beb21802d8bef4629dc7004acb4">LAUGHTALE_ENGINR_LOG_FATAL</a>(<span class="stringliteral">&quot;please Spcifay event route&quot;</span>);</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        std::string route = sendor-&gt;route;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        </div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        eventManger::eventList.itrateFrom([&amp;](event *e){</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            <span class="keywordflow">if</span>(sendor-&gt;windowId == 0 || e-&gt;getWindowID() == 0 || e-&gt;getWindowID() == sendor-&gt;windowId)</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            {</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                if(e-&gt;getWindowID() != 0){</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                    sendor-&gt;windowId = e-&gt;getWindowID(); </div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                    sendor-&gt;win = windowManger::getWindow(e-&gt;getWindowID());</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                }</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                sendor-&gt;id = e-&gt;id;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                gameObject *eventObject = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                <span class="keywordflow">if</span>(e-&gt;getEntityID() != (<a class="code" href="../../dc/d59/namespace_l_t_e.html#a9a053246fe6d76fb97a3d9e95c94dbda">entityTaleId</a>)-1 )</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                    eventObject = <a class="code" href="../../de/d44/class_l_t_e_1_1entity_manger.html#ad019a4750f1350c7185cefe6072dcd6e">entityManger::getEntityById</a>(e-&gt;getEntityID()); </div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                </div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                <span class="keywordflow">if</span>( eventObject == <span class="keyword">nullptr</span> &amp;&amp; e-&gt;getEntityID() != (<a class="code" href="../../dc/d59/namespace_l_t_e.html#a9a053246fe6d76fb97a3d9e95c94dbda">entityTaleId</a>)-1)</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                {</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                    LAUGHTALE_ENGINR_LOG_ERROR(<span class="stringliteral">&quot;entity with id: &quot;</span> &lt;&lt; e-&gt;getEntityID() &lt;&lt; <span class="stringliteral">&quot; was&#39;nt found so faild to call event with route: &quot;</span> &lt;&lt; e-&gt;route);</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                    removeEvent(e-&gt;route);</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                }</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                    e-&gt;trigerEvent(eventObject, sendor);</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            }</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        }, sendor-&gt;route);</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    }</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <a class="code" href="../../dc/d59/namespace_l_t_e.html#a8ae7e0c0e39c6dfb8804ee2eecf2c6c2">windowPieceId</a> winId = sendor-&gt;windowId;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        eventManger::eventList.itrateFrom([&amp;](event *e){</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            <span class="keywordflow">if</span>(winId == 0 || e-&gt;getWindowID() == 0 || e-&gt;getWindowID() == winId)</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            {</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                if(e-&gt;getWindowID() != 0){</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                    sendor-&gt;windowId = e-&gt;getWindowID(); </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                    sendor-&gt;win = windowManger::getWindow(e-&gt;getWindowID());</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                }</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                sendor-&gt;route = e-&gt;getEventRoute();</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                sendor-&gt;id = e-&gt;id;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                gameObject *eventObject = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                <span class="keywordflow">if</span>(e-&gt;getEntityID() != (<a class="code" href="../../dc/d59/namespace_l_t_e.html#a9a053246fe6d76fb97a3d9e95c94dbda">entityTaleId</a>)-1 )</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                    eventObject = <a class="code" href="../../de/d44/class_l_t_e_1_1entity_manger.html#ad019a4750f1350c7185cefe6072dcd6e">entityManger::getEntityById</a>(e-&gt;getEntityID()); </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                <span class="keywordflow">if</span>( eventObject == <span class="keyword">nullptr</span> &amp;&amp; e-&gt;getEntityID() != (<a class="code" href="../../dc/d59/namespace_l_t_e.html#a9a053246fe6d76fb97a3d9e95c94dbda">entityTaleId</a>)-1)</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                {</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                    LAUGHTALE_ENGINR_LOG_ERROR(<span class="stringliteral">&quot;entity with id: &quot;</span> &lt;&lt; e-&gt;getEntityID() &lt;&lt; <span class="stringliteral">&quot; was&#39;nt found so faild to call event with route: &quot;</span> &lt;&lt; e-&gt;route);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                    removeEvent(e-&gt;route);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                }</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                    e-&gt;trigerEvent(eventObject, sendor);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;            }</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        }, sendor-&gt;route);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        sendor-&gt;windowId = winId;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        sendor-&gt;route = route;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    }</div>
 <div class="ttc" id="aclass_l_t_e_1_1entity_manger_html_ad019a4750f1350c7185cefe6072dcd6e"><div class="ttname"><a href="../../de/d44/class_l_t_e_1_1entity_manger.html#ad019a4750f1350c7185cefe6072dcd6e">LTE::entityManger::getEntityById</a></div><div class="ttdeci">static gameObject * getEntityById(entityTaleId id)</div><div class="ttdef"><b>Definition:</b> entity.cpp:48</div></div>
 <div class="ttc" id="alogger_8h_html_a9d905beb21802d8bef4629dc7004acb4"><div class="ttname"><a href="../../d1/d8c/logger_8h.html#a9d905beb21802d8bef4629dc7004acb4">LAUGHTALE_ENGINR_LOG_FATAL</a></div><div class="ttdeci">#define LAUGHTALE_ENGINR_LOG_FATAL(toLog)</div><div class="ttdef"><b>Definition:</b> logger.h:9</div></div>
+<div class="ttc" id="anamespace_l_t_e_html_a8ae7e0c0e39c6dfb8804ee2eecf2c6c2"><div class="ttname"><a href="../../dc/d59/namespace_l_t_e.html#a8ae7e0c0e39c6dfb8804ee2eecf2c6c2">LTE::windowPieceId</a></div><div class="ttdeci">uint64_t windowPieceId</div><div class="ttdef"><b>Definition:</b> core.h:8</div></div>
 <div class="ttc" id="anamespace_l_t_e_html_a9a053246fe6d76fb97a3d9e95c94dbda"><div class="ttname"><a href="../../dc/d59/namespace_l_t_e.html#a9a053246fe6d76fb97a3d9e95c94dbda">LTE::entityTaleId</a></div><div class="ttdeci">uint32_t entityTaleId</div><div class="ttdef"><b>Definition:</b> core.h:7</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d5/d7c/class_l_t_e_1_1event_manger_a6f730330512165c10082af76303ddea8_cgraph.png" border="0" usemap="#ad5/d7c/class_l_t_e_1_1event_manger_a6f730330512165c10082af76303ddea8_cgraph" alt=""/></div>
 <map name="ad5/d7c/class_l_t_e_1_1event_manger_a6f730330512165c10082af76303ddea8_cgraph" id="ad5/d7c/class_l_t_e_1_1event_manger_a6f730330512165c10082af76303ddea8_cgraph">
-<area shape="rect" title=" " alt="" coords="5,115,172,156"/>
-<area shape="rect" href="../../de/d44/class_l_t_e_1_1entity_manger.html#ad019a4750f1350c7185cefe6072dcd6e" title=" " alt="" coords="238,5,375,47"/>
-<area shape="rect" href="../../da/df9/struct_l_t_e_1_1event.html#ab71c5b50fafc14ada83dbf5d351478a3" title=" " alt="" coords="227,71,387,98"/>
-<area shape="rect" href="../../da/df9/struct_l_t_e_1_1event.html#a0305260743c3c8e7bf5e45a2235380ad" title=" " alt="" coords="220,122,393,149"/>
-<area shape="rect" href="../../d7/d22/class_l_t_e_1_1router.html#a786ac94d148acbb05d091b4f940086d2" title=" " alt="" coords="229,173,384,199"/>
-<area shape="rect" href="../../da/df9/struct_l_t_e_1_1event.html#a94ea7e4c2475b13eed53f56158ac0d6f" title=" " alt="" coords="228,223,385,250"/>
-<area shape="rect" href="../../d7/d22/class_l_t_e_1_1router.html#adb9ef0f6f6dfde8d7e69a22a0858ef0f" title=" " alt="" coords="441,173,609,199"/>
-<area shape="rect" href="../../d7/d22/class_l_t_e_1_1router.html#ab816026910263589a9022aab9a188758" title=" " alt="" coords="661,147,824,174"/>
-<area shape="rect" href="../../d7/d22/class_l_t_e_1_1router.html#a54303c950e28189b66d298045b356391" title=" " alt="" coords="657,198,828,225"/>
+<area shape="rect" title=" " alt="" coords="5,140,172,181"/>
+<area shape="rect" href="../../de/d44/class_l_t_e_1_1entity_manger.html#ad019a4750f1350c7185cefe6072dcd6e" title=" " alt="" coords="242,5,379,47"/>
+<area shape="rect" href="../../da/df9/struct_l_t_e_1_1event.html#ab71c5b50fafc14ada83dbf5d351478a3" title=" " alt="" coords="231,71,391,98"/>
+<area shape="rect" href="../../da/df9/struct_l_t_e_1_1event.html#afb1c2f0803a3c1ef17cb07f830127557" title=" " alt="" coords="220,122,401,149"/>
+<area shape="rect" href="../../da/df9/struct_l_t_e_1_1event.html#a0305260743c3c8e7bf5e45a2235380ad" title=" " alt="" coords="224,173,397,199"/>
+<area shape="rect" href="../../d7/d22/class_l_t_e_1_1router.html#a786ac94d148acbb05d091b4f940086d2" title=" " alt="" coords="233,223,388,250"/>
+<area shape="rect" href="../../da/df9/struct_l_t_e_1_1event.html#a94ea7e4c2475b13eed53f56158ac0d6f" title=" " alt="" coords="232,274,389,301"/>
+<area shape="rect" href="../../d7/d22/class_l_t_e_1_1router.html#adb9ef0f6f6dfde8d7e69a22a0858ef0f" title=" " alt="" coords="449,223,617,250"/>
+<area shape="rect" href="../../d7/d22/class_l_t_e_1_1router.html#ab816026910263589a9022aab9a188758" title=" " alt="" coords="669,198,832,225"/>
+<area shape="rect" href="../../d7/d22/class_l_t_e_1_1router.html#a54303c950e28189b66d298045b356391" title=" " alt="" coords="665,249,836,275"/>
 </map>
 </div>
 <div class="dynheader">

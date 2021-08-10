@@ -7,6 +7,7 @@ namespace LTE {
 	void window::onUpdate(gameObject *eventEntity, coreEventData *sendor)
 	{
 		onUpdateData* sendorData = dynamic_cast<onUpdateData*>(sendor);
+
 		sendorData->win->operatingSystemPipLine->makeContextCurrent();
 		sendorData->win->renderPipLine->SetClearColor({0.0f, 0.0f, 1.0f, 1.0f});
 		sendorData->win->renderPipLine->Clear();
@@ -22,7 +23,7 @@ namespace LTE {
 	void window::onWindowResize(gameObject *eventEntity, coreEventData *sendor)
 	{
 		WindowResizeData* sendorData = dynamic_cast<WindowResizeData*>(sendor);
-		
+		LAUGHTALE_ENGINR_LOG_INFO(sendorData->win->Title);
 		sendorData->win->Width = sendorData->windowWidth;
 		sendorData->win->Height = sendorData->windowHeight;
 
@@ -36,14 +37,19 @@ namespace LTE {
 			operatingSystemPipLine->makeContextCurrent();
 			initImGui(operatingSystemPipLine);
 		}
+		LAUGHTALE_ENGINR_LOG_INFO(Title);
 
-		eventManger::startBuildingEvent()->
-				setEventRoute("Window resize/handel window resize " + Title)->
-				setEventCallback(onWindowResize)->
-				setWindowId(id)->add();
+		eventManger::addCoustemEventsRoute("App update/winow render/");
+		eventManger::addCoustemEventsRoute("Window resize/handel window resize/");
 		
 		eventManger::startBuildingEvent()->
-				setEventRoute("App update/winow render " + Title)->
+				setEventRoute("Window resize/handel window resize/" + Title)->
+				setEventCallback(onWindowResize)->
+				setWindowId(id)->add();
+
+		LAUGHTALE_ENGINR_LOG_INFO("App update/winow render/" + Title)
+		eventManger::startBuildingEvent()->
+				setEventRoute("App update/winow render/" + Title)->
 				setEventCallback(onUpdate)->
 				setWindowId(id)->add();
 	}
@@ -54,7 +60,7 @@ namespace LTE {
 		delete context;
 		delete activeScene;
 		delete renderPipLine;
-
+		
 		eventManger::removeEvent("Window resize/handel window resize " + Title);
 		eventManger::removeEvent("App update/winow render " + Title);
 	}

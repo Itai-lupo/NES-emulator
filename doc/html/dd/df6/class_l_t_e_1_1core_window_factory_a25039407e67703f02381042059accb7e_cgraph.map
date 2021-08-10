@@ -1,9 +1,11 @@
 <map id="LTE::coreWindowFactory::add" name="LTE::coreWindowFactory::add">
-<area shape="rect" id="node1" title=" " alt="" coords="5,42,204,69"/>
-<area shape="rect" id="node2" href="$dd/df6/class_l_t_e_1_1core_window_factory.html#a6efd16c958ff17b7d940d43ed75bb65a" title=" " alt="" coords="252,5,423,47"/>
-<area shape="rect" id="node3" href="$d4/d38/class_l_t_e_1_1window.html#ada64ce70730800b0efe780533eb4369c" title=" " alt="" coords="276,71,399,98"/>
-<area shape="rect" id="node4" href="$dc/d59/namespace_l_t_e.html#a19186c2cdd96cf1fdc910a79c71a1547" title=" " alt="" coords="522,13,629,39"/>
-<area shape="rect" id="node6" href="$de/d84/class_l_t_e_1_1operating_system_interface.html#a3dc09c9b9b63da4f223c22f42cb48be7" title=" " alt="" coords="474,64,677,105"/>
-<area shape="rect" id="node7" href="$d5/d7c/class_l_t_e_1_1event_manger.html#a205c8d664c9d7ce70155f1a125404397" title=" " alt="" coords="471,129,680,171"/>
-<area shape="rect" id="node5" href="$de/d84/class_l_t_e_1_1operating_system_interface.html#a752060f300775fae299db13e5fecb85a" title=" " alt="" coords="728,5,931,47"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,71,204,98"/>
+<area shape="rect" id="node2" href="$dd/df6/class_l_t_e_1_1core_window_factory.html#a6efd16c958ff17b7d940d43ed75bb65a" title=" " alt="" coords="252,35,423,76"/>
+<area shape="rect" id="node3" href="$d4/d38/class_l_t_e_1_1window.html#ada64ce70730800b0efe780533eb4369c" title=" " alt="" coords="276,101,399,127"/>
+<area shape="rect" id="node4" href="$d5/d7c/class_l_t_e_1_1event_manger.html#a54a3bf5bfe8f88d87174d0e9a33af63f" title=" " alt="" coords="471,5,681,47"/>
+<area shape="rect" id="node6" href="$dc/d59/namespace_l_t_e.html#a19186c2cdd96cf1fdc910a79c71a1547" title=" " alt="" coords="523,71,629,98"/>
+<area shape="rect" id="node8" href="$de/d84/class_l_t_e_1_1operating_system_interface.html#a3dc09c9b9b63da4f223c22f42cb48be7" title=" " alt="" coords="475,123,677,164"/>
+<area shape="rect" id="node9" href="$d5/d7c/class_l_t_e_1_1event_manger.html#a205c8d664c9d7ce70155f1a125404397" title=" " alt="" coords="471,188,681,229"/>
+<area shape="rect" id="node5" href="$d7/d22/class_l_t_e_1_1router.html#a854a190b199213a2b0bda12e9b2ae22f" title=" " alt="" coords="755,13,906,39"/>
+<area shape="rect" id="node7" href="$de/d84/class_l_t_e_1_1operating_system_interface.html#a752060f300775fae299db13e5fecb85a" title=" " alt="" coords="729,64,932,105"/>
 </map>

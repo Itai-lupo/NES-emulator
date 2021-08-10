@@ -79,16 +79,19 @@ namespace LTE
             LAUGHTALE_ENGINR_LOG_FATAL("please Spcifay event route");
 
         std::string route = sendor->route;
-        
+        windowPieceId winId = sendor->windowId;
+
         eventManger::eventList.itrateFrom([&](event *e){
-            if(sendor->windowId == 0 || e->getWindowID() == 0 || e->getWindowID() == sendor->windowId)
+            if(winId == 0 || e->getWindowID() == 0 || e->getWindowID() == winId)
             {
                 if(e->getWindowID() != 0){
                     sendor->windowId = e->getWindowID(); 
                     sendor->win = windowManger::getWindow(e->getWindowID());
                 }
-
+                
+                sendor->route = e->getEventRoute();
                 sendor->id = e->id;
+                
                 gameObject *eventObject = nullptr;
 
                 if(e->getEntityID() != (entityTaleId)-1 )
@@ -104,5 +107,8 @@ namespace LTE
 
             }
         }, sendor->route);
+
+        sendor->windowId = winId;
+        sendor->route = route;
     }
 }
