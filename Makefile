@@ -2,40 +2,58 @@ CC = clang
 
 GTEST_DIR=/usr/src/googletest/
 
+# Make does not offer a recursive wildcard function, so here's one:
+rwildcard=$(wildcard $1$2) $(foreach d,$(wildcard $1*),$(call rwildcard,$d/,$2))
+rwildcardDir=$(wildcard $1*/) $(foreach d,$(wildcard $1*),$(call rwildcardDir,$d/))
 
-TARGET_EXEC ?= raftel.out
+
+TARGET_EXEC ?= theMaze.out
 
 BUILD_DIR ?= ./build
 OUTPUT_DIR ?= ./output
-SRC_DIRS ?= ./src ./headers ./vendor
-TEST_DIRS ?= ./tests
+INCLUDE_DIR ?= ./include ./vendor
+SRC_DIRS ?= ./src/ ./vendor
+TEST_DIR ?= ./tests
+DLLS_DIR ?= ./DLLS
 
-SRCS := $(shell find $(SRC_DIRS) -name *.c*)
-TESTS := $(shell find $(TEST_DIRS) -name *.c*)
-OBJS := $(SRCS:%=$(BUILD_DIR)/%.o)
-TEST_OBJS  := $(TESTS:%=$(BUILD_DIR)/%.o) $(subst ./build/./src/core.h.o,./build/./src/app.cpp.o,$(OBJS))
+SRCS += $(foreach  dir,$(SRC_DIRS),$(call rwildcard,$(dir),*.c*))
+TESTS := $(call rwildcard,$(TEST_DIR),*.c*)
+OBJS :=  $(SRCS:%=$(BUILD_DIR)/%.o)
+TEST_OBJS  := $(TESTS:%=$(BUILD_DIR)/%.o) $(filter-out ./build/./src/main.cpp.o, $(subst ./build/./src/core.h.o,./build/./src/app.cpp.o,$(OBJS)))
 DEPS := $(OBJS:.o=.d)
 TEST_DEPS := $(TEST_OBJS:.o=.d)
 
 GTEST_HEADERS = $(GTEST_DIR)/include/gtest/*.h \
                 $(GTEST_DIR)/include/gtest/internal/*.h
 
-INC_DIRS := $(shell find $(SRC_DIRS) -type d)
-TEST_INC_DIRS := $(shell find $(TEST_DIRS) -type d)
-INC_FLAGS := $(addprefix -I,$(INC_DIRS))
+INC_DIRS := $(foreach dir,$(INCLUDE_DIR),$(call rwildcardDir,$(dir)))
+LIB_DIR := $(call rwildcardDir,$(DLLS_DIR))
+TEST_INC_DIRS := $(foreach dir,$(INCLUDE_DIR),$(call rwildcardDir,$(dir)))
+INC_FLAGS := $(addprefix -I,$(INC_DIRS) $(LIB_DIR))
+LIB_FLAGS := $(addprefix -L,$(LIB_DIR))
 
-CPPFLAGS ?=  $(INC_FLAGS)  -MMD -MP  -g -Wall
+CPPFLAGS ?=  $(INC_FLAGS)  -MMD -MP  -g -Wall -Wc++17-extensions
 TEST_CPP_FLAGE = -lgtest -lgtest_main -lgmock  
-CFLAGS := -lstdc++ -lglog -lGL -lglfw  -lc -lrt -lm -ldl  -lasound
+CFLAGS := $(LIB_FLAGS) -lstdc++ -lgflags -lglog -lGL -lglfw   -lrt -lm -ldl -lasound
 
 CXXFLAGS += -g -Wall -Wextra -pthread
 
+LDFLAGS =  $(LIB_FLAGS)
+
+
 $(OUTPUT_DIR)/$(TARGET_EXEC): $(OBJS)
 	mkdir -p output
-	$(CC) $(CFLAGS) $(CPPFLAGS) $(OBJS)  -o $@ $(LDFLAGS)
+	$(CC) $(CPPFLAGS) $(CFLAGS)   $(CXXFLAGS) $(OBJS)  -o $@ $(LDFLAGS)
+
+print:
+	@echo ./include/ $(wildcard ./include/*/) $(wildcard ./include/*/*/) $(wildcard ./include/*/*/*/) $(wildcard ./include/*/*/*/*/)
+	@echo $(call rwildcardDir,./include)
+
+	
 
 # c++ source
 $(BUILD_DIR)/%.cpp.o: %.cpp
+	@echo a
 	$(MKDIR_P) $(dir $@)
 	$(CC)  $(CPPFLAGS) $(CXXFLAGS) -c $< -o $@
 

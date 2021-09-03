@@ -101,7 +101,7 @@ namespace LTE
 
     }
 
-    void initImGui(operatingSystemInterface *operatingSystemPipLine)
+    void initImGui(windowPieceId windowId)
     {
         IMGUI_CHECKVERSION();
         ImGui::CreateContext();
@@ -110,7 +110,7 @@ namespace LTE
         ImGuiIO& io = ImGui::GetIO(); (void)io;
 		io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;
 
-        ImGui_ImplGlfw_InitForOpenGL((GLFWwindow*)operatingSystemPipLine->getWindowRef(), true);
+        ImGui_ImplGlfw_InitForOpenGL((GLFWwindow*)windowId, true);
         ImGui_ImplOpenGL3_Init("#version 410");
 
         LAUGHTALE_ENGINR_LOG_INFO("imgui init successfully");

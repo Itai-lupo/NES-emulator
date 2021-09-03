@@ -1,13 +1,7 @@
 <map id="src/renderer/openGl/openGLTexture.cpp" name="src/renderer/openGl/openGLTexture.cpp">
 <area shape="rect" id="node1" title=" " alt="" coords="165,5,303,47"/>
 <area shape="rect" id="node2" title=" " alt="" coords="5,95,84,121"/>
-<area shape="rect" id="node3" href="$df/d4f/open_g_l_texture_8h.html" title=" " alt="" coords="108,95,229,121"/>
-<area shape="rect" id="node10" title=" " alt="" coords="254,95,347,121"/>
-<area shape="rect" id="node11" href="$d4/dbe/handle_open_gl_errors_8h.html" title=" " alt="" coords="372,95,523,121"/>
-<area shape="rect" id="node4" href="$df/dba/texture_8h.html" title=" " alt="" coords="132,169,205,196"/>
-<area shape="rect" id="node5" title=" " alt="" coords="145,319,200,345"/>
-<area shape="rect" id="node6" href="$d5/dc4/core_8h.html" title=" " alt="" coords="69,244,127,271"/>
-<area shape="rect" id="node8" href="$d1/d8c/logger_8h.html" title=" " alt="" coords="206,244,273,271"/>
-<area shape="rect" id="node7" title=" " alt="" coords="59,319,121,345"/>
-<area shape="rect" id="node9" title=" " alt="" coords="224,319,327,345"/>
+<area shape="rect" id="node3" title=" " alt="" coords="108,95,229,121"/>
+<area shape="rect" id="node4" title=" " alt="" coords="254,95,347,121"/>
+<area shape="rect" id="node5" title=" " alt="" coords="372,95,523,121"/>
 </map>

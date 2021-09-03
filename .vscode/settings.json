@@ -113,7 +113,10 @@
         "keydata.h": "c",
         "mesh.h": "c",
         "matrix_transform.hpp": "c",
-        "transform.h": "c"
+        "transform.h": "c",
+        "slist": "cpp",
+        "cfenv": "cpp",
+        "collidersystem2d.h": "c"
     },
     "files.exclude": {
         "build/": true,

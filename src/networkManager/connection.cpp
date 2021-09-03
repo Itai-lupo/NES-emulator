@@ -3,6 +3,7 @@
 #include <functional>
 #include "logger.h"
 #include "asioNetworkInterface.h"
+#include <sys/prctl.h>
 
 namespace LTE::GMNM
 {
@@ -56,6 +57,8 @@ namespace LTE::GMNM
 
     void connection::listen()
     {
+        std::string thradName = "con " + std::to_string(id);
+        prctl(PR_SET_NAME, thradName.c_str(), 0, 0, 0);
         while(networkConnction->isConnected() && shouldListen)
         {
             packet data;

@@ -92,20 +92,19 @@ $(document).ready(function(){initNavTree('d3/ddf/handle_open_gl_errors_8cpp.html
 <div class="textblock"><code>#include &lt;iostream&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
 <code>#include &quot;glad/glad.h&quot;</code><br />
-<code>#include &quot;<a class="el" href="../../d4/dbe/handle_open_gl_errors_8h_source.html">handleOpenGlErrors.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="../../d1/d8c/logger_8h_source.html">logger.h</a>&quot;</code><br />
+<code>#include &quot;handleOpenGlErrors.h&quot;</code><br />
+<code>#include &quot;logger.h&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for handleOpenGlErrors.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d6/dbc/handle_open_gl_errors_8cpp__incl.png" border="0" usemap="#asrc_2renderer_2open_gl_2handle_open_gl_errors_8cpp" alt=""/></div>
 <map name="asrc_2renderer_2open_gl_2handle_open_gl_errors_8cpp" id="asrc_2renderer_2open_gl_2handle_open_gl_errors_8cpp">
-<area shape="rect" title=" " alt="" coords="111,5,279,47"/>
+<area shape="rect" title=" " alt="" coords="140,5,308,47"/>
 <area shape="rect" title=" " alt="" coords="5,95,77,121"/>
-<area shape="rect" title=" " alt="" coords="214,169,269,196"/>
-<area shape="rect" title=" " alt="" coords="152,95,237,121"/>
-<area shape="rect" href="../../d4/dbe/handle_open_gl_errors_8h.html" title=" " alt="" coords="262,95,413,121"/>
-<area shape="rect" href="../../d1/d8c/logger_8h.html" title=" " alt="" coords="437,95,504,121"/>
-<area shape="rect" title=" " alt="" coords="419,169,522,196"/>
+<area shape="rect" title=" " alt="" coords="102,95,157,121"/>
+<area shape="rect" title=" " alt="" coords="181,95,267,121"/>
+<area shape="rect" title=" " alt="" coords="291,95,442,121"/>
+<area shape="rect" title=" " alt="" coords="467,95,533,121"/>
 </map>
 </div>
 </div><table class="memberdecls">
@@ -151,11 +150,10 @@ Functions</h2></td></tr>
 <div class="fragment"><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    GLenum error;</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordflow">while</span>((error = glGetError()) != GL_NO_ERROR)</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <a class="code" href="../../d1/d8c/logger_8h.html#a70645337545523faca46e49a3180d5f7">LAUGHTALE_ENGINR_LOG_INFO</a>(</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        LAUGHTALE_ENGINR_LOG_INFO(</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            <span class="stringliteral">&quot;[OpenGL error] (&quot;</span> + to_string(error) + <span class="stringliteral">&quot;): &quot;</span> + <span class="keyword">function</span> + <span class="stringliteral">&quot; &quot;</span> + file +  <span class="stringliteral">&quot;:&quot;</span> + to_string(line) );</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    </div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;}</div>
-<div class="ttc" id="alogger_8h_html_a70645337545523faca46e49a3180d5f7"><div class="ttname"><a href="../../d1/d8c/logger_8h.html#a70645337545523faca46e49a3180d5f7">LAUGHTALE_ENGINR_LOG_INFO</a></div><div class="ttdeci">#define LAUGHTALE_ENGINR_LOG_INFO(toLog)</div><div class="ttdef"><b>Definition:</b> logger.h:6</div></div>
 </div><!-- fragment -->
 </div>
 </div>

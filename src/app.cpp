@@ -31,6 +31,9 @@ namespace LTE
         soundEngine::init();
         materialsManger::init();
         GMNM::connectionsManager::init();
+
+        osFactory = OSAbstractFactory::init();
+        os = osFactory->createOsApi();
     }
 
     void app::close()
@@ -43,6 +46,9 @@ namespace LTE
         materialsManger::close();
         GMNM::connectionsManager::close();
         logger::close();
+
+        delete osFactory;
+        delete os;
     }
 
 
@@ -58,12 +64,12 @@ namespace LTE
         onUpdateData *updateData = new onUpdateData(startTime, startTime, 0);
         while (keepRunning)
         {
+            os->pollEvents();
             now = getTime();
             updateData->DeltaTime = now - updateData->currentTime;
             updateData->currentTime = now;
             eventManger::trigerEvent(updateData);
-        }
-        
+        }   
     }
 };
 

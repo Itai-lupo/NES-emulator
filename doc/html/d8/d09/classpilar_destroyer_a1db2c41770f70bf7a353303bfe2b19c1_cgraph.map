@@ -1,8 +1,4 @@
 <map id="pilarDestroyer::init" name="pilarDestroyer::init">
-<area shape="rect" id="node1" title=" " alt="" coords="5,56,133,83"/>
-<area shape="rect" id="node2" href="$d2/d49/class_l_t_e_1_1game_object.html#a5f513231fa75208d91178c9050ace526" title=" " alt="" coords="193,5,379,32"/>
-<area shape="rect" id="node3" href="$d8/d09/classpilar_destroyer.html#ae0ec3b855b792cae5b45fd52d50d926c" title=" " alt="" coords="203,56,369,83"/>
-<area shape="rect" id="node6" href="$d5/d7c/class_l_t_e_1_1event_manger.html#a205c8d664c9d7ce70155f1a125404397" title=" " alt="" coords="181,107,391,149"/>
-<area shape="rect" id="node4" href="$d2/d49/class_l_t_e_1_1game_object.html#a3748afdfe135228a0932ee7fd8e16fd0" title=" " alt="" coords="439,27,600,53"/>
-<area shape="rect" id="node5" href="$de/d44/class_l_t_e_1_1entity_manger.html#aee58fbaaf78bbea2473b2274053e35fb" title=" " alt="" coords="451,78,588,119"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,133,32"/>
+<area shape="rect" id="node2" href="$d8/d09/classpilar_destroyer.html#ae0ec3b855b792cae5b45fd52d50d926c" title=" " alt="" coords="181,5,347,32"/>
 </map>

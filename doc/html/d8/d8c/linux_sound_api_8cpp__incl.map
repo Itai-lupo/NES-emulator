@@ -1,11 +1,8 @@
 <map id="src/soundEngine/platform/linux/linuxSoundApi.cpp" name="src/soundEngine/platform/linux/linuxSoundApi.cpp">
-<area shape="rect" id="node1" title=" " alt="" coords="125,5,296,47"/>
+<area shape="rect" id="node1" title=" " alt="" coords="155,5,325,47"/>
 <area shape="rect" id="node2" title=" " alt="" coords="5,95,99,121"/>
-<area shape="rect" id="node3" title=" " alt="" coords="142,169,197,196"/>
-<area shape="rect" id="node4" title=" " alt="" coords="173,95,248,121"/>
-<area shape="rect" id="node5" href="$d1/d8c/logger_8h.html" title=" " alt="" coords="272,95,339,121"/>
-<area shape="rect" id="node7" href="$da/d46/linux_sound_api_8h.html" title=" " alt="" coords="371,95,487,121"/>
-<area shape="rect" id="node6" title=" " alt="" coords="245,169,347,196"/>
-<area shape="rect" id="node8" title=" " alt="" coords="371,169,487,196"/>
-<area shape="rect" id="node9" href="$dc/d8f/sound_api_8h.html" title=" " alt="" coords="511,169,598,196"/>
+<area shape="rect" id="node3" title=" " alt="" coords="123,95,178,121"/>
+<area shape="rect" id="node4" title=" " alt="" coords="203,95,277,121"/>
+<area shape="rect" id="node5" title=" " alt="" coords="301,95,368,121"/>
+<area shape="rect" id="node6" title=" " alt="" coords="393,95,509,121"/>
 </map>

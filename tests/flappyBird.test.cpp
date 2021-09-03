@@ -190,7 +190,7 @@ class pilarSummener: public LTE::component
         {
             LTE::mesh *pilarTopMesh = new LTE::mesh(winId);
 
-            LTE::windowManger::getWindow(winId)->operatingSystemPipLine->makeContextCurrent();
+            LTE::app::getOsAPI()->makeContextCurrent(winId);
 
             pilarTopMesh->setShader("res/flappyBird/Basic.shader");
 
@@ -209,7 +209,7 @@ class pilarSummener: public LTE::component
         {
             LTE::mesh *pilarBottomMesh = new LTE::mesh(winId);
 
-            LTE::windowManger::getWindow(winId)->operatingSystemPipLine->makeContextCurrent();
+            LTE::app::getOsAPI()->makeContextCurrent(winId);
 
             pilarBottomMesh->setShader("res/flappyBird/Basic.shader");
 
@@ -251,7 +251,7 @@ class pilarSummener: public LTE::component
             LTE::entityManger::addEntity([=](LTE::gameObject::gameObjectBuilder *builder){ 
                 builder->
                     setObjectName("pilar top")->
-                    setObjectTransform({{ 1.7f, pilarHight + 1.25f, 1.0f}, {0.0f, 0.0f, 0.0f}, { PILAR_HOLE_WIDTH, 2.0f, 1.0f}})->
+                    setObjectTransform({{ 1.7f, pilarHight + 1.25f, 0.0f}, {0.0f, 0.0f, 0.0f}, { PILAR_HOLE_WIDTH, 2.0f, 1.0f}})->
                     setWindowId(sendor->windowId)->
                     addComponent(summener->getComponent<pilarSummener>()->initPilarTopMesh())->
                     addComponent(new LTE::material("res/textures/5_star.png", {1.0f, 1.0f, 0.0f, 1.0f}))->
@@ -263,7 +263,7 @@ class pilarSummener: public LTE::component
             LTE::entityManger::addEntity([=](LTE::gameObject::gameObjectBuilder *builder){ 
                 builder->
                     setObjectName("pilar bottom")->
-                    setObjectTransform({{ 1.7f, pilarHight - 1.25f, 1.0f}, {0.0f, 0.0f, 0.0f}, { PILAR_HOLE_WIDTH, 2.0f, 1.0f}})->
+                    setObjectTransform({{ 1.7f, pilarHight - 1.25f, 0.0f}, {0.0f, 0.0f, 0.0f}, { PILAR_HOLE_WIDTH, 2.0f, 1.0f}})->
                     setWindowId(sendor->windowId)->
                     addComponent(summener->getComponent<pilarSummener>()->initPilarBottomMesh())->
                     addComponent(new LTE::material("res/textures/5_star.png", {1.0f, 1.0f, 0.0f, 1.0f}))->
@@ -292,7 +292,6 @@ class pilarDestroyer: public LTE::component
 
         virtual void end() override
         {
-
         }
 
         static void onCollide(LTE::gameObject *summener, LTE::coreEventData *sendor)
@@ -314,9 +313,15 @@ class flappyBird : public ::testing::Test
 
         void initWindows()
         {
-            gameWindowId =  LTE::windowManger::windowManger::startBuildingWindow()->setWindowName("flappyBird")->add();
-            debugInfoWindowId = LTE::windowManger::startBuildingWindow()->setWindowName("debug Info Window")->useImGui()->
-                setWindowHeight(600)->setWindowWidth(600)->add();
+            gameWindowId =  LTE::windowManger::addWindow([=](LTE::windowBuilder *build)
+            {
+                build->setTitle("flappyBird");
+            });
+            
+            debugInfoWindowId = LTE::windowManger::addWindow([=](LTE::windowBuilder *build)
+            {
+                build->setHeight(600)->setWidth(600)->setTitle("debug Info Window")->useImGui();
+            });
         }
 
         static void WindowClose(__attribute__((unused)) LTE::gameObject *eventEntity, __attribute__((unused)) LTE::coreEventData *sendor)
@@ -327,8 +332,8 @@ class flappyBird : public ::testing::Test
     private:
         float birdPostions[6 * 5] = 
         {
-             0.0f,   0.5f ,  0.0f,   0.5f,   1.0f ,
-             0.5f,   0.25f,  0.0f,   1.0f,   0.75f,
+             0.0f,    0.5f ,  0.0f,   0.5f,   1.0f ,
+             0.5f,    0.25f,  0.0f,   1.0f,   0.75f,
              0.5f,   -0.25f,  0.0f,   1.0f,   0.25f,
              0.0f,   -0.5f ,  0.0f,   0.5f,   0.0f ,
             -0.5f,   -0.25f,  0.0f,   0.0f,   0.25f,
@@ -363,8 +368,7 @@ class flappyBird : public ::testing::Test
         LTE::mesh *initPlayerMesh()
         {
             LTE::mesh *playerMesh = new LTE::mesh(gameWindowId);
-
-            LTE::windowManger::getWindow(gameWindowId)->operatingSystemPipLine->makeContextCurrent();
+            LTE::app::getOsAPI()->makeContextCurrent(gameWindowId);
 
             playerMesh->setShader("res/flappyBird/bird.shader");
 
@@ -382,8 +386,7 @@ class flappyBird : public ::testing::Test
         LTE::mesh *initPilarTopMesh()
         {
             LTE::mesh *pilarTopMesh = new LTE::mesh(gameWindowId);
-
-            LTE::windowManger::getWindow(gameWindowId)->operatingSystemPipLine->makeContextCurrent();
+            LTE::app::getOsAPI()->makeContextCurrent(gameWindowId);
 
             pilarTopMesh->setShader("res/flappyBird/Basic.shader");
 
@@ -402,8 +405,8 @@ class flappyBird : public ::testing::Test
         {
             LTE::mesh *pilarBottomMesh = new LTE::mesh(gameWindowId);
 
-            LTE::windowManger::getWindow(gameWindowId)->operatingSystemPipLine->makeContextCurrent();
-
+            LTE::app::getOsAPI()->makeContextCurrent(gameWindowId);
+            
             pilarBottomMesh->setShader("res/flappyBird/Basic.shader");
 
             pilarBottomMesh->setVertexBuffer(pilarPostions, 20 * sizeof(float));
@@ -427,7 +430,7 @@ class flappyBird : public ::testing::Test
             LTE::entityManger::addEntity([=, this](LTE::gameObject::gameObjectBuilder *builder){ 
                 builder->
                     setObjectName("player")->
-                    setObjectTransform({{ -0.9, 0.0f, 1.0f}, {0.0f, 0.0f, 0.0f}, { 0.2, 0.2f, 0.0f}})->
+                    setObjectTransform({{ -0.9, 0.0f, -1.0f}, {0.0f, 0.0f, 0.0f}, { 0.2, 0.2f, 0.0f}})->
                     setWindowId(gameWindowId)->
                     addComponent(initPlayerMesh())->
                     addComponent(new LTE::material("res/textures/Logo.png", glm::vec4({0.0f, 0.0f, 0.0f, 1.0f})))->
@@ -443,7 +446,7 @@ class flappyBird : public ::testing::Test
             LTE::entityManger::addEntity([=, this](LTE::gameObject::gameObjectBuilder *builder){ 
                 builder->
                     setObjectName("pilar top")->
-                    setObjectTransform({{ 1.7f, pilarHight + 1.25f, 1.0f}, {0.0f, 0.0f, 0.0f}, { PILAR_HOLE_WIDTH, 2.0f, 1.0f}})->
+                    setObjectTransform({{ 1.7f, pilarHight + 1.25f, 0.0f}, {0.0f, 0.0f, 0.0f}, { PILAR_HOLE_WIDTH, 2.0f, 1.0f}})->
                     setWindowId(gameWindowId)->
                     addComponent(initPilarTopMesh())->
                     addComponent(new LTE::material("res/textures/5_star.png", {1.0f, 1.0f, 0.0f, 1.0f}))->
@@ -455,7 +458,7 @@ class flappyBird : public ::testing::Test
             LTE::entityManger::addEntity([=, this](LTE::gameObject::gameObjectBuilder *builder){ 
                 builder->
                     setObjectName("pilar bottom")->
-                    setObjectTransform({{ 1.7f, pilarHight - 1.25f, 1.0f}, {0.0f, 0.0f, 0.0f}, { PILAR_HOLE_WIDTH, 2.0f, 1.0f}})->
+                    setObjectTransform({{ 1.7f, pilarHight - 1.25f, 0.0f}, {0.0f, 0.0f, 0.0f}, { PILAR_HOLE_WIDTH, 2.0f, 1.0f}})->
                     setWindowId(gameWindowId)->
                     addComponent(initPilarBottomMesh())->
                     addComponent(new LTE::material("res/textures/5_star.png", {1.0f, 1.0f, 0.0f, 1.0f}))->
@@ -467,7 +470,7 @@ class flappyBird : public ::testing::Test
             LTE::entityManger::addEntity([=, this](LTE::gameObject::gameObjectBuilder *builder){ 
                 builder->
                     setObjectName("pilar summener")->
-                    setObjectTransform({{ 0.8f, -1.0f, 1.0f}, {0.0f, 0.0f, 0.0f}, { 0.1f, 0.1f, 1.0f}})->
+                    setObjectTransform({{ 0.8f, -1.0f, -1.0f}, {0.0f, 0.0f, 0.0f}, { 0.1f, 0.1f, 1.0f}})->
                     setWindowId(gameWindowId)->
                     addComponent(new LTE::squreCollider())->
                     addComponent(new pilarSummener());
@@ -493,7 +496,6 @@ class flappyBird : public ::testing::Test
             LTE::app::close();
         }
 };
-
 
 
 

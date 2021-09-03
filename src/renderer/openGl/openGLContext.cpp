@@ -1,5 +1,6 @@
 #include "openGLContext.h"
-
+#include "app.h"
+#include "openGLrenderApi.h"
 #include "glad/glad.h"
 #include <GLFW/glfw3.h>
 
@@ -7,15 +8,25 @@ namespace LTE
 {
     void openGLContext::Init()
     {
-        glfwMakeContextCurrent(windowHandle);
+        app::getOsAPI()->makeContextCurrent(windowId);
+
         int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
-        LAUGHTALE_ENGINR_CONDTION_LOG_INFO("Failed to initialize Glad!", status != 1);
+        LAUGHTALE_ENGINR_CONDTION_LOG_FATAL("Failed to initialize Glad!", status != 1);
+
+        api = new openGLRenderApi();
+        api->init();
     }
 
     void openGLContext::SwapBuffers()
     {
-        glfwSwapBuffers(windowHandle);
+        app::getOsAPI()->swapBuffers(windowId);
     }
+
+    renderApi *openGLContext::getRenderApi()
+    {
+        return api;
+    }
+
     
 } 
 

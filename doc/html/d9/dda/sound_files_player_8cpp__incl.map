@@ -1,13 +1,4 @@
 <map id="src/soundEngine/soundFilesPlayer.cpp" name="src/soundEngine/soundFilesPlayer.cpp">
-<area shape="rect" id="node1" title=" " alt="" coords="61,5,247,47"/>
-<area shape="rect" id="node2" href="$d3/d40/sound_files_player_8h.html" title=" " alt="" coords="88,95,220,121"/>
-<area shape="rect" id="node3" title=" " alt="" coords="5,393,60,420"/>
-<area shape="rect" id="node4" href="$da/d92/envelope_8h.html" title=" " alt="" coords="125,244,210,271"/>
-<area shape="rect" id="node10" href="$dc/d35/sound_synthesizer_8h.html" title=" " alt="" coords="191,169,327,196"/>
-<area shape="rect" id="node5" href="$d5/dc4/core_8h.html" title=" " alt="" coords="281,319,339,345"/>
-<area shape="rect" id="node7" href="$d1/d8c/logger_8h.html" title=" " alt="" coords="86,319,153,345"/>
-<area shape="rect" id="node9" title=" " alt="" coords="177,319,256,345"/>
-<area shape="rect" id="node6" title=" " alt="" coords="279,393,341,420"/>
-<area shape="rect" id="node8" title=" " alt="" coords="84,393,187,420"/>
-<area shape="rect" id="node11" title=" " alt="" coords="297,244,355,271"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,192,47"/>
+<area shape="rect" id="node2" title=" " alt="" coords="33,95,165,121"/>
 </map>
