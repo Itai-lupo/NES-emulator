@@ -1,14 +1,17 @@
 #pragma once
+#include "openGLBase.h"
 #include "texture.h"
 
 namespace LTE
 {
-    class openGLTexture: public texture
+    class openGLTexture: public texture, public openGLBase
     {
         private:
         public:
             openGLTexture(const std::string& path);
             ~openGLTexture();
-            virtual void bind(uint32_t slot = 0) override;
+            virtual void init() override;
+            virtual void bind() override;
+            virtual void unbind() override;
     };
 }

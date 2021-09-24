@@ -60,13 +60,14 @@ namespace LTE
 
     void entityManger::removeEntityById(entityTaleId id)
     {
-        for (uint64_t i = 0; i < entityManger::entitys.size(); i++)
+        for (uint64_t i = 0; i < entitys.size(); i++)
         {
-            if(entityManger::entitys[i]->getId()  == id)
+            if(entitys[i]->getId()  == id)
             {
-                entityManger::entitys[i]->end();
-                delete entityManger::entitys[i];
-                entityManger::entitys.erase(entityManger::entitys.begin() + i);
+                gameObject *e = entitys[i]; 
+                e->end();
+                entitys.erase(entitys.begin() + i);
+                delete e;
             }
         }
         

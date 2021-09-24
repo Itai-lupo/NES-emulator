@@ -52,7 +52,8 @@ namespace LTE
     }
 
 
-    uint64_t getTime(){
+    uint64_t app::getTime()
+    {
         return std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count();
     }
 
@@ -62,9 +63,12 @@ namespace LTE
         uint64_t now = getTime();
 
         onUpdateData *updateData = new onUpdateData(startTime, startTime, 0);
+        
+        isRuning = true;
         while (keepRunning)
         {
             os->pollEvents();
+         
             now = getTime();
             updateData->DeltaTime = now - updateData->currentTime;
             updateData->currentTime = now;

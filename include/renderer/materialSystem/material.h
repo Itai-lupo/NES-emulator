@@ -18,12 +18,13 @@ namespace LTE
             texture *tex;
             glm::vec4 baseColor;
 
+            std::string texturePath;
+
         public:
             material(const std::string& textureFilePath, glm::vec4 baseColor);
             material(const std::string& textureFilePath);
             material(glm::vec4 baseColor);
 
-            ~material();
             void bind(shader *s);
             void bind(shader *s, std::vector<uint32_t> textureSlots);
 
@@ -34,7 +35,7 @@ namespace LTE
             glm::vec4 getRGBA();
 
 
-            virtual void init(gameObject *parent) override {}
-            virtual void end() override {}
+            virtual void init(gameObject *parent) override;
+            virtual void end() override;
     };
 }

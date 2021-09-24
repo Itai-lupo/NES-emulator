@@ -1,9 +1,10 @@
 #pragma once
+#include "openGLBase.h"
 #include "indexBuffer.h"
 
 namespace LTE
 {
-    class openGLIndexBuffer : public indexBuffer
+    class openGLIndexBuffer : public indexBuffer, public openGLBase
     {
         private:
             uint32_t RendererID;

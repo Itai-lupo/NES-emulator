@@ -1,26 +1,32 @@
 #include "material.h"
 #include "openGLTexture.h"
+#include "windowManger.h"
 
 namespace LTE
 {
-    material::material(const std::string& textureFilePath, glm::vec4 baseColor)
+    material::material(const std::string& textureFilePath, glm::vec4 baseColor): texturePath(textureFilePath)
     {
-        tex = new openGLTexture(textureFilePath);
         this->baseColor = baseColor;
     }
 
-    material::material(const std::string& textureFilePath)
+    material::material(const std::string& textureFilePath): texturePath(textureFilePath)
     {
-        tex = new openGLTexture(textureFilePath);
         this->baseColor = {0.0f, 0.0f, 0.0f, 0.0f};
     }
 
-    material::material(glm::vec4 baseColor)
+    material::material(glm::vec4 baseColor): texturePath("")
     {
         this->baseColor = baseColor;
     }
 
-    material::~material()
+    void material::init(gameObject *parent)
+    {
+        if(texturePath != "")
+            tex = windowManger::getWindow(winId)->context->getMeshFactory()->createTexture(texturePath);
+    }
+
+
+    void material::end()
     {
         if(tex != nullptr)
             delete tex;
@@ -34,9 +40,14 @@ namespace LTE
     void material::bind(shader *s, std::vector<uint32_t> textureSlots)
     {
         if(textureSlots.size() == 0) textureSlots.push_back(0);
-        tex->bind(textureSlots[0]);
+        
         s->bind();
-        s->setUniform1i("texture", textureSlots[0]);
+        if(tex != nullptr)
+        {
+            tex->bind();
+            s->setUniform1i("texture", textureSlots[0]);
+        }
+
         s->setUniform4f("baseColor", baseColor.r, baseColor.g, baseColor.b, baseColor.a);
     }
 
@@ -47,7 +58,7 @@ namespace LTE
 
     void material::setTexture(const std::string& path)
     {
-        tex = new openGLTexture(path);
+        this->tex = windowManger::getWindow(winId)->context->getMeshFactory()->createTexture(path);
     }
 
     void material::setBaseColor(glm::vec4 baseColor)
@@ -59,4 +70,4 @@ namespace LTE
     {
         return this->baseColor;
     }
-}
+} 

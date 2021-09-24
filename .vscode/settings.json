@@ -116,13 +116,25 @@
         "transform.h": "c",
         "slist": "cpp",
         "cfenv": "cpp",
-        "collidersystem2d.h": "c"
+        "collidersystem2d.h": "c",
+        "squrecollider.h": "c",
+        "component.h": "c",
+        "logger.h": "c",
+        "meshabsrtactfactory.h": "c"
     },
     "files.exclude": {
+        ".gitignore": true,
+        ".vscode/": true,
         "build/": true,
-        "output/": true
+        "config/": true,
+        "DLLS/": true,
+        "doc/": true,
+        "imgui.ini": true,
+        "output/": true,
+        "README.md": true,
+        "vendor/": true
     },
-    "C_Cpp.errorSquiggles": "Disabled",
+    "C_Cpp.errorSquiggles": "Enabled",
     "editor.tokenColorCustomizations": {
         "textMateRules": [
             {
@@ -145,8 +157,6 @@
             }
         ]
     },
-    "gtest-adapter.debugConfig": [
-        "debug tests"
-    ],
+    "gtest-adapter.debugConfig": "debug tests",
     "gtest-adapter.supportLocation": true
 }

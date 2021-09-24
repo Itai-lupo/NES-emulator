@@ -147,7 +147,7 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;{}</div>
+<div class="fragment"><div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;{}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -174,8 +174,8 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;        {</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;        }</div>
+<div class="fragment"><div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;        {</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -202,14 +202,14 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;        {</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;            LTE::eventManger::startBuildingEvent()-&gt;</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;                setEventRoute(<span class="stringliteral">&quot;collider/&quot;</span> + destroyer-&gt;getName() + <span class="stringliteral">&quot;/destroy pilars&quot;</span>)-&gt;</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;                setEventCallback(<a class="code" href="../../d8/d09/classpilar_destroyer.html#ae0ec3b855b792cae5b45fd52d50d926c">onCollide</a>)-&gt;</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;                setWindowId(winId)-&gt;</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;                setEntityID(parentId)-&gt;add();</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;        }</div>
-<div class="ttc" id="aclasspilar_destroyer_html_ae0ec3b855b792cae5b45fd52d50d926c"><div class="ttname"><a href="../../d8/d09/classpilar_destroyer.html#ae0ec3b855b792cae5b45fd52d50d926c">pilarDestroyer::onCollide</a></div><div class="ttdeci">static void onCollide(LTE::gameObject *summener, LTE::coreEventData *sendor)</div><div class="ttdef"><b>Definition:</b> flappyBird.test.cpp:297</div></div>
+<div class="fragment"><div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;        {</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;            LTE::eventManger::startBuildingEvent()-&gt;</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;                setEventRoute(<span class="stringliteral">&quot;collider/&quot;</span> + destroyer-&gt;getName() + <span class="stringliteral">&quot;/destroy pilars&quot;</span>)-&gt;</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;                setEventCallback(<a class="code" href="../../d8/d09/classpilar_destroyer.html#ae0ec3b855b792cae5b45fd52d50d926c">onCollide</a>)-&gt;</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;                setWindowId(winId)-&gt;</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;                setEntityID(parentId)-&gt;add();</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;        }</div>
+<div class="ttc" id="aclasspilar_destroyer_html_ae0ec3b855b792cae5b45fd52d50d926c"><div class="ttname"><a href="../../d8/d09/classpilar_destroyer.html#ae0ec3b855b792cae5b45fd52d50d926c">pilarDestroyer::onCollide</a></div><div class="ttdeci">static void onCollide(LTE::gameObject *summener, LTE::coreEventData *sendor)</div><div class="ttdef"><b>Definition:</b> flappyBird.test.cpp:271</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -255,10 +255,10 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;        {</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;            LTE::colliderEventData *sendorData = <span class="keyword">static_cast&lt;</span>LTE::colliderEventData*<span class="keyword">&gt;</span>(sendor);</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;            LTE::entityManger::removeEntityById(sendorData-&gt;target-&gt;getId());</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;        }</div>
+<div class="fragment"><div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;        {</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;            LTE::colliderEventData *sendorData = <span class="keyword">static_cast&lt;</span>LTE::colliderEventData*<span class="keyword">&gt;</span>(sendor);</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;            LTE::entityManger::removeEntityById(sendorData-&gt;target-&gt;getId());</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;        }</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">

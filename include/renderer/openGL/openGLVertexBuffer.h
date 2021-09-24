@@ -1,10 +1,11 @@
 #pragma once
 #include "VertexBuffer.h"
+#include "openGLBase.h"
 
 namespace LTE
 {
 
-    class OpenGLVertexBuffer: public VertexBuffer
+    class OpenGLVertexBuffer: public VertexBuffer, public openGLBase
     {
         private:
             uint32_t RendererID;

@@ -86,10 +86,9 @@ namespace LTE
             {
                 for (auto comp: components)
                 {
-                    if(comp != NULL && dynamic_cast<T*>(comp) != NULL)
+                    if(comp && dynamic_cast<T*>(comp))
                         return dynamic_cast<T*>(comp); 
                 }
-                
                 LAUGHTALE_ENGINR_LOG_WARNING("can't find Component of type: " << typeid(T).name());
                 return NULL;
             }    

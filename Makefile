@@ -36,7 +36,7 @@ CPPFLAGS ?=  $(INC_FLAGS)  -MMD -MP  -g -Wall -Wc++17-extensions
 TEST_CPP_FLAGE = -lgtest -lgtest_main -lgmock  
 CFLAGS := $(LIB_FLAGS) -lstdc++ -lgflags -lglog -lGL -lglfw   -lrt -lm -ldl -lasound
 
-CXXFLAGS += -g -Wall -Wextra -pthread
+CXXFLAGS += -g -Wall -Wextra -pthread -O0
 
 LDFLAGS =  $(LIB_FLAGS)
 
@@ -53,7 +53,6 @@ print:
 
 # c++ source
 $(BUILD_DIR)/%.cpp.o: %.cpp
-	@echo a
 	$(MKDIR_P) $(dir $@)
 	$(CC)  $(CPPFLAGS) $(CXXFLAGS) -c $< -o $@
 

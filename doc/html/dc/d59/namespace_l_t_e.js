@@ -7,7 +7,6 @@ var namespace_l_t_e =
     [ "checkYBonds", "dc/d59/namespace_l_t_e.html#ae5a25649ff95c04e16830f550227549e", null ],
     [ "clap", "dc/d59/namespace_l_t_e.html#ad863355b6c8b17627459d7b2da68ab97", null ],
     [ "closeImGui", "dc/d59/namespace_l_t_e.html#a5565f106d60731b4b9e99d1be1c399ed", null ],
-    [ "getTime", "dc/d59/namespace_l_t_e.html#a7e980c4bd84164199feab657d45af439", null ],
     [ "ImGuiKeyPressed", "dc/d59/namespace_l_t_e.html#a16a6d02797ea9ee128e59c3eace55d44", null ],
     [ "ImGuiKeyReleased", "dc/d59/namespace_l_t_e.html#affb8dd9dab839fcd6cd20780443bf113", null ],
     [ "ImGuiKeyTyped", "dc/d59/namespace_l_t_e.html#af7b777b2831230421ffa00d59bb70bd7", null ],

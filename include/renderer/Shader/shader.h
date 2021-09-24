@@ -3,6 +3,7 @@
 #include "core.h"
 #include<string>
 #include <glm/glm.hpp>
+#include "component.h"
 
 namespace LTE
 {
@@ -15,6 +16,7 @@ namespace LTE
                 :filePath(filePath){}
 
             virtual void init() = 0;
+
             virtual void bind() = 0;
             virtual void unbind() = 0;
             virtual void setUniform1i(const std::string& name, int value) = 0;

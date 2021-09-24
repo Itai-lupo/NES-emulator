@@ -1,5 +1,6 @@
 #pragma once
 #include "renderApi.h"
+#include "meshAbsrtactFactory.h"
 
 namespace LTE
 {
@@ -10,6 +11,7 @@ namespace LTE
             virtual void SwapBuffers() = 0;
 	
             virtual renderApi *getRenderApi() = 0;
+            virtual meshAbsrtactFactory *getMeshFactory() = 0;
 
     };
 }

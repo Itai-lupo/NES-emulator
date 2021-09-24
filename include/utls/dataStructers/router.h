@@ -211,7 +211,8 @@ namespace LTE
 
                     for(auto& child: childs)
                     {
-                        child.second->itrateFrom(callback);
+                        if(child.second)
+                            child.second->itrateFrom(callback);
                     }
     
                     canRemove = true;
@@ -228,7 +229,7 @@ namespace LTE
 
                 if(!childs[token])
                 {
-                    LAUGHTALE_ENGINR_LOG_ERROR("path: " << fromRoute << " wa'snt fount, please add the route before itrating it");
+                    LAUGHTALE_ENGINR_LOG_ERROR("path: " << fromRoute << " wa'snt found, please add the route before itrating it");
                 }
                 childs[token]->itrateFrom(callback, fromRoute);
             }

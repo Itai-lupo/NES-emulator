@@ -9,7 +9,8 @@ namespace LTE
     class squreCollider: public component
     {
         private:
-            std::vector<squreCollider *> InCollisionWith;
+            std::vector<squreCollider *> InCollisionWith = std::vector<squreCollider *>(0);
+            int a = 5;
         public:
             squreCollider();
             ~squreCollider();
@@ -21,4 +22,4 @@ namespace LTE
             bool operator == (squreCollider& s);
 
     };
-} 
+}  

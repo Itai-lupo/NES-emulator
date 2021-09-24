@@ -27,7 +27,7 @@ namespace LTE
 		LAUGHTALE_ENGINR_LOG_INFO(
 			"WindowSizeCallback " + 
 			std::to_string(width) + ", " + 
-			std::to_string(height));
+			std::to_string(height) + ", " + std::to_string((windowPieceId)window));
 	}
 
 	void WindowCloseCallback(GLFWwindow* window)

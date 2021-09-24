@@ -2,12 +2,13 @@
 #include <string>
 #include "core.h"
 #include "logger.h"
+
 namespace LTE
 {
     class texture
     {
         protected:
-            const std::string& path;
+            std::string path;
             textureId id;
             uint32_t width, height;
             int channels;
@@ -15,7 +16,7 @@ namespace LTE
             texture(const std::string& path): path(path){}
             virtual ~texture() = default;
 
-            virtual void bind(uint32_t slot = 0) = 0;
+            virtual void bind() = 0;
             textureId getId(){ return id; }
     };
 }

@@ -7,6 +7,8 @@
 
 namespace LTE
 {
+    openGLVertexArray::openGLVertexArray(VertexBuffer *vb): vb(vb){}
+
     openGLVertexArray::~openGLVertexArray()
     {
         GL_CALL(glDeleteVertexArrays(1, &rendererId));
@@ -15,6 +17,7 @@ namespace LTE
     void openGLVertexArray::init()
     {
         GL_CALL(glGenVertexArrays(1, &rendererId));
+        AddBuffer(vb);
     }
 
     void openGLVertexArray::AddBuffer(VertexBuffer *vb)

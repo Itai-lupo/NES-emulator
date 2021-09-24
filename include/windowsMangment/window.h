@@ -17,8 +17,8 @@ namespace LTE
 	class window
 	{
 		private:
-			static inline void onUpdate(gameObject *eventEntity, coreEventData *sendor);
-			static inline void onWindowResize(gameObject *eventEntity, coreEventData *sendor);
+			static void onUpdate(gameObject *eventEntity, coreEventData *sendor);
+			static void onWindowResize(gameObject *eventEntity, coreEventData *sendor);
 
 		public:
 			graphicsContext *context; 

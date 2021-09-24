@@ -84,10 +84,11 @@ namespace LTE
         eventManger::eventList.itrateFrom([&](event *e){
             if(winId == 0 || e->getWindowID() == 0 || e->getWindowID() == winId)
             {
-                if(e->getWindowID() != 0){
+                if(e->getWindowID() != 0 && winId == 0){
                     sendor->windowId = e->getWindowID(); 
-                    sendor->win = windowManger::getWindow(e->getWindowID());
                 }
+
+                sendor->win = windowManger::getWindow(e->getWindowID());
                 
                 sendor->route = e->getEventRoute();
                 sendor->id = e->id;

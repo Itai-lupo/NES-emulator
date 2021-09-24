@@ -12,7 +12,6 @@ namespace LTE
 {
     squreCollider::squreCollider()
     {
-
     }
 
     squreCollider::~squreCollider()

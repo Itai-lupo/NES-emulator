@@ -12,44 +12,58 @@
 
 namespace LTE
 {
-    void mesh::setShader(const char *path)
+    void mesh::setIndexBuffer(uint32_t *indices, uint32_t count)
     {
-        app::getOsAPI()->makeContextCurrent(winId);
+        indices = indices;
+        count = count;
 
-        s = new openGLShader(path);
-        s->init();
+        if(wasInitialized) setIndexBuffer();    
     }
 
     void mesh::setVertexBuffer(float *vertexs, uint32_t size)
     {
-        app::getOsAPI()->makeContextCurrent(winId);
+        vertexs = vertexs;
+        size = size;
 
-        vb = new OpenGLVertexBuffer(vertexs, size);
-        vb->init();
+        if(wasInitialized) setVertexBuffer();    
     }
 
-    void mesh::setIndexBuffer(uint32_t *indices, uint32_t count)
-    {
-        app::getOsAPI()->makeContextCurrent(winId);
 
-        ib = new LTE::openGLIndexBuffer(indices, count);
-        ib->init();
+    void mesh::pushVertexBufferElement(const VertexBufferElement& elementToPush)
+    {
+        if(wasInitialized)
+            vb->pushElement(elementToPush);
+        else
+            VBElements.push(elementToPush);
+    }
+    void mesh::setVertexBuffer()
+    {
+        window *win = windowManger::getWindow(winId);
+        meshAbsrtactFactory *factory = win->context->getMeshFactory();
+        vb = factory->createVertexBuffer(vertexs, size);
+
+    }
+
+    void mesh::setIndexBuffer()
+    {
+        window *win = windowManger::getWindow(winId);
+        meshAbsrtactFactory *factory = win->context->getMeshFactory();
+        ib = factory->createIndexBuffer(indices, count);
     }
 
     void mesh::setVertexArray()
     {        
-        app::getOsAPI()->makeContextCurrent(winId);
+        if(vb == nullptr || !wasInitialized) return;
+        
+        window *win = windowManger::getWindow(winId);
+        meshAbsrtactFactory *factory = win->context->getMeshFactory();
+        va = factory->createVertexArray(vb);
 
-        va = new openGLVertexArray();
-        va->init();
-        va->AddBuffer(vb);
     }
 
     void mesh::bind(std::vector<uint32_t> textureSlots)
     {
-        setTransform(entityManger::getEntityById(parentId)->getTransform());
         va->bind();
-        s->bind();
         ib->bind();
     }
 
@@ -58,36 +72,24 @@ namespace LTE
         return vb;
     }
 
-    shader *mesh::getShader()
-    {
-        return s;        
-    }
-
     uint32_t mesh::getCount()
     {
         return ib->getCount();
     }
 
-    void mesh::setTransform(glm::mat4 trans)
+    void mesh::init(gameObject *parent)
     {
-        app::getOsAPI()->makeContextCurrent(winId);
+        window *win = windowManger::getWindow(winId);
+        meshAbsrtactFactory *factory = win->context->getMeshFactory();
+        vb = factory->createVertexBuffer(vertexs, size);
+        ib = factory->createIndexBuffer(indices, count);
+        
+        while (!VBElements.empty())
+        {
+            vb->pushElement(VBElements.front());
+            VBElements.pop();
+        }
 
-        s->bind();
-        s->setUniformMat4f("transform", trans);
-        this->trans = trans; 
-    }
-
-
-    void mesh::setTransform(transform *trans)
-    {
-        this->trans =   glm::translate(glm::mat4(1.0f), trans->getPostion()) * 
-                            glm::rotate(glm::mat4(1.0f), trans->getRotation().x, { 1.0f, 0.0f, 0.0f}) *
-                            glm::rotate(glm::mat4(1.0f), trans->getRotation().y, { 0.0f, 1.0f, 0.0f}) *
-                            glm::rotate(glm::mat4(1.0f), trans->getRotation().z, { 0.0f, 0.0f, 1.0f}) *
-                            glm::scale(glm::mat4(1.0f), trans->getScale());
-                            
-        app::getOsAPI()->makeContextCurrent(winId);
-        s->bind();
-        s->setUniformMat4f("transform", this->trans);
+        va = factory->createVertexArray(vb);
     }
 }

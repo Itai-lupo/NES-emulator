@@ -40,7 +40,7 @@ namespace LTE
         window *newWindow = buildWindow->build();
 
         windows.push_back(newWindow);
-                
+        newWindow->init();
         eventManger::startBuildingEvent()->
                 setEventRoute("Window close/close window " + newWindow->Title + std::to_string(newWindow->id))->
                 setEventCallback(onWindowClose)->
@@ -61,7 +61,7 @@ namespace LTE
         if(temp != windows.end())
             return *temp;
         
-        LAUGHTALE_ENGINR_LOG_ERROR("window wasn't found")
+        LAUGHTALE_ENGINR_LOG_ERROR("window " << windowId << " wasn't found")
         return NULL;
     }
 

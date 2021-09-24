@@ -24,13 +24,13 @@ namespace LTE
             VertexBufferLayout()
                 : stride(0){}
 
-            inline void push(VertexBufferElement ElementToPush)
+            inline void push(const VertexBufferElement& ElementToPush)
             {
                 stride += ElementToPush.sizeOfType * ElementToPush.count;
                 elements.push_back(ElementToPush);
             }
 
-            inline const std::vector<VertexBufferElement> getElements() { return elements; }
+            inline const std::vector<VertexBufferElement>& getElements() { return elements; }
             inline unsigned int GetStride() { return stride; };
     };
 
@@ -55,7 +55,7 @@ namespace LTE
 
             inline const std::vector<VertexBufferElement> getElements() { return VBLayout->getElements(); }
             inline unsigned int GetStride() { return VBLayout->GetStride(); };
-            inline void pushElement(VertexBufferElement ElementToPush) 
+            inline void pushElement(const VertexBufferElement& ElementToPush) 
             {  
                 VBLayout->push(ElementToPush); 
             }

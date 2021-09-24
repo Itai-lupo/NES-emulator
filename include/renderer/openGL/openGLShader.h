@@ -1,5 +1,5 @@
 #pragma once 
-
+#include "openGLBase.h"
 #include "shader.h"
 #include <unordered_map>
 #include <glm/glm.hpp>
@@ -13,7 +13,7 @@ namespace LTE
         std::string FragmentSource;
     };
 
-    class openGLShader : public shader
+    class openGLShader : public shader, public openGLBase
     {
         private:
                 ShaderProgramSource source;

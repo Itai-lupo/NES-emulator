@@ -10,6 +10,16 @@ namespace LTE
 {
     openGLTexture::openGLTexture(const std::string& path): texture(path)
     {
+        
+    }
+
+    openGLTexture::~openGLTexture()
+    {
+        glDeleteTextures(1, &id);
+    }
+
+    void openGLTexture::init()
+    {
         stbi_set_flip_vertically_on_load(1);
         uint8_t *buffer = stbi_load(path.c_str(), (int*)&width, (int*)&height, &channels, 4);
 
@@ -27,13 +37,14 @@ namespace LTE
             stbi_image_free(buffer);
     }
 
-    openGLTexture::~openGLTexture()
-    {
-        glDeleteTextures(1, &id);
-    }
 
-    void openGLTexture::bind(uint32_t slot)
+    void openGLTexture::bind()
     {
         GL_CALL(glBindTexture(GL_TEXTURE_2D, id));
+    }
+    
+    void openGLTexture::unbind()
+    {
+        GL_CALL(glBindTexture(GL_TEXTURE_2D, 0));
     }
 }

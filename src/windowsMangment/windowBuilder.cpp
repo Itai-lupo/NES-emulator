@@ -20,7 +20,6 @@ namespace LTE
         product->id = app::getOSAbstractFactory()->createWindow(product);
 
         product->context = new openGLContext(product->id);
-        product->context->Init();
         product->sceneCollider = new colliderSystem2D();
 
         if(!product->activeScene)
@@ -37,7 +36,6 @@ namespace LTE
             product->activeScene->objects = new std::vector<gameObject*>();
         }
 
-        product->init();
         return product;
     }
 
