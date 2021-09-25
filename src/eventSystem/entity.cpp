@@ -65,8 +65,8 @@ namespace LTE
             if(entitys[i]->getId()  == id)
             {
                 gameObject *e = entitys[i]; 
-                e->end();
                 entitys.erase(entitys.begin() + i);
+                e->end();
                 delete e;
             }
         }

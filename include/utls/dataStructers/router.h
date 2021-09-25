@@ -169,14 +169,18 @@ namespace LTE
 
                 for(auto value: values)
                 { 
-                    delete value.second;
+                    if(value.second)
+                        delete value.second;
                 }
                 values.clear();
                 
                 for(auto& child: childs)
                 {
-                    child.second->clearAndDelete(); 
-                    delete child.second;
+                    if(child.second)
+                    {
+                        child.second->clearAndDelete(); 
+                        delete child.second;
+                    }
                 }
                 childs.clear();
 
@@ -230,6 +234,7 @@ namespace LTE
                 if(!childs[token])
                 {
                     LAUGHTALE_ENGINR_LOG_ERROR("path: " << fromRoute << " wa'snt found, please add the route before itrating it");
+                    return;
                 }
                 childs[token]->itrateFrom(callback, fromRoute);
             }
