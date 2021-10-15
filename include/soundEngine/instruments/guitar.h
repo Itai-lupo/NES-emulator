@@ -11,26 +11,23 @@
 
 namespace LTE
 {
-    namespace apoSequencerAndRythemManer
+    enum chords
     {
-        enum chords
-        {
-            openChord
-        };
+        openChord
+    };
 
-        class guitarString;
+    class guitarString;
 
-        class guitar: public sequencer
-        {
-            private:
-                std::vector<guitarString *> *strings;
-            public:
-                guitar();
+    class guitar: public sequencer
+    {
+        private:
+            std::vector<guitarString *> *strings;
+        public:
+            guitar();
 
-                virtual void PlayBeat(double currentTime, char currentBeat, note currentNote) override;
-                void strummingDown(chords chord = chords::openChord );
-                void strummingUp(chords chord = chords::openChord );
-                
-};
-    }
+            virtual void PlayBeat(double currentTime, char currentBeat, note currentNote) override;
+            void strummingDown(chords chord = chords::openChord );
+            void strummingUp(chords chord = chords::openChord );
+            
+    };
 }

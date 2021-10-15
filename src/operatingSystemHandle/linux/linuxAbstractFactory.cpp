@@ -8,6 +8,10 @@
 #include "linuxAbstractFactory.h"
 #include "linuxAPI.h"
 #include "window.h"
+
+#include "linuxInputSoundDevice.h"
+#include "linuxOutputSoundDevice.h"
+
 #include <string>
 
 namespace LTE 
@@ -129,6 +133,17 @@ namespace LTE
 		windowToCreate->id = (windowPieceId)winRef;
 		return windowToCreate->id;
 	}
+
+	soundDevice *linuxAbstractFactory::createInputSoundDevice()
+	{
+		return new linuxInputSoundDevice();
+	}
+
+	soundDevice *linuxAbstractFactory::createOutputSoundDevice()
+	{
+		return new linuxOutputSoundDevice();
+	}
+
 }
 
 #endif

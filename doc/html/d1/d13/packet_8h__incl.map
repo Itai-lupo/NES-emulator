@@ -1,5 +1,5 @@
-<map id="headers/networkManager/packetTypes/packet.h" name="headers/networkManager/packetTypes/packet.h">
-<area shape="rect" id="node1" title=" " alt="" coords="165,5,333,47"/>
+<map id="include/networkManager/packetTypes/packet.h" name="include/networkManager/packetTypes/packet.h">
+<area shape="rect" id="node1" title=" " alt="" coords="168,5,331,47"/>
 <area shape="rect" id="node2" href="$d5/dc4/core_8h.html" title=" " alt="" coords="7,95,65,121"/>
 <area shape="rect" id="node4" title=" " alt="" coords="90,95,145,121"/>
 <area shape="rect" id="node5" title=" " alt="" coords="169,95,241,121"/>

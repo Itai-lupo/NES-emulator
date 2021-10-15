@@ -1,4 +1,4 @@
-<map id="headers/renderer/camera/orthographicCameraControler.h" name="headers/renderer/camera/orthographicCameraControler.h">
+<map id="include/renderer/camera/orthographicCameraControler.h" name="include/renderer/camera/orthographicCameraControler.h">
 <area shape="rect" id="node1" title=" " alt="" coords="194,5,400,47"/>
 <area shape="rect" id="node2" href="$d5/dc4/core_8h.html" title=" " alt="" coords="282,393,341,420"/>
 <area shape="rect" id="node4" href="$dd/d4f/core_camera_controler_8h.html" title=" " alt="" coords="219,95,375,121"/>

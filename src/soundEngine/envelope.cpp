@@ -3,6 +3,8 @@
 #include <glm/glm.hpp>
 #include <glm/gtc/constants.hpp>
 #include <algorithm>
+#include "soundEngine.h"
+#include "soundSynthesizer.h"
 
 namespace LTE
 {
@@ -69,6 +71,18 @@ namespace LTE
         return data.micAmp / (pow(2, (2 * 8) - 1) - 1);
     }
 
+
+    void envelope::init(gameObject *parent) 
+    {
+        id = soundSynthesizer::addEnvelope(this);
+    }
+    
+    void envelope::end() 
+    {
+        soundSynthesizer::removeEnvelope(id);
+    }
+    
+
     envelope *envelope::setSondWaveType(sondWaves mod)
     {
         switch (mod)
@@ -109,16 +123,16 @@ namespace LTE
         return this;
     }
 
-    void envelope::noteOn(double time)
+    void envelope::noteOn()
     {
         trigerdOnce = true;
-        trigerOnTime = time;
+        trigerOnTime = soundEngine::getTime();
         isNoteOn = true;
     }
 
-    void envelope::noteOff(double time)
+    void envelope::noteOff()
     {
-        trigerOffTime = time;
+        trigerOffTime = soundEngine::getTime();
         isNoteOn = false;
     }
 
@@ -130,7 +144,6 @@ namespace LTE
         double amp = getEnvelopeAmpMultiplayer(time);
 
         amp = ( amp > 0.0001) * amp;
-                LAUGHTALE_ENGINR_LOG_INFO("A");
 
         sondSampelData sampelData(time, freq, micAmp);
         return amp * waveSampelCalculator(sampelData) * masterVolume;

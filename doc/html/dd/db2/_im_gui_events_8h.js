@@ -9,6 +9,6 @@ var _im_gui_events_8h =
     [ "ImGuiMouseMoved", "dd/db2/_im_gui_events_8h.html#a52dba6bb3ab9ee8533afc87642b485bc", null ],
     [ "ImGuiMouseScrolled", "dd/db2/_im_gui_events_8h.html#ab6b2d2c2a7d71b40fe4e0bfe4c6958e6", null ],
     [ "ImGuiWindowResize", "dd/db2/_im_gui_events_8h.html#a756a355af550b9c5cb07d30c6383d694", null ],
-    [ "initImGui", "dd/db2/_im_gui_events_8h.html#a19186c2cdd96cf1fdc910a79c71a1547", null ],
+    [ "initImGui", "dd/db2/_im_gui_events_8h.html#abc483098a80a0f09e482314a674cd430", null ],
     [ "onImGuiUpdate", "dd/db2/_im_gui_events_8h.html#afea151dc9fd2a8f71e4bbfbc602578fb", null ]
 ];

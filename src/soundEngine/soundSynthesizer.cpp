@@ -55,24 +55,4 @@ namespace LTE
             [=](envelope *env) -> bool { return env->getId() == id; }
         ), envelopes->end());
     }
-
-    void soundSynthesizer::noteOn(apoEnvelopeId id)
-    {
-        double time = soundEngine::getTime();
-        (*std::find_if(
-            envelopes->begin(),
-            envelopes->end(),
-            [=](envelope *env) -> bool { return env->getId() == id; }
-        ))->noteOn(time);
-    }
-
-    void soundSynthesizer::noteOff(apoEnvelopeId id)
-    {
-        double time = soundEngine::getTime();
-        (*std::find_if(
-            envelopes->begin(),
-            envelopes->end(),
-            [=](envelope *env) -> bool { return env->getId() == id; }
-        ))->noteOff(time);
-    }
 }

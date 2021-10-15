@@ -1,4 +1,5 @@
 <map id="LTE::soundSynthesizer::removeEnvelope" name="LTE::soundSynthesizer::removeEnvelope">
-<area shape="rect" id="node1" title=" " alt="" coords="260,13,419,54"/>
-<area shape="rect" id="node2" href="$d5/d40/class_l_t_e_1_1apo_sequencer_and_rythem_maner_1_1sound_files_player.html#a57f1f3c790b7dedb4c26896d077366ab" title=" " alt="" coords="5,5,212,61"/>
+<area shape="rect" id="node1" title=" " alt="" coords="208,27,367,69"/>
+<area shape="rect" id="node2" href="$d2/d04/class_l_t_e_1_1envelope.html#ae8ec82c24b5c99bfbecf818516e78ed8" title=" " alt="" coords="15,5,150,32"/>
+<area shape="rect" id="node3" href="$d4/d0c/class_l_t_e_1_1sound_files_player.html#a71c98e94641cee7c47f3e916e504029e" title=" " alt="" coords="5,57,160,98"/>
 </map>

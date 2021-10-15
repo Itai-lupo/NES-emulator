@@ -1,5 +1,5 @@
-<map id="headers/collider/squreCollider.h" name="headers/collider/squreCollider.h">
-<area shape="rect" id="node1" title=" " alt="" coords="409,5,612,32"/>
+<map id="include/collider/squreCollider.h" name="include/collider/squreCollider.h">
+<area shape="rect" id="node1" title=" " alt="" coords="411,5,610,32"/>
 <area shape="rect" id="node2" href="$d6/dcf/component_8h.html" title=" " alt="" coords="414,229,511,256"/>
 <area shape="rect" id="node4" title=" " alt="" coords="413,304,472,331"/>
 <area shape="rect" id="node5" href="$d5/dc4/core_8h.html" title=" " alt="" coords="169,379,228,405"/>

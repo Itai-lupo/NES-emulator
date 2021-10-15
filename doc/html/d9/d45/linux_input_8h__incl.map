@@ -1,7 +1,7 @@
-<map id="headers/windowsMangment/operatingSystemHandle/linux/linuxInput.h" name="headers/windowsMangment/operatingSystemHandle/linux/linuxInput.h">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,189,61"/>
-<area shape="rect" id="node2" title=" " alt="" coords="24,109,77,136"/>
-<area shape="rect" id="node3" href="$d7/d38/core_input_8h.html" title=" " alt="" coords="102,109,189,136"/>
-<area shape="rect" id="node4" href="$d5/dc4/core_8h.html" title=" " alt="" coords="116,184,175,211"/>
-<area shape="rect" id="node5" title=" " alt="" coords="115,259,176,285"/>
+<map id="include/operatingSystemHandle/linux/linuxInput.h" name="include/operatingSystemHandle/linux/linuxInput.h">
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,212,47"/>
+<area shape="rect" id="node2" title=" " alt="" coords="35,95,89,121"/>
+<area shape="rect" id="node3" href="$d7/d38/core_input_8h.html" title=" " alt="" coords="113,95,200,121"/>
+<area shape="rect" id="node4" href="$d5/dc4/core_8h.html" title=" " alt="" coords="127,169,186,196"/>
+<area shape="rect" id="node5" title=" " alt="" coords="126,244,187,271"/>
 </map>

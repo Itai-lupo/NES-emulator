@@ -27,13 +27,15 @@ namespace LTE
         logger::init(pathToLogs, projectName);
         eventManger::init();
         entityManger::init();
+
+        osFactory = OSAbstractFactory::init();
+        os = osFactory->createOsApi();
+        
         windowManger::init();
         soundEngine::init();
         materialsManger::init();
         GMNM::connectionsManager::init();
 
-        osFactory = OSAbstractFactory::init();
-        os = osFactory->createOsApi();
     }
 
     void app::close()

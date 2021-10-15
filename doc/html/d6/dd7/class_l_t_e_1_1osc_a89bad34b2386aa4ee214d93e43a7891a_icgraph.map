@@ -1,13 +1,13 @@
 <map id="LTE::osc::w" name="LTE::osc::w">
-<area shape="rect" id="node1" title=" " alt="" coords="812,289,905,316"/>
-<area shape="rect" id="node2" href="$d6/dd7/class_l_t_e_1_1osc.html#a27064caf917780a5c1dd09e66068683f" title=" " alt="" coords="301,289,480,316"/>
-<area shape="rect" id="node4" href="$d6/dd7/class_l_t_e_1_1osc.html#a820a6b43d48a95b1bf49a96950a2fa9f" title=" " alt="" coords="313,340,468,367"/>
-<area shape="rect" id="node5" href="$df/d3b/class_l_t_e_1_1apo_sequencer_and_rythem_maner_1_1bell.html#affa912c8312c0ca2aed48bac959734b5" title=" " alt="" coords="287,391,494,433"/>
-<area shape="rect" id="node6" href="$d4/d06/class_l_t_e_1_1harmonica.html#a428fd4c80327378907dcf979a0aa38b9" title=" " alt="" coords="553,441,764,468"/>
-<area shape="rect" id="node7" href="$d6/dd7/class_l_t_e_1_1osc.html#abc8a9ccbd1c023231fdc204d944c6ade" title=" " alt="" coords="609,239,709,265"/>
-<area shape="rect" id="node10" href="$d6/dd7/class_l_t_e_1_1osc.html#a07cb71c613c94c9263f24ed7f1cf6f46" title=" " alt="" coords="333,5,448,32"/>
-<area shape="rect" id="node11" href="$d6/dd7/class_l_t_e_1_1osc.html#ad315956fa8aa8d6fdb9ac05a9ba97492" title=" " alt="" coords="325,56,457,83"/>
-<area shape="rect" id="node3" href="$d2/d04/class_l_t_e_1_1envelope.html#af603dc946e544464fcd53b5c7b3375d7" title=" " alt="" coords="5,239,228,265"/>
-<area shape="rect" id="node8" href="$d2/d34/class_l_t_e_1_1apo_sequencer_and_rythem_maner_1_1drum_kick.html#a896bc2bbf63a47043c82c7bacff6531d" title=" " alt="" coords="281,173,500,214"/>
-<area shape="rect" id="node9" href="$d4/dab/class_l_t_e_1_1apo_sequencer_and_rythem_maner_1_1guitar_string.html#a23e8ac72ddb59f98f7ebd4bc5e094729" title=" " alt="" coords="276,107,505,149"/>
+<area shape="rect" id="node1" title=" " alt="" coords="789,275,883,301"/>
+<area shape="rect" id="node2" href="$d6/dd7/class_l_t_e_1_1osc.html#a27064caf917780a5c1dd09e66068683f" title=" " alt="" coords="290,275,469,301"/>
+<area shape="rect" id="node4" href="$d6/dd7/class_l_t_e_1_1osc.html#a820a6b43d48a95b1bf49a96950a2fa9f" title=" " alt="" coords="302,325,457,352"/>
+<area shape="rect" id="node5" href="$d9/dc5/class_l_t_e_1_1bell.html#a1bd6ff2970456359df416c74581ea850" title=" " alt="" coords="294,376,465,403"/>
+<area shape="rect" id="node6" href="$d4/d06/class_l_t_e_1_1harmonica.html#a428fd4c80327378907dcf979a0aa38b9" title=" " alt="" coords="531,427,741,453"/>
+<area shape="rect" id="node7" href="$d6/dd7/class_l_t_e_1_1osc.html#abc8a9ccbd1c023231fdc204d944c6ade" title=" " alt="" coords="586,224,686,251"/>
+<area shape="rect" id="node10" href="$d6/dd7/class_l_t_e_1_1osc.html#a07cb71c613c94c9263f24ed7f1cf6f46" title=" " alt="" coords="322,5,437,32"/>
+<area shape="rect" id="node11" href="$d6/dd7/class_l_t_e_1_1osc.html#ad315956fa8aa8d6fdb9ac05a9ba97492" title=" " alt="" coords="313,56,445,83"/>
+<area shape="rect" id="node3" href="$d2/d04/class_l_t_e_1_1envelope.html#af603dc946e544464fcd53b5c7b3375d7" title=" " alt="" coords="5,224,228,251"/>
+<area shape="rect" id="node8" href="$d7/d80/class_l_t_e_1_1drum_kick.html#a739a3c17613cef96df20275fd42c5fca" title=" " alt="" coords="276,173,483,200"/>
+<area shape="rect" id="node9" href="$d4/d73/class_l_t_e_1_1guitar_string.html#a8ee886c65422ff38ded0e4dfd2486a1b" title=" " alt="" coords="315,107,443,149"/>
 </map>

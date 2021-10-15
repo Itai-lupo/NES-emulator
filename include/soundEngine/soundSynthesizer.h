@@ -18,7 +18,5 @@ namespace LTE
             static double genrateSampel(double time, short micAmp);
             static apoEnvelopeId addEnvelope(envelope *toAdd);
             static void removeEnvelope(apoEnvelopeId id);
-            static void noteOn(apoEnvelopeId id);
-            static void noteOff(apoEnvelopeId id);
     };
 }

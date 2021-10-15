@@ -38,10 +38,10 @@ namespace LTE
         onUpdateData *sendorData = new onUpdateData(startTime, startTime, 0);
 
         sendorData->win = windowManger::getWindow(windowId);
+        sendorData->windowId = windowId;
+        sendorData->route = "window render/" + sendorData->win->Title + "/";
 
         eventManger::addCoustemEventsRoute("window render/" + sendorData->win->Title + "/");
-        sendorData->route = "window render/" + sendorData->win->Title + "/";
-        sendorData->windowId = windowId;
         
         while (!app::isRuning){}
         
@@ -51,7 +51,6 @@ namespace LTE
             sendorData->DeltaTime = now - sendorData->currentTime;
             sendorData->currentTime = now;
             
-            app::getOsAPI()->makeContextCurrent(windowId);
             meshFactory->build();
             getRenderApi()->SetClearColor({0.0f, 0.0f, 1.0f, 1.0f});
             getRenderApi()->Clear();

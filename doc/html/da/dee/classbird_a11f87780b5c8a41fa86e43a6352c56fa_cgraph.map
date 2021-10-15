@@ -1,7 +1,7 @@
 <map id="bird::movePlayer" name="bird::movePlayer">
 <area shape="rect" id="node1" title=" " alt="" coords="5,81,125,108"/>
 <area shape="rect" id="node2" href="$d6/d08/class_l_t_e_1_1transform.html#a5a6f72f53b39bacd9cc960b6e7eec3af" title=" " alt="" coords="176,5,388,32"/>
-<area shape="rect" id="node3" href="$d2/d49/class_l_t_e_1_1game_object.html#a961a8c471148013b767014e0ecaf722e" title=" " alt="" coords="173,56,391,83"/>
-<area shape="rect" id="node4" href="$d2/d49/class_l_t_e_1_1game_object.html#a01ac769e5731f9c8e65952743d038539" title=" " alt="" coords="177,107,387,133"/>
+<area shape="rect" id="node3" href="$d2/d49/class_l_t_e_1_1game_object.html#af885dbd7e72e830ae61ab37b6d52b8b6" title=" " alt="" coords="173,56,391,83"/>
+<area shape="rect" id="node4" href="$d2/d49/class_l_t_e_1_1game_object.html#a568b30b81a33465e74c3c39663d1b5c0" title=" " alt="" coords="177,107,387,133"/>
 <area shape="rect" id="node5" href="$d6/d08/class_l_t_e_1_1transform.html#a88ec31c683a58a31514101f7cd31dd67" title=" " alt="" coords="186,157,378,184"/>
 </map>

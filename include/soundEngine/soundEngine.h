@@ -1,5 +1,5 @@
 #include <thread>
-#include "soundApi.h"
+#include "soundDevice.h"
 #include "core.h"
 #include "envelope.h"
 
@@ -8,8 +8,8 @@ namespace LTE
     class soundEngine
     {
         private:
-            static soundApi *speaker;
-            static soundApi *microphone;
+            static soundDevice *speaker;
+            static soundDevice *microphone;
             static std::thread *soundThread;
             static double time;
 

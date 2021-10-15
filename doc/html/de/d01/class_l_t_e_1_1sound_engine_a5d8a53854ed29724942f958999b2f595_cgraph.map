@@ -1,4 +1,7 @@
 <map id="LTE::soundEngine::init" name="LTE::soundEngine::init">
-<area shape="rect" id="node1" title=" " alt="" coords="5,13,160,39"/>
-<area shape="rect" id="node2" href="$d2/dff/class_l_t_e_1_1sound_synthesizer.html#a569c46f378859a3364d269a6b49ecfd9" title=" " alt="" coords="208,5,367,47"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,107,160,134"/>
+<area shape="rect" id="node2" href="$db/d1c/class_l_t_e_1_1_o_s_abstract_factory.html#aea84994d9c1e500db18be23213da9c97" title=" " alt="" coords="228,5,401,47"/>
+<area shape="rect" id="node3" href="$db/d1c/class_l_t_e_1_1_o_s_abstract_factory.html#a1b75dcf8cb585636a03d088e0e571fc4" title=" " alt="" coords="223,71,406,112"/>
+<area shape="rect" id="node4" href="$d0/d13/class_l_t_e_1_1app.html#a01ae35f37a9fb2f41dd19205e324ad90" title=" " alt="" coords="208,137,421,163"/>
+<area shape="rect" id="node5" href="$d2/dff/class_l_t_e_1_1sound_synthesizer.html#a569c46f378859a3364d269a6b49ecfd9" title=" " alt="" coords="235,188,394,229"/>
 </map>

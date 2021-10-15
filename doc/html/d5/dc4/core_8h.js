@@ -11,8 +11,8 @@ var core_8h =
     [ "cameraControler", "d5/dc4/core_8h.html#a5571205d38aef33eff89fe01be082f51", [
       [ "orthographicCameraControlerType", "d5/dc4/core_8h.html#a5571205d38aef33eff89fe01be082f51a542be6a955f67c977229578eee455fc7", null ]
     ] ],
-    [ "renderAPI", "d5/dc4/core_8h.html#a9d6d15e418e3a8d3b1d1360b615a375d", [
-      [ "OpenGL", "d5/dc4/core_8h.html#a9d6d15e418e3a8d3b1d1360b615a375da48cb9daa41ed1838d1f352a141725d37", null ]
+    [ "renderAPIType", "d5/dc4/core_8h.html#a1549406e7962ca62439f148b6bec5d60", [
+      [ "OpenGL", "d5/dc4/core_8h.html#a1549406e7962ca62439f148b6bec5d60a48cb9daa41ed1838d1f352a141725d37", null ]
     ] ],
     [ "sondWaves", "d5/dc4/core_8h.html#afdee5b51c7e400b6c32b22c2c909d2b0", [
       [ "mute", "d5/dc4/core_8h.html#afdee5b51c7e400b6c32b22c2c909d2b0adedc81d2a55a3b6d30ccf5a742c607e7", null ],

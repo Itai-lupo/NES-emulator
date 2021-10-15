@@ -40,10 +40,10 @@ class pilar: public LTE::component
 
         virtual void init(LTE::gameObject *pilar) override
         {
-            LTE::eventManger::addCoustemEventsRoute("App update/move pilar/");
+            LTE::eventManger::addCoustemEventsRoute("window render/flappyBird/move pilar/");
 
             LTE::eventManger::startBuildingEvent()->
-                setEventRoute("App update/move pilar/" + pilar->getName() + " " + std::to_string(parentId))->
+                setEventRoute("window render/flappyBird/move pilar/" + pilar->getName() + " " + std::to_string(parentId))->
                 setEventCallback(onUpdate)->
                 setEntityID(parentId)->
                 setWindowId(winId)->add();
@@ -83,7 +83,7 @@ class bird: public LTE::component
         virtual void init(LTE::gameObject *player) override
         {
             LTE::eventManger::startBuildingEvent()->
-                setEventRoute("App update/move bird")->
+                setEventRoute("window render/flappyBird/move bird")->
                 setEventCallback(bird::onUpdate)->
                 setWindowId(winId)->
                 setEntityID(parentId)->add();
@@ -159,11 +159,12 @@ class bird: public LTE::component
         static void onKey(LTE::gameObject *player, LTE::coreEventData *sendor)
         {
             LTE::KeyData *eventData = dynamic_cast<LTE::KeyData *>(sendor);
-
+            player->getComponent<LTE::envelope>()->noteOn();
             player->getComponent<bird>()->speed = 1.25f;
             player->getComponent<LTE::meshRenderer>()->setShader(( player->getComponent<bird>()->star? "res/flappyBird/bird.shader": "res/flappyBird/Basic.shader"));
             player->getComponent<LTE::material>()->setTexture(( player->getComponent<bird>()->star ? player->getComponent<bird>()->logoTex : player->getComponent<bird>()->starTex));
             player->getComponent<bird>()->star = !player->getComponent<bird>()->star;
+            player->getComponent<LTE::envelope>()->noteOff();
         }
 };
 
@@ -270,6 +271,9 @@ class pilarDestroyer: public LTE::component
 
         static void onCollide(LTE::gameObject *summener, LTE::coreEventData *sendor)
         {
+            summener->getComponent<LTE::envelope>()->noteOn();
+            summener->getComponent<LTE::envelope>()->noteOff();
+
             LTE::colliderEventData *sendorData = static_cast<LTE::colliderEventData*>(sendor);
             LTE::entityManger::removeEntityById(sendorData->target->getId());
         }
@@ -358,6 +362,14 @@ class flappyBird : public ::testing::Test
                             pushVertexBufferElement({LT_FLOAT, 3, false, 4})->
                             pushVertexBufferElement({LT_FLOAT, 2, false, 4});
                         }))->
+                    addComponent((new LTE::envelope())
+                        ->setFrequency(440.0f)->
+                        setSondWaveType(LTE::analogSqure)->
+                        setAttackTime(0.001)->
+                        setDecayTime(0.5)->
+                        setReleaseTime(0.1)->
+                        setStartAmplitude(1.0)->
+                        setSustainAmplitude(0.0f))->
                     addComponent(new LTE::material("res/textures/Logo.png", glm::vec4({0.0f, 0.0f, 0.0f, 1.0f})))->
                     addComponent(new LTE::squreCollider())->
                     addComponent(new bird(debugInfoWindowId));
@@ -415,6 +427,14 @@ class flappyBird : public ::testing::Test
             LTE::entityManger::addEntity([=, this](LTE::gameObject::gameObjectBuilder *builder){ 
                 builder->
                     setObjectName("pilar destroyer")->
+                    addComponent((new LTE::envelope())
+                        ->setFrequency(500.0f)->
+                        setSondWaveType(LTE::sin)->
+                        setAttackTime(0.001)->
+                        setDecayTime(0.3)->
+                        setReleaseTime(0.1)->
+                        setStartAmplitude(1.0)->
+                        setSustainAmplitude(0.0f))->
                     setObjectTransform({{ -1.7f, 0.0f, 1.0f}, {0.0f, 0.0f, 0.0f}, { 0.1f, 2.0f, 1.0f}})->
                     setWindowId(gameWindowId)->
                     addComponent(new LTE::squreCollider())->
@@ -439,5 +459,4 @@ TEST_F(flappyBird, testGames)
 {
     std::this_thread::sleep_for(std::chrono::milliseconds(500));
     LTE::app::run();
-
 }

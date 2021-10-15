@@ -1,7 +1,5 @@
 <map id="LTE::shader::bind" name="LTE::shader::bind">
-<area shape="rect" id="node1" title=" " alt="" coords="585,56,711,83"/>
-<area shape="rect" id="node2" href="$dc/dda/class_l_t_e_1_1material.html#aad0af3b585b247fcaae587620497b9dc" title=" " alt="" coords="386,5,518,32"/>
-<area shape="rect" id="node3" href="$d0/d6c/class_l_t_e_1_1mesh.html#aacf2df42b2bd3100dca861a39dcf6e22" title=" " alt="" coords="200,81,319,108"/>
-<area shape="rect" id="node5" href="$d0/d6c/class_l_t_e_1_1mesh.html#a329b7ef6a73e1ccf3f210699c41ca01f" title=" " alt="" coords="367,107,537,133"/>
-<area shape="rect" id="node4" href="$d2/df6/class_l_t_e_1_1mesh_renderer.html#a9dd36eaefbaa68f5fc6737d6e21d6c64" title=" " alt="" coords="5,74,152,115"/>
+<area shape="rect" id="node1" title=" " alt="" coords="200,35,325,61"/>
+<area shape="rect" id="node2" href="$dc/dda/class_l_t_e_1_1material.html#aad0af3b585b247fcaae587620497b9dc" title=" " alt="" coords="13,5,145,32"/>
+<area shape="rect" id="node3" href="$d2/df6/class_l_t_e_1_1mesh_renderer.html#a9dd36eaefbaa68f5fc6737d6e21d6c64" title=" " alt="" coords="5,57,152,98"/>
 </map>

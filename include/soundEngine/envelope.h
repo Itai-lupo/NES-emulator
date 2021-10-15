@@ -3,6 +3,8 @@
 #include "logger.h"
 #include <functional>
 #include <string>
+#include "component.h"
+
 
 namespace LTE
 {
@@ -46,7 +48,7 @@ namespace LTE
             static double speaker(sondSampelData data);
     };
 
-    class envelope
+    class envelope: public component
     {
         private:
             apoEnvelopeId id;
@@ -56,7 +58,7 @@ namespace LTE
         protected:
             double attackTime;
             double decayTime;
-            double sustainAmplitude;
+            double sustainAmplitude = 1.0;
             double releaseTime;
             double startAmplitude = 1.0;
             double masterVolume = 1.0;
@@ -73,6 +75,10 @@ namespace LTE
 
 
         public:
+            virtual void init(gameObject *parent) override;
+            virtual void end() override;
+
+
             void setId(apoEnvelopeId id){ this->id = id; }
             apoEnvelopeId getId() { return id; }
 
@@ -85,8 +91,8 @@ namespace LTE
             virtual envelope *setFrequency(double freq){ this->freq = freq; return this; }
             virtual envelope *setSondWaveType(sondWaves mod);
 
-            virtual void noteOn(double time);
-            virtual void noteOff(double time);
+            virtual void noteOn();
+            virtual void noteOff();
             virtual double getSampelAmp(double time, int16_t micAmp);
             double getEnvelopeAmpMultiplayer(double time);
             virtual bool isActive(double time)

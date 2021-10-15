@@ -29,7 +29,10 @@ var NAVTREE =
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [
         [ "All", "namespacemembers.html", null ],
-        [ "Functions", "namespacemembers_func.html", null ]
+        [ "Functions", "namespacemembers_func.html", null ],
+        [ "Typedefs", "namespacemembers_type.html", null ],
+        [ "Enumerations", "namespacemembers_enum.html", null ],
+        [ "Enumerator", "namespacemembers_eval.html", null ]
       ] ]
     ] ],
     [ "Classes", "annotated.html", [
@@ -37,8 +40,8 @@ var NAVTREE =
       [ "Class Index", "classes.html", null ],
       [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
       [ "Class Members", "functions.html", [
-        [ "All", "functions.html", null ],
-        [ "Functions", "functions_func.html", null ],
+        [ "All", "functions.html", "functions_dup" ],
+        [ "Functions", "functions_func.html", "functions_func" ],
         [ "Variables", "functions_vars.html", null ],
         [ "Related Functions", "functions_rela.html", null ]
       ] ]
@@ -57,7 +60,14 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"annotated.html"
+"annotated.html",
+"d2/d04/class_l_t_e_1_1envelope.html#a1ad5d7a5a37df187614cdc2cb747824a",
+"d4/d38/class_l_t_e_1_1window.html#a8e5dcaa5ea3a4910dbe6b17e1f03e44e",
+"d6/da3/struct_l_t_e_1_1mouse_move_data.html#a0830d6fd92cecd36ac44861b6ee25c71",
+"d8/d92/class_l_t_e_1_1linux_output_sound_device.html#a1f65c2ca030db3105c8e6e6aff58c1a7",
+"db/d56/class_l_t_e_1_1sequencer.html#af925e90b5a7d6e6d62eda124528d82d6",
+"dc/db8/linux_sound_device_8h.html",
+"dir_f3d6b281460f6665f62bcb36e59bfefd.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

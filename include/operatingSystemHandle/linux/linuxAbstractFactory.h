@@ -19,5 +19,8 @@ namespace LTE {
 
 			virtual osAPI *createOsApi() override;
 			virtual windowPieceId createWindow(window *windowToCreate) override;
+
+			virtual soundDevice *createInputSoundDevice() override;
+			virtual soundDevice *createOutputSoundDevice() override;
 	};
 }

@@ -1,5 +1,5 @@
-<map id="headers/renderer/textures/texture.h" name="headers/renderer/textures/texture.h">
-<area shape="rect" id="node1" title=" " alt="" coords="29,5,200,47"/>
+<map id="include/renderer/textures/texture.h" name="include/renderer/textures/texture.h">
+<area shape="rect" id="node1" title=" " alt="" coords="32,5,197,47"/>
 <area shape="rect" id="node2" title=" " alt="" coords="91,169,146,196"/>
 <area shape="rect" id="node3" href="$d5/dc4/core_8h.html" title=" " alt="" coords="15,95,73,121"/>
 <area shape="rect" id="node5" href="$d1/d8c/logger_8h.html" title=" " alt="" coords="152,95,219,121"/>

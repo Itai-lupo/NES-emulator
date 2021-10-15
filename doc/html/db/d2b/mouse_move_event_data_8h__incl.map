@@ -1,4 +1,4 @@
-<map id="headers/eventSystem/eventTypes/mouseMoveEventData.h" name="headers/eventSystem/eventTypes/mouseMoveEventData.h">
+<map id="include/eventSystem/eventTypes/mouseMoveEventData.h" name="include/eventSystem/eventTypes/mouseMoveEventData.h">
 <area shape="rect" id="node1" title=" " alt="" coords="5,5,208,61"/>
 <area shape="rect" id="node2" href="$d7/d63/core_event_data_8h.html" title=" " alt="" coords="47,109,167,136"/>
 </map>

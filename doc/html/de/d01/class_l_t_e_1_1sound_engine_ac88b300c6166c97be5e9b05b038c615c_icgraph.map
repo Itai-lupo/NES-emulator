@@ -1,15 +1,12 @@
 <map id="LTE::soundEngine::getTime" name="LTE::soundEngine::getTime">
-<area shape="rect" id="node1" title=" " alt="" coords="769,143,953,170"/>
-<area shape="rect" id="node2" href="$d2/dff/class_l_t_e_1_1sound_synthesizer.html#a87b587d2bb2be384b13f3881028c089e" title=" " alt="" coords="539,136,697,177"/>
-<area shape="rect" id="node8" href="$d2/dff/class_l_t_e_1_1sound_synthesizer.html#a667bd56b3e7c0d62591e23a931231906" title=" " alt="" coords="539,71,697,112"/>
-<area shape="rect" id="node9" href="$d5/d51/class_l_t_e_1_1apo_sequencer_and_rythem_maner_1_1sequencer.html#a5cd87028d1b1617f4d5448ac2f1f0052" title="song &#45; the main function of the sequencer plays the song" alt="" coords="515,233,721,275"/>
-<area shape="rect" id="node3" href="$d8/d36/class_l_t_e_1_1apo_sequencer_and_rythem_maner_1_1bell_ring.html#ac47c226a6ba5fe3a45d7801488fa9cfb" title="PlayBeat &#45; called every beat or bpm time a minut noteOn/Off the instraments here." alt="" coords="260,71,467,112"/>
-<area shape="rect" id="node4" href="$d2/d24/class_l_t_e_1_1apo_sequencer_and_rythem_maner_1_1drum.html#a24197c5b3831d3597be3e8f5cafabe82" title="PlayBeat &#45; called every beat or bpm time a minut noteOn/Off the instraments here." alt="" coords="260,136,467,177"/>
-<area shape="rect" id="node5" href="$d3/d3f/class_l_t_e_1_1apo_sequencer_and_rythem_maner_1_1guitar.html#a1a23fcc4da1ce1bf52dc0a3821df7002" title=" " alt="" coords="260,5,467,47"/>
-<area shape="rect" id="node7" href="$d3/d3f/class_l_t_e_1_1apo_sequencer_and_rythem_maner_1_1guitar.html#ac72ff39c61778268c68d0fa32c0435c9" title=" " alt="" coords="260,201,467,243"/>
-<area shape="rect" id="node6" href="$d3/d3f/class_l_t_e_1_1apo_sequencer_and_rythem_maner_1_1guitar.html#a37309755f4536b94d4aee1a37c62b11d" title="PlayBeat &#45; called every beat or bpm time a minut noteOn/Off the instraments here." alt="" coords="5,71,212,112"/>
-<area shape="rect" id="node10" href="$d5/d51/class_l_t_e_1_1apo_sequencer_and_rythem_maner_1_1sequencer.html#ab4d85f40859e7c55261194a78cca666b" title="startSong &#45; start playing the song in a new thrad" alt="" coords="260,267,467,308"/>
-<area shape="rect" id="node11" href="$d8/d36/class_l_t_e_1_1apo_sequencer_and_rythem_maner_1_1bell_ring.html#a35cc71e33eeebe976876673f30a2ca10" title=" " alt="" coords="5,201,212,243"/>
-<area shape="rect" id="node12" href="$d2/d24/class_l_t_e_1_1apo_sequencer_and_rythem_maner_1_1drum.html#acbd1fe75394c50c316a792fa097e2cae" title=" " alt="" coords="5,267,212,308"/>
-<area shape="rect" id="node13" href="$d3/d3f/class_l_t_e_1_1apo_sequencer_and_rythem_maner_1_1guitar.html#a128d5a426bf6f55d6516c0bb1d2d2ef3" title=" " alt="" coords="5,332,212,373"/>
+<area shape="rect" id="node1" title=" " alt="" coords="641,56,825,83"/>
+<area shape="rect" id="node2" href="$d2/d04/class_l_t_e_1_1envelope.html#a581c29b50b03a900c23436de549648d5" title=" " alt="" coords="436,5,593,32"/>
+<area shape="rect" id="node4" href="$d2/d04/class_l_t_e_1_1envelope.html#a4f8d6c016e12dd489db710d87e08c111" title=" " alt="" coords="437,56,593,83"/>
+<area shape="rect" id="node6" href="$db/d56/class_l_t_e_1_1sequencer.html#ad51ff013bc29c7c3b910d8e0d2a0dcbe" title="song &#45; the main function of the sequencer plays the song" alt="" coords="439,107,590,133"/>
+<area shape="rect" id="node3" href="$d9/d60/class_l_t_e_1_1bell_ring.html#aa67097283d14a3fff25ad34402245f1a" title="PlayBeat &#45; called every beat or bpm time a minut noteOn/Off the instraments here." alt="" coords="217,5,380,32"/>
+<area shape="rect" id="node5" href="$db/dd3/sound_8test_8cpp.html#a3998186a574db417e7fcfdc402eb38ca" title=" " alt="" coords="271,56,327,83"/>
+<area shape="rect" id="node7" href="$db/d56/class_l_t_e_1_1sequencer.html#a9f49d6b304838b9d119465f3a73c6238" title="startSong &#45; start playing the song in a new thrad" alt="" coords="209,107,388,133"/>
+<area shape="rect" id="node8" href="$d9/d60/class_l_t_e_1_1bell_ring.html#aeaf341edf4d5bda5863d599b6dba9feb" title=" " alt="" coords="5,56,161,83"/>
+<area shape="rect" id="node9" href="$d7/d4c/class_l_t_e_1_1drum.html#adbb08e290639da3aec3c015361c75a39" title=" " alt="" coords="23,107,143,133"/>
+<area shape="rect" id="node10" href="$d4/d0d/class_l_t_e_1_1guitar.html#ab0dd5b5c8db673322f5cb397ac0a61eb" title=" " alt="" coords="20,157,147,184"/>
 </map>

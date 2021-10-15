@@ -1,0 +1,4 @@
+<map id="LTE::drum::PlayBeat" name="LTE::drum::PlayBeat">
+<area shape="rect" id="node1" title="PlayBeat &#45; called every beat or bpm time a minut noteOn/Off the instraments here." alt="" coords="5,5,149,32"/>
+<area shape="rect" id="node2" href="$d2/d04/class_l_t_e_1_1envelope.html#a6c14f0fb15abc74ddfb8f9fce18f5815" title=" " alt="" coords="197,5,340,32"/>
+</map>

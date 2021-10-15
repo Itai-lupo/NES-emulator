@@ -1,7 +1,7 @@
 var guitar_8h =
 [
-    [ "guitar", "d3/d3f/class_l_t_e_1_1apo_sequencer_and_rythem_maner_1_1guitar.html", "d3/d3f/class_l_t_e_1_1apo_sequencer_and_rythem_maner_1_1guitar" ],
-    [ "chords", "da/da2/guitar_8h.html#a28567a681a8c0ef056e70f31033f4cb9", [
-      [ "openChord", "da/da2/guitar_8h.html#a28567a681a8c0ef056e70f31033f4cb9a9b975db985e1cf8ab0d38861aab6c8a1", null ]
+    [ "LTE::guitar", "d4/d0d/class_l_t_e_1_1guitar.html", "d4/d0d/class_l_t_e_1_1guitar" ],
+    [ "chords", "da/da2/guitar_8h.html#acda0aaed89ef27ddb8cace851349e007", [
+      [ "openChord", "da/da2/guitar_8h.html#acda0aaed89ef27ddb8cace851349e007af67ab1a6a64004d74ef7874d68ca0376", null ]
     ] ]
 ];

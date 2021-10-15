@@ -14,33 +14,10 @@ namespace LTE
         renderer::Scene = Scene;
         renderer::renderPipLine = renderPipLine;
         
-        
+        const glm::mat4& ViewProjectionMatrix = Scene->camera->getComponent<coreCameraControler>()->getCamera()->getViewProjectionMatrix();
         for(gameObject *toRender: *Scene->objects)
         {
-            toRender->getComponent<meshRenderer>()->render(renderPipLine, Scene->camera->getComponent<coreCameraControler>()->getCamera()->getViewProjectionMatrix());
+            toRender->getComponent<meshRenderer>()->render(renderPipLine, ViewProjectionMatrix);
         }
     }
-
-
-    // void renderer::Submit(shader *s, uint32_t count, glm::mat4 transform )
-    // {
-    //     s->bind();
-    //     LAUGHTALE_ENGINR_LOG_INFO("A");
-    //     s->setUniformMat4f("viewProjection", data.camera->getViewProjectionMatrix());
-    //     s->setUniformMat4f("transform", transform);
-    //     LAUGHTALE_ENGINR_LOG_INFO("A");
-    //     renderPipLine->DrawIndexed(count);
-    // }
-
-
-    // void renderer::Submit(mesh *toRender )
-    // {
-    //     toRender->bind({0});
-    //     LAUGHTALE_ENGINR_LOG_INFO("A");
-
-    //     toRender->getShader()->setUniformMat4f("viewProjection", Scene->camera->getViewProjectionMatrix());
-    //     LAUGHTALE_ENGINR_LOG_INFO("A");
-
-    //     renderPipLine->DrawIndexed(toRender->getCount());
-    // }
 }

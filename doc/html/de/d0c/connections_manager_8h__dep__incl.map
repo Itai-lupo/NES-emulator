@@ -1,10 +1,11 @@
-<map id="headers/networkManager/connectionsManager.h" name="headers/networkManager/connectionsManager.h">
-<area shape="rect" id="node1" title=" " alt="" coords="121,5,289,47"/>
-<area shape="rect" id="node2" href="$d5/df2/app_8cpp.html" title=" " alt="" coords="5,102,96,129"/>
-<area shape="rect" id="node3" href="$d3/d25/connections_manager_8cpp.html" title=" " alt="" coords="120,95,291,136"/>
-<area shape="rect" id="node4" href="$de/dd5/_laugh_tale_engine_8h.html" title=" " alt="" coords="315,102,498,129"/>
-<area shape="rect" id="node5" href="$d9/dc9/flappy_bird_8test_8cpp.html" title=" " alt="" coords="57,184,221,211"/>
-<area shape="rect" id="node6" href="$de/d7f/main_8test_8cpp.html" title=" " alt="" coords="245,184,379,211"/>
-<area shape="rect" id="node7" href="$d0/dd3/network_manger_8test_8cpp.html" title=" " alt="" coords="404,184,599,211"/>
-<area shape="rect" id="node8" href="$d4/d08/router_8test_8cpp.html" title=" " alt="" coords="623,184,785,211"/>
+<map id="include/networkManager/connectionsManager.h" name="include/networkManager/connectionsManager.h">
+<area shape="rect" id="node1" title=" " alt="" coords="527,5,690,47"/>
+<area shape="rect" id="node2" href="$de/dd5/_laugh_tale_engine_8h.html" title=" " alt="" coords="361,102,539,129"/>
+<area shape="rect" id="node8" href="$d5/df2/app_8cpp.html" title=" " alt="" coords="563,102,654,129"/>
+<area shape="rect" id="node9" href="$d3/d25/connections_manager_8cpp.html" title=" " alt="" coords="678,95,849,136"/>
+<area shape="rect" id="node3" href="$d9/dc9/flappy_bird_8test_8cpp.html" title=" " alt="" coords="5,184,169,211"/>
+<area shape="rect" id="node4" href="$de/d7f/main_8test_8cpp.html" title=" " alt="" coords="193,184,328,211"/>
+<area shape="rect" id="node5" href="$d0/dd3/network_manger_8test_8cpp.html" title=" " alt="" coords="353,184,547,211"/>
+<area shape="rect" id="node6" href="$db/dd3/sound_8test_8cpp.html" title=" " alt="" coords="571,184,713,211"/>
+<area shape="rect" id="node7" href="$d4/d08/router_8test_8cpp.html" title=" " alt="" coords="737,184,899,211"/>
 </map>
