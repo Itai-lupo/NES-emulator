@@ -59,35 +59,43 @@ namespace LTE
 
     bool squreCollider::operator == (squreCollider& s)
     {
-        transform *selfBonds = getBonds();
-        transform *otherBonds = s.getBonds();
-
-        glm::vec3 selfDownRightBonds = selfBonds->getPostion() - selfBonds->getScale()/2.0f;
-        glm::vec3 selfUpLeftBonds = selfBonds->getPostion() + selfBonds->getScale()/2.0f;
-
-        glm::vec3 otherDownRightBonds = otherBonds->getPostion() - otherBonds->getScale()/2.0f;
-        glm::vec3 otherUpLeftBonds = otherBonds->getPostion() + otherBonds->getScale()/2.0f;
-
-        bool isWithInBonds =  
-            checkYBonds(selfUpLeftBonds.y, selfDownRightBonds.y, otherUpLeftBonds.y, otherDownRightBonds.y) &&
-            checkXBonds(selfUpLeftBonds.x, selfDownRightBonds.x, otherUpLeftBonds.x, otherDownRightBonds.x);
-        
-        bool AlradyInCollisionWith = std::find_if(
-            InCollisionWith.begin(), 
-            InCollisionWith.end(),
-            [=, this](squreCollider *a) -> bool { return a->parentId == s.parentId; }) != InCollisionWith.end();
-            
-        if (isWithInBonds && !AlradyInCollisionWith)
+        try
         {
-            InCollisionWith.push_back(&s);
-            return true;
-        }
+            transform *selfBonds = getBonds();
+            transform *otherBonds = s.getBonds();
 
-        if(!isWithInBonds && AlradyInCollisionWith)
-            InCollisionWith.erase(std::remove_if(
+            glm::vec3 selfDownRightBonds = selfBonds->getPostion() - selfBonds->getScale()/2.0f;
+            glm::vec3 selfUpLeftBonds = selfBonds->getPostion() + selfBonds->getScale()/2.0f;
+
+            glm::vec3 otherDownRightBonds = otherBonds->getPostion() - otherBonds->getScale()/2.0f;
+            glm::vec3 otherUpLeftBonds = otherBonds->getPostion() + otherBonds->getScale()/2.0f;
+
+            bool isWithInBonds =  
+                checkYBonds(selfUpLeftBonds.y, selfDownRightBonds.y, otherUpLeftBonds.y, otherDownRightBonds.y) &&
+                checkXBonds(selfUpLeftBonds.x, selfDownRightBonds.x, otherUpLeftBonds.x, otherDownRightBonds.x);
+            
+            bool AlradyInCollisionWith = std::find_if(
                 InCollisionWith.begin(), 
                 InCollisionWith.end(),
-                [=, this](squreCollider *a) -> bool { return a->parentId == s.parentId; }));
+                [=, this](squreCollider *a) -> bool { return a->parentId == s.parentId; }) != InCollisionWith.end();
+                
+            if (isWithInBonds && !AlradyInCollisionWith)
+            {
+                InCollisionWith.push_back(&s);
+                return true;
+            }
+
+            if(!isWithInBonds && AlradyInCollisionWith)
+                InCollisionWith.erase(std::remove_if(
+                    InCollisionWith.begin(), 
+                    InCollisionWith.end(),
+                    [=, this](squreCollider *a) -> bool { return a->parentId == s.parentId; }));
+        }
+        catch(const std::exception& e)
+        {
+            LAUGHTALE_ENGINR_LOG_WARNING("coul'd not calculate collsion betwin game object because: " << e.what());
+        }
+        
         
         return false;
         

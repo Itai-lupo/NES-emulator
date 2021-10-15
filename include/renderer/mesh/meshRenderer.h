@@ -71,18 +71,26 @@ namespace LTE
 
             void render(renderApi *api, const glm::mat4& MVP)
             {
-                gameObject *objectToRender = entityManger::getEntityById(parentId);
-                if(objectToRender == nullptr) return;
-                mesh *ObjectMesh = objectToRender->getComponent<mesh>();
-                material *ObjectMaterial = objectToRender->getComponent<material>();
+                try
+                {
+                    gameObject *objectToRender = entityManger::getEntityById(parentId);
+                    if(objectToRender == nullptr) return;
+                    mesh *ObjectMesh = objectToRender->getComponent<mesh>();
+                    material *ObjectMaterial = objectToRender->getComponent<material>();
 
-                s->bind();
-                ObjectMesh->bind();
-                ObjectMaterial->bind(s, {0});
-                s->setUniformMat4f("viewProjection", MVP);
-                setTransform(entityManger::getEntityById(parentId)->getTransform());
+                    s->bind();
+                    ObjectMesh->bind();
+                    ObjectMaterial->bind(s, {0});
+                    s->setUniformMat4f("viewProjection", MVP);
+                    setTransform(entityManger::getEntityById(parentId)->getTransform());
 
-                api->DrawIndexed(ObjectMesh->getCount());
+                    api->DrawIndexed(ObjectMesh->getCount());
+                }
+                catch(const std::exception& e)
+                {
+                    LAUGHTALE_ENGINR_LOG_WARNING("coul'd not render game object because: " << e.what());
+                }
+                
             }
 
     };

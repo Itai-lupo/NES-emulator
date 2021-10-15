@@ -1,6 +1,6 @@
 #include "entity.h"
 #include <stdlib.h>
-
+#include "LTEError.h"
 #include "logger.h"
 namespace LTE
 {
@@ -40,7 +40,7 @@ namespace LTE
                 return entityManger::entitys[i];
         }
         
-        LAUGHTALE_ENGINR_LOG_WARNING("game object with id:" << name << "wasn't found");
+        throw GameObjectNotFoundException("game object with name:" + name + "wasn't found");
         return  NULL;
         
     }
@@ -54,7 +54,7 @@ namespace LTE
                 return entityManger::entitys[i];
         }
         
-        LAUGHTALE_ENGINR_LOG_WARNING("game object with id: " << id << "    wasn't found");
+        throw GameObjectNotFoundException("game object with id: " + std::to_string(id) + " wasn't found");
         return  NULL;
     }
 

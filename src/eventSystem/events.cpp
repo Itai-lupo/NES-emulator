@@ -3,6 +3,7 @@
 #include "logger.h"
 #include "windowManger.h"
 #include "window.h"
+#include "LTEError.h"
 
 namespace LTE
 {
@@ -76,36 +77,45 @@ namespace LTE
     void eventManger::trigerEvent(coreEventData *sendor)
     {
         if(sendor->route == "")
-            LAUGHTALE_ENGINR_LOG_FATAL("please Spcifay event route");
+            LAUGHTALE_ENGINR_LOG_FATAL("please specify event route");
 
         std::string route = sendor->route;
         windowPieceId winId = sendor->windowId;
 
         eventManger::eventList.itrateFrom([&](event *e){
-            if(winId == 0 || e->getWindowID() == 0 || e->getWindowID() == winId)
-            {
-                if(e->getWindowID() != 0 && winId == 0){
-                    sendor->windowId = e->getWindowID(); 
-                }
-
-                sendor->win = windowManger::getWindow(e->getWindowID());
-                
-                sendor->route = e->getEventRoute();
-                sendor->id = e->id;
-                
-                gameObject *eventObject = nullptr;
-
-                if(e->getEntityID() != (entityTaleId)-1 )
-                    eventObject = entityManger::getEntityById(e->getEntityID()); 
-                
-                if( eventObject == nullptr && e->getEntityID() != (entityTaleId)-1)
+            try{
+                if(winId == 0 || e->getWindowID() == 0 || e->getWindowID() == winId)
                 {
-                    LAUGHTALE_ENGINR_LOG_ERROR("entity with id: " << e->getEntityID() << " was'nt found so faild to call event with route: " << e->route);
-                    removeEvent(e->route);
-                }
-                else
+                    if(e->getWindowID() != 0 && winId == 0){
+                        sendor->windowId = e->getWindowID(); 
+                    }
+
+                    sendor->win = windowManger::getWindow(e->getWindowID());
+                    
+                    sendor->route = e->getEventRoute();
+                    sendor->id = e->id;
+                    
+                    gameObject *eventObject = nullptr;
+
+                    if(e->getEntityID() != (entityTaleId)-1 )
+                        eventObject = entityManger::getEntityById(e->getEntityID()); 
+                    
                     e->trigerEvent(eventObject, sendor);
 
+                }
+            }
+            catch(const GameObjectNotFoundException& ex)
+            {
+                LAUGHTALE_ENGINR_LOG_ERROR("entity with id: " << e->getEntityID() << " was'nt found so faild to call event with route: " << e->route);
+            }
+            catch(const WindowNotFoundException& ex)
+            {
+                LAUGHTALE_ENGINR_LOG_ERROR("faild to call event " << e->getEventRoute() << " because window with id " << e->getWindowID() << " wasn't found");
+                removeEvent(e->route);
+            }
+            catch(const std::exception& ex)
+            {
+                LAUGHTALE_ENGINR_LOG_WARNING("faild to call event " << e->getEventRoute() << " because: " << ex.what());
             }
         }, sendor->route);
 

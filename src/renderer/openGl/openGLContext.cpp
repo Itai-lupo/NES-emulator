@@ -24,6 +24,12 @@ namespace LTE
         contextThread = new std::thread(&openGLContext::run, this);
     }
 
+    openGLContext::~openGLContext()
+    {
+        windowRun = false;
+        contextThread->join();
+    }
+
     void openGLContext::run()
     {
 
@@ -45,7 +51,7 @@ namespace LTE
         
         while (!app::isRuning){}
         
-        while (app::keepRunning)
+        while (app::keepRunning && windowRun)
         {
             now = app::getTime();
             sendorData->DeltaTime = now - sendorData->currentTime;

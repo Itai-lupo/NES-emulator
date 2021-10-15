@@ -3,7 +3,7 @@
 #include <string>
 #include <functional>
 #include <algorithm>
-
+#include "LTEError.h"
 
 
 namespace LTE
@@ -61,7 +61,7 @@ namespace LTE
         if(temp != windows.end())
             return *temp;
         
-        LAUGHTALE_ENGINR_LOG_ERROR("window " << windowId << " wasn't found")
+        throw WindowNotFoundException("window " + std::to_string(windowId) + " wasn't found");
         return NULL;
     }
 

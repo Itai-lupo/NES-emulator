@@ -385,23 +385,32 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 <div class="fragment"><div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>            {</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>                gameObject *objectToRender = <a class="code hl_function" href="../../de/d44/class_l_t_e_1_1entity_manger.html#ad019a4750f1350c7185cefe6072dcd6e">entityManger::getEntityById</a>(<a class="code hl_variable" href="../../d9/d4b/class_l_t_e_1_1component.html#a7ed9339f270d0439f071cf64c6a7f505">parentId</a>);</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>                <span class="keywordflow">if</span>(objectToRender == <span class="keyword">nullptr</span>) <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>                mesh *ObjectMesh = objectToRender-&gt;getComponent&lt;mesh&gt;();</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>                material *ObjectMaterial = objectToRender-&gt;getComponent&lt;material&gt;();</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>                s-&gt;<a class="code hl_function" href="../../d1/d2e/class_l_t_e_1_1shader.html#a92783c68affd61b5a3259e35b9e84a49">bind</a>();</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>                ObjectMesh-&gt;bind();</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>                ObjectMaterial-&gt;bind(s, {0});</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>                s-&gt;<a class="code hl_function" href="../../d1/d2e/class_l_t_e_1_1shader.html#a6a0919a106978831d33317c4de4dbd7d">setUniformMat4f</a>(<span class="stringliteral">&quot;viewProjection&quot;</span>, MVP);</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>                setTransform(<a class="code hl_function" href="../../de/d44/class_l_t_e_1_1entity_manger.html#ad019a4750f1350c7185cefe6072dcd6e">entityManger::getEntityById</a>(<a class="code hl_variable" href="../../d9/d4b/class_l_t_e_1_1component.html#a7ed9339f270d0439f071cf64c6a7f505">parentId</a>)-&gt;getTransform());</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>                api-&gt;DrawIndexed(ObjectMesh-&gt;getCount());</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>            }</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>                <span class="keywordflow">try</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>                {</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>                    gameObject *objectToRender = <a class="code hl_function" href="../../de/d44/class_l_t_e_1_1entity_manger.html#ad019a4750f1350c7185cefe6072dcd6e">entityManger::getEntityById</a>(<a class="code hl_variable" href="../../d9/d4b/class_l_t_e_1_1component.html#a7ed9339f270d0439f071cf64c6a7f505">parentId</a>);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>                    <span class="keywordflow">if</span>(objectToRender == <span class="keyword">nullptr</span>) <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>                    mesh *ObjectMesh = objectToRender-&gt;getComponent&lt;mesh&gt;();</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>                    material *ObjectMaterial = objectToRender-&gt;getComponent&lt;material&gt;();</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>                    s-&gt;<a class="code hl_function" href="../../d1/d2e/class_l_t_e_1_1shader.html#a92783c68affd61b5a3259e35b9e84a49">bind</a>();</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>                    ObjectMesh-&gt;bind();</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>                    ObjectMaterial-&gt;bind(s, {0});</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>                    s-&gt;<a class="code hl_function" href="../../d1/d2e/class_l_t_e_1_1shader.html#a6a0919a106978831d33317c4de4dbd7d">setUniformMat4f</a>(<span class="stringliteral">&quot;viewProjection&quot;</span>, MVP);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>                    setTransform(<a class="code hl_function" href="../../de/d44/class_l_t_e_1_1entity_manger.html#ad019a4750f1350c7185cefe6072dcd6e">entityManger::getEntityById</a>(<a class="code hl_variable" href="../../d9/d4b/class_l_t_e_1_1component.html#a7ed9339f270d0439f071cf64c6a7f505">parentId</a>)-&gt;getTransform());</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>                    api-&gt;DrawIndexed(ObjectMesh-&gt;getCount());</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>                }</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>                <span class="keywordflow">catch</span>(<span class="keyword">const</span> std::exception&amp; e)</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>                {</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>                    <a class="code hl_define" href="../../d1/d8c/logger_8h.html#ac50547ba95023ba6994629f68b4a39d4">LAUGHTALE_ENGINR_LOG_WARNING</a>(<span class="stringliteral">&quot;coul&#39;d not render game object because: &quot;</span> &lt;&lt; e.what());</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>                }</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>                </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>            }</div>
 <div class="ttc" id="aclass_l_t_e_1_1component_html_a7ed9339f270d0439f071cf64c6a7f505"><div class="ttname"><a href="../../d9/d4b/class_l_t_e_1_1component.html#a7ed9339f270d0439f071cf64c6a7f505">LTE::component::parentId</a></div><div class="ttdeci">entityTaleId parentId</div><div class="ttdef"><b>Definition:</b> component.h:13</div></div>
 <div class="ttc" id="aclass_l_t_e_1_1entity_manger_html_ad019a4750f1350c7185cefe6072dcd6e"><div class="ttname"><a href="../../de/d44/class_l_t_e_1_1entity_manger.html#ad019a4750f1350c7185cefe6072dcd6e">LTE::entityManger::getEntityById</a></div><div class="ttdeci">static gameObject * getEntityById(entityTaleId id)</div><div class="ttdef"><b>Definition:</b> entity.cpp:48</div></div>
 <div class="ttc" id="aclass_l_t_e_1_1shader_html_a6a0919a106978831d33317c4de4dbd7d"><div class="ttname"><a href="../../d1/d2e/class_l_t_e_1_1shader.html#a6a0919a106978831d33317c4de4dbd7d">LTE::shader::setUniformMat4f</a></div><div class="ttdeci">virtual void setUniformMat4f(const std::string &amp;name, const glm::mat4 &amp;value)=0</div></div>
 <div class="ttc" id="aclass_l_t_e_1_1shader_html_a92783c68affd61b5a3259e35b9e84a49"><div class="ttname"><a href="../../d1/d2e/class_l_t_e_1_1shader.html#a92783c68affd61b5a3259e35b9e84a49">LTE::shader::bind</a></div><div class="ttdeci">virtual void bind()=0</div></div>
+<div class="ttc" id="alogger_8h_html_ac50547ba95023ba6994629f68b4a39d4"><div class="ttname"><a href="../../d1/d8c/logger_8h.html#ac50547ba95023ba6994629f68b4a39d4">LAUGHTALE_ENGINR_LOG_WARNING</a></div><div class="ttdeci">#define LAUGHTALE_ENGINR_LOG_WARNING(toLog)</div><div class="ttdef"><b>Definition:</b> logger.h:7</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">

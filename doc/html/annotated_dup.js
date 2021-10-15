@@ -33,6 +33,7 @@ var annotated_dup =
       [ "event", "da/df9/struct_l_t_e_1_1event.html", "da/df9/struct_l_t_e_1_1event" ],
       [ "eventManger", "d5/d7c/class_l_t_e_1_1event_manger.html", null ],
       [ "gameObject", "d2/d49/class_l_t_e_1_1game_object.html", "d2/d49/class_l_t_e_1_1game_object" ],
+      [ "GameObjectNotFoundException", "d9/d22/class_l_t_e_1_1_game_object_not_found_exception.html", "d9/d22/class_l_t_e_1_1_game_object_not_found_exception" ],
       [ "graphicsContext", "d7/d20/class_l_t_e_1_1graphics_context.html", "d7/d20/class_l_t_e_1_1graphics_context" ],
       [ "guitar", "d4/d0d/class_l_t_e_1_1guitar.html", "d4/d0d/class_l_t_e_1_1guitar" ],
       [ "guitarString", "d4/d73/class_l_t_e_1_1guitar_string.html", "d4/d73/class_l_t_e_1_1guitar_string" ],
@@ -94,6 +95,7 @@ var annotated_dup =
       [ "window", "d4/d38/class_l_t_e_1_1window.html", "d4/d38/class_l_t_e_1_1window" ],
       [ "windowBuilder", "d0/d26/class_l_t_e_1_1window_builder.html", "d0/d26/class_l_t_e_1_1window_builder" ],
       [ "windowManger", "de/de3/class_l_t_e_1_1window_manger.html", null ],
+      [ "WindowNotFoundException", "da/d5b/class_l_t_e_1_1_window_not_found_exception.html", "da/d5b/class_l_t_e_1_1_window_not_found_exception" ],
       [ "WindowResizeData", "d0/d31/struct_l_t_e_1_1_window_resize_data.html", "d0/d31/struct_l_t_e_1_1_window_resize_data" ]
     ] ],
     [ "basicBody", "de/d04/structbasic_body.html", "de/d04/structbasic_body" ],

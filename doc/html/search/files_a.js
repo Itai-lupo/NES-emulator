@@ -14,5 +14,6 @@ var searchData=
   ['linuxsounddevice_2ecpp_11',['linuxSoundDevice.cpp',['../d1/dcd/linux_sound_device_8cpp.html',1,'']]],
   ['linuxsounddevice_2eh_12',['linuxSoundDevice.h',['../dc/db8/linux_sound_device_8h.html',1,'']]],
   ['logger_2ecpp_13',['logger.cpp',['../d3/d30/logger_8cpp.html',1,'']]],
-  ['logger_2eh_14',['logger.h',['../d1/d8c/logger_8h.html',1,'']]]
+  ['logger_2eh_14',['logger.h',['../d1/d8c/logger_8h.html',1,'']]],
+  ['lteerror_2eh_15',['LTEError.h',['../dc/d94/_l_t_e_error_8h.html',1,'']]]
 ];

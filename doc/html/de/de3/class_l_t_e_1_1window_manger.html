@@ -144,7 +144,7 @@ Static Public Member Functions</h2></td></tr>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        </div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="keywordflow">return</span> newWindow-&gt;id;</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    }</div>
-<div class="ttc" id="aclass_l_t_e_1_1event_manger_html_a205c8d664c9d7ce70155f1a125404397"><div class="ttname"><a href="../../d5/d7c/class_l_t_e_1_1event_manger.html#a205c8d664c9d7ce70155f1a125404397">LTE::eventManger::startBuildingEvent</a></div><div class="ttdeci">static eventBuilder * startBuildingEvent()</div><div class="ttdef"><b>Definition:</b> events.cpp:51</div></div>
+<div class="ttc" id="aclass_l_t_e_1_1event_manger_html_a205c8d664c9d7ce70155f1a125404397"><div class="ttname"><a href="../../d5/d7c/class_l_t_e_1_1event_manger.html#a205c8d664c9d7ce70155f1a125404397">LTE::eventManger::startBuildingEvent</a></div><div class="ttdeci">static eventBuilder * startBuildingEvent()</div><div class="ttdef"><b>Definition:</b> events.cpp:52</div></div>
 <div class="ttc" id="aclass_l_t_e_1_1window_builder_html_ad1ca0242c2cde62734d35a098d5a7d84"><div class="ttname"><a href="../../d0/d26/class_l_t_e_1_1window_builder.html#ad1ca0242c2cde62734d35a098d5a7d84">LTE::windowBuilder::build</a></div><div class="ttdeci">window * build()</div><div class="ttdef"><b>Definition:</b> windowBuilder.cpp:18</div></div>
 <div class="ttc" id="aclass_l_t_e_1_1window_builder_html_ae4c402df966a6313a04f0778ce527fe7"><div class="ttname"><a href="../../d0/d26/class_l_t_e_1_1window_builder.html#ae4c402df966a6313a04f0778ce527fe7">LTE::windowBuilder::reset</a></div><div class="ttdeci">void reset()</div><div class="ttdef"><b>Definition:</b> windowBuilder.cpp:13</div></div>
 </div><!-- fragment --><div class="dynheader">
@@ -250,10 +250,9 @@ Here is the caller graph for this function:</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <span class="keywordflow">if</span>(temp != windows.end())</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            <span class="keywordflow">return</span> *temp;</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        </div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <a class="code hl_define" href="../../d1/d8c/logger_8h.html#aae4cf1bd083983040d4d6572a9b0d8bf">LAUGHTALE_ENGINR_LOG_ERROR</a>(<span class="stringliteral">&quot;window &quot;</span> &lt;&lt; windowId &lt;&lt; <span class="stringliteral">&quot; wasn&#39;t found&quot;</span>)</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        return NULL;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <span class="keywordflow">throw</span> WindowNotFoundException(<span class="stringliteral">&quot;window &quot;</span> + std::to_string(windowId) + <span class="stringliteral">&quot; wasn&#39;t found&quot;</span>);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        <span class="keywordflow">return</span> NULL;</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    }</div>
-<div class="ttc" id="alogger_8h_html_aae4cf1bd083983040d4d6572a9b0d8bf"><div class="ttname"><a href="../../d1/d8c/logger_8h.html#aae4cf1bd083983040d4d6572a9b0d8bf">LAUGHTALE_ENGINR_LOG_ERROR</a></div><div class="ttdeci">#define LAUGHTALE_ENGINR_LOG_ERROR(toLog)</div><div class="ttdef"><b>Definition:</b> logger.h:8</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">

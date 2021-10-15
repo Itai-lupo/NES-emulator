@@ -55,6 +55,10 @@ var hierarchy =
     [ "LTE::entityManger", "de/d44/class_l_t_e_1_1entity_manger.html", null ],
     [ "LTE::event", "da/df9/struct_l_t_e_1_1event.html", null ],
     [ "LTE::eventManger", "d5/d7c/class_l_t_e_1_1event_manger.html", null ],
+    [ "std::exception", null, [
+      [ "LTE::GameObjectNotFoundException", "d9/d22/class_l_t_e_1_1_game_object_not_found_exception.html", null ],
+      [ "LTE::WindowNotFoundException", "da/d5b/class_l_t_e_1_1_window_not_found_exception.html", null ]
+    ] ],
     [ "LTE::gameObject", "d2/d49/class_l_t_e_1_1game_object.html", null ],
     [ "LTE::gameObject::gameObjectBuilder", "d7/dd0/class_l_t_e_1_1game_object_1_1game_object_builder.html", null ],
     [ "LTE::graphicsContext", "d7/d20/class_l_t_e_1_1graphics_context.html", [

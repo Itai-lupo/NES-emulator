@@ -16,7 +16,7 @@ namespace LTE
             renderApi *api;
             openGLAbsrtactFactory *meshFactory;
             std::thread *contextThread;
-            
+            bool windowRun = true;
             void run();
 
         public:
@@ -25,6 +25,7 @@ namespace LTE
             {
                 meshFactory = new openGLAbsrtactFactory();
             }
+            ~openGLContext();
 
             virtual void Init() override;
             virtual void SwapBuffers() override;
