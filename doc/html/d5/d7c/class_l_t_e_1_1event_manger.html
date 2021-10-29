@@ -403,38 +403,40 @@ Here is the caller graph for this function:</div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>                        sendor-&gt;windowId = e-&gt;getWindowID(); </div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>                    }</div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>                    sendor-&gt;win = <a class="code hl_function" href="../../de/de3/class_l_t_e_1_1window_manger.html#aeb94c72d9ef01e6ec53328e2ba972628">windowManger::getWindow</a>(e-&gt;getWindowID());</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>                    </div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>                    sendor-&gt;route = e-&gt;getEventRoute();</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>                    sendor-&gt;<a class="code hl_variable" href="../../d4/d38/class_l_t_e_1_1window.html#a8e5dcaa5ea3a4910dbe6b17e1f03e44e">id</a> = e-&gt;id;</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>                    </div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>                    gameObject *eventObject = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>                    <span class="keywordflow">if</span>(e-&gt;getEntityID() != (<a class="code hl_typedef" href="../../dc/d59/namespace_l_t_e.html#a9a053246fe6d76fb97a3d9e95c94dbda">entityTaleId</a>)-1 )</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>                        eventObject = <a class="code hl_function" href="../../de/d44/class_l_t_e_1_1entity_manger.html#ad019a4750f1350c7185cefe6072dcd6e">entityManger::getEntityById</a>(e-&gt;getEntityID()); </div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>                    </div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>                    e-&gt;trigerEvent(eventObject, sendor);</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>                }</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>            }</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>            <span class="keywordflow">catch</span>(<span class="keyword">const</span> GameObjectNotFoundException&amp; ex)</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>            {</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>                <a class="code hl_define" href="../../d1/d8c/logger_8h.html#aae4cf1bd083983040d4d6572a9b0d8bf">LAUGHTALE_ENGINR_LOG_ERROR</a>(<span class="stringliteral">&quot;entity with id: &quot;</span> &lt;&lt; e-&gt;getEntityID() &lt;&lt; <span class="stringliteral">&quot; was&#39;nt found so faild to call event with route: &quot;</span> &lt;&lt; e-&gt;route);</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>            }</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>            <span class="keywordflow">catch</span>(<span class="keyword">const</span> WindowNotFoundException&amp; ex)</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>            {</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>                <a class="code hl_define" href="../../d1/d8c/logger_8h.html#aae4cf1bd083983040d4d6572a9b0d8bf">LAUGHTALE_ENGINR_LOG_ERROR</a>(<span class="stringliteral">&quot;faild to call event &quot;</span> &lt;&lt; e-&gt;getEventRoute() &lt;&lt; <span class="stringliteral">&quot; because window with id &quot;</span> &lt;&lt; e-&gt;getWindowID() &lt;&lt; <span class="stringliteral">&quot; wasn&#39;t found&quot;</span>);</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>                <a class="code hl_function" href="../../d5/d7c/class_l_t_e_1_1event_manger.html#ad8411ccbb4f69a60c6280071a02ccb1c">removeEvent</a>(e-&gt;route);</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>            }</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>            <span class="keywordflow">catch</span>(<span class="keyword">const</span> std::exception&amp; ex)</div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>            {</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>                <a class="code hl_define" href="../../d1/d8c/logger_8h.html#ac50547ba95023ba6994629f68b4a39d4">LAUGHTALE_ENGINR_LOG_WARNING</a>(<span class="stringliteral">&quot;faild to call event &quot;</span> &lt;&lt; e-&gt;getEventRoute() &lt;&lt; <span class="stringliteral">&quot; because: &quot;</span> &lt;&lt; ex.what());</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>            }</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>        }, sendor-&gt;route);</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>        sendor-&gt;windowId = winId;</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        sendor-&gt;route = route;</div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    }</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>                    <span class="keywordflow">if</span>(sendor-&gt;windowId)</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>                        sendor-&gt;win = <a class="code hl_function" href="../../de/de3/class_l_t_e_1_1window_manger.html#aeb94c72d9ef01e6ec53328e2ba972628">windowManger::getWindow</a>(sendor-&gt;windowId);</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>                    </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>                    sendor-&gt;route = e-&gt;getEventRoute();</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>                    sendor-&gt;<a class="code hl_variable" href="../../d4/d38/class_l_t_e_1_1window.html#a8e5dcaa5ea3a4910dbe6b17e1f03e44e">id</a> = e-&gt;id;</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>                    </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>                    gameObject *eventObject = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>                    <span class="keywordflow">if</span>(e-&gt;getEntityID() != (<a class="code hl_typedef" href="../../dc/d59/namespace_l_t_e.html#a9a053246fe6d76fb97a3d9e95c94dbda">entityTaleId</a>)-1 )</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>                        eventObject = <a class="code hl_function" href="../../de/d44/class_l_t_e_1_1entity_manger.html#ad019a4750f1350c7185cefe6072dcd6e">entityManger::getEntityById</a>(e-&gt;getEntityID()); </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>                    </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>                    e-&gt;trigerEvent(eventObject, sendor);</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>                }</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>            }</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>            <span class="keywordflow">catch</span>(<span class="keyword">const</span> GameObjectNotFoundException&amp; ex)</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>            {</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>                <a class="code hl_define" href="../../d1/d8c/logger_8h.html#aae4cf1bd083983040d4d6572a9b0d8bf">LAUGHTALE_ENGINR_LOG_ERROR</a>(<span class="stringliteral">&quot;entity with id: &quot;</span> &lt;&lt; e-&gt;getEntityID() &lt;&lt; <span class="stringliteral">&quot; was&#39;nt found so faild to call event with route: &quot;</span> &lt;&lt; e-&gt;route);</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>                <a class="code hl_function" href="../../d5/d7c/class_l_t_e_1_1event_manger.html#ad8411ccbb4f69a60c6280071a02ccb1c">removeEvent</a>(e-&gt;route);</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>            }</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>            <span class="keywordflow">catch</span>(<span class="keyword">const</span> WindowNotFoundException&amp; ex)</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>            {</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>                <a class="code hl_define" href="../../d1/d8c/logger_8h.html#aae4cf1bd083983040d4d6572a9b0d8bf">LAUGHTALE_ENGINR_LOG_ERROR</a>(<span class="stringliteral">&quot;faild to call event &quot;</span> &lt;&lt; e-&gt;getEventRoute() &lt;&lt; <span class="stringliteral">&quot; because window with id &quot;</span> &lt;&lt; e-&gt;getWindowID() &lt;&lt; <span class="stringliteral">&quot; wasn&#39;t found&quot;</span>);</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>                <a class="code hl_function" href="../../d5/d7c/class_l_t_e_1_1event_manger.html#ad8411ccbb4f69a60c6280071a02ccb1c">removeEvent</a>(e-&gt;route);</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>            }</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>            <span class="keywordflow">catch</span>(<span class="keyword">const</span> std::exception&amp; ex)</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>            {</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>                <a class="code hl_define" href="../../d1/d8c/logger_8h.html#ac50547ba95023ba6994629f68b4a39d4">LAUGHTALE_ENGINR_LOG_WARNING</a>(<span class="stringliteral">&quot;faild to call event &quot;</span> &lt;&lt; e-&gt;getEventRoute() &lt;&lt; <span class="stringliteral">&quot; because: &quot;</span> &lt;&lt; ex.what());</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>            }</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>        }, sendor-&gt;route);</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>        sendor-&gt;windowId = winId;</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>        sendor-&gt;route = route;</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    }</div>
 <div class="ttc" id="aclass_l_t_e_1_1entity_manger_html_ad019a4750f1350c7185cefe6072dcd6e"><div class="ttname"><a href="../../de/d44/class_l_t_e_1_1entity_manger.html#ad019a4750f1350c7185cefe6072dcd6e">LTE::entityManger::getEntityById</a></div><div class="ttdeci">static gameObject * getEntityById(entityTaleId id)</div><div class="ttdef"><b>Definition:</b> entity.cpp:48</div></div>
 <div class="ttc" id="aclass_l_t_e_1_1event_manger_html_ad8411ccbb4f69a60c6280071a02ccb1c"><div class="ttname"><a href="../../d5/d7c/class_l_t_e_1_1event_manger.html#ad8411ccbb4f69a60c6280071a02ccb1c">LTE::eventManger::removeEvent</a></div><div class="ttdeci">static void removeEvent(const std::string &amp;eventRoute)</div><div class="ttdef"><b>Definition:</b> events.cpp:72</div></div>
 <div class="ttc" id="aclass_l_t_e_1_1window_html_a8e5dcaa5ea3a4910dbe6b17e1f03e44e"><div class="ttname"><a href="../../d4/d38/class_l_t_e_1_1window.html#a8e5dcaa5ea3a4910dbe6b17e1f03e44e">LTE::window::id</a></div><div class="ttdeci">windowPieceId id</div><div class="ttdef"><b>Definition:</b> window.h:32</div></div>

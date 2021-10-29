@@ -197,7 +197,6 @@ namespace LTE
                 while(!deleteQueue.empty())
                 {
                     deleteValue(deleteQueue.front());
-                    LAUGHTALE_ENGINR_LOG_INFO(deleteQueue.front())
                     deleteQueue.pop();
                 }
             }

@@ -17,7 +17,13 @@ namespace LTE
             openGLAbsrtactFactory *meshFactory;
             std::thread *contextThread;
             bool windowRun = true;
+
+            bool changeViewPort = false;
+            int x, y, width, height;
+
             void run();
+
+            virtual renderApi *getRenderApi() override;
 
         public:
             openGLContext(windowPieceId windowId)
@@ -29,7 +35,7 @@ namespace LTE
 
             virtual void Init() override;
             virtual void SwapBuffers() override;
-            virtual renderApi *getRenderApi() override;
             virtual meshAbsrtactFactory *getMeshFactory() override { return meshFactory; }
+            virtual void setViewPort(int x, int y, int width, int height) override;
 	};
 }

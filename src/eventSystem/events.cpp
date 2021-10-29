@@ -90,7 +90,8 @@ namespace LTE
                         sendor->windowId = e->getWindowID(); 
                     }
 
-                    sendor->win = windowManger::getWindow(e->getWindowID());
+                    if(sendor->windowId)
+                        sendor->win = windowManger::getWindow(sendor->windowId);
                     
                     sendor->route = e->getEventRoute();
                     sendor->id = e->id;
@@ -107,6 +108,7 @@ namespace LTE
             catch(const GameObjectNotFoundException& ex)
             {
                 LAUGHTALE_ENGINR_LOG_ERROR("entity with id: " << e->getEntityID() << " was'nt found so faild to call event with route: " << e->route);
+                removeEvent(e->route);
             }
             catch(const WindowNotFoundException& ex)
             {

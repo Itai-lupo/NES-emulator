@@ -121,10 +121,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a9f58d353018d6f9a6871509d88006a74"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aba3f07059dcbdb11c66f84d2ca3dd8c0"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d92/class_l_t_e_1_1open_g_l_context.html#aba3f07059dcbdb11c66f84d2ca3dd8c0">SwapBuffers</a> () override</td></tr>
 <tr class="separator:aba3f07059dcbdb11c66f84d2ca3dd8c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0e0fd7243a3b3ec36943610ea7658b3c"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../df/d3a/class_l_t_e_1_1render_api.html">renderApi</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d92/class_l_t_e_1_1open_g_l_context.html#a0e0fd7243a3b3ec36943610ea7658b3c">getRenderApi</a> () override</td></tr>
-<tr class="separator:a0e0fd7243a3b3ec36943610ea7658b3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac91be2ccde8f4ed59791c9355aec0c1b"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../dc/d5a/class_l_t_e_1_1mesh_absrtact_factory.html">meshAbsrtactFactory</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d92/class_l_t_e_1_1open_g_l_context.html#ac91be2ccde8f4ed59791c9355aec0c1b">getMeshFactory</a> () override</td></tr>
 <tr class="separator:ac91be2ccde8f4ed59791c9355aec0c1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a525555f77f7a00f4a78f566ee96518b0"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d92/class_l_t_e_1_1open_g_l_context.html#a525555f77f7a00f4a78f566ee96518b0">setViewPort</a> (int x, int y, int width, int height) override</td></tr>
+<tr class="separator:a525555f77f7a00f4a78f566ee96518b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a8933882669e02381a8f595c4497369d7" name="a8933882669e02381a8f595c4497369d7"></a>
@@ -150,10 +150,10 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>                :windowId(windowId)</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>            {</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>                meshFactory = <span class="keyword">new</span> openGLAbsrtactFactory();</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>            }</div>
+<div class="fragment"><div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>                :windowId(windowId)</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>            {</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>                meshFactory = <span class="keyword">new</span> openGLAbsrtactFactory();</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -203,37 +203,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="../../d7/d20/class_l_t_e_1_1graphics_context.html#a937f07867b886d1f88ef4ee388c68dfb">LTE::graphicsContext</a>.</p>
-<div class="fragment"><div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>{ <span class="keywordflow">return</span> meshFactory; }</div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="a0e0fd7243a3b3ec36943610ea7658b3c" name="a0e0fd7243a3b3ec36943610ea7658b3c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0e0fd7243a3b3ec36943610ea7658b3c">&#9670;&nbsp;</a></span>getRenderApi()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../df/d3a/class_l_t_e_1_1render_api.html">renderApi</a> * LTE::openGLContext::getRenderApi </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Implements <a class="el" href="../../d7/d20/class_l_t_e_1_1graphics_context.html#a02161dc2a12e94f9a3deb793dea777ff">LTE::graphicsContext</a>.</p>
-<div class="fragment"><div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    {</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        <span class="keywordflow">return</span> api;</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    }    </div>
+<div class="fragment"><div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>{ <span class="keywordflow">return</span> meshFactory; }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -290,6 +260,63 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
+<a id="a525555f77f7a00f4a78f566ee96518b0" name="a525555f77f7a00f4a78f566ee96518b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a525555f77f7a00f4a78f566ee96518b0">&#9670;&nbsp;</a></span>setViewPort()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LTE::openGLContext::setViewPort </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>height</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="../../d7/d20/class_l_t_e_1_1graphics_context.html#ab6598fc2d6bf4c41a37761a3ed3e7b47">LTE::graphicsContext</a>.</p>
+<div class="fragment"><div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    {</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        this-&gt;x = x;</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        this-&gt;y = y;</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        this-&gt;width = width;</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        this-&gt;height = height;</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        changeViewPort = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
 <a id="aba3f07059dcbdb11c66f84d2ca3dd8c0" name="aba3f07059dcbdb11c66f84d2ca3dd8c0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aba3f07059dcbdb11c66f84d2ca3dd8c0">&#9670;&nbsp;</a></span>SwapBuffers()</h2>
 
@@ -314,9 +341,9 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="../../d7/d20/class_l_t_e_1_1graphics_context.html#af995eacf4bc6a4fbe9c7923e40f2d778">LTE::graphicsContext</a>.</p>
-<div class="fragment"><div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    {</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        <a class="code hl_function" href="../../d0/d13/class_l_t_e_1_1app.html#a20078832f060b3cce9ded4e5f067cfa4">app::getOsAPI</a>()-&gt;<a class="code hl_function" href="../../d8/da3/class_l_t_e_1_1os_a_p_i.html#a5797efa13ff7fb2f6fb37e1aa7a0940e">swapBuffers</a>(windowId);</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    }</div>
+<div class="fragment"><div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    {</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <a class="code hl_function" href="../../d0/d13/class_l_t_e_1_1app.html#a20078832f060b3cce9ded4e5f067cfa4">app::getOsAPI</a>()-&gt;<a class="code hl_function" href="../../d8/da3/class_l_t_e_1_1os_a_p_i.html#a5797efa13ff7fb2f6fb37e1aa7a0940e">swapBuffers</a>(windowId);</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    }</div>
 <div class="ttc" id="aclass_l_t_e_1_1os_a_p_i_html_a5797efa13ff7fb2f6fb37e1aa7a0940e"><div class="ttname"><a href="../../d8/da3/class_l_t_e_1_1os_a_p_i.html#a5797efa13ff7fb2f6fb37e1aa7a0940e">LTE::osAPI::swapBuffers</a></div><div class="ttdeci">virtual void swapBuffers(windowPieceId winId)=0</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>

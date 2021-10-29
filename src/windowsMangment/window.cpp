@@ -30,7 +30,7 @@ namespace LTE
 
 		sendorData->win->Width = sendorData->windowWidth;
 		sendorData->win->Height = sendorData->windowHeight;
-		// sendorData->win->getRenderApi()->SetViewport(0, 0, sendorData->windowWidth, sendorData->windowHeight);
+		sendorData->win->context->setViewPort(0, 0, sendorData->windowWidth, sendorData->windowHeight);
 	}
 
 	window::~window()

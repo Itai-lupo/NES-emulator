@@ -58,12 +58,20 @@ namespace LTE
             sendorData->currentTime = now;
             
             meshFactory->build();
+
+            if(changeViewPort)
+            {
+                api->SetViewport(x, y, width, height);
+                changeViewPort = false;
+            }
+
             getRenderApi()->SetClearColor({0.0f, 0.0f, 1.0f, 1.0f});
             getRenderApi()->Clear();
-            renderer::renderScene(sendorData->win->activeScene, sendorData->win->getRenderApi());
-            if(sendorData->win->useImGui){
+            renderer::renderScene(sendorData->win->activeScene, getRenderApi());
+
+            if(sendorData->win->useImGui)
                 onImGuiUpdate(sendorData->win, sendorData);
-            }
+            
             sendorData->win->context->SwapBuffers();
 
             eventManger::trigerEvent(sendorData);
@@ -81,4 +89,14 @@ namespace LTE
     {
         return api;
     }    
+
+    void openGLContext::setViewPort(int x, int y, int width, int height)
+    {
+        this->x = x;
+        this->y = y;
+        this->width = width;
+        this->height = height;
+        changeViewPort = true;
+    }
+
 } 

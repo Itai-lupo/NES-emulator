@@ -27,7 +27,7 @@ namespace LTE
 
     void openGLRenderApi::SetViewport(int x, int y, int width, int height)
     {
-        glViewport(x, y, width, height);
+        GL_CALL(glViewport(x, y, width, height));
     }
 
 

@@ -1,7 +1,6 @@
 var class_l_t_e_1_1window =
 [
     [ "~window", "d4/d38/class_l_t_e_1_1window.html#a4568b8ca13acdca177586c50315a5aa7", null ],
-    [ "getRenderApi", "d4/d38/class_l_t_e_1_1window.html#af370d189a39f4ed8a1933a87b5b6dc27", null ],
     [ "init", "d4/d38/class_l_t_e_1_1window.html#ada64ce70730800b0efe780533eb4369c", null ],
     [ "activeScene", "d4/d38/class_l_t_e_1_1window.html#acba19ea1d8f513ba9b320cefffd4af82", null ],
     [ "context", "d4/d38/class_l_t_e_1_1window.html#a0509800988efeae03289808049a1c20d", null ],

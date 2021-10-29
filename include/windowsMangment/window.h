@@ -30,8 +30,8 @@ namespace LTE
 			unsigned int Width = 1280, Height = 720;
 			bool useImGui = false;
 			windowPieceId id;
+			// renderApi *getRenderApi(){ return context->getRenderApi(); }
 
-			renderApi *getRenderApi(){ return context->getRenderApi(); }
 
 			void init();
 			~window();
