@@ -1,6 +1,5 @@
 <map id="LTE::meshRenderer::setShader" name="LTE::meshRenderer::setShader">
-<area shape="rect" id="node1" title=" " alt="" coords="5,71,152,112"/>
-<area shape="rect" id="node2" href="$dc/d5a/class_l_t_e_1_1mesh_absrtact_factory.html#aadb354c47fdb80c0ad3d6916c749605d" title=" " alt="" coords="200,5,379,47"/>
-<area shape="rect" id="node3" href="$d7/d20/class_l_t_e_1_1graphics_context.html#a937f07867b886d1f88ef4ee388c68dfb" title=" " alt="" coords="215,71,364,112"/>
-<area shape="rect" id="node4" href="$de/de3/class_l_t_e_1_1window_manger.html#aeb94c72d9ef01e6ec53328e2ba972628" title=" " alt="" coords="215,136,364,177"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,63,152,104"/>
+<area shape="rect" id="node2" href="$db/d3a/class_l_t_e_1_1asset_manager.html#a262ee7a127fcdce48003387a9dc8e933" title=" " alt="" coords="203,29,347,71"/>
+<area shape="rect" id="node3" href="$de/de3/class_l_t_e_1_1window_manger.html#aeb94c72d9ef01e6ec53328e2ba972628" title=" " alt="" coords="200,95,349,136"/>
 </map>

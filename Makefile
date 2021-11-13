@@ -32,7 +32,7 @@ TEST_INC_DIRS := $(foreach dir,$(INCLUDE_DIR),$(call rwildcardDir,$(dir)))
 INC_FLAGS := $(addprefix -I,$(INC_DIRS) $(LIB_DIR))
 LIB_FLAGS := $(addprefix -L,$(LIB_DIR))
 
-CPPFLAGS ?=  $(INC_FLAGS)  -MMD -MP  -g -Wall -Wc++17-extensions
+CPPFLAGS ?=  $(INC_FLAGS)  -MMD -MP  -g -Wall -Wc++17-extensions -std=c++20
 TEST_CPP_FLAGE = -lgtest -lgtest_main -lgmock  
 CFLAGS := $(LIB_FLAGS) -lstdc++ -lgflags -lglog -lGL -lglfw   -lrt -lm -ldl -lasound
 

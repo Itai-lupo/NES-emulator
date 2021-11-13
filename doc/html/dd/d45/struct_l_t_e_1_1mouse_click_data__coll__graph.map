@@ -1,11 +1,12 @@
 <map id="LTE::mouseClickData" name="LTE::mouseClickData">
-<area shape="rect" id="node1" title=" " alt="" coords="149,425,299,452"/>
-<area shape="rect" id="node2" href="$d3/d94/struct_l_t_e_1_1core_event_data.html" title=" " alt="" coords="153,349,295,376"/>
-<area shape="rect" id="node3" href="$d4/d38/class_l_t_e_1_1window.html" title=" " alt="" coords="175,260,273,287"/>
+<area shape="rect" id="node1" title=" " alt="" coords="242,425,393,452"/>
+<area shape="rect" id="node2" href="$d3/d94/struct_l_t_e_1_1core_event_data.html" title=" " alt="" coords="247,349,388,376"/>
+<area shape="rect" id="node3" href="$d4/d38/class_l_t_e_1_1window.html" title=" " alt="" coords="268,260,367,287"/>
 <area shape="rect" id="node4" href="$d7/d20/class_l_t_e_1_1graphics_context.html" title=" " alt="" coords="5,171,155,197"/>
 <area shape="rect" id="node5" href="$d6/d26/class_l_t_e_1_1scene.html" title=" " alt="" coords="179,171,269,197"/>
 <area shape="rect" id="node6" href="$d2/d49/class_l_t_e_1_1game_object.html" title=" " alt="" coords="109,81,233,108"/>
 <area shape="rect" id="node7" href="$dc/dda/class_l_t_e_1_1material.html" title=" " alt="" coords="257,81,357,108"/>
 <area shape="rect" id="node8" href="$d9/d4b/class_l_t_e_1_1component.html" title=" " alt="" coords="247,5,366,32"/>
 <area shape="rect" id="node9" href="$df/d41/class_l_t_e_1_1collider_system2_d.html" title=" " alt="" coords="293,171,451,197"/>
+<area shape="rect" id="node10" href="$db/d3a/class_l_t_e_1_1asset_manager.html" title=" " alt="" coords="475,171,611,197"/>
 </map>

@@ -7,28 +7,23 @@
 
 namespace LTE
 {
-    struct ShaderProgramSource
-    {
-        std::string VertexSource;
-        std::string FragmentSource;
-    };
 
     class openGLShader : public shader, public openGLBase
     {
         private:
-                ShaderProgramSource source;
                 std::unordered_map<std::string, int> m_UniformLoctionCache;
                 uint32_t rendererID;
 
 
                 unsigned int compileShader(unsigned int type, const std::string& source);
                 void createShader();
-                void ParseShaders();
                 int GetUniformLocation(const std::string& name);
 
+                std::string vertexSource;
+                std::string fragmentSource;
+
         public:
-            openGLShader(const std::string& filePath)
-                :shader(filePath){}
+            openGLShader(const std::string& vertexSource, const std::string& fragmentSource): vertexSource(vertexSource), fragmentSource(fragmentSource){}
             
             ~openGLShader();
 

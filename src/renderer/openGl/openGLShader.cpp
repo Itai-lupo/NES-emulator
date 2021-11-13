@@ -16,7 +16,6 @@ namespace LTE
 {
     void openGLShader::init()
     {
-        ParseShaders();
         createShader();
 
         GL_CALL(glUseProgram(rendererID));
@@ -27,45 +26,12 @@ namespace LTE
         GL_CALL(glDeleteProgram(rendererID));
     }
 
-    void openGLShader::ParseShaders()
-    {
-        std::ifstream stream(filePath);
-
-        enum ShaderType
-        {
-            NONE = -1,
-            vertex = 0,
-            fragment = 1
-        };
-
-        std::string line;
-        std::stringstream ss[2];
-        ShaderType type = ShaderType::NONE;
-
-        while (getline(stream, line)){
-            if(line.find("#shader") != std::string::npos)
-            {
-                type =  (ShaderType)
-                        ((line.find("vertex") != std::string::npos) * ((int)ShaderType::vertex - (int)ShaderType::NONE) +
-                        (line.find("fragment") != std::string::npos) * ((int)ShaderType::fragment - (int)ShaderType::NONE) +
-                        (int)ShaderType::NONE);
-            }
-            else if((int)type >= 0)
-            {
-                ss[(int)type] << line << "\n";
-            }
-        }
-
-        source.VertexSource = ss[(int)ShaderType::vertex].str();
-        source.FragmentSource = ss[(int)ShaderType::fragment].str();
-    }
 
     void openGLShader::createShader()
     {
         GL_CALL(rendererID = glCreateProgram());
-        
-        GL_CALL(unsigned int vs = compileShader(GL_VERTEX_SHADER, source.VertexSource);)
-        GL_CALL(unsigned int fs = compileShader(GL_FRAGMENT_SHADER, source.FragmentSource));
+        GL_CALL(unsigned int vs = compileShader(GL_VERTEX_SHADER, vertexSource);)
+        GL_CALL(unsigned int fs = compileShader(GL_FRAGMENT_SHADER, fragmentSource));
 
         GL_CALL(glAttachShader(rendererID, vs));
         GL_CALL(glAttachShader(rendererID, fs));
@@ -124,7 +90,7 @@ namespace LTE
     }
 
     void openGLShader::setUniform1i(const std::string& name, int value)
-    {
+    { 
         GL_CALL(glUniform1i(GetUniformLocation(name), value));
     }
 
@@ -145,7 +111,6 @@ namespace LTE
             return m_UniformLoctionCache[name];
 
         GL_CALL(m_UniformLoctionCache[name] = glGetUniformLocation(rendererID, name.c_str()));
-
         return m_UniformLoctionCache[name];
     }
 

@@ -17,7 +17,6 @@ var dir_2c62997ab97f0a9507aad64b66857ad7 =
       [ "LTE::openGLRenderApi", "d0/d71/class_l_t_e_1_1open_g_l_render_api.html", "d0/d71/class_l_t_e_1_1open_g_l_render_api" ]
     ] ],
     [ "openGLShader.h", "d6/d50/open_g_l_shader_8h.html", [
-      [ "LTE::ShaderProgramSource", "d2/d0f/struct_l_t_e_1_1_shader_program_source.html", "d2/d0f/struct_l_t_e_1_1_shader_program_source" ],
       [ "LTE::openGLShader", "d0/d99/class_l_t_e_1_1open_g_l_shader.html", "d0/d99/class_l_t_e_1_1open_g_l_shader" ]
     ] ],
     [ "openGLTexture.h", "df/d4f/open_g_l_texture_8h.html", [

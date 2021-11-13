@@ -1,20 +1,17 @@
 #pragma once
 #include <vector>
-#include "core.h"
 #include<string>
 #include <glm/glm.hpp>
+
+#include "asset.h"
+#include "core.h"
 #include "component.h"
 
 namespace LTE
 {
-    class shader
+    class shader : public asset
     {        
         public:
-            std::string filePath;
-            
-            shader(const std::string& filePath)
-                :filePath(filePath){}
-
             virtual void init() = 0;
 
             virtual void bind() = 0;

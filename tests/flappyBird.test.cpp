@@ -161,7 +161,7 @@ class bird: public LTE::component
             LTE::KeyData *eventData = dynamic_cast<LTE::KeyData *>(sendor);
             player->getComponent<LTE::envelope>()->noteOn();
             player->getComponent<bird>()->speed = 1.25f;
-            player->getComponent<LTE::meshRenderer>()->setShader(( player->getComponent<bird>()->star? "res/flappyBird/bird.shader": "res/flappyBird/Basic.shader"));
+            player->getComponent<LTE::meshRenderer>()->setShader(( player->getComponent<bird>()->star? "res/flappyBird/bird.glsl": "res/flappyBird/Basic.glsl"));
             player->getComponent<LTE::material>()->setTexture(( player->getComponent<bird>()->star ? player->getComponent<bird>()->logoTex : player->getComponent<bird>()->starTex));
             player->getComponent<bird>()->star = !player->getComponent<bird>()->star;
             player->getComponent<LTE::envelope>()->noteOff();
@@ -224,7 +224,7 @@ class pilarSummener: public LTE::component
                             pushVertexBufferElement({LT_FLOAT, 2, false, 4});
                         }))->
                     addComponent(new LTE::material("res/textures/5_star.png", {1.0f, 1.0f, 0.0f, 1.0f}))->
-                    addComponent(new LTE::meshRenderer("res/flappyBird/Basic.shader"))->
+                    addComponent(new LTE::meshRenderer("res/flappyBird/Basic.glsl"))->
                     addComponent(new pilar())->
                     addComponent(new LTE::squreCollider());
                 });
@@ -242,7 +242,7 @@ class pilarSummener: public LTE::component
                             pushVertexBufferElement({LT_FLOAT, 2, false, 4});
                         }))->
                     addComponent(new LTE::material("res/textures/5_star.png", {1.0f, 1.0f, 0.0f, 1.0f}))->
-                    addComponent(new LTE::meshRenderer("res/flappyBird/Basic.shader"))->
+                    addComponent(new LTE::meshRenderer("res/flappyBird/Basic.glsl"))->
                     addComponent(new pilar())->
                     addComponent(new LTE::squreCollider());
                 });
@@ -353,7 +353,7 @@ class flappyBird : public ::testing::Test
                 builder->
                     setObjectName("player")->
                     setObjectTransform({{ -0.9, 0.0f, -1.0f}, {0.0f, 0.0f, 0.0f}, { 0.2, 0.2f, 0.0f}})->
-                    addComponent(new LTE::meshRenderer("res/flappyBird/bird.shader"))->
+                    addComponent(new LTE::meshRenderer("res/flappyBird/bird.glsl"))->
                     setWindowId(gameWindowId)->
                     addComponent(LTE::mesh::build([=, this](LTE::mesh::meshBuilder *builder)
                         {
@@ -392,7 +392,7 @@ class flappyBird : public ::testing::Test
                             pushVertexBufferElement({LT_FLOAT, 2, false, 4});
                         }))->
                     addComponent(new LTE::material("res/textures/5_star.png", {1.0f, 1.0f, 0.0f, 1.0f}))->
-                    addComponent(new LTE::meshRenderer("res/flappyBird/Basic.shader"))->
+                    addComponent(new LTE::meshRenderer("res/flappyBird/Basic.glsl"))->
                     addComponent(new pilar())->
                     addComponent(new LTE::squreCollider());
                 });
@@ -410,7 +410,7 @@ class flappyBird : public ::testing::Test
                             pushVertexBufferElement({LT_FLOAT, 2, false, 4});
                         }))->
                     addComponent(new LTE::material("res/textures/5_star.png", {1.0f, 1.0f, 0.0f, 1.0f}))->
-                    addComponent(new LTE::meshRenderer("res/flappyBird/Basic.shader"))->
+                    addComponent(new LTE::meshRenderer("res/flappyBird/Basic.glsl"))->
                     addComponent(new pilar())->
                     addComponent(new LTE::squreCollider());
                 });

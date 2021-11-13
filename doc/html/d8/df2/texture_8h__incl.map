@@ -1,8 +1,9 @@
 <map id="include/renderer/textures/texture.h" name="include/renderer/textures/texture.h">
-<area shape="rect" id="node1" title=" " alt="" coords="32,5,197,47"/>
-<area shape="rect" id="node2" title=" " alt="" coords="91,169,146,196"/>
-<area shape="rect" id="node3" href="$d5/dc4/core_8h.html" title=" " alt="" coords="15,95,73,121"/>
-<area shape="rect" id="node5" href="$d1/d8c/logger_8h.html" title=" " alt="" coords="152,95,219,121"/>
+<area shape="rect" id="node1" title=" " alt="" coords="55,5,220,47"/>
+<area shape="rect" id="node2" title=" " alt="" coords="113,169,167,196"/>
+<area shape="rect" id="node3" href="$d5/dc4/core_8h.html" title=" " alt="" coords="7,95,65,121"/>
+<area shape="rect" id="node5" href="$d3/d3e/asset_8h.html" title=" " alt="" coords="141,95,206,121"/>
+<area shape="rect" id="node6" href="$d1/d8c/logger_8h.html" title=" " alt="" coords="231,95,297,121"/>
 <area shape="rect" id="node4" title=" " alt="" coords="5,169,67,196"/>
-<area shape="rect" id="node6" title=" " alt="" coords="170,169,273,196"/>
+<area shape="rect" id="node7" title=" " alt="" coords="213,169,315,196"/>
 </map>

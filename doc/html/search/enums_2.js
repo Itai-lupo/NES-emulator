@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['sondwaves_0',['sondWaves',['../dc/d59/namespace_l_t_e.html#afdee5b51c7e400b6c32b22c2c909d2b0',1,'LTE']]]
+  ['renderapitype_0',['renderAPIType',['../dc/d59/namespace_l_t_e.html#a1549406e7962ca62439f148b6bec5d60',1,'LTE']]]
 ];

@@ -2,6 +2,8 @@ var namespace_l_t_e =
 [
     [ "GMNM", "d4/d17/namespace_l_t_e_1_1_g_m_n_m.html", "d4/d17/namespace_l_t_e_1_1_g_m_n_m" ],
     [ "app", "d0/d13/class_l_t_e_1_1app.html", null ],
+    [ "asset", "de/db4/class_l_t_e_1_1asset.html", "de/db4/class_l_t_e_1_1asset" ],
+    [ "assetManager", "db/d3a/class_l_t_e_1_1asset_manager.html", "db/d3a/class_l_t_e_1_1asset_manager" ],
     [ "bell", "d9/dc5/class_l_t_e_1_1bell.html", "d9/dc5/class_l_t_e_1_1bell" ],
     [ "bellRing", "d9/d60/class_l_t_e_1_1bell_ring.html", "d9/d60/class_l_t_e_1_1bell_ring" ],
     [ "colliderEventData", "da/dce/struct_l_t_e_1_1collider_event_data.html", "da/dce/struct_l_t_e_1_1collider_event_data" ],
@@ -17,8 +19,12 @@ var namespace_l_t_e =
     [ "envelope", "d2/d04/class_l_t_e_1_1envelope.html", "d2/d04/class_l_t_e_1_1envelope" ],
     [ "event", "da/df9/struct_l_t_e_1_1event.html", "da/df9/struct_l_t_e_1_1event" ],
     [ "eventManger", "d5/d7c/class_l_t_e_1_1event_manger.html", null ],
+    [ "file", "df/d84/class_l_t_e_1_1file.html", "df/d84/class_l_t_e_1_1file" ],
+    [ "fileManager", "df/dfd/class_l_t_e_1_1file_manager.html", null ],
+    [ "filesFactory", "d5/d69/class_l_t_e_1_1files_factory.html", null ],
     [ "gameObject", "d2/d49/class_l_t_e_1_1game_object.html", "d2/d49/class_l_t_e_1_1game_object" ],
     [ "GameObjectNotFoundException", "d9/d22/class_l_t_e_1_1_game_object_not_found_exception.html", "d9/d22/class_l_t_e_1_1_game_object_not_found_exception" ],
+    [ "glslFile", "d4/d18/class_l_t_e_1_1glsl_file.html", "d4/d18/class_l_t_e_1_1glsl_file" ],
     [ "graphicsContext", "d7/d20/class_l_t_e_1_1graphics_context.html", "d7/d20/class_l_t_e_1_1graphics_context" ],
     [ "guitar", "d4/d0d/class_l_t_e_1_1guitar.html", "d4/d0d/class_l_t_e_1_1guitar" ],
     [ "guitarString", "d4/d73/class_l_t_e_1_1guitar_string.html", "d4/d73/class_l_t_e_1_1guitar_string" ],
@@ -41,6 +47,7 @@ var namespace_l_t_e =
     [ "mouseClickData", "d8/d50/struct_l_t_e_1_1mouse_click_data.html", "d8/d50/struct_l_t_e_1_1mouse_click_data" ],
     [ "mouseMoveData", "d6/da3/struct_l_t_e_1_1mouse_move_data.html", "d6/da3/struct_l_t_e_1_1mouse_move_data" ],
     [ "mouseScrollData", "d5/d4d/struct_l_t_e_1_1mouse_scroll_data.html", "d5/d4d/struct_l_t_e_1_1mouse_scroll_data" ],
+    [ "mp3File", "dd/da0/class_l_t_e_1_1mp3_file.html", "dd/da0/class_l_t_e_1_1mp3_file" ],
     [ "note", "dd/dab/struct_l_t_e_1_1note.html", "dd/dab/struct_l_t_e_1_1note" ],
     [ "onUpdateData", "dd/d5d/struct_l_t_e_1_1on_update_data.html", "dd/d5d/struct_l_t_e_1_1on_update_data" ],
     [ "openGLAbsrtactFactory", "d3/d7a/class_l_t_e_1_1open_g_l_absrtact_factory.html", "d3/d7a/class_l_t_e_1_1open_g_l_absrtact_factory" ],
@@ -57,6 +64,7 @@ var namespace_l_t_e =
     [ "OSAbstractFactory", "db/d1c/class_l_t_e_1_1_o_s_abstract_factory.html", "db/d1c/class_l_t_e_1_1_o_s_abstract_factory" ],
     [ "osAPI", "d8/da3/class_l_t_e_1_1os_a_p_i.html", "d8/da3/class_l_t_e_1_1os_a_p_i" ],
     [ "osc", "d6/dd7/class_l_t_e_1_1osc.html", null ],
+    [ "pngFile", "df/ddd/class_l_t_e_1_1png_file.html", "df/ddd/class_l_t_e_1_1png_file" ],
     [ "renderApi", "df/d3a/class_l_t_e_1_1render_api.html", "df/d3a/class_l_t_e_1_1render_api" ],
     [ "renderer", "d1/d10/class_l_t_e_1_1renderer.html", null ],
     [ "router", "d7/d22/class_l_t_e_1_1router.html", "d7/d22/class_l_t_e_1_1router" ],
@@ -97,6 +105,11 @@ var namespace_l_t_e =
     [ "chords", "dc/d59/namespace_l_t_e.html#acda0aaed89ef27ddb8cace851349e007", [
       [ "openChord", "dc/d59/namespace_l_t_e.html#acda0aaed89ef27ddb8cace851349e007af67ab1a6a64004d74ef7874d68ca0376", null ]
     ] ],
+    [ "fileTypes", "dc/d59/namespace_l_t_e.html#a813c90e8423bdad4463eea7bd3ee89c7", [
+      [ "mp3", "dc/d59/namespace_l_t_e.html#a813c90e8423bdad4463eea7bd3ee89c7ab097c51e9a0728e696b108745c9ff281", null ],
+      [ "glsl", "dc/d59/namespace_l_t_e.html#a813c90e8423bdad4463eea7bd3ee89c7ab44384b505fec5ed92c3caa132bfc0ed", null ],
+      [ "png", "dc/d59/namespace_l_t_e.html#a813c90e8423bdad4463eea7bd3ee89c7ac98e5ff56948c8736375d3398118aa48", null ]
+    ] ],
     [ "renderAPIType", "dc/d59/namespace_l_t_e.html#a1549406e7962ca62439f148b6bec5d60", [
       [ "OpenGL", "dc/d59/namespace_l_t_e.html#a1549406e7962ca62439f148b6bec5d60a48cb9daa41ed1838d1f352a141725d37", null ]
     ] ],
@@ -115,6 +128,7 @@ var namespace_l_t_e =
     [ "checkYBonds", "dc/d59/namespace_l_t_e.html#ae5a25649ff95c04e16830f550227549e", null ],
     [ "clap", "dc/d59/namespace_l_t_e.html#ad863355b6c8b17627459d7b2da68ab97", null ],
     [ "closeImGui", "dc/d59/namespace_l_t_e.html#a5565f106d60731b4b9e99d1be1c399ed", null ],
+    [ "createFile", "dc/d59/namespace_l_t_e.html#ac37d5c7f5ba6bcccd7a30f0427eb5332", null ],
     [ "ImGuiKeyPressed", "dc/d59/namespace_l_t_e.html#a16a6d02797ea9ee128e59c3eace55d44", null ],
     [ "ImGuiKeyReleased", "dc/d59/namespace_l_t_e.html#affb8dd9dab839fcd6cd20780443bf113", null ],
     [ "ImGuiKeyTyped", "dc/d59/namespace_l_t_e.html#af7b777b2831230421ffa00d59bb70bd7", null ],
@@ -124,5 +138,6 @@ var namespace_l_t_e =
     [ "ImGuiMouseScrolled", "dc/d59/namespace_l_t_e.html#ab6b2d2c2a7d71b40fe4e0bfe4c6958e6", null ],
     [ "ImGuiWindowResize", "dc/d59/namespace_l_t_e.html#a756a355af550b9c5cb07d30c6383d694", null ],
     [ "initImGui", "dc/d59/namespace_l_t_e.html#abc483098a80a0f09e482314a674cd430", null ],
-    [ "onImGuiUpdate", "dc/d59/namespace_l_t_e.html#afea151dc9fd2a8f71e4bbfbc602578fb", null ]
+    [ "onImGuiUpdate", "dc/d59/namespace_l_t_e.html#afea151dc9fd2a8f71e4bbfbc602578fb", null ],
+    [ "stringToFileType", "dc/d59/namespace_l_t_e.html#a3f3cde7e6e1be0676045b00a64bc7635", null ]
 ];

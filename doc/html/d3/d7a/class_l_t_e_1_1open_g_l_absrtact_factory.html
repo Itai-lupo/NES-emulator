@@ -113,8 +113,8 @@ Collaboration diagram for LTE::openGLAbsrtactFactory:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:adf973547933929c9b44ff0f82ad4b928"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d1/d2e/class_l_t_e_1_1shader.html">shader</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d7a/class_l_t_e_1_1open_g_l_absrtact_factory.html#adf973547933929c9b44ff0f82ad4b928">createShader</a> (const char *path) override</td></tr>
-<tr class="separator:adf973547933929c9b44ff0f82ad4b928"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a464442d548d5a00a518dfd3c9d5ee21c"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d1/d2e/class_l_t_e_1_1shader.html">shader</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d7a/class_l_t_e_1_1open_g_l_absrtact_factory.html#a464442d548d5a00a518dfd3c9d5ee21c">createShader</a> (const std::string &amp;vertexSource, const std::string &amp;fragmentSource) override</td></tr>
+<tr class="separator:a464442d548d5a00a518dfd3c9d5ee21c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a101f16053f7bd2257fce87de002d0012"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../df/db4/class_l_t_e_1_1vertex_array.html">vertexArray</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d7a/class_l_t_e_1_1open_g_l_absrtact_factory.html#a101f16053f7bd2257fce87de002d0012">createVertexArray</a> (<a class="el" href="../../d2/dcd/class_l_t_e_1_1_vertex_buffer.html">VertexBuffer</a> *vb) override</td></tr>
 <tr class="separator:a101f16053f7bd2257fce87de002d0012"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6650a91e7eabb6648dfb636fe65b3495"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d2/dcd/class_l_t_e_1_1_vertex_buffer.html">VertexBuffer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d7a/class_l_t_e_1_1open_g_l_absrtact_factory.html#a6650a91e7eabb6648dfb636fe65b3495">createVertexBuffer</a> (float *vertexs, uint32_t size) override</td></tr>
@@ -205,8 +205,8 @@ Public Member Functions</h2></td></tr>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="adf973547933929c9b44ff0f82ad4b928" name="adf973547933929c9b44ff0f82ad4b928"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adf973547933929c9b44ff0f82ad4b928">&#9670;&nbsp;</a></span>createShader()</h2>
+<a id="a464442d548d5a00a518dfd3c9d5ee21c" name="a464442d548d5a00a518dfd3c9d5ee21c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a464442d548d5a00a518dfd3c9d5ee21c">&#9670;&nbsp;</a></span>createShader()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -217,9 +217,19 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">virtual <a class="el" href="../../d1/d2e/class_l_t_e_1_1shader.html">shader</a> * LTE::openGLAbsrtactFactory::createShader </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>path</em></td><td>)</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>vertexSource</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>fragmentSource</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -229,9 +239,9 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="../../dc/d5a/class_l_t_e_1_1mesh_absrtact_factory.html#aadb354c47fdb80c0ad3d6916c749605d">LTE::meshAbsrtactFactory</a>.</p>
+<p>Implements <a class="el" href="../../dc/d5a/class_l_t_e_1_1mesh_absrtact_factory.html#ad9cc51d4516629489a3065590aa6a56e">LTE::meshAbsrtactFactory</a>.</p>
 <div class="fragment"><div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>            {</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>                openGLShader *s = <span class="keyword">new</span> openGLShader(path);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>                openGLShader *s = <span class="keyword">new</span> openGLShader(vertexSource, fragmentSource);</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>                needToInit.push(s);</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>                <span class="keywordflow">return</span> s;</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>            }</div>

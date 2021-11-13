@@ -1,11 +1,12 @@
 #pragma once
 #include <string>
 #include "core.h"
+#include "asset.h"
 #include "logger.h"
 
 namespace LTE
 {
-    class texture
+    class texture : public asset
     {
         protected:
             std::string path;

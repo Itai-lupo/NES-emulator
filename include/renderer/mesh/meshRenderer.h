@@ -49,13 +49,12 @@ namespace LTE
             {
                 window *win = windowManger::getWindow(winId);
                 win->activeScene->objects->push_back(parent);
-                s = win->context->getMeshFactory()->createShader(shaderPath.c_str());
+                s = win->assetLibrary->getAsset<shader>(shaderPath.c_str());
             }
 
             void setShader(const std::string& shaderPath)
             {
-                delete s;
-                s = windowManger::getWindow(winId)->context->getMeshFactory()->createShader(shaderPath.c_str());
+                s = windowManger::getWindow(winId)->assetLibrary->getAsset<shader>(shaderPath.c_str());
             }
 
             virtual void end() override 

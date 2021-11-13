@@ -6,6 +6,7 @@
 #include "indexBuffer.h"
 #include "vertexArray.h"
 #include "transform.h"
+#include "asset.h"
 
 #include <glm/glm.hpp>
 #include <glm/ext.hpp>
@@ -15,7 +16,7 @@
 
 namespace LTE
 {
-    class mesh: public component
+    class mesh: public component, public asset
         {
             public: 
                 class meshBuilder

@@ -19,9 +19,9 @@ namespace LTE
             std::queue<openGLBase*> needToInit;
         public:
 
-            virtual shader *createShader(const char *path) override
+            virtual shader *createShader(const std::string& vertexSource, const std::string& fragmentSource) override
             {
-                openGLShader *s = new openGLShader(path);
+                openGLShader *s = new openGLShader(vertexSource, fragmentSource);
                 needToInit.push(s);
                 return s;
             }

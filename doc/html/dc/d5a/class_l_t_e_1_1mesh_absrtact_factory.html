@@ -104,8 +104,8 @@ Inheritance diagram for LTE::meshAbsrtactFactory:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aadb354c47fdb80c0ad3d6916c749605d"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d1/d2e/class_l_t_e_1_1shader.html">shader</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d5a/class_l_t_e_1_1mesh_absrtact_factory.html#aadb354c47fdb80c0ad3d6916c749605d">createShader</a> (const char *path)=0</td></tr>
-<tr class="separator:aadb354c47fdb80c0ad3d6916c749605d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9cc51d4516629489a3065590aa6a56e"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d1/d2e/class_l_t_e_1_1shader.html">shader</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d5a/class_l_t_e_1_1mesh_absrtact_factory.html#ad9cc51d4516629489a3065590aa6a56e">createShader</a> (const std::string &amp;vertexSource, const std::string &amp;fragmentSource)=0</td></tr>
+<tr class="separator:ad9cc51d4516629489a3065590aa6a56e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a753fe760d602687dd8f12f7435471471"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../df/db4/class_l_t_e_1_1vertex_array.html">vertexArray</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d5a/class_l_t_e_1_1mesh_absrtact_factory.html#a753fe760d602687dd8f12f7435471471">createVertexArray</a> (<a class="el" href="../../d2/dcd/class_l_t_e_1_1_vertex_buffer.html">VertexBuffer</a> *vb)=0</td></tr>
 <tr class="separator:a753fe760d602687dd8f12f7435471471"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a22fdb3ccd9516021d0abca1792a886b7"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d2/dcd/class_l_t_e_1_1_vertex_buffer.html">VertexBuffer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d5a/class_l_t_e_1_1mesh_absrtact_factory.html#a22fdb3ccd9516021d0abca1792a886b7">createVertexBuffer</a> (float *vertexs, uint32_t size)=0</td></tr>
@@ -194,8 +194,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="aadb354c47fdb80c0ad3d6916c749605d" name="aadb354c47fdb80c0ad3d6916c749605d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aadb354c47fdb80c0ad3d6916c749605d">&#9670;&nbsp;</a></span>createShader()</h2>
+<a id="ad9cc51d4516629489a3065590aa6a56e" name="ad9cc51d4516629489a3065590aa6a56e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9cc51d4516629489a3065590aa6a56e">&#9670;&nbsp;</a></span>createShader()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -206,9 +206,19 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">virtual <a class="el" href="../../d1/d2e/class_l_t_e_1_1shader.html">shader</a> * LTE::meshAbsrtactFactory::createShader </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>path</em></td><td>)</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>vertexSource</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>fragmentSource</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -218,15 +228,14 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="../../d3/d7a/class_l_t_e_1_1open_g_l_absrtact_factory.html#adf973547933929c9b44ff0f82ad4b928">LTE::openGLAbsrtactFactory</a>.</p>
+<p>Implemented in <a class="el" href="../../d3/d7a/class_l_t_e_1_1open_g_l_absrtact_factory.html#a464442d548d5a00a518dfd3c9d5ee21c">LTE::openGLAbsrtactFactory</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../dc/d5a/class_l_t_e_1_1mesh_absrtact_factory_aadb354c47fdb80c0ad3d6916c749605d_icgraph.png" border="0" usemap="#adc/d5a/class_l_t_e_1_1mesh_absrtact_factory_aadb354c47fdb80c0ad3d6916c749605d_icgraph" alt=""/></div>
-<map name="adc/d5a/class_l_t_e_1_1mesh_absrtact_factory_aadb354c47fdb80c0ad3d6916c749605d_icgraph" id="adc/d5a/class_l_t_e_1_1mesh_absrtact_factory_aadb354c47fdb80c0ad3d6916c749605d_icgraph">
-<area shape="rect" title=" " alt="" coords="217,27,396,69"/>
-<area shape="rect" href="../../d2/df6/class_l_t_e_1_1mesh_renderer.html#a9638e74536e62f96c1ad1e7b524ea3a0" title=" " alt="" coords="5,5,169,32"/>
-<area shape="rect" href="../../d2/df6/class_l_t_e_1_1mesh_renderer.html#a57fc859a31e2d31c38fbff6a1e803208" title=" " alt="" coords="14,57,161,98"/>
+<div class="center"><img src="../../dc/d5a/class_l_t_e_1_1mesh_absrtact_factory_ad9cc51d4516629489a3065590aa6a56e_icgraph.png" border="0" usemap="#adc/d5a/class_l_t_e_1_1mesh_absrtact_factory_ad9cc51d4516629489a3065590aa6a56e_icgraph" alt=""/></div>
+<map name="adc/d5a/class_l_t_e_1_1mesh_absrtact_factory_ad9cc51d4516629489a3065590aa6a56e_icgraph" id="adc/d5a/class_l_t_e_1_1mesh_absrtact_factory_ad9cc51d4516629489a3065590aa6a56e_icgraph">
+<area shape="rect" title=" " alt="" coords="233,5,412,47"/>
+<area shape="rect" href="../../d4/d18/class_l_t_e_1_1glsl_file.html#a0b679092fd26f94020652f0ce3a90897" title=" " alt="" coords="5,5,185,47"/>
 </map>
 </div>
 

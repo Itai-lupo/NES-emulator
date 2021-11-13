@@ -1,11 +1,12 @@
 <map id="LTE::colliderEventData" name="LTE::colliderEventData">
-<area shape="rect" id="node1" title=" " alt="" coords="31,425,189,452"/>
-<area shape="rect" id="node2" href="$d3/d94/struct_l_t_e_1_1core_event_data.html" title=" " alt="" coords="135,349,277,376"/>
-<area shape="rect" id="node3" href="$d4/d38/class_l_t_e_1_1window.html" title=" " alt="" coords="189,260,287,287"/>
-<area shape="rect" id="node4" href="$d7/d20/class_l_t_e_1_1graphics_context.html" title=" " alt="" coords="401,171,550,197"/>
+<area shape="rect" id="node1" title=" " alt="" coords="39,425,197,452"/>
+<area shape="rect" id="node2" href="$d3/d94/struct_l_t_e_1_1core_event_data.html" title=" " alt="" coords="166,349,307,376"/>
+<area shape="rect" id="node3" href="$d4/d38/class_l_t_e_1_1window.html" title=" " alt="" coords="249,260,347,287"/>
+<area shape="rect" id="node4" href="$d7/d20/class_l_t_e_1_1graphics_context.html" title=" " alt="" coords="561,171,710,197"/>
 <area shape="rect" id="node5" href="$d6/d26/class_l_t_e_1_1scene.html" title=" " alt="" coords="105,171,195,197"/>
 <area shape="rect" id="node6" href="$d2/d49/class_l_t_e_1_1game_object.html" title=" " alt="" coords="5,81,129,108"/>
 <area shape="rect" id="node7" href="$dc/dda/class_l_t_e_1_1material.html" title=" " alt="" coords="153,81,253,108"/>
 <area shape="rect" id="node8" href="$d9/d4b/class_l_t_e_1_1component.html" title=" " alt="" coords="144,5,263,32"/>
 <area shape="rect" id="node9" href="$df/d41/class_l_t_e_1_1collider_system2_d.html" title=" " alt="" coords="219,171,377,197"/>
+<area shape="rect" id="node10" href="$db/d3a/class_l_t_e_1_1asset_manager.html" title=" " alt="" coords="401,171,537,197"/>
 </map>

@@ -10,6 +10,7 @@
 #include "soundSynthesizer.h"
 #include "materialsManger.h"
 #include "connectionsManager.h"
+#include "filesManager.h"
 
 #include <chrono>
 #include <string>
@@ -30,12 +31,12 @@ namespace LTE
 
         osFactory = OSAbstractFactory::init();
         os = osFactory->createOsApi();
+        fileManager::init();
         
         windowManger::init();
         soundEngine::init();
         materialsManger::init();
         GMNM::connectionsManager::init();
-
     }
 
     void app::close()
@@ -47,7 +48,9 @@ namespace LTE
         windowManger::close();
         materialsManger::close();
         GMNM::connectionsManager::close();
+        fileManager::close();
         logger::close();
+
 
         delete osFactory;
         delete os;

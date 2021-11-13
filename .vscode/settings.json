@@ -1,5 +1,6 @@
 {
     "files.associations": {
+        "*.GLSL": "shaderlab",
         "iostream": "cpp",
         "array": "c",
         "atomic": "c",
@@ -120,7 +121,11 @@
         "squrecollider.h": "c",
         "component.h": "c",
         "logger.h": "c",
-        "meshabsrtactfactory.h": "c"
+        "meshabsrtactfactory.h": "c",
+        "filesystem": "cpp",
+        "*.def": "cpp",
+        "*.inc": "cpp",
+        "assetmanager.h": "c"
     },
     "files.exclude": {
         ".gitignore": true,
