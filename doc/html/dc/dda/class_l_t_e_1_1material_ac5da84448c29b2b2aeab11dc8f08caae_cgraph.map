@@ -1,6 +1,5 @@
 <map id="LTE::material::init" name="LTE::material::init">
-<area shape="rect" id="node1" title=" " alt="" coords="5,78,131,105"/>
-<area shape="rect" id="node2" href="$dc/d5a/class_l_t_e_1_1mesh_absrtact_factory.html#af4ef730bd7c5f86282d07c114114ef18" title=" " alt="" coords="179,5,357,47"/>
-<area shape="rect" id="node3" href="$d7/d20/class_l_t_e_1_1graphics_context.html#a937f07867b886d1f88ef4ee388c68dfb" title=" " alt="" coords="193,71,343,112"/>
-<area shape="rect" id="node4" href="$de/de3/class_l_t_e_1_1window_manger.html#aeb94c72d9ef01e6ec53328e2ba972628" title=" " alt="" coords="193,136,343,177"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,70,131,97"/>
+<area shape="rect" id="node2" href="$db/d3a/class_l_t_e_1_1asset_manager.html#a262ee7a127fcdce48003387a9dc8e933" title=" " alt="" coords="181,29,325,71"/>
+<area shape="rect" id="node3" href="$de/de3/class_l_t_e_1_1window_manger.html#aeb94c72d9ef01e6ec53328e2ba972628" title=" " alt="" coords="179,95,328,136"/>
 </map>

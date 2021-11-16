@@ -22,14 +22,13 @@ namespace LTE
     void material::init(gameObject *parent)
     {
         if(texturePath != "")
-            tex = windowManger::getWindow(winId)->context->getMeshFactory()->createTexture(texturePath);
+            tex = windowManger::getWindow(winId)->assetLibrary->getAsset<texture>(texturePath);
     }
 
 
     void material::end()
     {
-        if(tex != nullptr)
-            delete tex;
+
     }
 
     void material::bind(shader *s)
@@ -58,7 +57,8 @@ namespace LTE
 
     void material::setTexture(const std::string& path)
     {
-        this->tex = windowManger::getWindow(winId)->context->getMeshFactory()->createTexture(path);
+        texturePath = path;
+        this->tex = windowManger::getWindow(winId)->assetLibrary->getAsset<texture>(path);
     }
 
     void material::setBaseColor(glm::vec4 baseColor)

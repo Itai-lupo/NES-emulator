@@ -104,9 +104,6 @@ class bird: public LTE::component
                 setEventCallback(onImGui)->
                 setEntityID(parentId)->
                 setWindowId(debugInfoWindowId)->add();
-
-                logoTex = LTE::windowManger::getWindow(winId)->context->getMeshFactory()->createTexture("res/textures/Logo.png");
-                starTex = LTE::windowManger::getWindow(winId)->context->getMeshFactory()->createTexture("res/textures/5_star copy.png");
         }
 
         virtual void end() override
@@ -161,8 +158,8 @@ class bird: public LTE::component
             LTE::KeyData *eventData = dynamic_cast<LTE::KeyData *>(sendor);
             player->getComponent<LTE::envelope>()->noteOn();
             player->getComponent<bird>()->speed = 1.25f;
-            player->getComponent<LTE::meshRenderer>()->setShader(( player->getComponent<bird>()->star? "res/flappyBird/bird.glsl": "res/flappyBird/Basic.glsl"));
-            player->getComponent<LTE::material>()->setTexture(( player->getComponent<bird>()->star ? player->getComponent<bird>()->logoTex : player->getComponent<bird>()->starTex));
+            player->getComponent<LTE::meshRenderer>()->setShader(( player->getComponent<bird>()->star ? "res/flappyBird/bird.glsl": "res/flappyBird/Basic.glsl"));
+            player->getComponent<LTE::material>()->setTexture(( player->getComponent<bird>()->star ? "res/textures/Logo.png" : "res/textures/5_star.png"));
             player->getComponent<bird>()->star = !player->getComponent<bird>()->star;
             player->getComponent<LTE::envelope>()->noteOff();
         }

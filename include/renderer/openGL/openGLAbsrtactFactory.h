@@ -49,6 +49,8 @@ namespace LTE
 
             virtual texture *createTexture(const std::string& path) override
             {
+                LAUGHTALE_ENGINR_LOG_INFO(path)
+
                 openGLTexture *t = new openGLTexture(path);
                 needToInit.push(t);
                 return t;

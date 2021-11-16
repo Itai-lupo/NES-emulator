@@ -151,7 +151,7 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>: <a class="code hl_function" href="../../df/d84/class_l_t_e_1_1file.html#abdb4039a85767cbb516be884392f7148">file</a>(<a class="code hl_variable" href="../../df/d84/class_l_t_e_1_1file.html#a40106a196950c499e585c26c4364299c">filePath</a>){}</div>
+<div class="fragment"><div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>: <a class="code hl_function" href="../../df/d84/class_l_t_e_1_1file.html#abdb4039a85767cbb516be884392f7148">file</a>(<a class="code hl_variable" href="../../df/d84/class_l_t_e_1_1file.html#a40106a196950c499e585c26c4364299c">filePath</a>){}</div>
 <div class="ttc" id="aclass_l_t_e_1_1file_html_a40106a196950c499e585c26c4364299c"><div class="ttname"><a href="../../df/d84/class_l_t_e_1_1file.html#a40106a196950c499e585c26c4364299c">LTE::file::filePath</a></div><div class="ttdeci">std::string filePath</div><div class="ttdef"><b>Definition:</b> file.h:11</div></div>
 <div class="ttc" id="aclass_l_t_e_1_1file_html_abdb4039a85767cbb516be884392f7148"><div class="ttname"><a href="../../df/d84/class_l_t_e_1_1file.html#abdb4039a85767cbb516be884392f7148">LTE::file::file</a></div><div class="ttdeci">file(const std::string &amp;filePath)</div><div class="ttdef"><b>Definition:</b> file.h:14</div></div>
 </div><!-- fragment -->
@@ -179,7 +179,10 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>{}</div>
+<div class="fragment"><div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    {</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>        <span class="keywordflow">if</span>(tex)</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>            <span class="keyword">delete</span> tex;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -197,7 +200,7 @@ Additional Inherited Members</h2></td></tr>
           <td class="memname"><a class="el" href="../../de/db4/class_l_t_e_1_1asset.html">asset</a> * LTE::pngFile::genrateAssetForWindow </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="../../dc/d59/namespace_l_t_e.html#a8ae7e0c0e39c6dfb8804ee2eecf2c6c2">windowPieceId</a>&#160;</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><em>winId</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -209,10 +212,25 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="../../df/d84/class_l_t_e_1_1file.html#a961077558f39e457aadf1253797e42d8">LTE::file</a>.</p>
-<div class="fragment"><div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    {</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>        <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    }</div>
-</div><!-- fragment -->
+<div class="fragment"><div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../de/de3/class_l_t_e_1_1window_manger.html#aeb94c72d9ef01e6ec53328e2ba972628">windowManger::getWindow</a>(winId)-&gt;<a class="code hl_variable" href="../../d4/d38/class_l_t_e_1_1window.html#a0509800988efeae03289808049a1c20d">context</a>-&gt;<a class="code hl_function" href="../../d7/d20/class_l_t_e_1_1graphics_context.html#a937f07867b886d1f88ef4ee388c68dfb">getMeshFactory</a>()-&gt;<a class="code hl_function" href="../../dc/d5a/class_l_t_e_1_1mesh_absrtact_factory.html#af4ef730bd7c5f86282d07c114114ef18">createTexture</a>(<a class="code hl_variable" href="../../df/d84/class_l_t_e_1_1file.html#a40106a196950c499e585c26c4364299c">filePath</a>);</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    }</div>
+<div class="ttc" id="aclass_l_t_e_1_1graphics_context_html_a937f07867b886d1f88ef4ee388c68dfb"><div class="ttname"><a href="../../d7/d20/class_l_t_e_1_1graphics_context.html#a937f07867b886d1f88ef4ee388c68dfb">LTE::graphicsContext::getMeshFactory</a></div><div class="ttdeci">virtual meshAbsrtactFactory * getMeshFactory()=0</div></div>
+<div class="ttc" id="aclass_l_t_e_1_1mesh_absrtact_factory_html_af4ef730bd7c5f86282d07c114114ef18"><div class="ttname"><a href="../../dc/d5a/class_l_t_e_1_1mesh_absrtact_factory.html#af4ef730bd7c5f86282d07c114114ef18">LTE::meshAbsrtactFactory::createTexture</a></div><div class="ttdeci">virtual texture * createTexture(const std::string &amp;path)=0</div></div>
+<div class="ttc" id="aclass_l_t_e_1_1window_html_a0509800988efeae03289808049a1c20d"><div class="ttname"><a href="../../d4/d38/class_l_t_e_1_1window.html#a0509800988efeae03289808049a1c20d">LTE::window::context</a></div><div class="ttdeci">graphicsContext * context</div><div class="ttdef"><b>Definition:</b> window.h:25</div></div>
+<div class="ttc" id="aclass_l_t_e_1_1window_manger_html_aeb94c72d9ef01e6ec53328e2ba972628"><div class="ttname"><a href="../../de/de3/class_l_t_e_1_1window_manger.html#aeb94c72d9ef01e6ec53328e2ba972628">LTE::windowManger::getWindow</a></div><div class="ttdeci">static window * getWindow(windowPieceId windowId)</div><div class="ttdef"><b>Definition:</b> windowManger.cpp:53</div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../df/ddd/class_l_t_e_1_1png_file_a23a62260e17f4627f074add2f745595d_cgraph.png" border="0" usemap="#adf/ddd/class_l_t_e_1_1png_file_a23a62260e17f4627f074add2f745595d_cgraph" alt=""/></div>
+<map name="adf/ddd/class_l_t_e_1_1png_file_a23a62260e17f4627f074add2f745595d_cgraph" id="adf/ddd/class_l_t_e_1_1png_file_a23a62260e17f4627f074add2f745595d_cgraph">
+<area shape="rect" title=" " alt="" coords="5,71,187,112"/>
+<area shape="rect" href="../../dc/d5a/class_l_t_e_1_1mesh_absrtact_factory.html#af4ef730bd7c5f86282d07c114114ef18" title=" " alt="" coords="235,5,413,47"/>
+<area shape="rect" href="../../d7/d20/class_l_t_e_1_1graphics_context.html#a937f07867b886d1f88ef4ee388c68dfb" title=" " alt="" coords="249,71,399,112"/>
+<area shape="rect" href="../../de/de3/class_l_t_e_1_1window_manger.html#aeb94c72d9ef01e6ec53328e2ba972628" title=" " alt="" coords="249,136,399,177"/>
+</map>
+</div>
+
 </div>
 </div>
 <a id="a70adb28d983343cac3f8e0c8aceebf09" name="a70adb28d983343cac3f8e0c8aceebf09"></a>
@@ -239,9 +257,9 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="../../df/d84/class_l_t_e_1_1file.html#abb756b8e1e8c6d607268971f307c4dba">LTE::file</a>.</p>
-<div class="fragment"><div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    {</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    }</div>
+<div class="fragment"><div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    {</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>

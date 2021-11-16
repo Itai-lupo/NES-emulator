@@ -107,7 +107,7 @@ namespace LTE
             }
             catch(const GameObjectNotFoundException& ex)
             {
-                LAUGHTALE_ENGINR_LOG_ERROR("entity with id: " << e->getEntityID() << " was'nt found so faild to call event with route: " << e->route);
+                LAUGHTALE_ENGINR_LOG_WARNING("entity with id: " << e->getEntityID() << " was'nt found so faild to call event with route: " << e->route);
                 removeEvent(e->route);
             }
             catch(const WindowNotFoundException& ex)
@@ -117,7 +117,7 @@ namespace LTE
             }
             catch(const std::exception& ex)
             {
-                LAUGHTALE_ENGINR_LOG_WARNING("faild to call event " << e->getEventRoute() << " because: " << ex.what());
+                LAUGHTALE_ENGINR_LOG_ERROR("faild to call event " << e->getEventRoute() << " because: " << ex.what());
             }
         }, sendor->route);
 

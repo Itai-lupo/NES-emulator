@@ -1,6 +1,5 @@
 <map id="LTE::material::setTexture" name="LTE::material::setTexture">
-<area shape="rect" id="node1" title=" " alt="" coords="5,78,175,105"/>
-<area shape="rect" id="node2" href="$dc/d5a/class_l_t_e_1_1mesh_absrtact_factory.html#af4ef730bd7c5f86282d07c114114ef18" title=" " alt="" coords="223,5,401,47"/>
-<area shape="rect" id="node3" href="$d7/d20/class_l_t_e_1_1graphics_context.html#a937f07867b886d1f88ef4ee388c68dfb" title=" " alt="" coords="237,71,387,112"/>
-<area shape="rect" id="node4" href="$de/de3/class_l_t_e_1_1window_manger.html#aeb94c72d9ef01e6ec53328e2ba972628" title=" " alt="" coords="237,136,387,177"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,70,175,97"/>
+<area shape="rect" id="node2" href="$db/d3a/class_l_t_e_1_1asset_manager.html#a262ee7a127fcdce48003387a9dc8e933" title=" " alt="" coords="225,29,369,71"/>
+<area shape="rect" id="node3" href="$de/de3/class_l_t_e_1_1window_manger.html#aeb94c72d9ef01e6ec53328e2ba972628" title=" " alt="" coords="223,95,372,136"/>
 </map>
