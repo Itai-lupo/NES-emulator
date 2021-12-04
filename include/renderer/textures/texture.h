@@ -11,13 +11,13 @@ namespace LTE
         protected:
             std::string path;
             textureId id;
-            uint32_t width, height;
+            int width, height;
             int channels;
         public:
             texture(const std::string& path): path(path){}
             virtual ~texture() = default;
 
-            virtual void bind() = 0;
+            virtual void bind(int slot) = 0;
             textureId getId(){ return id; }
     };
 }

@@ -25,13 +25,16 @@ namespace LTE
             material(const std::string& textureFilePath);
             material(glm::vec4 baseColor);
 
-            void bind(shader *s);
-            void bind(shader *s, std::vector<uint32_t> textureSlots);
+            void bind();
+            void bind(std::vector<uint32_t> textureSlots);
 
             void setTexture(texture *tex);
             void setTexture(const std::string& path);
             void setBaseColor(glm::vec4 baseColor);
             
+            std::string getTextureName();
+            texture *getTexture();
+            textureId getTextureId();
             glm::vec4 getRGBA();
 
 

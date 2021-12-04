@@ -1,5 +1,4 @@
 <map id="LTE::shader::bind" name="LTE::shader::bind">
-<area shape="rect" id="node1" title=" " alt="" coords="200,35,325,61"/>
-<area shape="rect" id="node2" href="$dc/dda/class_l_t_e_1_1material.html#aad0af3b585b247fcaae587620497b9dc" title=" " alt="" coords="13,5,145,32"/>
-<area shape="rect" id="node3" href="$d2/df6/class_l_t_e_1_1mesh_renderer.html#a9dd36eaefbaa68f5fc6737d6e21d6c64" title=" " alt="" coords="5,57,152,98"/>
+<area shape="rect" id="node1" title=" " alt="" coords="236,5,361,32"/>
+<area shape="rect" id="node2" href="$d1/d10/class_l_t_e_1_1renderer.html#a7d374d85dff673716c82f511aa377f67" title=" " alt="" coords="5,5,188,32"/>
 </map>

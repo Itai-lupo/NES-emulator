@@ -10,11 +10,12 @@ do
 done
 
 
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:./libs/:$b
-
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/:$b
 filePath=output/test.out
 
 make $filePath || exit 1
+
+clear
 $filePath
 
 echo "program exited with code $?"

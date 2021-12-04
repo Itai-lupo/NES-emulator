@@ -1,4 +1,5 @@
 #include "glslFile.h"
+#include "shaderRenderBuffer.h"
 #include "windowManger.h"
 #include "logger.h"
 
@@ -17,7 +18,8 @@ namespace LTE
 
     asset *glslFile::genrateAssetForWindow(windowPieceId winId)
     {
-        return windowManger::getWindow(winId)->context->getMeshFactory()->createShader(source.VertexSource, source.FragmentSource);
+        shader *s = windowManger::getWindow(winId)->context->getMeshFactory()->createShader(source.VertexSource, source.FragmentSource);
+        return new shaderRenderBuffer(s, winId);
     }
 
     void glslFile::loadFileData()

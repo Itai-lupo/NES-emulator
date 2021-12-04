@@ -1,10 +1,8 @@
 <map id="LTE::mesh::init" name="LTE::mesh::init">
-<area shape="rect" id="node1" title=" " alt="" coords="5,177,116,203"/>
-<area shape="rect" id="node2" href="$dc/d5a/class_l_t_e_1_1mesh_absrtact_factory.html#a42774d3e0106ec26cf238a61d31789e7" title=" " alt="" coords="164,5,343,47"/>
-<area shape="rect" id="node3" href="$dc/d5a/class_l_t_e_1_1mesh_absrtact_factory.html#a753fe760d602687dd8f12f7435471471" title=" " alt="" coords="164,71,343,112"/>
-<area shape="rect" id="node4" href="$dc/d5a/class_l_t_e_1_1mesh_absrtact_factory.html#a22fdb3ccd9516021d0abca1792a886b7" title=" " alt="" coords="164,136,343,177"/>
-<area shape="rect" id="node5" href="$d7/d20/class_l_t_e_1_1graphics_context.html#a937f07867b886d1f88ef4ee388c68dfb" title=" " alt="" coords="179,201,328,243"/>
-<area shape="rect" id="node6" href="$de/de3/class_l_t_e_1_1window_manger.html#aeb94c72d9ef01e6ec53328e2ba972628" title=" " alt="" coords="179,267,328,308"/>
-<area shape="rect" id="node7" href="$d2/dcd/class_l_t_e_1_1_vertex_buffer.html#aa6265877a30dd83bf4221c87447b9a07" title=" " alt="" coords="186,332,321,373"/>
-<area shape="rect" id="node8" href="$d9/db3/class_l_t_e_1_1_vertex_buffer_layout.html#ad731693f5718486059e0b8e68f4054fe" title=" " alt="" coords="391,332,557,373"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,63,116,90"/>
+<area shape="rect" id="node2" href="$de/de3/class_l_t_e_1_1window_manger.html#aeb94c72d9ef01e6ec53328e2ba972628" title=" " alt="" coords="164,23,313,64"/>
+<area shape="rect" id="node3" href="$db/d3a/class_l_t_e_1_1asset_manager.html#a829c74f828e397575232584a2ba4e7c9" title=" " alt="" coords="167,88,311,129"/>
+<area shape="rect" id="node4" href="$df/d84/class_l_t_e_1_1file.html#a961077558f39e457aadf1253797e42d8" title=" " alt="" coords="361,5,536,47"/>
+<area shape="rect" id="node5" href="$df/dfd/class_l_t_e_1_1file_manager.html#a9aa295e0e11c12baed20fadc803ac418" title=" " alt="" coords="365,95,533,122"/>
+<area shape="rect" id="node6" href="$db/d3a/class_l_t_e_1_1asset_manager.html#af14a20180072b2f4be25576d05b6c826" title=" " alt="" coords="377,147,521,188"/>
 </map>

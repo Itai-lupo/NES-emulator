@@ -7,89 +7,94 @@
 #include "openGLIndexBuffer.h"
 #include "materialsManger.h"
 #include "material.h"
-#include "windowManger.h"
 #include "app.h"
+#include "windowManger.h"
+#include "glm/glm.hpp"
+
+
 
 namespace LTE
 {
     void mesh::setIndexBuffer(uint32_t *indices, uint32_t count)
     {
         indices = indices;
-        count = count;
-
-        if(wasInitialized) setIndexBuffer();    
+        count = count;    
     }
 
     void mesh::setVertexBuffer(float *vertexs, uint32_t size)
     {
         vertexs = vertexs;
-        size = size;
-
-        if(wasInitialized) setVertexBuffer();    
+        size = size; 
     }
 
-
-    void mesh::pushVertexBufferElement(const VertexBufferElement& elementToPush)
+    void mesh::setShaderName(const std::string& shaderName)
     {
-        if(wasInitialized)
-            vb->pushElement(elementToPush);
-        else
-            VBElements.push(elementToPush);
+        shaderToUse = shaderName;
+        windowManger::getWindow(winId)->assetLibrary->loadAssetFromFile(shaderName);
+
     }
-    void mesh::setVertexBuffer()
+
+    std::string mesh::getShaderName()
     {
-        window *win = windowManger::getWindow(winId);
-        meshAbsrtactFactory *factory = win->context->getMeshFactory();
-        vb = factory->createVertexBuffer(vertexs, size);
-
+        return  shaderToUse;
     }
 
-    void mesh::setIndexBuffer()
+    int mesh::getSize()
     {
-        window *win = windowManger::getWindow(winId);
-        meshAbsrtactFactory *factory = win->context->getMeshFactory();
-        ib = factory->createIndexBuffer(indices, count);
+        return  size;
     }
 
-    void mesh::setVertexArray()
-    {        
-        if(vb == nullptr || !wasInitialized) return;
-        
-        window *win = windowManger::getWindow(winId);
-        meshAbsrtactFactory *factory = win->context->getMeshFactory();
-        va = factory->createVertexArray(vb);
-
-    }
-
-    void mesh::bind(std::vector<uint32_t> textureSlots)
+    float *mesh::getVB()
     {
-        va->bind();
-        ib->bind();
+        // return vertexs;
+        transform* trans =  entityManger::getEntityById(parentId)->getTransform();
+        float temp[size];
+        for(int i = 0; i < (size / sizeof(float)); i += 5)
+        {
+            glm::vec4 t = glm::vec4(vertexs[i], vertexs[i + 1], vertexs[i + 2], 1.0f);
+            t = glm::translate(glm::mat4(1.0f), trans->getPostion()) * 
+            glm::rotate(glm::mat4(1.0f), trans->getRotation().x, { 1.0f, 0.0f, 0.0f}) *
+            glm::rotate(glm::mat4(1.0f), trans->getRotation().y, { 0.0f, 1.0f, 0.0f}) *
+            glm::rotate(glm::mat4(1.0f), trans->getRotation().z, { 0.0f, 0.0f, 1.0f}) *
+            glm::scale(glm::mat4(1.0f), trans->getScale()) * t;
+            
+            temp[i] = t.x;
+            temp[i + 1] = t.y;
+            temp[i + 2] = t.z;
+
+            temp[i + 3] = vertexs[i + 3];
+            temp[i + 4] = vertexs[i + 4];
+        }
+
+        return  temp;
     }
 
-    VertexBuffer *mesh::getVertexBuffer()
+    uint32_t* mesh::getIB()
     {
-        return vb;
+        return indices; 
     }
 
     uint32_t mesh::getCount()
     {
-        return ib->getCount();
+        return count;
     }
 
     void mesh::init(gameObject *parent)
     {
         window *win = windowManger::getWindow(winId);
-        meshAbsrtactFactory *factory = win->context->getMeshFactory();
-        vb = factory->createVertexBuffer(vertexs, size);
-        ib = factory->createIndexBuffer(indices, count);
-        
-        while (!VBElements.empty())
-        {
-            vb->pushElement(VBElements.front());
-            VBElements.pop();
-        }
-
-        va = factory->createVertexArray(vb);
+        windowManger::getWindow(winId)->assetLibrary->loadAssetFromFile(shaderToUse);
+        win->activeScene->objects->push_back(parent);
     }
+
+    void mesh::end()
+    {
+        windowManger::getWindow(winId)->activeScene->objects->erase(
+        std::remove_if(
+            windowManger::getWindow(winId)->activeScene->objects->begin(),
+            windowManger::getWindow(winId)->activeScene->objects->end(),
+            [=](gameObject *g) -> bool { return g->getId() == parentId; }
+        )
+    );
+    }
+
 }

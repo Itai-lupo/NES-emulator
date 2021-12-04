@@ -35,7 +35,7 @@ namespace LTE
             [=] (material *m) -> bool { return m->id == id; }
         );
         if(m != materials->end())
-            return (*m)->bind(shaderToBindTo, textureSlots);
+            return (*m)->bind(textureSlots);
         
         LAUGHTALE_ENGINR_LOG_WARNING("faild to bind matrial: matrial wasn't found");
     }

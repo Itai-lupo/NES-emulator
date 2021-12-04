@@ -20,5 +20,7 @@ namespace LTE
             virtual void unbind() = 0;
 
             unsigned int getCount() { return count; }
+
+            virtual void setData(unsigned int *ib, unsigned int count) = 0;
     };
 }

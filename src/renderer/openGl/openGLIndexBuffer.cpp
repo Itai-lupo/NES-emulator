@@ -25,4 +25,13 @@ namespace LTE
     {
         GL_CALL(glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0));    
     }
+
+    void openGLIndexBuffer::setData(unsigned int *ib, unsigned int count)
+    {
+        this->ib = ib;
+        this->count = count;
+        GL_CALL(glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, RendererID));
+        GL_CALL(glBufferData(GL_ELEMENT_ARRAY_BUFFER, count * sizeof(unsigned int), ib, GL_STATIC_DRAW));
+    }
+
 }

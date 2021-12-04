@@ -12,7 +12,7 @@ namespace LTE
     {
         private:
                 std::unordered_map<std::string, int> m_UniformLoctionCache;
-                uint32_t rendererID;
+                uint32_t rendererID = 0;
 
 
                 unsigned int compileShader(unsigned int type, const std::string& source);
@@ -34,5 +34,7 @@ namespace LTE
             virtual void setUniform1f(const std::string& name, float value) override;
             virtual void setUniform4f(const std::string& name, float v0, float v1, float v2, float v3) override;
             virtual void setUniformMat4f(const std::string& name, const glm::mat4& value) override;
+            virtual void setUniform1iv(const std::string& name, const int* v, int size) override;
+
     };
 }

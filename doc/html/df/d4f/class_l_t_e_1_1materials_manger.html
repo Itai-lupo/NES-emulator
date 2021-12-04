@@ -185,7 +185,7 @@ Static Public Member Functions</h2></td></tr>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            [=] (material *m) -&gt; <span class="keywordtype">bool</span> { return m-&gt;id == id; }</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        );</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <span class="keywordflow">if</span>(m != materials-&gt;end())</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            <span class="keywordflow">return</span> (*m)-&gt;bind(shaderToBindTo, textureSlots);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            <span class="keywordflow">return</span> (*m)-&gt;bind(textureSlots);</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        </div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <a class="code hl_define" href="../../d1/d8c/logger_8h.html#ac50547ba95023ba6994629f68b4a39d4">LAUGHTALE_ENGINR_LOG_WARNING</a>(<span class="stringliteral">&quot;faild to bind matrial: matrial wasn&#39;t found&quot;</span>);</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    }</div>

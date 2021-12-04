@@ -9,6 +9,7 @@
 #include "scene.h"
 #include "shader.h"
 #include <algorithm>
+#include <vector>
 
 namespace LTE
 {
@@ -54,6 +55,7 @@ namespace LTE
 
             void setShader(const std::string& shaderPath)
             {
+                this->shaderPath = shaderPath;
                 s = windowManger::getWindow(winId)->assetLibrary->getAsset<shader>(shaderPath.c_str());
             }
 
@@ -68,29 +70,27 @@ namespace LTE
                 );
             }
 
-            void render(renderApi *api, const glm::mat4& MVP)
-            {
-                try
-                {
-                    gameObject *objectToRender = entityManger::getEntityById(parentId);
-                    if(objectToRender == nullptr) return;
-                    mesh *ObjectMesh = objectToRender->getComponent<mesh>();
-                    material *ObjectMaterial = objectToRender->getComponent<material>();
+            // void render(renderApi *api, const glm::mat4& MVP)
+            // {
+            //     try
+            //     {
+            //         gameObject *objectToRender = entityManger::getEntityById(parentId);
+            //         if(objectToRender == nullptr) return;
+            //         mesh *ObjectMesh = objectToRender->getComponent<mesh>();
+            //         material *ObjectMaterial = objectToRender->getComponent<material>();
 
-                    s->bind();
-                    ObjectMesh->bind();
-                    ObjectMaterial->bind(s, {0});
-                    s->setUniformMat4f("viewProjection", MVP);
-                    setTransform(entityManger::getEntityById(parentId)->getTransform());
+            //         s->bind();
+            //         ObjectMesh->bind();
+            //         ObjectMaterial->bind(s, {0});
+            //         s->setUniformMat4f("viewProjection", MVP);
+            //         setTransform(entityManger::getEntityById(parentId)->getTransform());
 
-                    api->DrawIndexed(ObjectMesh->getCount());
-                }
-                catch(const std::exception& e)
-                {
-                    LAUGHTALE_ENGINR_LOG_WARNING("coul'd not render game object because: " << e.what());
-                }
-                
-            }
-
+            //         api->DrawIndexed(ObjectMesh->getCount());
+            //     }
+            //     catch(const std::exception& e)
+            //     {
+            //         LAUGHTALE_ENGINR_LOG_WARNING("coul'd not render game object because: " << e.what());
+            //     }
+            // }
     };
 }

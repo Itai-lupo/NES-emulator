@@ -113,8 +113,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aaf34d2886359138366773a6cf33177c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a964a92e49a4608ae71e6bc565dba0475"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/dc9/class_l_t_e_1_1mesh_1_1mesh_builder.html">meshBuilder</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dc9/class_l_t_e_1_1mesh_1_1mesh_builder.html#a964a92e49a4608ae71e6bc565dba0475">setVertexBuffer</a> (float *vertexs, uint32_t size)</td></tr>
 <tr class="separator:a964a92e49a4608ae71e6bc565dba0475"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7091db59a00901283507227615d4e12b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/dc9/class_l_t_e_1_1mesh_1_1mesh_builder.html">meshBuilder</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dc9/class_l_t_e_1_1mesh_1_1mesh_builder.html#a7091db59a00901283507227615d4e12b">pushVertexBufferElement</a> (const <a class="el" href="../../d6/d82/struct_l_t_e_1_1_vertex_buffer_element.html">VertexBufferElement</a> &amp;elementToPush)</td></tr>
-<tr class="separator:a7091db59a00901283507227615d4e12b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b1d5d9158b42465632ca42ee4bc0ce4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/dc9/class_l_t_e_1_1mesh_1_1mesh_builder.html">meshBuilder</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dc9/class_l_t_e_1_1mesh_1_1mesh_builder.html#a5b1d5d9158b42465632ca42ee4bc0ce4">setShaderName</a> (const std::string &amp;shaderName)</td></tr>
+<tr class="separator:a5b1d5d9158b42465632ca42ee4bc0ce4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -122,37 +122,6 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a43e30155a50d06dae987622bed4b0f9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a7091db59a00901283507227615d4e12b" name="a7091db59a00901283507227615d4e12b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7091db59a00901283507227615d4e12b">&#9670;&nbsp;</a></span>pushVertexBufferElement()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../d1/dc9/class_l_t_e_1_1mesh_1_1mesh_builder.html">meshBuilder</a> * LTE::mesh::meshBuilder::pushVertexBufferElement </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../d6/d82/struct_l_t_e_1_1_vertex_buffer_element.html">VertexBufferElement</a> &amp;&#160;</td>
-          <td class="paramname"><em>elementToPush</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<div class="fragment"><div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>                        {</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>                            <a class="code hl_variable" href="../../d1/dc9/class_l_t_e_1_1mesh_1_1mesh_builder.html#a43e30155a50d06dae987622bed4b0f9c">res</a>-&gt;VBElements.push(elementToPush);</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>                            <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>                        }</div>
-<div class="ttc" id="aclass_l_t_e_1_1mesh_1_1mesh_builder_html_a43e30155a50d06dae987622bed4b0f9c"><div class="ttname"><a href="../../d1/dc9/class_l_t_e_1_1mesh_1_1mesh_builder.html#a43e30155a50d06dae987622bed4b0f9c">LTE::mesh::meshBuilder::res</a></div><div class="ttdeci">mesh * res</div><div class="ttdef"><b>Definition:</b> mesh.h:25</div></div>
-</div><!-- fragment -->
-</div>
-</div>
 <a id="aec78c781607c2625be864eaaa300b0df" name="aec78c781607c2625be864eaaa300b0df"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aec78c781607c2625be864eaaa300b0df">&#9670;&nbsp;</a></span>reset()</h2>
 
@@ -175,9 +144,10 @@ Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>                        {</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>                            <a class="code hl_variable" href="../../d1/dc9/class_l_t_e_1_1mesh_1_1mesh_builder.html#a43e30155a50d06dae987622bed4b0f9c">res</a> = <span class="keyword">new</span> mesh();</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>                        }</div>
+<div class="fragment"><div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>                        {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>                            <a class="code hl_variable" href="../../d1/dc9/class_l_t_e_1_1mesh_1_1mesh_builder.html#a43e30155a50d06dae987622bed4b0f9c">res</a> = <span class="keyword">new</span> mesh();</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>                        }</div>
+<div class="ttc" id="aclass_l_t_e_1_1mesh_1_1mesh_builder_html_a43e30155a50d06dae987622bed4b0f9c"><div class="ttname"><a href="../../d1/dc9/class_l_t_e_1_1mesh_1_1mesh_builder.html#a43e30155a50d06dae987622bed4b0f9c">LTE::mesh::meshBuilder::res</a></div><div class="ttdeci">mesh * res</div><div class="ttdef"><b>Definition:</b> mesh.h:26</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -214,11 +184,11 @@ Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>                        {</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>                            <a class="code hl_variable" href="../../d1/dc9/class_l_t_e_1_1mesh_1_1mesh_builder.html#a43e30155a50d06dae987622bed4b0f9c">res</a>-&gt;indices = indices;</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>                            <a class="code hl_variable" href="../../d1/dc9/class_l_t_e_1_1mesh_1_1mesh_builder.html#a43e30155a50d06dae987622bed4b0f9c">res</a>-&gt;count = count;</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>                            <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>                        }</div>
+<div class="fragment"><div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>                        {</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>                            <a class="code hl_variable" href="../../d1/dc9/class_l_t_e_1_1mesh_1_1mesh_builder.html#a43e30155a50d06dae987622bed4b0f9c">res</a>-&gt;indices = indices;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>                            <a class="code hl_variable" href="../../d1/dc9/class_l_t_e_1_1mesh_1_1mesh_builder.html#a43e30155a50d06dae987622bed4b0f9c">res</a>-&gt;count = count;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>                            <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>                        }</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -231,6 +201,36 @@ Here is the caller graph for this function:</div>
 </map>
 </div>
 
+</div>
+</div>
+<a id="a5b1d5d9158b42465632ca42ee4bc0ce4" name="a5b1d5d9158b42465632ca42ee4bc0ce4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b1d5d9158b42465632ca42ee4bc0ce4">&#9670;&nbsp;</a></span>setShaderName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/dc9/class_l_t_e_1_1mesh_1_1mesh_builder.html">meshBuilder</a> * LTE::mesh::meshBuilder::setShaderName </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>shaderName</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>                        {</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>                            <a class="code hl_variable" href="../../d1/dc9/class_l_t_e_1_1mesh_1_1mesh_builder.html#a43e30155a50d06dae987622bed4b0f9c">res</a>-&gt;shaderToUse = shaderName;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>                            <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>                        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a964a92e49a4608ae71e6bc565dba0475" name="a964a92e49a4608ae71e6bc565dba0475"></a>
@@ -266,11 +266,11 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>                        {</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>                            <a class="code hl_variable" href="../../d1/dc9/class_l_t_e_1_1mesh_1_1mesh_builder.html#a43e30155a50d06dae987622bed4b0f9c">res</a>-&gt;vertexs = vertexs;</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>                            <a class="code hl_variable" href="../../d1/dc9/class_l_t_e_1_1mesh_1_1mesh_builder.html#a43e30155a50d06dae987622bed4b0f9c">res</a>-&gt;size = size;</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>                            <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>                        }</div>
+<div class="fragment"><div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>                        {</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>                            <a class="code hl_variable" href="../../d1/dc9/class_l_t_e_1_1mesh_1_1mesh_builder.html#a43e30155a50d06dae987622bed4b0f9c">res</a>-&gt;vertexs = vertexs;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>                            <a class="code hl_variable" href="../../d1/dc9/class_l_t_e_1_1mesh_1_1mesh_builder.html#a43e30155a50d06dae987622bed4b0f9c">res</a>-&gt;size = size;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>                            <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>                        }</div>
 </div><!-- fragment -->
 </div>
 </div>

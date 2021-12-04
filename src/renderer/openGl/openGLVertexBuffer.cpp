@@ -21,6 +21,8 @@ namespace LTE
     {
         this->data = data;
         this->size = size;
+        
+        glBindBuffer(GL_ARRAY_BUFFER, RendererID);
         glBufferData(GL_ARRAY_BUFFER, size, data, GL_STATIC_DRAW);
     }
 

@@ -59,7 +59,7 @@ namespace LTE
             char* message = (char*)alloca(length * sizeof(char));
             GL_CALL(glGetShaderInfoLog(id, length, &length, message));
             LAUGHTALE_ENGINR_LOG_ERROR( 
-                std::string("falid to compile ") << 
+                std::string("falid to compile ") << std::endl << source << std::endl << 
                 std::string( type == GL_VERTEX_SHADER ? "vertex": "fragment" )  <<
                 std::string(" shader\n") <<
                 std::string(message)
@@ -104,6 +104,10 @@ namespace LTE
         GL_CALL(glUniformMatrix4fv(GetUniformLocation(name), 1, GL_FALSE, glm::value_ptr(value)));
     }
 
+    void openGLShader::setUniform1iv(const std::string& name, const int* v, int size)
+    {
+        GL_CALL(glUniform1iv(GetUniformLocation(name), size, v));   
+    }
 
     int openGLShader::GetUniformLocation(const std::string& name)
     {
@@ -113,6 +117,7 @@ namespace LTE
         GL_CALL(m_UniformLoctionCache[name] = glGetUniformLocation(rendererID, name.c_str()));
         return m_UniformLoctionCache[name];
     }
+
 
 
 }

@@ -11,7 +11,11 @@ namespace LTE
 
     void assetManager::loadAssetFromFile(const std::string& filePath)
     {
+        if(assetsTree[filePath])
+            return;
         file* f = fileManager::getFile(filePath);
+        if(!f)
+            return;
         asset *fileAsset = f->genrateAssetForWindow(parentWindowId);
         saveAsset(fileAsset, filePath);
     }

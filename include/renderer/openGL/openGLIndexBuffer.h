@@ -12,8 +12,11 @@ namespace LTE
             openGLIndexBuffer(unsigned int *ib, unsigned int count)
                 :indexBuffer(ib, count){}
             ~openGLIndexBuffer();
-            void init();
-            void bind();
-            void unbind();
+            virtual  void init() override;
+            virtual  void bind() override;
+            virtual  void unbind() override;
+
+            virtual void setData(unsigned int *ib, unsigned int count) override;
+
     };
 }

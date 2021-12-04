@@ -11,7 +11,9 @@ namespace LTE
             openGLTexture(const std::string& path);
             ~openGLTexture();
             virtual void init() override;
-            virtual void bind() override;
+            virtual void bind() { bind(1); };
+
+            virtual void bind(int slot) override;
             virtual void unbind() override;
     };
 }

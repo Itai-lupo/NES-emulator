@@ -20,5 +20,6 @@ namespace LTE
             virtual void setUniform1f(const std::string& name, float value) = 0;
             virtual void setUniform4f(const std::string& name, float v0, float v1, float v2, float v3) = 0;
             virtual void setUniformMat4f(const std::string& name, const glm::mat4& value) = 0;
+            virtual void setUniform1iv(const std::string& name, const int* v, int size) = 0;
     };
 }

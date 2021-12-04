@@ -1,5 +1,5 @@
 #pragma once
-#include <GL/glew.h>
+#include "glad/glad.h"
 
 #include "openGLTexture.h"
 #include "stb_image.h"
@@ -20,27 +20,45 @@ namespace LTE
 
     void openGLTexture::init()
     {
-        stbi_set_flip_vertically_on_load(1);
-        uint8_t *buffer = stbi_load(path.c_str(), (int*)&width, (int*)&height, &channels, 4);
+		stbi_set_flip_vertically_on_load(1);
+		stbi_uc* data = nullptr;
+		
+        data = stbi_load(path.c_str(), &width, &height, &channels, 0);
+		
+			
+		if (data)
+		{
+			GLenum internalFormat = 0, dataFormat = 0;
+			if (channels == 4)
+			{
+				internalFormat = GL_RGBA8;
+				dataFormat = GL_RGBA;
+			}
+			else if (channels == 3)
+			{
+				internalFormat = GL_RGB8;
+				dataFormat = GL_RGB;
+			}
 
-        GL_CALL(glGenTextures(1, &id));
-        GL_CALL(glBindTexture(GL_TEXTURE_2D, id));
+			glCreateTextures(GL_TEXTURE_2D, 1, &id);
+			glTextureStorage2D(id, 1, internalFormat, width, height);
 
-        GL_CALL(glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR));
-        GL_CALL(glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR));
-        GL_CALL(glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE));
-        GL_CALL(glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE));
+			glTextureParameteri(id, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+			glTextureParameteri(id, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
 
-        GL_CALL(glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA8, width, height, 0, GL_RGBA, GL_UNSIGNED_BYTE, buffer));
-        
-        if(buffer)
-            stbi_image_free(buffer);
+			glTextureParameteri(id, GL_TEXTURE_WRAP_S, GL_REPEAT);
+			glTextureParameteri(id, GL_TEXTURE_WRAP_T, GL_REPEAT);
+
+			glTextureSubImage2D(id, 0, 0, 0, width, height, dataFormat, GL_UNSIGNED_BYTE, data);
+
+			stbi_image_free(data);
+		}
     }
 
 
-    void openGLTexture::bind()
+    void openGLTexture::bind(int slot)
     {
-        GL_CALL(glBindTexture(GL_TEXTURE_2D, id));
+		glBindTextureUnit(slot, id);
     }
     
     void openGLTexture::unbind()

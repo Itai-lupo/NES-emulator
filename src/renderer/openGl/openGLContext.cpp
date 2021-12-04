@@ -64,10 +64,8 @@ namespace LTE
                 api->SetViewport(x, y, width, height);
                 changeViewPort = false;
             }
-
-            getRenderApi()->SetClearColor({0.0f, 0.0f, 1.0f, 1.0f});
-            getRenderApi()->Clear();
-            renderer::renderScene(sendorData->win->activeScene, getRenderApi());
+            
+            renderer::renderScene(windowId, getRenderApi());
 
             if(sendorData->win->useImGui)
                 onImGuiUpdate(sendorData->win, sendorData);

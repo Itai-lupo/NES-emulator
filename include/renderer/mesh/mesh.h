@@ -8,6 +8,7 @@
 #include "transform.h"
 #include "asset.h"
 
+
 #include <glm/glm.hpp>
 #include <glm/ext.hpp>
 #include <glm/gtc/matrix_transform.hpp>
@@ -43,9 +44,9 @@ namespace LTE
                         }
 
 
-                        meshBuilder *pushVertexBufferElement(const VertexBufferElement& elementToPush)
+                        meshBuilder *setShaderName(const std::string& shaderName)
                         {
-                            res->VBElements.push(elementToPush);
+                            res->shaderToUse = shaderName;
                             return this;
                         }
                 };
@@ -53,9 +54,7 @@ namespace LTE
             private:
                 entityTaleId id;
 
-                VertexBuffer *vb;
-                indexBuffer *ib;
-                vertexArray *va;
+                std::string shaderToUse;
 
                 float *vertexs;
                 uint32_t size;
@@ -63,8 +62,6 @@ namespace LTE
                 uint32_t *indices; 
                 uint32_t count;
 
-                std::queue<VertexBufferElement> VBElements;
-                
                 bool wasInitialized = false;
 
                 
@@ -89,20 +86,19 @@ namespace LTE
 
                 void setIndexBuffer(uint32_t *indices, uint32_t count);
                 void setVertexBuffer(float *vertexs, uint32_t size);
-                void pushVertexBufferElement(const VertexBufferElement& elementToPush);
 
-                void setVertexBuffer();
-                void setIndexBuffer();
-                void setVertexArray();
-
-                void bind(std::vector<uint32_t> textureSlots = {});
+                void setShaderName(const std::string& shaderName);
 
                 entityTaleId getId(){ return id; }
 
-                VertexBuffer *getVertexBuffer();
                 uint32_t getCount();
+                std::string getShaderName();
+                int getSize();
+                float *getVB();
+                uint32_t* getIB();
+                windowPieceId getWindowId(){ return winId;}
 
                 virtual void init(gameObject *parent) override;
-                virtual void end() override {}
+                virtual void end() override;
     };
 }

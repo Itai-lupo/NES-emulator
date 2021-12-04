@@ -31,23 +31,18 @@ namespace LTE
 
     }
 
-    void material::bind(shader *s)
+    void material::bind()
     {
         bind({0});
     }
 
-    void material::bind(shader *s, std::vector<uint32_t> textureSlots)
+    void material::bind(std::vector<uint32_t> textureSlots)
     {
         if(textureSlots.size() == 0) textureSlots.push_back(0);
-        
-        s->bind();
         if(tex != nullptr)
         {
-            tex->bind();
-            s->setUniform1i("texture", textureSlots[0]);
+            tex->bind(textureSlots[0]);
         }
-
-        s->setUniform4f("baseColor", baseColor.r, baseColor.g, baseColor.b, baseColor.a);
     }
 
     void material::setTexture(texture *tex)
@@ -65,6 +60,24 @@ namespace LTE
     {
         this->baseColor = baseColor;
     }
+
+    std::string material::getTextureName()
+    {
+        return texturePath;
+    }
+
+    texture *material::getTexture()
+    {
+        return tex;
+    }
+
+
+    textureId material::getTextureId()
+    {
+        return tex->getId();
+    }
+
+
 
     glm::vec4 material::getRGBA()
     {

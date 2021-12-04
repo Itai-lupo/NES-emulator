@@ -6,6 +6,7 @@
 #include "coreCamera.h"
 #include "mesh.h"
 #include "scene.h"
+#include "shaderRenderBuffer.h"
 
 
 namespace LTE
@@ -13,10 +14,13 @@ namespace LTE
     class renderer
     {
         private:
-            static inline scene *Scene;
-            static inline renderApi *renderPipLine;
+            // static inline window *win;
+            // static inline scene *Scene;
+            // static inline renderApi *renderPipLine;
         public:                
-            static void renderScene(scene *Scene, renderApi *renderPipLine);
+            static shaderRenderBuffer *submitShape(mesh *shape, material *shapeMatrial);
+
+            static void renderScene(windowPieceId winId, renderApi *renderPipLine);
     };
     
     

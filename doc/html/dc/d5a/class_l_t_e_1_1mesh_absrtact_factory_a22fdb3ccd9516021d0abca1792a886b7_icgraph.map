@@ -1,6 +1,4 @@
 <map id="LTE::meshAbsrtactFactory::createVertexBuffer" name="LTE::meshAbsrtactFactory::createVertexBuffer">
-<area shape="rect" id="node1" title=" " alt="" coords="472,23,651,65"/>
-<area shape="rect" id="node2" href="$d0/d6c/class_l_t_e_1_1mesh.html#a12762b2cf5f55e2dc0f38552064f7528" title=" " alt="" coords="276,5,387,32"/>
-<area shape="rect" id="node3" href="$d0/d6c/class_l_t_e_1_1mesh.html#ac639fd5ab8317f79b016f57a7d941aab" title=" " alt="" coords="239,56,424,83"/>
-<area shape="rect" id="node4" href="$d0/d6c/class_l_t_e_1_1mesh.html#ab9726ed6384d67a36b5501bfaa36e6f4" title=" " alt="" coords="5,56,191,83"/>
+<area shape="rect" id="node1" title=" " alt="" coords="224,5,403,47"/>
+<area shape="rect" id="node2" href="$d1/d3d/class_l_t_e_1_1shader_render_buffer.html#a539766ee4c8c5d615c8e398ea64ad202" title=" " alt="" coords="5,5,176,47"/>
 </map>

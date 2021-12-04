@@ -135,6 +135,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a86f66f3feb1d86ce689e2b0660b934c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeb4a955d237187ec09032ab656088d31"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d99/class_l_t_e_1_1open_g_l_shader.html#aeb4a955d237187ec09032ab656088d31">setUniformMat4f</a> (const std::string &amp;name, const glm::mat4 &amp;value) override</td></tr>
 <tr class="separator:aeb4a955d237187ec09032ab656088d31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97be4778c990b183c1f88d76afe4d660"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d99/class_l_t_e_1_1open_g_l_shader.html#a97be4778c990b183c1f88d76afe4d660">setUniform1iv</a> (const std::string &amp;name, const int *v, int size) override</td></tr>
+<tr class="separator:a97be4778c990b183c1f88d76afe4d660"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_l_t_e_1_1asset"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_l_t_e_1_1asset')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../de/db4/class_l_t_e_1_1asset.html">LTE::asset</a></td></tr>
 <tr class="memitem:a67a876c6794674293da816f5a2dc5b5d inherit pub_methods_class_l_t_e_1_1asset"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/db4/class_l_t_e_1_1asset.html#a67a876c6794674293da816f5a2dc5b5d">~asset</a> ()=default</td></tr>
 <tr class="separator:a67a876c6794674293da816f5a2dc5b5d inherit pub_methods_class_l_t_e_1_1asset"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -340,6 +342,53 @@ Public Member Functions</h2></td></tr>
 <div class="fragment"><div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    { </div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        <a class="code hl_define" href="../../d4/dbe/handle_open_gl_errors_8h.html#add165165c35549fda9fb0100e16e9739">GL_CALL</a>(glUniform1i(GetUniformLocation(name), value));</div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a97be4778c990b183c1f88d76afe4d660" name="a97be4778c990b183c1f88d76afe4d660"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97be4778c990b183c1f88d76afe4d660">&#9670;&nbsp;</a></span>setUniform1iv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LTE::openGLShader::setUniform1iv </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int *&#160;</td>
+          <td class="paramname"><em>v</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="../../d1/d2e/class_l_t_e_1_1shader.html#a5492c700f26ffb32e37bd94795a0c22e">LTE::shader</a>.</p>
+<div class="fragment"><div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    {</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        <a class="code hl_define" href="../../d4/dbe/handle_open_gl_errors_8h.html#add165165c35549fda9fb0100e16e9739">GL_CALL</a>(glUniform1iv(GetUniformLocation(name), size, v));   </div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
