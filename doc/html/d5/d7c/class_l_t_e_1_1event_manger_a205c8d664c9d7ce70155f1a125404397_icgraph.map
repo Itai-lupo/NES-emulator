@@ -1,11 +1,13 @@
 <map id="LTE::eventManger::startBuildingEvent" name="LTE::eventManger::startBuildingEvent">
-<area shape="rect" id="node1" title=" " alt="" coords="475,181,684,222"/>
-<area shape="rect" id="node2" href="$de/de3/class_l_t_e_1_1window_manger.html#acc2b710e8936b1ba64fd0f2ef7f7b636" title=" " alt="" coords="5,13,155,54"/>
-<area shape="rect" id="node3" href="$d4/d38/class_l_t_e_1_1window.html#ada64ce70730800b0efe780533eb4369c" title=" " alt="" coords="253,45,376,72"/>
-<area shape="rect" id="node4" href="$da/def/class_l_t_e_1_1orthographic_camera_controler.html#ad1d89ce93e7ff1b67b6e56076e33f1cd" title=" " alt="" coords="203,97,427,138"/>
-<area shape="rect" id="node5" href="$d8/d09/classpilar_destroyer.html#a1db2c41770f70bf7a353303bfe2b19c1" title=" " alt="" coords="251,163,379,189"/>
-<area shape="rect" id="node6" href="$d1/d69/classpilar.html#a5766ecde88be62932b9d246eb7772553" title=" " alt="" coords="279,213,350,240"/>
-<area shape="rect" id="node7" href="$da/dee/classbird.html#a9e7af03487bc9fe7fb51138c4aac90b8" title=" " alt="" coords="281,264,349,291"/>
-<area shape="rect" id="node8" href="$d3/ded/classpilar_summener.html#a06aa5ffe5c13154afd598858ac9b7cb6" title=" " alt="" coords="247,315,382,341"/>
-<area shape="rect" id="node9" href="$d5/d71/classflappy_bird.html#aefe252403b2c6969e04a034c3d037d5d" title=" " alt="" coords="252,365,377,392"/>
+<area shape="rect" id="node1" title=" " alt="" coords="475,235,684,277"/>
+<area shape="rect" id="node2" href="$de/de3/class_l_t_e_1_1window_manger.html#acc2b710e8936b1ba64fd0f2ef7f7b636" title=" " alt="" coords="5,17,155,58"/>
+<area shape="rect" id="node3" href="$d4/d38/class_l_t_e_1_1window.html#ada64ce70730800b0efe780533eb4369c" title=" " alt="" coords="253,49,376,76"/>
+<area shape="rect" id="node4" href="$da/def/class_l_t_e_1_1orthographic_camera_controler.html#ad1d89ce93e7ff1b67b6e56076e33f1cd" title=" " alt="" coords="203,101,427,142"/>
+<area shape="rect" id="node5" href="$d8/d09/classpilar_destroyer.html#a1db2c41770f70bf7a353303bfe2b19c1" title=" " alt="" coords="251,167,379,193"/>
+<area shape="rect" id="node6" href="$d8/d3c/classpiece.html#a764eeea74b0dd80820d05edbb67a5e3d" title=" " alt="" coords="275,217,354,244"/>
+<area shape="rect" id="node7" href="$d1/d69/classpilar.html#a5766ecde88be62932b9d246eb7772553" title=" " alt="" coords="279,268,350,295"/>
+<area shape="rect" id="node8" href="$da/dee/classbird.html#a9e7af03487bc9fe7fb51138c4aac90b8" title=" " alt="" coords="281,319,349,345"/>
+<area shape="rect" id="node9" href="$d3/ded/classpilar_summener.html#a06aa5ffe5c13154afd598858ac9b7cb6" title=" " alt="" coords="247,369,382,396"/>
+<area shape="rect" id="node10" href="$dd/d8a/classpawn.html#a519dce419008e52e66e2701d750c5954" title=" " alt="" coords="268,420,361,447"/>
+<area shape="rect" id="node11" href="$d5/d71/classflappy_bird.html#aefe252403b2c6969e04a034c3d037d5d" title=" " alt="" coords="252,471,377,497"/>
 </map>

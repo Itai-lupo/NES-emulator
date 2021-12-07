@@ -1,9 +1,11 @@
 <map id="LTE::entityManger::addEntity" name="LTE::entityManger::addEntity">
-<area shape="rect" id="node1" title=" " alt="" coords="421,89,559,131"/>
+<area shape="rect" id="node1" title=" " alt="" coords="421,140,559,181"/>
 <area shape="rect" id="node2" href="$d0/d26/class_l_t_e_1_1window_builder.html#ad1ca0242c2cde62734d35a098d5a7d84" title=" " alt="" coords="219,5,357,47"/>
-<area shape="rect" id="node4" href="$d3/ded/classpilar_summener.html#aeb88f02a3eafb0921983ca0bc39560c5" title=" " alt="" coords="203,71,373,98"/>
-<area shape="rect" id="node6" href="$d5/d71/classflappy_bird.html#aefe252403b2c6969e04a034c3d037d5d" title=" " alt="" coords="225,122,351,149"/>
-<area shape="rect" id="node7" href="$db/dd3/sound_8test_8cpp.html#a3998186a574db417e7fcfdc402eb38ca" title=" " alt="" coords="260,173,316,199"/>
+<area shape="rect" id="node4" href="$dd/d8a/classpawn.html#a519dce419008e52e66e2701d750c5954" title=" " alt="" coords="241,71,335,98"/>
+<area shape="rect" id="node5" href="$d3/ded/classpilar_summener.html#aeb88f02a3eafb0921983ca0bc39560c5" title=" " alt="" coords="203,122,373,149"/>
+<area shape="rect" id="node7" href="$d2/d44/classboard.html#ad5191dd0de710bb52f90eca8795bc661" title=" " alt="" coords="239,173,337,199"/>
+<area shape="rect" id="node8" href="$d5/d71/classflappy_bird.html#aefe252403b2c6969e04a034c3d037d5d" title=" " alt="" coords="225,223,351,250"/>
+<area shape="rect" id="node9" href="$db/dd3/sound_8test_8cpp.html#a3998186a574db417e7fcfdc402eb38ca" title=" " alt="" coords="260,274,316,301"/>
 <area shape="rect" id="node3" href="$de/de3/class_l_t_e_1_1window_manger.html#acc2b710e8936b1ba64fd0f2ef7f7b636" title=" " alt="" coords="5,5,155,47"/>
-<area shape="rect" id="node5" href="$d3/ded/classpilar_summener.html#a06aa5ffe5c13154afd598858ac9b7cb6" title=" " alt="" coords="13,71,147,98"/>
+<area shape="rect" id="node6" href="$d3/ded/classpilar_summener.html#a06aa5ffe5c13154afd598858ac9b7cb6" title=" " alt="" coords="13,122,147,149"/>
 </map>

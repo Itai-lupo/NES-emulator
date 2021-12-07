@@ -30,6 +30,7 @@ var namespace_l_t_e =
     [ "guitarString", "d4/d73/class_l_t_e_1_1guitar_string.html", "d4/d73/class_l_t_e_1_1guitar_string" ],
     [ "harmonica", "d4/d06/class_l_t_e_1_1harmonica.html", "d4/d06/class_l_t_e_1_1harmonica" ],
     [ "indexBuffer", "d6/d2f/class_l_t_e_1_1index_buffer.html", "d6/d2f/class_l_t_e_1_1index_buffer" ],
+    [ "jpgFile", "d8/da1/class_l_t_e_1_1jpg_file.html", "d8/da1/class_l_t_e_1_1jpg_file" ],
     [ "KeyData", "d2/df7/struct_l_t_e_1_1_key_data.html", "d2/df7/struct_l_t_e_1_1_key_data" ],
     [ "keyTypedData", "df/d3b/struct_l_t_e_1_1key_typed_data.html", "df/d3b/struct_l_t_e_1_1key_typed_data" ],
     [ "linuxAbstractFactory", "d6/df8/class_l_t_e_1_1linux_abstract_factory.html", "d6/df8/class_l_t_e_1_1linux_abstract_factory" ],
@@ -110,7 +111,8 @@ var namespace_l_t_e =
     [ "fileTypes", "dc/d59/namespace_l_t_e.html#a813c90e8423bdad4463eea7bd3ee89c7", [
       [ "mp3", "dc/d59/namespace_l_t_e.html#a813c90e8423bdad4463eea7bd3ee89c7ab097c51e9a0728e696b108745c9ff281", null ],
       [ "glsl", "dc/d59/namespace_l_t_e.html#a813c90e8423bdad4463eea7bd3ee89c7ab44384b505fec5ed92c3caa132bfc0ed", null ],
-      [ "png", "dc/d59/namespace_l_t_e.html#a813c90e8423bdad4463eea7bd3ee89c7ac98e5ff56948c8736375d3398118aa48", null ]
+      [ "png", "dc/d59/namespace_l_t_e.html#a813c90e8423bdad4463eea7bd3ee89c7ac98e5ff56948c8736375d3398118aa48", null ],
+      [ "jpg", "dc/d59/namespace_l_t_e.html#a813c90e8423bdad4463eea7bd3ee89c7a2d91fb1f4c98708351f746f2140194f1", null ]
     ] ],
     [ "renderAPIType", "dc/d59/namespace_l_t_e.html#a1549406e7962ca62439f148b6bec5d60", [
       [ "OpenGL", "dc/d59/namespace_l_t_e.html#a1549406e7962ca62439f148b6bec5d60a48cb9daa41ed1838d1f352a141725d37", null ]

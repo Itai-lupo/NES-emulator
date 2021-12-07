@@ -5,7 +5,7 @@ namespace LTE
 {
 	void linuxAPI::pollEvents()
 	{
-		glfwPollEvents();
+		glfwWaitEvents();
 	}
 
 	bool linuxAPI::isWindowOpen(windowPieceId winId)

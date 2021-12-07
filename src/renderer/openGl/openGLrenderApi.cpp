@@ -7,7 +7,10 @@ namespace LTE
     void openGLRenderApi::init()
     {
         GL_CALL(glEnable(GL_BLEND));
+        GL_CALL(glEnable(GL_DEPTH_TEST));
+        GL_CALL(glEnable(GL_ALPHA_TEST));
         GL_CALL(glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA));
+        GL_CALL(glAlphaFunc(GL_GREATER, 0))
     }
 
     void openGLRenderApi::SetClearColor(const glm::vec4& color)

@@ -32,6 +32,9 @@ var hierarchy =
       [ "LTE::squreCollider", "dd/d78/class_l_t_e_1_1squre_collider.html", null ],
       [ "LTE::transform", "d6/d08/class_l_t_e_1_1transform.html", null ],
       [ "bird", "da/dee/classbird.html", null ],
+      [ "piece", "d8/d3c/classpiece.html", [
+        [ "pawn", "dd/d8a/classpawn.html", null ]
+      ] ],
       [ "pilar", "d1/d69/classpilar.html", null ],
       [ "pilarDestroyer", "d8/d09/classpilar_destroyer.html", null ],
       [ "pilarSummener", "d3/ded/classpilar_summener.html", null ]
@@ -72,6 +75,7 @@ var hierarchy =
     ] ],
     [ "LTE::file", "df/d84/class_l_t_e_1_1file.html", [
       [ "LTE::glslFile", "d4/d18/class_l_t_e_1_1glsl_file.html", null ],
+      [ "LTE::jpgFile", "d8/da1/class_l_t_e_1_1jpg_file.html", null ],
       [ "LTE::mp3File", "dd/da0/class_l_t_e_1_1mp3_file.html", null ],
       [ "LTE::pngFile", "df/ddd/class_l_t_e_1_1png_file.html", null ]
     ] ],
@@ -139,6 +143,7 @@ var hierarchy =
     [ "LTE::soundFilesPlayer", "d4/d0c/class_l_t_e_1_1sound_files_player.html", null ],
     [ "LTE::soundSynthesizer", "d2/dff/class_l_t_e_1_1sound_synthesizer.html", null ],
     [ "testing::Test", null, [
+      [ "board", "d2/d44/classboard.html", null ],
       [ "flappyBird", "d5/d71/classflappy_bird.html", null ]
     ] ],
     [ "testClass", "d7/d28/structtest_class.html", null ],

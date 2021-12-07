@@ -15,7 +15,7 @@ namespace LTE
             friend materialsManger;
             materialId id;
 
-            texture *tex;
+            texture *tex = nullptr;
             glm::vec4 baseColor;
 
             std::string texturePath;

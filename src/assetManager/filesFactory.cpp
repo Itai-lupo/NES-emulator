@@ -18,6 +18,9 @@ namespace LTE
             case fileTypes::png:
                 return new pngFile(filePath);
                 break;
+            case fileTypes::jpg:
+                return new jpgFile(filePath);
+                break;
             
             default:
                 LAUGHTALE_ENGINR_LOG_ERROR("file type: " << fileType << " not registry in the system.");

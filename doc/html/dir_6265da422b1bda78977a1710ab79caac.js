@@ -5,6 +5,9 @@ var dir_6265da422b1bda78977a1710ab79caac =
       [ "LTE::ShaderProgramSource", "d2/d0f/struct_l_t_e_1_1_shader_program_source.html", "d2/d0f/struct_l_t_e_1_1_shader_program_source" ],
       [ "LTE::glslFile", "d4/d18/class_l_t_e_1_1glsl_file.html", "d4/d18/class_l_t_e_1_1glsl_file" ]
     ] ],
+    [ "jpgFile.h", "d5/d93/jpg_file_8h.html", [
+      [ "LTE::jpgFile", "d8/da1/class_l_t_e_1_1jpg_file.html", "d8/da1/class_l_t_e_1_1jpg_file" ]
+    ] ],
     [ "mp3File.h", "d1/de7/mp3_file_8h.html", [
       [ "LTE::mp3File", "dd/da0/class_l_t_e_1_1mp3_file.html", "dd/da0/class_l_t_e_1_1mp3_file" ]
     ] ],

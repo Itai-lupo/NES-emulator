@@ -74,7 +74,10 @@ namespace LTE
 
     textureId material::getTextureId()
     {
-        return tex->getId();
+        if(tex)
+            return tex->getId();
+        else
+            return 0;
     }
 
 

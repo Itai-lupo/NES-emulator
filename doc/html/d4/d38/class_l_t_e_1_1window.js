@@ -7,6 +7,7 @@ var class_l_t_e_1_1window =
     [ "context", "d4/d38/class_l_t_e_1_1window.html#a0509800988efeae03289808049a1c20d", null ],
     [ "Height", "d4/d38/class_l_t_e_1_1window.html#aa769f85656ebde3a1234aa9091d194b0", null ],
     [ "id", "d4/d38/class_l_t_e_1_1window.html#a8e5dcaa5ea3a4910dbe6b17e1f03e44e", null ],
+    [ "inputManger", "d4/d38/class_l_t_e_1_1window.html#a75d9759c617ba474299029e2c58a45d4", null ],
     [ "sceneCollider", "d4/d38/class_l_t_e_1_1window.html#aa0e4161cfa4c9c518bfa14328dd8a3d0", null ],
     [ "Title", "d4/d38/class_l_t_e_1_1window.html#acc46de1166ccb81e71f682f6e2761077", null ],
     [ "useImGui", "d4/d38/class_l_t_e_1_1window.html#adcfc6c1eaa45e93b9fb5017513eea1b0", null ],

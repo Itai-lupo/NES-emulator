@@ -1,5 +1,6 @@
 <map id="LTE::app::close" name="LTE::app::close">
-<area shape="rect" id="node1" title=" " alt="" coords="200,31,315,57"/>
-<area shape="rect" id="node2" href="$d5/d71/classflappy_bird.html#a3353f8436200edb894fd5908515c8f74" title=" " alt="" coords="5,5,152,32"/>
-<area shape="rect" id="node3" href="$db/dd3/sound_8test_8cpp.html#a3998186a574db417e7fcfdc402eb38ca" title=" " alt="" coords="51,56,107,83"/>
+<area shape="rect" id="node1" title=" " alt="" coords="200,56,315,83"/>
+<area shape="rect" id="node2" href="$d2/d44/classboard.html#a3c7b36f7681d4766fc0a1d0ed9cb805e" title=" " alt="" coords="18,5,139,32"/>
+<area shape="rect" id="node3" href="$d5/d71/classflappy_bird.html#a3353f8436200edb894fd5908515c8f74" title=" " alt="" coords="5,56,152,83"/>
+<area shape="rect" id="node4" href="$db/dd3/sound_8test_8cpp.html#a3998186a574db417e7fcfdc402eb38ca" title=" " alt="" coords="51,107,107,133"/>
 </map>

@@ -1,5 +1,5 @@
 <map id="LTE::component" name="LTE::component">
-<area shape="rect" id="node1" title=" " alt="" coords="5,309,124,336"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,335,124,361"/>
 <area shape="rect" id="node2" href="$dc/d6e/class_l_t_e_1_1core_camera_controler.html" title=" " alt="" coords="172,44,351,71"/>
 <area shape="rect" id="node4" href="$d2/d04/class_l_t_e_1_1envelope.html" title=" " alt="" coords="208,132,315,159"/>
 <area shape="rect" id="node10" href="$dc/dda/class_l_t_e_1_1material.html" title=" " alt="" coords="211,183,311,209"/>
@@ -8,13 +8,15 @@
 <area shape="rect" id="node13" href="$dd/d78/class_l_t_e_1_1squre_collider.html" title=" " alt="" coords="196,335,327,361"/>
 <area shape="rect" id="node14" href="$d6/d08/class_l_t_e_1_1transform.html" title=" " alt="" coords="207,385,316,412"/>
 <area shape="rect" id="node15" href="$da/dee/classbird.html" title=" " alt="" coords="240,436,283,463"/>
-<area shape="rect" id="node16" href="$d1/d69/classpilar.html" title=" " alt="" coords="238,487,285,513"/>
-<area shape="rect" id="node17" href="$d8/d09/classpilar_destroyer.html" title=" " alt="" coords="210,537,313,564"/>
-<area shape="rect" id="node18" href="$d3/ded/classpilar_summener.html" title=" " alt="" coords="207,588,316,615"/>
+<area shape="rect" id="node16" href="$d8/d3c/classpiece.html" title=" " alt="" coords="235,487,288,513"/>
+<area shape="rect" id="node18" href="$d1/d69/classpilar.html" title=" " alt="" coords="238,537,285,564"/>
+<area shape="rect" id="node19" href="$d8/d09/classpilar_destroyer.html" title=" " alt="" coords="210,588,313,615"/>
+<area shape="rect" id="node20" href="$d3/ded/classpilar_summener.html" title=" " alt="" coords="207,639,316,665"/>
 <area shape="rect" id="node3" href="$da/def/class_l_t_e_1_1orthographic_camera_controler.html" title=" " alt="" coords="399,5,623,32"/>
 <area shape="rect" id="node5" href="$d9/dc5/class_l_t_e_1_1bell.html" title=" " alt="" coords="473,56,548,83"/>
 <area shape="rect" id="node6" href="$d7/d80/class_l_t_e_1_1drum_kick.html" title=" " alt="" coords="456,107,565,133"/>
 <area shape="rect" id="node7" href="$d4/d73/class_l_t_e_1_1guitar_string.html" title=" " alt="" coords="451,157,571,184"/>
 <area shape="rect" id="node8" href="$d4/d06/class_l_t_e_1_1harmonica.html" title=" " alt="" coords="453,208,568,235"/>
 <area shape="rect" id="node9" href="$df/d00/class_l_t_e_1_1sound_file.html" title=" " alt="" coords="455,259,566,285"/>
+<area shape="rect" id="node17" href="$dd/d8a/classpawn.html" title=" " alt="" coords="484,487,537,513"/>
 </map>

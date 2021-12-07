@@ -108,7 +108,6 @@ namespace LTE
         BatchedIndexBuffer->setData(indices.data(), indices.size());
 
 
-
         BatchedIndexBuffer->bind();
         BatchedVertexArray->bind();
         verticesData.clear();

@@ -11,9 +11,10 @@ namespace LTE
         private:
             GLFWwindow *windowPtr;
         public:
+            linuxInput(GLFWwindow *windowPtr): windowPtr(windowPtr){}
             bool isKeyPressed(int keycode);
             bool isMouseButtonPressed(int button);
-            std::pair<float, float> GetMousePosition();
+            glm::vec2 GetMousePosition();
             float GetMouseX();
             float GetMouseY();
     };       

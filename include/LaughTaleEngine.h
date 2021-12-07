@@ -1,4 +1,5 @@
 //user include file
+#pragma once
 
 #include "core.h"
 #include "app.h"

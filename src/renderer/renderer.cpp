@@ -37,7 +37,8 @@ namespace LTE
             Scene->objects->end(),
             [=](gameObject *a, gameObject *b) -> bool
             {
-                return a->getComponent<material>()->getTextureId() > b->getComponent<material>()->getTextureId();
+                return a->getComponent<material>()->getTextureId() > b->getComponent<material>()->getTextureId() || 
+                       (a->getComponent<material>()->getTextureId() == b->getComponent<material>()->getTextureId() && a->getTransform()->getPostion().z < b->getTransform()->getPostion().z);
             });
 
         const glm::mat4& ViewProjectionMatrix = Scene->camera->getComponent<coreCameraControler>()->getCamera()->getViewProjectionMatrix();
@@ -49,22 +50,33 @@ namespace LTE
         {
             mesh *obj = toRender->getComponent<mesh>();
             material *objMat = toRender->getComponent<material>();
+            if(!obj || !objMat)
+                continue;
             shaderRenderBuffer *s  = submitShape(obj, objMat);
             if(!s)
                 continue;
             shadersToRender.insert(s);
-            if(objMat->getTexture() && objMat->getTextureId() != lastTexture)
+            if(objMat->getTextureId() != lastTexture)
             {
-                lastTexture = objMat->getTextureId();
-                textureSlots.push_back({lastTexture, textureSlotCount + 1});
-                textures.push_back(objMat->getTexture());
-                textureSlotCount = (textureSlotCount + 1) % 31;
+                if(objMat->getTextureId() != 0)
+                {
+                    lastTexture = objMat->getTextureId();
+                    textureSlots.push_back({lastTexture, textureSlotCount + 1});
+                    textures.push_back(objMat->getTexture());
+                    textureSlotCount = (textureSlotCount + 1) % 31;
+                }
+                else
+                {
+                    lastTexture = 0;
+                    textureSlots.push_back({0, 0});
+                }
             }
         }
 
         for(int i = 0; i < 32 && i < textures.size(); i++)
         {
-            textures[i]->bind(textureSlots[i].second);
+            if(textureSlots[i].second != 0)
+                textures[i]->bind(textureSlots[i].second);
         }
 
         for(auto& shaderBuffer: shadersToRender)

@@ -26,7 +26,7 @@ namespace LTE
         return state == GLFW_PRESS;
     }
 
-    std::pair<float, float> linuxInput::GetMousePosition()
+    glm::vec2 linuxInput::GetMousePosition()
     {
         double xpos, ypos;
         glfwGetCursorPos(windowPtr, &xpos, &ypos);

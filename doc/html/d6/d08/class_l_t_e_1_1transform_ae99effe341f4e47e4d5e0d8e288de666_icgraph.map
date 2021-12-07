@@ -1,8 +1,11 @@
 <map id="LTE::transform::getScale" name="LTE::transform::getScale">
-<area shape="rect" id="node1" title=" " alt="" coords="867,42,1035,69"/>
-<area shape="rect" id="node2" href="$d0/d6c/class_l_t_e_1_1mesh.html#a7e8bf30f163886239ac38f8122719550" title=" " alt="" coords="688,13,819,39"/>
-<area shape="rect" id="node6" href="$dd/d78/class_l_t_e_1_1squre_collider.html#a65574d20c0b063c9e31e8f111c05efbe" title=" " alt="" coords="688,64,819,105"/>
+<area shape="rect" id="node1" title=" " alt="" coords="877,97,1045,123"/>
+<area shape="rect" id="node2" href="$d0/d6c/class_l_t_e_1_1mesh.html#a7e8bf30f163886239ac38f8122719550" title=" " alt="" coords="693,17,824,43"/>
+<area shape="rect" id="node6" href="$d8/d3c/classpiece.html#ad2ec265a8448551c6dd889a2ef8b3d7a" title=" " alt="" coords="688,71,829,98"/>
+<area shape="rect" id="node8" href="$dd/d8a/classpawn.html#a519dce419008e52e66e2701d750c5954" title=" " alt="" coords="508,122,601,149"/>
+<area shape="rect" id="node9" href="$dd/d78/class_l_t_e_1_1squre_collider.html#a65574d20c0b063c9e31e8f111c05efbe" title=" " alt="" coords="693,173,824,215"/>
 <area shape="rect" id="node3" href="$d1/d3d/class_l_t_e_1_1shader_render_buffer.html#ad5f4eefe2fd0ccb1eca97b1ea900f884" title=" " alt="" coords="469,5,640,47"/>
 <area shape="rect" id="node4" href="$d1/d10/class_l_t_e_1_1renderer.html#a593a79a85c12d6469425a703fecbde6d" title=" " alt="" coords="236,13,421,39"/>
 <area shape="rect" id="node5" href="$d1/d10/class_l_t_e_1_1renderer.html#a7d374d85dff673716c82f511aa377f67" title=" " alt="" coords="5,13,188,39"/>
+<area shape="rect" id="node7" href="$d8/d3c/classpiece.html#a764eeea74b0dd80820d05edbb67a5e3d" title=" " alt="" coords="515,71,594,98"/>
 </map>

@@ -1,6 +1,4 @@
 #include "LaughTaleEngine.h"
-#include "openGLTexture.h"
-
 
 #include <gtest/gtest.h>
 #include <vector>
@@ -345,7 +343,7 @@ class flappyBird : public ::testing::Test
             LTE::entityManger::addEntity([=, this](LTE::gameObject::gameObjectBuilder *builder){ 
                 builder->
                     setObjectName("player")->
-                    setObjectTransform({{ -0.9, 0.0f, -1.0f}, {0.0f, 0.0f, 0.0f}, { 0.2, 0.2f, 0.0f}})->
+                    setObjectTransform({{ -0.9, 0.0f, 1.0f}, {0.0f, 0.0f, 0.0f}, { 0.2, 0.2f, 0.0f}})->
                     setWindowId(gameWindowId)->
                     addComponent(LTE::mesh::build([=, this](LTE::mesh::meshBuilder *builder)
                         {
@@ -442,7 +440,7 @@ class flappyBird : public ::testing::Test
 
 
 
-TEST_F(flappyBird, testGames)
+TEST_F(flappyBird, DISABLED_testGames)
 {
     std::this_thread::sleep_for(std::chrono::milliseconds(500));
     LTE::app::run();

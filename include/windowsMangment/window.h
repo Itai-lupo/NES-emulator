@@ -12,6 +12,7 @@
 
 #include "events.h"
 #include "entity.h"
+#include "coreInput.h"
 
 namespace LTE 
 {
@@ -25,7 +26,7 @@ namespace LTE
 			graphicsContext *context; 
 			scene *activeScene;
             colliderSystem2D *sceneCollider;
-			
+			coreInput *inputManger;
 			assetManager *assetLibrary;
 			
 			std::string Title = "laughtale new window";

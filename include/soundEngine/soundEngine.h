@@ -1,3 +1,4 @@
+#pragma once
 #include <thread>
 #include "soundDevice.h"
 #include "core.h"

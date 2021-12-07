@@ -1,5 +1,6 @@
 #pragma once
 #include "core.h"
+#include "glm/glm.hpp"
 
 namespace LTE
 {
@@ -8,7 +9,7 @@ namespace LTE
         public:
             virtual bool isKeyPressed(int keycode) = 0;
             virtual bool isMouseButtonPressed(int button) = 0;
-            virtual std::pair<float, float> GetMousePosition() = 0;
+            virtual glm::vec2 GetMousePosition() = 0;
             virtual float GetMouseX() = 0;
             virtual float GetMouseY() = 0;
     };       

@@ -72,7 +72,7 @@ namespace LTE
                         return this;
                     }
                     
-                    eventBuilder *setEventCallback(eventCallbackFunc  callback)
+                    eventBuilder *setEventCallback(const eventCallbackFunc&  callback)
                     {
                         product->callback = callback;
                         return this;

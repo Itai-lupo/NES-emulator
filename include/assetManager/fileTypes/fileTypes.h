@@ -4,11 +4,12 @@
 #include "mp3File.h"
 #include "glslFile.h"
 #include "pngFile.h"
+#include "jpgFile.h"
 
 namespace LTE
 {
     enum fileTypes {
-        mp3, glsl, png
+        mp3, glsl, png, jpg
     };
 
     fileTypes stringToFileType(const std::string& str)
@@ -16,7 +17,8 @@ namespace LTE
          std::map<std::string, fileTypes> stringTofileTypesMap = {
             {"mp3", mp3},
             {"glsl", glsl},
-            {"png", png}
+            {"png", png},
+            {"jpg", jpg}
         };
 
         return stringTofileTypesMap[str];

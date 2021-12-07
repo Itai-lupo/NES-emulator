@@ -11,6 +11,7 @@
 
 #include "linuxInputSoundDevice.h"
 #include "linuxOutputSoundDevice.h"
+#include "linuxInput.h"
 
 #include <string>
 
@@ -131,6 +132,7 @@ namespace LTE
 		glfwSetCharCallback(winRef, SetCharCallback);
 
 		windowToCreate->id = (windowPieceId)winRef;
+		windowToCreate->inputManger = new linuxInput(winRef);
 		return windowToCreate->id;
 	}
 

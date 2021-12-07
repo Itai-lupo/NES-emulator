@@ -113,20 +113,22 @@ Collaboration diagram for LTE::linuxInput:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:aaeb5eeb04437f6326c7488eeb43a709a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d59/class_l_t_e_1_1linux_input.html#aaeb5eeb04437f6326c7488eeb43a709a">linuxInput</a> (GLFWwindow *windowPtr)</td></tr>
+<tr class="separator:aaeb5eeb04437f6326c7488eeb43a709a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1b2efa159917a4fd5498cf07c688968f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d59/class_l_t_e_1_1linux_input.html#a1b2efa159917a4fd5498cf07c688968f">isKeyPressed</a> (int keycode)</td></tr>
 <tr class="separator:a1b2efa159917a4fd5498cf07c688968f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa04ba4cd1ea9f239ac1c1cb99ccb579a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d59/class_l_t_e_1_1linux_input.html#aa04ba4cd1ea9f239ac1c1cb99ccb579a">isMouseButtonPressed</a> (int button)</td></tr>
 <tr class="separator:aa04ba4cd1ea9f239ac1c1cb99ccb579a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0f82c9eb7c69fd0a683a736e6cb9eb84"><td class="memItemLeft" align="right" valign="top">std::pair&lt; float, float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d59/class_l_t_e_1_1linux_input.html#a0f82c9eb7c69fd0a683a736e6cb9eb84">GetMousePosition</a> ()</td></tr>
-<tr class="separator:a0f82c9eb7c69fd0a683a736e6cb9eb84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca2250a74404fbd302795aff09437996"><td class="memItemLeft" align="right" valign="top">glm::vec2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d59/class_l_t_e_1_1linux_input.html#aca2250a74404fbd302795aff09437996">GetMousePosition</a> ()</td></tr>
+<tr class="separator:aca2250a74404fbd302795aff09437996"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afcf34fde1931cfe41440aa5cfbecce61"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d59/class_l_t_e_1_1linux_input.html#afcf34fde1931cfe41440aa5cfbecce61">GetMouseX</a> ()</td></tr>
 <tr class="separator:afcf34fde1931cfe41440aa5cfbecce61"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac0bcb1141dee6ca0186915da9d10cefa"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d59/class_l_t_e_1_1linux_input.html#ac0bcb1141dee6ca0186915da9d10cefa">GetMouseY</a> ()</td></tr>
 <tr class="separator:ac0bcb1141dee6ca0186915da9d10cefa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="a0f82c9eb7c69fd0a683a736e6cb9eb84" name="a0f82c9eb7c69fd0a683a736e6cb9eb84"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0f82c9eb7c69fd0a683a736e6cb9eb84">&#9670;&nbsp;</a></span>GetMousePosition()</h2>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="aaeb5eeb04437f6326c7488eeb43a709a" name="aaeb5eeb04437f6326c7488eeb43a709a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaeb5eeb04437f6326c7488eeb43a709a">&#9670;&nbsp;</a></span>linuxInput()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -135,7 +137,35 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::pair&lt; float, float &gt; LTE::linuxInput::GetMousePosition </td>
+          <td class="memname">LTE::linuxInput::linuxInput </td>
+          <td>(</td>
+          <td class="paramtype">GLFWwindow *&#160;</td>
+          <td class="paramname"><em>windowPtr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>: windowPtr(windowPtr){}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="aca2250a74404fbd302795aff09437996" name="aca2250a74404fbd302795aff09437996"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca2250a74404fbd302795aff09437996">&#9670;&nbsp;</a></span>GetMousePosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">glm::vec2 LTE::linuxInput::GetMousePosition </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -148,7 +178,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="../../db/dd9/class_l_t_e_1_1core_input.html#a1f2fbb60b3f28fd98e555be2286332b4">LTE::coreInput</a>.</p>
+<p>Implements <a class="el" href="../../db/dd9/class_l_t_e_1_1core_input.html#a7fb394762ffabc02a4b0451920bf9bca">LTE::coreInput</a>.</p>
 <div class="fragment"><div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    {</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <span class="keywordtype">double</span> xpos, ypos;</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        glfwGetCursorPos(windowPtr, &amp;xpos, &amp;ypos);</div>
