@@ -3,64 +3,27 @@
 class piece: public LTE::component
 {
     protected:
-        static inline std::string moveingPieceName = "";
-
-        static inline float tilePostions[20] = 
-        {
-            -0.5,  0.5f, 0.0f, 0.0f, 1.0f,
-            -0.5, -0.5f, 0.0f, 0.0f, 0.0f,
-            0.5, -0.5f, 0.0f, 1.0f, 0.0f, 
-            0.5,  0.5f, 0.0f, 1.0f, 1.0f
-        };
-
-
-        static inline unsigned int tileIndices[6] = 
-        {
-            0, 1, 2,
-            0, 3, 2,
-        };
+        int dirction;
+        std::string currentTileName;
+        glm::vec3 postion;
         
     public:
-        piece()
+        bool isWhite;
+        piece(bool isWhite = true): isWhite(isWhite), dirction(isWhite * 2 - 1)
         {
-
-        }
-
-        static void followMouse(LTE::gameObject *eventEntity, LTE::coreEventData *sendor)
-        {
-            LTE::mouseMoveData *eventData = static_cast< LTE::mouseMoveData *>(sendor);
-            eventEntity->getTransform()->setXPostion((eventData->xPos - 400) / 400);
-            eventEntity->getTransform()->setYPostion(-(eventData->yPos - 400) / 400);
-        }
-
-        bool mouseInBond(LTE::gameObject *eventEntity, LTE::coreInput *windowInput)
-        {
-            glm::vec2 mosePostion = windowInput->GetMousePosition();
-            mosePostion = { (mosePostion.x - 400) / 400, -(mosePostion.y - 400) / 400};
-            glm::vec3 piecePostiom = eventEntity->getTransform()->getPostion();
-            glm::vec3 pieceScale = eventEntity->getTransform()->getScale();
-
-            return (
-                (mosePostion.x > (piecePostiom.x - (pieceScale.x / 2)))  &&
-                (mosePostion.x < (piecePostiom.x + (pieceScale.x / 2)))  &&
-                (mosePostion.y > (piecePostiom.y - (pieceScale.y / 2)))  &&
-                (mosePostion.y < (piecePostiom.y + (pieceScale.y / 2)))
-            );
 
         }
 
         virtual void init(LTE::gameObject *parent) override
         {
-            LTE::eventManger::addCoustemEventsRoute("Mouse button pressed/move piece/");
-            LTE::eventManger::startBuildingEvent()->
-                setEventRoute("Mouse button pressed/move piece/" + parent->getName())->
-                setEntityID(parentId)->
-                setWindowId(winId)->
-                setEventCallback(
-                    [=, this](LTE::gameObject *eventEntity, LTE::coreEventData *sendor){ 
-                        if((mouseInBond(eventEntity, sendor->win->inputManger) && this->moveingPieceName == "") || parent->getName() == this->moveingPieceName)
-                            this->move(eventEntity); 
-                    })->add();
+            postion = parent->getTransform()->getPostion();
+        }
+
+        virtual void move(glm::vec2 newPostion)
+        {
+            LTE::gameObject *pieceEntity = LTE::entityManger::getEntityById(parentId);
+            this->postion = {newPostion, 0.1f};
+            pieceEntity->getTransform()->setPostion({newPostion, 0.1f});
         }
 
         virtual void end() override
@@ -68,6 +31,60 @@ class piece: public LTE::component
 
         }
 
-        virtual void move(LTE::gameObject *eventEntity) = 0;
+        virtual std::vector<glm::vec2> getPossibleMovesList() = 0;
+
+
+        bool isMouseInBond(glm::vec2 mousePostion)
+        {
+            mousePostion = {(mousePostion.x - 400) / 400, (mousePostion.y - 400) / -400};
+
+            LTE::gameObject *pieceData = LTE::entityManger::getEntityById(parentId);
+            glm::vec3 piecePostiom = pieceData->getTransform()->getPostion();
+            glm::vec3 pieceScale = pieceData->getTransform()->getScale();
+
+            return (
+                (mousePostion.x > (piecePostiom.x - (pieceScale.x / 2)))  &&
+                (mousePostion.x < (piecePostiom.x + (pieceScale.x / 2)))  &&
+                (mousePostion.y > (piecePostiom.y - (pieceScale.y / 2)))  &&
+                (mousePostion.y < (piecePostiom.y + (pieceScale.y / 2)))
+            );
+
+        }
+
+        void startFollowingMouse()
+        {
+            LTE::gameObject *pieceEntity = LTE::entityManger::getEntityById(parentId);
+            postion = pieceEntity->getTransform()->getPostion();
+            pieceEntity->getTransform()->setZPostion(1.0f);
+            LTE::eventManger::startBuildingEvent()->
+                setEventRoute("Mouse moved/" + pieceEntity->getName())->
+                setEntityID(parentId)->
+                setWindowId(winId)->
+                setEventCallback(followMouse)->
+                add();               
+        }
+        
+        void stopFollowingMouse()
+        {
+            LTE::gameObject *pieceEntity = LTE::entityManger::getEntityById(parentId);
+            LTE::eventManger::removeEvent("Mouse moved/" + pieceEntity->getName());
+        }
+
+        void revertPostion()
+        {
+            LTE::gameObject *pieceEntity = LTE::entityManger::getEntityById(parentId);
+            pieceEntity->getTransform()->setPostion(postion);
+
+        }
+
+        virtual glm::vec3 getPostion(){ return postion; }
+
+    private:
+        static void followMouse(LTE::gameObject *eventEntity, LTE::coreEventData *sendor)
+        {
+            LTE::mouseMoveData *eventData = static_cast< LTE::mouseMoveData *>(sendor);
+            eventEntity->getTransform()->setXPostion((eventData->xPos - 400) / 400);
+            eventEntity->getTransform()->setYPostion(-(eventData->yPos - 400) / 400);
+        }
 
 };

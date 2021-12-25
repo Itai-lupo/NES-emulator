@@ -41,8 +41,6 @@ namespace LTE
 		eventData->route = "Window close/";
 		eventData->windowId = (windowPieceId)window;
 		eventManger::trigerEvent(eventData);
-
-		LAUGHTALE_ENGINR_LOG_INFO("WindowCloseCallback");
 	}
 
 	void KeyCallback(GLFWwindow* window, int key, int scancode, int action, int mods)
@@ -63,7 +61,6 @@ namespace LTE
 			action == GLFW_PRESS? "Mouse button pressed/": "Mouse button released/";
 
 		eventManger::trigerEvent(eventData);
-		LAUGHTALE_ENGINR_LOG_INFO("MouseButtonCallback");
 	}
 
 	void ScrollCallback(GLFWwindow* window, double xOffset, double yOffset)
@@ -71,8 +68,6 @@ namespace LTE
 		mouseScrollData *eventData = new mouseScrollData(xOffset, yOffset, (windowPieceId)window);
 
 		eventManger::trigerEvent(eventData);
-
-		LAUGHTALE_ENGINR_LOG_INFO("ScrollCallback");
 	}
 
 	void CursorPosCallback(GLFWwindow* window, double xPos, double yPos)

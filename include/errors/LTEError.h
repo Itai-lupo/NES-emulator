@@ -1,38 +1,60 @@
+#pragma once
 #include <stdexcept>
 #include <string>
 
 namespace LTE
 {
-    class GameObjectNotFoundException: public std::exception
+    class LTEException: public std::exception
     {
-        private:
+        protected:
             std::string error;
-        public:
-        GameObjectNotFoundException(const std::string& error):error("game object not found exception: "  + error)
-        {
 
-        }
+        public:
+            LTEException(const std::string& error): error(error){}
+
+            const char * what () const throw ()
+            {
+                return error.c_str();
+            }
+
+    };
+
+    class GameObjectNotFoundException: public LTEException
+    {
+        public:
+            GameObjectNotFoundException(const std::string& error): LTEException("game object not found exception: "  + error)
+            {
+
+            }
     
-        const char * what () const throw ()
-        {
-            return error.c_str();
-        }
+    };
+
+    class ComponentNotFoundException: public LTEException
+    {
+        public:
+            ComponentNotFoundException(const std::string& error): LTEException("game object not found exception: "  + error)
+            {
+
+            }
     };
 
 
-    class WindowNotFoundException: public std::exception
+    class WindowNotFoundException: public LTEException
     {
-        private:
-            std::string error;
         public:
-        WindowNotFoundException(const std::string& error):error("window not found exception: "  + error)
-        {
+            WindowNotFoundException(const std::string& error): LTEException("window not found exception: "  + error)
+            {
 
-        }
-    
-        const char * what () const throw ()
-        {
-            return error.c_str();
-        }
+            }
+    };
+
+
+    class PCMDeviceNotFoundException: public LTEException
+    {
+        public:
+            PCMDeviceNotFoundException(const std::string& error): LTEException("pcm device not found exception: "  + error)
+            {
+
+            }
     };
 }

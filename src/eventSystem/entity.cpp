@@ -6,7 +6,7 @@ namespace LTE
 {
     gameObject::gameObjectBuilder *entityManger::builder = nullptr;
     std::vector<gameObject*> entityManger::entitys = std::vector<gameObject*>();
-    u_int32_t entityManger::nextEventId = 0;
+    u_int32_t entityManger::nextGameObjectId = 1;
 
 
     void entityManger::init()
@@ -18,16 +18,16 @@ namespace LTE
     void entityManger::close()
     {
         entityManger::entitys.clear();
-        entityManger::nextEventId = 0;
+        entityManger::nextGameObjectId = 0;
     }
 
     entityTaleId entityManger::addEntity(std::function<void(gameObject::gameObjectBuilder *Builder)> buildGameObject)
     {
         builder->reset();
         buildGameObject(builder);
-        gameObject *res = builder->build(entityManger::nextEventId);
+        gameObject *res = builder->build(entityManger::nextGameObjectId);
         entityManger::entitys.push_back(res);
-        entityManger::nextEventId++;
+        entityManger::nextGameObjectId++;
         return res->getId();
     }
 
@@ -54,7 +54,7 @@ namespace LTE
                 return entityManger::entitys[i];
         }
         
-        throw GameObjectNotFoundException("game object with id: " + std::to_string(id) + " wasn't found");
+        throw new GameObjectNotFoundException("game object with id: " + std::to_string(id) + " wasn't found");
         return  NULL;
     }
 

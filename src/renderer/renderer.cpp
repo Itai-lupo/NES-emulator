@@ -2,6 +2,7 @@
 #include "mesh.h"
 #include "meshRenderer.h"
 #include "shaderTypes.h"
+#include "LTEError.h"
 
 #include <map>
 #include <set>
@@ -37,8 +38,18 @@ namespace LTE
             Scene->objects->end(),
             [=](gameObject *a, gameObject *b) -> bool
             {
-                return a->getComponent<material>()->getTextureId() > b->getComponent<material>()->getTextureId() || 
-                       (a->getComponent<material>()->getTextureId() == b->getComponent<material>()->getTextureId() && a->getTransform()->getPostion().z < b->getTransform()->getPostion().z);
+                try
+                {
+                    return a->getComponent<material>()->getTextureId() > b->getComponent<material>()->getTextureId() || 
+                        (a->getComponent<material>()->getTextureId() == b->getComponent<material>()->getTextureId() && 
+                        a->getTransform()->getPostion().z < b->getTransform()->getPostion().z);
+                }
+                catch(LTEException* e)
+                {
+                    LAUGHTALE_ENGINR_LOG_ERROR(e->what());
+                    return false;
+                }
+                
             });
 
         const glm::mat4& ViewProjectionMatrix = Scene->camera->getComponent<coreCameraControler>()->getCamera()->getViewProjectionMatrix();
@@ -48,28 +59,35 @@ namespace LTE
 
         for(gameObject *toRender: *Scene->objects)
         {
-            mesh *obj = toRender->getComponent<mesh>();
-            material *objMat = toRender->getComponent<material>();
-            if(!obj || !objMat)
-                continue;
-            shaderRenderBuffer *s  = submitShape(obj, objMat);
-            if(!s)
-                continue;
-            shadersToRender.insert(s);
-            if(objMat->getTextureId() != lastTexture)
+            try
             {
-                if(objMat->getTextureId() != 0)
+                mesh *obj = toRender->getComponent<mesh>();
+                material *objMat = toRender->getComponent<material>();
+                if(!obj || !objMat)
+                    continue;
+                shaderRenderBuffer *s  = submitShape(obj, objMat);
+                if(!s)
+                    continue;
+                shadersToRender.insert(s);
+                if(objMat->getTextureId() != lastTexture)
                 {
-                    lastTexture = objMat->getTextureId();
-                    textureSlots.push_back({lastTexture, textureSlotCount + 1});
-                    textures.push_back(objMat->getTexture());
-                    textureSlotCount = (textureSlotCount + 1) % 31;
+                    if(objMat->getTextureId() != 0)
+                    {
+                        lastTexture = objMat->getTextureId();
+                        textureSlots.push_back({lastTexture, textureSlotCount + 1});
+                        textures.push_back(objMat->getTexture());
+                        textureSlotCount = (textureSlotCount + 1) % 31;
+                    }
+                    else
+                    {
+                        lastTexture = 0;
+                        textureSlots.push_back({0, 0});
+                    }
                 }
-                else
-                {
-                    lastTexture = 0;
-                    textureSlots.push_back({0, 0});
-                }
+            }
+            catch(LTEException* e)
+            {
+                LAUGHTALE_ENGINR_LOG_ERROR("can't render " << e->what());
             }
         }
 

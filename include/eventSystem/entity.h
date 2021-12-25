@@ -1,6 +1,7 @@
 #pragma once
 #include <functional>
 #include <vector>
+#include <algorithm>
 #include <glm/glm.hpp>
 #include <functional>
 
@@ -8,7 +9,7 @@
 #include "logger.h"
 #include "component.h"
 #include "transform.h"
-
+#include "LTEError.h"
 
 namespace LTE
 {
@@ -79,18 +80,57 @@ namespace LTE
             gameObject(){}
 
         public:    
-
             const std::string& getName(){ return name; }
             const entityTaleId getId(){ return id; }
-            template<typename T> T *getComponent()
+            
+            template<typename T> 
+            T *getComponent()
             {
+                if(id == 0 || !ObjectTransform)
+                    throw new ComponentNotFoundException("entitys with id 0 have no data ");
+
                 for (auto comp: components)
                 {
                     if(comp && dynamic_cast<T*>(comp))
                         return dynamic_cast<T*>(comp); 
                 }
-                LAUGHTALE_ENGINR_LOG_WARNING("can't find Component of type: " << typeid(T).name());
+                throw new ComponentNotFoundException("can't find Component of type: " + std::string(typeid(T).name()));
                 return NULL;
+            }    
+
+            template<typename T> 
+            void setComponent(component *componentToAdd)
+            {
+                if(id == 0 || !ObjectTransform)
+                    throw new ComponentNotFoundException("entitys with id 0 have no data ");
+
+                for (auto comp: components)
+                {
+                    if(comp && dynamic_cast<T*>(comp))
+                    {
+                        comp = componentToAdd; 
+                        return;    
+                    }
+                }
+
+                components.push_back(componentToAdd);
+            }    
+
+            template<typename T> 
+            void removeComponent()
+            {
+                if(id == 0 || !ObjectTransform)
+                    throw new ComponentNotFoundException("entitys with id 0 have no data ");
+                std::vector<component*>::iterator it = std::remove_if(
+                        components.begin(), 
+                        components.end(),
+                        [](component *comp) -> bool
+                        {
+                            return comp && dynamic_cast<T*>(comp);
+                        });
+
+                if(it != components.end())
+                    components.erase(it);
             }    
 
             void end()
@@ -110,7 +150,10 @@ namespace LTE
                 return ObjectTransform;
             }
 
-            virtual ~gameObject() = default;
+            virtual ~gameObject()
+            {
+                id = 0;
+            }
             
     };
 
@@ -119,7 +162,7 @@ namespace LTE
         private:
             static gameObject::gameObjectBuilder *builder;
             static std::vector<gameObject*> entitys;
-            static uint32_t nextEventId;
+            static uint32_t nextGameObjectId;
         public:
             static void init();
             static void close();

@@ -32,18 +32,18 @@ TEST_INC_DIRS := $(foreach dir,$(INCLUDE_DIR),$(call rwildcardDir,$(dir)))
 INC_FLAGS := $(addprefix -I,$(INC_DIRS) $(LIB_DIR))
 LIB_FLAGS := $(addprefix -L,$(LIB_DIR))
 
-CPPFLAGS ?=  $(INC_FLAGS)  -MMD -MP  -g -Wall -Wc++17-extensions -std=c++20
+CPPFLAGS ?=   -std=c++20
 TEST_CPP_FLAGE = -lgtest -lgtest_main -lgmock  
-CFLAGS := $(LIB_FLAGS) -lstdc++ -lgflags -lglog -lGL -lglfw   -lrt -lm -ldl -lasound
+# CFLAGS :=
 
-CXXFLAGS += -g -Wall -Wextra -pthread -O0
+CXXFLAGS += $(INC_FLAGS)  -MMD -MP  -g -Wall -Wc++17-extensions -g -Wall -Wextra -pthread  $(LIB_FLAGS) -lstdc++ -lgflags -lglog -lGL -lglfw   -lrt -lm -ldl -lasound -O0
 
 LDFLAGS =  $(LIB_FLAGS)
 
 
 $(OUTPUT_DIR)/$(TARGET_EXEC): $(OBJS)
 	mkdir -p output
-	$(CC) $(CPPFLAGS) $(CFLAGS)   $(CXXFLAGS) $(OBJS)  -o $@ $(LDFLAGS)
+	$(CC) $(CPPFLAGS   $(CXXFLAGS) $(OBJS)  -o $@ $(LDFLAGS)
 
 print:
 	@echo ./include/ $(wildcard ./include/*/) $(wildcard ./include/*/*/) $(wildcard ./include/*/*/*/) $(wildcard ./include/*/*/*/*/)
@@ -58,7 +58,7 @@ $(BUILD_DIR)/%.cpp.o: %.cpp
 
 $(BUILD_DIR)/%.c.o: %.c
 	$(MKDIR_P) $(dir $@)
-	$(CC)  $(CPPFLAGS) $(CXXFLAGS) -c $< -o $@
+	$(CC)  $(CFLAGS) $(CXXFLAGS) -c $< -o $@
 
 
 .PHONY: clean

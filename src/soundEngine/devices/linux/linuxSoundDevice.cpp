@@ -1,5 +1,6 @@
 #include "linuxSoundDevice.h"
 #include "logger.h"
+#include "LTEError.h"
 
 namespace LTE
 {
@@ -23,8 +24,15 @@ namespace LTE
 
     void linuxSoundDevice::OpenPCMDevicePlayback()
     {
+
+        //Free hint buffer too
         int err = snd_pcm_open(&handle, "default", type, 0);
-        LAUGHTALE_ENGINR_CONDTION_LOG_FATAL("unable to open pcm device: " + std::string(snd_strerror(err)), err < 0);
+        if (err < 0)
+        {
+            LAUGHTALE_ENGINR_LOG_ERROR("unable to open pcm device: " + std::string(snd_strerror(err)));
+            throw new PCMDeviceNotFoundException(std::string(snd_strerror(err)));
+        }
+        
     }
 
 

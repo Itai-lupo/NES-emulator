@@ -6,6 +6,7 @@
 #include <glm/glm.hpp>
 #include <sys/prctl.h>
 
+#include "LTEError.h"
 
 namespace LTE
 {
@@ -21,10 +22,26 @@ namespace LTE
     {
         soundSynthesizer::init();
 
-        microphone = app::getOSAbstractFactory()->createInputSoundDevice(); 
-        speaker = app::getOSAbstractFactory()->createOutputSoundDevice();
-
-        soundThread = new std::thread(threadLoop);
+        try
+        {
+            microphone = app::getOSAbstractFactory()->createInputSoundDevice();
+        }
+        catch(PCMDeviceNotFoundException* e)
+        {
+            LAUGHTALE_ENGINR_LOG_ERROR("can't use micophone: " << e->what())
+        }
+        
+        try
+        {
+            speaker = app::getOSAbstractFactory()->createOutputSoundDevice();
+        }
+        catch(PCMDeviceNotFoundException* e)
+        {
+            LAUGHTALE_ENGINR_LOG_ERROR("can't use speakers: " << e->what())
+        }
+        
+        if(microphone && speaker)
+            soundThread = new std::thread(threadLoop);
     }
 
     void soundEngine::close()

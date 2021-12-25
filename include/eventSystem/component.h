@@ -21,6 +21,8 @@ namespace LTE
                 this->parentId = parentId;
                 this->winId = winId;
             }
+
+            entityTaleId getParentId(){return parentId; }
     };
 
 }
