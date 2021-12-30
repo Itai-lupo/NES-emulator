@@ -1,5 +1,5 @@
 var checkmate_8cpp =
 [
-    [ "board", "d2/d44/classboard.html", "d2/d44/classboard" ],
-    [ "TEST_F", "d2/dde/checkmate_8cpp.html#acabb96cf4f2f5d8fbb81c0da8d110f07", null ]
+    [ "checkmate", "da/d39/classcheckmate.html", "da/d39/classcheckmate" ],
+    [ "TEST_F", "d2/dde/checkmate_8cpp.html#aa6676f80bb1510c1fba42d345c814f03", null ]
 ];

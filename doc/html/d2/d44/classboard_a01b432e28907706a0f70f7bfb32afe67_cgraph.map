@@ -1,0 +1,7 @@
+<map id="board::getPieceAtTile" name="board::getPieceAtTile">
+<area shape="rect" id="node1" title=" " alt="" coords="5,97,151,123"/>
+<area shape="rect" id="node2" href="$de/d44/class_l_t_e_1_1entity_manger.html#ad019a4750f1350c7185cefe6072dcd6e" title=" " alt="" coords="235,5,367,47"/>
+<area shape="rect" id="node3" href="$d2/d44/classboard.html#a990231a6644f06d11f55d5edf87456b6" title=" " alt="" coords="214,71,389,98"/>
+<area shape="rect" id="node4" href="$d6/d08/class_l_t_e_1_1transform.html#a160e68074988f3992b3cc6df921db306" title=" " alt="" coords="214,122,389,149"/>
+<area shape="rect" id="node5" href="$d2/d49/class_l_t_e_1_1game_object.html#a568b30b81a33465e74c3c39663d1b5c0" title=" " alt="" coords="199,173,404,199"/>
+</map>

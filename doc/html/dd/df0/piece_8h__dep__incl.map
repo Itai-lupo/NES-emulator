@@ -1,5 +1,6 @@
 <map id="tests/checkmate/pieces/piece.h" name="tests/checkmate/pieces/piece.h">
-<area shape="rect" id="node1" title=" " alt="" coords="31,5,192,47"/>
-<area shape="rect" id="node2" href="$d9/d15/pawn_8h.html" title=" " alt="" coords="31,95,192,136"/>
-<area shape="rect" id="node3" href="$d2/dde/checkmate_8cpp.html" title=" " alt="" coords="5,184,217,211"/>
+<area shape="rect" id="node1" title=" " alt="" coords="67,5,229,47"/>
+<area shape="rect" id="node2" href="$d9/d15/pawn_8h.html" title=" " alt="" coords="67,95,229,136"/>
+<area shape="rect" id="node3" href="$d3/d02/board_8h.html" title=" " alt="" coords="5,184,171,211"/>
+<area shape="rect" id="node4" href="$d2/dde/checkmate_8cpp.html" title=" " alt="" coords="43,259,253,285"/>
 </map>

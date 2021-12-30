@@ -1,7 +1,6 @@
 <map id="LTE::transform::changeYPostion" name="LTE::transform::changeYPostion">
-<area shape="rect" id="node1" title=" " alt="" coords="444,31,656,57"/>
-<area shape="rect" id="node2" href="$dd/d8a/classpawn.html#a519dce419008e52e66e2701d750c5954" title=" " alt="" coords="289,5,383,32"/>
-<area shape="rect" id="node3" href="$da/dee/classbird.html#a11f87780b5c8a41fa86e43a6352c56fa" title=" " alt="" coords="276,56,396,83"/>
-<area shape="rect" id="node4" href="$da/dee/classbird.html#a13ee21c9a389a0e62b10411db6346fc6" title=" " alt="" coords="121,56,228,83"/>
-<area shape="rect" id="node5" href="$da/dee/classbird.html#a9e7af03487bc9fe7fb51138c4aac90b8" title=" " alt="" coords="5,56,73,83"/>
+<area shape="rect" id="node1" title=" " alt="" coords="439,5,647,32"/>
+<area shape="rect" id="node2" href="$da/dee/classbird.html#a11f87780b5c8a41fa86e43a6352c56fa" title=" " alt="" coords="273,5,391,32"/>
+<area shape="rect" id="node3" href="$da/dee/classbird.html#a13ee21c9a389a0e62b10411db6346fc6" title=" " alt="" coords="120,5,225,32"/>
+<area shape="rect" id="node4" href="$da/dee/classbird.html#a9e7af03487bc9fe7fb51138c4aac90b8" title=" " alt="" coords="5,5,72,32"/>
 </map>

@@ -125,13 +125,13 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    {</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <a class="code hl_function" href="../../d2/dff/class_l_t_e_1_1sound_synthesizer.html#a9cab8478ac0f4e5ff40c3b515016cd07">soundSynthesizer::close</a>();</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        soundThread-&gt;join();</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <span class="keyword">delete</span> soundThread;</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <span class="keyword">delete</span> microphone;</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <span class="keyword">delete</span> speaker;</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    }</div>
+<div class="fragment"><div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    {</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <a class="code hl_function" href="../../d2/dff/class_l_t_e_1_1sound_synthesizer.html#a9cab8478ac0f4e5ff40c3b515016cd07">soundSynthesizer::close</a>();</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        soundThread-&gt;join();</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <span class="keyword">delete</span> soundThread;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="keyword">delete</span> microphone;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <span class="keyword">delete</span> speaker;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    }</div>
 <div class="ttc" id="aclass_l_t_e_1_1sound_synthesizer_html_a9cab8478ac0f4e5ff40c3b515016cd07"><div class="ttname"><a href="../../d2/dff/class_l_t_e_1_1sound_synthesizer.html#a9cab8478ac0f4e5ff40c3b515016cd07">LTE::soundSynthesizer::close</a></div><div class="ttdeci">static void close()</div><div class="ttdef"><b>Definition:</b> soundSynthesizer.cpp:17</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -147,11 +147,11 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../de/d01/class_l_t_e_1_1sound_engine_ac22cd141150c6a59ef28993c06936837_icgraph.png" border="0" usemap="#ade/d01/class_l_t_e_1_1sound_engine_ac22cd141150c6a59ef28993c06936837_icgraph" alt=""/></div>
 <map name="ade/d01/class_l_t_e_1_1sound_engine_ac22cd141150c6a59ef28993c06936837_icgraph" id="ade/d01/class_l_t_e_1_1sound_engine_ac22cd141150c6a59ef28993c06936837_icgraph">
-<area shape="rect" title=" " alt="" coords="363,56,531,83"/>
-<area shape="rect" href="../../d0/d13/class_l_t_e_1_1app.html#ae0f06737b2f489eace03ada49ae7b4d5" title=" " alt="" coords="200,56,315,83"/>
-<area shape="rect" href="../../d2/d44/classboard.html#a3c7b36f7681d4766fc0a1d0ed9cb805e" title=" " alt="" coords="18,5,139,32"/>
-<area shape="rect" href="../../d5/d71/classflappy_bird.html#a3353f8436200edb894fd5908515c8f74" title=" " alt="" coords="5,56,152,83"/>
-<area shape="rect" href="../../db/dd3/sound_8test_8cpp.html#a3998186a574db417e7fcfdc402eb38ca" title=" " alt="" coords="51,107,107,133"/>
+<area shape="rect" title=" " alt="" coords="363,56,525,83"/>
+<area shape="rect" href="../../d0/d13/class_l_t_e_1_1app.html#ae0f06737b2f489eace03ada49ae7b4d5" title=" " alt="" coords="204,56,315,83"/>
+<area shape="rect" href="../../da/d39/classcheckmate.html#af09761dbef36290d057f393c74b341fb" title=" " alt="" coords="5,5,156,32"/>
+<area shape="rect" href="../../d5/d71/classflappy_bird.html#a3353f8436200edb894fd5908515c8f74" title=" " alt="" coords="9,56,152,83"/>
+<area shape="rect" href="../../db/dd3/sound_8test_8cpp.html#a3998186a574db417e7fcfdc402eb38ca" title=" " alt="" coords="53,107,108,133"/>
 </map>
 </div>
 
@@ -222,28 +222,46 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    {</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <a class="code hl_function" href="../../d2/dff/class_l_t_e_1_1sound_synthesizer.html#a569c46f378859a3364d269a6b49ecfd9">soundSynthesizer::init</a>();</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        microphone = <a class="code hl_function" href="../../d0/d13/class_l_t_e_1_1app.html#a01ae35f37a9fb2f41dd19205e324ad90">app::getOSAbstractFactory</a>()-&gt;<a class="code hl_function" href="../../db/d1c/class_l_t_e_1_1_o_s_abstract_factory.html#aea84994d9c1e500db18be23213da9c97">createInputSoundDevice</a>(); </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        speaker = <a class="code hl_function" href="../../d0/d13/class_l_t_e_1_1app.html#a01ae35f37a9fb2f41dd19205e324ad90">app::getOSAbstractFactory</a>()-&gt;<a class="code hl_function" href="../../db/d1c/class_l_t_e_1_1_o_s_abstract_factory.html#a1b75dcf8cb585636a03d088e0e571fc4">createOutputSoundDevice</a>();</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        soundThread = <span class="keyword">new</span> std::thread(threadLoop);</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    }</div>
+<div class="fragment"><div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    {</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <a class="code hl_function" href="../../d2/dff/class_l_t_e_1_1sound_synthesizer.html#a569c46f378859a3364d269a6b49ecfd9">soundSynthesizer::init</a>();</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        <span class="keywordflow">try</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        {</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>            microphone = <a class="code hl_function" href="../../d0/d13/class_l_t_e_1_1app.html#a01ae35f37a9fb2f41dd19205e324ad90">app::getOSAbstractFactory</a>()-&gt;<a class="code hl_function" href="../../db/d1c/class_l_t_e_1_1_o_s_abstract_factory.html#aea84994d9c1e500db18be23213da9c97">createInputSoundDevice</a>();</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        }</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        <span class="keywordflow">catch</span>(PCMDeviceNotFoundException* e)</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        {</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>            <a class="code hl_define" href="../../d1/d8c/logger_8h.html#aae4cf1bd083983040d4d6572a9b0d8bf">LAUGHTALE_ENGINR_LOG_ERROR</a>(<span class="stringliteral">&quot;can&#39;t use micophone: &quot;</span> &lt;&lt; e-&gt;what())</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        }</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <span class="keywordflow">try</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        {</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>            speaker = <a class="code hl_function" href="../../d0/d13/class_l_t_e_1_1app.html#a01ae35f37a9fb2f41dd19205e324ad90">app::getOSAbstractFactory</a>()-&gt;<a class="code hl_function" href="../../db/d1c/class_l_t_e_1_1_o_s_abstract_factory.html#a1b75dcf8cb585636a03d088e0e571fc4">createOutputSoundDevice</a>();</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        }</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <span class="keywordflow">catch</span>(PCMDeviceNotFoundException* e)</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        {</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            <a class="code hl_define" href="../../d1/d8c/logger_8h.html#aae4cf1bd083983040d4d6572a9b0d8bf">LAUGHTALE_ENGINR_LOG_ERROR</a>(<span class="stringliteral">&quot;can&#39;t use speakers: &quot;</span> &lt;&lt; e-&gt;what())</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        }</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="keywordflow">if</span>(microphone &amp;&amp; speaker)</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            soundThread = <span class="keyword">new</span> std::thread(threadLoop);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    }</div>
 <div class="ttc" id="aclass_l_t_e_1_1_o_s_abstract_factory_html_a1b75dcf8cb585636a03d088e0e571fc4"><div class="ttname"><a href="../../db/d1c/class_l_t_e_1_1_o_s_abstract_factory.html#a1b75dcf8cb585636a03d088e0e571fc4">LTE::OSAbstractFactory::createOutputSoundDevice</a></div><div class="ttdeci">virtual soundDevice * createOutputSoundDevice()=0</div></div>
 <div class="ttc" id="aclass_l_t_e_1_1_o_s_abstract_factory_html_aea84994d9c1e500db18be23213da9c97"><div class="ttname"><a href="../../db/d1c/class_l_t_e_1_1_o_s_abstract_factory.html#aea84994d9c1e500db18be23213da9c97">LTE::OSAbstractFactory::createInputSoundDevice</a></div><div class="ttdeci">virtual soundDevice * createInputSoundDevice()=0</div></div>
 <div class="ttc" id="aclass_l_t_e_1_1app_html_a01ae35f37a9fb2f41dd19205e324ad90"><div class="ttname"><a href="../../d0/d13/class_l_t_e_1_1app.html#a01ae35f37a9fb2f41dd19205e324ad90">LTE::app::getOSAbstractFactory</a></div><div class="ttdeci">static OSAbstractFactory * getOSAbstractFactory()</div><div class="ttdef"><b>Definition:</b> app.h:22</div></div>
 <div class="ttc" id="aclass_l_t_e_1_1sound_synthesizer_html_a569c46f378859a3364d269a6b49ecfd9"><div class="ttname"><a href="../../d2/dff/class_l_t_e_1_1sound_synthesizer.html#a569c46f378859a3364d269a6b49ecfd9">LTE::soundSynthesizer::init</a></div><div class="ttdeci">static void init()</div><div class="ttdef"><b>Definition:</b> soundSynthesizer.cpp:11</div></div>
+<div class="ttc" id="alogger_8h_html_aae4cf1bd083983040d4d6572a9b0d8bf"><div class="ttname"><a href="../../d1/d8c/logger_8h.html#aae4cf1bd083983040d4d6572a9b0d8bf">LAUGHTALE_ENGINR_LOG_ERROR</a></div><div class="ttdeci">#define LAUGHTALE_ENGINR_LOG_ERROR(toLog)</div><div class="ttdef"><b>Definition:</b> logger.h:8</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../de/d01/class_l_t_e_1_1sound_engine_a5d8a53854ed29724942f958999b2f595_cgraph.png" border="0" usemap="#ade/d01/class_l_t_e_1_1sound_engine_a5d8a53854ed29724942f958999b2f595_cgraph" alt=""/></div>
 <map name="ade/d01/class_l_t_e_1_1sound_engine_a5d8a53854ed29724942f958999b2f595_cgraph" id="ade/d01/class_l_t_e_1_1sound_engine_a5d8a53854ed29724942f958999b2f595_cgraph">
-<area shape="rect" title=" " alt="" coords="5,107,160,134"/>
-<area shape="rect" href="../../db/d1c/class_l_t_e_1_1_o_s_abstract_factory.html#aea84994d9c1e500db18be23213da9c97" title=" " alt="" coords="228,5,401,47"/>
-<area shape="rect" href="../../db/d1c/class_l_t_e_1_1_o_s_abstract_factory.html#a1b75dcf8cb585636a03d088e0e571fc4" title=" " alt="" coords="223,71,406,112"/>
-<area shape="rect" href="../../d0/d13/class_l_t_e_1_1app.html#a01ae35f37a9fb2f41dd19205e324ad90" title=" " alt="" coords="208,137,421,163"/>
-<area shape="rect" href="../../d2/dff/class_l_t_e_1_1sound_synthesizer.html#a569c46f378859a3364d269a6b49ecfd9" title=" " alt="" coords="235,188,394,229"/>
+<area shape="rect" title=" " alt="" coords="5,137,155,163"/>
+<area shape="rect" href="../../db/d1c/class_l_t_e_1_1_o_s_abstract_factory.html#aea84994d9c1e500db18be23213da9c97" title=" " alt="" coords="221,5,392,47"/>
+<area shape="rect" href="../../db/d1c/class_l_t_e_1_1_o_s_abstract_factory.html#a1b75dcf8cb585636a03d088e0e571fc4" title=" " alt="" coords="217,71,397,112"/>
+<area shape="rect" href="../../d0/d13/class_l_t_e_1_1app.html#a01ae35f37a9fb2f41dd19205e324ad90" title=" " alt="" coords="203,137,411,163"/>
+<area shape="rect" href="../../d2/dff/class_l_t_e_1_1sound_synthesizer.html#a569c46f378859a3364d269a6b49ecfd9" title=" " alt="" coords="229,188,384,229"/>
+<area shape="rect" href="../../d7/dcb/class_l_t_e_1_1_l_t_e_exception.html#afb72941c22a01af0b4a5f057f62362ec" title=" " alt="" coords="223,254,390,281"/>
 </map>
 </div>
 <div class="dynheader">
@@ -251,11 +269,11 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../de/d01/class_l_t_e_1_1sound_engine_a5d8a53854ed29724942f958999b2f595_icgraph.png" border="0" usemap="#ade/d01/class_l_t_e_1_1sound_engine_a5d8a53854ed29724942f958999b2f595_icgraph" alt=""/></div>
 <map name="ade/d01/class_l_t_e_1_1sound_engine_a5d8a53854ed29724942f958999b2f595_icgraph" id="ade/d01/class_l_t_e_1_1sound_engine_a5d8a53854ed29724942f958999b2f595_icgraph">
-<area shape="rect" title=" " alt="" coords="327,56,481,83"/>
-<area shape="rect" href="../../d0/d13/class_l_t_e_1_1app.html#ab62cbeaa31b7f861b6938d6b7ac82968" title=" " alt="" coords="179,56,279,83"/>
-<area shape="rect" href="../../d2/d44/classboard.html#ad5191dd0de710bb52f90eca8795bc661" title=" " alt="" coords="19,5,117,32"/>
-<area shape="rect" href="../../d5/d71/classflappy_bird.html#aefe252403b2c6969e04a034c3d037d5d" title=" " alt="" coords="5,56,131,83"/>
-<area shape="rect" href="../../db/dd3/sound_8test_8cpp.html#a3998186a574db417e7fcfdc402eb38ca" title=" " alt="" coords="40,107,96,133"/>
+<area shape="rect" title=" " alt="" coords="327,56,476,83"/>
+<area shape="rect" href="../../d0/d13/class_l_t_e_1_1app.html#ab62cbeaa31b7f861b6938d6b7ac82968" title=" " alt="" coords="183,56,279,83"/>
+<area shape="rect" href="../../da/d39/classcheckmate.html#a12580106679dc25095095f035c977064" title=" " alt="" coords="5,5,135,32"/>
+<area shape="rect" href="../../d5/d71/classflappy_bird.html#aefe252403b2c6969e04a034c3d037d5d" title=" " alt="" coords="9,56,131,83"/>
+<area shape="rect" href="../../db/dd3/sound_8test_8cpp.html#a3998186a574db417e7fcfdc402eb38ca" title=" " alt="" coords="43,107,97,133"/>
 </map>
 </div>
 

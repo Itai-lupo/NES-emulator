@@ -32,6 +32,7 @@ var hierarchy =
       [ "LTE::squreCollider", "dd/d78/class_l_t_e_1_1squre_collider.html", null ],
       [ "LTE::transform", "d6/d08/class_l_t_e_1_1transform.html", null ],
       [ "bird", "da/dee/classbird.html", null ],
+      [ "board", "d2/d44/classboard.html", null ],
       [ "piece", "d8/d3c/classpiece.html", [
         [ "pawn", "dd/d8a/classpawn.html", null ]
       ] ],
@@ -70,8 +71,12 @@ var hierarchy =
     [ "LTE::event", "da/df9/struct_l_t_e_1_1event.html", null ],
     [ "LTE::eventManger", "d5/d7c/class_l_t_e_1_1event_manger.html", null ],
     [ "std::exception", null, [
-      [ "LTE::GameObjectNotFoundException", "d9/d22/class_l_t_e_1_1_game_object_not_found_exception.html", null ],
-      [ "LTE::WindowNotFoundException", "da/d5b/class_l_t_e_1_1_window_not_found_exception.html", null ]
+      [ "LTE::LTEException", "d7/dcb/class_l_t_e_1_1_l_t_e_exception.html", [
+        [ "LTE::ComponentNotFoundException", "df/d65/class_l_t_e_1_1_component_not_found_exception.html", null ],
+        [ "LTE::GameObjectNotFoundException", "d9/d22/class_l_t_e_1_1_game_object_not_found_exception.html", null ],
+        [ "LTE::PCMDeviceNotFoundException", "d3/d71/class_l_t_e_1_1_p_c_m_device_not_found_exception.html", null ],
+        [ "LTE::WindowNotFoundException", "da/d5b/class_l_t_e_1_1_window_not_found_exception.html", null ]
+      ] ]
     ] ],
     [ "LTE::file", "df/d84/class_l_t_e_1_1file.html", [
       [ "LTE::glslFile", "d4/d18/class_l_t_e_1_1glsl_file.html", null ],
@@ -143,7 +148,7 @@ var hierarchy =
     [ "LTE::soundFilesPlayer", "d4/d0c/class_l_t_e_1_1sound_files_player.html", null ],
     [ "LTE::soundSynthesizer", "d2/dff/class_l_t_e_1_1sound_synthesizer.html", null ],
     [ "testing::Test", null, [
-      [ "board", "d2/d44/classboard.html", null ],
+      [ "checkmate", "da/d39/classcheckmate.html", null ],
       [ "flappyBird", "d5/d71/classflappy_bird.html", null ]
     ] ],
     [ "testClass", "d7/d28/structtest_class.html", null ],

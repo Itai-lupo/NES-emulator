@@ -6,5 +6,6 @@ var searchData=
   ['linuxinputsounddevice_3',['linuxInputSoundDevice',['../da/d8e/class_l_t_e_1_1linux_input_sound_device.html',1,'LTE']]],
   ['linuxoutputsounddevice_4',['linuxOutputSoundDevice',['../d8/d92/class_l_t_e_1_1linux_output_sound_device.html',1,'LTE']]],
   ['linuxsounddevice_5',['linuxSoundDevice',['../d5/d49/class_l_t_e_1_1linux_sound_device.html',1,'LTE']]],
-  ['logger_6',['logger',['../d3/d08/class_l_t_e_1_1logger.html',1,'LTE']]]
+  ['logger_6',['logger',['../d3/d08/class_l_t_e_1_1logger.html',1,'LTE']]],
+  ['lteexception_7',['LTEException',['../d7/dcb/class_l_t_e_1_1_l_t_e_exception.html',1,'LTE']]]
 ];

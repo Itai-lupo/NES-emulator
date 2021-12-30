@@ -1,7 +1,6 @@
 <map id="LTE::texture::getId" name="LTE::texture::getId">
-<area shape="rect" id="node1" title=" " alt="" coords="916,13,1047,39"/>
-<area shape="rect" id="node2" href="$dc/dda/class_l_t_e_1_1material.html#afb1ecde3f0f2a624000b7f30336b6d99" title=" " alt="" coords="688,13,868,39"/>
-<area shape="rect" id="node3" href="$d1/d3d/class_l_t_e_1_1shader_render_buffer.html#ad5f4eefe2fd0ccb1eca97b1ea900f884" title=" " alt="" coords="469,5,640,47"/>
-<area shape="rect" id="node4" href="$d1/d10/class_l_t_e_1_1renderer.html#a593a79a85c12d6469425a703fecbde6d" title=" " alt="" coords="236,13,421,39"/>
-<area shape="rect" id="node5" href="$d1/d10/class_l_t_e_1_1renderer.html#a7d374d85dff673716c82f511aa377f67" title=" " alt="" coords="5,13,188,39"/>
+<area shape="rect" id="node1" title=" " alt="" coords="673,13,800,39"/>
+<area shape="rect" id="node2" href="$dc/dda/class_l_t_e_1_1material.html#afb1ecde3f0f2a624000b7f30336b6d99" title=" " alt="" coords="449,13,625,39"/>
+<area shape="rect" id="node3" href="$d1/d3d/class_l_t_e_1_1shader_render_buffer.html#ad5f4eefe2fd0ccb1eca97b1ea900f884" title=" " alt="" coords="235,5,401,47"/>
+<area shape="rect" id="node4" href="$d1/d10/class_l_t_e_1_1renderer.html#a593a79a85c12d6469425a703fecbde6d" title=" " alt="" coords="5,13,187,39"/>
 </map>
