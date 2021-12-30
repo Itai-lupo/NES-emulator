@@ -10,6 +10,7 @@
 #include "mesh.h"
 #include "material.h"
 
+#include <map>
 #include <vector>
 
 namespace LTE
@@ -37,10 +38,11 @@ namespace LTE
             vertexArray *BatchedVertexArray;
 
             std::vector<vertexsData> verticesData;
+            std::vector<unsigned int> shapeIndexCounter;
             std::vector<unsigned int> indices;
 
             int renderBatchEnd = 0;
-            int previousRenderBatchEnd = 0;
+            int batchIndexCount = 0;
 
             windowPieceId winId;
         public:
@@ -48,11 +50,14 @@ namespace LTE
             shader *getShader();
 
             void pushShape(mesh *shape, material *m);
-            void setTextureIndex(const std::vector<std::pair<textureId, int>>& textureIndex);
+            void setTextureIndex(std:: map<textureId, int>& textures);
             void print();
 
             void bindRenderBatch();
             void unbind();
             int getVertexCount();
+
+            bool isAllRendered();
+            void clear();
     };
 }

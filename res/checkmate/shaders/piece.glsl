@@ -17,6 +17,7 @@ void main(){
    MatrialColor = MatColor;
    textCoord = texCoord;
    textureIndex  = texSlot;
+   gl_PointSize = 10.0;
 };
 
 

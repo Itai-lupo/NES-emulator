@@ -48,27 +48,30 @@ namespace LTE
 
             temp.texId = m->getTexture() ? m->getTextureId(): 0;
             verticesData.push_back(temp);
+            shapeIndexCounter.push_back(0);
         }
 
         for(unsigned int *i = shape->getIB(); i < shape->getIB() + shape->getCount(); i++)
         {
             indices.push_back(*i + indicesOffset);
         }
-
+        shapeIndexCounter[shapeIndexCounter.size() - 1] = shape->getCount() ;
         
     }
 
-    void shaderRenderBuffer::setTextureIndex(const std::vector<std::pair<textureId, int>>& textureIndex)
+    void shaderRenderBuffer::setTextureIndex(std::map<textureId, int>& textures)
     {
-        for (auto& idToSlot: textureIndex)
+        int  usedTextureThisBatch = 0;
+        while(( usedTextureThisBatch < 7 || (usedTextureThisBatch == 7 && textures[verticesData[renderBatchEnd].texId])) && renderBatchEnd != verticesData.size())
         {
-            while(idToSlot.first == verticesData[renderBatchEnd].texId)
-            {
-                verticesData[renderBatchEnd].textureSlot = (float)idToSlot.second;
-                renderBatchEnd++;
-            }
+            if(!textures[verticesData[renderBatchEnd].texId] && verticesData[renderBatchEnd].texId)
+                textures[verticesData[renderBatchEnd].texId] = ++usedTextureThisBatch;
+
+            verticesData[renderBatchEnd].textureSlot = (float)textures[verticesData[renderBatchEnd].texId];
+            batchIndexCount += shapeIndexCounter[renderBatchEnd];
+            renderBatchEnd++;
         }
-        
+        return;
     }
 
     void shaderRenderBuffer::print()
@@ -76,6 +79,7 @@ namespace LTE
 
         std::string buf = "\n";
         int i = 1;
+        LAUGHTALE_ENGINR_LOG_INFO("print shader buffer with " << verticesData.size() << " vertices and " << indices.size() << " indices.");
         for(vertexsData a : verticesData)
         {
             buf += std::to_string(i++) + ":\t";
@@ -102,16 +106,34 @@ namespace LTE
         LAUGHTALE_ENGINR_LOG_INFO(buf);
     }
 
-    void shaderRenderBuffer::bindRenderBatch()
+    bool shaderRenderBuffer::isAllRendered()
     {
-        BatchedVertexBuffer->setData(verticesData.data(), verticesData.size() * sizeof(vertexsData));
-        BatchedIndexBuffer->setData(indices.data(), indices.size());
+        return verticesData.size() == 0;
+    }
 
-
-        BatchedIndexBuffer->bind();
-        BatchedVertexArray->bind();
+    void shaderRenderBuffer::clear()
+    {
         verticesData.clear();
         indices.clear();
+    }
+
+
+
+    void shaderRenderBuffer::bindRenderBatch()
+    {
+        BatchedVertexBuffer->setData(verticesData.data(), renderBatchEnd * sizeof(vertexsData));
+        BatchedIndexBuffer->setData(indices.data(), batchIndexCount);
+
+        BatchedVertexBuffer->bind();
+        BatchedIndexBuffer->bind();
+        BatchedVertexArray->bind();
+
+        verticesData.erase(verticesData.begin(), verticesData.begin() + renderBatchEnd);
+        indices.erase(indices.begin(), indices.begin() + batchIndexCount);
+        shapeIndexCounter.erase(shapeIndexCounter.begin(), shapeIndexCounter.begin()  + renderBatchEnd );
+        for(auto& indix: indices)
+            indix -= renderBatchEnd;
+        batchIndexCount = 0;
         renderBatchEnd = 0;
     }
 

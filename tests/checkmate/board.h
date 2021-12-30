@@ -11,7 +11,7 @@ private:
 
     LTE::entityTaleId TilesId[8][8];
 
-    LTE::component *black = new LTE::material(glm::vec4({0.1f, 0.1f, 0.1f, 1}));
+    LTE::component *black = new LTE::material(glm::vec4({0.05f, 0.05f, 0.05f, 1}));
     LTE::component *white = new LTE::material(glm::vec4({0.9, 0.9, 0.9, 1}));
 
     LTE::windowPieceId windowId;
@@ -45,7 +45,9 @@ public:
 
         genTiles();
         genWhitePawns();
+        getWhiteGenrals();
         genBlackPawns();
+        getBlackGenrals();
     }
 
     void genTiles()
@@ -61,7 +63,8 @@ public:
                     [=](LTE::gameObject::gameObjectBuilder *tileBuild)
                     {
                         tileBuild->
-                            setObjectName("tile " + std::to_string(x) + ", " + std::to_string(y))->setObjectTransform({{(x - 4.0f) * 0.25f + 0.125f, (y - 4.0f) * 0.25f + 0.125f, 0.0f}, {0, 0, 0}, {0.25f, 0.25f, 0.0f}})->
+                            setObjectName("tile " + std::to_string(x) + ", " + std::to_string(y))->
+                            setObjectTransform({{(x - 4.0f) * 0.25f + 0.125f, (y - 4.0f) * 0.25f + 0.125f, 0.01f}, {0, 0, 0}, {0.25f, 0.25f, 0.0f}})->
                             setWindowId(windowId)->
                             addComponent(LTE::mesh::build([&](LTE::mesh::meshBuilder *builder)
                                 { 
@@ -100,6 +103,318 @@ public:
                             addComponent(nextWhitePawn); 
                 });
         }
+    }
+
+    void getWhiteGenrals()
+    {
+        piece *whiteKing = new pawn();
+        pieces.push_back(whiteKing);
+        LTE::entityManger::addEntity(
+            [=](LTE::gameObject::gameObjectBuilder *tileBuild)
+            { 
+                tileBuild->
+                    setObjectName("white king")->
+                    setObjectTransform({{(4 - 4.0f) * 0.25f + 0.125f, -4.0f * 0.25f + 0.125f, 0.1f}, {0, 0, 0}, {0.25f, 0.25f, 0.0f}})->
+                    setWindowId(windowId)->
+                    addComponent(LTE::mesh::build([&](LTE::mesh::meshBuilder *builder)
+                        {
+                            builder->
+                                setIndexBuffer(tileIndices, 6)->
+                                setShaderName("res/checkmate/shaders/piece.glsl")->
+                                setVertexBuffer(tilePostions, 20 * sizeof(float)); }))->
+                        addComponent(new LTE::material("res/checkmate/textures/whiteKing.png"))->
+                        addComponent(whiteKing); 
+            });
+        
+        piece *whiteQueen = new pawn();
+        pieces.push_back(whiteQueen);
+        LTE::entityManger::addEntity(
+            [=](LTE::gameObject::gameObjectBuilder *tileBuild)
+            { 
+                tileBuild->
+                    setObjectName("white queen")->
+                    setObjectTransform({{(3 - 4.0f) * 0.25f + 0.125f, -4.0f * 0.25f + 0.125f, 0.1f}, {0, 0, 0}, {0.25f, 0.25f, 0.0f}})->
+                    setWindowId(windowId)->
+                    addComponent(LTE::mesh::build([&](LTE::mesh::meshBuilder *builder)
+                        {
+                            builder->
+                                setIndexBuffer(tileIndices, 6)->
+                                setShaderName("res/checkmate/shaders/piece.glsl")->
+                                setVertexBuffer(tilePostions, 20 * sizeof(float)); }))->
+                        addComponent(new LTE::material("res/checkmate/textures/whiteQueen.png"))->
+                        addComponent(whiteQueen); 
+            });
+
+        piece *whiteRook = new pawn();
+        pieces.push_back(whiteRook);
+        LTE::entityManger::addEntity(
+            [=](LTE::gameObject::gameObjectBuilder *tileBuild)
+            { 
+                tileBuild->
+                    setObjectName("white rook 1")->
+                    setObjectTransform({{(0 - 4.0f) * 0.25f + 0.125f, -4.0f * 0.25f + 0.125f, 0.1f}, {0, 0, 0}, {0.25f, 0.25f, 0.0f}})->
+                    setWindowId(windowId)->
+                    addComponent(LTE::mesh::build([&](LTE::mesh::meshBuilder *builder)
+                        {
+                            builder->
+                                setIndexBuffer(tileIndices, 6)->
+                                setShaderName("res/checkmate/shaders/piece.glsl")->
+                                setVertexBuffer(tilePostions, 20 * sizeof(float)); }))->
+                        addComponent(new LTE::material("res/checkmate/textures/whiteRook.png"))->
+                        addComponent(whiteRook); 
+            });
+
+        whiteRook = new pawn();
+        pieces.push_back(whiteRook);
+        LTE::entityManger::addEntity(
+            [=](LTE::gameObject::gameObjectBuilder *tileBuild)
+            { 
+                tileBuild->
+                    setObjectName("white rook 2")->
+                    setObjectTransform({{(7 - 4.0f) * 0.25f + 0.125f, -4.0f * 0.25f + 0.125f, 0.1f}, {0, 0, 0}, {0.25f, 0.25f, 0.0f}})->
+                    setWindowId(windowId)->
+                    addComponent(LTE::mesh::build([&](LTE::mesh::meshBuilder *builder)
+                        {
+                            builder->
+                                setIndexBuffer(tileIndices, 6)->
+                                setShaderName("res/checkmate/shaders/piece.glsl")->
+                                setVertexBuffer(tilePostions, 20 * sizeof(float)); }))->
+                        addComponent(new LTE::material("res/checkmate/textures/whiteRook.png"))->
+                        addComponent(whiteRook); 
+            });
+
+        piece *whiteKnight = new pawn();
+        pieces.push_back(whiteKnight);
+        LTE::entityManger::addEntity(
+            [=](LTE::gameObject::gameObjectBuilder *tileBuild)
+            { 
+                tileBuild->
+                    setObjectName("white knight 1")->
+                    setObjectTransform({{(1- 4.0f) * 0.25f + 0.125f, -4.0f * 0.25f + 0.125f, 0.1f}, {0, 0, 0}, {0.25f, 0.25f, 0.0f}})->
+                    setWindowId(windowId)->
+                    addComponent(LTE::mesh::build([&](LTE::mesh::meshBuilder *builder)
+                        {
+                            builder->
+                                setIndexBuffer(tileIndices, 6)->
+                                setShaderName("res/checkmate/shaders/piece.glsl")->
+                                setVertexBuffer(tilePostions, 20 * sizeof(float)); }))->
+                        addComponent(new LTE::material("res/checkmate/textures/whiteKnight.png"))->
+                        addComponent(whiteKnight); 
+            });
+
+        whiteKnight = new pawn();
+        pieces.push_back(whiteKnight);
+        LTE::entityManger::addEntity(
+            [=](LTE::gameObject::gameObjectBuilder *tileBuild)
+            { 
+                tileBuild->
+                    setObjectName("white knight 2")->
+                    setObjectTransform({{(6 - 4.0f) * 0.25f + 0.125f, -4.0f * 0.25f + 0.125f, 0.1f}, {0, 0, 0}, {0.25f, 0.25f, 0.0f}})->
+                    setWindowId(windowId)->
+                    addComponent(LTE::mesh::build([&](LTE::mesh::meshBuilder *builder)
+                        {
+                            builder->
+                                setIndexBuffer(tileIndices, 6)->
+                                setShaderName("res/checkmate/shaders/piece.glsl")->
+                                setVertexBuffer(tilePostions, 20 * sizeof(float)); }))->
+                        addComponent(new LTE::material("res/checkmate/textures/whiteKnight.png"))->
+                        addComponent(whiteKnight); 
+            });
+
+
+        piece *whiteBishop = new pawn();
+        pieces.push_back(whiteBishop);
+        LTE::entityManger::addEntity(
+            [=](LTE::gameObject::gameObjectBuilder *tileBuild)
+            { 
+                tileBuild->
+                    setObjectName("white bishop 1")->
+                    setObjectTransform({{(2 - 4.0f) * 0.25f + 0.125f, -4.0f * 0.25f + 0.125f, 0.1f}, {0, 0, 0}, {0.25f, 0.25f, 0.0f}})->
+                    setWindowId(windowId)->
+                    addComponent(LTE::mesh::build([&](LTE::mesh::meshBuilder *builder)
+                        {
+                            builder->
+                                setIndexBuffer(tileIndices, 6)->
+                                setShaderName("res/checkmate/shaders/piece.glsl")->
+                                setVertexBuffer(tilePostions, 20 * sizeof(float)); }))->
+                        addComponent(new LTE::material("res/checkmate/textures/whiteBishop.png"))->
+                        addComponent(whiteBishop); 
+            });
+
+        whiteBishop = new pawn();
+        pieces.push_back(whiteBishop);
+        LTE::entityManger::addEntity(
+            [=](LTE::gameObject::gameObjectBuilder *tileBuild)
+            { 
+                tileBuild->
+                    setObjectName("white bishop 2")->
+                    setObjectTransform({{(5 - 4.0f) * 0.25f + 0.125f, -4.0f * 0.25f + 0.125f, 0.1f}, {0, 0, 0}, {0.25f, 0.25f, 0.0f}})->
+                    setWindowId(windowId)->
+                    addComponent(LTE::mesh::build([&](LTE::mesh::meshBuilder *builder)
+                        {
+                            builder->
+                                setIndexBuffer(tileIndices, 6)->
+                                setShaderName("res/checkmate/shaders/piece.glsl")->
+                                setVertexBuffer(tilePostions, 20 * sizeof(float)); }))->
+                        addComponent(new LTE::material("res/checkmate/textures/whiteBishop.png"))->
+                        addComponent(whiteBishop); 
+            });
+    }
+    
+    void getBlackGenrals()
+    {
+        piece *blackKing = new pawn(false);
+        pieces.push_back(blackKing);
+        LTE::entityManger::addEntity(
+            [=](LTE::gameObject::gameObjectBuilder *tileBuild)
+            { 
+                tileBuild->
+                    setObjectName("black king")->
+                    setObjectTransform({{(4 - 4.0f) * 0.25f + 0.125f, 3.0f * 0.25f + 0.125f, 0.1f}, {0, 0, 0}, {0.25f, 0.25f, 0.0f}})->
+                    setWindowId(windowId)->
+                    addComponent(LTE::mesh::build([&](LTE::mesh::meshBuilder *builder)
+                        {
+                            builder->
+                                setIndexBuffer(tileIndices, 6)->
+                                setShaderName("res/checkmate/shaders/piece.glsl")->
+                                setVertexBuffer(tilePostions, 20 * sizeof(float)); }))->
+                        addComponent(new LTE::material("res/checkmate/textures/blackKing.png"))->
+                        addComponent(blackKing); 
+            });
+        
+        piece *blackQueen = new pawn(false);
+        pieces.push_back(blackQueen);
+        LTE::entityManger::addEntity(
+            [=](LTE::gameObject::gameObjectBuilder *tileBuild)
+            { 
+                tileBuild->
+                    setObjectName("black queen")->
+                    setObjectTransform({{(3 - 4.0f) * 0.25f + 0.125f, 3.0f * 0.25f + 0.125f, 0.1f}, {0, 0, 0}, {0.25f, 0.25f, 0.0f}})->
+                    setWindowId(windowId)->
+                    addComponent(LTE::mesh::build([&](LTE::mesh::meshBuilder *builder)
+                        {
+                            builder->
+                                setIndexBuffer(tileIndices, 6)->
+                                setShaderName("res/checkmate/shaders/piece.glsl")->
+                                setVertexBuffer(tilePostions, 20 * sizeof(float)); }))->
+                        addComponent(new LTE::material("res/checkmate/textures/blackQueen.png"))->
+                        addComponent(blackQueen); 
+            });
+
+        piece *blackRook = new pawn(false);
+        pieces.push_back(blackRook);
+        LTE::entityManger::addEntity(
+            [=](LTE::gameObject::gameObjectBuilder *tileBuild)
+            { 
+                tileBuild->
+                    setObjectName("black rook 1")->
+                    setObjectTransform({{(0 - 4.0f) * 0.25f + 0.125f, 3.0f * 0.25f + 0.125f, 0.1f}, {0, 0, 0}, {0.25f, 0.25f, 0.0f}})->
+                    setWindowId(windowId)->
+                    addComponent(LTE::mesh::build([&](LTE::mesh::meshBuilder *builder)
+                        {
+                            builder->
+                                setIndexBuffer(tileIndices, 6)->
+                                setShaderName("res/checkmate/shaders/piece.glsl")->
+                                setVertexBuffer(tilePostions, 20 * sizeof(float)); }))->
+                        addComponent(new LTE::material("res/checkmate/textures/blackRook.png"))->
+                        addComponent(blackRook); 
+            });
+
+        blackRook = new pawn(false);
+        pieces.push_back(blackRook);
+        LTE::entityManger::addEntity(
+            [=](LTE::gameObject::gameObjectBuilder *tileBuild)
+            { 
+                tileBuild->
+                    setObjectName("black rook 2")->
+                    setObjectTransform({{(7 - 4.0f) * 0.25f + 0.125f, 3.0f * 0.25f + 0.125f, 0.1f}, {0, 0, 0}, {0.25f, 0.25f, 0.0f}})->
+                    setWindowId(windowId)->
+                    addComponent(LTE::mesh::build([&](LTE::mesh::meshBuilder *builder)
+                        {
+                            builder->
+                                setIndexBuffer(tileIndices, 6)->
+                                setShaderName("res/checkmate/shaders/piece.glsl")->
+                                setVertexBuffer(tilePostions, 20 * sizeof(float)); }))->
+                        addComponent(new LTE::material("res/checkmate/textures/blackRook.png"))->
+                        addComponent(blackRook); 
+            });
+
+        piece *blackKnight = new pawn(false);
+        pieces.push_back(blackKnight);
+        LTE::entityManger::addEntity(
+            [=](LTE::gameObject::gameObjectBuilder *tileBuild)
+            { 
+                tileBuild->
+                    setObjectName("black knight 1")->
+                    setObjectTransform({{(1- 4.0f) * 0.25f + 0.125f, 3.0f * 0.25f + 0.125f, 0.1f}, {0, 0, 0}, {0.25f, 0.25f, 0.0f}})->
+                    setWindowId(windowId)->
+                    addComponent(LTE::mesh::build([&](LTE::mesh::meshBuilder *builder)
+                        {
+                            builder->
+                                setIndexBuffer(tileIndices, 6)->
+                                setShaderName("res/checkmate/shaders/piece.glsl")->
+                                setVertexBuffer(tilePostions, 20 * sizeof(float)); }))->
+                        addComponent(new LTE::material("res/checkmate/textures/blackKnight.png"))->
+                        addComponent(blackKnight); 
+            });
+
+        blackKnight = new pawn(false);
+        pieces.push_back(blackKnight);
+        LTE::entityManger::addEntity(
+            [=](LTE::gameObject::gameObjectBuilder *tileBuild)
+            { 
+                tileBuild->
+                    setObjectName("black knight 2")->
+                    setObjectTransform({{(6 - 4.0f) * 0.25f + 0.125f, 3.0f * 0.25f + 0.125f, 0.1f}, {0, 0, 0}, {0.25f, 0.25f, 0.0f}})->
+                    setWindowId(windowId)->
+                    addComponent(LTE::mesh::build([&](LTE::mesh::meshBuilder *builder)
+                        {
+                            builder->
+                                setIndexBuffer(tileIndices, 6)->
+                                setShaderName("res/checkmate/shaders/piece.glsl")->
+                                setVertexBuffer(tilePostions, 20 * sizeof(float)); }))->
+                        addComponent(new LTE::material("res/checkmate/textures/blackKnight.png"))->
+                        addComponent(blackKnight); 
+            });
+
+
+        piece *blackBishop = new pawn(false);
+        pieces.push_back(blackBishop);
+        LTE::entityManger::addEntity(
+            [=](LTE::gameObject::gameObjectBuilder *tileBuild)
+            { 
+                tileBuild->
+                    setObjectName("black bishop 1")->
+                    setObjectTransform({{(2 - 4.0f) * 0.25f + 0.125f, 3.0f * 0.25f + 0.125f, 0.1f}, {0, 0, 0}, {0.25f, 0.25f, 0.0f}})->
+                    setWindowId(windowId)->
+                    addComponent(LTE::mesh::build([&](LTE::mesh::meshBuilder *builder)
+                        {
+                            builder->
+                                setIndexBuffer(tileIndices, 6)->
+                                setShaderName("res/checkmate/shaders/piece.glsl")->
+                                setVertexBuffer(tilePostions, 20 * sizeof(float)); }))->
+                        addComponent(new LTE::material("res/checkmate/textures/blackBishop.png"))->
+                        addComponent(blackBishop); 
+            });
+
+        blackBishop = new pawn(false);
+        pieces.push_back(blackBishop);
+        LTE::entityManger::addEntity(
+            [=](LTE::gameObject::gameObjectBuilder *tileBuild)
+            { 
+                tileBuild->
+                    setObjectName("black bishop 2")->
+                    setObjectTransform({{(5 - 4.0f) * 0.25f + 0.125f, 3.0f * 0.25f + 0.125f, 0.1f}, {0, 0, 0}, {0.25f, 0.25f, 0.0f}})->
+                    setWindowId(windowId)->
+                    addComponent(LTE::mesh::build([&](LTE::mesh::meshBuilder *builder)
+                        {
+                            builder->
+                                setIndexBuffer(tileIndices, 6)->
+                                setShaderName("res/checkmate/shaders/piece.glsl")->
+                                setVertexBuffer(tilePostions, 20 * sizeof(float)); }))->
+                        addComponent(new LTE::material("res/checkmate/textures/blackBishop.png"))->
+                        addComponent(blackBishop); 
+            });
     }
 
     void genBlackPawns()

@@ -38,10 +38,10 @@ class checkmate : public ::testing::Test
                 build->setHeight(800)->setWidth(800)->setTitle("check mate");
             });
 
-            debugInfoWindowId =  LTE::windowManger::addWindow([=](LTE::windowBuilder *build)
-            {
-                build->setHeight(600)->setWidth(600)->setTitle("debug Info")->useImGui();
-            });
+            // debugInfoWindowId =  LTE::windowManger::addWindow([=](LTE::windowBuilder *build)
+            // {
+            //     build->setHeight(600)->setWidth(600)->setTitle("debug Info")->useImGui();
+            // });
         }
 
         static void WindowClose(__attribute__((unused)) LTE::gameObject *eventEntity, __attribute__((unused)) LTE::coreEventData *sendor)

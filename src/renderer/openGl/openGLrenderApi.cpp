@@ -26,6 +26,7 @@ namespace LTE
     void openGLRenderApi::DrawIndexed(uint32_t count)
     {
         GL_CALL(glDrawElements(GL_TRIANGLES, count, GL_UNSIGNED_INT, nullptr));
+        
     }
 
     void openGLRenderApi::SetViewport(int x, int y, int width, int height)

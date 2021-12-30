@@ -3,6 +3,7 @@
 #include "meshRenderer.h"
 #include "shaderTypes.h"
 #include "LTEError.h"
+#include "app.h"
 
 #include <map>
 #include <set>
@@ -27,8 +28,10 @@ namespace LTE
         Scene = win->activeScene;
         renderPipLine = renderPipLine;
         std::set<shaderRenderBuffer*> shadersToRender;
+        std::map<textureId, int> texturesToUse;
+        uint8_t textureCounter = 0;
         std::vector<std::pair<textureId, int>> textureSlots;
-        std::vector<texture *> textures;
+        std::map<textureId, texture *> textures;
 
         renderPipLine->SetClearColor(Scene->backgroundColor->getRGBA());
         renderPipLine->Clear();
@@ -40,9 +43,7 @@ namespace LTE
             {
                 try
                 {
-                    return a->getComponent<material>()->getTextureId() > b->getComponent<material>()->getTextureId() || 
-                        (a->getComponent<material>()->getTextureId() == b->getComponent<material>()->getTextureId() && 
-                        a->getTransform()->getPostion().z < b->getTransform()->getPostion().z);
+                    return a->getTransform()->getPostion().z < b->getTransform()->getPostion().z;
                 }
                 catch(LTEException* e)
                 {
@@ -69,20 +70,9 @@ namespace LTE
                 if(!s)
                     continue;
                 shadersToRender.insert(s);
-                if(objMat->getTextureId() != lastTexture)
+                if(!textures[objMat->getTextureId()])
                 {
-                    if(objMat->getTextureId() != 0)
-                    {
-                        lastTexture = objMat->getTextureId();
-                        textureSlots.push_back({lastTexture, textureSlotCount + 1});
-                        textures.push_back(objMat->getTexture());
-                        textureSlotCount = (textureSlotCount + 1) % 31;
-                    }
-                    else
-                    {
-                        lastTexture = 0;
-                        textureSlots.push_back({0, 0});
-                    }
+                    textures[objMat->getTextureId()] = objMat->getTexture();
                 }
             }
             catch(LTEException* e)
@@ -91,41 +81,45 @@ namespace LTE
             }
         }
 
-        for(int i = 0; i < 32 && i < textures.size(); i++)
-        {
-            if(textureSlots[i].second != 0)
-                textures[i]->bind(textureSlots[i].second);
-        }
 
         for(auto& shaderBuffer: shadersToRender)
         {
+            int i = 0;
+            shader *s = shaderBuffer->getShader();
+            s->bind();
+            int *samplers = (int*)calloc(4, 8);
+            for(int *i = samplers; i < samplers + 8; i++)
+                *i = ((long)i - (long)samplers)/4;
+            
+            s->setUniformMat4f("viewProjection", ViewProjectionMatrix);
+            s->setUniform1iv("textures", samplers, 8);
 
-            try
+            while (!shaderBuffer->isAllRendered())
             {
-                shader *s = shaderBuffer->getShader();
+                try
+                {
+                    shaderBuffer->setTextureIndex(texturesToUse);
+                    for(const auto& [id, slot]: texturesToUse)
+                        if(textures[id])
+                            textures[id]->bind(slot);
+                    
+                    shaderBuffer->bindRenderBatch();
+                    
+                    renderPipLine->DrawIndexed(shaderBuffer->getVertexCount()); 
+                    i++;
+                }
+                catch(const std::exception& e)
+                {
+                    LAUGHTALE_ENGINR_LOG_WARNING("could not render game object because: " << e.what());
+                }
+                catch(...)
+                {
+                    LAUGHTALE_ENGINR_LOG_WARNING("could not render shader data");
+                }
 
-                shaderBuffer->setTextureIndex(textureSlots);
-        
-                shaderBuffer->bindRenderBatch();
-                s->bind();
-                
-                int *samplers = (int*)calloc(4, 8);
-                for(int *i = samplers; i < samplers + 8; i++)
-                    *i = ((long)i - (long)samplers)/4;
-                
-                s->setUniformMat4f("viewProjection", ViewProjectionMatrix);
-                s->setUniform1iv("textures", samplers, 8);
-
-                renderPipLine->DrawIndexed(shaderBuffer->getVertexCount()); 
+                texturesToUse.clear();
             }
-            catch(const std::exception& e)
-            {
-                LAUGHTALE_ENGINR_LOG_WARNING("could not render game object because: " << e.what());
-            }
-            catch(...)
-            {
-                LAUGHTALE_ENGINR_LOG_WARNING("could not render shader data");
-            }
+            shaderBuffer->clear();
         }
     }
 }  

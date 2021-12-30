@@ -14,7 +14,6 @@ namespace LTE
     void openGLContext::Init()
     {
         app::getOsAPI()->makeContextCurrent(windowId);
-
         int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
         LAUGHTALE_ENGINR_CONDTION_LOG_FATAL("Failed to initialize Glad!", status != 1);
 
@@ -70,7 +69,7 @@ namespace LTE
             if(sendorData->win->useImGui)
                 onImGuiUpdate(sendorData->win, sendorData);
             
-            sendorData->win->context->SwapBuffers();
+            SwapBuffers();
 
             eventManger::trigerEvent(sendorData);
 

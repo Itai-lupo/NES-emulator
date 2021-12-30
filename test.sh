@@ -13,7 +13,7 @@ done
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/:$b
 filePath=output/test.out
 
-make $filePath || exit 1
+make -j 8 -pipe $filePath || exit 1
 
 clear
 $filePath
