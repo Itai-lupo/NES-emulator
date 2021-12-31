@@ -6,7 +6,6 @@
 #include <sys/prctl.h>
 #include "windowManger.h"
 #include "app.h"
-#include "renderer.h"
 #include "ImGuiEvents.h"
 
 namespace LTE
@@ -48,6 +47,8 @@ namespace LTE
 
         eventManger::addCoustemEventsRoute("window render/" + sendorData->win->Title + "/");
         
+        contextRenderEngine = new renderer(windowId, getRenderApi());
+        
         while (!app::isRuning){}
         
         while (app::keepRunning && windowRun)
@@ -64,7 +65,7 @@ namespace LTE
                 changeViewPort = false;
             }
             
-            renderer::renderScene(windowId, getRenderApi());
+            contextRenderEngine->renderScene();
 
             if(sendorData->win->useImGui)
                 onImGuiUpdate(sendorData->win, sendorData);

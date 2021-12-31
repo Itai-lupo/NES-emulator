@@ -51,8 +51,8 @@ var searchData=
   ['setuniformmat4f_48',['setUniformMat4f',['../d0/d99/class_l_t_e_1_1open_g_l_shader.html#aeb4a955d237187ec09032ab656088d31',1,'LTE::openGLShader::setUniformMat4f()'],['../d1/d2e/class_l_t_e_1_1shader.html#a6a0919a106978831d33317c4de4dbd7d',1,'LTE::shader::setUniformMat4f()']]],
   ['setup_49',['SetUp',['../da/d39/classcheckmate.html#a12580106679dc25095095f035c977064',1,'checkmate::SetUp()'],['../d5/d71/classflappy_bird.html#aefe252403b2c6969e04a034c3d037d5d',1,'flappyBird::SetUp()']]],
   ['setvertexbuffer_50',['setVertexBuffer',['../d1/dc9/class_l_t_e_1_1mesh_1_1mesh_builder.html#a964a92e49a4608ae71e6bc565dba0475',1,'LTE::mesh::meshBuilder::setVertexBuffer()'],['../d0/d6c/class_l_t_e_1_1mesh.html#ab9726ed6384d67a36b5501bfaa36e6f4',1,'LTE::mesh::setVertexBuffer()']]],
-  ['setviewport_51',['setViewPort',['../d7/d20/class_l_t_e_1_1graphics_context.html#ab6598fc2d6bf4c41a37761a3ed3e7b47',1,'LTE::graphicsContext::setViewPort()'],['../db/d92/class_l_t_e_1_1open_g_l_context.html#a525555f77f7a00f4a78f566ee96518b0',1,'LTE::openGLContext::setViewPort()']]],
-  ['setviewport_52',['SetViewport',['../d0/d71/class_l_t_e_1_1open_g_l_render_api.html#a62b6a3967f39a01bdd2ab649b2f028fa',1,'LTE::openGLRenderApi::SetViewport()'],['../df/d3a/class_l_t_e_1_1render_api.html#a06fe9698f93bcb0502b36fa9f3e397c8',1,'LTE::renderApi::SetViewport()']]],
+  ['setviewport_51',['SetViewport',['../d0/d71/class_l_t_e_1_1open_g_l_render_api.html#a62b6a3967f39a01bdd2ab649b2f028fa',1,'LTE::openGLRenderApi::SetViewport()'],['../df/d3a/class_l_t_e_1_1render_api.html#a06fe9698f93bcb0502b36fa9f3e397c8',1,'LTE::renderApi::SetViewport()']]],
+  ['setviewport_52',['setViewPort',['../d7/d20/class_l_t_e_1_1graphics_context.html#ab6598fc2d6bf4c41a37761a3ed3e7b47',1,'LTE::graphicsContext::setViewPort()'],['../db/d92/class_l_t_e_1_1open_g_l_context.html#a525555f77f7a00f4a78f566ee96518b0',1,'LTE::openGLContext::setViewPort()']]],
   ['setvsyncforcurrentcontext_53',['setVSyncForCurrentContext',['../d1/db3/class_l_t_e_1_1linux_a_p_i.html#ab210c9a76b5a3510c54754c651db7f12',1,'LTE::linuxAPI::setVSyncForCurrentContext()'],['../d8/da3/class_l_t_e_1_1os_a_p_i.html#a2c73383422344233aa21cca3c6a1be38',1,'LTE::osAPI::setVSyncForCurrentContext()']]],
   ['setwidth_54',['setWidth',['../d0/d26/class_l_t_e_1_1window_builder.html#a883e2fd4254e8f8aaa47ef5eaada47d2',1,'LTE::windowBuilder']]],
   ['setwindowid_55',['setWindowId',['../d7/dd0/class_l_t_e_1_1game_object_1_1game_object_builder.html#a77316cd161e49ae8931894034ec36b99',1,'LTE::gameObject::gameObjectBuilder']]],
@@ -113,7 +113,7 @@ var searchData=
   ['subbeats_110',['subBeats',['../db/d56/class_l_t_e_1_1sequencer.html#ae4becb0f01365c42a53435ebea978323',1,'LTE::sequencer']]],
   ['submitshape_111',['submitShape',['../d1/d10/class_l_t_e_1_1renderer.html#a593a79a85c12d6469425a703fecbde6d',1,'LTE::renderer']]],
   ['sustainamplitude_112',['sustainAmplitude',['../d2/d04/class_l_t_e_1_1envelope.html#afd1ef7c81388553ee9f5c2dc6f87e9d9',1,'LTE::envelope']]],
-  ['swapbuffers_113',['SwapBuffers',['../db/d92/class_l_t_e_1_1open_g_l_context.html#aba3f07059dcbdb11c66f84d2ca3dd8c0',1,'LTE::openGLContext']]],
-  ['swapbuffers_114',['swapBuffers',['../d1/db3/class_l_t_e_1_1linux_a_p_i.html#a5f7bbc1ed7c161e6010ea0e0d009b3a9',1,'LTE::linuxAPI::swapBuffers()'],['../d8/da3/class_l_t_e_1_1os_a_p_i.html#a5797efa13ff7fb2f6fb37e1aa7a0940e',1,'LTE::osAPI::swapBuffers()']]],
-  ['swapbuffers_115',['SwapBuffers',['../d7/d20/class_l_t_e_1_1graphics_context.html#af995eacf4bc6a4fbe9c7923e40f2d778',1,'LTE::graphicsContext']]]
+  ['swapbuffers_113',['swapBuffers',['../d8/da3/class_l_t_e_1_1os_a_p_i.html#a5797efa13ff7fb2f6fb37e1aa7a0940e',1,'LTE::osAPI']]],
+  ['swapbuffers_114',['SwapBuffers',['../d7/d20/class_l_t_e_1_1graphics_context.html#af995eacf4bc6a4fbe9c7923e40f2d778',1,'LTE::graphicsContext::SwapBuffers()'],['../db/d92/class_l_t_e_1_1open_g_l_context.html#aba3f07059dcbdb11c66f84d2ca3dd8c0',1,'LTE::openGLContext::SwapBuffers()']]],
+  ['swapbuffers_115',['swapBuffers',['../d1/db3/class_l_t_e_1_1linux_a_p_i.html#a5f7bbc1ed7c161e6010ea0e0d009b3a9',1,'LTE::linuxAPI']]]
 ];

@@ -17,7 +17,7 @@ var dir_2559567b361f07c773f9d9dac257f09a =
       [ "LTE::renderApi", "df/d3a/class_l_t_e_1_1render_api.html", "df/d3a/class_l_t_e_1_1render_api" ]
     ] ],
     [ "renderer.h", "d6/d85/renderer_8h.html", [
-      [ "LTE::renderer", "d1/d10/class_l_t_e_1_1renderer.html", null ]
+      [ "LTE::renderer", "d1/d10/class_l_t_e_1_1renderer.html", "d1/d10/class_l_t_e_1_1renderer" ]
     ] ],
     [ "scene.h", "db/d83/scene_8h.html", [
       [ "LTE::scene", "d6/d26/class_l_t_e_1_1scene.html", "d6/d26/class_l_t_e_1_1scene" ]

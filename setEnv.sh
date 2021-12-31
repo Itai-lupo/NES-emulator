@@ -14,4 +14,4 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:./libs/:$b
 
 filePath=output/test.out
 
-make $filePath || exit 1
+make -j 14 $filePath || exit 1

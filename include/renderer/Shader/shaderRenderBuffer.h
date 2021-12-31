@@ -33,7 +33,6 @@ namespace LTE
     {        
         private:
             shader *s;
-            static inline indexBuffer *BatchedIndexBuffer;
             VertexBuffer *BatchedVertexBuffer;
             vertexArray *BatchedVertexArray;
 
@@ -53,10 +52,11 @@ namespace LTE
             void setTextureIndex(std:: map<textureId, int>& textures);
             void print();
 
-            void bindRenderBatch();
+            void bind();
             void unbind();
-            int getVertexCount();
 
+            int getIndecesCount();
+            unsigned int *getIndecesData(){ return indices.data(); }
             bool isAllRendered();
             void clear();
     };

@@ -5,12 +5,17 @@
 #include "LTEError.h"
 #include "app.h"
 
-#include <map>
-#include <set>
 #include <algorithm>
 
 namespace LTE
 {
+    renderer::renderer(windowPieceId winId, renderApi *renderPipLine): 
+        win(windowManger::getWindow(winId)), Scene(win->activeScene), renderPipLine(renderPipLine)
+    {
+        indicesToRender = win->context->getMeshFactory()->createIndexBuffer({}, 0);
+
+    }
+
     shaderRenderBuffer *renderer::submitShape(mesh *shape, material *shapeMatrial)
     {
         shaderRenderBuffer *s  = windowManger::getWindow(shape->getWindowId())->assetLibrary->getAsset<shaderRenderBuffer>(shape->getShaderName());
@@ -20,22 +25,8 @@ namespace LTE
         return s;
     }
 
-    void renderer::renderScene(windowPieceId winId, renderApi *renderPipLine)
+    void renderer::sortSceneToRender()
     {
-        window *win;
-        scene *Scene;
-        win = windowManger::getWindow(winId);
-        Scene = win->activeScene;
-        renderPipLine = renderPipLine;
-        std::set<shaderRenderBuffer*> shadersToRender;
-        std::map<textureId, int> texturesToUse;
-        uint8_t textureCounter = 0;
-        std::vector<std::pair<textureId, int>> textureSlots;
-        std::map<textureId, texture *> textures;
-
-        renderPipLine->SetClearColor(Scene->backgroundColor->getRGBA());
-        renderPipLine->Clear();
-
         std::sort(
             Scene->objects->begin(),
             Scene->objects->end(),
@@ -52,11 +43,10 @@ namespace LTE
                 }
                 
             });
+    }
 
-        const glm::mat4& ViewProjectionMatrix = Scene->camera->getComponent<coreCameraControler>()->getCamera()->getViewProjectionMatrix();
-        
-        textureId lastTexture;
-        int textureSlotCount = 0;
+    void renderer::batchSceneData()
+    {
 
         for(gameObject *toRender: *Scene->objects)
         {
@@ -80,8 +70,10 @@ namespace LTE
                 LAUGHTALE_ENGINR_LOG_ERROR("can't render " << e->what());
             }
         }
+    }
 
-        int j = 0;
+    void renderer::batchRenderScene()
+    {
         for(auto& shaderBuffer: shadersToRender)
         {
             shader *s = shaderBuffer->getShader();
@@ -101,9 +93,12 @@ namespace LTE
                     for(const auto& [id, slot]: texturesToUse)
                         if(textures[id])
                             textures[id]->bind(slot);
-                    
-                    shaderBuffer->bindRenderBatch();
-                    renderPipLine->DrawIndexed(shaderBuffer->getVertexCount());
+
+                    indicesToRender->setData(shaderBuffer->getIndecesData(), shaderBuffer->getIndecesCount());
+                    indicesToRender->bind();
+                    shaderBuffer->bind();
+
+                    renderPipLine->DrawIndexed(indicesToRender->getCount());
                 }
                 catch(const std::exception& e)
                 {
@@ -117,7 +112,19 @@ namespace LTE
                 texturesToUse.clear();
             }
             shaderBuffer->clear();
-            j++;
         }
+    }
+
+    void renderer::renderScene()
+    {
+        renderPipLine->SetClearColor(Scene->backgroundColor->getRGBA());
+        renderPipLine->Clear();
+
+        sortSceneToRender();
+        batchSceneData();
+
+        ViewProjectionMatrix = Scene->camera->getComponent<coreCameraControler>()->getCamera()->getViewProjectionMatrix();
+        batchRenderScene();
+        
     }
 }  

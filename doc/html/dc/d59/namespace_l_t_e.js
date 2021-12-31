@@ -70,7 +70,7 @@ var namespace_l_t_e =
     [ "PCMDeviceNotFoundException", "d3/d71/class_l_t_e_1_1_p_c_m_device_not_found_exception.html", "d3/d71/class_l_t_e_1_1_p_c_m_device_not_found_exception" ],
     [ "pngFile", "df/ddd/class_l_t_e_1_1png_file.html", "df/ddd/class_l_t_e_1_1png_file" ],
     [ "renderApi", "df/d3a/class_l_t_e_1_1render_api.html", "df/d3a/class_l_t_e_1_1render_api" ],
-    [ "renderer", "d1/d10/class_l_t_e_1_1renderer.html", null ],
+    [ "renderer", "d1/d10/class_l_t_e_1_1renderer.html", "d1/d10/class_l_t_e_1_1renderer" ],
     [ "router", "d7/d22/class_l_t_e_1_1router.html", "d7/d22/class_l_t_e_1_1router" ],
     [ "scene", "d6/d26/class_l_t_e_1_1scene.html", "d6/d26/class_l_t_e_1_1scene" ],
     [ "sequencer", "db/d56/class_l_t_e_1_1sequencer.html", "db/d56/class_l_t_e_1_1sequencer" ],

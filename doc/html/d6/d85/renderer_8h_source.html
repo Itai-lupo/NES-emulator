@@ -97,30 +97,51 @@ $(document).ready(function(){initNavTree('d6/d85/renderer_8h_source.html','../..
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="../../db/d83/scene_8h.html">scene.h</a>&quot;</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="../../d6/d26/shader_render_buffer_8h.html">shaderRenderBuffer.h</a>&quot;</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../dc/d59/namespace_l_t_e.html">LTE</a></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>{</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="../../d1/d10/class_l_t_e_1_1renderer.html">   14</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../d1/d10/class_l_t_e_1_1renderer.html">renderer</a></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    {</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>            <span class="comment">// static inline window *win;</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>            <span class="comment">// static inline scene *Scene;</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>            <span class="comment">// static inline renderApi *renderPipLine;</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <span class="keyword">public</span>:                </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>            <span class="keyword">static</span> <a class="code hl_class" href="../../d1/d3d/class_l_t_e_1_1shader_render_buffer.html">shaderRenderBuffer</a> *<a class="code hl_function" href="../../d1/d10/class_l_t_e_1_1renderer.html#a593a79a85c12d6469425a703fecbde6d">submitShape</a>(<a class="code hl_class" href="../../d0/d6c/class_l_t_e_1_1mesh.html">mesh</a> *shape, <a class="code hl_class" href="../../dc/dda/class_l_t_e_1_1material.html">material</a> *shapeMatrial);</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>            <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d1/d10/class_l_t_e_1_1renderer.html#a7d374d85dff673716c82f511aa377f67">renderScene</a>(<a class="code hl_typedef" href="../../dc/d59/namespace_l_t_e.html#a8ae7e0c0e39c6dfb8804ee2eecf2c6c2">windowPieceId</a> winId, <a class="code hl_class" href="../../df/d3a/class_l_t_e_1_1render_api.html">renderApi</a> *renderPipLine);</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    };</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>}</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;map&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;set&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../dc/d59/namespace_l_t_e.html">LTE</a></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>{</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="../../d1/d10/class_l_t_e_1_1renderer.html">   16</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../d1/d10/class_l_t_e_1_1renderer.html">renderer</a></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    {</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>            <a class="code hl_class" href="../../d6/d2f/class_l_t_e_1_1index_buffer.html">indexBuffer</a> *indicesToRender;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>            <a class="code hl_class" href="../../d4/d38/class_l_t_e_1_1window.html">window</a> *win;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>            <a class="code hl_class" href="../../d6/d26/class_l_t_e_1_1scene.html">scene</a> *Scene;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>            <a class="code hl_class" href="../../df/d3a/class_l_t_e_1_1render_api.html">renderApi</a> *renderPipLine;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>            std::set&lt;shaderRenderBuffer*&gt; shadersToRender;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>            std::map&lt;textureId, int&gt; texturesToUse;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>            uint8_t textureCounter = 0;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>            std::vector&lt;std::pair&lt;textureId, int&gt;&gt; textureSlots;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>            std::map&lt;textureId, texture *&gt; textures;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>            glm::mat4 ViewProjectionMatrix;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>            <span class="keywordtype">void</span> sortSceneToRender();</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>            <span class="keywordtype">void</span> batchSceneData();</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>            <span class="keywordtype">void</span> batchRenderScene();</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <span class="keyword">public</span>:                </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>            <a class="code hl_function" href="../../d1/d10/class_l_t_e_1_1renderer.html#aceb59489fac3f3b2d56eaaad5b14633e">renderer</a>(<a class="code hl_typedef" href="../../dc/d59/namespace_l_t_e.html#a8ae7e0c0e39c6dfb8804ee2eecf2c6c2">windowPieceId</a> winId, <a class="code hl_class" href="../../df/d3a/class_l_t_e_1_1render_api.html">renderApi</a> *renderPipLine);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            <a class="code hl_class" href="../../d1/d3d/class_l_t_e_1_1shader_render_buffer.html">shaderRenderBuffer</a> *<a class="code hl_function" href="../../d1/d10/class_l_t_e_1_1renderer.html#a593a79a85c12d6469425a703fecbde6d">submitShape</a>(<a class="code hl_class" href="../../d0/d6c/class_l_t_e_1_1mesh.html">mesh</a> *shape, <a class="code hl_class" href="../../dc/dda/class_l_t_e_1_1material.html">material</a> *shapeMatrial);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            <span class="keywordtype">void</span> <a class="code hl_function" href="../../d1/d10/class_l_t_e_1_1renderer.html#add88938b5d566734816d5d21bc91f296">renderScene</a>();</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    };</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>}</div>
+<div class="ttc" id="aclass_l_t_e_1_1index_buffer_html"><div class="ttname"><a href="../../d6/d2f/class_l_t_e_1_1index_buffer.html">LTE::indexBuffer</a></div><div class="ttdef"><b>Definition:</b> indexBuffer.h:8</div></div>
 <div class="ttc" id="aclass_l_t_e_1_1material_html"><div class="ttname"><a href="../../dc/dda/class_l_t_e_1_1material.html">LTE::material</a></div><div class="ttdef"><b>Definition:</b> material.h:13</div></div>
 <div class="ttc" id="aclass_l_t_e_1_1mesh_html"><div class="ttname"><a href="../../d0/d6c/class_l_t_e_1_1mesh.html">LTE::mesh</a></div><div class="ttdef"><b>Definition:</b> mesh.h:21</div></div>
 <div class="ttc" id="aclass_l_t_e_1_1render_api_html"><div class="ttname"><a href="../../df/d3a/class_l_t_e_1_1render_api.html">LTE::renderApi</a></div><div class="ttdef"><b>Definition:</b> renderApi.h:7</div></div>
-<div class="ttc" id="aclass_l_t_e_1_1renderer_html"><div class="ttname"><a href="../../d1/d10/class_l_t_e_1_1renderer.html">LTE::renderer</a></div><div class="ttdef"><b>Definition:</b> renderer.h:15</div></div>
-<div class="ttc" id="aclass_l_t_e_1_1renderer_html_a593a79a85c12d6469425a703fecbde6d"><div class="ttname"><a href="../../d1/d10/class_l_t_e_1_1renderer.html#a593a79a85c12d6469425a703fecbde6d">LTE::renderer::submitShape</a></div><div class="ttdeci">static shaderRenderBuffer * submitShape(mesh *shape, material *shapeMatrial)</div><div class="ttdef"><b>Definition:</b> renderer.cpp:14</div></div>
-<div class="ttc" id="aclass_l_t_e_1_1renderer_html_a7d374d85dff673716c82f511aa377f67"><div class="ttname"><a href="../../d1/d10/class_l_t_e_1_1renderer.html#a7d374d85dff673716c82f511aa377f67">LTE::renderer::renderScene</a></div><div class="ttdeci">static void renderScene(windowPieceId winId, renderApi *renderPipLine)</div><div class="ttdef"><b>Definition:</b> renderer.cpp:23</div></div>
+<div class="ttc" id="aclass_l_t_e_1_1renderer_html"><div class="ttname"><a href="../../d1/d10/class_l_t_e_1_1renderer.html">LTE::renderer</a></div><div class="ttdef"><b>Definition:</b> renderer.h:17</div></div>
+<div class="ttc" id="aclass_l_t_e_1_1renderer_html_a593a79a85c12d6469425a703fecbde6d"><div class="ttname"><a href="../../d1/d10/class_l_t_e_1_1renderer.html#a593a79a85c12d6469425a703fecbde6d">LTE::renderer::submitShape</a></div><div class="ttdeci">shaderRenderBuffer * submitShape(mesh *shape, material *shapeMatrial)</div><div class="ttdef"><b>Definition:</b> renderer.cpp:19</div></div>
+<div class="ttc" id="aclass_l_t_e_1_1renderer_html_aceb59489fac3f3b2d56eaaad5b14633e"><div class="ttname"><a href="../../d1/d10/class_l_t_e_1_1renderer.html#aceb59489fac3f3b2d56eaaad5b14633e">LTE::renderer::renderer</a></div><div class="ttdeci">renderer(windowPieceId winId, renderApi *renderPipLine)</div><div class="ttdef"><b>Definition:</b> renderer.cpp:12</div></div>
+<div class="ttc" id="aclass_l_t_e_1_1renderer_html_add88938b5d566734816d5d21bc91f296"><div class="ttname"><a href="../../d1/d10/class_l_t_e_1_1renderer.html#add88938b5d566734816d5d21bc91f296">LTE::renderer::renderScene</a></div><div class="ttdeci">void renderScene()</div><div class="ttdef"><b>Definition:</b> renderer.cpp:118</div></div>
+<div class="ttc" id="aclass_l_t_e_1_1scene_html"><div class="ttname"><a href="../../d6/d26/class_l_t_e_1_1scene.html">LTE::scene</a></div><div class="ttdef"><b>Definition:</b> scene.h:16</div></div>
 <div class="ttc" id="aclass_l_t_e_1_1shader_render_buffer_html"><div class="ttname"><a href="../../d1/d3d/class_l_t_e_1_1shader_render_buffer.html">LTE::shaderRenderBuffer</a></div><div class="ttdef"><b>Definition:</b> shaderRenderBuffer.h:33</div></div>
+<div class="ttc" id="aclass_l_t_e_1_1window_html"><div class="ttname"><a href="../../d4/d38/class_l_t_e_1_1window.html">LTE::window</a></div><div class="ttdef"><b>Definition:</b> window.h:20</div></div>
 <div class="ttc" id="acore_camera_8h_html"><div class="ttname"><a href="../../d0/d52/core_camera_8h.html">coreCamera.h</a></div></div>
 <div class="ttc" id="amesh_8h_html"><div class="ttname"><a href="../../d8/d3b/mesh_8h.html">mesh.h</a></div></div>
 <div class="ttc" id="anamespace_l_t_e_html"><div class="ttname"><a href="../../dc/d59/namespace_l_t_e.html">LTE</a></div><div class="ttdef"><b>Definition:</b> app.h:7</div></div>

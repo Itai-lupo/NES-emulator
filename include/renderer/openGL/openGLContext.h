@@ -3,6 +3,7 @@
 #include "graphicsContext.h"
 #include "openGLAbsrtactFactory.h"
 #include "logger.h"
+#include "renderer.h"
 
 #include <thread>
 
@@ -16,6 +17,7 @@ namespace LTE
             renderApi *api;
             openGLAbsrtactFactory *meshFactory;
             std::thread *contextThread;
+            renderer *contextRenderEngine;
             bool windowRun = true;
 
             bool changeViewPort = false;

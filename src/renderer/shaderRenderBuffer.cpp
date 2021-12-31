@@ -11,7 +11,6 @@ namespace LTE
     shaderRenderBuffer::shaderRenderBuffer(shader *s, windowPieceId winId) : s(s), winId(winId)
     {
         meshAbsrtactFactory *meshFac = windowManger::getWindow(winId)->context->getMeshFactory();
-        BatchedIndexBuffer = meshFac->createIndexBuffer({}, 0);
         BatchedVertexBuffer = meshFac->createVertexBuffer({}, 0);
 
         BatchedVertexBuffer->pushElement({LT_FLOAT, 3, false, 4});
@@ -115,34 +114,33 @@ namespace LTE
         indices.clear();
     }
 
-    void shaderRenderBuffer::bindRenderBatch()
+    void shaderRenderBuffer::bind()
     {
         BatchedVertexBuffer->setData(verticesData.data(), renderBatchEnd * sizeof(vertexsData));
-        BatchedIndexBuffer->setData(indices.data(), batchIndexCount);
 
         BatchedVertexBuffer->bind();
-        BatchedIndexBuffer->bind();
         BatchedVertexArray->bind();
 
         verticesData.erase(verticesData.begin(), verticesData.begin() + renderBatchEnd);
         indices.erase(indices.begin(), indices.begin() + batchIndexCount);
         shapeIndexCounter.erase(shapeIndexCounter.begin(), shapeIndexCounter.begin() + renderBatchEnd);
+
         for (auto &indix : indices)
             indix -= renderBatchEnd;
+        
         batchIndexCount = 0;
         renderBatchEnd = 0;
     }
 
     void shaderRenderBuffer::unbind()
     {
-        BatchedIndexBuffer->unbind();
         BatchedVertexBuffer->unbind();
         BatchedVertexArray->unbind();
     }
 
-    int shaderRenderBuffer::getVertexCount()
+    int shaderRenderBuffer::getIndecesCount()
     {
-        return BatchedIndexBuffer->getCount();
+        return batchIndexCount;
     }
 
 }
