@@ -1,5 +1,5 @@
 #include <vector>
-#include<string>
+#include <string>
 #include <glm/glm.hpp>
 
 #include "shaderRenderBuffer.h"
@@ -8,10 +8,10 @@
 
 namespace LTE
 {
-    shaderRenderBuffer::shaderRenderBuffer(shader *s, windowPieceId winId): s(s), winId(winId)
+    shaderRenderBuffer::shaderRenderBuffer(shader *s, windowPieceId winId) : s(s), winId(winId)
     {
-        meshAbsrtactFactory *meshFac =  windowManger::getWindow(winId)->context->getMeshFactory();
-        BatchedIndexBuffer = meshFac->createIndexBuffer({}, 0); 
+        meshAbsrtactFactory *meshFac = windowManger::getWindow(winId)->context->getMeshFactory();
+        BatchedIndexBuffer = meshFac->createIndexBuffer({}, 0);
         BatchedVertexBuffer = meshFac->createVertexBuffer({}, 0);
 
         BatchedVertexBuffer->pushElement({LT_FLOAT, 3, false, 4});
@@ -32,7 +32,7 @@ namespace LTE
         vertexsData temp;
         unsigned int indicesOffset = verticesData.size();
 
-        for(float *i = shape->getVB(); i < shape->getVB() + (shape->getSize() / sizeof(float)); i += 5)
+        for (float *i = shape->getVB(); i < shape->getVB() + (shape->getSize() / sizeof(float)); i += 5)
         {
             temp.x = *i;
             temp.y = *(i + 1);
@@ -40,31 +40,29 @@ namespace LTE
             temp.textCoordX = *(i + 3);
             temp.textCoordY = *(i + 4);
 
-
             temp.r = m->getRGBA().r;
-            temp.g =  m->getRGBA().g;
-            temp.b =  m->getRGBA().b;
-            temp.a =  m->getRGBA().a;
+            temp.g = m->getRGBA().g;
+            temp.b = m->getRGBA().b;
+            temp.a = m->getRGBA().a;
 
-            temp.texId = m->getTexture() ? m->getTextureId(): 0;
+            temp.texId = m->getTexture() ? m->getTextureId() : 0;
             verticesData.push_back(temp);
             shapeIndexCounter.push_back(0);
         }
 
-        for(unsigned int *i = shape->getIB(); i < shape->getIB() + shape->getCount(); i++)
+        for (unsigned int *i = shape->getIB(); i < shape->getIB() + shape->getCount(); i++)
         {
             indices.push_back(*i + indicesOffset);
         }
-        shapeIndexCounter[shapeIndexCounter.size() - 1] = shape->getCount() ;
-        
+        shapeIndexCounter[shapeIndexCounter.size() - 1] = shape->getCount();
     }
 
-    void shaderRenderBuffer::setTextureIndex(std::map<textureId, int>& textures)
+    void shaderRenderBuffer::setTextureIndex(std::map<textureId, int> &textures)
     {
-        int  usedTextureThisBatch = 0;
-        while(( usedTextureThisBatch < 7 || (usedTextureThisBatch == 7 && textures[verticesData[renderBatchEnd].texId])) && renderBatchEnd != verticesData.size())
+        int usedTextureThisBatch = 0;
+        while ((usedTextureThisBatch < 7 || (usedTextureThisBatch == 7 && textures[verticesData[renderBatchEnd].texId])) && renderBatchEnd != verticesData.size())
         {
-            if(!textures[verticesData[renderBatchEnd].texId] && verticesData[renderBatchEnd].texId)
+            if (!textures[verticesData[renderBatchEnd].texId] && verticesData[renderBatchEnd].texId)
                 textures[verticesData[renderBatchEnd].texId] = ++usedTextureThisBatch;
 
             verticesData[renderBatchEnd].textureSlot = (float)textures[verticesData[renderBatchEnd].texId];
@@ -80,7 +78,7 @@ namespace LTE
         std::string buf = "\n";
         int i = 1;
         LAUGHTALE_ENGINR_LOG_INFO("print shader buffer with " << verticesData.size() << " vertices and " << indices.size() << " indices.");
-        for(vertexsData a : verticesData)
+        for (vertexsData a : verticesData)
         {
             buf += std::to_string(i++) + ":\t";
             buf += "x: " + std::to_string(a.x) + ",\t";
@@ -99,9 +97,9 @@ namespace LTE
         }
         LAUGHTALE_ENGINR_LOG_INFO(buf);
         buf = "";
-        for(unsigned int *a = indices.data(); a < indices.data() + indices.size(); a++)
+        for (unsigned int *a = indices.data(); a < indices.data() + indices.size(); a++)
         {
-            buf += std::to_string(*a )+ ", ";
+            buf += std::to_string(*a) + ", ";
         }
         LAUGHTALE_ENGINR_LOG_INFO(buf);
     }
@@ -117,8 +115,6 @@ namespace LTE
         indices.clear();
     }
 
-
-
     void shaderRenderBuffer::bindRenderBatch()
     {
         BatchedVertexBuffer->setData(verticesData.data(), renderBatchEnd * sizeof(vertexsData));
@@ -130,8 +126,8 @@ namespace LTE
 
         verticesData.erase(verticesData.begin(), verticesData.begin() + renderBatchEnd);
         indices.erase(indices.begin(), indices.begin() + batchIndexCount);
-        shapeIndexCounter.erase(shapeIndexCounter.begin(), shapeIndexCounter.begin()  + renderBatchEnd );
-        for(auto& indix: indices)
+        shapeIndexCounter.erase(shapeIndexCounter.begin(), shapeIndexCounter.begin() + renderBatchEnd);
+        for (auto &indix : indices)
             indix -= renderBatchEnd;
         batchIndexCount = 0;
         renderBatchEnd = 0;
@@ -146,9 +142,7 @@ namespace LTE
 
     int shaderRenderBuffer::getVertexCount()
     {
-
         return BatchedIndexBuffer->getCount();
     }
-
 
 }

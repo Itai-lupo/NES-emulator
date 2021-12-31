@@ -33,7 +33,7 @@ namespace LTE
     {        
         private:
             shader *s;
-            indexBuffer *BatchedIndexBuffer;
+            static inline indexBuffer *BatchedIndexBuffer;
             VertexBuffer *BatchedVertexBuffer;
             vertexArray *BatchedVertexArray;
 

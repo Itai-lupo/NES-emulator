@@ -156,7 +156,7 @@ class bird: public LTE::component
             LTE::KeyData *eventData = dynamic_cast<LTE::KeyData *>(sendor);
             player->getComponent<LTE::envelope>()->noteOn();
             player->getComponent<bird>()->speed = 1.25f;
-            player->getComponent<LTE::mesh>()->setShaderName(( player->getComponent<bird>()->star ? "res/flappyBird/Basic.glsl": "res/flappyBird/Basic.glsl"));
+            player->getComponent<LTE::mesh>()->setShaderName(( player->getComponent<bird>()->star ? "res/flappyBird/bird.glsl": "res/flappyBird/Basic.glsl"));
             player->getComponent<LTE::material>()->setTexture(( player->getComponent<bird>()->star ? "res/textures/Logo.png" : "res/textures/5_star.png"));
             player->getComponent<bird>()->star = !player->getComponent<bird>()->star;
             player->getComponent<LTE::envelope>()->noteOff();
@@ -349,7 +349,7 @@ class flappyBird : public ::testing::Test
                         {
                             builder->setIndexBuffer(birdIndices, 12)->
                             setVertexBuffer(birdPostions, 6 * 5 * sizeof(float))->
-                            setShaderName("res/flappyBird/Basic.glsl");
+                            setShaderName("res/flappyBird/bird.glsl");
                         }))->
                     addComponent((new LTE::envelope())
                         ->setFrequency(440.0f)->

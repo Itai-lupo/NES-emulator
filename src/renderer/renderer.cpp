@@ -81,10 +81,9 @@ namespace LTE
             }
         }
 
-
+        int j = 0;
         for(auto& shaderBuffer: shadersToRender)
         {
-            int i = 0;
             shader *s = shaderBuffer->getShader();
             s->bind();
             int *samplers = (int*)calloc(4, 8);
@@ -104,9 +103,7 @@ namespace LTE
                             textures[id]->bind(slot);
                     
                     shaderBuffer->bindRenderBatch();
-                    
-                    renderPipLine->DrawIndexed(shaderBuffer->getVertexCount()); 
-                    i++;
+                    renderPipLine->DrawIndexed(shaderBuffer->getVertexCount());
                 }
                 catch(const std::exception& e)
                 {
@@ -120,6 +117,7 @@ namespace LTE
                 texturesToUse.clear();
             }
             shaderBuffer->clear();
+            j++;
         }
     }
 }  
