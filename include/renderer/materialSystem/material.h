@@ -20,13 +20,12 @@ namespace LTE
 
             std::string texturePath;
             int tileXIndex = 0, tileYIndex = 0;
-            float tileWidthm = 0.0f, tileHight = 0.0f;
 
             std::vector<glm::vec2> texturePostions = {{0.0f, 1.0f}, {0.0f, 0.0f}, {1.0f, 0.0f}, {1.0f, 1.0f}};
 
         public:
             material(const std::string& textureFilePath, glm::vec4 baseColor);
-            material(const std::string& textureFilePath, int tileXIndex, int tileYIndex, float tileWidthm, float tileHight);
+            material(const std::string& textureFilePath, int tileXIndex, int tileYIndex);
             material(const std::string& textureFilePath);
             material(glm::vec4 baseColor);
 

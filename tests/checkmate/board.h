@@ -42,8 +42,7 @@ private:
 
 public:
     board(LTE::windowPieceId windowId) : windowId(windowId)
-    {
-
+    {        
         genTiles();
         genWhitePawns();
         getWhiteGenrals();
@@ -102,7 +101,7 @@ public:
                                     setShaderName("res/checkmate/shaders/piece.glsl")->
                                     setVertices(tilePostions, 12); 
                                 }))->
-                            addComponent(new LTE::material("res/checkmate/textures/whitePawn.png"))->
+                            addComponent(new LTE::material("res/checkmate/textures/piecesSpriteSheet.png", 5, 0))->
                             addComponent(nextWhitePawn); 
                 });
         }
@@ -126,7 +125,7 @@ public:
                                 setShaderName("res/checkmate/shaders/piece.glsl")->
                                 setVertices(tilePostions, 12); 
                                 }))->
-                        addComponent(new LTE::material("res/checkmate/textures/whiteKing.png"))->
+                        addComponent(new LTE::material("res/checkmate/textures/piecesSpriteSheet.png", 4, 0))->
                         addComponent(whiteKing); 
             });
         
@@ -146,7 +145,7 @@ public:
                                 setShaderName("res/checkmate/shaders/piece.glsl")->
                                 setVertices(tilePostions, 12); 
                                 }))->
-                        addComponent(new LTE::material("res/checkmate/textures/whiteQueen.png"))->
+                        addComponent(new LTE::material("res/checkmate/textures/piecesSpriteSheet.png", 3, 0))->
                         addComponent(whiteQueen); 
             });
 
@@ -166,7 +165,7 @@ public:
                                 setShaderName("res/checkmate/shaders/piece.glsl")->
                                 setVertices(tilePostions, 12); 
                                 }))->
-                        addComponent(new LTE::material("res/checkmate/textures/whiteRook.png"))->
+                        addComponent(new LTE::material("res/checkmate/textures/piecesSpriteSheet.png", 0, 0))->
                         addComponent(whiteRook); 
             });
 
@@ -186,7 +185,7 @@ public:
                                 setShaderName("res/checkmate/shaders/piece.glsl")->
                                 setVertices(tilePostions, 12); 
                                 }))->
-                        addComponent(new LTE::material("res/checkmate/textures/whiteRook.png"))->
+                        addComponent(new LTE::material("res/checkmate/textures/piecesSpriteSheet.png", 0, 0))->
                         addComponent(whiteRook); 
             });
 
@@ -206,7 +205,7 @@ public:
                                 setShaderName("res/checkmate/shaders/piece.glsl")->
                                 setVertices(tilePostions, 12); 
                                 }))->
-                        addComponent(new LTE::material("res/checkmate/textures/whiteKnight.png"))->
+                        addComponent(new LTE::material("res/checkmate/textures/piecesSpriteSheet.png", 2, 0))->
                         addComponent(whiteKnight); 
             });
 
@@ -226,7 +225,7 @@ public:
                                 setShaderName("res/checkmate/shaders/piece.glsl")->
                                 setVertices(tilePostions, 12); 
                                 }))->
-                        addComponent(new LTE::material("res/checkmate/textures/whiteKnight.png"))->
+                        addComponent(new LTE::material("res/checkmate/textures/piecesSpriteSheet.png", 2, 0))->
                         addComponent(whiteKnight); 
             });
 
@@ -247,7 +246,7 @@ public:
                                 setShaderName("res/checkmate/shaders/piece.glsl")->
                                 setVertices(tilePostions, 12); 
                                 }))->
-                        addComponent(new LTE::material("res/checkmate/textures/whiteBishop.png"))->
+                        addComponent(new LTE::material("res/checkmate/textures/piecesSpriteSheet.png", 2, 0))->
                         addComponent(whiteBishop); 
             });
 
@@ -267,7 +266,7 @@ public:
                                 setShaderName("res/checkmate/shaders/piece.glsl")->
                                 setVertices(tilePostions, 12); 
                                 }))->
-                        addComponent(new LTE::material("res/checkmate/textures/whiteBishop.png"))->
+                        addComponent(new LTE::material("res/checkmate/textures/piecesSpriteSheet.png", 2, 0))->
                         addComponent(whiteBishop); 
             });
     }
@@ -290,7 +289,7 @@ public:
                                 setShaderName("res/checkmate/shaders/piece.glsl")->
                                 setVertices(tilePostions, 12); 
                                 }))->
-                        addComponent(new LTE::material("res/checkmate/textures/blackKing.png"))->
+                        addComponent(new LTE::material("res/checkmate/textures/piecesSpriteSheet.png", 4, 1))->
                         addComponent(blackKing); 
             });
         
@@ -310,7 +309,7 @@ public:
                                 setShaderName("res/checkmate/shaders/piece.glsl")->
                                 setVertices(tilePostions, 12); 
                                 }))->
-                        addComponent(new LTE::material("res/checkmate/textures/blackQueen.png"))->
+                        addComponent(new LTE::material("res/checkmate/textures/piecesSpriteSheet.png", 3, 1))->
                         addComponent(blackQueen); 
             });
 
@@ -330,7 +329,7 @@ public:
                                 setShaderName("res/checkmate/shaders/piece.glsl")->
                                 setVertices(tilePostions, 12); 
                                 }))->
-                        addComponent(new LTE::material("res/checkmate/textures/piecesSpriteSheet.png", 0, 1, 128, 144))->
+                        addComponent(new LTE::material("res/checkmate/textures/piecesSpriteSheet.png", 0, 1))->
                         addComponent(blackRook); 
             });
 
@@ -350,7 +349,7 @@ public:
                                 setShaderName("res/checkmate/shaders/piece.glsl")->
                                 setVertices(tilePostions, 12); 
                                 }))->
-                        addComponent(new LTE::material("res/checkmate/textures/piecesSpriteSheet.png", 0, 1, 128, 144))->
+                        addComponent(new LTE::material("res/checkmate/textures/piecesSpriteSheet.png", 0, 1))->
                         addComponent(blackRook); 
             });
 
@@ -370,7 +369,7 @@ public:
                                 setShaderName("res/checkmate/shaders/piece.glsl")->
                                 setVertices(tilePostions, 12); 
                                 }))->
-                        addComponent(new LTE::material("res/checkmate/textures/piecesSpriteSheet.png", 1, 1, 128, 144))->
+                        addComponent(new LTE::material("res/checkmate/textures/piecesSpriteSheet.png", 1, 1))->
                         addComponent(blackKnight); 
             });
 
@@ -390,7 +389,7 @@ public:
                                 setShaderName("res/checkmate/shaders/piece.glsl")->
                                 setVertices(tilePostions, 12); 
                                 }))->
-                        addComponent(new LTE::material("res/checkmate/textures/blackKnight.png"))->
+                        addComponent(new LTE::material("res/checkmate/textures/piecesSpriteSheet.png", 1, 1))->
                         addComponent(blackKnight); 
             });
 
@@ -411,7 +410,7 @@ public:
                                 setShaderName("res/checkmate/shaders/piece.glsl")->
                                 setVertices(tilePostions, 12); 
                                 }))->
-                        addComponent(new LTE::material("res/checkmate/textures/blackBishop.png"))->
+                        addComponent(new LTE::material("res/checkmate/textures/piecesSpriteSheet.png", 2, 1))->
                         addComponent(blackBishop); 
             });
 
@@ -431,7 +430,7 @@ public:
                                 setShaderName("res/checkmate/shaders/piece.glsl")->
                                 setVertices(tilePostions, 12); 
                                 }))->
-                        addComponent(new LTE::material("res/checkmate/textures/blackBishop.png"))->
+                        addComponent(new LTE::material("res/checkmate/textures/piecesSpriteSheet.png", 2, 1))->
                         addComponent(blackBishop); 
             });
     }
@@ -443,16 +442,29 @@ public:
             piece *nextBlackPawn = new pawn(false);
             pieces.push_back(nextBlackPawn);
             blackPawnsId[x] = LTE::entityManger::addEntity([=](LTE::gameObject::gameObjectBuilder *tileBuild)
-                                                           { tileBuild->setObjectName("black pawn " + std::to_string(x + 1))->setObjectTransform({{(x - 4.0f) * 0.25f + 0.125f, 2.0f * 0.25f + 0.125f, 0.1f}, {0, 0, 0}, {0.25f, 0.25f, 0.0f}})->setWindowId(windowId)->addComponent(LTE::mesh::build([&](LTE::mesh::meshBuilder *builder)
-                                                                                                                                                                                                                                                                                                      { builder->setIndexBuffer(tileIndices, 6)->setShaderName("res/checkmate/shaders/piece.glsl")->setVertices(tilePostions, 12); 
-                                }))
-                                                                 ->addComponent(new LTE::material("res/checkmate/textures/blackPawn.png"))
-                                                                 ->addComponent(nextBlackPawn); });
+                { 
+                    tileBuild->setObjectName("black pawn " + std::to_string(x + 1))->
+                    setObjectTransform({{(x - 4.0f) * 0.25f + 0.125f, 2.0f * 0.25f + 0.125f, 0.1f}, {0, 0, 0}, {0.25f, 0.25f, 0.0f}})->
+                    setWindowId(windowId)->
+                    addComponent(LTE::mesh::build([&](LTE::mesh::meshBuilder *builder)
+                        { 
+                            builder->
+                                setIndexBuffer(tileIndices, 6)->
+                                setShaderName("res/checkmate/shaders/piece.glsl")->
+                                setVertices(tilePostions, 12); 
+                        }))->
+                    addComponent(new LTE::material("res/checkmate/textures/piecesSpriteSheet.png", 5, 1))->
+                    addComponent(nextBlackPawn); });
         }
     }
 
     virtual void init(LTE::gameObject *parent) override
     {
+        LTE::windowManger::getWindow(winId)->
+            assetLibrary->
+            getAsset<LTE::texture>("res/checkmate/textures/piecesSpriteSheet.png")->
+            setSprtieData({127, 144});
+
         LTE::eventManger::startBuildingEvent()->setEventRoute("Mouse button pressed/boardHandlePress")->setEntityID(parentId)->setWindowId(winId)->setEventCallback(handleMouseClick)->add();
     }
 
