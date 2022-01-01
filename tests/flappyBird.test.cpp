@@ -440,7 +440,7 @@ class flappyBird : public ::testing::Test
 
 
 
-TEST_F(flappyBird, DISABLED_testGames)
+TEST_F(flappyBird, testGames)
 {
     std::this_thread::sleep_for(std::chrono::milliseconds(500));
     LTE::app::run();

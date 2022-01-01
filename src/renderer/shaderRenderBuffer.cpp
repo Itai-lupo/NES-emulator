@@ -51,6 +51,7 @@ namespace LTE
             shapeIndexCounter.push_back(0);
 
             j++;
+            j = j % 4;
         }
 
         for (unsigned int *i = shape->getIB(); i < shape->getIB() + shape->getCount(); i++)
