@@ -19,12 +19,13 @@ private:
     std::vector<piece *> pieces;
     std::vector<LTE::entityTaleId> blueTilesIds;
 
-    float tilePostions[20] =
+    float tilePostions[12] =
         {
-            -0.5, 0.5f, 0.0f, 0.0f, 1.0f,
-            -0.5, -0.5f, 0.0f, 0.0f, 0.0f,
-            0.5, -0.5f, 0.0f, 1.0f, 0.0f,
-            0.5, 0.5f, 0.0f, 1.0f, 1.0f};
+            -0.5,  0.5f, 0.0f,
+            -0.5, -0.5f, 0.0f,
+             0.5, -0.5f, 0.0f,
+             0.5,  0.5f, 0.0f
+        };
 
     unsigned int tileIndices[6] =
         {
@@ -71,7 +72,8 @@ public:
                                     builder->
                                         setIndexBuffer(tileIndices, 6)->
                                         setShaderName("res/checkmate/shaders/piece.glsl")->
-                                        setVertexBuffer(tilePostions, 20 * sizeof(float)); }))->
+                                        setVertices(tilePostions, 12); 
+                                }))->
                             addComponent((x + y % 2) % 2 == 1 ? white : black);
                     });
                 boardStr += std::string((x + y % 2) % 2 == 1 ? "B" : "W");
@@ -98,7 +100,8 @@ public:
                                 builder->
                                     setIndexBuffer(tileIndices, 6)->
                                     setShaderName("res/checkmate/shaders/piece.glsl")->
-                                    setVertexBuffer(tilePostions, 20 * sizeof(float)); }))->
+                                    setVertices(tilePostions, 12); 
+                                }))->
                             addComponent(new LTE::material("res/checkmate/textures/whitePawn.png"))->
                             addComponent(nextWhitePawn); 
                 });
@@ -121,7 +124,8 @@ public:
                             builder->
                                 setIndexBuffer(tileIndices, 6)->
                                 setShaderName("res/checkmate/shaders/piece.glsl")->
-                                setVertexBuffer(tilePostions, 20 * sizeof(float)); }))->
+                                setVertices(tilePostions, 12); 
+                                }))->
                         addComponent(new LTE::material("res/checkmate/textures/whiteKing.png"))->
                         addComponent(whiteKing); 
             });
@@ -140,7 +144,8 @@ public:
                             builder->
                                 setIndexBuffer(tileIndices, 6)->
                                 setShaderName("res/checkmate/shaders/piece.glsl")->
-                                setVertexBuffer(tilePostions, 20 * sizeof(float)); }))->
+                                setVertices(tilePostions, 12); 
+                                }))->
                         addComponent(new LTE::material("res/checkmate/textures/whiteQueen.png"))->
                         addComponent(whiteQueen); 
             });
@@ -159,7 +164,8 @@ public:
                             builder->
                                 setIndexBuffer(tileIndices, 6)->
                                 setShaderName("res/checkmate/shaders/piece.glsl")->
-                                setVertexBuffer(tilePostions, 20 * sizeof(float)); }))->
+                                setVertices(tilePostions, 12); 
+                                }))->
                         addComponent(new LTE::material("res/checkmate/textures/whiteRook.png"))->
                         addComponent(whiteRook); 
             });
@@ -178,7 +184,8 @@ public:
                             builder->
                                 setIndexBuffer(tileIndices, 6)->
                                 setShaderName("res/checkmate/shaders/piece.glsl")->
-                                setVertexBuffer(tilePostions, 20 * sizeof(float)); }))->
+                                setVertices(tilePostions, 12); 
+                                }))->
                         addComponent(new LTE::material("res/checkmate/textures/whiteRook.png"))->
                         addComponent(whiteRook); 
             });
@@ -197,7 +204,8 @@ public:
                             builder->
                                 setIndexBuffer(tileIndices, 6)->
                                 setShaderName("res/checkmate/shaders/piece.glsl")->
-                                setVertexBuffer(tilePostions, 20 * sizeof(float)); }))->
+                                setVertices(tilePostions, 12); 
+                                }))->
                         addComponent(new LTE::material("res/checkmate/textures/whiteKnight.png"))->
                         addComponent(whiteKnight); 
             });
@@ -216,7 +224,8 @@ public:
                             builder->
                                 setIndexBuffer(tileIndices, 6)->
                                 setShaderName("res/checkmate/shaders/piece.glsl")->
-                                setVertexBuffer(tilePostions, 20 * sizeof(float)); }))->
+                                setVertices(tilePostions, 12); 
+                                }))->
                         addComponent(new LTE::material("res/checkmate/textures/whiteKnight.png"))->
                         addComponent(whiteKnight); 
             });
@@ -236,7 +245,8 @@ public:
                             builder->
                                 setIndexBuffer(tileIndices, 6)->
                                 setShaderName("res/checkmate/shaders/piece.glsl")->
-                                setVertexBuffer(tilePostions, 20 * sizeof(float)); }))->
+                                setVertices(tilePostions, 12); 
+                                }))->
                         addComponent(new LTE::material("res/checkmate/textures/whiteBishop.png"))->
                         addComponent(whiteBishop); 
             });
@@ -255,7 +265,8 @@ public:
                             builder->
                                 setIndexBuffer(tileIndices, 6)->
                                 setShaderName("res/checkmate/shaders/piece.glsl")->
-                                setVertexBuffer(tilePostions, 20 * sizeof(float)); }))->
+                                setVertices(tilePostions, 12); 
+                                }))->
                         addComponent(new LTE::material("res/checkmate/textures/whiteBishop.png"))->
                         addComponent(whiteBishop); 
             });
@@ -277,7 +288,8 @@ public:
                             builder->
                                 setIndexBuffer(tileIndices, 6)->
                                 setShaderName("res/checkmate/shaders/piece.glsl")->
-                                setVertexBuffer(tilePostions, 20 * sizeof(float)); }))->
+                                setVertices(tilePostions, 12); 
+                                }))->
                         addComponent(new LTE::material("res/checkmate/textures/blackKing.png"))->
                         addComponent(blackKing); 
             });
@@ -296,7 +308,8 @@ public:
                             builder->
                                 setIndexBuffer(tileIndices, 6)->
                                 setShaderName("res/checkmate/shaders/piece.glsl")->
-                                setVertexBuffer(tilePostions, 20 * sizeof(float)); }))->
+                                setVertices(tilePostions, 12); 
+                                }))->
                         addComponent(new LTE::material("res/checkmate/textures/blackQueen.png"))->
                         addComponent(blackQueen); 
             });
@@ -315,8 +328,9 @@ public:
                             builder->
                                 setIndexBuffer(tileIndices, 6)->
                                 setShaderName("res/checkmate/shaders/piece.glsl")->
-                                setVertexBuffer(tilePostions, 20 * sizeof(float)); }))->
-                        addComponent(new LTE::material("res/checkmate/textures/blackRook.png"))->
+                                setVertices(tilePostions, 12); 
+                                }))->
+                        addComponent(new LTE::material("res/checkmate/textures/piecesSpriteSheet.png", 0, 1, 128, 144))->
                         addComponent(blackRook); 
             });
 
@@ -334,8 +348,9 @@ public:
                             builder->
                                 setIndexBuffer(tileIndices, 6)->
                                 setShaderName("res/checkmate/shaders/piece.glsl")->
-                                setVertexBuffer(tilePostions, 20 * sizeof(float)); }))->
-                        addComponent(new LTE::material("res/checkmate/textures/blackRook.png"))->
+                                setVertices(tilePostions, 12); 
+                                }))->
+                        addComponent(new LTE::material("res/checkmate/textures/piecesSpriteSheet.png", 0, 1, 128, 144))->
                         addComponent(blackRook); 
             });
 
@@ -353,8 +368,9 @@ public:
                             builder->
                                 setIndexBuffer(tileIndices, 6)->
                                 setShaderName("res/checkmate/shaders/piece.glsl")->
-                                setVertexBuffer(tilePostions, 20 * sizeof(float)); }))->
-                        addComponent(new LTE::material("res/checkmate/textures/blackKnight.png"))->
+                                setVertices(tilePostions, 12); 
+                                }))->
+                        addComponent(new LTE::material("res/checkmate/textures/piecesSpriteSheet.png", 1, 1, 128, 144))->
                         addComponent(blackKnight); 
             });
 
@@ -372,7 +388,8 @@ public:
                             builder->
                                 setIndexBuffer(tileIndices, 6)->
                                 setShaderName("res/checkmate/shaders/piece.glsl")->
-                                setVertexBuffer(tilePostions, 20 * sizeof(float)); }))->
+                                setVertices(tilePostions, 12); 
+                                }))->
                         addComponent(new LTE::material("res/checkmate/textures/blackKnight.png"))->
                         addComponent(blackKnight); 
             });
@@ -392,7 +409,8 @@ public:
                             builder->
                                 setIndexBuffer(tileIndices, 6)->
                                 setShaderName("res/checkmate/shaders/piece.glsl")->
-                                setVertexBuffer(tilePostions, 20 * sizeof(float)); }))->
+                                setVertices(tilePostions, 12); 
+                                }))->
                         addComponent(new LTE::material("res/checkmate/textures/blackBishop.png"))->
                         addComponent(blackBishop); 
             });
@@ -411,7 +429,8 @@ public:
                             builder->
                                 setIndexBuffer(tileIndices, 6)->
                                 setShaderName("res/checkmate/shaders/piece.glsl")->
-                                setVertexBuffer(tilePostions, 20 * sizeof(float)); }))->
+                                setVertices(tilePostions, 12); 
+                                }))->
                         addComponent(new LTE::material("res/checkmate/textures/blackBishop.png"))->
                         addComponent(blackBishop); 
             });
@@ -425,7 +444,8 @@ public:
             pieces.push_back(nextBlackPawn);
             blackPawnsId[x] = LTE::entityManger::addEntity([=](LTE::gameObject::gameObjectBuilder *tileBuild)
                                                            { tileBuild->setObjectName("black pawn " + std::to_string(x + 1))->setObjectTransform({{(x - 4.0f) * 0.25f + 0.125f, 2.0f * 0.25f + 0.125f, 0.1f}, {0, 0, 0}, {0.25f, 0.25f, 0.0f}})->setWindowId(windowId)->addComponent(LTE::mesh::build([&](LTE::mesh::meshBuilder *builder)
-                                                                                                                                                                                                                                                                                                      { builder->setIndexBuffer(tileIndices, 6)->setShaderName("res/checkmate/shaders/piece.glsl")->setVertexBuffer(tilePostions, 20 * sizeof(float)); }))
+                                                                                                                                                                                                                                                                                                      { builder->setIndexBuffer(tileIndices, 6)->setShaderName("res/checkmate/shaders/piece.glsl")->setVertices(tilePostions, 12); 
+                                }))
                                                                  ->addComponent(new LTE::material("res/checkmate/textures/blackPawn.png"))
                                                                  ->addComponent(nextBlackPawn); });
         }
@@ -506,7 +526,8 @@ public:
                     setWindowId(winId)->
                     addComponent(
                         LTE::mesh::build([&](LTE::mesh::meshBuilder *builder){ 
-                            builder->setIndexBuffer(tileIndices, 6)->setShaderName("res/checkmate/shaders/piece.glsl")->setVertexBuffer(tilePostions, 20 * sizeof(float)); 
+                            builder->setIndexBuffer(tileIndices, 6)->setShaderName("res/checkmate/shaders/piece.glsl")->setVertices(tilePostions, 12); 
+                                
                             }))->
                     addComponent(new LTE::material(glm::vec4({0.0f, 0.0f, 1.0f, 0.3f}))); }));
     }

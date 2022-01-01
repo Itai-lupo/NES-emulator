@@ -36,7 +36,7 @@ namespace LTE
                             return this;
                         }
 
-                        meshBuilder *setVertexBuffer(float *vertexs, uint32_t size)
+                        meshBuilder *setVertices(float *vertexs, uint32_t size)
                         {
                             res->vertexs = vertexs;
                             res->size = size;

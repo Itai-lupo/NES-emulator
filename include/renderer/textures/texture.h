@@ -11,8 +11,12 @@ namespace LTE
         protected:
             std::string path;
             textureId id;
-            int width, height;
             int channels;
+
+            bool isSpriteSheet;
+            float spriteWidth, spriteHight;
+            
+            int width, height;
         public:
             texture(const std::string& path): path(path){}
             virtual ~texture() = default;

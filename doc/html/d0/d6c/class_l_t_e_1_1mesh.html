@@ -479,7 +479,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <span class="comment">// return vertexs;</span></div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        transform* trans =  <a class="code hl_function" href="../../de/d44/class_l_t_e_1_1entity_manger.html#ad019a4750f1350c7185cefe6072dcd6e">entityManger::getEntityById</a>(<a class="code hl_variable" href="../../d9/d4b/class_l_t_e_1_1component.html#a7ed9339f270d0439f071cf64c6a7f505">parentId</a>)-&gt;<a class="code hl_function" href="../../d2/d49/class_l_t_e_1_1game_object.html#a568b30b81a33465e74c3c39663d1b5c0">getTransform</a>();</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <span class="keywordtype">float</span> temp[size];</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; (size / <span class="keyword">sizeof</span>(float)); i += 5)</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; size ; i += 3)</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        {</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            glm::vec4 t = glm::vec4(vertexs[i], vertexs[i + 1], vertexs[i + 2], 1.0f);</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            t = glm::translate(glm::mat4(1.0f), trans-&gt;getPostion()) * </div>
@@ -492,8 +492,8 @@ Here is the caller graph for this function:</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            temp[i + 1] = t.y;</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>            temp[i + 2] = t.z;</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            temp[i + 3] = vertexs[i + 3];</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>            temp[i + 4] = vertexs[i + 4];</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            <span class="comment">// temp[i + 3] = vertexs[i + 3];</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>            <span class="comment">// temp[i + 4] = vertexs[i + 4];</span></div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        }</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        <span class="keywordflow">return</span>  temp;</div>

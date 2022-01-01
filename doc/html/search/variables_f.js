@@ -9,8 +9,10 @@ var searchData=
   ['sizeoftype_6',['sizeOfType',['../d6/d82/struct_l_t_e_1_1_vertex_buffer_element.html#af57c203fd90239162f23c7556e1b0ca7',1,'LTE::VertexBufferElement']]],
   ['songon_7',['songOn',['../db/d56/class_l_t_e_1_1sequencer.html#a2b5d9bf2071fc4866ff34f79013ddd35',1,'LTE::sequencer']]],
   ['songthread_8',['songThread',['../db/d56/class_l_t_e_1_1sequencer.html#a9eafe97f63168ec9122f6ea0e43be98c',1,'LTE::sequencer']]],
-  ['startamplitude_9',['startAmplitude',['../d2/d04/class_l_t_e_1_1envelope.html#a5fb6be83af7bd4259fdc78f285c72f52',1,'LTE::envelope']]],
-  ['starttime_10',['startTime',['../dd/d5d/struct_l_t_e_1_1on_update_data.html#a515130b9deb952f4a983f821d36612db',1,'LTE::onUpdateData']]],
-  ['subbeats_11',['subBeats',['../db/d56/class_l_t_e_1_1sequencer.html#ae4becb0f01365c42a53435ebea978323',1,'LTE::sequencer']]],
-  ['sustainamplitude_12',['sustainAmplitude',['../d2/d04/class_l_t_e_1_1envelope.html#afd1ef7c81388553ee9f5c2dc6f87e9d9',1,'LTE::envelope']]]
+  ['spritehight_9',['spriteHight',['../d9/d46/class_l_t_e_1_1texture.html#ac072e940666d6746fd771a72095c41af',1,'LTE::texture']]],
+  ['spritewidth_10',['spriteWidth',['../d9/d46/class_l_t_e_1_1texture.html#a82d4ae8693b2074346636bedf5cdfa22',1,'LTE::texture']]],
+  ['startamplitude_11',['startAmplitude',['../d2/d04/class_l_t_e_1_1envelope.html#a5fb6be83af7bd4259fdc78f285c72f52',1,'LTE::envelope']]],
+  ['starttime_12',['startTime',['../dd/d5d/struct_l_t_e_1_1on_update_data.html#a515130b9deb952f4a983f821d36612db',1,'LTE::onUpdateData']]],
+  ['subbeats_13',['subBeats',['../db/d56/class_l_t_e_1_1sequencer.html#ae4becb0f01365c42a53435ebea978323',1,'LTE::sequencer']]],
+  ['sustainamplitude_14',['sustainAmplitude',['../d2/d04/class_l_t_e_1_1envelope.html#afd1ef7c81388553ee9f5c2dc6f87e9d9',1,'LTE::envelope']]]
 ];

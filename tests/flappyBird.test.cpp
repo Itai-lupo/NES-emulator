@@ -168,10 +168,10 @@ class pilarSummener: public LTE::component
     private:
         float pilarPostions[20] = 
         {
-            -0.5,   0.5f, 0.0f,  0.0f,  1.0f,
-            -0.5,  -0.5f, 0.0f,  0.0f,  0.0f,
-             0.5,  -0.5f, 0.0f,  1.0f,  0.0f, 
-             0.5,   0.5f, 0.0f,  1.0f,  1.0f
+            -0.5,   0.5f, 0.0f,
+            -0.5,  -0.5f, 0.0f,
+             0.5,  -0.5f, 0.0f,
+             0.5,   0.5f, 0.0f
         };
 
 
@@ -214,7 +214,7 @@ class pilarSummener: public LTE::component
                     addComponent(LTE::mesh::build([=](LTE::mesh::meshBuilder *builder)
                         {
                             builder->setIndexBuffer(summenerData->pilarIndices, 6)->
-                            setVertexBuffer(summenerData->pilarPostions, 20 * sizeof(float))->
+                            setVertices(summenerData->pilarPostions, 12)->
                             setShaderName("res/flappyBird/Basic.glsl");
                         }))->
                     addComponent(new LTE::material("res/textures/5_star.png", {1.0f, 1.0f, 0.0f, 1.0f}))->
@@ -230,7 +230,7 @@ class pilarSummener: public LTE::component
                     addComponent(LTE::mesh::build([=](LTE::mesh::meshBuilder *builder)
                         {
                             builder->setIndexBuffer(summenerData->pilarIndices, 6)->
-                            setVertexBuffer(summenerData->pilarPostions, 20 * sizeof(float))->
+                            setVertices(summenerData->pilarPostions, 12)->
                             setShaderName("res/flappyBird/Basic.glsl");
                         }))->
                     addComponent(new LTE::material("res/textures/5_star.png", {1.0f, 1.0f, 0.0f, 1.0f}))->
@@ -299,14 +299,14 @@ class flappyBird : public ::testing::Test
         }
 
     private:
-        float birdPostions[6 * 5] = 
+        float birdPostions[6 * 3] = 
         {
-             0.0f,    0.5f ,  0.0f,   0.5f,   1.0f ,
-             0.5f,    0.25f,  0.0f,   1.0f,   0.75f,
-             0.5f,   -0.25f,  0.0f,   1.0f,   0.25f,
-             0.0f,   -0.5f ,  0.0f,   0.5f,   0.0f ,
-            -0.5f,   -0.25f,  0.0f,   0.0f,   0.25f,
-            -0.5f,   0.25f,   0.0f,   0.0f,   0.75f,
+             0.0f,    0.5f ,  0.0f, //  0.5f,   1.0f ,
+             0.5f,    0.25f,  0.0f, //  1.0f,   0.75f,
+             0.5f,   -0.25f,  0.0f, //  1.0f,   0.25f,
+             0.0f,   -0.5f ,  0.0f, //  0.5f,   0.0f ,
+            -0.5f,   -0.25f,  0.0f, //  0.0f,   0.25f,
+            -0.5f,   0.25f,   0.0f //  0.0f,   0.75f,
         };
 
 
@@ -318,12 +318,12 @@ class flappyBird : public ::testing::Test
             1, 4, 5,
         };
 
-        float pilarPostions[20] = 
+        float pilarPostions[12] = 
         {
-            -0.5,  0.5f, 0.0f, 0.0f, 1.0f,
-            -0.5, -0.5f, 0.0f, 0.0f, 0.0f,
-             0.5, -0.5f, 0.0f, 1.0f, 0.0f, 
-             0.5,  0.5f, 0.0f, 1.0f, 1.0f
+            -0.5,  0.5f, 0.0f,
+            -0.5, -0.5f, 0.0f,
+             0.5, -0.5f, 0.0f, 
+             0.5,  0.5f, 0.0f  
         };
 
 
@@ -348,7 +348,7 @@ class flappyBird : public ::testing::Test
                     addComponent(LTE::mesh::build([=, this](LTE::mesh::meshBuilder *builder)
                         {
                             builder->setIndexBuffer(birdIndices, 12)->
-                            setVertexBuffer(birdPostions, 6 * 5 * sizeof(float))->
+                            setVertices(birdPostions, 6 * 3)->
                             setShaderName("res/flappyBird/bird.glsl");
                         }))->
                     addComponent((new LTE::envelope())
@@ -376,7 +376,7 @@ class flappyBird : public ::testing::Test
                     addComponent(LTE::mesh::build([=, this](LTE::mesh::meshBuilder *builder)
                         {
                             builder->setIndexBuffer(pilarIndices, 6)->
-                            setVertexBuffer(pilarPostions, 20 * sizeof(float))->
+                            setVertices(pilarPostions, 12)->
                             setShaderName("res/flappyBird/Basic.glsl");
                         }))->
                     addComponent(new LTE::material("res/textures/5_star.png", {1.0f, 1.0f, 0.0f, 1.0f}))->
@@ -392,7 +392,7 @@ class flappyBird : public ::testing::Test
                     addComponent(LTE::mesh::build([=, this](LTE::mesh::meshBuilder *builder)
                         {
                             builder->setIndexBuffer(pilarIndices, 6)->
-                            setVertexBuffer(pilarPostions, 20 * sizeof(float))->
+                            setVertices(pilarPostions, 12)->
                             setShaderName("res/flappyBird/Basic.glsl");
                         }))->
                     addComponent(new LTE::material("res/textures/5_star.png", {1.0f, 1.0f, 0.0f, 1.0f}))->

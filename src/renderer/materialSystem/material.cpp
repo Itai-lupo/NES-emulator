@@ -9,9 +9,17 @@ namespace LTE
         this->baseColor = baseColor;
     }
 
+    material::material(const std::string& textureFilePath, int tileXIndex, int tileYIndex, float tileWidthm, float tileHight): 
+        texturePath(textureFilePath), tileXIndex(tileXIndex), tileYIndex(tileYIndex), tileWidthm(tileWidthm), tileHight(tileHight)
+    {
+        this->baseColor = {0.0f, 0.0f, 0.0f, 0.0f};
+        
+    }
+
     material::material(const std::string& textureFilePath): texturePath(textureFilePath)
     {
         this->baseColor = {0.0f, 0.0f, 0.0f, 0.0f};
+        
     }
 
     material::material(glm::vec4 baseColor): texturePath("")
@@ -21,8 +29,10 @@ namespace LTE
 
     void material::init(gameObject *parent)
     {
-        if(texturePath != "")
+        if(texturePath != ""){
             tex = windowManger::getWindow(winId)->assetLibrary->getAsset<texture>(texturePath);
+
+        }
     }
 
 
@@ -80,7 +90,27 @@ namespace LTE
             return 0;
     }
 
+    float material::getTexturePostionX(int curnerIndex)
+    {
+        if(!tex)
+            return 0;
+        if(tileWidthm == 0.0f)
+            return texturePostions[curnerIndex].x;
+        
+        return tileXIndex * (tileWidthm / (float)tex->width) + texturePostions[curnerIndex].x * (tileWidthm / (float)tex->width);
+    }
 
+    float material::getTexturePostionY(int curnerIndex)
+    {
+        if(!tex)
+            return 0;
+        
+        if(tileHight == 0.0f)
+            return texturePostions[curnerIndex].y;
+        
+        float res = tileYIndex * (tileHight / (float)tex->height) + texturePostions[curnerIndex].y * (tileHight / (float)tex->height); 
+        return res;
+    }
 
     glm::vec4 material::getRGBA()
     {

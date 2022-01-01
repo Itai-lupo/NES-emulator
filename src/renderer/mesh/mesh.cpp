@@ -49,7 +49,7 @@ namespace LTE
         // return vertexs;
         transform* trans =  entityManger::getEntityById(parentId)->getTransform();
         float temp[size];
-        for(int i = 0; i < (size / sizeof(float)); i += 5)
+        for(int i = 0; i < size ; i += 3)
         {
             glm::vec4 t = glm::vec4(vertexs[i], vertexs[i + 1], vertexs[i + 2], 1.0f);
             t = glm::translate(glm::mat4(1.0f), trans->getPostion()) * 
@@ -62,8 +62,8 @@ namespace LTE
             temp[i + 1] = t.y;
             temp[i + 2] = t.z;
 
-            temp[i + 3] = vertexs[i + 3];
-            temp[i + 4] = vertexs[i + 4];
+            // temp[i + 3] = vertexs[i + 3];
+            // temp[i + 4] = vertexs[i + 4];
         }
 
         return  temp;

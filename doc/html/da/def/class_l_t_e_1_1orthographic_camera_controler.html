@@ -170,10 +170,10 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        :aspectRatio(aspectRatio), camera(-aspectRatio * zoomLevel, aspectRatio * zoomLevel, -zoomLevel, zoomLevel), useCameraRotation(useCameraRotation)</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    {</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    }</div>
+<div class="fragment"><div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        :aspectRatio(aspectRatio), camera(-aspectRatio * zoomLevel, aspectRatio * zoomLevel, -zoomLevel, zoomLevel), useCameraRotation(useCameraRotation)</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    {</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -191,9 +191,9 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    {</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    }</div>
+<div class="fragment"><div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    {</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -222,8 +222,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="../../d9/d4b/class_l_t_e_1_1component.html#afd24be0a9adfdeb094e5c5fe003b7bf0">LTE::component</a>.</p>
-<div class="fragment"><div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    {     </div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    }</div>
+<div class="fragment"><div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    {     </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -251,9 +251,9 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="../../dc/d6e/class_l_t_e_1_1core_camera_controler.html#a1eacd42bd8d8759b57b9412ec6228494">LTE::coreCameraControler</a>.</p>
-<div class="fragment"><div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    {</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        <span class="keywordflow">return</span> &amp;camera;</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    }</div>
+<div class="fragment"><div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    {</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        <span class="keywordflow">return</span> &amp;camera;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -282,26 +282,26 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="../../d9/d4b/class_l_t_e_1_1component.html#a3e5d2369a819e87417e96290a73d2cd1">LTE::component</a>.</p>
-<div class="fragment"><div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    {</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        OnUpdateId = <a class="code hl_function" href="../../d5/d7c/class_l_t_e_1_1event_manger.html#a205c8d664c9d7ce70155f1a125404397">eventManger::startBuildingEvent</a>()-&gt;</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>                setEventRoute(<span class="stringliteral">&quot;App update/move camera &quot;</span> + std::to_string(<a class="code hl_variable" href="../../d9/d4b/class_l_t_e_1_1component.html#a7ed9339f270d0439f071cf64c6a7f505">parentId</a>))-&gt;</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>                setEventCallback(OnUpdate)-&gt;</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>                setEntityID(<a class="code hl_variable" href="../../d9/d4b/class_l_t_e_1_1component.html#a7ed9339f270d0439f071cf64c6a7f505">parentId</a>)-&gt;</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>                setWindowId(<a class="code hl_variable" href="../../d9/d4b/class_l_t_e_1_1component.html#ac469754e014b2f010a5a0a93facce4ff">winId</a>)-&gt;add();</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>                </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        OnMouseScrolledId = <a class="code hl_function" href="../../d5/d7c/class_l_t_e_1_1event_manger.html#a205c8d664c9d7ce70155f1a125404397">eventManger::startBuildingEvent</a>()-&gt;</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>                setEventRoute(<span class="stringliteral">&quot;Window resize/handel view resize &quot;</span> + std::to_string(<a class="code hl_variable" href="../../d9/d4b/class_l_t_e_1_1component.html#a7ed9339f270d0439f071cf64c6a7f505">parentId</a>))-&gt;</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>                setEventCallback(OnWindowResized)-&gt;</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>                setEntityID(<a class="code hl_variable" href="../../d9/d4b/class_l_t_e_1_1component.html#a7ed9339f270d0439f071cf64c6a7f505">parentId</a>)-&gt;</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>                setWindowId(<a class="code hl_variable" href="../../d9/d4b/class_l_t_e_1_1component.html#ac469754e014b2f010a5a0a93facce4ff">winId</a>)-&gt;add();</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>                </div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        OnWindowResizedId = <a class="code hl_function" href="../../d5/d7c/class_l_t_e_1_1event_manger.html#a205c8d664c9d7ce70155f1a125404397">eventManger::startBuildingEvent</a>()-&gt;</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>                setEventRoute(<span class="stringliteral">&quot;Mouse scrolled/change zoom level &quot;</span> + std::to_string(<a class="code hl_variable" href="../../d9/d4b/class_l_t_e_1_1component.html#a7ed9339f270d0439f071cf64c6a7f505">parentId</a>))-&gt;</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>                setEventCallback(OnMouseScrolled)-&gt;</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>                setEntityID(<a class="code hl_variable" href="../../d9/d4b/class_l_t_e_1_1component.html#a7ed9339f270d0439f071cf64c6a7f505">parentId</a>)-&gt;</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>                setWindowId(<a class="code hl_variable" href="../../d9/d4b/class_l_t_e_1_1component.html#ac469754e014b2f010a5a0a93facce4ff">winId</a>)-&gt;add();</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>         </div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    }</div>
+<div class="fragment"><div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    {</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        OnUpdateId = <a class="code hl_function" href="../../d5/d7c/class_l_t_e_1_1event_manger.html#a205c8d664c9d7ce70155f1a125404397">eventManger::startBuildingEvent</a>()-&gt;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                setEventRoute(<span class="stringliteral">&quot;App update/move camera &quot;</span> + std::to_string(<a class="code hl_variable" href="../../d9/d4b/class_l_t_e_1_1component.html#a7ed9339f270d0439f071cf64c6a7f505">parentId</a>))-&gt;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>                setEventCallback(OnUpdate)-&gt;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>                setEntityID(<a class="code hl_variable" href="../../d9/d4b/class_l_t_e_1_1component.html#a7ed9339f270d0439f071cf64c6a7f505">parentId</a>)-&gt;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>                setWindowId(<a class="code hl_variable" href="../../d9/d4b/class_l_t_e_1_1component.html#ac469754e014b2f010a5a0a93facce4ff">winId</a>)-&gt;add();</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>                </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        OnMouseScrolledId = <a class="code hl_function" href="../../d5/d7c/class_l_t_e_1_1event_manger.html#a205c8d664c9d7ce70155f1a125404397">eventManger::startBuildingEvent</a>()-&gt;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>                setEventRoute(<span class="stringliteral">&quot;Window resize/handel view resize &quot;</span> + std::to_string(<a class="code hl_variable" href="../../d9/d4b/class_l_t_e_1_1component.html#a7ed9339f270d0439f071cf64c6a7f505">parentId</a>))-&gt;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>                setEventCallback(OnWindowResized)-&gt;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>                setEntityID(<a class="code hl_variable" href="../../d9/d4b/class_l_t_e_1_1component.html#a7ed9339f270d0439f071cf64c6a7f505">parentId</a>)-&gt;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>                setWindowId(<a class="code hl_variable" href="../../d9/d4b/class_l_t_e_1_1component.html#ac469754e014b2f010a5a0a93facce4ff">winId</a>)-&gt;add();</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>                </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        OnWindowResizedId = <a class="code hl_function" href="../../d5/d7c/class_l_t_e_1_1event_manger.html#a205c8d664c9d7ce70155f1a125404397">eventManger::startBuildingEvent</a>()-&gt;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>                setEventRoute(<span class="stringliteral">&quot;Mouse scrolled/change zoom level &quot;</span> + std::to_string(<a class="code hl_variable" href="../../d9/d4b/class_l_t_e_1_1component.html#a7ed9339f270d0439f071cf64c6a7f505">parentId</a>))-&gt;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>                setEventCallback(OnMouseScrolled)-&gt;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>                setEntityID(<a class="code hl_variable" href="../../d9/d4b/class_l_t_e_1_1component.html#a7ed9339f270d0439f071cf64c6a7f505">parentId</a>)-&gt;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>                setWindowId(<a class="code hl_variable" href="../../d9/d4b/class_l_t_e_1_1component.html#ac469754e014b2f010a5a0a93facce4ff">winId</a>)-&gt;add();</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>         </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    }</div>
 <div class="ttc" id="aclass_l_t_e_1_1component_html_a7ed9339f270d0439f071cf64c6a7f505"><div class="ttname"><a href="../../d9/d4b/class_l_t_e_1_1component.html#a7ed9339f270d0439f071cf64c6a7f505">LTE::component::parentId</a></div><div class="ttdeci">entityTaleId parentId</div><div class="ttdef"><b>Definition:</b> component.h:13</div></div>
 <div class="ttc" id="aclass_l_t_e_1_1component_html_ac469754e014b2f010a5a0a93facce4ff"><div class="ttname"><a href="../../d9/d4b/class_l_t_e_1_1component.html#ac469754e014b2f010a5a0a93facce4ff">LTE::component::winId</a></div><div class="ttdeci">windowPieceId winId</div><div class="ttdef"><b>Definition:</b> component.h:12</div></div>
 <div class="ttc" id="aclass_l_t_e_1_1event_manger_html_a205c8d664c9d7ce70155f1a125404397"><div class="ttname"><a href="../../d5/d7c/class_l_t_e_1_1event_manger.html#a205c8d664c9d7ce70155f1a125404397">LTE::eventManger::startBuildingEvent</a></div><div class="ttdeci">static eventBuilder * startBuildingEvent()</div><div class="ttdef"><b>Definition:</b> events.cpp:52</div></div>

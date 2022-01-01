@@ -1,6 +1,9 @@
 #include "orthographicCameraControler.h"
 #include "logger.h"
 #include "entity.h"
+#include "MouseButtonCodes.h"
+
+#include "window.h"
 
 namespace LTE
 {
@@ -26,7 +29,21 @@ namespace LTE
 
     void orthographicCameraControler::OnUpdate(gameObject *cameraInfo, coreEventData *sendor)
     {
+        return;
         onUpdateData *eventData = dynamic_cast<onUpdateData *>(sendor);   
+        orthographicCameraControler *thisCamera = cameraInfo->getComponent<orthographicCameraControler>();
+
+
+        if(eventData->win->inputManger->isMouseButtonPressed(LT_MOUSE_BUTTON_MIDDLE))
+        {
+            glm::vec3 cameraPostion = thisCamera->camera.getPosition();
+            cameraPostion.x += ((eventData->win->inputManger->GetMouseX() - thisCamera->mouseLastPostion.x) * (1 /  (float)eventData->win->Width)) * eventData->DeltaTime;
+            cameraPostion.y += ((eventData->win->inputManger->GetMouseY() - thisCamera->mouseLastPostion.y) * (1 / (float)eventData->win->Height)) * eventData->DeltaTime;
+
+            thisCamera->camera.SetPosition(cameraPostion);
+            LAUGHTALE_ENGINR_LOG_INFO(eventData->win->inputManger->GetMouseX()  << ", " << cameraPostion.y);
+        }
+        thisCamera->mouseLastPostion = eventData->win->inputManger->GetMousePosition();
     }
 
     orthographicCameraControler::orthographicCameraControler(float aspectRatio, bool useCameraRotation)

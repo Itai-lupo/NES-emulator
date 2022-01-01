@@ -15,6 +15,8 @@ namespace LTE
             float zoomLevel = 1.0f;
             bool useCameraRotation;
 
+            glm::vec2 mouseLastPostion = {0, 0};
+
             glm::vec3 cameraPosition = { 0.0f, 0.0f, 0.0f };
             float cameraRotation = 0.0f;
             float cameraTranslationSpeed = 5.0f, cameraRotationSpeed = 180.0f;

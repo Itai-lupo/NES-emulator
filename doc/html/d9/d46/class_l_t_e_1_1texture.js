@@ -7,6 +7,9 @@ var class_l_t_e_1_1texture =
     [ "channels", "d9/d46/class_l_t_e_1_1texture.html#a75fca5c311beaeae408864681cabc435", null ],
     [ "height", "d9/d46/class_l_t_e_1_1texture.html#a1f21f7afba47f86c887590a80425c9b1", null ],
     [ "id", "d9/d46/class_l_t_e_1_1texture.html#ac57a044d3fb566dfa18840db93642c5c", null ],
+    [ "isSpriteSheet", "d9/d46/class_l_t_e_1_1texture.html#a675c16dbcb447427e948a229eb52fba0", null ],
     [ "path", "d9/d46/class_l_t_e_1_1texture.html#a60a1b4914b9854c0e3414f9b0c7eb0c7", null ],
+    [ "spriteHight", "d9/d46/class_l_t_e_1_1texture.html#ac072e940666d6746fd771a72095c41af", null ],
+    [ "spriteWidth", "d9/d46/class_l_t_e_1_1texture.html#a82d4ae8693b2074346636bedf5cdfa22", null ],
     [ "width", "d9/d46/class_l_t_e_1_1texture.html#a00f5455548e42c2613760eb66bff49ed", null ]
 ];

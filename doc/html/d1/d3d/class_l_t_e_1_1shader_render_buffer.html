@@ -213,22 +213,22 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    {</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        BatchedVertexBuffer-&gt;<a class="code hl_function" href="../../d2/dcd/class_l_t_e_1_1_vertex_buffer.html#a8fe6d7e8035e1a47fd8ec8067bbab255">setData</a>(verticesData.data(), renderBatchEnd * <span class="keyword">sizeof</span>(vertexsData));</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>        BatchedVertexBuffer-&gt;<a class="code hl_function" href="../../d2/dcd/class_l_t_e_1_1_vertex_buffer.html#aa9e14ff4ba0c4161d67147eb18072f8e">bind</a>();</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>        BatchedVertexArray-&gt;<a class="code hl_function" href="../../df/db4/class_l_t_e_1_1vertex_array.html#a7468b788c1367c0112dac861eee812ea">bind</a>();</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>        verticesData.erase(verticesData.begin(), verticesData.begin() + renderBatchEnd);</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>        indices.erase(indices.begin(), indices.begin() + batchIndexCount);</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>        shapeIndexCounter.erase(shapeIndexCounter.begin(), shapeIndexCounter.begin() + renderBatchEnd);</div>
+<div class="fragment"><div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    {</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        BatchedVertexBuffer-&gt;<a class="code hl_function" href="../../d2/dcd/class_l_t_e_1_1_vertex_buffer.html#a8fe6d7e8035e1a47fd8ec8067bbab255">setData</a>(verticesData.data(), renderBatchEnd * <span class="keyword">sizeof</span>(vertexsData));</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>        BatchedVertexBuffer-&gt;<a class="code hl_function" href="../../d2/dcd/class_l_t_e_1_1_vertex_buffer.html#aa9e14ff4ba0c4161d67147eb18072f8e">bind</a>();</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>        BatchedVertexArray-&gt;<a class="code hl_function" href="../../df/db4/class_l_t_e_1_1vertex_array.html#a7468b788c1367c0112dac861eee812ea">bind</a>();</div>
 <div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;indix : indices)</div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>            indix -= renderBatchEnd;</div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>        </div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>        batchIndexCount = 0;</div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>        renderBatchEnd = 0;</div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    }</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>        verticesData.erase(verticesData.begin(), verticesData.begin() + renderBatchEnd);</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>        indices.erase(indices.begin(), indices.begin() + batchIndexCount);</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>        shapeIndexCounter.erase(shapeIndexCounter.begin(), shapeIndexCounter.begin() + renderBatchEnd);</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;indix : indices)</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>            indix -= renderBatchEnd;</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>        </div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>        batchIndexCount = 0;</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>        renderBatchEnd = 0;</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    }</div>
 <div class="ttc" id="aclass_l_t_e_1_1_vertex_buffer_html_a8fe6d7e8035e1a47fd8ec8067bbab255"><div class="ttname"><a href="../../d2/dcd/class_l_t_e_1_1_vertex_buffer.html#a8fe6d7e8035e1a47fd8ec8067bbab255">LTE::VertexBuffer::setData</a></div><div class="ttdeci">virtual void setData(const void *data, uint32_t size)=0</div></div>
 <div class="ttc" id="aclass_l_t_e_1_1_vertex_buffer_html_aa9e14ff4ba0c4161d67147eb18072f8e"><div class="ttname"><a href="../../d2/dcd/class_l_t_e_1_1_vertex_buffer.html#aa9e14ff4ba0c4161d67147eb18072f8e">LTE::VertexBuffer::bind</a></div><div class="ttdeci">virtual void bind()=0</div></div>
 <div class="ttc" id="aclass_l_t_e_1_1vertex_array_html_a7468b788c1367c0112dac861eee812ea"><div class="ttname"><a href="../../df/db4/class_l_t_e_1_1vertex_array.html#a7468b788c1367c0112dac861eee812ea">LTE::vertexArray::bind</a></div><div class="ttdeci">virtual void bind()=0</div></div>
@@ -260,10 +260,10 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    {</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        verticesData.clear();</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        indices.clear();</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    }</div>
+<div class="fragment"><div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    {</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        verticesData.clear();</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        indices.clear();</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -281,9 +281,9 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    {</div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>        <span class="keywordflow">return</span> batchIndexCount;</div>
-<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    }</div>
+<div class="fragment"><div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    {</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>        <span class="keywordflow">return</span> batchIndexCount;</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -347,9 +347,9 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    {</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        <span class="keywordflow">return</span> verticesData.size() == 0;</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    }</div>
+<div class="fragment"><div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    {</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        <span class="keywordflow">return</span> verticesData.size() == 0;</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -367,36 +367,36 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    {</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        std::string buf = <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        <span class="keywordtype">int</span> i = 1;</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        <a class="code hl_define" href="../../d1/d8c/logger_8h.html#a70645337545523faca46e49a3180d5f7">LAUGHTALE_ENGINR_LOG_INFO</a>(<span class="stringliteral">&quot;print shader buffer with &quot;</span> &lt;&lt; verticesData.size() &lt;&lt; <span class="stringliteral">&quot; vertices and &quot;</span> &lt;&lt; indices.size() &lt;&lt; <span class="stringliteral">&quot; indices.&quot;</span>);</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        <span class="keywordflow">for</span> (vertexsData a : verticesData)</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        {</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>            buf += std::to_string(i++) + <span class="stringliteral">&quot;:\t&quot;</span>;</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>            buf += <span class="stringliteral">&quot;x: &quot;</span> + std::to_string(a.x) + <span class="stringliteral">&quot;,\t&quot;</span>;</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>            buf += <span class="stringliteral">&quot;y: &quot;</span> + std::to_string(a.y) + <span class="stringliteral">&quot;,\t&quot;</span>;</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>            buf += <span class="stringliteral">&quot;z: &quot;</span> + std::to_string(a.z) + <span class="stringliteral">&quot;,\t&quot;</span>;</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>            buf += <span class="stringliteral">&quot;textCoordX: &quot;</span> + std::to_string(a.textCoordX) + <span class="stringliteral">&quot;,\t&quot;</span>;</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>            buf += <span class="stringliteral">&quot;textCoordY: &quot;</span> + std::to_string(a.textCoordY) + <span class="stringliteral">&quot;,\t&quot;</span>;</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>            buf += <span class="stringliteral">&quot;a: &quot;</span> + std::to_string(a.a) + <span class="stringliteral">&quot;,\t&quot;</span>;</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>            buf += <span class="stringliteral">&quot;b: &quot;</span> + std::to_string(a.b) + <span class="stringliteral">&quot;,\t&quot;</span>;</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>            buf += <span class="stringliteral">&quot;g: &quot;</span> + std::to_string(a.g) + <span class="stringliteral">&quot;,\t&quot;</span>;</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>            buf += <span class="stringliteral">&quot;r: &quot;</span> + std::to_string(a.r) + <span class="stringliteral">&quot;,\t&quot;</span>;</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>            buf += <span class="stringliteral">&quot;texId: &quot;</span> + std::to_string(a.textureSlot) + <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        }</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        <a class="code hl_define" href="../../d1/d8c/logger_8h.html#a70645337545523faca46e49a3180d5f7">LAUGHTALE_ENGINR_LOG_INFO</a>(buf);</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        buf = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> *a = indices.data(); a &lt; indices.data() + indices.size(); a++)</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        {</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>            buf += std::to_string(*a) + <span class="stringliteral">&quot;, &quot;</span>;</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        }</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        <a class="code hl_define" href="../../d1/d8c/logger_8h.html#a70645337545523faca46e49a3180d5f7">LAUGHTALE_ENGINR_LOG_INFO</a>(buf);</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    }</div>
+<div class="fragment"><div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    {</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        std::string buf = <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        <span class="keywordtype">int</span> i = 1;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        <a class="code hl_define" href="../../d1/d8c/logger_8h.html#a70645337545523faca46e49a3180d5f7">LAUGHTALE_ENGINR_LOG_INFO</a>(<span class="stringliteral">&quot;print shader buffer with &quot;</span> &lt;&lt; verticesData.size() &lt;&lt; <span class="stringliteral">&quot; vertices and &quot;</span> &lt;&lt; indices.size() &lt;&lt; <span class="stringliteral">&quot; indices.&quot;</span>);</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        <span class="keywordflow">for</span> (vertexsData a : verticesData)</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        {</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>            buf += std::to_string(i++) + <span class="stringliteral">&quot;:\t&quot;</span>;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>            buf += <span class="stringliteral">&quot;x: &quot;</span> + std::to_string(a.x) + <span class="stringliteral">&quot;,\t&quot;</span>;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>            buf += <span class="stringliteral">&quot;y: &quot;</span> + std::to_string(a.y) + <span class="stringliteral">&quot;,\t&quot;</span>;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>            buf += <span class="stringliteral">&quot;z: &quot;</span> + std::to_string(a.z) + <span class="stringliteral">&quot;,\t&quot;</span>;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>            buf += <span class="stringliteral">&quot;textCoordX: &quot;</span> + std::to_string(a.textCoordX) + <span class="stringliteral">&quot;,\t&quot;</span>;</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>            buf += <span class="stringliteral">&quot;textCoordY: &quot;</span> + std::to_string(a.textCoordY) + <span class="stringliteral">&quot;,\t&quot;</span>;</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>            buf += <span class="stringliteral">&quot;a: &quot;</span> + std::to_string(a.a) + <span class="stringliteral">&quot;,\t&quot;</span>;</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>            buf += <span class="stringliteral">&quot;b: &quot;</span> + std::to_string(a.b) + <span class="stringliteral">&quot;,\t&quot;</span>;</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>            buf += <span class="stringliteral">&quot;g: &quot;</span> + std::to_string(a.g) + <span class="stringliteral">&quot;,\t&quot;</span>;</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>            buf += <span class="stringliteral">&quot;r: &quot;</span> + std::to_string(a.r) + <span class="stringliteral">&quot;,\t&quot;</span>;</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>            buf += <span class="stringliteral">&quot;texId: &quot;</span> + std::to_string(a.textureSlot) + <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        }</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        <a class="code hl_define" href="../../d1/d8c/logger_8h.html#a70645337545523faca46e49a3180d5f7">LAUGHTALE_ENGINR_LOG_INFO</a>(buf);</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        buf = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> *a = indices.data(); a &lt; indices.data() + indices.size(); a++)</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        {</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>            buf += std::to_string(*a) + <span class="stringliteral">&quot;, &quot;</span>;</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        }</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        <a class="code hl_define" href="../../d1/d8c/logger_8h.html#a70645337545523faca46e49a3180d5f7">LAUGHTALE_ENGINR_LOG_INFO</a>(buf);</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    }</div>
 <div class="ttc" id="alogger_8h_html_a70645337545523faca46e49a3180d5f7"><div class="ttname"><a href="../../d1/d8c/logger_8h.html#a70645337545523faca46e49a3180d5f7">LAUGHTALE_ENGINR_LOG_INFO</a></div><div class="ttdeci">#define LAUGHTALE_ENGINR_LOG_INFO(toLog)</div><div class="ttdef"><b>Definition:</b> logger.h:6</div></div>
 </div><!-- fragment -->
 </div>
@@ -430,49 +430,55 @@ Here is the call graph for this function:</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        vertexsData temp;</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> indicesOffset = verticesData.size();</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <span class="keywordflow">for</span> (<span class="keywordtype">float</span> *i = shape-&gt;getVB(); i &lt; shape-&gt;getVB() + (shape-&gt;getSize() / <span class="keyword">sizeof</span>(<span class="keywordtype">float</span>)); i += 5)</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        {</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>            temp.x = *i;</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>            temp.y = *(i + 1);</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            temp.z = *(i + 2);</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            temp.textCoordX = *(i + 3);</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            temp.textCoordY = *(i + 4);</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            temp.r = m-&gt;getRGBA().r;</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            temp.g = m-&gt;getRGBA().g;</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            temp.b = m-&gt;getRGBA().b;</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            temp.a = m-&gt;getRGBA().a;</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            temp.texId = m-&gt;getTexture() ? m-&gt;getTextureId() : 0;</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            verticesData.push_back(temp);</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            shapeIndexCounter.push_back(0);</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        }</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> *i = shape-&gt;getIB(); i &lt; shape-&gt;getIB() + shape-&gt;getCount(); i++)</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        {</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            indices.push_back(*i + indicesOffset);</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        }</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        shapeIndexCounter[shapeIndexCounter.size() - 1] = shape-&gt;getCount();</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    }</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <span class="keywordtype">int</span> j = 0;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <span class="keywordflow">for</span> (<span class="keywordtype">float</span> *i = shape-&gt;getVB(); i &lt; shape-&gt;getVB() + shape-&gt;getSize(); i += 3)</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        {</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>            temp.x = *i;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            temp.y = *(i + 1);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            temp.z = *(i + 2);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            temp.textCoordX = m-&gt;getTexturePostionX(j); <span class="comment">//*(i + 3);</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            temp.textCoordY = m-&gt;getTexturePostionY(j); <span class="comment">//*(i + 4);</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            temp.r = m-&gt;getRGBA().r;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            temp.g = m-&gt;getRGBA().g;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            temp.b = m-&gt;getRGBA().b;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            temp.a = m-&gt;getRGBA().a;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            temp.texId = m-&gt;getTexture() ? m-&gt;getTextureId() : 0;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            verticesData.push_back(temp);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            shapeIndexCounter.push_back(0);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            j++;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        }</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> *i = shape-&gt;getIB(); i &lt; shape-&gt;getIB() + shape-&gt;getCount(); i++)</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        {</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            indices.push_back(*i + indicesOffset);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        }</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        shapeIndexCounter[shapeIndexCounter.size() - 1] = shape-&gt;getCount();</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    }</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d1/d3d/class_l_t_e_1_1shader_render_buffer_ad5f4eefe2fd0ccb1eca97b1ea900f884_cgraph.png" border="0" usemap="#ad1/d3d/class_l_t_e_1_1shader_render_buffer_ad5f4eefe2fd0ccb1eca97b1ea900f884_cgraph" alt=""/></div>
 <map name="ad1/d3d/class_l_t_e_1_1shader_render_buffer_ad5f4eefe2fd0ccb1eca97b1ea900f884_cgraph" id="ad1/d3d/class_l_t_e_1_1shader_render_buffer_ad5f4eefe2fd0ccb1eca97b1ea900f884_cgraph">
-<area shape="rect" title=" " alt="" coords="5,150,176,191"/>
-<area shape="rect" href="../../d0/d6c/class_l_t_e_1_1mesh.html#a8614c8bf0f0c537f5b48c5c832d4e33d" title=" " alt="" coords="241,5,387,32"/>
-<area shape="rect" href="../../d0/d6c/class_l_t_e_1_1mesh.html#a665a9f651f2527eafd834316bd4a37ec" title=" " alt="" coords="251,56,377,83"/>
-<area shape="rect" href="../../dc/dda/class_l_t_e_1_1material.html#a99d55dfd6ef208f58a0d11a1102df234" title=" " alt="" coords="232,107,396,133"/>
-<area shape="rect" href="../../d0/d6c/class_l_t_e_1_1mesh.html#aead1c21ddfb9abb016f411ab12cc188c" title=" " alt="" coords="245,157,383,184"/>
-<area shape="rect" href="../../dc/dda/class_l_t_e_1_1material.html#a2bea09c96fda5f1264c9ace55b125197" title=" " alt="" coords="229,208,399,235"/>
-<area shape="rect" href="../../dc/dda/class_l_t_e_1_1material.html#afb1ecde3f0f2a624000b7f30336b6d99" title=" " alt="" coords="224,259,404,285"/>
-<area shape="rect" href="../../d0/d6c/class_l_t_e_1_1mesh.html#a7e8bf30f163886239ac38f8122719550" title=" " alt="" coords="249,355,379,381"/>
-<area shape="rect" href="../../d9/d46/class_l_t_e_1_1texture.html#af7f8b21d3da7066fa118067321e4ecdf" title=" " alt="" coords="491,212,622,239"/>
-<area shape="rect" href="../../de/d44/class_l_t_e_1_1entity_manger.html#ad019a4750f1350c7185cefe6072dcd6e" title=" " alt="" coords="488,263,625,305"/>
-<area shape="rect" href="../../d6/d08/class_l_t_e_1_1transform.html#a160e68074988f3992b3cc6df921db306" title=" " alt="" coords="467,329,646,356"/>
-<area shape="rect" href="../../d6/d08/class_l_t_e_1_1transform.html#a9e6017567ebcc3339edff1c774856abf" title=" " alt="" coords="465,380,649,407"/>
-<area shape="rect" href="../../d6/d08/class_l_t_e_1_1transform.html#ae99effe341f4e47e4d5e0d8e288de666" title=" " alt="" coords="473,431,641,457"/>
-<area shape="rect" href="../../d2/d49/class_l_t_e_1_1game_object.html#a568b30b81a33465e74c3c39663d1b5c0" title=" " alt="" coords="452,481,661,508"/>
+<area shape="rect" title=" " alt="" coords="5,201,172,242"/>
+<area shape="rect" href="../../d0/d6c/class_l_t_e_1_1mesh.html#a8614c8bf0f0c537f5b48c5c832d4e33d" title=" " alt="" coords="237,5,379,32"/>
+<area shape="rect" href="../../d0/d6c/class_l_t_e_1_1mesh.html#a665a9f651f2527eafd834316bd4a37ec" title=" " alt="" coords="247,56,369,83"/>
+<area shape="rect" href="../../dc/dda/class_l_t_e_1_1material.html#a99d55dfd6ef208f58a0d11a1102df234" title=" " alt="" coords="229,107,387,133"/>
+<area shape="rect" href="../../d0/d6c/class_l_t_e_1_1mesh.html#aead1c21ddfb9abb016f411ab12cc188c" title=" " alt="" coords="241,157,375,184"/>
+<area shape="rect" href="../../dc/dda/class_l_t_e_1_1material.html#a2bea09c96fda5f1264c9ace55b125197" title=" " alt="" coords="225,208,391,235"/>
+<area shape="rect" href="../../dc/dda/class_l_t_e_1_1material.html#afb1ecde3f0f2a624000b7f30336b6d99" title=" " alt="" coords="220,259,396,285"/>
+<area shape="rect" href="../../dc/dda/class_l_t_e_1_1material.html#a60c9114c31494e7310bfded8f3b7713b" title=" " alt="" coords="225,310,391,351"/>
+<area shape="rect" href="../../dc/dda/class_l_t_e_1_1material.html#a90ab73f411394a7f9787ca8afd2bdfa6" title=" " alt="" coords="225,375,391,417"/>
+<area shape="rect" href="../../d0/d6c/class_l_t_e_1_1mesh.html#a7e8bf30f163886239ac38f8122719550" title=" " alt="" coords="245,441,371,468"/>
+<area shape="rect" href="../../d9/d46/class_l_t_e_1_1texture.html#af7f8b21d3da7066fa118067321e4ecdf" title=" " alt="" coords="483,259,610,285"/>
+<area shape="rect" href="../../de/d44/class_l_t_e_1_1entity_manger.html#ad019a4750f1350c7185cefe6072dcd6e" title=" " alt="" coords="481,325,613,366"/>
+<area shape="rect" href="../../d6/d08/class_l_t_e_1_1transform.html#a160e68074988f3992b3cc6df921db306" title=" " alt="" coords="459,391,634,417"/>
+<area shape="rect" href="../../d6/d08/class_l_t_e_1_1transform.html#a9e6017567ebcc3339edff1c774856abf" title=" " alt="" coords="457,441,636,468"/>
+<area shape="rect" href="../../d6/d08/class_l_t_e_1_1transform.html#ae99effe341f4e47e4d5e0d8e288de666" title=" " alt="" coords="465,492,629,519"/>
+<area shape="rect" href="../../d2/d49/class_l_t_e_1_1game_object.html#a568b30b81a33465e74c3c39663d1b5c0" title=" " alt="" coords="444,543,649,569"/>
 </map>
 </div>
 <div class="dynheader">
@@ -502,19 +508,19 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    {</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <span class="keywordtype">int</span> usedTextureThisBatch = 0;</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <span class="keywordflow">while</span> ((usedTextureThisBatch &lt; 7 || (usedTextureThisBatch == 7 &amp;&amp; textures[verticesData[renderBatchEnd].texId])) &amp;&amp; renderBatchEnd != verticesData.size())</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        {</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            <span class="keywordflow">if</span> (!textures[verticesData[renderBatchEnd].texId] &amp;&amp; verticesData[renderBatchEnd].texId)</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>                textures[verticesData[renderBatchEnd].texId] = ++usedTextureThisBatch;</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>            verticesData[renderBatchEnd].textureSlot = (float)textures[verticesData[renderBatchEnd].texId];</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>            batchIndexCount += shapeIndexCounter[renderBatchEnd];</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>            renderBatchEnd++;</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        }</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    }</div>
+<div class="fragment"><div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    {</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        <span class="keywordtype">int</span> usedTextureThisBatch = 0;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <span class="keywordflow">while</span> ((usedTextureThisBatch &lt; 7 || (usedTextureThisBatch == 7 &amp;&amp; textures[verticesData[renderBatchEnd].texId])) &amp;&amp; renderBatchEnd != verticesData.size())</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        {</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>            <span class="keywordflow">if</span> (!textures[verticesData[renderBatchEnd].texId] &amp;&amp; verticesData[renderBatchEnd].texId)</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>                textures[verticesData[renderBatchEnd].texId] = ++usedTextureThisBatch;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>            verticesData[renderBatchEnd].textureSlot = (float)textures[verticesData[renderBatchEnd].texId];</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>            batchIndexCount += shapeIndexCounter[renderBatchEnd];</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>            renderBatchEnd++;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        }</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -532,10 +538,10 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    {</div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>        BatchedVertexBuffer-&gt;<a class="code hl_function" href="../../d2/dcd/class_l_t_e_1_1_vertex_buffer.html#a74508d395ab85d067adcfe71a2c4ec49">unbind</a>();</div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>        BatchedVertexArray-&gt;<a class="code hl_function" href="../../df/db4/class_l_t_e_1_1vertex_array.html#a8de7adca7d6dacc60dcb2972073065ee">unbind</a>();</div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    }</div>
+<div class="fragment"><div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    {</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>        BatchedVertexBuffer-&gt;<a class="code hl_function" href="../../d2/dcd/class_l_t_e_1_1_vertex_buffer.html#a74508d395ab85d067adcfe71a2c4ec49">unbind</a>();</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>        BatchedVertexArray-&gt;<a class="code hl_function" href="../../df/db4/class_l_t_e_1_1vertex_array.html#a8de7adca7d6dacc60dcb2972073065ee">unbind</a>();</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>    }</div>
 <div class="ttc" id="aclass_l_t_e_1_1_vertex_buffer_html_a74508d395ab85d067adcfe71a2c4ec49"><div class="ttname"><a href="../../d2/dcd/class_l_t_e_1_1_vertex_buffer.html#a74508d395ab85d067adcfe71a2c4ec49">LTE::VertexBuffer::unbind</a></div><div class="ttdeci">virtual void unbind()=0</div></div>
 <div class="ttc" id="aclass_l_t_e_1_1vertex_array_html_a8de7adca7d6dacc60dcb2972073065ee"><div class="ttname"><a href="../../df/db4/class_l_t_e_1_1vertex_array.html#a8de7adca7d6dacc60dcb2972073065ee">LTE::vertexArray::unbind</a></div><div class="ttdeci">virtual void unbind()=0</div></div>
 </div><!-- fragment --><div class="dynheader">

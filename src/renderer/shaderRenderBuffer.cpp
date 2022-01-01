@@ -31,13 +31,15 @@ namespace LTE
         vertexsData temp;
         unsigned int indicesOffset = verticesData.size();
 
-        for (float *i = shape->getVB(); i < shape->getVB() + (shape->getSize() / sizeof(float)); i += 5)
+        int j = 0;
+        for (float *i = shape->getVB(); i < shape->getVB() + shape->getSize(); i += 3)
         {
             temp.x = *i;
             temp.y = *(i + 1);
             temp.z = *(i + 2);
-            temp.textCoordX = *(i + 3);
-            temp.textCoordY = *(i + 4);
+
+            temp.textCoordX = m->getTexturePostionX(j); //*(i + 3);
+            temp.textCoordY = m->getTexturePostionY(j); //*(i + 4);
 
             temp.r = m->getRGBA().r;
             temp.g = m->getRGBA().g;
@@ -47,6 +49,8 @@ namespace LTE
             temp.texId = m->getTexture() ? m->getTextureId() : 0;
             verticesData.push_back(temp);
             shapeIndexCounter.push_back(0);
+
+            j++;
         }
 
         for (unsigned int *i = shape->getIB(); i < shape->getIB() + shape->getCount(); i++)
