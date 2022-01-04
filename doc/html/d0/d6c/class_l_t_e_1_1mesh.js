@@ -9,6 +9,7 @@ var class_l_t_e_1_1mesh =
     [ "getShaderName", "d0/d6c/class_l_t_e_1_1mesh.html#a71c029a6c565a81d744fad021bc903ca", null ],
     [ "getSize", "d0/d6c/class_l_t_e_1_1mesh.html#aead1c21ddfb9abb016f411ab12cc188c", null ],
     [ "getVB", "d0/d6c/class_l_t_e_1_1mesh.html#a7e8bf30f163886239ac38f8122719550", null ],
+    [ "getVertices", "d0/d6c/class_l_t_e_1_1mesh.html#ae67ee55d1725702719b2de2a87f8bd3f", null ],
     [ "getWindowId", "d0/d6c/class_l_t_e_1_1mesh.html#adebdbf6cd3e4cc49a23458caa92c6a2d", null ],
     [ "init", "d0/d6c/class_l_t_e_1_1mesh.html#a12762b2cf5f55e2dc0f38552064f7528", null ],
     [ "setIndexBuffer", "d0/d6c/class_l_t_e_1_1mesh.html#a1193559063ea1e25c9140488a4170f9d", null ],

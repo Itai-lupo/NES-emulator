@@ -116,7 +116,7 @@ var searchData=
   ['subbeats_113',['subBeats',['../db/d56/class_l_t_e_1_1sequencer.html#ae4becb0f01365c42a53435ebea978323',1,'LTE::sequencer']]],
   ['submitshape_114',['submitShape',['../d1/d10/class_l_t_e_1_1renderer.html#a593a79a85c12d6469425a703fecbde6d',1,'LTE::renderer']]],
   ['sustainamplitude_115',['sustainAmplitude',['../d2/d04/class_l_t_e_1_1envelope.html#afd1ef7c81388553ee9f5c2dc6f87e9d9',1,'LTE::envelope']]],
-  ['swapbuffers_116',['SwapBuffers',['../db/d92/class_l_t_e_1_1open_g_l_context.html#aba3f07059dcbdb11c66f84d2ca3dd8c0',1,'LTE::openGLContext']]],
-  ['swapbuffers_117',['swapBuffers',['../d1/db3/class_l_t_e_1_1linux_a_p_i.html#a5f7bbc1ed7c161e6010ea0e0d009b3a9',1,'LTE::linuxAPI::swapBuffers()'],['../d8/da3/class_l_t_e_1_1os_a_p_i.html#a5797efa13ff7fb2f6fb37e1aa7a0940e',1,'LTE::osAPI::swapBuffers()']]],
-  ['swapbuffers_118',['SwapBuffers',['../d7/d20/class_l_t_e_1_1graphics_context.html#af995eacf4bc6a4fbe9c7923e40f2d778',1,'LTE::graphicsContext']]]
+  ['swapbuffers_116',['swapBuffers',['../d8/da3/class_l_t_e_1_1os_a_p_i.html#a5797efa13ff7fb2f6fb37e1aa7a0940e',1,'LTE::osAPI']]],
+  ['swapbuffers_117',['SwapBuffers',['../d7/d20/class_l_t_e_1_1graphics_context.html#af995eacf4bc6a4fbe9c7923e40f2d778',1,'LTE::graphicsContext::SwapBuffers()'],['../db/d92/class_l_t_e_1_1open_g_l_context.html#aba3f07059dcbdb11c66f84d2ca3dd8c0',1,'LTE::openGLContext::SwapBuffers()']]],
+  ['swapbuffers_118',['swapBuffers',['../d1/db3/class_l_t_e_1_1linux_a_p_i.html#a5f7bbc1ed7c161e6010ea0e0d009b3a9',1,'LTE::linuxAPI']]]
 ];

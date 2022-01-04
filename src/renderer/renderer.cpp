@@ -12,7 +12,6 @@ namespace LTE
     renderer::renderer(windowPieceId winId, renderApi *renderPipLine): 
         win(windowManger::getWindow(winId)), Scene(win->activeScene), renderPipLine(renderPipLine)
     {
-        indicesToRender = win->context->getMeshFactory()->createIndexBuffer({}, 0);
 
     }
 
@@ -93,12 +92,13 @@ namespace LTE
                     for(const auto& [id, slot]: texturesToUse)
                         if(textures[id])
                             textures[id]->bind(slot);
+                    // indicesToRender = new openGLIndexBuffer(shaderBuffer->getIndecesData(), shaderBuffer->getIndecesCount());
+                    // indicesToRender->init();
 
-                    indicesToRender->setData(shaderBuffer->getIndecesData(), shaderBuffer->getIndecesCount());
-                    indicesToRender->bind();
+                    // indicesToRender->bind();
                     shaderBuffer->bind();
 
-                    renderPipLine->DrawIndexed(indicesToRender->getCount());
+                    renderPipLine->DrawIndexed(shaderBuffer->getIndecesCount());
                 }
                 catch(const std::exception& e)
                 {

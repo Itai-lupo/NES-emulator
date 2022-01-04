@@ -205,7 +205,7 @@ public:
                                 setShaderName("res/checkmate/shaders/piece.glsl")->
                                 setVertices(tilePostions, 12); 
                                 }))->
-                        addComponent(new LTE::material("res/checkmate/textures/piecesSpriteSheet.png", 2, 0))->
+                        addComponent(new LTE::material("res/checkmate/textures/piecesSpriteSheet.png", 1, 0))->
                         addComponent(whiteKnight); 
             });
 
@@ -225,7 +225,7 @@ public:
                                 setShaderName("res/checkmate/shaders/piece.glsl")->
                                 setVertices(tilePostions, 12); 
                                 }))->
-                        addComponent(new LTE::material("res/checkmate/textures/piecesSpriteSheet.png", 2, 0))->
+                        addComponent(new LTE::material("res/checkmate/textures/piecesSpriteSheet.png", 1, 0))->
                         addComponent(whiteKnight); 
             });
 

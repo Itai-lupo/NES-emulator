@@ -95,6 +95,7 @@ namespace LTE
                 std::string getShaderName();
                 int getSize();
                 float *getVB();
+                float *getVertices();
                 uint32_t* getIB();
                 windowPieceId getWindowId(){ return winId;}
 

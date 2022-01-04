@@ -141,6 +141,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aead1c21ddfb9abb016f411ab12cc188c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7e8bf30f163886239ac38f8122719550"><td class="memItemLeft" align="right" valign="top">float *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d6c/class_l_t_e_1_1mesh.html#a7e8bf30f163886239ac38f8122719550">getVB</a> ()</td></tr>
 <tr class="separator:a7e8bf30f163886239ac38f8122719550"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae67ee55d1725702719b2de2a87f8bd3f"><td class="memItemLeft" align="right" valign="top">float *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d6c/class_l_t_e_1_1mesh.html#ae67ee55d1725702719b2de2a87f8bd3f">getVertices</a> ()</td></tr>
+<tr class="separator:ae67ee55d1725702719b2de2a87f8bd3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a665a9f651f2527eafd834316bd4a37ec"><td class="memItemLeft" align="right" valign="top">uint32_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d6c/class_l_t_e_1_1mesh.html#a665a9f651f2527eafd834316bd4a37ec">getIB</a> ()</td></tr>
 <tr class="separator:a665a9f651f2527eafd834316bd4a37ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adebdbf6cd3e4cc49a23458caa92c6a2d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d59/namespace_l_t_e.html#a8ae7e0c0e39c6dfb8804ee2eecf2c6c2">windowPieceId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d6c/class_l_t_e_1_1mesh.html#adebdbf6cd3e4cc49a23458caa92c6a2d">getWindowId</a> ()</td></tr>
@@ -290,15 +292,15 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="../../d9/d4b/class_l_t_e_1_1component.html#afd24be0a9adfdeb094e5c5fe003b7bf0">LTE::component</a>.</p>
-<div class="fragment"><div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    {</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        <a class="code hl_function" href="../../de/de3/class_l_t_e_1_1window_manger.html#aeb94c72d9ef01e6ec53328e2ba972628">windowManger::getWindow</a>(<a class="code hl_variable" href="../../d9/d4b/class_l_t_e_1_1component.html#ac469754e014b2f010a5a0a93facce4ff">winId</a>)-&gt;<a class="code hl_variable" href="../../d4/d38/class_l_t_e_1_1window.html#acba19ea1d8f513ba9b320cefffd4af82">activeScene</a>-&gt;<a class="code hl_variable" href="../../d6/d26/class_l_t_e_1_1scene.html#a0fd9ba2008e3dccd00bf9066057ba655">objects</a>-&gt;erase(</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        std::remove_if(</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>            <a class="code hl_function" href="../../de/de3/class_l_t_e_1_1window_manger.html#aeb94c72d9ef01e6ec53328e2ba972628">windowManger::getWindow</a>(<a class="code hl_variable" href="../../d9/d4b/class_l_t_e_1_1component.html#ac469754e014b2f010a5a0a93facce4ff">winId</a>)-&gt;activeScene-&gt;objects-&gt;begin(),</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>            <a class="code hl_function" href="../../de/de3/class_l_t_e_1_1window_manger.html#aeb94c72d9ef01e6ec53328e2ba972628">windowManger::getWindow</a>(<a class="code hl_variable" href="../../d9/d4b/class_l_t_e_1_1component.html#ac469754e014b2f010a5a0a93facce4ff">winId</a>)-&gt;<a class="code hl_variable" href="../../d4/d38/class_l_t_e_1_1window.html#acba19ea1d8f513ba9b320cefffd4af82">activeScene</a>-&gt;<a class="code hl_variable" href="../../d6/d26/class_l_t_e_1_1scene.html#a0fd9ba2008e3dccd00bf9066057ba655">objects</a>-&gt;end(),</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>            [=](gameObject *g) -&gt; <span class="keywordtype">bool</span> { return g-&gt;getId() == parentId; }</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        )</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    );</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    }</div>
+<div class="fragment"><div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    {</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        <a class="code hl_function" href="../../de/de3/class_l_t_e_1_1window_manger.html#aeb94c72d9ef01e6ec53328e2ba972628">windowManger::getWindow</a>(<a class="code hl_variable" href="../../d9/d4b/class_l_t_e_1_1component.html#ac469754e014b2f010a5a0a93facce4ff">winId</a>)-&gt;<a class="code hl_variable" href="../../d4/d38/class_l_t_e_1_1window.html#acba19ea1d8f513ba9b320cefffd4af82">activeScene</a>-&gt;<a class="code hl_variable" href="../../d6/d26/class_l_t_e_1_1scene.html#a0fd9ba2008e3dccd00bf9066057ba655">objects</a>-&gt;erase(</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        std::remove_if(</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>            <a class="code hl_function" href="../../de/de3/class_l_t_e_1_1window_manger.html#aeb94c72d9ef01e6ec53328e2ba972628">windowManger::getWindow</a>(<a class="code hl_variable" href="../../d9/d4b/class_l_t_e_1_1component.html#ac469754e014b2f010a5a0a93facce4ff">winId</a>)-&gt;activeScene-&gt;objects-&gt;begin(),</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>            <a class="code hl_function" href="../../de/de3/class_l_t_e_1_1window_manger.html#aeb94c72d9ef01e6ec53328e2ba972628">windowManger::getWindow</a>(<a class="code hl_variable" href="../../d9/d4b/class_l_t_e_1_1component.html#ac469754e014b2f010a5a0a93facce4ff">winId</a>)-&gt;<a class="code hl_variable" href="../../d4/d38/class_l_t_e_1_1window.html#acba19ea1d8f513ba9b320cefffd4af82">activeScene</a>-&gt;<a class="code hl_variable" href="../../d6/d26/class_l_t_e_1_1scene.html#a0fd9ba2008e3dccd00bf9066057ba655">objects</a>-&gt;end(),</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>            [=](gameObject *g) -&gt; <span class="keywordtype">bool</span> { return g-&gt;getId() == parentId; }</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        )</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    );</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    }</div>
 <div class="ttc" id="aclass_l_t_e_1_1component_html_ac469754e014b2f010a5a0a93facce4ff"><div class="ttname"><a href="../../d9/d4b/class_l_t_e_1_1component.html#ac469754e014b2f010a5a0a93facce4ff">LTE::component::winId</a></div><div class="ttdeci">windowPieceId winId</div><div class="ttdef"><b>Definition:</b> component.h:12</div></div>
 <div class="ttc" id="aclass_l_t_e_1_1scene_html_a0fd9ba2008e3dccd00bf9066057ba655"><div class="ttname"><a href="../../d6/d26/class_l_t_e_1_1scene.html#a0fd9ba2008e3dccd00bf9066057ba655">LTE::scene::objects</a></div><div class="ttdeci">std::vector&lt; gameObject * &gt; * objects</div><div class="ttdef"><b>Definition:</b> scene.h:22</div></div>
 <div class="ttc" id="aclass_l_t_e_1_1window_html_acba19ea1d8f513ba9b320cefffd4af82"><div class="ttname"><a href="../../d4/d38/class_l_t_e_1_1window.html#acba19ea1d8f513ba9b320cefffd4af82">LTE::window::activeScene</a></div><div class="ttdeci">scene * activeScene</div><div class="ttdef"><b>Definition:</b> window.h:27</div></div>
@@ -329,9 +331,9 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    {</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        <span class="keywordflow">return</span> count;</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    }</div>
+<div class="fragment"><div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    {</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        <span class="keywordflow">return</span> count;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    }</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -360,9 +362,9 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    {</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        <span class="keywordflow">return</span> indices; </div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    }</div>
+<div class="fragment"><div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    {</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        <span class="keywordflow">return</span> indices; </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    }</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -475,51 +477,78 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    {</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        <span class="keywordflow">return</span> vertexs;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    }</div>
+</div><!-- fragment --><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d0/d6c/class_l_t_e_1_1mesh_a7e8bf30f163886239ac38f8122719550_icgraph.png" border="0" usemap="#ad0/d6c/class_l_t_e_1_1mesh_a7e8bf30f163886239ac38f8122719550_icgraph" alt=""/></div>
+<map name="ad0/d6c/class_l_t_e_1_1mesh_a7e8bf30f163886239ac38f8122719550_icgraph" id="ad0/d6c/class_l_t_e_1_1mesh_a7e8bf30f163886239ac38f8122719550_icgraph">
+<area shape="rect" title=" " alt="" coords="449,13,576,39"/>
+<area shape="rect" href="../../d1/d3d/class_l_t_e_1_1shader_render_buffer.html#ad5f4eefe2fd0ccb1eca97b1ea900f884" title=" " alt="" coords="235,5,401,47"/>
+<area shape="rect" href="../../d1/d10/class_l_t_e_1_1renderer.html#a593a79a85c12d6469425a703fecbde6d" title=" " alt="" coords="5,13,187,39"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae67ee55d1725702719b2de2a87f8bd3f" name="ae67ee55d1725702719b2de2a87f8bd3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae67ee55d1725702719b2de2a87f8bd3f">&#9670;&nbsp;</a></span>getVertices()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float * LTE::mesh::getVertices </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 <div class="fragment"><div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    {</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <span class="comment">// return vertexs;</span></div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        transform* trans =  <a class="code hl_function" href="../../de/d44/class_l_t_e_1_1entity_manger.html#ad019a4750f1350c7185cefe6072dcd6e">entityManger::getEntityById</a>(<a class="code hl_variable" href="../../d9/d4b/class_l_t_e_1_1component.html#a7ed9339f270d0439f071cf64c6a7f505">parentId</a>)-&gt;<a class="code hl_function" href="../../d2/d49/class_l_t_e_1_1game_object.html#a568b30b81a33465e74c3c39663d1b5c0">getTransform</a>();</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <span class="keywordtype">float</span> temp[size];</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; size ; i += 3)</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        {</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            glm::vec4 t = glm::vec4(vertexs[i], vertexs[i + 1], vertexs[i + 2], 1.0f);</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            t = glm::translate(glm::mat4(1.0f), trans-&gt;getPostion()) * </div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            glm::rotate(glm::mat4(1.0f), trans-&gt;getRotation().x, { 1.0f, 0.0f, 0.0f}) *</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            glm::rotate(glm::mat4(1.0f), trans-&gt;getRotation().y, { 0.0f, 1.0f, 0.0f}) *</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            glm::rotate(glm::mat4(1.0f), trans-&gt;getRotation().z, { 0.0f, 0.0f, 1.0f}) *</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            glm::scale(glm::mat4(1.0f), trans-&gt;getScale()) * t;</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            </div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>            temp[i] = t.x;</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            temp[i + 1] = t.y;</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>            temp[i + 2] = t.z;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        transform* trans =  <a class="code hl_function" href="../../de/d44/class_l_t_e_1_1entity_manger.html#ad019a4750f1350c7185cefe6072dcd6e">entityManger::getEntityById</a>(<a class="code hl_variable" href="../../d9/d4b/class_l_t_e_1_1component.html#a7ed9339f270d0439f071cf64c6a7f505">parentId</a>)-&gt;<a class="code hl_function" href="../../d2/d49/class_l_t_e_1_1game_object.html#a568b30b81a33465e74c3c39663d1b5c0">getTransform</a>();</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="keywordtype">float</span> temp[size];</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; size ; i += 3)</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        {</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            glm::vec4 t = glm::vec4(vertexs[i], vertexs[i + 1], vertexs[i + 2], 1.0f);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            t = glm::translate(glm::mat4(1.0f), trans-&gt;getPostion()) * </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            glm::rotate(glm::mat4(1.0f), trans-&gt;getRotation().x, { 1.0f, 0.0f, 0.0f}) *</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            glm::rotate(glm::mat4(1.0f), trans-&gt;getRotation().y, { 0.0f, 1.0f, 0.0f}) *</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            glm::rotate(glm::mat4(1.0f), trans-&gt;getRotation().z, { 0.0f, 0.0f, 1.0f}) *</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            glm::scale(glm::mat4(1.0f), trans-&gt;getScale()) * t;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            temp[i] = t.x;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>            temp[i + 1] = t.y;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            temp[i + 2] = t.z;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        }</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            <span class="comment">// temp[i + 3] = vertexs[i + 3];</span></div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>            <span class="comment">// temp[i + 4] = vertexs[i + 4];</span></div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        }</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        <span class="keywordflow">return</span>  temp;</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    }</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        <span class="keywordflow">return</span>  temp;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    }</div>
 <div class="ttc" id="aclass_l_t_e_1_1component_html_a7ed9339f270d0439f071cf64c6a7f505"><div class="ttname"><a href="../../d9/d4b/class_l_t_e_1_1component.html#a7ed9339f270d0439f071cf64c6a7f505">LTE::component::parentId</a></div><div class="ttdeci">entityTaleId parentId</div><div class="ttdef"><b>Definition:</b> component.h:13</div></div>
 <div class="ttc" id="aclass_l_t_e_1_1entity_manger_html_ad019a4750f1350c7185cefe6072dcd6e"><div class="ttname"><a href="../../de/d44/class_l_t_e_1_1entity_manger.html#ad019a4750f1350c7185cefe6072dcd6e">LTE::entityManger::getEntityById</a></div><div class="ttdeci">static gameObject * getEntityById(entityTaleId id)</div><div class="ttdef"><b>Definition:</b> entity.cpp:48</div></div>
 <div class="ttc" id="aclass_l_t_e_1_1game_object_html_a568b30b81a33465e74c3c39663d1b5c0"><div class="ttname"><a href="../../d2/d49/class_l_t_e_1_1game_object.html#a568b30b81a33465e74c3c39663d1b5c0">LTE::gameObject::getTransform</a></div><div class="ttdeci">transform * getTransform()</div><div class="ttdef"><b>Definition:</b> entity.h:148</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../d0/d6c/class_l_t_e_1_1mesh_a7e8bf30f163886239ac38f8122719550_cgraph.png" border="0" usemap="#ad0/d6c/class_l_t_e_1_1mesh_a7e8bf30f163886239ac38f8122719550_cgraph" alt=""/></div>
-<map name="ad0/d6c/class_l_t_e_1_1mesh_a7e8bf30f163886239ac38f8122719550_cgraph" id="ad0/d6c/class_l_t_e_1_1mesh_a7e8bf30f163886239ac38f8122719550_cgraph">
-<area shape="rect" title=" " alt="" coords="5,122,136,149"/>
-<area shape="rect" href="../../de/d44/class_l_t_e_1_1entity_manger.html#ad019a4750f1350c7185cefe6072dcd6e" title=" " alt="" coords="220,5,357,47"/>
-<area shape="rect" href="../../d6/d08/class_l_t_e_1_1transform.html#a160e68074988f3992b3cc6df921db306" title=" " alt="" coords="199,71,378,98"/>
-<area shape="rect" href="../../d6/d08/class_l_t_e_1_1transform.html#a9e6017567ebcc3339edff1c774856abf" title=" " alt="" coords="197,122,381,149"/>
-<area shape="rect" href="../../d6/d08/class_l_t_e_1_1transform.html#ae99effe341f4e47e4d5e0d8e288de666" title=" " alt="" coords="205,173,373,199"/>
-<area shape="rect" href="../../d2/d49/class_l_t_e_1_1game_object.html#a568b30b81a33465e74c3c39663d1b5c0" title=" " alt="" coords="184,223,393,250"/>
+<div class="center"><img src="../../d0/d6c/class_l_t_e_1_1mesh_ae67ee55d1725702719b2de2a87f8bd3f_cgraph.png" border="0" usemap="#ad0/d6c/class_l_t_e_1_1mesh_ae67ee55d1725702719b2de2a87f8bd3f_cgraph" alt=""/></div>
+<map name="ad0/d6c/class_l_t_e_1_1mesh_ae67ee55d1725702719b2de2a87f8bd3f_cgraph" id="ad0/d6c/class_l_t_e_1_1mesh_ae67ee55d1725702719b2de2a87f8bd3f_cgraph">
+<area shape="rect" title=" " alt="" coords="5,122,161,149"/>
+<area shape="rect" href="../../de/d44/class_l_t_e_1_1entity_manger.html#ad019a4750f1350c7185cefe6072dcd6e" title=" " alt="" coords="246,5,378,47"/>
+<area shape="rect" href="../../d6/d08/class_l_t_e_1_1transform.html#a160e68074988f3992b3cc6df921db306" title=" " alt="" coords="225,71,399,98"/>
+<area shape="rect" href="../../d6/d08/class_l_t_e_1_1transform.html#a9e6017567ebcc3339edff1c774856abf" title=" " alt="" coords="223,122,401,149"/>
+<area shape="rect" href="../../d6/d08/class_l_t_e_1_1transform.html#ae99effe341f4e47e4d5e0d8e288de666" title=" " alt="" coords="230,173,394,199"/>
+<area shape="rect" href="../../d2/d49/class_l_t_e_1_1game_object.html#a568b30b81a33465e74c3c39663d1b5c0" title=" " alt="" coords="209,223,415,250"/>
 </map>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../d0/d6c/class_l_t_e_1_1mesh_a7e8bf30f163886239ac38f8122719550_icgraph.png" border="0" usemap="#ad0/d6c/class_l_t_e_1_1mesh_a7e8bf30f163886239ac38f8122719550_icgraph" alt=""/></div>
-<map name="ad0/d6c/class_l_t_e_1_1mesh_a7e8bf30f163886239ac38f8122719550_icgraph" id="ad0/d6c/class_l_t_e_1_1mesh_a7e8bf30f163886239ac38f8122719550_icgraph">
-<area shape="rect" title=" " alt="" coords="449,13,576,39"/>
+<div class="center"><img src="../../d0/d6c/class_l_t_e_1_1mesh_ae67ee55d1725702719b2de2a87f8bd3f_icgraph.png" border="0" usemap="#ad0/d6c/class_l_t_e_1_1mesh_ae67ee55d1725702719b2de2a87f8bd3f_icgraph" alt=""/></div>
+<map name="ad0/d6c/class_l_t_e_1_1mesh_ae67ee55d1725702719b2de2a87f8bd3f_icgraph" id="ad0/d6c/class_l_t_e_1_1mesh_ae67ee55d1725702719b2de2a87f8bd3f_icgraph">
+<area shape="rect" title=" " alt="" coords="449,13,605,39"/>
 <area shape="rect" href="../../d1/d3d/class_l_t_e_1_1shader_render_buffer.html#ad5f4eefe2fd0ccb1eca97b1ea900f884" title=" " alt="" coords="235,5,401,47"/>
 <area shape="rect" href="../../d1/d10/class_l_t_e_1_1renderer.html#a593a79a85c12d6469425a703fecbde6d" title=" " alt="" coords="5,13,187,39"/>
 </map>
@@ -549,7 +578,7 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d9/d4b/class_l_t_e_1_1component.html#ac469754e014b2f010a5a0a93facce4ff">winId</a>;}</div>
+<div class="fragment"><div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d9/d4b/class_l_t_e_1_1component.html#ac469754e014b2f010a5a0a93facce4ff">winId</a>;}</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -587,11 +616,11 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="../../d9/d4b/class_l_t_e_1_1component.html#a3e5d2369a819e87417e96290a73d2cd1">LTE::component</a>.</p>
-<div class="fragment"><div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    {</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        window *win = <a class="code hl_function" href="../../de/de3/class_l_t_e_1_1window_manger.html#aeb94c72d9ef01e6ec53328e2ba972628">windowManger::getWindow</a>(<a class="code hl_variable" href="../../d9/d4b/class_l_t_e_1_1component.html#ac469754e014b2f010a5a0a93facce4ff">winId</a>);</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <a class="code hl_function" href="../../de/de3/class_l_t_e_1_1window_manger.html#aeb94c72d9ef01e6ec53328e2ba972628">windowManger::getWindow</a>(<a class="code hl_variable" href="../../d9/d4b/class_l_t_e_1_1component.html#ac469754e014b2f010a5a0a93facce4ff">winId</a>)-&gt;<a class="code hl_variable" href="../../d4/d38/class_l_t_e_1_1window.html#aef1907f05e0951d1e1e2d62a1a8a4529">assetLibrary</a>-&gt;<a class="code hl_function" href="../../db/d3a/class_l_t_e_1_1asset_manager.html#a829c74f828e397575232584a2ba4e7c9">loadAssetFromFile</a>(shaderToUse);</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        win-&gt;activeScene-&gt;objects-&gt;push_back(parent);</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    }</div>
+<div class="fragment"><div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    {</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        window *win = <a class="code hl_function" href="../../de/de3/class_l_t_e_1_1window_manger.html#aeb94c72d9ef01e6ec53328e2ba972628">windowManger::getWindow</a>(<a class="code hl_variable" href="../../d9/d4b/class_l_t_e_1_1component.html#ac469754e014b2f010a5a0a93facce4ff">winId</a>);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        <a class="code hl_function" href="../../de/de3/class_l_t_e_1_1window_manger.html#aeb94c72d9ef01e6ec53328e2ba972628">windowManger::getWindow</a>(<a class="code hl_variable" href="../../d9/d4b/class_l_t_e_1_1component.html#ac469754e014b2f010a5a0a93facce4ff">winId</a>)-&gt;<a class="code hl_variable" href="../../d4/d38/class_l_t_e_1_1window.html#aef1907f05e0951d1e1e2d62a1a8a4529">assetLibrary</a>-&gt;<a class="code hl_function" href="../../db/d3a/class_l_t_e_1_1asset_manager.html#a829c74f828e397575232584a2ba4e7c9">loadAssetFromFile</a>(shaderToUse);</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        win-&gt;activeScene-&gt;objects-&gt;push_back(parent);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    }</div>
 <div class="ttc" id="aclass_l_t_e_1_1asset_manager_html_a829c74f828e397575232584a2ba4e7c9"><div class="ttname"><a href="../../db/d3a/class_l_t_e_1_1asset_manager.html#a829c74f828e397575232584a2ba4e7c9">LTE::assetManager::loadAssetFromFile</a></div><div class="ttdeci">void loadAssetFromFile(const std::string &amp;filePath)</div><div class="ttdef"><b>Definition:</b> assetManager.cpp:12</div></div>
 <div class="ttc" id="aclass_l_t_e_1_1window_html_aef1907f05e0951d1e1e2d62a1a8a4529"><div class="ttname"><a href="../../d4/d38/class_l_t_e_1_1window.html#aef1907f05e0951d1e1e2d62a1a8a4529">LTE::window::assetLibrary</a></div><div class="ttdeci">assetManager * assetLibrary</div><div class="ttdef"><b>Definition:</b> window.h:30</div></div>
 </div><!-- fragment --><div class="dynheader">

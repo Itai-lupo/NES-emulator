@@ -426,7 +426,7 @@ class flappyBird : public ::testing::Test
                     addComponent(new pilarDestroyer());
                 });
 
-
+ 
             LTE::eventManger::startBuildingEvent()->
                 setEventRoute("Window close/close app")->
                 setEventCallback(WindowClose)->add();
@@ -440,8 +440,8 @@ class flappyBird : public ::testing::Test
 
 
 
-TEST_F(flappyBird, testGames)
-{
-    std::this_thread::sleep_for(std::chrono::milliseconds(500));
-    LTE::app::run();
-}
+// TEST_F(flappyBird, testGames)
+// {
+//     std::this_thread::sleep_for(std::chrono::milliseconds(500));
+//     LTE::app::run();
+// }

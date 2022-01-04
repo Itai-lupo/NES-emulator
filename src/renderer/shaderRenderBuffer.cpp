@@ -1,6 +1,7 @@
 #include <vector>
 #include <string>
 #include <glm/glm.hpp>
+#include <glm/gtx/string_cast.hpp>
 
 #include "shaderRenderBuffer.h"
 #include "windowManger.h"
@@ -12,6 +13,7 @@ namespace LTE
     {
         meshAbsrtactFactory *meshFac = windowManger::getWindow(winId)->context->getMeshFactory();
         BatchedVertexBuffer = meshFac->createVertexBuffer({}, 0);
+        BatchedIndexBuffer = meshFac->createIndexBuffer({}, 0); 
 
         BatchedVertexBuffer->pushElement({LT_FLOAT, 3, false, 4});
         BatchedVertexBuffer->pushElement({LT_FLOAT, 2, false, 4});
@@ -31,15 +33,51 @@ namespace LTE
         vertexsData temp;
         unsigned int indicesOffset = verticesData.size();
 
-        int j = 0;
+        glm::vec2 shapeTextureZero = { shape->getVB()[0], shape->getVB()[1] };
+        glm::vec2 shapeTextureEnd = { shape->getVB()[0], shape->getVB()[1] };
+
         for (float *i = shape->getVB(); i < shape->getVB() + shape->getSize(); i += 3)
         {
-            temp.x = *i;
-            temp.y = *(i + 1);
-            temp.z = *(i + 2);
+            if(shapeTextureZero.x > i[0])
+                shapeTextureZero.x = i[0];
+            else if(shapeTextureEnd.x < i[0])
+                shapeTextureEnd.x = i[0];
 
-            temp.textCoordX = m->getTexturePostionX(j); //*(i + 3);
-            temp.textCoordY = m->getTexturePostionY(j); //*(i + 4);
+            if(shapeTextureZero.y > i[1])
+                shapeTextureZero.y = i[1];
+            else if(shapeTextureEnd.y < i[1])
+                shapeTextureEnd.y = i[1];
+        }
+
+        glm::vec2 shapeDimensions = glm::abs(shapeTextureEnd - shapeTextureZero);
+        
+        glm::vec2 textureTextureZero = { m->getTexturePostionX(0), m->getTexturePostionY(0) };
+        glm::vec2 textureTextureEnd =  { m->getTexturePostionX(0), m->getTexturePostionY(0) };
+
+        for (int i = 0; i < 4; i++)
+        {
+            if(textureTextureZero.x > m->getTexturePostionX(i))
+                textureTextureZero.x = m->getTexturePostionX(i);
+            else if(textureTextureEnd.x < m->getTexturePostionX(i))
+                textureTextureEnd.x = m->getTexturePostionX(i);
+
+            if(textureTextureZero.y >  m->getTexturePostionY(i))
+                textureTextureZero.y =  m->getTexturePostionY(i);
+            else if(textureTextureEnd.y <  m->getTexturePostionY(i))
+                textureTextureEnd.y =  m->getTexturePostionY(i);
+        }
+
+        glm::vec2 textureDimensions = glm::abs(textureTextureEnd - textureTextureZero);
+        glm::vec2 rangeZero = ((shapeTextureZero) / shapeDimensions) * textureDimensions - textureTextureZero;
+
+        for (float *i = shape->getVertices(), *j = shape->getVB(); i < shape->getVertices() + shape->getSize(); i += 3, j += 3)
+        {
+            temp.x = i[0];
+            temp.y = i[1];
+            temp.z = i[2];
+
+            temp.textCoordX = (j[0] / shapeDimensions.x) * textureDimensions.x - rangeZero.x; // m->getTexturePostionX(j);
+            temp.textCoordY = (j[1] / shapeDimensions.y) * textureDimensions.y - rangeZero.y; // m->getTexturePostionY(j);
 
             temp.r = m->getRGBA().r;
             temp.g = m->getRGBA().g;
@@ -49,9 +87,6 @@ namespace LTE
             temp.texId = m->getTexture() ? m->getTextureId() : 0;
             verticesData.push_back(temp);
             shapeIndexCounter.push_back(0);
-
-            j++;
-            j = j % 4;
         }
 
         for (unsigned int *i = shape->getIB(); i < shape->getIB() + shape->getCount(); i++)
@@ -122,9 +157,11 @@ namespace LTE
     void shaderRenderBuffer::bind()
     {
         BatchedVertexBuffer->setData(verticesData.data(), renderBatchEnd * sizeof(vertexsData));
+        BatchedIndexBuffer->setData(indices.data(), batchIndexCount);
 
         BatchedVertexBuffer->bind();
         BatchedVertexArray->bind();
+        BatchedIndexBuffer->bind();
 
         verticesData.erase(verticesData.begin(), verticesData.begin() + renderBatchEnd);
         indices.erase(indices.begin(), indices.begin() + batchIndexCount);
@@ -145,7 +182,7 @@ namespace LTE
 
     int shaderRenderBuffer::getIndecesCount()
     {
-        return batchIndexCount;
+        return BatchedIndexBuffer->getCount();
     }
 
 }

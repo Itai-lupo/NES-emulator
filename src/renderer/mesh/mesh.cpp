@@ -44,9 +44,8 @@ namespace LTE
         return  size;
     }
 
-    float *mesh::getVB()
+    float *mesh::getVertices()
     {
-        // return vertexs;
         transform* trans =  entityManger::getEntityById(parentId)->getTransform();
         float temp[size];
         for(int i = 0; i < size ; i += 3)
@@ -61,12 +60,15 @@ namespace LTE
             temp[i] = t.x;
             temp[i + 1] = t.y;
             temp[i + 2] = t.z;
-
-            // temp[i + 3] = vertexs[i + 3];
-            // temp[i + 4] = vertexs[i + 4];
         }
 
         return  temp;
+
+    }
+
+    float *mesh::getVB()
+    {
+        return vertexs;
     }
 
     uint32_t* mesh::getIB()

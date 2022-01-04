@@ -32,6 +32,7 @@ namespace LTE
     class shaderRenderBuffer : public asset
     {        
         private:
+            static inline indexBuffer *BatchedIndexBuffer;
             shader *s;
             VertexBuffer *BatchedVertexBuffer;
             vertexArray *BatchedVertexArray;
