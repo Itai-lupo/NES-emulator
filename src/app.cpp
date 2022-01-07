@@ -73,7 +73,6 @@ namespace LTE
         while (keepRunning)
         {
             os->pollEvents();
-         
             now = getTime();
             updateData->DeltaTime = now - updateData->currentTime;
             updateData->currentTime = now;

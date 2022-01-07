@@ -1,36 +1,3 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$de/db4/class_l_t_e_1_1asset.html" title=" " alt="" coords="21,765,105,792"/>
-<area shape="rect" id="node2" href="$d0/d6c/class_l_t_e_1_1mesh.html" title=" " alt="" coords="215,689,299,716"/>
-<area shape="rect" id="node3" href="$d1/d2e/class_l_t_e_1_1shader.html" title=" " alt="" coords="211,740,302,767"/>
-<area shape="rect" id="node5" href="$d1/d3d/class_l_t_e_1_1shader_render_buffer.html" title=" " alt="" coords="173,1044,340,1071"/>
-<area shape="rect" id="node6" href="$d9/d46/class_l_t_e_1_1texture.html" title=" " alt="" coords="211,791,302,817"/>
-<area shape="rect" id="node4" href="$d0/d99/class_l_t_e_1_1open_g_l_shader.html" title=" " alt="" coords="433,752,571,779"/>
-<area shape="rect" id="node7" href="$d9/ddf/class_l_t_e_1_1open_g_l_texture.html" title=" " alt="" coords="431,804,573,831"/>
-<area shape="rect" id="node8" href="$d9/d4b/class_l_t_e_1_1component.html" title=" " alt="" coords="5,385,121,412"/>
-<area shape="rect" id="node9" href="$dc/d6e/class_l_t_e_1_1core_camera_controler.html" title=" " alt="" coords="169,43,344,69"/>
-<area shape="rect" id="node11" href="$d2/d04/class_l_t_e_1_1envelope.html" title=" " alt="" coords="205,132,309,159"/>
-<area shape="rect" id="node17" href="$dc/dda/class_l_t_e_1_1material.html" title=" " alt="" coords="207,183,306,209"/>
-<area shape="rect" id="node18" href="$d2/df6/class_l_t_e_1_1mesh_renderer.html" title=" " alt="" coords="189,233,325,260"/>
-<area shape="rect" id="node19" href="$dd/d78/class_l_t_e_1_1squre_collider.html" title=" " alt="" coords="193,284,320,311"/>
-<area shape="rect" id="node20" href="$d6/d08/class_l_t_e_1_1transform.html" title=" " alt="" coords="203,335,310,361"/>
-<area shape="rect" id="node21" href="$da/dee/classbird.html" title=" " alt="" coords="235,385,278,412"/>
-<area shape="rect" id="node22" href="$d2/d44/classboard.html" title=" " alt="" coords="229,436,284,463"/>
-<area shape="rect" id="node23" href="$d8/d3c/classpiece.html" title=" " alt="" coords="230,487,283,513"/>
-<area shape="rect" id="node25" href="$d1/d69/classpilar.html" title=" " alt="" coords="233,537,280,564"/>
-<area shape="rect" id="node26" href="$d8/d09/classpilar_destroyer.html" title=" " alt="" coords="206,588,307,615"/>
-<area shape="rect" id="node27" href="$d3/ded/classpilar_summener.html" title=" " alt="" coords="202,639,311,665"/>
-<area shape="rect" id="node10" href="$da/def/class_l_t_e_1_1orthographic_camera_controler.html" title=" " alt="" coords="392,5,612,32"/>
-<area shape="rect" id="node12" href="$d9/dc5/class_l_t_e_1_1bell.html" title=" " alt="" coords="466,56,538,83"/>
-<area shape="rect" id="node13" href="$d7/d80/class_l_t_e_1_1drum_kick.html" title=" " alt="" coords="449,107,555,133"/>
-<area shape="rect" id="node14" href="$d4/d73/class_l_t_e_1_1guitar_string.html" title=" " alt="" coords="443,157,561,184"/>
-<area shape="rect" id="node15" href="$d4/d06/class_l_t_e_1_1harmonica.html" title=" " alt="" coords="446,208,558,235"/>
-<area shape="rect" id="node16" href="$df/d00/class_l_t_e_1_1sound_file.html" title=" " alt="" coords="448,259,556,285"/>
-<area shape="rect" id="node24" href="$dd/d8a/classpawn.html" title=" " alt="" coords="475,487,529,513"/>
-<area shape="rect" id="node28" href="$d6/d2f/class_l_t_e_1_1index_buffer.html" title=" " alt="" coords="199,841,315,868"/>
-<area shape="rect" id="node29" href="$d1/de5/class_l_t_e_1_1open_g_l_index_buffer.html" title=" " alt="" coords="421,857,583,884"/>
-<area shape="rect" id="node30" href="$dd/d88/class_l_t_e_1_1open_g_l_base.html" title=" " alt="" coords="193,892,321,919"/>
-<area shape="rect" id="node31" href="$d3/d42/class_l_t_e_1_1_open_g_l_vertex_buffer.html" title=" " alt="" coords="416,915,588,941"/>
-<area shape="rect" id="node32" href="$d7/ddd/class_l_t_e_1_1open_g_l_vertex_array.html" title=" " alt="" coords="419,991,585,1017"/>
-<area shape="rect" id="node33" href="$df/db4/class_l_t_e_1_1vertex_array.html" title=" " alt="" coords="198,993,315,1020"/>
-<area shape="rect" id="node34" href="$d2/dcd/class_l_t_e_1_1_vertex_buffer.html" title=" " alt="" coords="195,943,318,969"/>
+<area shape="rect" id="node1" href="$db/d3a/class_l_t_e_1_1asset_manager.html" title=" " alt="" coords="5,5,140,32"/>
 </map>

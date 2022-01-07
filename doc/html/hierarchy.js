@@ -38,7 +38,8 @@ var hierarchy =
       ] ],
       [ "pilar", "d1/d69/classpilar.html", null ],
       [ "pilarDestroyer", "d8/d09/classpilar_destroyer.html", null ],
-      [ "pilarSummener", "d3/ded/classpilar_summener.html", null ]
+      [ "pilarSummener", "d3/ded/classpilar_summener.html", null ],
+      [ "player", "dc/d2e/classplayer.html", null ]
     ] ],
     [ "LTE::GMNM::connection", "d4/db6/class_l_t_e_1_1_g_m_n_m_1_1connection.html", null ],
     [ "LTE::GMNM::connectionsManager", "db/d40/class_l_t_e_1_1_g_m_n_m_1_1connections_manager.html", null ],
@@ -130,6 +131,9 @@ var hierarchy =
     ] ],
     [ "LTE::renderer", "d1/d10/class_l_t_e_1_1renderer.html", null ],
     [ "LTE::router< T >", "d7/d22/class_l_t_e_1_1router.html", null ],
+    [ "LTE::router< LTE::asset * >", "d7/d22/class_l_t_e_1_1router.html", null ],
+    [ "LTE::router< LTE::event * >", "d7/d22/class_l_t_e_1_1router.html", null ],
+    [ "LTE::router< LTE::file * >", "d7/d22/class_l_t_e_1_1router.html", null ],
     [ "LTE::scene", "d6/d26/class_l_t_e_1_1scene.html", null ],
     [ "LTE::sequencer", "db/d56/class_l_t_e_1_1sequencer.html", [
       [ "LTE::bellRing", "d9/d60/class_l_t_e_1_1bell_ring.html", null ],
@@ -147,11 +151,17 @@ var hierarchy =
     [ "LTE::soundEngine", "de/d01/class_l_t_e_1_1sound_engine.html", null ],
     [ "LTE::soundFilesPlayer", "d4/d0c/class_l_t_e_1_1sound_files_player.html", null ],
     [ "LTE::soundSynthesizer", "d2/dff/class_l_t_e_1_1sound_synthesizer.html", null ],
+    [ "LTE::spriteDimensionsData", "d7/d91/struct_l_t_e_1_1sprite_dimensions_data.html", null ],
     [ "testing::Test", null, [
       [ "checkmate", "da/d39/classcheckmate.html", null ],
-      [ "flappyBird", "d5/d71/classflappy_bird.html", null ]
+      [ "flappyBird", "d5/d71/classflappy_bird.html", null ],
+      [ "topDownGame", "d5/d2a/classtop_down_game.html", null ]
     ] ],
     [ "testClass", "d7/d28/structtest_class.html", null ],
+    [ "LTE::tilemap::tileBuilder", "d5/da1/class_l_t_e_1_1tilemap_1_1tile_builder.html", null ],
+    [ "LTE::tilemap", "d5/d49/class_l_t_e_1_1tilemap.html", null ],
+    [ "LTE::vector3d< T >", "d2/da7/class_l_t_e_1_1vector3d.html", null ],
+    [ "LTE::vector3d< entityTaleId >", "d2/da7/class_l_t_e_1_1vector3d.html", null ],
     [ "LTE::vertexArray", "df/db4/class_l_t_e_1_1vertex_array.html", [
       [ "LTE::openGLVertexArray", "d7/ddd/class_l_t_e_1_1open_g_l_vertex_array.html", null ]
     ] ],

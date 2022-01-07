@@ -34,3 +34,5 @@
 #include "colliderSystem2D.h"
 #include "squreCollider.h"
 #include "colliderEventData.h"
+
+#include "tilemap.h"

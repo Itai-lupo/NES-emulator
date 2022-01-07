@@ -1,11 +1,5 @@
 <map id="bird::onUpdate" name="bird::onUpdate">
-<area shape="rect" id="node1" title=" " alt="" coords="5,132,112,159"/>
-<area shape="rect" id="node2" href="$da/dee/classbird.html#a93a5315078689ab488a1a21639fe7340" title=" " alt="" coords="160,157,343,184"/>
-<area shape="rect" id="node7" href="$da/dee/classbird.html#a11f87780b5c8a41fa86e43a6352c56fa" title=" " alt="" coords="191,107,311,133"/>
-<area shape="rect" id="node3" href="$d2/d49/class_l_t_e_1_1game_object.html#af885dbd7e72e830ae61ab37b6d52b8b6" title=" " alt="" coords="391,107,608,133"/>
-<area shape="rect" id="node4" href="$d6/d08/class_l_t_e_1_1transform.html#a160e68074988f3992b3cc6df921db306" title=" " alt="" coords="410,208,589,235"/>
-<area shape="rect" id="node5" href="$d2/d49/class_l_t_e_1_1game_object.html#a568b30b81a33465e74c3c39663d1b5c0" title=" " alt="" coords="395,157,604,184"/>
-<area shape="rect" id="node6" href="$d6/d08/class_l_t_e_1_1transform.html#abd8d3eca680b8173f7b34daf5bb779bc" title=" " alt="" coords="405,259,593,285"/>
-<area shape="rect" id="node8" href="$d6/d08/class_l_t_e_1_1transform.html#a5a6f72f53b39bacd9cc960b6e7eec3af" title=" " alt="" coords="393,5,605,32"/>
-<area shape="rect" id="node9" href="$d6/d08/class_l_t_e_1_1transform.html#a88ec31c683a58a31514101f7cd31dd67" title=" " alt="" coords="403,56,595,83"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,31,111,57"/>
+<area shape="rect" id="node2" href="$da/dee/classbird.html#a93a5315078689ab488a1a21639fe7340" title=" " alt="" coords="159,5,340,32"/>
+<area shape="rect" id="node3" href="$da/dee/classbird.html#a11f87780b5c8a41fa86e43a6352c56fa" title=" " alt="" coords="191,56,308,83"/>
 </map>

@@ -1,3 +1,6 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$de/d01/class_l_t_e_1_1sound_engine.html" title=" " alt="" coords="5,5,135,32"/>
+<area shape="rect" id="node1" href="$d0/df0/class_l_t_e_1_1sound_device.html" title=" " alt="" coords="5,31,132,57"/>
+<area shape="rect" id="node2" href="$d5/d49/class_l_t_e_1_1linux_sound_device.html" title=" " alt="" coords="180,31,335,57"/>
+<area shape="rect" id="node3" href="$da/d8e/class_l_t_e_1_1linux_input_sound_device.html" title=" " alt="" coords="388,5,572,32"/>
+<area shape="rect" id="node4" href="$d8/d92/class_l_t_e_1_1linux_output_sound_device.html" title=" " alt="" coords="383,56,577,83"/>
 </map>

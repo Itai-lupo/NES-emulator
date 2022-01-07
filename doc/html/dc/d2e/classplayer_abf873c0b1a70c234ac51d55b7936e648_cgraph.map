@@ -1,0 +1,9 @@
+<map id="player::init" name="player::init">
+<area shape="rect" id="node1" title=" " alt="" coords="5,111,84,137"/>
+<area shape="rect" id="node2" href="$dc/d2e/classplayer.html#aa5d7027f55e22fe1ed847ea38d263ea6" title=" " alt="" coords="171,81,299,108"/>
+<area shape="rect" id="node7" href="$d5/d7c/class_l_t_e_1_1event_manger.html#a205c8d664c9d7ce70155f1a125404397" title=" " alt="" coords="132,133,337,174"/>
+<area shape="rect" id="node3" href="$d2/d49/class_l_t_e_1_1game_object.html#af885dbd7e72e830ae61ab37b6d52b8b6" title=" " alt="" coords="385,5,597,32"/>
+<area shape="rect" id="node4" href="$d2/d49/class_l_t_e_1_1game_object.html#a568b30b81a33465e74c3c39663d1b5c0" title=" " alt="" coords="389,56,594,83"/>
+<area shape="rect" id="node5" href="$db/dd9/class_l_t_e_1_1core_input.html#ad9dd2d2737e633890b0388d85b6b87cd" title=" " alt="" coords="395,107,587,133"/>
+<area shape="rect" id="node6" href="$dc/dda/class_l_t_e_1_1material.html#ac6bf65919f261b88ba80bdb79bcbb440" title=" " alt="" coords="404,157,579,184"/>
+</map>

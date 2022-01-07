@@ -4,10 +4,21 @@
 #include "asset.h"
 #include "logger.h"
 
-#include "glm/glm.hpp"
+#include <glm/glm.hpp>
+#include <glm/gtx/string_cast.hpp>
 
 namespace LTE
 {
+    struct spriteDimensionsData
+    {
+        glm::vec2 start;
+        glm::vec2 size;
+
+        spriteDimensionsData(glm::vec2 start, glm::vec2 size)
+            :start(start), size(size)
+        {}
+    };
+
     class texture : public asset
     {
         protected:
@@ -16,7 +27,9 @@ namespace LTE
             int channels;
 
             bool isSpriteSheet = false;
+            bool isCustumSpriteSheet = false;
             glm::vec2 spriteDimensions;
+            std::vector<spriteDimensionsData> custumSpriteDimensions;
             
             int width, height;
 
@@ -34,11 +47,23 @@ namespace LTE
             {
                 return isSpriteSheet;
             }
+            
+            bool useCustemSpriteSheet()
+            {
+                return isCustumSpriteSheet;
+            }
 
             void setSprtieData(const glm::vec2& spriteDimensions)
             {
                 this->spriteDimensions = spriteDimensions;
                 isSpriteSheet = true;
+            }
+
+            void setSprtieData(const std::vector<spriteDimensionsData> spriteDimensions)
+            {
+                this->custumSpriteDimensions = spriteDimensions;
+                isSpriteSheet = true;
+                isCustumSpriteSheet = true;
             }
 
             float getSpriteX(int spriteXId)
@@ -50,6 +75,16 @@ namespace LTE
             float getSpriteY(int spriteYId)
             {
                 return spriteYId * (spriteDimensions.y / (float)height);
+            }
+
+            glm::vec2 getSpirteStartById(int spriteId)
+            {
+                return custumSpriteDimensions[spriteId].start / glm::vec2((float)width, (float)height);
+            }
+
+            glm::vec2 getSpirteSizeById(int spriteId)
+            {
+                return custumSpriteDimensions[spriteId].size / glm::vec2((float)width, (float)height);
             }
 
             float getSpriteYDelte()

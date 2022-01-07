@@ -98,9 +98,12 @@ var annotated_dup =
       [ "soundFile", "df/d00/class_l_t_e_1_1sound_file.html", "df/d00/class_l_t_e_1_1sound_file" ],
       [ "soundFilesPlayer", "d4/d0c/class_l_t_e_1_1sound_files_player.html", null ],
       [ "soundSynthesizer", "d2/dff/class_l_t_e_1_1sound_synthesizer.html", null ],
+      [ "spriteDimensionsData", "d7/d91/struct_l_t_e_1_1sprite_dimensions_data.html", "d7/d91/struct_l_t_e_1_1sprite_dimensions_data" ],
       [ "squreCollider", "dd/d78/class_l_t_e_1_1squre_collider.html", "dd/d78/class_l_t_e_1_1squre_collider" ],
       [ "texture", "d9/d46/class_l_t_e_1_1texture.html", "d9/d46/class_l_t_e_1_1texture" ],
+      [ "tilemap", "d5/d49/class_l_t_e_1_1tilemap.html", "d5/d49/class_l_t_e_1_1tilemap" ],
       [ "transform", "d6/d08/class_l_t_e_1_1transform.html", "d6/d08/class_l_t_e_1_1transform" ],
+      [ "vector3d", "d2/da7/class_l_t_e_1_1vector3d.html", "d2/da7/class_l_t_e_1_1vector3d" ],
       [ "vertexArray", "df/db4/class_l_t_e_1_1vertex_array.html", "df/db4/class_l_t_e_1_1vertex_array" ],
       [ "VertexBuffer", "d2/dcd/class_l_t_e_1_1_vertex_buffer.html", "d2/dcd/class_l_t_e_1_1_vertex_buffer" ],
       [ "VertexBufferElement", "d6/d82/struct_l_t_e_1_1_vertex_buffer_element.html", "d6/d82/struct_l_t_e_1_1_vertex_buffer_element" ],
@@ -124,5 +127,7 @@ var annotated_dup =
     [ "pilar", "d1/d69/classpilar.html", "d1/d69/classpilar" ],
     [ "pilarDestroyer", "d8/d09/classpilar_destroyer.html", "d8/d09/classpilar_destroyer" ],
     [ "pilarSummener", "d3/ded/classpilar_summener.html", "d3/ded/classpilar_summener" ],
-    [ "testClass", "d7/d28/structtest_class.html", "d7/d28/structtest_class" ]
+    [ "player", "dc/d2e/classplayer.html", "dc/d2e/classplayer" ],
+    [ "testClass", "d7/d28/structtest_class.html", "d7/d28/structtest_class" ],
+    [ "topDownGame", "d5/d2a/classtop_down_game.html", "d5/d2a/classtop_down_game" ]
 ];

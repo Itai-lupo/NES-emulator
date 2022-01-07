@@ -7,8 +7,9 @@ var searchData=
   ['inputmanger_4',['inputManger',['../d4/d38/class_l_t_e_1_1window.html#a75d9759c617ba474299029e2c58a45d4',1,'LTE::window']]],
   ['ip_5',['ip',['../d8/d0e/struct_l_t_e_1_1_g_m_n_m_1_1connection_data.html#a1539b7f30343466ca0bd95ff10d0ca0d',1,'LTE::GMNM::connectionData']]],
   ['isactive_6',['isActive',['../d0/d6c/class_l_t_e_1_1mesh.html#a2625c1f30488658b8434e6418e3295f4',1,'LTE::mesh']]],
-  ['isnoteon_7',['isNoteOn',['../d2/d04/class_l_t_e_1_1envelope.html#af77568f3e1645ca124b28fbc10ea0f58',1,'LTE::envelope']]],
-  ['isruning_8',['isRuning',['../d0/d13/class_l_t_e_1_1app.html#adb1c95327f5af6215b9fff08d70b6f3a',1,'LTE::app']]],
-  ['isspritesheet_9',['isSpriteSheet',['../d9/d46/class_l_t_e_1_1texture.html#a675c16dbcb447427e948a229eb52fba0',1,'LTE::texture']]],
-  ['iswhite_10',['isWhite',['../d8/d3c/classpiece.html#a5214e28a0efb442844deafeb9e4dba7a',1,'piece']]]
+  ['iscustumspritesheet_7',['isCustumSpriteSheet',['../d9/d46/class_l_t_e_1_1texture.html#a383f0de330f65071e260b22e02393d9d',1,'LTE::texture']]],
+  ['isnoteon_8',['isNoteOn',['../d2/d04/class_l_t_e_1_1envelope.html#af77568f3e1645ca124b28fbc10ea0f58',1,'LTE::envelope']]],
+  ['isruning_9',['isRuning',['../d0/d13/class_l_t_e_1_1app.html#adb1c95327f5af6215b9fff08d70b6f3a',1,'LTE::app']]],
+  ['isspritesheet_10',['isSpriteSheet',['../d9/d46/class_l_t_e_1_1texture.html#a675c16dbcb447427e948a229eb52fba0',1,'LTE::texture']]],
+  ['iswhite_11',['isWhite',['../d8/d3c/classpiece.html#a5214e28a0efb442844deafeb9e4dba7a',1,'piece']]]
 ];

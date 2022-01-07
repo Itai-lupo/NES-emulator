@@ -2,15 +2,16 @@
 <area shape="rect" id="node1" title=" " alt="" coords="170,5,309,47"/>
 <area shape="rect" id="node2" title=" " alt="" coords="5,95,89,121"/>
 <area shape="rect" id="node3" href="$df/d4f/open_g_l_texture_8h.html" title=" " alt="" coords="113,95,235,121"/>
-<area shape="rect" id="node13" title=" " alt="" coords="259,95,351,121"/>
-<area shape="rect" id="node14" href="$d4/dbe/handle_open_gl_errors_8h.html" title=" " alt="" coords="375,95,523,121"/>
+<area shape="rect" id="node14" title=" " alt="" coords="259,95,351,121"/>
+<area shape="rect" id="node15" href="$d4/dbe/handle_open_gl_errors_8h.html" title=" " alt="" coords="375,95,523,121"/>
 <area shape="rect" id="node4" href="$dc/d34/open_g_l_base_8h.html" title=" " alt="" coords="64,169,172,196"/>
 <area shape="rect" id="node5" href="$df/dba/texture_8h.html" title=" " alt="" coords="196,169,267,196"/>
-<area shape="rect" id="node6" title=" " alt="" coords="171,319,225,345"/>
-<area shape="rect" id="node7" href="$d5/dc4/core_8h.html" title=" " alt="" coords="67,244,124,271"/>
-<area shape="rect" id="node9" href="$d3/d3e/asset_8h.html" title=" " alt="" coords="199,244,263,271"/>
-<area shape="rect" id="node10" href="$d1/d8c/logger_8h.html" title=" " alt="" coords="287,244,354,271"/>
-<area shape="rect" id="node12" title=" " alt="" coords="379,244,471,271"/>
-<area shape="rect" id="node8" title=" " alt="" coords="65,319,126,345"/>
-<area shape="rect" id="node11" title=" " alt="" coords="270,319,371,345"/>
+<area shape="rect" id="node6" title=" " alt="" coords="127,319,181,345"/>
+<area shape="rect" id="node7" href="$d5/dc4/core_8h.html" title=" " alt="" coords="23,244,80,271"/>
+<area shape="rect" id="node9" href="$d3/d3e/asset_8h.html" title=" " alt="" coords="155,244,219,271"/>
+<area shape="rect" id="node10" href="$d1/d8c/logger_8h.html" title=" " alt="" coords="243,244,310,271"/>
+<area shape="rect" id="node12" title=" " alt="" coords="335,244,427,271"/>
+<area shape="rect" id="node13" title=" " alt="" coords="451,244,607,271"/>
+<area shape="rect" id="node8" title=" " alt="" coords="21,319,82,345"/>
+<area shape="rect" id="node11" title=" " alt="" coords="226,319,327,345"/>
 </map>

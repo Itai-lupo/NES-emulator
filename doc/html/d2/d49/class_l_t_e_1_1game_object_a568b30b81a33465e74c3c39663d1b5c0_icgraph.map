@@ -1,28 +1,25 @@
 <map id="LTE::gameObject::getTransform" name="LTE::gameObject::getTransform">
-<area shape="rect" id="node1" title=" " alt="" coords="843,401,1048,428"/>
-<area shape="rect" id="node2" href="$da/dee/classbird.html#a93a5315078689ab488a1a21639fe7340" title=" " alt="" coords="610,5,791,32"/>
-<area shape="rect" id="node5" href="$dd/d78/class_l_t_e_1_1squre_collider.html#a566099f37e8cea7f667dc8776e219082" title=" " alt="" coords="637,158,764,199"/>
-<area shape="rect" id="node7" href="$d2/d44/classboard.html#a01b432e28907706a0f70f7bfb32afe67" title=" " alt="" coords="628,224,773,251"/>
-<area shape="rect" id="node11" href="$dd/d8a/classpawn.html#a1c5eeaebe074986c895e7e4e1f91a7a7" title=" " alt="" coords="607,528,795,555"/>
-<area shape="rect" id="node12" href="$d2/d44/classboard.html#a09fda1b3dc780b240ccaa0fdba392bc6" title=" " alt="" coords="362,325,557,352"/>
-<area shape="rect" id="node13" href="$d0/d6c/class_l_t_e_1_1mesh.html#ae67ee55d1725702719b2de2a87f8bd3f" title=" " alt="" coords="623,579,779,605"/>
-<area shape="rect" id="node16" href="$d8/d3c/classpiece.html#a764eeea74b0dd80820d05edbb67a5e3d" title=" " alt="" coords="663,629,739,656"/>
-<area shape="rect" id="node17" href="$d8/d3c/classpiece.html#a85262fd5e30fc28f483b6847b0176586" title=" " alt="" coords="626,680,775,707"/>
-<area shape="rect" id="node18" href="$d2/d44/classboard.html#abc34cabed948c8cc2b0356e9b63b98d3" title=" " alt="" coords="611,275,790,301"/>
-<area shape="rect" id="node19" href="$dd/d8a/classpawn.html#a314be2dccf4ba239f86196f5662bde6d" title=" " alt="" coords="655,731,746,757"/>
-<area shape="rect" id="node20" href="$d8/d3c/classpiece.html#a791031863028039706d9ad672d49b4a8" title=" " alt="" coords="414,376,505,403"/>
-<area shape="rect" id="node21" href="$da/dee/classbird.html#a11f87780b5c8a41fa86e43a6352c56fa" title=" " alt="" coords="642,56,759,83"/>
-<area shape="rect" id="node22" href="$da/dee/classbird.html#ac9cbc10dae7540d7bf0c70cdeb07482a" title=" " alt="" coords="410,107,509,133"/>
-<area shape="rect" id="node23" href="$d1/d69/classpilar.html#aa40662444a0357adb1e92a3f439ec9f3" title=" " alt="" coords="647,781,755,808"/>
-<area shape="rect" id="node25" href="$d8/d3c/classpiece.html#ac3c324e6be926b7ccffdeba3752fd67c" title=" " alt="" coords="391,427,527,453"/>
-<area shape="rect" id="node26" href="$d8/d3c/classpiece.html#af101a412aeb547107d4c99edb818a3c4" title=" " alt="" coords="370,477,549,504"/>
-<area shape="rect" id="node3" href="$da/dee/classbird.html#a13ee21c9a389a0e62b10411db6346fc6" title=" " alt="" coords="407,56,512,83"/>
-<area shape="rect" id="node4" href="$da/dee/classbird.html#a9e7af03487bc9fe7fb51138c4aac90b8" title=" " alt="" coords="188,81,255,108"/>
-<area shape="rect" id="node6" href="$dd/d78/class_l_t_e_1_1squre_collider.html#a65574d20c0b063c9e31e8f111c05efbe" title=" " alt="" coords="396,158,523,199"/>
-<area shape="rect" id="node8" href="$d2/d44/classboard.html#a709891cce5f14fafa6779fcb9ae99958" title=" " alt="" coords="360,275,559,301"/>
-<area shape="rect" id="node9" href="$d2/d44/classboard.html#a73faed1f93946120b1d6e1a84192ec7e" title=" " alt="" coords="138,376,305,403"/>
-<area shape="rect" id="node10" href="$d2/d44/classboard.html#a1c273545cfd24b3aebf3a6b7b4dc37ef" title=" " alt="" coords="5,376,83,403"/>
-<area shape="rect" id="node14" href="$d1/d3d/class_l_t_e_1_1shader_render_buffer.html#ad5f4eefe2fd0ccb1eca97b1ea900f884" title=" " alt="" coords="376,571,543,613"/>
-<area shape="rect" id="node15" href="$d1/d10/class_l_t_e_1_1renderer.html#a593a79a85c12d6469425a703fecbde6d" title=" " alt="" coords="131,579,312,605"/>
-<area shape="rect" id="node24" href="$d1/d69/classpilar.html#a5766ecde88be62932b9d246eb7772553" title=" " alt="" coords="425,781,494,808"/>
+<area shape="rect" id="node1" title=" " alt="" coords="843,350,1048,377"/>
+<area shape="rect" id="node2" href="$dd/d78/class_l_t_e_1_1squre_collider.html#a566099f37e8cea7f667dc8776e219082" title=" " alt="" coords="637,5,764,47"/>
+<area shape="rect" id="node4" href="$d2/d44/classboard.html#a01b432e28907706a0f70f7bfb32afe67" title=" " alt="" coords="628,71,773,98"/>
+<area shape="rect" id="node8" href="$dd/d8a/classpawn.html#a1c5eeaebe074986c895e7e4e1f91a7a7" title=" " alt="" coords="607,375,795,402"/>
+<area shape="rect" id="node9" href="$d2/d44/classboard.html#a09fda1b3dc780b240ccaa0fdba392bc6" title=" " alt="" coords="362,173,557,199"/>
+<area shape="rect" id="node10" href="$d0/d6c/class_l_t_e_1_1mesh.html#ae67ee55d1725702719b2de2a87f8bd3f" title=" " alt="" coords="623,426,779,453"/>
+<area shape="rect" id="node13" href="$d8/d3c/classpiece.html#a764eeea74b0dd80820d05edbb67a5e3d" title=" " alt="" coords="663,477,739,503"/>
+<area shape="rect" id="node14" href="$d8/d3c/classpiece.html#a85262fd5e30fc28f483b6847b0176586" title=" " alt="" coords="626,527,775,554"/>
+<area shape="rect" id="node15" href="$d2/d44/classboard.html#abc34cabed948c8cc2b0356e9b63b98d3" title=" " alt="" coords="611,122,790,149"/>
+<area shape="rect" id="node16" href="$dd/d8a/classpawn.html#a314be2dccf4ba239f86196f5662bde6d" title=" " alt="" coords="655,578,746,605"/>
+<area shape="rect" id="node17" href="$d8/d3c/classpiece.html#a791031863028039706d9ad672d49b4a8" title=" " alt="" coords="414,223,505,250"/>
+<area shape="rect" id="node18" href="$d1/d69/classpilar.html#aa40662444a0357adb1e92a3f439ec9f3" title=" " alt="" coords="647,629,755,655"/>
+<area shape="rect" id="node20" href="$dc/d2e/classplayer.html#aa5d7027f55e22fe1ed847ea38d263ea6" title=" " alt="" coords="637,679,765,706"/>
+<area shape="rect" id="node22" href="$d8/d3c/classpiece.html#ac3c324e6be926b7ccffdeba3752fd67c" title=" " alt="" coords="391,274,527,301"/>
+<area shape="rect" id="node23" href="$d8/d3c/classpiece.html#af101a412aeb547107d4c99edb818a3c4" title=" " alt="" coords="370,325,549,351"/>
+<area shape="rect" id="node3" href="$dd/d78/class_l_t_e_1_1squre_collider.html#a65574d20c0b063c9e31e8f111c05efbe" title=" " alt="" coords="396,5,523,47"/>
+<area shape="rect" id="node5" href="$d2/d44/classboard.html#a709891cce5f14fafa6779fcb9ae99958" title=" " alt="" coords="360,122,559,149"/>
+<area shape="rect" id="node6" href="$d2/d44/classboard.html#a73faed1f93946120b1d6e1a84192ec7e" title=" " alt="" coords="138,223,305,250"/>
+<area shape="rect" id="node7" href="$d2/d44/classboard.html#a1c273545cfd24b3aebf3a6b7b4dc37ef" title=" " alt="" coords="5,223,83,250"/>
+<area shape="rect" id="node11" href="$d1/d3d/class_l_t_e_1_1shader_render_buffer.html#ad5f4eefe2fd0ccb1eca97b1ea900f884" title=" " alt="" coords="376,419,543,460"/>
+<area shape="rect" id="node12" href="$d1/d10/class_l_t_e_1_1renderer.html#a593a79a85c12d6469425a703fecbde6d" title=" " alt="" coords="131,426,312,453"/>
+<area shape="rect" id="node19" href="$d1/d69/classpilar.html#a5766ecde88be62932b9d246eb7772553" title=" " alt="" coords="425,629,494,655"/>
+<area shape="rect" id="node21" href="$dc/d2e/classplayer.html#abf873c0b1a70c234ac51d55b7936e648" title=" " alt="" coords="420,679,499,706"/>
 </map>

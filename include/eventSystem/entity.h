@@ -18,7 +18,7 @@ namespace LTE
         public:
             class gameObjectBuilder
             {
-                private:
+                protected:
                     gameObject *prodect;
                 
                 public:

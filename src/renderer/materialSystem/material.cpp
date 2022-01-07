@@ -16,6 +16,14 @@ namespace LTE
         
     }
 
+    material::material(const std::string& textureFilePath, int tileIndex):
+        texturePath(textureFilePath), tileIndex(tileIndex)
+    {
+        this->baseColor = {0.0f, 0.0f, 0.0f, 0.0f};
+
+    }
+
+
     material::material(const std::string& textureFilePath): texturePath(textureFilePath)
     {
         this->baseColor = {0.0f, 0.0f, 0.0f, 0.0f};
@@ -70,6 +78,17 @@ namespace LTE
         this->baseColor = baseColor;
     }
 
+    void material::setTileIndex(int tileXIndex, int tileYIndex)
+    {
+        this->tileXIndex = tileXIndex;
+        this->tileYIndex = tileYIndex;
+    }
+
+    void material::setTileIndex(int tileIndex)
+    {
+        this->tileIndex = tileIndex;
+    }
+
     std::string material::getTextureName()
     {
         return texturePath;
@@ -96,6 +115,9 @@ namespace LTE
             
         if(!tex->useSpriteSheet())
             return texturePostions[curnerIndex].x;
+
+        if(tex->useCustemSpriteSheet())
+            return tex->getSpirteStartById(tileIndex).x + texturePostions[curnerIndex].x * tex->getSpirteSizeById(tileIndex).x;
         
         return tex->getSpriteX(tileXIndex) + texturePostions[curnerIndex].x * tex->getSpriteXDelte();
     }
@@ -108,6 +130,9 @@ namespace LTE
         if(!tex->useSpriteSheet())
             return texturePostions[curnerIndex].y;
         
+        if(tex->useCustemSpriteSheet())
+            return tex->getSpirteStartById(tileIndex).y + texturePostions[curnerIndex].y * tex->getSpirteSizeById(tileIndex).y;
+            
         return tex->getSpriteY(tileYIndex) + texturePostions[curnerIndex].y * tex->getSpriteYDelte();
     }
 

@@ -76,8 +76,8 @@ namespace LTE
             temp.y = i[1];
             temp.z = i[2];
 
-            temp.textCoordX = (j[0] / shapeDimensions.x) * textureDimensions.x - rangeZero.x; // m->getTexturePostionX(j);
-            temp.textCoordY = (j[1] / shapeDimensions.y) * textureDimensions.y - rangeZero.y; // m->getTexturePostionY(j);
+            temp.textCoordX = (j[0] / shapeDimensions.x) * textureDimensions.x - rangeZero.x;
+            temp.textCoordY = (j[1] / shapeDimensions.y) * textureDimensions.y - rangeZero.y;
 
             temp.r = m->getRGBA().r;
             temp.g = m->getRGBA().g;
