@@ -10,9 +10,12 @@ do
 done
 
 
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:./libs/:$b
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/:$b
 filePath=output/theMaze.out
-make || exit 1
+
+make -j 14 || exit 1
+
+clear
 $filePath
 
 echo "program exited with code $?"

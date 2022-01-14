@@ -6,6 +6,7 @@
                 "${workspaceFolder}/**",
                 "${workspaceFolder}/include",
                 "${workspaceFolder}/vendor",
+                "${workspaceFolder}/vendor/LaugtaleGameEngine/include",
                 "${workspaceFolder}/DLLS"
             ],
             "defines": [],

@@ -43,7 +43,7 @@ LDFLAGS =  $(LIB_FLAGS)
 
 $(OUTPUT_DIR)/$(TARGET_EXEC): $(OBJS)
 	mkdir -p output
-	$(CC) $(CPPFLAGS   $(CXXFLAGS) $(OBJS)  -o $@ $(LDFLAGS)
+	$(CC) $(CPPFLAGS)   $(CXXFLAGS) $(OBJS)  -o $@ $(LDFLAGS)
 
 print:
 	@echo ./include/ $(wildcard ./include/*/) $(wildcard ./include/*/*/) $(wildcard ./include/*/*/*/) $(wildcard ./include/*/*/*/*/)

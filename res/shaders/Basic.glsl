@@ -1,17 +1,23 @@
 #shader vertex
 #version 330 core 
 
+layout(location = 0) in vec3 postion;
+layout(location = 1) in vec2 texCoord;
+layout(location = 2) in vec4 MatColor;
+layout(location = 3) in float texSlot;
 
-layout(location = 0) in vec4 postion;
-
-out vec2 v_TextCoord;
+out vec4 MatrialColor;
+out vec2 textCoord;
+out float textureIndex;
 
 uniform mat4 viewProjection;
-uniform mat4 transform;
 
 void main(){
-   gl_Position = viewProjection * transform * postion;
-   v_TextCoord.xy = postion.xy;
+   gl_Position = viewProjection * vec4(postion, 1.0);
+   MatrialColor = MatColor;
+   textCoord = texCoord;
+   textureIndex  = texSlot;
+   gl_PointSize = 10.0;
 };
 
 
@@ -22,10 +28,51 @@ void main(){
 
 layout(location = 0) out vec4 color;
 
-in vec2 v_TextCoord;
+in vec4 MatrialColor;
+in vec2 textCoord;
+in float textureIndex;
 
-uniform vec4 colorOffset;
+uniform sampler2D textures[8];
+
+vec4 calcColor(vec4 textureColor)
+{
+   if(int(textureIndex) == 0)
+      return MatrialColor;
+
+   if(textureColor.rgba == vec4(0.0))
+      return vec4(0.0);
+      
+   return textureColor + MatrialColor;
+
+}
 
 void main(){
-   color = vec4( v_TextCoord.x  + colorOffset.x, v_TextCoord.y + v_TextCoord.x, v_TextCoord.y + colorOffset.y, 1.0f);
+   vec4 textureColor;
+   switch (int(textureIndex)) {
+      case 0:
+         textureColor = vec4(0.0);
+         break;
+      case 1:
+         textureColor = texture(textures[1], textCoord);
+         break;
+      case 2:
+         textureColor = texture(textures[2], textCoord);
+         break;
+      case 3:
+         textureColor = texture(textures[3], textCoord);
+         break;
+      case 4:
+         textureColor = texture(textures[4], textCoord);
+         break;
+      case 5:
+         textureColor = texture(textures[5], textCoord);
+         break;
+      case 6:
+         textureColor = texture(textures[6], textCoord);
+         break;
+      case 7:
+         textureColor = texture(textures[7], textCoord);
+         break;
+   }
+   color = calcColor(textureColor);
 };
