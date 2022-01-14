@@ -97,7 +97,7 @@ class topDownGame : public ::testing::Test
 
             gameWindowId =  LTE::windowManger::addWindow([=](LTE::windowBuilder *build)
             {
-                build->setHeight(800)->setWidth(800)->setTitle("rpg");
+                build->setHeight(1000)->setWidth(1000)->setTitle("rpg");
             });
         }
 
@@ -122,6 +122,15 @@ class topDownGame : public ::testing::Test
                     
                     });
             
+            LTE::windowManger::getWindow(gameWindowId)->
+                assetLibrary->
+                getAsset<LTE::texture>("res/topDownScene/textures/Package/atlas_16x.png")->
+                setSprtieData(
+                    {
+                        {{16, 112}, {16, 16}},                    
+                        {{16, 197}, {16, 32}},                    
+                        {{16, 197}, {16, 32}},                    
+                    });
 
             LTE::windowManger::getWindow(gameWindowId)->
                 assetLibrary->
@@ -129,44 +138,80 @@ class topDownGame : public ::testing::Test
                 setSprtieData({32, 32});
             
 
-            LTE::tilemap *map = new LTE::tilemap({800, 800}, {80, 80}, 6, gameWindowId);
+            LTE::tilemap *map = new LTE::tilemap({1000, 1000}, {100, 100}, 6, gameWindowId);
 
-            for(int x = 0; x < 10; x++)
-                for(int y = 0; y < 10; y++)
-                    try
-                    {
+            for(int x = 1; x < 9; x++)
+                for(int y = 1; y < 9; y++)
                         map->addTile(
                                 [=](LTE::tilemap::tileBuilder *tileBuild)
                                 {
                                     tileBuild->
-                                        setTileMatrial(new LTE::material("res/topDownScene/textures/Meta data assets files/ENVIRONMENT/tilesets/dungeon-tileset.png", y == 9))->
+                                        setTileMatrial(new LTE::material("res/topDownScene/textures/Package/atlas_16x.png"))->
                                         setLayer(0)->
                                         setTilePostion({x, y});
                                 }
                         );
-                    }
-                    catch(const std::exception& e)
-                    {
-                        LAUGHTALE_ENGINR_LOG_ERROR("can't render " << e.what());
-                    }
-        
-            try
+
+            for(int i = 1; i < 9; i++)
             {
                 map->addTile(
                         [=](LTE::tilemap::tileBuilder *tileBuild)
                         {
                             tileBuild->
-                                setTileMatrial(new LTE::material("res/topDownScene/textures/PIPOYA FREE RPG Character Sprites NEKONIN/pipo-nekonin011.png", 1, 3))->
-                                setLayer(1)->
-                                setTilePostion({5, 5})->
-                                AddCompponnetToTile(new player());
+                                setTileMatrial(new LTE::material("res/topDownScene/textures/Package/atlas_16x.png"))->
+                                setLayer(0)->
+                                setTilePostion({0, i});
+                        }
+                );
+
+                map->addTile(
+                        [=](LTE::tilemap::tileBuilder *tileBuild)
+                        {
+                            tileBuild->
+                                setTileMatrial(new LTE::material("res/topDownScene/textures/Package/atlas_16x.png"))->
+                                setLayer(0)->
+                                setTilePostion({9, i});
+                        }
+                );
+
+
+                map->addTile(
+                        [=](LTE::tilemap::tileBuilder *tileBuild)
+                        {
+                            tileBuild->
+                                setTileMatrial(new LTE::material("res/topDownScene/textures/Package/atlas_16x.png", 2))->
+                                setLayer(0)->
+                                setTilePostion({i, 0});
+                        }
+                );
+
+                map->addTile(
+                        [=](LTE::tilemap::tileBuilder *tileBuild)
+                        {
+                            tileBuild->
+                                setTileMatrial(new LTE::material("res/topDownScene/textures/Package/atlas_16x.png", 1))->
+                                setLayer(0)->
+                                setTilePostion({i, 9});
                         }
                 );
             }
-            catch(const std::exception& e)
-            {
-                LAUGHTALE_ENGINR_LOG_ERROR("can't render " << e.what());
-            }
+
+
+            map->addTile(
+                    [=](LTE::tilemap::tileBuilder *tileBuild)
+                    {
+                        tileBuild->
+                            setTileMatrial(new LTE::material("res/topDownScene/textures/PIPOYA FREE RPG Character Sprites NEKONIN/pipo-nekonin011.png", 1, 3))->
+                            setLayer(1)->
+                            setTilePostion({5, 5})->
+                            AddCompponnetToTile(new player());
+                    }
+            );
+
+
+            LTE::eventManger::startBuildingEvent()->
+                setEventRoute("Window close/close app")->
+                setEventCallback(WindowClose)->add();
         }
 
         

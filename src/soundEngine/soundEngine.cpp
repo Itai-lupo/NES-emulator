@@ -47,6 +47,8 @@ namespace LTE
     void soundEngine::close()
     {
         soundSynthesizer::close();
+        if(!microphone && !speaker)
+            return;
         soundThread->join();
         delete soundThread;
         delete microphone;

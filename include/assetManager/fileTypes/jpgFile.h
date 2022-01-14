@@ -7,7 +7,6 @@ namespace LTE
     class jpgFile: public file
     {
         private:
-            texture *tex;
         public:
             jpgFile(const std::string& filePath);
 

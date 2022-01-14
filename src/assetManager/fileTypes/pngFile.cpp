@@ -7,8 +7,6 @@ namespace LTE
 
     pngFile::~pngFile()
     {
-        if(tex)
-            delete tex;
     }
 
     asset *pngFile::genrateAssetForWindow(windowPieceId winId)

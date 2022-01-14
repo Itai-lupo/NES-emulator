@@ -127,11 +127,13 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <div class="fragment"><div class="line"><span class="lineno">   48</span>    {</div>
 <div class="line"><span class="lineno">   49</span>        <a class="code hl_function" href="../../d2/dff/class_l_t_e_1_1sound_synthesizer.html#a9cab8478ac0f4e5ff40c3b515016cd07">soundSynthesizer::close</a>();</div>
-<div class="line"><span class="lineno">   50</span>        soundThread-&gt;join();</div>
-<div class="line"><span class="lineno">   51</span>        <span class="keyword">delete</span> soundThread;</div>
-<div class="line"><span class="lineno">   52</span>        <span class="keyword">delete</span> microphone;</div>
-<div class="line"><span class="lineno">   53</span>        <span class="keyword">delete</span> speaker;</div>
-<div class="line"><span class="lineno">   54</span>    }</div>
+<div class="line"><span class="lineno">   50</span>        <span class="keywordflow">if</span>(!microphone &amp;&amp; !speaker)</div>
+<div class="line"><span class="lineno">   51</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   52</span>        soundThread-&gt;join();</div>
+<div class="line"><span class="lineno">   53</span>        <span class="keyword">delete</span> soundThread;</div>
+<div class="line"><span class="lineno">   54</span>        <span class="keyword">delete</span> microphone;</div>
+<div class="line"><span class="lineno">   55</span>        <span class="keyword">delete</span> speaker;</div>
+<div class="line"><span class="lineno">   56</span>    }</div>
 <div class="ttc" id="aclass_l_t_e_1_1sound_synthesizer_html_a9cab8478ac0f4e5ff40c3b515016cd07"><div class="ttname"><a href="../../d2/dff/class_l_t_e_1_1sound_synthesizer.html#a9cab8478ac0f4e5ff40c3b515016cd07">LTE::soundSynthesizer::close</a></div><div class="ttdeci">static void close()</div><div class="ttdef"><b>Definition:</b> soundSynthesizer.cpp:17</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>

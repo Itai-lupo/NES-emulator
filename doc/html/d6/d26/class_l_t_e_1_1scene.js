@@ -2,6 +2,7 @@ var class_l_t_e_1_1scene =
 [
     [ "scene", "d6/d26/class_l_t_e_1_1scene.html#a29f3d8a4a3e8e8fc434792fc6c16bc7d", null ],
     [ "~scene", "d6/d26/class_l_t_e_1_1scene.html#a0eefba0eadaf74b0e9f9add640718ce3", null ],
+    [ "getAspectRation", "d6/d26/class_l_t_e_1_1scene.html#ad5ce62fb1b68be4d902f6d132c0d7c1e", null ],
     [ "getObjectsByName", "d6/d26/class_l_t_e_1_1scene.html#ab286fd6bc37242775c1bc160bb659833", null ],
     [ "getObjectsByName", "d6/d26/class_l_t_e_1_1scene.html#aea06d7c8fdc99f108a89a6e901dc8cce", null ],
     [ "removeById", "d6/d26/class_l_t_e_1_1scene.html#ad33fdba53d32775ee4cf7039ad9be417", null ],

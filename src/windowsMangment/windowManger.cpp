@@ -61,7 +61,7 @@ namespace LTE
         if(temp != windows.end())
             return *temp;
         
-        throw WindowNotFoundException("window " + std::to_string(windowId) + " wasn't found");
+        throw new WindowNotFoundException("window " + std::to_string(windowId) + " wasn't found");
         return NULL;
     }
 

@@ -154,16 +154,17 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <div class="fragment"><div class="line"><span class="lineno">  119</span>    {</div>
-<div class="line"><span class="lineno">  120</span>        renderPipLine-&gt;<a class="code hl_function" href="../../df/d3a/class_l_t_e_1_1render_api.html#a559ae0985986d43e165a90019c3b07a0">SetClearColor</a>(Scene-&gt;<a class="code hl_variable" href="../../d6/d26/class_l_t_e_1_1scene.html#a175550c54709e4c719913e94b906b148">backgroundColor</a>-&gt;<a class="code hl_function" href="../../dc/dda/class_l_t_e_1_1material.html#a99d55dfd6ef208f58a0d11a1102df234">getRGBA</a>());</div>
-<div class="line"><span class="lineno">  121</span>        renderPipLine-&gt;<a class="code hl_function" href="../../df/d3a/class_l_t_e_1_1render_api.html#a487b5438ff6895578e9955b15a6fc9a5">Clear</a>();</div>
-<div class="line"><span class="lineno">  122</span> </div>
-<div class="line"><span class="lineno">  123</span>        sortSceneToRender();</div>
-<div class="line"><span class="lineno">  124</span>        batchSceneData();</div>
-<div class="line"><span class="lineno">  125</span> </div>
-<div class="line"><span class="lineno">  126</span>        ViewProjectionMatrix = Scene-&gt;<a class="code hl_variable" href="../../d6/d26/class_l_t_e_1_1scene.html#af176ece946088c87257039d35836c0d6">camera</a>-&gt;<a class="code hl_function" href="../../d2/d49/class_l_t_e_1_1game_object.html#af885dbd7e72e830ae61ab37b6d52b8b6">getComponent</a>&lt;coreCameraControler&gt;()-&gt;getCamera()-&gt;getViewProjectionMatrix();</div>
-<div class="line"><span class="lineno">  127</span>        batchRenderScene();</div>
-<div class="line"><span class="lineno">  128</span>        </div>
-<div class="line"><span class="lineno">  129</span>    }</div>
+<div class="line"><span class="lineno">  120</span>        ViewProjectionMatrix = Scene-&gt;<a class="code hl_variable" href="../../d6/d26/class_l_t_e_1_1scene.html#af176ece946088c87257039d35836c0d6">camera</a>-&gt;<a class="code hl_function" href="../../d2/d49/class_l_t_e_1_1game_object.html#af885dbd7e72e830ae61ab37b6d52b8b6">getComponent</a>&lt;coreCameraControler&gt;()-&gt;getCamera()-&gt;getViewProjectionMatrix();</div>
+<div class="line"><span class="lineno">  121</span>        </div>
+<div class="line"><span class="lineno">  122</span>        renderPipLine-&gt;<a class="code hl_function" href="../../df/d3a/class_l_t_e_1_1render_api.html#a559ae0985986d43e165a90019c3b07a0">SetClearColor</a>(Scene-&gt;<a class="code hl_variable" href="../../d6/d26/class_l_t_e_1_1scene.html#a175550c54709e4c719913e94b906b148">backgroundColor</a>-&gt;<a class="code hl_function" href="../../dc/dda/class_l_t_e_1_1material.html#a99d55dfd6ef208f58a0d11a1102df234">getRGBA</a>());</div>
+<div class="line"><span class="lineno">  123</span>        renderPipLine-&gt;<a class="code hl_function" href="../../df/d3a/class_l_t_e_1_1render_api.html#a487b5438ff6895578e9955b15a6fc9a5">Clear</a>();</div>
+<div class="line"><span class="lineno">  124</span> </div>
+<div class="line"><span class="lineno">  125</span>        sortSceneToRender();</div>
+<div class="line"><span class="lineno">  126</span>        batchSceneData();</div>
+<div class="line"><span class="lineno">  127</span> </div>
+<div class="line"><span class="lineno">  128</span>        batchRenderScene();</div>
+<div class="line"><span class="lineno">  129</span>        </div>
+<div class="line"><span class="lineno">  130</span>    }</div>
 <div class="ttc" id="aclass_l_t_e_1_1game_object_html_af885dbd7e72e830ae61ab37b6d52b8b6"><div class="ttname"><a href="../../d2/d49/class_l_t_e_1_1game_object.html#af885dbd7e72e830ae61ab37b6d52b8b6">LTE::gameObject::getComponent</a></div><div class="ttdeci">T * getComponent()</div><div class="ttdef"><b>Definition:</b> entity.h:87</div></div>
 <div class="ttc" id="aclass_l_t_e_1_1material_html_a99d55dfd6ef208f58a0d11a1102df234"><div class="ttname"><a href="../../dc/dda/class_l_t_e_1_1material.html#a99d55dfd6ef208f58a0d11a1102df234">LTE::material::getRGBA</a></div><div class="ttdeci">glm::vec4 getRGBA()</div><div class="ttdef"><b>Definition:</b> material.cpp:139</div></div>
 <div class="ttc" id="aclass_l_t_e_1_1render_api_html_a487b5438ff6895578e9955b15a6fc9a5"><div class="ttname"><a href="../../df/d3a/class_l_t_e_1_1render_api.html#a487b5438ff6895578e9955b15a6fc9a5">LTE::renderApi::Clear</a></div><div class="ttdeci">virtual void Clear()=0</div></div>

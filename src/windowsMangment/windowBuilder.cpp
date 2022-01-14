@@ -27,7 +27,7 @@ namespace LTE
             product->activeScene = new scene();
     		product->assetLibrary = new assetManager(product->id);
 
-            product->activeScene->backgroundColor = new material(glm::vec4({0.1f, 0.1f, 0.5f, 1.0f}));
+            product->activeScene->backgroundColor = new material(glm::vec4({0.05f, 0.05f, 0.05f, 1.0f}));
             entityTaleId camId = entityManger::addEntity([=, this](gameObject::gameObjectBuilder *builder){
                 builder->setObjectName("default camera")->
                     setWindowId(product->id)->

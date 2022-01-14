@@ -37,6 +37,8 @@ namespace LTE
             orthographicCameraControler(float aspectRatio, bool useCameraRotation = false);
             ~orthographicCameraControler();
     
+            virtual float getAspectRatio() { return  aspectRatio; }
+
             virtual coreCamera *getCamera() override;
 
             virtual void init(gameObject *parent) override;

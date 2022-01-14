@@ -117,13 +117,14 @@ namespace LTE
 
     void renderer::renderScene()
     {
+        ViewProjectionMatrix = Scene->camera->getComponent<coreCameraControler>()->getCamera()->getViewProjectionMatrix();
+        
         renderPipLine->SetClearColor(Scene->backgroundColor->getRGBA());
         renderPipLine->Clear();
 
         sortSceneToRender();
         batchSceneData();
 
-        ViewProjectionMatrix = Scene->camera->getComponent<coreCameraControler>()->getCamera()->getViewProjectionMatrix();
         batchRenderScene();
         
     }

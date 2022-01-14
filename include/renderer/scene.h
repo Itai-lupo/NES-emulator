@@ -45,6 +45,11 @@ namespace LTE
                 }
                 return objectWithName;
             }
+
+            float getAspectRation()
+            {
+                return camera->getComponent<coreCameraControler>()->getAspectRatio();
+            }
     };
 
 }

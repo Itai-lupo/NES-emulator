@@ -10,6 +10,8 @@ namespace LTE
             virtual ~coreCameraControler() = default;
     
             virtual coreCamera *getCamera() = 0;
+            virtual float getAspectRatio() = 0;
+
             
     };
 }

@@ -118,6 +118,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aea06d7c8fdc99f108a89a6e901dc8cce"><td class="memTemplParams" colspan="2">template&lt;typename objectType &gt; </td></tr>
 <tr class="memitem:aea06d7c8fdc99f108a89a6e901dc8cce"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; objectType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d6/d26/class_l_t_e_1_1scene.html#aea06d7c8fdc99f108a89a6e901dc8cce">getObjectsByName</a> (const std::string &amp;objectName)</td></tr>
 <tr class="separator:aea06d7c8fdc99f108a89a6e901dc8cce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5ce62fb1b68be4d902f6d132c0d7c1e"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d26/class_l_t_e_1_1scene.html#ad5ce62fb1b68be4d902f6d132c0d7c1e">getAspectRation</a> ()</td></tr>
+<tr class="separator:ad5ce62fb1b68be4d902f6d132c0d7c1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -182,6 +184,45 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="ad5ce62fb1b68be4d902f6d132c0d7c1e" name="ad5ce62fb1b68be4d902f6d132c0d7c1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5ce62fb1b68be4d902f6d132c0d7c1e">&#9670;&nbsp;</a></span>getAspectRation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float LTE::scene::getAspectRation </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">   50</span>            {</div>
+<div class="line"><span class="lineno">   51</span>                <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d6/d26/class_l_t_e_1_1scene.html#af176ece946088c87257039d35836c0d6">camera</a>-&gt;<a class="code hl_function" href="../../d2/d49/class_l_t_e_1_1game_object.html#af885dbd7e72e830ae61ab37b6d52b8b6">getComponent</a>&lt;coreCameraControler&gt;()-&gt;getAspectRatio();</div>
+<div class="line"><span class="lineno">   52</span>            }</div>
+<div class="ttc" id="aclass_l_t_e_1_1game_object_html_af885dbd7e72e830ae61ab37b6d52b8b6"><div class="ttname"><a href="../../d2/d49/class_l_t_e_1_1game_object.html#af885dbd7e72e830ae61ab37b6d52b8b6">LTE::gameObject::getComponent</a></div><div class="ttdeci">T * getComponent()</div><div class="ttdef"><b>Definition:</b> entity.h:87</div></div>
+<div class="ttc" id="aclass_l_t_e_1_1scene_html_af176ece946088c87257039d35836c0d6"><div class="ttname"><a href="../../d6/d26/class_l_t_e_1_1scene.html#af176ece946088c87257039d35836c0d6">LTE::scene::camera</a></div><div class="ttdeci">gameObject * camera</div><div class="ttdef"><b>Definition:</b> scene.h:21</div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d6/d26/class_l_t_e_1_1scene_ad5ce62fb1b68be4d902f6d132c0d7c1e_cgraph.png" border="0" usemap="#ad6/d26/class_l_t_e_1_1scene_ad5ce62fb1b68be4d902f6d132c0d7c1e_cgraph" alt=""/></div>
+<map name="ad6/d26/class_l_t_e_1_1scene_ad5ce62fb1b68be4d902f6d132c0d7c1e_cgraph" id="ad6/d26/class_l_t_e_1_1scene_ad5ce62fb1b68be4d902f6d132c0d7c1e_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,195,32"/>
+<area shape="rect" href="../../d2/d49/class_l_t_e_1_1game_object.html#af885dbd7e72e830ae61ab37b6d52b8b6" title=" " alt="" coords="243,5,455,32"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="ab286fd6bc37242775c1bc160bb659833" name="ab286fd6bc37242775c1bc160bb659833"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab286fd6bc37242775c1bc160bb659833">&#9670;&nbsp;</a></span>getObjectsByName() <span class="overload">[1/2]</span></h2>
 

@@ -18,7 +18,6 @@ namespace LTE
             openGLAbsrtactFactory *meshFactory;
             std::thread *contextThread;
             renderer *contextRenderEngine;
-            bool windowRun = true;
 
             bool changeViewPort = false;
             int x, y, width, height;
@@ -28,6 +27,7 @@ namespace LTE
             virtual renderApi *getRenderApi() override;
 
         public:
+            bool windowRun = true;
             openGLContext(windowPieceId windowId)
                 :windowId(windowId)
             {
