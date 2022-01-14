@@ -1,29 +1,26 @@
 # Laugh Tale game Engine
 ## exprmintal game enigne for linux game dev
 
-todo:
-1.    full 2D/3D renderer - project thousand sunny, need to do sprite sheet
-2.    build a network framework - project going marry and orgnaze the paket send and recive
-3.    build a filesystem to mange all the audio/shader/config/etc... files - project tony tony chopper, need to build prefabLibary 
-4.    build a sound engine with a sequencer with rythem system and instrument system and file reader- project brock, implament a better rythem system, sound filters and
-      redo the os soundcard code.
-5.    add enttiys database to save enttiys after restart - project franky, need to create object, secnes and states database 
-6.    build a phyisc engiene - project vegapunk, need to crate collider and basic movment controle and better axis system
-7.    check the option of replaceing alsa with custum build hardware interface - project kozuki hiyori, need to infrace the sound strate to the hardware and the real time os.
-8.    create documentation of the entary program - project nico robin, need to write doc for each class and system
+run and compaile with ./run.sh
+debug and compaile tests with vs code debug tools
+run and compail tests with ./test.sh
 
-dev tools:
-1.  gtest
-2.  make
+c/cpp files in ./src
+h files in ./include
+test.cpp files in ./tests, using gtest
+static libarise in ./vendor
+dynamic libarise in ./DLLS
 
-doc tool:
-    doxygen
+gen doc and commit and push to git ./push.sh
 
-DLLS:
-    glog
-    glfw
-    glm
+project compiles with Makefile
 
-vendor code:
-    glad
-    imgui
+extrnal libraries used:
+      glog
+      GLFW
+      gflags
+      gtest
+      glm
+      imgui
+      stb_image
+      glad
