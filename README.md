@@ -1,5 +1,4 @@
-# Laugh Tale game Engine
-## exprmintal game enigne for linux game dev
+# NES Emulators base on Laugh Tale game Engine
 
 run and compaile with ./run.sh
 debug and compaile tests with vs code debug tools
