@@ -1,4 +1,6 @@
 #include "LaughTaleEngine.h"
+#include "6502.h"
+#include "cpu.h"
 
 int main() 
 {
