@@ -2,35 +2,43 @@
 #include "LaughTaleEngine.h"
 #include "instrction.h"
 #include "instructionsTable.h"
+#include "bus.h"
+
+#include <functional>
 
 class cpu6502: public LTE::component
 {
-    private:
+    public:
         struct instruction6502
         {
             std::string name;
-            uint8_t     (cpu6502::*operate )(void) = nullptr;
-            uint8_t     (cpu6502::*addrmode)(void) = nullptr;
+            uint8_t (cpu6502::*operate)(void) = nullptr;
+            uint8_t (cpu6502::*addrmode)(void) = nullptr;
             uint8_t cycles = 0;
         };
 
         unsigned long clock = 0;
-        short ADDRESS;
+        uint16_t addr = 0x0000;
         uint8_t DATA;
         uint8_t a = 0X00, x = 0X00, y = 0X00;
         uint8_t stkp = 0X00;
         uint16_t pc = 0X0000;
-        struct
+        union 
         {
-            uint8_t C: 1;	// Carry Bit
-            uint8_t Z: 1;	// Zero
-            uint8_t I: 1;	// Disable Interrupts
-            uint8_t D: 1;	// Decimal Mode (unused in this implementation)
-            uint8_t B: 1;	// Break
-            uint8_t U: 1;	// Unused
-            uint8_t V: 1;	// Overflow
-            uint8_t N: 1;	// Negative
-        } status;
+            struct
+            {
+                uint8_t C: 1;	// Carry Bit
+                uint8_t Z: 1;	// Zero
+                uint8_t I: 1;	// Disable Interrupts
+                uint8_t D: 1;	// Decimal Mode (unused in this implementation)
+                uint8_t B: 1;	// Break
+                uint8_t U: 1;	// Unused
+                uint8_t V: 1;	// Overflow
+                uint8_t N: 1;	// Negative
+            } status;
+
+            uint8_t statusData;
+        };
         
         bool RW;
 
@@ -65,14 +73,27 @@ class cpu6502: public LTE::component
 
         uint8_t XXX();
 
+        bus<uint8_t, uint16_t> *systemBus;
+
     public:
         cpu6502()
         {
             lookup = CPU_6502_INSTRUCTION_SET_TABLE;
         }
         
-        ~cpu6502();
+        virtual ~cpu6502() override
+        {
+
+        }
         
-        virtual void init(LTE::gameObject *parent) override;
-        virtual void end() override;
+        virtual void init(LTE::gameObject *parent) override
+        {
+            systemBus = parent->getComponent<bus<uint8_t, uint16_t>>();
+        }
+
+        virtual void end() override
+        {
+
+        }
+
 };

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>laughtale game engine: cpu Class Reference</title>
+<title>laughtale game engine: cpu&lt; dataSize, addrSize &gt; Class Template Reference</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -87,7 +87,7 @@ $(document).ready(function(){initNavTree('de/d33/classcpu.html','../../'); initR
   <div class="summary">
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="../../d3/df9/classcpu-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">cpu Class Reference</div></div>
+  <div class="headertitle"><div class="title">cpu&lt; dataSize, addrSize &gt; Class Template Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
@@ -95,31 +95,113 @@ $(document).ready(function(){initNavTree('de/d33/classcpu.html','../../'); initR
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:ad73adf0465a9749ca2291fad12862d17"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d33/classcpu.html#ad73adf0465a9749ca2291fad12862d17">init</a> ()</td></tr>
-<tr class="separator:ad73adf0465a9749ca2291fad12862d17"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a974222bb1e741c86b7866279ba6adc75"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d33/classcpu.html#a974222bb1e741c86b7866279ba6adc75">close</a> ()</td></tr>
-<tr class="separator:a974222bb1e741c86b7866279ba6adc75"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae7e010b2e8be73a397d36b374e28e235"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d33/classcpu.html#ae7e010b2e8be73a397d36b374e28e235">clock</a> ()</td></tr>
-<tr class="separator:ae7e010b2e8be73a397d36b374e28e235"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acc0291b1633b65b45e0e0ea0ebda1ac0"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d33/classcpu.html#acc0291b1633b65b45e0e0ea0ebda1ac0">reset</a> ()</td></tr>
-<tr class="separator:acc0291b1633b65b45e0e0ea0ebda1ac0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab4d040ad0342c25764628746bfb2ce6b"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d33/classcpu.html#ab4d040ad0342c25764628746bfb2ce6b">irq</a> ()</td></tr>
-<tr class="separator:ab4d040ad0342c25764628746bfb2ce6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a21ee11d30f664f597b3be99c261f4998"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d33/classcpu.html#a21ee11d30f664f597b3be99c261f4998">nmi</a> ()</td></tr>
-<tr class="separator:a21ee11d30f664f597b3be99c261f4998"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d7fc172ccbdace83fe4feb64c3c568e"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d33/classcpu.html#a6d7fc172ccbdace83fe4feb64c3c568e">isCpuComplete</a> ()</td></tr>
+<tr class="separator:a6d7fc172ccbdace83fe4feb64c3c568e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a982d259d5c5981cb3b51364c97b80519"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d33/classcpu.html#a982d259d5c5981cb3b51364c97b80519">hex</a> (uint32_t n, uint8_t d)</td></tr>
+<tr class="separator:a982d259d5c5981cb3b51364c97b80519"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5786aff4b18f0688c2a85c8556cf8e0a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d33/classcpu.html#a5786aff4b18f0688c2a85c8556cf8e0a">init</a> (LTE::entityTaleId SystemDataId)</td></tr>
+<tr class="separator:a5786aff4b18f0688c2a85c8556cf8e0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40f7f0daa94474f8470d35758d162b54"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d33/classcpu.html#a40f7f0daa94474f8470d35758d162b54">close</a> ()</td></tr>
+<tr class="separator:a40f7f0daa94474f8470d35758d162b54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc8a3d560e97137856c86004d5d5e91b"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d33/classcpu.html#abc8a3d560e97137856c86004d5d5e91b">clock</a> (LTE::gameObject *eventEntity, LTE::coreEventData *sendor)</td></tr>
+<tr class="separator:abc8a3d560e97137856c86004d5d5e91b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97745a7f67189c0ace83e404c2345ba1"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d33/classcpu.html#a97745a7f67189c0ace83e404c2345ba1">reset</a> (LTE::gameObject *eventEntity, LTE::coreEventData *sendor)</td></tr>
+<tr class="separator:a97745a7f67189c0ace83e404c2345ba1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add49f5d9813e1d2d44fb30e4c5a6eab0"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d33/classcpu.html#add49f5d9813e1d2d44fb30e4c5a6eab0">irq</a> (LTE::gameObject *eventEntity, LTE::coreEventData *sendor)</td></tr>
+<tr class="separator:add49f5d9813e1d2d44fb30e4c5a6eab0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a803206b5587491451a031522d1c9dce7"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d33/classcpu.html#a803206b5587491451a031522d1c9dce7">nmi</a> (LTE::gameObject *eventEntity, LTE::coreEventData *sendor)</td></tr>
+<tr class="separator:a803206b5587491451a031522d1c9dce7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="ae7e010b2e8be73a397d36b374e28e235" name="ae7e010b2e8be73a397d36b374e28e235"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae7e010b2e8be73a397d36b374e28e235">&#9670;&nbsp;</a></span>clock()</h2>
+<a id="abc8a3d560e97137856c86004d5d5e91b" name="abc8a3d560e97137856c86004d5d5e91b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc8a3d560e97137856c86004d5d5e91b">&#9670;&nbsp;</a></span>clock()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename dataSize , typename addrSize &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void cpu::clock </td>
+          <td class="memname">static void <a class="el" href="../../de/d33/classcpu.html">cpu</a>&lt; dataSize, addrSize &gt;::clock </td>
+          <td>(</td>
+          <td class="paramtype">LTE::gameObject *&#160;</td>
+          <td class="paramname"><em>eventEntity</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LTE::coreEventData *&#160;</td>
+          <td class="paramname"><em>sendor</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">   55</span>        {</div>
+<div class="line"><span class="lineno">   56</span>            <a class="code hl_class" href="../../d0/d88/classbus.html">bus&lt;dataSize, addrSize&gt;</a> *busData = LTE::entityManger::getEntityById(SystemData)-&gt;getComponent&lt;<a class="code hl_class" href="../../d0/d88/classbus.html">bus&lt;dataSize, addrSize&gt;</a>&gt;();</div>
+<div class="line"><span class="lineno">   57</span>            <a class="code hl_class" href="../../d9/dbe/classcpu6502.html">cpu6502</a> *cpuData = LTE::entityManger::getEntityById(SystemData)-&gt;getComponent&lt;<a class="code hl_class" href="../../d9/dbe/classcpu6502.html">cpu6502</a>&gt;();</div>
+<div class="line"><span class="lineno">   58</span> </div>
+<div class="line"><span class="lineno">   59</span>            uint8_t opcode = 0;</div>
+<div class="line"><span class="lineno">   60</span> </div>
+<div class="line"><span class="lineno">   61</span>            <span class="keywordflow">if</span>((<span class="keywordtype">int</span>)cycles == 0)</div>
+<div class="line"><span class="lineno">   62</span>            {</div>
+<div class="line"><span class="lineno">   63</span>                opcode = busData-&gt;<a class="code hl_function" href="../../d0/d88/classbus.html#abb29248facedf75907fba0ebf44022b0">read</a>(cpuData-&gt;pc);</div>
+<div class="line"><span class="lineno">   64</span>                LAUGHTALE_ENGINR_LOG_INFO(<span class="stringliteral">&quot;opcode (&quot;</span> &lt;&lt; <a class="code hl_function" href="../../de/d33/classcpu.html#a982d259d5c5981cb3b51364c97b80519">hex</a>(cpuData-&gt;pc, 4) &lt;&lt; <span class="stringliteral">&quot;): &quot;</span> &lt;&lt; <a class="code hl_function" href="../../de/d33/classcpu.html#a982d259d5c5981cb3b51364c97b80519">hex</a>(opcode, 2))</div>
+<div class="line"><span class="lineno">   65</span>                cpuData-&gt;pc++;</div>
+<div class="line"><span class="lineno">   66</span>                cycles = cpuData-&gt;lookup[opcode].cycles;</div>
+<div class="line"><span class="lineno">   67</span> </div>
+<div class="line"><span class="lineno">   68</span>                uint8_t additional_cycle1 = (cpuData-&gt;*(cpuData-&gt;lookup[opcode].addrmode))();</div>
+<div class="line"><span class="lineno">   69</span>                uint8_t additional_cycle2 = (cpuData-&gt;*(cpuData-&gt;lookup[opcode].operate))();</div>
+<div class="line"><span class="lineno">   70</span> </div>
+<div class="line"><span class="lineno">   71</span>                cycles += (additional_cycle1 &amp; additional_cycle2);</div>
+<div class="line"><span class="lineno">   72</span>            }</div>
+<div class="line"><span class="lineno">   73</span>            cpuData-&gt;<a class="code hl_function" href="../../de/d33/classcpu.html#abc8a3d560e97137856c86004d5d5e91b">clock</a>++;</div>
+<div class="line"><span class="lineno">   74</span>            cycles--;</div>
+<div class="line"><span class="lineno">   75</span>        </div>
+<div class="line"><span class="lineno">   76</span>            </div>
+<div class="line"><span class="lineno">   77</span>        }</div>
+<div class="ttc" id="aclassbus_html"><div class="ttname"><a href="../../d0/d88/classbus.html">bus</a></div><div class="ttdef"><b>Definition:</b> bus.h:9</div></div>
+<div class="ttc" id="aclassbus_html_abb29248facedf75907fba0ebf44022b0"><div class="ttname"><a href="../../d0/d88/classbus.html#abb29248facedf75907fba0ebf44022b0">bus::read</a></div><div class="ttdeci">dataSize read(addrSize addr, bool bReadOnly=false)</div><div class="ttdef"><b>Definition:</b> bus.h:33</div></div>
+<div class="ttc" id="aclasscpu6502_html"><div class="ttname"><a href="../../d9/dbe/classcpu6502.html">cpu6502</a></div><div class="ttdef"><b>Definition:</b> 6502.h:10</div></div>
+<div class="ttc" id="aclasscpu_html_a982d259d5c5981cb3b51364c97b80519"><div class="ttname"><a href="../../de/d33/classcpu.html#a982d259d5c5981cb3b51364c97b80519">cpu::hex</a></div><div class="ttdeci">static std::string hex(uint32_t n, uint8_t d)</div><div class="ttdef"><b>Definition:</b> cpu.h:20</div></div>
+<div class="ttc" id="aclasscpu_html_abc8a3d560e97137856c86004d5d5e91b"><div class="ttname"><a href="../../de/d33/classcpu.html#abc8a3d560e97137856c86004d5d5e91b">cpu::clock</a></div><div class="ttdeci">static void clock(LTE::gameObject *eventEntity, LTE::coreEventData *sendor)</div><div class="ttdef"><b>Definition:</b> cpu.h:54</div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../de/d33/classcpu_abc8a3d560e97137856c86004d5d5e91b_cgraph.png" border="0" usemap="#ade/d33/classcpu_abc8a3d560e97137856c86004d5d5e91b_cgraph" alt=""/></div>
+<map name="ade/d33/classcpu_abc8a3d560e97137856c86004d5d5e91b_cgraph" id="ade/d33/classcpu_abc8a3d560e97137856c86004d5d5e91b_cgraph">
+<area shape="rect" title=" " alt="" coords="5,31,85,57"/>
+<area shape="rect" href="../../de/d33/classcpu.html#a982d259d5c5981cb3b51364c97b80519" title=" " alt="" coords="136,5,205,32"/>
+<area shape="rect" href="../../d0/d88/classbus.html#abb29248facedf75907fba0ebf44022b0" title=" " alt="" coords="133,56,208,83"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a40f7f0daa94474f8470d35758d162b54" name="a40f7f0daa94474f8470d35758d162b54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40f7f0daa94474f8470d35758d162b54">&#9670;&nbsp;</a></span>close()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename dataSize , typename addrSize &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void <a class="el" href="../../de/d33/classcpu.html">cpu</a>&lt; dataSize, addrSize &gt;::close </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -127,153 +209,375 @@ Static Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">    4</span>{</div>
-<div class="line"><span class="lineno">    5</span> </div>
-<div class="line"><span class="lineno">    6</span>}</div>
+<div class="fragment"><div class="line"><span class="lineno">   48</span>        {</div>
+<div class="line"><span class="lineno">   49</span>            <span class="comment">// clockT-&gt;join();</span></div>
+<div class="line"><span class="lineno">   50</span>            <span class="comment">// delete clockT;</span></div>
+<div class="line"><span class="lineno">   51</span>        }</div>
+</div><!-- fragment --><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../de/d33/classcpu_a40f7f0daa94474f8470d35758d162b54_icgraph.png" border="0" usemap="#ade/d33/classcpu_a40f7f0daa94474f8470d35758d162b54_icgraph" alt=""/></div>
+<map name="ade/d33/classcpu_a40f7f0daa94474f8470d35758d162b54_icgraph" id="ade/d33/classcpu_a40f7f0daa94474f8470d35758d162b54_icgraph">
+<area shape="rect" title=" " alt="" coords="188,5,268,32"/>
+<area shape="rect" href="../../d0/d1e/classcpu_test.html#a26c31a2f583a272ae53cad7ece4afdc5" title=" " alt="" coords="5,5,140,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a982d259d5c5981cb3b51364c97b80519" name="a982d259d5c5981cb3b51364c97b80519"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a982d259d5c5981cb3b51364c97b80519">&#9670;&nbsp;</a></span>hex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename dataSize , typename addrSize &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::string <a class="el" href="../../de/d33/classcpu.html">cpu</a>&lt; dataSize, addrSize &gt;::hex </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>d</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">   21</span>        {</div>
+<div class="line"><span class="lineno">   22</span>            std::string s(d, <span class="charliteral">&#39;0&#39;</span>);</div>
+<div class="line"><span class="lineno">   23</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = d - 1; i &gt;= 0; i--, n &gt;&gt;= 4)</div>
+<div class="line"><span class="lineno">   24</span>                s[i] = <span class="stringliteral">&quot;0123456789ABCDEF&quot;</span>[n &amp; 0xF];</div>
+<div class="line"><span class="lineno">   25</span>            <span class="keywordflow">return</span> s;</div>
+<div class="line"><span class="lineno">   26</span>        }</div>
+</div><!-- fragment --><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../de/d33/classcpu_a982d259d5c5981cb3b51364c97b80519_icgraph.png" border="0" usemap="#ade/d33/classcpu_a982d259d5c5981cb3b51364c97b80519_icgraph" alt=""/></div>
+<map name="ade/d33/classcpu_a982d259d5c5981cb3b51364c97b80519_icgraph" id="ade/d33/classcpu_a982d259d5c5981cb3b51364c97b80519_icgraph">
+<area shape="rect" title=" " alt="" coords="133,5,203,32"/>
+<area shape="rect" href="../../de/d33/classcpu.html#abc8a3d560e97137856c86004d5d5e91b" title=" " alt="" coords="5,5,85,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a5786aff4b18f0688c2a85c8556cf8e0a" name="a5786aff4b18f0688c2a85c8556cf8e0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5786aff4b18f0688c2a85c8556cf8e0a">&#9670;&nbsp;</a></span>init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename dataSize , typename addrSize &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void <a class="el" href="../../de/d33/classcpu.html">cpu</a>&lt; dataSize, addrSize &gt;::init </td>
+          <td>(</td>
+          <td class="paramtype">LTE::entityTaleId&#160;</td>
+          <td class="paramname"><em>SystemDataId</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">   29</span>        {</div>
+<div class="line"><span class="lineno">   30</span>            SystemData = SystemDataId;</div>
+<div class="line"><span class="lineno">   31</span> </div>
+<div class="line"><span class="lineno">   32</span> </div>
+<div class="line"><span class="lineno">   33</span>            LTE::eventManger::addCoustemEventsRoute(<span class="stringliteral">&quot;cpu cmd/&quot;</span>);</div>
+<div class="line"><span class="lineno">   34</span>            LTE::eventManger::addCoustemEventsRoute(<span class="stringliteral">&quot;cpu cmd/cpu reset/&quot;</span>);</div>
+<div class="line"><span class="lineno">   35</span>            LTE::eventManger::addCoustemEventsRoute(<span class="stringliteral">&quot;cpu cmd/cpu irq/&quot;</span>);</div>
+<div class="line"><span class="lineno">   36</span>            LTE::eventManger::addCoustemEventsRoute(<span class="stringliteral">&quot;cpu cmd/cpu nmi/&quot;</span>);</div>
+<div class="line"><span class="lineno">   37</span>            LTE::eventManger::addCoustemEventsRoute(<span class="stringliteral">&quot;cpu cmd/cpu clock/&quot;</span>);</div>
+<div class="line"><span class="lineno">   38</span>            </div>
+<div class="line"><span class="lineno">   39</span>            LTE::eventManger::startBuildingEvent()-&gt;setEntityID(SystemData)-&gt;setEventRoute(<span class="stringliteral">&quot;cpu cmd/cpu reset/6502&quot;</span>)-&gt;setEventCallback(<a class="code hl_class" href="../../de/d33/classcpu.html">cpu&lt;uint8_t, uint16_t&gt;::reset</a>)-&gt;add();</div>
+<div class="line"><span class="lineno">   40</span>            LTE::eventManger::startBuildingEvent()-&gt;setEntityID(SystemData)-&gt;setEventRoute(<span class="stringliteral">&quot;cpu cmd/cpu irq/6502&quot;</span>)-&gt;setEventCallback(<a class="code hl_class" href="../../de/d33/classcpu.html">cpu&lt;uint8_t, uint16_t&gt;::irq</a>)-&gt;add();</div>
+<div class="line"><span class="lineno">   41</span>            LTE::eventManger::startBuildingEvent()-&gt;setEntityID(SystemData)-&gt;setEventRoute(<span class="stringliteral">&quot;cpu cmd/cpu nmi/6502&quot;</span>)-&gt;setEventCallback(<a class="code hl_class" href="../../de/d33/classcpu.html">cpu&lt;uint8_t, uint16_t&gt;::nmi</a>)-&gt;add();</div>
+<div class="line"><span class="lineno">   42</span>            LTE::eventManger::startBuildingEvent()-&gt;setEntityID(SystemData)-&gt;setEventRoute(<span class="stringliteral">&quot;cpu cmd/cpu clock/6502&quot;</span>)-&gt;setEventCallback(<a class="code hl_class" href="../../de/d33/classcpu.html">cpu&lt;uint8_t, uint16_t&gt;::clock</a>)-&gt;add();</div>
+<div class="line"><span class="lineno">   43</span> </div>
+<div class="line"><span class="lineno">   44</span>            <span class="comment">// clockT = new std::thread(clock);</span></div>
+<div class="line"><span class="lineno">   45</span>        }</div>
+<div class="ttc" id="aclasscpu_html"><div class="ttname"><a href="../../de/d33/classcpu.html">cpu</a></div><div class="ttdef"><b>Definition:</b> cpu.h:11</div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../de/d33/classcpu_a5786aff4b18f0688c2a85c8556cf8e0a_icgraph.png" border="0" usemap="#ade/d33/classcpu_a5786aff4b18f0688c2a85c8556cf8e0a_icgraph" alt=""/></div>
+<map name="ade/d33/classcpu_a5786aff4b18f0688c2a85c8556cf8e0a_icgraph" id="ade/d33/classcpu_a5786aff4b18f0688c2a85c8556cf8e0a_icgraph">
+<area shape="rect" title=" " alt="" coords="165,31,232,57"/>
+<area shape="rect" href="../../df/d0a/main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="36,5,87,32"/>
+<area shape="rect" href="../../d0/d1e/classcpu_test.html#a3f075970182d44a56057cccaeae3837e" title=" " alt="" coords="5,56,117,83"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="add49f5d9813e1d2d44fb30e4c5a6eab0" name="add49f5d9813e1d2d44fb30e4c5a6eab0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add49f5d9813e1d2d44fb30e4c5a6eab0">&#9670;&nbsp;</a></span>irq()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename dataSize , typename addrSize &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void <a class="el" href="../../de/d33/classcpu.html">cpu</a>&lt; dataSize, addrSize &gt;::irq </td>
+          <td>(</td>
+          <td class="paramtype">LTE::gameObject *&#160;</td>
+          <td class="paramname"><em>eventEntity</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LTE::coreEventData *&#160;</td>
+          <td class="paramname"><em>sendor</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  100</span>        {</div>
+<div class="line"><span class="lineno">  101</span>            <a class="code hl_class" href="../../d0/d88/classbus.html">bus&lt;dataSize, addrSize&gt;</a> *busData = LTE::entityManger::getEntityById(SystemData)-&gt;getComponent&lt;<a class="code hl_class" href="../../d0/d88/classbus.html">bus&lt;dataSize, addrSize&gt;</a>&gt;();</div>
+<div class="line"><span class="lineno">  102</span>            <a class="code hl_class" href="../../d9/dbe/classcpu6502.html">cpu6502</a> *cpuData = LTE::entityManger::getEntityById(SystemData)-&gt;getComponent&lt;<a class="code hl_class" href="../../d9/dbe/classcpu6502.html">cpu6502</a>&gt;();</div>
+<div class="line"><span class="lineno">  103</span> </div>
+<div class="line"><span class="lineno">  104</span>            <span class="keywordflow">if</span>(cpuData-&gt;status.I != 0)</div>
+<div class="line"><span class="lineno">  105</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  106</span> </div>
+<div class="line"><span class="lineno">  107</span>            busData-&gt;<a class="code hl_function" href="../../d0/d88/classbus.html#ad0926a660fd5c6e08f88943629c095af">write</a>(0x0100 + cpuData-&gt;stkp, (cpuData-&gt;pc &gt;&gt; 8) &amp; 0x00FF);</div>
+<div class="line"><span class="lineno">  108</span>            cpuData-&gt;stkp--;</div>
+<div class="line"><span class="lineno">  109</span>            busData-&gt;<a class="code hl_function" href="../../d0/d88/classbus.html#ad0926a660fd5c6e08f88943629c095af">write</a>(0x0100 + cpuData-&gt;stkp, cpuData-&gt;pc &amp; 0x00FF);</div>
+<div class="line"><span class="lineno">  110</span>            cpuData-&gt;stkp--;</div>
+<div class="line"><span class="lineno">  111</span> </div>
+<div class="line"><span class="lineno">  112</span>            cpuData-&gt;status.B = 0;</div>
+<div class="line"><span class="lineno">  113</span>            cpuData-&gt;status.U = 1;</div>
+<div class="line"><span class="lineno">  114</span>            cpuData-&gt;status.I = 1;</div>
+<div class="line"><span class="lineno">  115</span> </div>
+<div class="line"><span class="lineno">  116</span>            busData-&gt;<a class="code hl_function" href="../../d0/d88/classbus.html#ad0926a660fd5c6e08f88943629c095af">write</a>(0x0100 + cpuData-&gt;stkp, cpuData-&gt;statusData);</div>
+<div class="line"><span class="lineno">  117</span>            cpuData-&gt;stkp--;</div>
+<div class="line"><span class="lineno">  118</span> </div>
+<div class="line"><span class="lineno">  119</span>            uint16_t addr_abs = 0xFFFE;</div>
+<div class="line"><span class="lineno">  120</span>            uint16_t lo = busData-&gt;<a class="code hl_function" href="../../d0/d88/classbus.html#abb29248facedf75907fba0ebf44022b0">read</a>(addr_abs + 0);</div>
+<div class="line"><span class="lineno">  121</span>            uint16_t hi = busData-&gt;<a class="code hl_function" href="../../d0/d88/classbus.html#abb29248facedf75907fba0ebf44022b0">read</a>(addr_abs + 1);</div>
+<div class="line"><span class="lineno">  122</span>            cpuData-&gt;pc = (hi &lt;&lt; 8) | lo;</div>
+<div class="line"><span class="lineno">  123</span>            cycles = 7;</div>
+<div class="line"><span class="lineno">  124</span> </div>
+<div class="line"><span class="lineno">  125</span>        }</div>
+<div class="ttc" id="aclassbus_html_ad0926a660fd5c6e08f88943629c095af"><div class="ttname"><a href="../../d0/d88/classbus.html#ad0926a660fd5c6e08f88943629c095af">bus::write</a></div><div class="ttdeci">void write(addrSize addr, dataSize data)</div><div class="ttdef"><b>Definition:</b> bus.h:40</div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../de/d33/classcpu_add49f5d9813e1d2d44fb30e4c5a6eab0_cgraph.png" border="0" usemap="#ade/d33/classcpu_add49f5d9813e1d2d44fb30e4c5a6eab0_cgraph" alt=""/></div>
+<map name="ade/d33/classcpu_add49f5d9813e1d2d44fb30e4c5a6eab0_cgraph" id="ade/d33/classcpu_add49f5d9813e1d2d44fb30e4c5a6eab0_cgraph">
+<area shape="rect" title=" " alt="" coords="5,31,68,57"/>
+<area shape="rect" href="../../d0/d88/classbus.html#abb29248facedf75907fba0ebf44022b0" title=" " alt="" coords="117,5,192,32"/>
+<area shape="rect" href="../../d0/d88/classbus.html#ad0926a660fd5c6e08f88943629c095af" title=" " alt="" coords="116,56,193,83"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a6d7fc172ccbdace83fe4feb64c3c568e" name="a6d7fc172ccbdace83fe4feb64c3c568e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d7fc172ccbdace83fe4feb64c3c568e">&#9670;&nbsp;</a></span>isCpuComplete()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename dataSize , typename addrSize &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool <a class="el" href="../../de/d33/classcpu.html">cpu</a>&lt; dataSize, addrSize &gt;::isCpuComplete </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">   18</span>{ <span class="keywordflow">return</span> cycles == 0; }</div>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="a974222bb1e741c86b7866279ba6adc75" name="a974222bb1e741c86b7866279ba6adc75"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a974222bb1e741c86b7866279ba6adc75">&#9670;&nbsp;</a></span>close()</h2>
+<a id="a803206b5587491451a031522d1c9dce7" name="a803206b5587491451a031522d1c9dce7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a803206b5587491451a031522d1c9dce7">&#9670;&nbsp;</a></span>nmi()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename dataSize , typename addrSize &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static void cpu::close </td>
+          <td class="memname">static void <a class="el" href="../../de/d33/classcpu.html">cpu</a>&lt; dataSize, addrSize &gt;::nmi </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">LTE::gameObject *&#160;</td>
+          <td class="paramname"><em>eventEntity</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">LTE::coreEventData *&#160;</td>
+          <td class="paramname"><em>sendor</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  128</span>        {</div>
+<div class="line"><span class="lineno">  129</span>            <a class="code hl_class" href="../../d0/d88/classbus.html">bus&lt;dataSize, addrSize&gt;</a> *busData = LTE::entityManger::getEntityById(SystemData)-&gt;getComponent&lt;<a class="code hl_class" href="../../d0/d88/classbus.html">bus&lt;dataSize, addrSize&gt;</a>&gt;();</div>
+<div class="line"><span class="lineno">  130</span>            <a class="code hl_class" href="../../d9/dbe/classcpu6502.html">cpu6502</a> *cpuData = LTE::entityManger::getEntityById(SystemData)-&gt;getComponent&lt;<a class="code hl_class" href="../../d9/dbe/classcpu6502.html">cpu6502</a>&gt;();</div>
+<div class="line"><span class="lineno">  131</span> </div>
+<div class="line"><span class="lineno">  132</span>            busData-&gt;<a class="code hl_function" href="../../d0/d88/classbus.html#ad0926a660fd5c6e08f88943629c095af">write</a>(0x0100 + cpuData-&gt;stkp, (cpuData-&gt;pc &gt;&gt; 8) &amp; 0x00FF);</div>
+<div class="line"><span class="lineno">  133</span>            cpuData-&gt;stkp--;</div>
+<div class="line"><span class="lineno">  134</span>            busData-&gt;<a class="code hl_function" href="../../d0/d88/classbus.html#ad0926a660fd5c6e08f88943629c095af">write</a>(0x0100 + cpuData-&gt;stkp, cpuData-&gt;pc &amp; 0x00FF);</div>
+<div class="line"><span class="lineno">  135</span>            cpuData-&gt;stkp--;</div>
+<div class="line"><span class="lineno">  136</span> </div>
+<div class="line"><span class="lineno">  137</span>            cpuData-&gt;status.B = 0;</div>
+<div class="line"><span class="lineno">  138</span>            cpuData-&gt;status.U = 1;</div>
+<div class="line"><span class="lineno">  139</span>            cpuData-&gt;status.I = 1;</div>
+<div class="line"><span class="lineno">  140</span> </div>
+<div class="line"><span class="lineno">  141</span>            busData-&gt;<a class="code hl_function" href="../../d0/d88/classbus.html#ad0926a660fd5c6e08f88943629c095af">write</a>(0x0100 + cpuData-&gt;stkp, cpuData-&gt;statusData);</div>
+<div class="line"><span class="lineno">  142</span>            cpuData-&gt;stkp--;</div>
+<div class="line"><span class="lineno">  143</span> </div>
+<div class="line"><span class="lineno">  144</span>            uint16_t addr_abs = 0xFFFA;</div>
+<div class="line"><span class="lineno">  145</span>            uint16_t lo = busData-&gt;<a class="code hl_function" href="../../d0/d88/classbus.html#abb29248facedf75907fba0ebf44022b0">read</a>(addr_abs + 0);</div>
+<div class="line"><span class="lineno">  146</span>            uint16_t hi = busData-&gt;<a class="code hl_function" href="../../d0/d88/classbus.html#abb29248facedf75907fba0ebf44022b0">read</a>(addr_abs + 1);</div>
+<div class="line"><span class="lineno">  147</span>            cpuData-&gt;pc = (hi &lt;&lt; 8) | lo;</div>
+<div class="line"><span class="lineno">  148</span>            cycles = 8;</div>
+<div class="line"><span class="lineno">  149</span>        }</div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../de/d33/classcpu_a803206b5587491451a031522d1c9dce7_cgraph.png" border="0" usemap="#ade/d33/classcpu_a803206b5587491451a031522d1c9dce7_cgraph" alt=""/></div>
+<map name="ade/d33/classcpu_a803206b5587491451a031522d1c9dce7_cgraph" id="ade/d33/classcpu_a803206b5587491451a031522d1c9dce7_cgraph">
+<area shape="rect" title=" " alt="" coords="5,31,76,57"/>
+<area shape="rect" href="../../d0/d88/classbus.html#abb29248facedf75907fba0ebf44022b0" title=" " alt="" coords="125,5,200,32"/>
+<area shape="rect" href="../../d0/d88/classbus.html#ad0926a660fd5c6e08f88943629c095af" title=" " alt="" coords="124,56,201,83"/>
+</map>
+</div>
 
 </div>
 </div>
-<a id="ad73adf0465a9749ca2291fad12862d17" name="ad73adf0465a9749ca2291fad12862d17"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad73adf0465a9749ca2291fad12862d17">&#9670;&nbsp;</a></span>init()</h2>
+<a id="a97745a7f67189c0ace83e404c2345ba1" name="a97745a7f67189c0ace83e404c2345ba1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97745a7f67189c0ace83e404c2345ba1">&#9670;&nbsp;</a></span>reset()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename dataSize , typename addrSize &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static void cpu::init </td>
+          <td class="memname">static void <a class="el" href="../../de/d33/classcpu.html">cpu</a>&lt; dataSize, addrSize &gt;::reset </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td class="paramtype">LTE::gameObject *&#160;</td>
+          <td class="paramname"><em>eventEntity</em>, </td>
         </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ab4d040ad0342c25764628746bfb2ce6b" name="ab4d040ad0342c25764628746bfb2ce6b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab4d040ad0342c25764628746bfb2ce6b">&#9670;&nbsp;</a></span>irq()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
         <tr>
-          <td class="memname">void cpu::irq </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">LTE::coreEventData *&#160;</td>
+          <td class="paramname"><em>sendor</em>&#160;</td>
         </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   14</span>{</div>
-<div class="line"><span class="lineno">   15</span> </div>
-<div class="line"><span class="lineno">   16</span>}</div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="a21ee11d30f664f597b3be99c261f4998" name="a21ee11d30f664f597b3be99c261f4998"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a21ee11d30f664f597b3be99c261f4998">&#9670;&nbsp;</a></span>nmi()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
         <tr>
-          <td class="memname">void cpu::nmi </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
           <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   19</span>{</div>
-<div class="line"><span class="lineno">   20</span> </div>
-<div class="line"><span class="lineno">   21</span>}</div>
-</div><!-- fragment -->
+<div class="fragment"><div class="line"><span class="lineno">   80</span>        {</div>
+<div class="line"><span class="lineno">   81</span>            <a class="code hl_class" href="../../d0/d88/classbus.html">bus&lt;dataSize, addrSize&gt;</a> *busData = LTE::entityManger::getEntityById(SystemData)-&gt;getComponent&lt;<a class="code hl_class" href="../../d0/d88/classbus.html">bus&lt;dataSize, addrSize&gt;</a>&gt;();</div>
+<div class="line"><span class="lineno">   82</span>            <a class="code hl_class" href="../../d9/dbe/classcpu6502.html">cpu6502</a> *cpuData = LTE::entityManger::getEntityById(SystemData)-&gt;getComponent&lt;<a class="code hl_class" href="../../d9/dbe/classcpu6502.html">cpu6502</a>&gt;();</div>
+<div class="line"><span class="lineno">   83</span> </div>
+<div class="line"><span class="lineno">   84</span>            uint16_t addr_abs = 0xFFFC;</div>
+<div class="line"><span class="lineno">   85</span>            uint16_t lo = busData-&gt;<a class="code hl_function" href="../../d0/d88/classbus.html#abb29248facedf75907fba0ebf44022b0">read</a>(addr_abs + 0);</div>
+<div class="line"><span class="lineno">   86</span>            uint16_t hi = busData-&gt;<a class="code hl_function" href="../../d0/d88/classbus.html#abb29248facedf75907fba0ebf44022b0">read</a>(addr_abs + 1);</div>
+<div class="line"><span class="lineno">   87</span>            cpuData-&gt;pc = (hi &lt;&lt; 8) | lo;</div>
+<div class="line"><span class="lineno">   88</span> </div>
+<div class="line"><span class="lineno">   89</span>            cpuData-&gt;statusData = 0;</div>
+<div class="line"><span class="lineno">   90</span>            cpuData-&gt;status.U = 1;</div>
+<div class="line"><span class="lineno">   91</span>            cpuData-&gt;a = 0;</div>
+<div class="line"><span class="lineno">   92</span>            cpuData-&gt;x = 0;</div>
+<div class="line"><span class="lineno">   93</span>            cpuData-&gt;y = 0;</div>
+<div class="line"><span class="lineno">   94</span>            cpuData-&gt;stkp = 0xFD;</div>
+<div class="line"><span class="lineno">   95</span> </div>
+<div class="line"><span class="lineno">   96</span>            cycles = 8;</div>
+<div class="line"><span class="lineno">   97</span>        }</div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../de/d33/classcpu_a97745a7f67189c0ace83e404c2345ba1_cgraph.png" border="0" usemap="#ade/d33/classcpu_a97745a7f67189c0ace83e404c2345ba1_cgraph" alt=""/></div>
+<map name="ade/d33/classcpu_a97745a7f67189c0ace83e404c2345ba1_cgraph" id="ade/d33/classcpu_a97745a7f67189c0ace83e404c2345ba1_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,84,32"/>
+<area shape="rect" href="../../d0/d88/classbus.html#abb29248facedf75907fba0ebf44022b0" title=" " alt="" coords="132,5,207,32"/>
+</map>
 </div>
-</div>
-<a id="acc0291b1633b65b45e0e0ea0ebda1ac0" name="acc0291b1633b65b45e0e0ea0ebda1ac0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acc0291b1633b65b45e0e0ea0ebda1ac0">&#9670;&nbsp;</a></span>reset()</h2>
 
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void cpu::reset </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">    9</span>{</div>
-<div class="line"><span class="lineno">   10</span> </div>
-<div class="line"><span class="lineno">   11</span>}</div>
-</div><!-- fragment -->
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following files:<ul>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>include/cpuEmulation/<a class="el" href="../../dc/da7/cpu_8h_source.html">cpu.h</a></li>
-<li>src/cpu emulation/<a class="el" href="../../d7/dfc/cpu_8cpp.html">cpu.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

@@ -1,5 +1,7 @@
 <map id="include/cpuEmulation/6502.h" name="include/cpuEmulation/6502.h">
-<area shape="rect" id="node1" title=" " alt="" coords="104,5,249,47"/>
-<area shape="rect" id="node2" href="$dc/d39/6502_8cpp.html" title=" " alt="" coords="5,95,185,121"/>
-<area shape="rect" id="node3" href="$df/d0a/main_8cpp.html" title=" " alt="" coords="210,95,306,121"/>
+<area shape="rect" id="node1" title=" " alt="" coords="117,5,262,47"/>
+<area shape="rect" id="node2" href="$dc/da7/cpu_8h.html" title=" " alt="" coords="62,95,207,136"/>
+<area shape="rect" id="node3" href="$df/d0a/main_8cpp.html" title=" " alt="" coords="5,184,101,211"/>
+<area shape="rect" id="node4" href="$df/d88/cpu_emulation_8text_8cpp.html" title=" " alt="" coords="140,184,321,211"/>
+<area shape="rect" id="node5" href="$dc/d39/6502_8cpp.html" title=" " alt="" coords="283,102,461,129"/>
 </map>

@@ -87,7 +87,52 @@ $(document).ready(function(){initNavTree('de/d90/include_2bus_emulation_2ram_8h_
   <div class="headertitle"><div class="title">ram.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="../../de/d90/include_2bus_emulation_2ram_8h.html">Go to the documentation of this file.</a><div class="fragment"></div><!-- fragment --></div><!-- contents -->
+<a href="../../de/d90/include_2bus_emulation_2ram_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;<a class="code" href="../../d9/deb/bus_device_8h.html">busDevice.h</a>&quot;</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &lt;cstdint&gt;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;array&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="../../dd/d28/classram.html">    6</a></span><span class="keyword">class </span><a class="code hl_class" href="../../dd/d28/classram.html">ram</a>: <span class="keyword">public</span> <a class="code hl_class" href="../../dc/d77/classbus_device.html">busDevice</a>&lt;uint8_t, uint16_t&gt;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>{</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>        std::array&lt;uint8_t, 64 * 1024&gt; ramData;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="../../dd/d28/classram.html#a40fb07b2eba690992ba281ca6ef9902c">   12</a></span>        <a class="code hl_function" href="../../dd/d28/classram.html#a40fb07b2eba690992ba281ca6ef9902c">ram</a>()</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        {</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>            <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;i : ramData) i = 0x00;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        }</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="../../dd/d28/classram.html#a342f5f90906a9e41a2687214bc13bc5d">   17</a></span>        <a class="code hl_function" href="../../dd/d28/classram.html#a342f5f90906a9e41a2687214bc13bc5d">~ram</a>()</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        {</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        }</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="../../dd/d28/classram.html#ad1d4c635b695934d8daf2d188149cb57">   22</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="../../dd/d28/classram.html#ad1d4c635b695934d8daf2d188149cb57">isInRange</a>(uint16_t addr)<span class="keyword"> override</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">        </span>{</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>            <span class="keywordflow">return</span> addr &gt;= 0x0000 &amp;&amp; addr &lt;= 0xFFFF;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        }</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="../../dd/d28/classram.html#a85983e19a0af45528085f72393c69ba3">   27</a></span>        <span class="keyword">virtual</span> uint8_t <a class="code hl_function" href="../../dd/d28/classram.html#a85983e19a0af45528085f72393c69ba3">read</a>(uint16_t addr, <span class="keywordtype">bool</span> bReadOnly = <span class="keyword">false</span>)<span class="keyword"> override</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keyword">        </span>{</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>            <span class="keywordflow">return</span> ramData[addr];</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        }</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="../../dd/d28/classram.html#af0f454094d68ea49725c4f241023cf6a">   32</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../dd/d28/classram.html#af0f454094d68ea49725c4f241023cf6a">write</a>(uint16_t addr, uint8_t data)<span class="keyword"> override</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keyword">        </span>{</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            ramData[addr] = data;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        }</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>};</div>
+<div class="ttc" id="abus_device_8h_html"><div class="ttname"><a href="../../d9/deb/bus_device_8h.html">busDevice.h</a></div></div>
+<div class="ttc" id="aclassbus_device_html"><div class="ttname"><a href="../../dc/d77/classbus_device.html">busDevice</a></div><div class="ttdef"><b>Definition:</b> busDevice.h:5</div></div>
+<div class="ttc" id="aclassram_html"><div class="ttname"><a href="../../dd/d28/classram.html">ram</a></div><div class="ttdef"><b>Definition:</b> ram.h:7</div></div>
+<div class="ttc" id="aclassram_html_a342f5f90906a9e41a2687214bc13bc5d"><div class="ttname"><a href="../../dd/d28/classram.html#a342f5f90906a9e41a2687214bc13bc5d">ram::~ram</a></div><div class="ttdeci">~ram()</div><div class="ttdef"><b>Definition:</b> ram.h:17</div></div>
+<div class="ttc" id="aclassram_html_a40fb07b2eba690992ba281ca6ef9902c"><div class="ttname"><a href="../../dd/d28/classram.html#a40fb07b2eba690992ba281ca6ef9902c">ram::ram</a></div><div class="ttdeci">ram()</div><div class="ttdef"><b>Definition:</b> ram.h:12</div></div>
+<div class="ttc" id="aclassram_html_a85983e19a0af45528085f72393c69ba3"><div class="ttname"><a href="../../dd/d28/classram.html#a85983e19a0af45528085f72393c69ba3">ram::read</a></div><div class="ttdeci">virtual uint8_t read(uint16_t addr, bool bReadOnly=false) override</div><div class="ttdef"><b>Definition:</b> ram.h:27</div></div>
+<div class="ttc" id="aclassram_html_ad1d4c635b695934d8daf2d188149cb57"><div class="ttname"><a href="../../dd/d28/classram.html#ad1d4c635b695934d8daf2d188149cb57">ram::isInRange</a></div><div class="ttdeci">virtual bool isInRange(uint16_t addr) override</div><div class="ttdef"><b>Definition:</b> ram.h:22</div></div>
+<div class="ttc" id="aclassram_html_af0f454094d68ea49725c4f241023cf6a"><div class="ttname"><a href="../../dd/d28/classram.html#af0f454094d68ea49725c4f241023cf6a">ram::write</a></div><div class="ttdeci">virtual void write(uint16_t addr, uint8_t data) override</div><div class="ttdef"><b>Definition:</b> ram.h:32</div></div>
+</div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

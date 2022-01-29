@@ -1,5 +1,6 @@
 #include <gtest/gtest.h>
 #include "LaughTaleEngine.h"
+
 #include <iostream>
 #include <stdio.h>
 

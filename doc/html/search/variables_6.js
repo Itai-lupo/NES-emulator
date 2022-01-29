@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['v_0',['V',['../d9/dbe/classcpu6502.html#a1a3ed8ab8e690f3b9000d3d5a5fe9999',1,'cpu6502']]]
+  ['n_0',['N',['../d9/dbe/classcpu6502.html#aa073b5fa51259af01bb2f1c7d6932b1f',1,'cpu6502']]],
+  ['name_1',['name',['../dd/d5a/structcpu6502_1_1instruction6502.html#a2a53e3f151179b30456035e96e48e540',1,'cpu6502::instruction6502']]]
 ];

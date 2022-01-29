@@ -60,11 +60,11 @@ namespace LTE
 
                     gameObject *build(entityTaleId id)
                     {
+                        prodect->id = id;
                         for(component *c: prodect->components){
                             c->setParent(id, prodect->winId);
                             c->init(prodect);
                         }
-                        prodect->id = id;
                         return prodect;
                     }
  

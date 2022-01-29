@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['b_0',['B',['../d9/dbe/classcpu6502.html#a8e263976bfd55d8bed62b46d46673310',1,'cpu6502']]],
-  ['bus_2eh_1',['bus.h',['../d2/d49/include_2bus_emulation_2bus_8h.html',1,'(Global Namespace)'],['../db/dcb/src_2bus_01emulation_2bus_8h.html',1,'(Global Namespace)']]]
+  ['a_0',['a',['../d9/dbe/classcpu6502.html#abae1a951335e55fdfd09807ea9f74598',1,'cpu6502']]],
+  ['addr_1',['addr',['../d9/dbe/classcpu6502.html#af958ce4faa6c741d555eab25eeecc209',1,'cpu6502']]],
+  ['addrmode_2',['addrmode',['../dd/d5a/structcpu6502_1_1instruction6502.html#ac9ed1515b43843b4fecab9b0bc2c053d',1,'cpu6502::instruction6502']]]
 ];

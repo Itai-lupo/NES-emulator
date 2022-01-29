@@ -18,7 +18,7 @@ namespace LTE
     void entityManger::close()
     {
         entityManger::entitys.clear();
-        entityManger::nextGameObjectId = 0;
+        entityManger::nextGameObjectId = 1;
     }
 
     entityTaleId entityManger::addEntity(std::function<void(gameObject::gameObjectBuilder *Builder)> buildGameObject)

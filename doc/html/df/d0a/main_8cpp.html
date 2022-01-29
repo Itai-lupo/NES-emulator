@@ -92,19 +92,24 @@ $(document).ready(function(){initNavTree('df/d0a/main_8cpp.html','../../'); init
 <div class="textblock"><code>#include &quot;LaughTaleEngine.h&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d3/d67/6502_8h_source.html">6502.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../dc/da7/cpu_8h_source.html">cpu.h</a>&quot;</code><br />
+<code>#include &quot;ram.h&quot;</code><br />
+<code>#include &quot;bus.h&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for main.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../da/dce/main_8cpp__incl.png" border="0" usemap="#asrc_2main_8cpp" alt=""/></div>
 <map name="asrc_2main_8cpp" id="asrc_2main_8cpp">
-<area shape="rect" title=" " alt="" coords="46,5,142,32"/>
-<area shape="rect" title=" " alt="" coords="5,155,137,181"/>
-<area shape="rect" href="../../d3/d67/6502_8h.html" title=" " alt="" coords="145,80,205,107"/>
-<area shape="rect" href="../../dc/da7/cpu_8h.html" title=" " alt="" coords="67,80,121,107"/>
-<area shape="rect" href="../../db/d9c/instrction_8h.html" title=" " alt="" coords="183,229,269,256"/>
-<area shape="rect" href="../../de/d17/instructions_table_8h.html" title=" " alt="" coords="213,155,343,181"/>
-<area shape="rect" title=" " alt="" coords="141,304,220,331"/>
-<area shape="rect" title=" " alt="" coords="244,304,299,331"/>
+<area shape="rect" title=" " alt="" coords="245,5,341,32"/>
+<area shape="rect" title=" " alt="" coords="5,229,137,256"/>
+<area shape="rect" href="../../d3/d67/6502_8h.html" title=" " alt="" coords="196,155,256,181"/>
+<area shape="rect" title=" " alt="" coords="418,229,471,256"/>
+<area shape="rect" href="../../dc/da7/cpu_8h.html" title=" " alt="" coords="266,80,319,107"/>
+<area shape="rect" title=" " alt="" coords="465,80,520,107"/>
+<area shape="rect" href="../../db/d9c/instrction_8h.html" title=" " alt="" coords="218,304,303,331"/>
+<area shape="rect" title=" " alt="" coords="136,379,215,405"/>
+<area shape="rect" href="../../de/d17/instructions_table_8h.html" title=" " alt="" coords="263,229,394,256"/>
+<area shape="rect" title=" " alt="" coords="239,379,293,405"/>
+<area shape="rect" title=" " alt="" coords="331,155,390,181"/>
 </map>
 </div>
 </div><table class="memberdecls">
@@ -128,17 +133,63 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">    6</span>{</div>
-<div class="line"><span class="lineno">    7</span>    LTE::app::init();</div>
-<div class="line"><span class="lineno">    8</span>    <span class="comment">//game systems init code go here;</span></div>
-<div class="line"><span class="lineno">    9</span> </div>
-<div class="line"><span class="lineno">   10</span>    LTE::app::run();</div>
-<div class="line"><span class="lineno">   11</span>    <span class="comment">//game systems close code go here;</span></div>
-<div class="line"><span class="lineno">   12</span> </div>
-<div class="line"><span class="lineno">   13</span>    LTE::app::close();</div>
-<div class="line"><span class="lineno">   14</span>    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">   15</span>}</div>
-</div><!-- fragment -->
+<div class="fragment"><div class="line"><span class="lineno">   33</span>{</div>
+<div class="line"><span class="lineno">   34</span>    LTE::app::init();</div>
+<div class="line"><span class="lineno">   35</span>    <span class="comment">//game systems init code go here;</span></div>
+<div class="line"><span class="lineno">   36</span>    <a class="code hl_class" href="../../dd/d28/classram.html">ram</a> *r = <span class="keyword">new</span> <a class="code hl_class" href="../../dd/d28/classram.html">ram</a>();</div>
+<div class="line"><span class="lineno">   37</span> </div>
+<div class="line"><span class="lineno">   38</span>    std::stringstream ss;</div>
+<div class="line"><span class="lineno">   39</span>    ss &lt;&lt; <span class="stringliteral">&quot;A2 0A 8E 00 00 A2 03 8E 01 00 AC 00 00 A9 00 18 6D 01 00 88 D0 FA 8D 02 00 EA EA EA&quot;</span>;</div>
+<div class="line"><span class="lineno">   40</span>    uint16_t nOffset = 0x8000;</div>
+<div class="line"><span class="lineno">   41</span>    <span class="keywordflow">while</span> (!ss.eof())</div>
+<div class="line"><span class="lineno">   42</span>    {</div>
+<div class="line"><span class="lineno">   43</span>        std::string b;</div>
+<div class="line"><span class="lineno">   44</span>        ss &gt;&gt; b;</div>
+<div class="line"><span class="lineno">   45</span>        r-&gt;<a class="code hl_function" href="../../dd/d28/classram.html#af0f454094d68ea49725c4f241023cf6a">write</a>(nOffset++, (uint8_t)std::stoul(b, <span class="keyword">nullptr</span>, 16));</div>
+<div class="line"><span class="lineno">   46</span>    }</div>
+<div class="line"><span class="lineno">   47</span> </div>
+<div class="line"><span class="lineno">   48</span>    r-&gt;<a class="code hl_function" href="../../dd/d28/classram.html#af0f454094d68ea49725c4f241023cf6a">write</a>(0xFFFC, 0x00);</div>
+<div class="line"><span class="lineno">   49</span>    r-&gt;<a class="code hl_function" href="../../dd/d28/classram.html#af0f454094d68ea49725c4f241023cf6a">write</a>(0xFFFD, 0x80);</div>
+<div class="line"><span class="lineno">   50</span> </div>
+<div class="line"><span class="lineno">   51</span> </div>
+<div class="line"><span class="lineno">   52</span>    LTE::entityTaleId <span class="keywordtype">id</span> =  LTE::entityManger::addEntity(</div>
+<div class="line"><span class="lineno">   53</span>        [&amp;](LTE::gameObject::gameObjectBuilder *b)</div>
+<div class="line"><span class="lineno">   54</span>        {</div>
+<div class="line"><span class="lineno">   55</span>            b-&gt;setObjectName(<span class="stringliteral">&quot;system data&quot;</span>)-&gt;</div>
+<div class="line"><span class="lineno">   56</span>                addComponent(<span class="keyword">new</span> <a class="code hl_class" href="../../d9/dbe/classcpu6502.html">cpu6502</a>())-&gt;</div>
+<div class="line"><span class="lineno">   57</span>                addComponent((<span class="keyword">new</span> <a class="code hl_class" href="../../d0/d88/classbus.html">bus&lt;uint8_t, uint16_t&gt;</a>())-&gt;pushDevice(r));</div>
+<div class="line"><span class="lineno">   58</span>        });</div>
+<div class="line"><span class="lineno">   59</span> </div>
+<div class="line"><span class="lineno">   60</span>    <a class="code hl_function" href="../../de/d33/classcpu.html#a5786aff4b18f0688c2a85c8556cf8e0a">cpu&lt;uint8_t, uint16_t&gt;::init</a>(<span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">   61</span> </div>
+<div class="line"><span class="lineno">   62</span>    LTE::windowManger::addWindow([](LTE::windowBuilder *b){ b-&gt;setTitle(<span class="stringliteral">&quot;nes emulator&quot;</span>);});</div>
+<div class="line"><span class="lineno">   63</span> </div>
+<div class="line"><span class="lineno">   64</span>    LTE::eventManger::startBuildingEvent()-&gt;setEntityID(<span class="keywordtype">id</span>)-&gt;setEventRoute(<span class="stringliteral">&quot;Key pressed/cpu keyDispatcher&quot;</span>)-&gt;setEventCallback(keyDispatcher)-&gt;add();</div>
+<div class="line"><span class="lineno">   65</span> </div>
+<div class="line"><span class="lineno">   66</span> </div>
+<div class="line"><span class="lineno">   67</span>    LTE::app::run();</div>
+<div class="line"><span class="lineno">   68</span>    <span class="comment">//game systems close code go here;</span></div>
+<div class="line"><span class="lineno">   69</span>    <a class="code hl_function" href="../../de/d33/classcpu.html#a40f7f0daa94474f8470d35758d162b54">cpu&lt;uint8_t, uint16_t&gt;::close</a>();</div>
+<div class="line"><span class="lineno">   70</span>    LTE::app::close();</div>
+<div class="line"><span class="lineno">   71</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">   72</span>}</div>
+<div class="ttc" id="aclassbus_html"><div class="ttname"><a href="../../d0/d88/classbus.html">bus&lt; uint8_t, uint16_t &gt;</a></div></div>
+<div class="ttc" id="aclasscpu6502_html"><div class="ttname"><a href="../../d9/dbe/classcpu6502.html">cpu6502</a></div><div class="ttdef"><b>Definition:</b> 6502.h:10</div></div>
+<div class="ttc" id="aclasscpu_html_a40f7f0daa94474f8470d35758d162b54"><div class="ttname"><a href="../../de/d33/classcpu.html#a40f7f0daa94474f8470d35758d162b54">cpu::close</a></div><div class="ttdeci">static void close()</div><div class="ttdef"><b>Definition:</b> cpu.h:47</div></div>
+<div class="ttc" id="aclasscpu_html_a5786aff4b18f0688c2a85c8556cf8e0a"><div class="ttname"><a href="../../de/d33/classcpu.html#a5786aff4b18f0688c2a85c8556cf8e0a">cpu::init</a></div><div class="ttdeci">static void init(LTE::entityTaleId SystemDataId)</div><div class="ttdef"><b>Definition:</b> cpu.h:28</div></div>
+<div class="ttc" id="aclassram_html"><div class="ttname"><a href="../../dd/d28/classram.html">ram</a></div><div class="ttdef"><b>Definition:</b> ram.h:7</div></div>
+<div class="ttc" id="aclassram_html_af0f454094d68ea49725c4f241023cf6a"><div class="ttname"><a href="../../dd/d28/classram.html#af0f454094d68ea49725c4f241023cf6a">ram::write</a></div><div class="ttdeci">virtual void write(uint16_t addr, uint8_t data) override</div><div class="ttdef"><b>Definition:</b> ram.h:32</div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../df/d0a/main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.png" border="0" usemap="#adf/d0a/main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph" alt=""/></div>
+<map name="adf/d0a/main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph" id="adf/d0a/main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph">
+<area shape="rect" title=" " alt="" coords="5,31,56,57"/>
+<area shape="rect" href="../../de/d33/classcpu.html#a5786aff4b18f0688c2a85c8556cf8e0a" title=" " alt="" coords="110,5,177,32"/>
+<area shape="rect" href="../../dd/d28/classram.html#af0f454094d68ea49725c4f241023cf6a" title=" " alt="" coords="104,56,183,83"/>
+</map>
+</div>
+
 </div>
 </div>
 </div><!-- contents -->

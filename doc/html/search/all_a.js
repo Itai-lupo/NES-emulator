@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['u_0',['U',['../d9/dbe/classcpu6502.html#aea4d62529406f9bee5fcc309d2c7c2e6',1,'cpu6502']]]
+  ['n_0',['N',['../d9/dbe/classcpu6502.html#aa073b5fa51259af01bb2f1c7d6932b1f',1,'cpu6502']]],
+  ['name_1',['name',['../dd/d5a/structcpu6502_1_1instruction6502.html#a2a53e3f151179b30456035e96e48e540',1,'cpu6502::instruction6502']]],
+  ['nmi_2',['nmi',['../de/d33/classcpu.html#a803206b5587491451a031522d1c9dce7',1,'cpu']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['reset_0',['reset',['../de/d33/classcpu.html#acc0291b1633b65b45e0e0ea0ebda1ac0',1,'cpu']]]
+  ['main_0',['main',['../df/d0a/main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;main.cpp'],['../de/d7f/main_8test_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;main.test.cpp']]]
 ];

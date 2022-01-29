@@ -59,7 +59,8 @@
                 "${workspaceFolder}/vendor/LaugtaleGameEngine/src/soundEngine/devices/",
                 "${workspaceFolder}/vendor/LaugtaleGameEngine/src/soundEngine/instruments/",
                 "${workspaceFolder}/vendor/LaugtaleGameEngine/src/soundEngine/devices/linux/",
-                "${workspaceFolder}/include/cpuEmulation/6502Instruction"
+                "${workspaceFolder}/include/cpuEmulation/6502Instruction",
+                "${workspaceFolder}/include/cpuEmulation"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/clang",

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>laughtale game engine: src/cpu emulation/6502.cpp File Reference</title>
+<title>laughtale game engine: src/cpuEmulation/6502.cpp File Reference</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -84,30 +84,75 @@ $(document).ready(function(){initNavTree('dc/d39/6502_8cpp.html','../../'); init
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">6502.cpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="../../d3/d67/6502_8h_source.html">6502.h</a>&quot;</code><br />
+<code>#include &quot;LaughTaleEngine.h&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for 6502.cpp:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../dd/d16/6502_8cpp__incl.png" border="0" usemap="#asrc_2cpu_01emulation_26502_8cpp" alt=""/></div>
-<map name="asrc_2cpu_01emulation_26502_8cpp" id="asrc_2cpu_01emulation_26502_8cpp">
-<area shape="rect" title=" " alt="" coords="85,5,265,32"/>
-<area shape="rect" href="../../d3/d67/6502_8h.html" title=" " alt="" coords="145,80,205,107"/>
+<div class="center"><img src="../../dd/d16/6502_8cpp__incl.png" border="0" usemap="#asrc_2cpu_emulation_26502_8cpp" alt=""/></div>
+<map name="asrc_2cpu_emulation_26502_8cpp" id="asrc_2cpu_emulation_26502_8cpp">
+<area shape="rect" title=" " alt="" coords="85,5,263,32"/>
+<area shape="rect" href="../../d3/d67/6502_8h.html" title=" " alt="" coords="196,80,256,107"/>
 <area shape="rect" title=" " alt="" coords="5,155,137,181"/>
-<area shape="rect" href="../../db/d9c/instrction_8h.html" title=" " alt="" coords="183,229,269,256"/>
+<area shape="rect" href="../../db/d9c/instrction_8h.html" title=" " alt="" coords="235,229,321,256"/>
+<area shape="rect" title=" " alt="" coords="336,304,415,331"/>
 <area shape="rect" href="../../de/d17/instructions_table_8h.html" title=" " alt="" coords="213,155,343,181"/>
-<area shape="rect" title=" " alt="" coords="141,304,220,331"/>
-<area shape="rect" title=" " alt="" coords="244,304,299,331"/>
+<area shape="rect" title=" " alt="" coords="418,155,471,181"/>
+<area shape="rect" title=" " alt="" coords="251,304,305,331"/>
 </map>
 </div>
-</div></div><!-- contents -->
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ade70fa8abce6b20a645d3793dd6fa841"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d39/6502_8cpp.html#ade70fa8abce6b20a645d3793dd6fa841">hex</a> (uint32_t n, uint8_t d)</td></tr>
+<tr class="separator:ade70fa8abce6b20a645d3793dd6fa841"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="ade70fa8abce6b20a645d3793dd6fa841" name="ade70fa8abce6b20a645d3793dd6fa841"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade70fa8abce6b20a645d3793dd6fa841">&#9670;&nbsp;</a></span>hex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string hex </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>d</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">    6</span>{</div>
+<div class="line"><span class="lineno">    7</span>    std::string s(d, <span class="charliteral">&#39;0&#39;</span>);</div>
+<div class="line"><span class="lineno">    8</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = d - 1; i &gt;= 0; i--, n &gt;&gt;= 4)</div>
+<div class="line"><span class="lineno">    9</span>        s[i] = <span class="stringliteral">&quot;0123456789ABCDEF&quot;</span>[n &amp; 0xF];</div>
+<div class="line"><span class="lineno">   10</span>    <span class="keywordflow">return</span> s;</div>
+<div class="line"><span class="lineno">   11</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../dir_351a2611c4fa031f109d8dd995ee650d.html">cpu emulation</a></li><li class="navelem"><a class="el" href="../../dc/d39/6502_8cpp.html">6502.cpp</a></li>
+    <li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../dir_1880f45b0b551cdc2b2ed7947aed3bb7.html">cpuEmulation</a></li><li class="navelem"><a class="el" href="../../dc/d39/6502_8cpp.html">6502.cpp</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>
