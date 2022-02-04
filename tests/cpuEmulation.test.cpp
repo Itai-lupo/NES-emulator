@@ -170,3 +170,45 @@ TEST_F(cpuTest, LDA)
     }
 
 }
+
+TEST_F(cpuTest, MULProgram)
+{
+/*
+        tested asm:
+        *=$8000
+        LDX #10
+        STX $0000
+        LDX #3
+        STX $0001
+        LDY $0000
+        LDA #0
+        CLC
+        loop
+        ADC $0001
+        DEY
+        BNE loop
+        STA $0002
+
+        LOC   CODE         LABEL     INSTRUCTION
+
+*/
+
+
+    std::stringstream ss;
+    ss << "A2 0A 8E 00 00 A2 03 8E 01 00 AC 00 00 A9 00 18 6D 01 00 88 D0 FA 8D 02 00";
+    uint16_t nOffset = 0x8000;
+    while (!ss.eof())
+    {
+        std::string b;
+        ss >> b;
+        r->write(nOffset++, (uint8_t)std::stoul(b, nullptr, 16));
+    }
+
+    LTE::eventManger::trigerEvent(new LTE::coreEventData("cpu cmd/cpu reset/"));
+
+    for (size_t i = 0; i < 8 + 2 + 4 + 2 + 4 + 4 + 2 + 2 + (4 + 2 + 3) * 11 - 1 + 4; i++)
+        LTE::eventManger::trigerEvent(new LTE::coreEventData("cpu cmd/cpu clock/"));
+
+    ASSERT_EQ((int)r->read(2), 30);
+    ASSERT_TRUE((cpu<uint8_t, uint16_t>::isCpuComplete()));
+}
