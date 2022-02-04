@@ -65,8 +65,8 @@ class cpu
                 cpuData->pc++;
                 cycles = cpuData->lookup[opcode].cycles;
 
-                uint8_t additional_cycle1 = (cpuData->*(cpuData->lookup[opcode].addrmode))();
-                uint8_t additional_cycle2 = (cpuData->*(cpuData->lookup[opcode].operate))();
+                int additional_cycle1 = (cpuData->*(cpuData->lookup[opcode].addrmode))();
+                int additional_cycle2 = (cpuData->*(cpuData->lookup[opcode].operate))();
 
                 cycles += (additional_cycle1 & additional_cycle2);
             }

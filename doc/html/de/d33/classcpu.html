@@ -161,8 +161,8 @@ template&lt;typename dataSize , typename addrSize &gt; </div>
 <div class="line"><span class="lineno">   65</span>                cpuData-&gt;pc++;</div>
 <div class="line"><span class="lineno">   66</span>                cycles = cpuData-&gt;lookup[opcode].cycles;</div>
 <div class="line"><span class="lineno">   67</span> </div>
-<div class="line"><span class="lineno">   68</span>                uint8_t additional_cycle1 = (cpuData-&gt;*(cpuData-&gt;lookup[opcode].addrmode))();</div>
-<div class="line"><span class="lineno">   69</span>                uint8_t additional_cycle2 = (cpuData-&gt;*(cpuData-&gt;lookup[opcode].operate))();</div>
+<div class="line"><span class="lineno">   68</span>                <span class="keywordtype">int</span> additional_cycle1 = (cpuData-&gt;*(cpuData-&gt;lookup[opcode].addrmode))();</div>
+<div class="line"><span class="lineno">   69</span>                <span class="keywordtype">int</span> additional_cycle2 = (cpuData-&gt;*(cpuData-&gt;lookup[opcode].operate))();</div>
 <div class="line"><span class="lineno">   70</span> </div>
 <div class="line"><span class="lineno">   71</span>                cycles += (additional_cycle1 &amp; additional_cycle2);</div>
 <div class="line"><span class="lineno">   72</span>            }</div>

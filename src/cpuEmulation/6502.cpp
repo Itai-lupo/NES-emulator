@@ -112,14 +112,30 @@ uint8_t cpu6502::IND()
 
 uint8_t cpu6502::IZX()
 {
-    LAUGHTALE_ENGINR_LOG_INFO("IZX")
+    uint8_t temp = systemBus->read(pc);
+    pc++;
+
+    addr = systemBus->read((temp + x) & 0x00FF);
+    addr |= systemBus->read((temp + x + 1) & 0x00FF) << 8;
+    
+    LAUGHTALE_ENGINR_LOG_INFO("IZX(" << hex(addr, 4) << "):" << (int)x)
     return 0;
 }
 	
 uint8_t cpu6502::IZY()
 {
-    LAUGHTALE_ENGINR_LOG_INFO("IZY")
-    return 0;
+    
+    uint8_t temp = systemBus->read(pc);
+    pc++;
+
+    uint8_t lo = systemBus->read(temp);
+    uint8_t hi = systemBus->read((temp + 1) & 0x00FF) << 8;
+
+    addr = hi | lo;
+    addr += y;
+
+    LAUGHTALE_ENGINR_LOG_INFO("IZY(" << hex(addr, 4) << "): " << (int)y)
+    return  ((addr & 0xFF00) != (hi << 8));
 }
 
 
@@ -309,20 +325,35 @@ uint8_t cpu6502::JSR()
 	
 uint8_t cpu6502::LDA()
 {
-    LAUGHTALE_ENGINR_LOG_INFO("LDA")
-    return 0;
+    a = systemBus->read(addr);
+    
+    status.Z = (a & 0x00FF) == 0; 
+    status.N = (a & 0x0080) == 0; 
+
+    LAUGHTALE_ENGINR_LOG_INFO("LDA(" << hex(addr, 4) << "} " << (int)a);
+    return 1;
 }
 	
 uint8_t cpu6502::LDX()
 {
-    LAUGHTALE_ENGINR_LOG_INFO("LDX")
-    return 0;
+    x = systemBus->read(addr);
+    
+    status.Z = (x & 0x00FF) == 0; 
+    status.N = (x & 0x0080) == 0; 
+
+    LAUGHTALE_ENGINR_LOG_INFO("LDX(" << hex(addr, 4) << "} " << (int)x);
+    return 1;
 }
 	
 uint8_t cpu6502::LDY()
 {
-    LAUGHTALE_ENGINR_LOG_INFO("LDY")
-    return 0;
+    y = systemBus->read(addr);
+    
+    status.Z = (y & 0x00FF) == 0; 
+    status.N = (y & 0x0080) == 0; 
+
+    LAUGHTALE_ENGINR_LOG_INFO("LDY(" << hex(addr, 4) << "} " << (int)y);
+    return 1;
 }
 
 uint8_t cpu6502::LSR()
@@ -417,19 +448,22 @@ uint8_t cpu6502::SEI()
 	
 uint8_t cpu6502::STA()
 {
-    LAUGHTALE_ENGINR_LOG_INFO("STA")
+    systemBus->write(addr, a);
+    LAUGHTALE_ENGINR_LOG_INFO("STA(" << hex(addr, 4) << ") = " << hex(systemBus->read(addr), 2))
     return 0;
 }
 
 uint8_t cpu6502::STX()
 {
-    LAUGHTALE_ENGINR_LOG_INFO("STX")
+    systemBus->write(addr, x);
+    LAUGHTALE_ENGINR_LOG_INFO("STX(" << hex(addr, 4) << ") = " << hex(systemBus->read(addr), 2))
     return 0;
 }
 	
 uint8_t cpu6502::STY()
 {
-    LAUGHTALE_ENGINR_LOG_INFO("STY")
+    systemBus->write(addr, y);
+    LAUGHTALE_ENGINR_LOG_INFO("STY(" << hex(addr, 4) << ") = " << hex(systemBus->read(addr), 2))
     return 0;
 }
 	
