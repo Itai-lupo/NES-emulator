@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['write_0',['write',['../d0/d88/classbus.html#ad0926a660fd5c6e08f88943629c095af',1,'bus::write()'],['../dc/d77/classbus_device.html#a72c738905ce28059b913090afd049061',1,'busDevice::write()'],['../dd/d28/classram.html#af0f454094d68ea49725c4f241023cf6a',1,'ram::write()']]]
+  ['v_0',['V',['../d9/dbe/classcpu6502.html#a1a3ed8ab8e690f3b9000d3d5a5fe9999',1,'cpu6502']]],
+  ['vertical_1',['VERTICAL',['../d6/da5/cartridge_8h.html#af32b022d54641d350cd8d0ef200c79faa1a88641fcd39f2ed3e58a18526e97138',1,'cartridge.h']]]
 ];

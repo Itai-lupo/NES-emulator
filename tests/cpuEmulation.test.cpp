@@ -2,20 +2,51 @@
 #include "LaughTaleEngine.h"
 #include "6502.h"
 #include "cpu.h"
-#include "ram.h"
 #include "bus.h"
 
+class testRam: public busDevice<uint8_t, uint16_t>
+{
+    private:
+    	std::array<uint8_t, 0xFFFF> ramData;
+
+    public:
+        testRam()
+        {
+            for (auto &i : ramData) i = 0x00;
+        }
+
+        ~testRam()
+        {
+
+        }
+
+        virtual bool isInRange(uint16_t addr) override
+        {
+        	return addr >= 0x0000 && addr <= 0xFFFF;
+        }
+
+        virtual uint8_t read(uint16_t addr, bool bReadOnly = false) override
+        {
+            return ramData[addr];
+        }
+
+        virtual void write(uint16_t addr, uint8_t data) override
+        {
+            ramData[addr] = data;
+        }
+
+};
 
 class cpuTest : public ::testing::Test
 {
     public:
-        ram *r;
+        testRam *r;
         cpu6502 *c;
 
         void SetUp()
         {
             LTE::app::init();
-            r = new ram();
+            r = new testRam();
             c = new cpu6502();
             r->write(0xFFFC, 0x00);
             r->write(0xFFFD, 0x80);
@@ -42,7 +73,7 @@ class cpuTest : public ::testing::Test
 };
 
 
-TEST_F(cpuTest, textSimpleCommandExac)
+TEST_F(cpuTest, testSimpleCommandExac)
 {
     std::stringstream ss;
     ss << "EE 00 70";

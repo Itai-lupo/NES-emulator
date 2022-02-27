@@ -105,12 +105,12 @@ Collaboration diagram for cpuTest:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../db/d6d/classcpu_test__coll__graph.png" border="0" usemap="#acpu_test_coll__map" alt="Collaboration graph"/></div>
 <map name="acpu_test_coll__map" id="acpu_test_coll__map">
-<area shape="rect" title=" " alt="" coords="111,185,180,212"/>
+<area shape="rect" title=" " alt="" coords="124,185,193,212"/>
 <area shape="rect" title=" " alt="" coords="5,96,99,123"/>
-<area shape="rect" href="../../dd/d28/classram.html" title=" " alt="" coords="123,96,167,123"/>
-<area shape="rect" href="../../dc/d77/classbus_device.html" title=" " alt="" coords="63,5,201,47"/>
-<area shape="rect" href="../../d9/dbe/classcpu6502.html" title=" " alt="" coords="219,96,290,123"/>
-<area shape="rect" title=" " alt="" coords="225,13,341,39"/>
+<area shape="rect" href="../../d1/d46/classtest_ram.html" title=" " alt="" coords="123,96,194,123"/>
+<area shape="rect" href="../../dc/d77/classbus_device.html" title=" " alt="" coords="77,5,214,47"/>
+<area shape="rect" href="../../d9/dbe/classcpu6502.html" title=" " alt="" coords="233,96,303,123"/>
+<area shape="rect" title=" " alt="" coords="238,13,354,39"/>
 </map>
 <center><span class="legend">[<a target="top" href="../../graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -123,8 +123,8 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:abb36de5794be38e022dc486a42b1974e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/d28/classram.html">ram</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d1e/classcpu_test.html#abb36de5794be38e022dc486a42b1974e">r</a></td></tr>
-<tr class="separator:abb36de5794be38e022dc486a42b1974e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2e41f7caf7416b4a4b7c3a30e3c7b87"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d46/classtest_ram.html">testRam</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d1e/classcpu_test.html#ae2e41f7caf7416b4a4b7c3a30e3c7b87">r</a></td></tr>
+<tr class="separator:ae2e41f7caf7416b4a4b7c3a30e3c7b87"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:affc60d12cd330e6313e1b70094a4c8b0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/dbe/classcpu6502.html">cpu6502</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d1e/classcpu_test.html#affc60d12cd330e6313e1b70094a4c8b0">c</a></td></tr>
 <tr class="separator:affc60d12cd330e6313e1b70094a4c8b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -151,39 +151,39 @@ Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   16</span>        {</div>
-<div class="line"><span class="lineno">   17</span>            LTE::app::init();</div>
-<div class="line"><span class="lineno">   18</span>            <a class="code hl_variable" href="../../d0/d1e/classcpu_test.html#abb36de5794be38e022dc486a42b1974e">r</a> = <span class="keyword">new</span> <a class="code hl_class" href="../../dd/d28/classram.html">ram</a>();</div>
-<div class="line"><span class="lineno">   19</span>            <a class="code hl_variable" href="../../d0/d1e/classcpu_test.html#affc60d12cd330e6313e1b70094a4c8b0">c</a> = <span class="keyword">new</span> <a class="code hl_class" href="../../d9/dbe/classcpu6502.html">cpu6502</a>();</div>
-<div class="line"><span class="lineno">   20</span>            <a class="code hl_variable" href="../../d0/d1e/classcpu_test.html#abb36de5794be38e022dc486a42b1974e">r</a>-&gt;<a class="code hl_function" href="../../dd/d28/classram.html#af0f454094d68ea49725c4f241023cf6a">write</a>(0xFFFC, 0x00);</div>
-<div class="line"><span class="lineno">   21</span>            <a class="code hl_variable" href="../../d0/d1e/classcpu_test.html#abb36de5794be38e022dc486a42b1974e">r</a>-&gt;<a class="code hl_function" href="../../dd/d28/classram.html#af0f454094d68ea49725c4f241023cf6a">write</a>(0xFFFD, 0x80);</div>
-<div class="line"><span class="lineno">   22</span> </div>
-<div class="line"><span class="lineno">   23</span> </div>
-<div class="line"><span class="lineno">   24</span>            LTE::entityTaleId <span class="keywordtype">id</span> =  LTE::entityManger::addEntity(</div>
-<div class="line"><span class="lineno">   25</span>                [&amp;](LTE::gameObject::gameObjectBuilder *b)</div>
-<div class="line"><span class="lineno">   26</span>                {</div>
-<div class="line"><span class="lineno">   27</span>                    b-&gt;setObjectName(<span class="stringliteral">&quot;system data&quot;</span>)-&gt;</div>
-<div class="line"><span class="lineno">   28</span>                        addComponent((<span class="keyword">new</span> <a class="code hl_class" href="../../d0/d88/classbus.html">bus&lt;uint8_t, uint16_t&gt;</a>())-&gt;pushDevice(<a class="code hl_variable" href="../../d0/d1e/classcpu_test.html#abb36de5794be38e022dc486a42b1974e">r</a>))-&gt;</div>
-<div class="line"><span class="lineno">   29</span>                        addComponent(<a class="code hl_variable" href="../../d0/d1e/classcpu_test.html#affc60d12cd330e6313e1b70094a4c8b0">c</a>);</div>
-<div class="line"><span class="lineno">   30</span>                });</div>
-<div class="line"><span class="lineno">   31</span> </div>
-<div class="line"><span class="lineno">   32</span>            <a class="code hl_function" href="../../de/d33/classcpu.html#a5786aff4b18f0688c2a85c8556cf8e0a">cpu&lt;uint8_t, uint16_t&gt;::init</a>(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">   33</span>        }</div>
+<div class="fragment"><div class="line"><span class="lineno">   47</span>        {</div>
+<div class="line"><span class="lineno">   48</span>            LTE::app::init();</div>
+<div class="line"><span class="lineno">   49</span>            <a class="code hl_variable" href="../../d0/d1e/classcpu_test.html#ae2e41f7caf7416b4a4b7c3a30e3c7b87">r</a> = <span class="keyword">new</span> <a class="code hl_class" href="../../d1/d46/classtest_ram.html">testRam</a>();</div>
+<div class="line"><span class="lineno">   50</span>            <a class="code hl_variable" href="../../d0/d1e/classcpu_test.html#affc60d12cd330e6313e1b70094a4c8b0">c</a> = <span class="keyword">new</span> <a class="code hl_class" href="../../d9/dbe/classcpu6502.html">cpu6502</a>();</div>
+<div class="line"><span class="lineno">   51</span>            <a class="code hl_variable" href="../../d0/d1e/classcpu_test.html#ae2e41f7caf7416b4a4b7c3a30e3c7b87">r</a>-&gt;<a class="code hl_function" href="../../d1/d46/classtest_ram.html#a7d514e07f524d46d683d70c7850bbd23">write</a>(0xFFFC, 0x00);</div>
+<div class="line"><span class="lineno">   52</span>            <a class="code hl_variable" href="../../d0/d1e/classcpu_test.html#ae2e41f7caf7416b4a4b7c3a30e3c7b87">r</a>-&gt;<a class="code hl_function" href="../../d1/d46/classtest_ram.html#a7d514e07f524d46d683d70c7850bbd23">write</a>(0xFFFD, 0x80);</div>
+<div class="line"><span class="lineno">   53</span> </div>
+<div class="line"><span class="lineno">   54</span> </div>
+<div class="line"><span class="lineno">   55</span>            LTE::entityTaleId <span class="keywordtype">id</span> =  LTE::entityManger::addEntity(</div>
+<div class="line"><span class="lineno">   56</span>                [&amp;](LTE::gameObject::gameObjectBuilder *b)</div>
+<div class="line"><span class="lineno">   57</span>                {</div>
+<div class="line"><span class="lineno">   58</span>                    b-&gt;setObjectName(<span class="stringliteral">&quot;system data&quot;</span>)-&gt;</div>
+<div class="line"><span class="lineno">   59</span>                        addComponent((<span class="keyword">new</span> <a class="code hl_class" href="../../d0/d88/classbus.html">bus&lt;uint8_t, uint16_t&gt;</a>())-&gt;pushDevice(<a class="code hl_variable" href="../../d0/d1e/classcpu_test.html#ae2e41f7caf7416b4a4b7c3a30e3c7b87">r</a>))-&gt;</div>
+<div class="line"><span class="lineno">   60</span>                        addComponent(<a class="code hl_variable" href="../../d0/d1e/classcpu_test.html#affc60d12cd330e6313e1b70094a4c8b0">c</a>);</div>
+<div class="line"><span class="lineno">   61</span>                });</div>
+<div class="line"><span class="lineno">   62</span> </div>
+<div class="line"><span class="lineno">   63</span>            <a class="code hl_function" href="../../de/d33/classcpu.html#a5786aff4b18f0688c2a85c8556cf8e0a">cpu&lt;uint8_t, uint16_t&gt;::init</a>(<span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">   64</span>        }</div>
 <div class="ttc" id="aclassbus_html"><div class="ttname"><a href="../../d0/d88/classbus.html">bus&lt; uint8_t, uint16_t &gt;</a></div></div>
 <div class="ttc" id="aclasscpu6502_html"><div class="ttname"><a href="../../d9/dbe/classcpu6502.html">cpu6502</a></div><div class="ttdef"><b>Definition:</b> 6502.h:10</div></div>
 <div class="ttc" id="aclasscpu_html_a5786aff4b18f0688c2a85c8556cf8e0a"><div class="ttname"><a href="../../de/d33/classcpu.html#a5786aff4b18f0688c2a85c8556cf8e0a">cpu::init</a></div><div class="ttdeci">static void init(LTE::entityTaleId SystemDataId)</div><div class="ttdef"><b>Definition:</b> cpu.h:28</div></div>
-<div class="ttc" id="aclasscpu_test_html_abb36de5794be38e022dc486a42b1974e"><div class="ttname"><a href="../../d0/d1e/classcpu_test.html#abb36de5794be38e022dc486a42b1974e">cpuTest::r</a></div><div class="ttdeci">ram * r</div><div class="ttdef"><b>Definition:</b> cpuEmulation.test.cpp:12</div></div>
-<div class="ttc" id="aclasscpu_test_html_affc60d12cd330e6313e1b70094a4c8b0"><div class="ttname"><a href="../../d0/d1e/classcpu_test.html#affc60d12cd330e6313e1b70094a4c8b0">cpuTest::c</a></div><div class="ttdeci">cpu6502 * c</div><div class="ttdef"><b>Definition:</b> cpuEmulation.test.cpp:13</div></div>
-<div class="ttc" id="aclassram_html"><div class="ttname"><a href="../../dd/d28/classram.html">ram</a></div><div class="ttdef"><b>Definition:</b> ram.h:7</div></div>
-<div class="ttc" id="aclassram_html_af0f454094d68ea49725c4f241023cf6a"><div class="ttname"><a href="../../dd/d28/classram.html#af0f454094d68ea49725c4f241023cf6a">ram::write</a></div><div class="ttdeci">virtual void write(uint16_t addr, uint8_t data) override</div><div class="ttdef"><b>Definition:</b> ram.h:32</div></div>
+<div class="ttc" id="aclasscpu_test_html_ae2e41f7caf7416b4a4b7c3a30e3c7b87"><div class="ttname"><a href="../../d0/d1e/classcpu_test.html#ae2e41f7caf7416b4a4b7c3a30e3c7b87">cpuTest::r</a></div><div class="ttdeci">testRam * r</div><div class="ttdef"><b>Definition:</b> cpuEmulation.test.cpp:43</div></div>
+<div class="ttc" id="aclasscpu_test_html_affc60d12cd330e6313e1b70094a4c8b0"><div class="ttname"><a href="../../d0/d1e/classcpu_test.html#affc60d12cd330e6313e1b70094a4c8b0">cpuTest::c</a></div><div class="ttdeci">cpu6502 * c</div><div class="ttdef"><b>Definition:</b> cpuEmulation.test.cpp:44</div></div>
+<div class="ttc" id="aclasstest_ram_html"><div class="ttname"><a href="../../d1/d46/classtest_ram.html">testRam</a></div><div class="ttdef"><b>Definition:</b> cpuEmulation.test.cpp:8</div></div>
+<div class="ttc" id="aclasstest_ram_html_a7d514e07f524d46d683d70c7850bbd23"><div class="ttname"><a href="../../d1/d46/classtest_ram.html#a7d514e07f524d46d683d70c7850bbd23">testRam::write</a></div><div class="ttdeci">virtual void write(uint16_t addr, uint8_t data) override</div><div class="ttdef"><b>Definition:</b> cpuEmulation.test.cpp:33</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d0/d1e/classcpu_test_a3f075970182d44a56057cccaeae3837e_cgraph.png" border="0" usemap="#ad0/d1e/classcpu_test_a3f075970182d44a56057cccaeae3837e_cgraph" alt=""/></div>
 <map name="ad0/d1e/classcpu_test_a3f075970182d44a56057cccaeae3837e_cgraph" id="ad0/d1e/classcpu_test_a3f075970182d44a56057cccaeae3837e_cgraph">
 <area shape="rect" title=" " alt="" coords="5,31,117,57"/>
-<area shape="rect" href="../../de/d33/classcpu.html#a5786aff4b18f0688c2a85c8556cf8e0a" title=" " alt="" coords="171,5,238,32"/>
-<area shape="rect" href="../../dd/d28/classram.html#af0f454094d68ea49725c4f241023cf6a" title=" " alt="" coords="165,56,244,83"/>
+<area shape="rect" href="../../de/d33/classcpu.html#a5786aff4b18f0688c2a85c8556cf8e0a" title=" " alt="" coords="185,5,251,32"/>
+<area shape="rect" href="../../d1/d46/classtest_ram.html#a7d514e07f524d46d683d70c7850bbd23" title=" " alt="" coords="165,56,271,83"/>
 </map>
 </div>
 
@@ -211,11 +211,11 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   36</span>        {</div>
-<div class="line"><span class="lineno">   37</span>            <a class="code hl_function" href="../../de/d33/classcpu.html#a40f7f0daa94474f8470d35758d162b54">cpu&lt;uint8_t, uint16_t&gt;::close</a>();</div>
-<div class="line"><span class="lineno">   38</span>            LTE::app::close();</div>
-<div class="line"><span class="lineno">   39</span> </div>
-<div class="line"><span class="lineno">   40</span>        } </div>
+<div class="fragment"><div class="line"><span class="lineno">   67</span>        {</div>
+<div class="line"><span class="lineno">   68</span>            <a class="code hl_function" href="../../de/d33/classcpu.html#a40f7f0daa94474f8470d35758d162b54">cpu&lt;uint8_t, uint16_t&gt;::close</a>();</div>
+<div class="line"><span class="lineno">   69</span>            LTE::app::close();</div>
+<div class="line"><span class="lineno">   70</span> </div>
+<div class="line"><span class="lineno">   71</span>        } </div>
 <div class="ttc" id="aclasscpu_html_a40f7f0daa94474f8470d35758d162b54"><div class="ttname"><a href="../../de/d33/classcpu.html#a40f7f0daa94474f8470d35758d162b54">cpu::close</a></div><div class="ttdeci">static void close()</div><div class="ttdef"><b>Definition:</b> cpu.h:47</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -244,14 +244,14 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="abb36de5794be38e022dc486a42b1974e" name="abb36de5794be38e022dc486a42b1974e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abb36de5794be38e022dc486a42b1974e">&#9670;&nbsp;</a></span>r</h2>
+<a id="ae2e41f7caf7416b4a4b7c3a30e3c7b87" name="ae2e41f7caf7416b4a4b7c3a30e3c7b87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2e41f7caf7416b4a4b7c3a30e3c7b87">&#9670;&nbsp;</a></span>r</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../dd/d28/classram.html">ram</a>* cpuTest::r</td>
+          <td class="memname"><a class="el" href="../../d1/d46/classtest_ram.html">testRam</a>* cpuTest::r</td>
         </tr>
       </table>
 </div><div class="memdoc">

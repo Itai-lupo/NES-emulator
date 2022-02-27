@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['_7ebus_0',['~bus',['../d0/d88/classbus.html#af590d024e1a4d7752f7abb239d2c84b3',1,'bus']]],
-  ['_7ebusdevice_1',['~busDevice',['../dc/d77/classbus_device.html#a72662e7eb3e77e3a056d45365f328f85',1,'busDevice']]],
-  ['_7ecpu6502_2',['~cpu6502',['../d9/dbe/classcpu6502.html#a4dcfb502c3cc0a55320f932c10c0de9f',1,'cpu6502']]],
-  ['_7eram_3',['~ram',['../dd/d28/classram.html#a342f5f90906a9e41a2687214bc13bc5d',1,'ram']]]
+  ['what_0',['what',['../d4/d1f/classbad_rom_header_exception.html#ae58de8756f0e6cd32675223e22a600fd',1,'badRomHeaderException::what()'],['../dc/d96/classrom_file_not_found_exception.html#abdafbb418c315389e1e1d87c1849f45f',1,'romFileNotFoundException::what()']]],
+  ['write_1',['write',['../d1/d46/classtest_ram.html#a7d514e07f524d46d683d70c7850bbd23',1,'testRam::write()'],['../d6/d3f/classppu.html#a661fc3acbed888e57872b0bf248be401',1,'ppu::write()'],['../dc/de6/classcpu_bus_cartridge.html#ae4af0d8aba720004ac641053377eecd1',1,'cpuBusCartridge::write()'],['../da/de8/classppu_bus_cartridge.html#aa23aefa0b775e0271d7ba62fccb70bb0',1,'ppuBusCartridge::write()'],['../dd/d28/classram.html#af0f454094d68ea49725c4f241023cf6a',1,'ram::write()'],['../dc/d77/classbus_device.html#a72c738905ce28059b913090afd049061',1,'busDevice::write()'],['../d0/d88/classbus.html#ad0926a660fd5c6e08f88943629c095af',1,'bus::write()']]],
+  ['writechrmemory_2',['writeCHRMemory',['../d5/df4/classmapper__000.html#a6e00674fd5bbfd14a7b571ab58640153',1,'mapper_000::writeCHRMemory()'],['../d2/dd7/classcartridge.html#ab6c3a06eb5ecd22980b298a500ddf8fa',1,'cartridge::writeCHRMemory()'],['../d5/df4/classmapper__000.html#a6e00674fd5bbfd14a7b571ab58640153',1,'mapper_000::writeCHRMemory()'],['../d6/d32/classmapper.html#a20ee8500148153ee633b051ab47c9d91',1,'mapper::writeCHRMemory()']]],
+  ['writeprgmemory_3',['writePRGMemory',['../d5/df4/classmapper__000.html#a9f161a22c10becda061524cf7477b356',1,'mapper_000::writePRGMemory()'],['../d2/dd7/classcartridge.html#aba5451bcf75b569b22b1514bba985be6',1,'cartridge::writePRGMemory()'],['../d5/df4/classmapper__000.html#a9f161a22c10becda061524cf7477b356',1,'mapper_000::writePRGMemory()'],['../d6/d32/classmapper.html#a96742f8ed0f0c5ca0914278a6b5f0c26',1,'mapper::writePRGMemory()']]]
 ];

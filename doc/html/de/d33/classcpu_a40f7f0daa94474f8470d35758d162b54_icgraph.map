@@ -1,4 +1,6 @@
 <map id="cpu::close" name="cpu::close">
-<area shape="rect" id="node1" title=" " alt="" coords="188,5,268,32"/>
-<area shape="rect" id="node2" href="$d0/d1e/classcpu_test.html#a26c31a2f583a272ae53cad7ece4afdc5" title=" " alt="" coords="5,5,140,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="208,64,288,91"/>
+<area shape="rect" id="node2" href="$de/d21/classbus_test.html#a82ef9fd573a75fd86ada1c29cf207798" title=" " alt="" coords="15,5,150,32"/>
+<area shape="rect" id="node3" href="$d8/d8f/classcartridge_emualtion_test.html#a95ed4d201be0da8b4d3286a317cae6c3" title=" " alt="" coords="5,57,160,98"/>
+<area shape="rect" id="node4" href="$d0/d1e/classcpu_test.html#a26c31a2f583a272ae53cad7ece4afdc5" title=" " alt="" coords="15,123,150,149"/>
 </map>

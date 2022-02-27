@@ -1,9 +1,14 @@
 var searchData=
 [
-  ['r_0',['r',['../d0/d1e/classcpu_test.html#abb36de5794be38e022dc486a42b1974e',1,'cpuTest']]],
-  ['ram_1',['ram',['../dd/d28/classram.html',1,'ram'],['../dd/d28/classram.html#a40fb07b2eba690992ba281ca6ef9902c',1,'ram::ram()']]],
-  ['ram_2eh_2',['ram.h',['../de/d90/include_2bus_emulation_2ram_8h.html',1,'(Global Namespace)'],['../d8/df3/src_2bus_emulation_2ram_8h.html',1,'(Global Namespace)']]],
-  ['read_3',['read',['../d0/d88/classbus.html#abb29248facedf75907fba0ebf44022b0',1,'bus::read()'],['../dc/d77/classbus_device.html#a76776dbaa4b844927261fe46ab3b690f',1,'busDevice::read()'],['../dd/d28/classram.html#a85983e19a0af45528085f72393c69ba3',1,'ram::read()']]],
-  ['reset_4',['reset',['../de/d33/classcpu.html#a97745a7f67189c0ace83e404c2345ba1',1,'cpu']]],
-  ['rw_5',['RW',['../d9/dbe/classcpu6502.html#a764f5a2d57d981ad1f029ab13059fb98',1,'cpu6502']]]
+  ['pc_0',['pc',['../d9/dbe/classcpu6502.html#a3864a06068e5e31cef733b93b9671298',1,'cpu6502']]],
+  ['ppu_1',['ppu',['../d6/d3f/classppu.html',1,'ppu'],['../d6/d3f/classppu.html#acc051968bbee5704b58e6a70bae22e65',1,'ppu::ppu()']]],
+  ['ppu_2eh_2',['ppu.h',['../d2/df9/ppu_8h.html',1,'']]],
+  ['ppubuscartridge_3',['ppuBusCartridge',['../da/de8/classppu_bus_cartridge.html',1,'ppuBusCartridge'],['../da/de8/classppu_bus_cartridge.html#a051a75d3543480daa9bcd7422ce99aeb',1,'ppuBusCartridge::ppuBusCartridge()']]],
+  ['ppubuscartridge_2eh_4',['ppuBusCartridge.h',['../df/d4d/ppu_bus_cartridge_8h.html',1,'']]],
+  ['prg_5fram_5fsize_5',['prg_ram_size',['../dc/d02/struct_n_e_s_header.html#a3a27ac45ada7e86481bb97897a42f61e',1,'NESHeader']]],
+  ['prg_5from_5fchunks_6',['prg_rom_chunks',['../dc/d02/struct_n_e_s_header.html#a7478f9faea2b35201bd77127633dd226',1,'NESHeader']]],
+  ['prgbanks_7',['prgBanks',['../d6/d32/classmapper.html#a64873a38e7b1203f68a40ba47a3ed8a0',1,'mapper::prgBanks()'],['../d8/d1f/structmappers_data.html#ad32d9ee60696e5114eef9f75a7fb8234',1,'mappersData::prgBanks()']]],
+  ['printdata_2ecpp_8',['printData.cpp',['../d9/d07/print_data_8cpp.html',1,'']]],
+  ['printdata_2eh_9',['printData.h',['../d1/d8c/print_data_8h.html',1,'']]],
+  ['pushdevice_10',['pushDevice',['../d0/d88/classbus.html#a48c90aeac455d34c22da64f98c01bba5',1,'bus']]]
 ];

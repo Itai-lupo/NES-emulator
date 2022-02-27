@@ -16,6 +16,6 @@ filePath=output/test.out
 make -j 14 $filePath || exit 1
 
 clear
-$filePath
+$filePath --gtest_break_on_failure
 
 echo "program exited with code $?"

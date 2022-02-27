@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['status_0',['status',['../d9/dbe/classcpu6502.html#af885f60532b1939ada3a719ccf4461ad',1,'cpu6502']]],
-  ['statusdata_1',['statusData',['../d9/dbe/classcpu6502.html#a71b68863d6facf1c664286a43e08cb84',1,'cpu6502']]],
-  ['stkp_2',['stkp',['../d9/dbe/classcpu6502.html#ae7c07e603fef0455bbda5db0d37a8b73',1,'cpu6502']]]
+  ['r_0',['r',['../de/d21/classbus_test.html#a9607b5b8c2e32330650442b66cde9866',1,'busTest::r()'],['../d8/d8f/classcartridge_emualtion_test.html#a11fbecc2a2ecd2e5e58b0430bf2bcab5',1,'cartridgeEmualtionTest::r()'],['../d0/d1e/classcpu_test.html#ae2e41f7caf7416b4a4b7c3a30e3c7b87',1,'cpuTest::r()']]],
+  ['rw_1',['RW',['../d9/dbe/classcpu6502.html#a764f5a2d57d981ad1f029ab13059fb98',1,'cpu6502']]]
 ];

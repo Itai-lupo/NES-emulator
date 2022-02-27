@@ -217,7 +217,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="../../dc/d77/classbus_device.html#ace475b1abcc4375d4723209ed4be17f0">busDevice&lt; uint8_t, uint16_t &gt;</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   23</span>        {</div>
-<div class="line"><span class="lineno">   24</span>            <span class="keywordflow">return</span> addr &gt;= 0x0000 &amp;&amp; addr &lt;= 0xFFFF;</div>
+<div class="line"><span class="lineno">   24</span>            <span class="keywordflow">return</span> addr &gt;= 0x0000 &amp;&amp; addr &lt;= 0x1FFF;</div>
 <div class="line"><span class="lineno">   25</span>        }</div>
 </div><!-- fragment -->
 </div>
@@ -258,7 +258,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="../../dc/d77/classbus_device.html#a76776dbaa4b844927261fe46ab3b690f">busDevice&lt; uint8_t, uint16_t &gt;</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   28</span>        {</div>
-<div class="line"><span class="lineno">   29</span>            <span class="keywordflow">return</span> ramData[addr];</div>
+<div class="line"><span class="lineno">   29</span>            <span class="keywordflow">return</span> ramData[addr &amp; 0x07FF];</div>
 <div class="line"><span class="lineno">   30</span>        }</div>
 </div><!-- fragment -->
 </div>
@@ -299,7 +299,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="../../dc/d77/classbus_device.html#a72c738905ce28059b913090afd049061">busDevice&lt; uint8_t, uint16_t &gt;</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   33</span>        {</div>
-<div class="line"><span class="lineno">   34</span>            ramData[addr] = data;</div>
+<div class="line"><span class="lineno">   34</span>            ramData[addr &amp; 0x07FF] = data;</div>
 <div class="line"><span class="lineno">   35</span>        }</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -308,7 +308,7 @@ Here is the caller graph for this function:</div>
 <map name="add/d28/classram_af0f454094d68ea49725c4f241023cf6a_icgraph" id="add/d28/classram_af0f454094d68ea49725c4f241023cf6a_icgraph">
 <area shape="rect" title=" " alt="" coords="165,31,244,57"/>
 <area shape="rect" href="../../df/d0a/main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="36,5,87,32"/>
-<area shape="rect" href="../../d0/d1e/classcpu_test.html#a3f075970182d44a56057cccaeae3837e" title=" " alt="" coords="5,56,117,83"/>
+<area shape="rect" href="../../de/d21/classbus_test.html#a5d14e0a3003fa9cd5eb2fba7521bf33f" title=" " alt="" coords="5,56,117,83"/>
 </map>
 </div>
 

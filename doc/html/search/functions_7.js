@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['pushdevice_0',['pushDevice',['../d0/d88/classbus.html#a48c90aeac455d34c22da64f98c01bba5',1,'bus']]]
+  ['nmi_0',['nmi',['../de/d33/classcpu.html#a803206b5587491451a031522d1c9dce7',1,'cpu']]]
 ];

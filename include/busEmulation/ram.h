@@ -6,7 +6,7 @@
 class ram: public busDevice<uint8_t, uint16_t>
 {
     private:
-    	std::array<uint8_t, 64 * 1024> ramData;
+    	std::array<uint8_t, 2048> ramData;
 
     public:
         ram()
@@ -21,17 +21,17 @@ class ram: public busDevice<uint8_t, uint16_t>
 
         virtual bool isInRange(uint16_t addr) override
         {
-        	return addr >= 0x0000 && addr <= 0xFFFF;
+        	return addr >= 0x0000 && addr <= 0x1FFF;
         }
 
         virtual uint8_t read(uint16_t addr, bool bReadOnly = false) override
         {
-            return ramData[addr];
+            return ramData[addr & 0x07FF];
         }
 
         virtual void write(uint16_t addr, uint8_t data) override
         {
-            ramData[addr] = data;
+            ramData[addr & 0x07FF] = data;
         }
 
 };

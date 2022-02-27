@@ -1,4 +1,8 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$dc/d77/classbus_device.html" title=" " alt="" coords="5,5,143,47"/>
-<area shape="rect" id="node2" href="$dd/d28/classram.html" title=" " alt="" coords="191,13,235,39"/>
+<area shape="rect" id="node1" href="$dc/d77/classbus_device.html" title=" " alt="" coords="5,99,143,141"/>
+<area shape="rect" id="node2" href="$dc/de6/classcpu_bus_cartridge.html" title=" " alt="" coords="191,5,309,32"/>
+<area shape="rect" id="node3" href="$d6/d3f/classppu.html" title=" " alt="" coords="229,56,271,83"/>
+<area shape="rect" id="node4" href="$da/de8/classppu_bus_cartridge.html" title=" " alt="" coords="191,107,309,133"/>
+<area shape="rect" id="node5" href="$dd/d28/classram.html" title=" " alt="" coords="228,157,272,184"/>
+<area shape="rect" id="node6" href="$d1/d46/classtest_ram.html" title=" " alt="" coords="215,208,285,235"/>
 </map>

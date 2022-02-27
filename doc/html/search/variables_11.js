@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['useimgui_0',['useImGui',['../d4/d38/class_l_t_e_1_1window.html#adcfc6c1eaa45e93b9fb5017513eea1b0',1,'LTE::window']]]
+  ['z_0',['Z',['../d9/dbe/classcpu6502.html#ab6b5c56f7a484561e180582857410a90',1,'cpu6502']]]
 ];
