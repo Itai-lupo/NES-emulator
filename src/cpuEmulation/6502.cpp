@@ -1,5 +1,5 @@
-#include "6502.h"
 #include "LaughTaleEngine.h"
+#include "6502.h"
 
 
 std::string hex(uint32_t n, uint8_t d)
@@ -9,6 +9,7 @@ std::string hex(uint32_t n, uint8_t d)
         s[i] = "0123456789ABCDEF"[n & 0xF];
     return s;
 }
+
 
 // memory mods -------------------------------------
 uint8_t cpu6502::IMP()

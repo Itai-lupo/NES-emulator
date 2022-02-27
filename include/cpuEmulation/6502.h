@@ -15,6 +15,8 @@ class cpu6502: public LTE::component
             uint8_t (cpu6502::*operate)(void) = nullptr;
             uint8_t (cpu6502::*addrmode)(void) = nullptr;
             uint8_t cycles = 0;
+            uint8_t size;
+
         };
 
         unsigned long clock = 0;
