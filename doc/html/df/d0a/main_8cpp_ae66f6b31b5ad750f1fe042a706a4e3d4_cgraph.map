@@ -1,5 +1,7 @@
 <map id="main" name="main">
-<area shape="rect" id="node1" title=" " alt="" coords="5,31,56,57"/>
-<area shape="rect" id="node2" href="$de/d33/classcpu.html#a5786aff4b18f0688c2a85c8556cf8e0a" title=" " alt="" coords="110,5,177,32"/>
-<area shape="rect" id="node3" href="$dd/d28/classram.html#af0f454094d68ea49725c4f241023cf6a" title=" " alt="" coords="104,56,183,83"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,81,56,108"/>
+<area shape="rect" id="node2" href="$de/d33/classcpu.html#a5786aff4b18f0688c2a85c8556cf8e0a" title=" " alt="" coords="129,5,196,32"/>
+<area shape="rect" id="node3" href="$df/d0a/main_8cpp.html#a4a2adc3d978a792c25ab506f6e13bdfe" title=" " alt="" coords="111,56,215,83"/>
+<area shape="rect" id="node4" href="$d2/dd7/classcartridge.html#a45c8cfd4db0173df711c2e3ac5a78be2" title=" " alt="" coords="111,107,214,133"/>
+<area shape="rect" id="node5" href="$d0/d88/classbus.html#a48c90aeac455d34c22da64f98c01bba5" title=" " alt="" coords="104,157,221,184"/>
 </map>

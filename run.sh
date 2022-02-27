@@ -11,7 +11,7 @@ done
 
 
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/:$b
-filePath=output/theMaze.out
+filePath=output/NES.out
 
 make -j 14 || exit 1
 

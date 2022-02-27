@@ -1,5 +1,4 @@
 <map id="ram::write" name="ram::write">
-<area shape="rect" id="node1" title=" " alt="" coords="165,31,244,57"/>
-<area shape="rect" id="node2" href="$df/d0a/main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="36,5,87,32"/>
-<area shape="rect" id="node3" href="$de/d21/classbus_test.html#a5d14e0a3003fa9cd5eb2fba7521bf33f" title=" " alt="" coords="5,56,117,83"/>
+<area shape="rect" id="node1" title=" " alt="" coords="165,5,244,32"/>
+<area shape="rect" id="node2" href="$de/d21/classbus_test.html#a5d14e0a3003fa9cd5eb2fba7521bf33f" title=" " alt="" coords="5,5,117,32"/>
 </map>

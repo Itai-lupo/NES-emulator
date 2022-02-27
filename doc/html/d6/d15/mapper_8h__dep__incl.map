@@ -1,11 +1,12 @@
 <map id="include/cartridgeEmulation/mappers/mapper.h" name="include/cartridgeEmulation/mappers/mapper.h">
-<area shape="rect" id="node1" title=" " alt="" coords="465,5,640,47"/>
-<area shape="rect" id="node2" href="$d6/da5/cartridge_8h.html" title=" " alt="" coords="204,95,379,136"/>
-<area shape="rect" id="node7" href="$de/d02/000_8h.html" title=" " alt="" coords="403,95,577,136"/>
-<area shape="rect" id="node8" href="$d7/d83/mappers_facory_8h.html" title=" " alt="" coords="454,184,633,225"/>
-<area shape="rect" id="node9" href="$d1/d34/000_8cpp.html" title=" " alt="" coords="653,95,804,136"/>
-<area shape="rect" id="node3" href="$d3/d6a/cpu_bus_cartridge_8h.html" title=" " alt="" coords="5,184,180,225"/>
-<area shape="rect" id="node5" href="$df/d4d/ppu_bus_cartridge_8h.html" title=" " alt="" coords="204,184,379,225"/>
-<area shape="rect" id="node6" href="$d2/d09/cartridge_8cpp.html" title=" " alt="" coords="404,273,555,315"/>
-<area shape="rect" id="node4" href="$dc/db5/cartridge_emualtion_8test_8cpp.html" title=" " alt="" coords="110,281,321,307"/>
+<area shape="rect" id="node1" title=" " alt="" coords="401,5,575,47"/>
+<area shape="rect" id="node2" href="$d6/da5/cartridge_8h.html" title=" " alt="" coords="213,95,387,136"/>
+<area shape="rect" id="node8" href="$de/d02/000_8h.html" title=" " alt="" coords="463,95,638,136"/>
+<area shape="rect" id="node9" href="$d7/d83/mappers_facory_8h.html" title=" " alt="" coords="461,184,640,225"/>
+<area shape="rect" id="node10" href="$d1/d34/000_8cpp.html" title=" " alt="" coords="662,95,813,136"/>
+<area shape="rect" id="node3" href="$d3/d6a/cpu_bus_cartridge_8h.html" title=" " alt="" coords="211,184,386,225"/>
+<area shape="rect" id="node6" href="$df/d4d/ppu_bus_cartridge_8h.html" title=" " alt="" coords="13,184,187,225"/>
+<area shape="rect" id="node7" href="$d2/d09/cartridge_8cpp.html" title=" " alt="" coords="421,273,571,315"/>
+<area shape="rect" id="node4" href="$df/d0a/main_8cpp.html" title=" " alt="" coords="245,281,341,307"/>
+<area shape="rect" id="node5" href="$dc/db5/cartridge_emualtion_8test_8cpp.html" title=" " alt="" coords="5,281,216,307"/>
 </map>

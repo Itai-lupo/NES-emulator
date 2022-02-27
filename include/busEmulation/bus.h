@@ -35,6 +35,7 @@ class bus: public LTE::component
             for(auto& device: busDevices)
                 if(device->isInRange(addr))
                     return device->read(addr, bReadOnly);
+            return 0;
         }
 
         void write(addrSize addr, dataSize data)

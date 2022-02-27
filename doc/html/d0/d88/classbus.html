@@ -276,7 +276,16 @@ template&lt;typename dataSize , typename addrSize &gt; </div>
 <div class="line"><span class="lineno">   29</span>            busDevices.push_back(toAdd);</div>
 <div class="line"><span class="lineno">   30</span>            <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
 <div class="line"><span class="lineno">   31</span>        }</div>
-</div><!-- fragment -->
+</div><!-- fragment --><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d0/d88/classbus_a48c90aeac455d34c22da64f98c01bba5_icgraph.png" border="0" usemap="#ad0/d88/classbus_a48c90aeac455d34c22da64f98c01bba5_icgraph" alt=""/></div>
+<map name="ad0/d88/classbus_a48c90aeac455d34c22da64f98c01bba5_icgraph" id="ad0/d88/classbus_a48c90aeac455d34c22da64f98c01bba5_icgraph">
+<area shape="rect" title=" " alt="" coords="104,5,221,32"/>
+<area shape="rect" href="../../df/d0a/main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,56,32"/>
+</map>
+</div>
+
 </div>
 </div>
 <a id="abb29248facedf75907fba0ebf44022b0" name="abb29248facedf75907fba0ebf44022b0"></a>
@@ -318,7 +327,8 @@ template&lt;typename dataSize , typename addrSize &gt; </div>
 <div class="line"><span class="lineno">   35</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span>&amp; device: busDevices)</div>
 <div class="line"><span class="lineno">   36</span>                <span class="keywordflow">if</span>(device-&gt;isInRange(addr))</div>
 <div class="line"><span class="lineno">   37</span>                    <span class="keywordflow">return</span> device-&gt;read(addr, bReadOnly);</div>
-<div class="line"><span class="lineno">   38</span>        }</div>
+<div class="line"><span class="lineno">   38</span>            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">   39</span>        }</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -369,11 +379,11 @@ template&lt;typename dataSize , typename addrSize &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   41</span>        {</div>
-<div class="line"><span class="lineno">   42</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span>&amp; device: busDevices)</div>
-<div class="line"><span class="lineno">   43</span>                <span class="keywordflow">if</span>(device-&gt;isInRange(addr))</div>
-<div class="line"><span class="lineno">   44</span>                    <span class="keywordflow">return</span> device-&gt;write(addr, data);</div>
-<div class="line"><span class="lineno">   45</span>        }</div>
+<div class="fragment"><div class="line"><span class="lineno">   42</span>        {</div>
+<div class="line"><span class="lineno">   43</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span>&amp; device: busDevices)</div>
+<div class="line"><span class="lineno">   44</span>                <span class="keywordflow">if</span>(device-&gt;isInRange(addr))</div>
+<div class="line"><span class="lineno">   45</span>                    <span class="keywordflow">return</span> device-&gt;write(addr, data);</div>
+<div class="line"><span class="lineno">   46</span>        }</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">

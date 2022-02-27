@@ -7,6 +7,7 @@
 namespace LTE 
 {
 	void window::init(){
+        context->Init();
 		if(useImGui)
 		{
 			app::getOsAPI()->makeContextCurrent(id);
@@ -20,7 +21,6 @@ namespace LTE
 				setEventCallback(onWindowResize)->
 				setWindowId(id)->add();
 
-        context->Init();
 		
 	}
 

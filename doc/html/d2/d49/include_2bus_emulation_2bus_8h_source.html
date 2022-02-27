@@ -124,22 +124,23 @@ $(document).ready(function(){initNavTree('d2/d49/include_2bus_emulation_2bus_8h_
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span>&amp; device: busDevices)</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>                <span class="keywordflow">if</span>(device-&gt;isInRange(addr))</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>                    <span class="keywordflow">return</span> device-&gt;read(addr, bReadOnly);</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        }</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="../../d0/d88/classbus.html#ad0926a660fd5c6e08f88943629c095af">   40</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="../../d0/d88/classbus.html#ad0926a660fd5c6e08f88943629c095af">write</a>(addrSize addr, dataSize data)</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        {</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span>&amp; device: busDevices)</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>                <span class="keywordflow">if</span>(device-&gt;isInRange(addr))</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>                    <span class="keywordflow">return</span> device-&gt;write(addr, data);</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        }</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>};</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        }</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="../../d0/d88/classbus.html#ad0926a660fd5c6e08f88943629c095af">   41</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="../../d0/d88/classbus.html#ad0926a660fd5c6e08f88943629c095af">write</a>(addrSize addr, dataSize data)</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        {</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span>&amp; device: busDevices)</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>                <span class="keywordflow">if</span>(device-&gt;isInRange(addr))</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>                    <span class="keywordflow">return</span> device-&gt;write(addr, data);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        }</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>};</div>
 <div class="ttc" id="abus_device_8h_html"><div class="ttname"><a href="../../d9/deb/bus_device_8h.html">busDevice.h</a></div></div>
 <div class="ttc" id="aclassbus_device_html"><div class="ttname"><a href="../../dc/d77/classbus_device.html">busDevice</a></div><div class="ttdef"><b>Definition:</b> busDevice.h:5</div></div>
 <div class="ttc" id="aclassbus_html"><div class="ttname"><a href="../../d0/d88/classbus.html">bus</a></div><div class="ttdef"><b>Definition:</b> bus.h:9</div></div>
 <div class="ttc" id="aclassbus_html_a48c90aeac455d34c22da64f98c01bba5"><div class="ttname"><a href="../../d0/d88/classbus.html#a48c90aeac455d34c22da64f98c01bba5">bus::pushDevice</a></div><div class="ttdeci">bus * pushDevice(busDevice&lt; dataSize, addrSize &gt; *toAdd)</div><div class="ttdef"><b>Definition:</b> bus.h:27</div></div>
 <div class="ttc" id="aclassbus_html_a68d3266be0898d51da88abb2c02b3b01"><div class="ttname"><a href="../../d0/d88/classbus.html#a68d3266be0898d51da88abb2c02b3b01">bus::end</a></div><div class="ttdeci">virtual void end() override</div><div class="ttdef"><b>Definition:</b> bus.h:19</div></div>
 <div class="ttc" id="aclassbus_html_abb29248facedf75907fba0ebf44022b0"><div class="ttname"><a href="../../d0/d88/classbus.html#abb29248facedf75907fba0ebf44022b0">bus::read</a></div><div class="ttdeci">dataSize read(addrSize addr, bool bReadOnly=false)</div><div class="ttdef"><b>Definition:</b> bus.h:33</div></div>
-<div class="ttc" id="aclassbus_html_ad0926a660fd5c6e08f88943629c095af"><div class="ttname"><a href="../../d0/d88/classbus.html#ad0926a660fd5c6e08f88943629c095af">bus::write</a></div><div class="ttdeci">void write(addrSize addr, dataSize data)</div><div class="ttdef"><b>Definition:</b> bus.h:40</div></div>
+<div class="ttc" id="aclassbus_html_ad0926a660fd5c6e08f88943629c095af"><div class="ttname"><a href="../../d0/d88/classbus.html#ad0926a660fd5c6e08f88943629c095af">bus::write</a></div><div class="ttdeci">void write(addrSize addr, dataSize data)</div><div class="ttdef"><b>Definition:</b> bus.h:41</div></div>
 <div class="ttc" id="aclassbus_html_ad73c6c35db12d75f4dd3d4098192ff0d"><div class="ttname"><a href="../../d0/d88/classbus.html#ad73c6c35db12d75f4dd3d4098192ff0d">bus::bus</a></div><div class="ttdeci">bus()</div><div class="ttdef"><b>Definition:</b> bus.h:24</div></div>
 <div class="ttc" id="aclassbus_html_af590d024e1a4d7752f7abb239d2c84b3"><div class="ttname"><a href="../../d0/d88/classbus.html#af590d024e1a4d7752f7abb239d2c84b3">bus::~bus</a></div><div class="ttdeci">~bus()</div><div class="ttdef"><b>Definition:</b> bus.h:25</div></div>
 <div class="ttc" id="aclassbus_html_afd805fbcb7ed6fc98123a63603d2620f"><div class="ttname"><a href="../../d0/d88/classbus.html#afd805fbcb7ed6fc98123a63603d2620f">bus::init</a></div><div class="ttdeci">virtual void init(LTE::gameObject *parent) override</div><div class="ttdef"><b>Definition:</b> bus.h:14</div></div>
