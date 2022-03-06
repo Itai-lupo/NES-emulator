@@ -85,8 +85,7 @@ $(document).ready(function(){initNavTree('de/d90/include_2bus_emulation_2ram_8h.
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#nested-classes">Classes</a>  </div>
   <div class="headertitle"><div class="title">ram.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
@@ -111,47 +110,7 @@ Include dependency graph for ram.h:</div>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d28/classram.html">ram</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:a4430917b0dc59f3c7910486eea57f3df"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d90/include_2bus_emulation_2ram_8h.html#a4430917b0dc59f3c7910486eea57f3df">datatoHexString</a> (uint32_t n, uint8_t d)</td></tr>
-<tr class="separator:a4430917b0dc59f3c7910486eea57f3df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Function Documentation</h2>
-<a id="a4430917b0dc59f3c7910486eea57f3df" name="a4430917b0dc59f3c7910486eea57f3df"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4430917b0dc59f3c7910486eea57f3df">&#9670;&nbsp;</a></span>datatoHexString()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::string datatoHexString </td>
-          <td>(</td>
-          <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>n</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>d</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">    7</span>{</div>
-<div class="line"><span class="lineno">    8</span>    std::string s(d, <span class="charliteral">&#39;0&#39;</span>);</div>
-<div class="line"><span class="lineno">    9</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = d - 1; i &gt;= 0; i--, n &gt;&gt;= 4)</div>
-<div class="line"><span class="lineno">   10</span>        s[i] = <span class="stringliteral">&quot;0123456789ABCDEF&quot;</span>[n &amp; 0xF];</div>
-<div class="line"><span class="lineno">   11</span>    <span class="keywordflow">return</span> s;</div>
-<div class="line"><span class="lineno">   12</span>}</div>
-</div><!-- fragment -->
-</div>
-</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

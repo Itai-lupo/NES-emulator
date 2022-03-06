@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['y_0',['y',['../d9/dbe/classcpu6502.html#ae6c86f905e263e865c113ed3a42d042c',1,'cpu6502']]]
+  ['x_0',['x',['../d9/dbe/classcpu6502.html#a58821a0e169aba9d2202934cb75edd98',1,'cpu6502']]]
 ];

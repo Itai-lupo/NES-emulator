@@ -34,13 +34,15 @@ enum MIRROR
 class cartridge
 {
     private:
-        mapper *cartMapper;
+        mapper *cartMapper = nullptr;
 
         NESHeader header;
         uint8_t mapperId;        
         uint8_t PRGBanks = 0;
         uint8_t CHRBanks = 0;
         MIRROR mirror = HORIZONTAL;
+    
+        bool thereIsALoadedCart = false;
 
         std::vector<uint8_t> PRGMemory;
         std::vector<uint8_t> CHRMemory;

@@ -1,8 +1,5 @@
 var searchData=
 [
-  ['size_0',['size',['../dd/d5a/structcpu6502_1_1instruction6502.html#abef88bb85bd822324d446e669cca7cf8',1,'cpu6502::instruction6502']]],
-  ['status_1',['status',['../d9/dbe/classcpu6502.html#af885f60532b1939ada3a719ccf4461ad',1,'cpu6502']]],
-  ['statusdata_2',['statusData',['../d9/dbe/classcpu6502.html#a71b68863d6facf1c664286a43e08cb84',1,'cpu6502']]],
-  ['stkp_3',['stkp',['../d9/dbe/classcpu6502.html#ae7c07e603fef0455bbda5db0d37a8b73',1,'cpu6502']]],
-  ['sysbus_4',['sysBus',['../de/d21/classbus_test.html#ac34a488b3ae6db6b2090b5cd555179f0',1,'busTest::sysBus()'],['../d8/d8f/classcartridge_emualtion_test.html#a958c2da6a79d1003b289e8b4c21dd141',1,'cartridgeEmualtionTest::sysBus()']]]
+  ['r_0',['r',['../de/d21/classbus_test.html#a9607b5b8c2e32330650442b66cde9866',1,'busTest::r()'],['../d8/d8f/classcartridge_emualtion_test.html#a11fbecc2a2ecd2e5e58b0430bf2bcab5',1,'cartridgeEmualtionTest::r()'],['../d0/d1e/classcpu_test.html#ae2e41f7caf7416b4a4b7c3a30e3c7b87',1,'cpuTest::r()']]],
+  ['rw_1',['RW',['../d9/dbe/classcpu6502.html#a764f5a2d57d981ad1f029ab13059fb98',1,'cpu6502']]]
 ];

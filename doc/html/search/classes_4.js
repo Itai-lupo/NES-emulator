@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['nesheader_0',['NESHeader',['../dc/d02/struct_n_e_s_header.html',1,'']]]
+  ['instruction6502_0',['instruction6502',['../dd/d5a/structcpu6502_1_1instruction6502.html',1,'cpu6502']]]
 ];

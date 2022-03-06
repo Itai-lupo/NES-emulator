@@ -13,31 +13,32 @@ void cartridge::load(const std::string& romPath)
     initMapper();
 
     ifs.close();
+    thereIsALoadedCart = true;
 }
 
 uint8_t cartridge::readPRGMemory(uint16_t addr)
 {
-    if(cartMapper->readPRGMemory(addr))
+    if(thereIsALoadedCart && cartMapper->readPRGMemory(addr))
         return PRGMemory[addr];
     return 0;
 }
 
 uint8_t cartridge::readCHRMemory(uint16_t addr)
 {
-    if(cartMapper->readCHRMemory(addr))
+    if(thereIsALoadedCart && cartMapper->readCHRMemory(addr))
         return CHRMemory[addr];
     return 0;
 }
 
 void cartridge::writePRGMemory(uint16_t addr, uint8_t data)
 {
-    if(cartMapper->writePRGMemory(addr))
+    if(thereIsALoadedCart && cartMapper->writePRGMemory(addr))
         PRGMemory[addr] = data;
 }
 
 void cartridge::writeCHRMemory(uint16_t addr, uint8_t data)
 {
-    if(cartMapper->writeCHRMemory(addr))
+    if(thereIsALoadedCart && cartMapper->writeCHRMemory(addr))
         CHRMemory[addr] = data;
 }
 

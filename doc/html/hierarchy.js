@@ -14,11 +14,16 @@ var hierarchy =
       [ "bus< dataSize, addrSize >", "d0/d88/classbus.html", null ],
       [ "cpu6502", "d9/dbe/classcpu6502.html", null ]
     ] ],
+    [ "LTE::coreEventData", null, [
+      [ "gamesMenu::loadGameEvent", "de/d5c/structgames_menu_1_1load_game_event.html", null ]
+    ] ],
     [ "cpu< dataSize, addrSize >", "de/d33/classcpu.html", null ],
+    [ "displayDebugInfo", "d7/d6d/classdisplay_debug_info.html", null ],
     [ "std::exception", null, [
       [ "badRomHeaderException", "d4/d1f/classbad_rom_header_exception.html", null ],
       [ "romFileNotFoundException", "dc/d96/classrom_file_not_found_exception.html", null ]
     ] ],
+    [ "gamesMenu", "d4/d6e/classgames_menu.html", null ],
     [ "cpu6502::instruction6502", "dd/d5a/structcpu6502_1_1instruction6502.html", null ],
     [ "mapper", "d6/d32/classmapper.html", [
       [ "mapper_000", "d5/df4/classmapper__000.html", null ],

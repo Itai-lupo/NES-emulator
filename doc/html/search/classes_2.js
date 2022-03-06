@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['instruction6502_0',['instruction6502',['../dd/d5a/structcpu6502_1_1instruction6502.html',1,'cpu6502']]]
+  ['displaydebuginfo_0',['displayDebugInfo',['../d7/d6d/classdisplay_debug_info.html',1,'']]]
 ];

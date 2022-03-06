@@ -1,7 +1,14 @@
 <map id="main" name="main">
-<area shape="rect" id="node1" title=" " alt="" coords="5,81,56,108"/>
-<area shape="rect" id="node2" href="$de/d33/classcpu.html#a5786aff4b18f0688c2a85c8556cf8e0a" title=" " alt="" coords="129,5,196,32"/>
-<area shape="rect" id="node3" href="$df/d0a/main_8cpp.html#a4a2adc3d978a792c25ab506f6e13bdfe" title=" " alt="" coords="111,56,215,83"/>
-<area shape="rect" id="node4" href="$d2/dd7/classcartridge.html#a45c8cfd4db0173df711c2e3ac5a78be2" title=" " alt="" coords="111,107,214,133"/>
-<area shape="rect" id="node5" href="$d0/d88/classbus.html#a48c90aeac455d34c22da64f98c01bba5" title=" " alt="" coords="104,157,221,184"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,132,56,159"/>
+<area shape="rect" id="node2" href="$de/d33/classcpu.html#a40f7f0daa94474f8470d35758d162b54" title=" " alt="" coords="149,5,229,32"/>
+<area shape="rect" id="node3" href="$d4/d6e/classgames_menu.html#a11dc451837b3bf6314a860ba9b27ebad" title=" " alt="" coords="131,56,247,83"/>
+<area shape="rect" id="node4" href="$d7/d6d/classdisplay_debug_info.html#adb8a0a4ea74078dc59551779c6ec5f43" title=" " alt="" coords="117,107,261,133"/>
+<area shape="rect" id="node7" href="$df/d0a/main_8cpp.html#a21dfe9bde9bd8461cf7b93411861607a" title=" " alt="" coords="119,157,259,184"/>
+<area shape="rect" id="node10" href="$df/d0a/main_8cpp.html#a4a2adc3d978a792c25ab506f6e13bdfe" title=" " alt="" coords="137,208,241,235"/>
+<area shape="rect" id="node11" href="$df/d0a/main_8cpp.html#a5f166273e28df3c6500fc0b742c73824" title=" " alt="" coords="104,259,275,285"/>
+<area shape="rect" id="node5" href="$d7/d6d/classdisplay_debug_info.html#a05da6d958cb086a874045a14b8ae7afe" title=" " alt="" coords="323,91,485,133"/>
+<area shape="rect" id="node6" href="$d7/d6d/classdisplay_debug_info.html#aec61352c5c4ba11cf3b8fc6639f5014f" title=" " alt="" coords="533,91,696,133"/>
+<area shape="rect" id="node8" href="$de/d33/classcpu.html#a5786aff4b18f0688c2a85c8556cf8e0a" title=" " alt="" coords="371,157,437,184"/>
+<area shape="rect" id="node9" href="$d0/d88/classbus.html#a48c90aeac455d34c22da64f98c01bba5" title=" " alt="" coords="345,208,463,235"/>
+<area shape="rect" id="node12" href="$d2/dd7/classcartridge.html#a45c8cfd4db0173df711c2e3ac5a78be2" title=" " alt="" coords="353,259,455,285"/>
 </map>
