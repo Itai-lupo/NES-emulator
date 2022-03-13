@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['mapper1_0',['mapper1',['../dc/d02/struct_n_e_s_header.html#a427badd1645e7127bd821b0115f545fa',1,'NESHeader']]],
-  ['mapper2_1',['mapper2',['../dc/d02/struct_n_e_s_header.html#ae91daefb7facdeae98380c0e89c34ef5',1,'NESHeader']]],
-  ['mapperid_2',['mapperID',['../d8/d1f/structmappers_data.html#aead239cc5893c59f1e4a42621dfec1b1',1,'mappersData']]]
+  ['i_0',['I',['../d9/dbe/classcpu6502.html#a420c21add44ea6cd60abc1f23a1c8794',1,'cpu6502']]],
+  ['id_1',['id',['../df/d0a/main_8cpp.html#af9e4bb967ec58755e182fdfdb4e4709c',1,'main.cpp']]],
+  ['increment_5fmode_2',['increment_mode',['../df/d5b/unionppu2c02_1_1_p_p_u_c_t_r_l.html#a5d93e856cefd8f43895902e7e5bcb127',1,'ppu2c02::PPUCTRL']]]
 ];

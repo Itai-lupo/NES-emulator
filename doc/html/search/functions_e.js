@@ -7,7 +7,7 @@ var searchData=
   ['_7ecpu6502_4',['~cpu6502',['../d9/dbe/classcpu6502.html#a4dcfb502c3cc0a55320f932c10c0de9f',1,'cpu6502']]],
   ['_7emapper_5',['~mapper',['../d6/d32/classmapper.html#abfd1c02614dcebd9e0ca06b3b3f1582b',1,'mapper']]],
   ['_7emapper_5f000_6',['~mapper_000',['../d5/df4/classmapper__000.html#a2ece950e6fe57239ca71f40fab960bc6',1,'mapper_000::~mapper_000()'],['../d5/df4/classmapper__000.html#a2ece950e6fe57239ca71f40fab960bc6',1,'mapper_000::~mapper_000()']]],
-  ['_7eppu_7',['~ppu',['../d6/d3f/classppu.html#ac23336696990171dd96e637fa4c3dd4b',1,'ppu']]],
+  ['_7eppu2c02_7',['~ppu2c02',['../d2/deb/classppu2c02.html#aa968000f5565b657285fc1d6ed3303ec',1,'ppu2c02']]],
   ['_7eram_8',['~ram',['../dd/d28/classram.html#a342f5f90906a9e41a2687214bc13bc5d',1,'ram']]],
   ['_7eromfilenotfoundexception_9',['~romFileNotFoundException',['../dc/d96/classrom_file_not_found_exception.html#a15c205a078488f539eb1199d034a057d',1,'romFileNotFoundException']]],
   ['_7etestram_10',['~testRam',['../d1/d46/classtest_ram.html#a90c49c15d24866afea1366032238ae48',1,'testRam']]]

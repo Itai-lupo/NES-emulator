@@ -10,6 +10,7 @@
 #include "openGLVertexBuffer.h"
 #include "openGLIndexBuffer.h"
 #include "openGLTexture.h"
+#include "openGLCustomTexture.h"
 
 namespace LTE
 {
@@ -50,6 +51,13 @@ namespace LTE
             virtual texture *createTexture(const std::string& path) override
             {
                 openGLTexture *t = new openGLTexture(path);
+                needToInit.push(t);
+                return t;
+            }
+
+            virtual texture *createCustemTexture(const std::pair<int, int>& size) override
+            {
+                openGLCustomTexture *t = new openGLCustomTexture(size);
                 needToInit.push(t);
                 return t;
             }

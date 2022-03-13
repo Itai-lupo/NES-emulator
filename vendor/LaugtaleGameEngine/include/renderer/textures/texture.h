@@ -35,6 +35,7 @@ namespace LTE
 
         public:
             texture(const std::string& path): path(path){}
+            texture(){}
             virtual ~texture() = default;
 
             virtual void bind(int slot) = 0;
@@ -96,5 +97,7 @@ namespace LTE
             {
                 return spriteDimensions.x / (float)width;
             }
+
+            virtual void setRGBValue(const std::pair<int, int>& cords, const uint8_t RGB[3]){}
     };
 }

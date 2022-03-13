@@ -1,16 +1,24 @@
 #pragma once
 #include "mapper.h"
-
+#include "LaughTaleEngine.h"
 class mapper_000 : public mapper
 {
     public:
-        mapper_000(uint8_t prgBanks, uint8_t chrBanks): mapper(prgBanks, chrBanks){}
+        mapper_000(uint8_t prgBanks, uint8_t chrBanks): mapper(prgBanks, chrBanks){
+            LAUGHTALE_ENGINR_LOG_INFO("Ac ")
+            LAUGHTALE_ENGINR_LOG_INFO("Ac ")
+            LAUGHTALE_ENGINR_LOG_INFO("Ac ")
+            LAUGHTALE_ENGINR_LOG_INFO("Ac ")
+            LAUGHTALE_ENGINR_LOG_INFO("Ac ")
+            LAUGHTALE_ENGINR_LOG_INFO("Ac ")
+            LAUGHTALE_ENGINR_LOG_INFO("Ac ")}
         ~mapper_000(){}
 
         virtual bool readPRGMemory(uint16_t &addr) override
         {
             if(!(addr >= 0x8000 && addr <= 0xFFFF))
                 return false;
+            LAUGHTALE_ENGINR_LOG_INFO(addr)
 
             addr = addr & (prgBanks > 1 ? 0x7FFF : 0x3FFF);
             return true;            

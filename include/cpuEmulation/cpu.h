@@ -61,7 +61,6 @@ class cpu
             if((int)cycles == 0)
             {
                 opcode = busData->read(cpuData->pc);
-                LAUGHTALE_ENGINR_LOG_INFO("opcode (" << hex(cpuData->pc, 4) << "): " << hex(opcode, 2))
                 cpuData->pc++;
                 cycles = cpuData->lookup[opcode].cycles;
 
@@ -126,6 +125,7 @@ class cpu
 
         static void nmi(LTE::gameObject *eventEntity, LTE::coreEventData *sendor)
         {
+            LAUGHTALE_ENGINR_LOG_INFO("nmi")
             bus<dataSize, addrSize> *busData = LTE::entityManger::getEntityById(SystemData)->getComponent<bus<dataSize, addrSize>>();
             cpu6502 *cpuData = LTE::entityManger::getEntityById(SystemData)->getComponent<cpu6502>();
 

@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['n_0',['N',['../d9/dbe/classcpu6502.html#aa073b5fa51259af01bb2f1c7d6932b1f',1,'cpu6502']]],
-  ['name_1',['name',['../dc/d02/struct_n_e_s_header.html#a7f21880e0a799a1109a3f37716e93629',1,'NESHeader::name()'],['../dd/d5a/structcpu6502_1_1instruction6502.html#a2a53e3f151179b30456035e96e48e540',1,'cpu6502::instruction6502::name()']]],
-  ['neserror_2eh_2',['NESError.h',['../dc/d36/_n_e_s_error_8h.html',1,'']]],
-  ['nesheader_3',['NESHeader',['../dc/d02/struct_n_e_s_header.html',1,'']]],
-  ['nmi_4',['nmi',['../de/d33/classcpu.html#a803206b5587491451a031522d1c9dce7',1,'cpu']]]
+  ['load_0',['load',['../d2/dd7/classcartridge.html#a45c8cfd4db0173df711c2e3ac5a78be2',1,'cartridge']]],
+  ['loadcartageandresetcpu_1',['loadCartageAndResetCpu',['../df/d0a/main_8cpp.html#a5f166273e28df3c6500fc0b742c73824',1,'main.cpp']]],
+  ['loadgameevent_2',['loadGameEvent',['../de/d5c/structgames_menu_1_1load_game_event.html',1,'gamesMenu::loadGameEvent'],['../de/d5c/structgames_menu_1_1load_game_event.html#a0d6e17ad8b0162d8a535e812504e7bf4',1,'gamesMenu::loadGameEvent::loadGameEvent()']]],
+  ['lookup_3',['lookup',['../d9/dbe/classcpu6502.html#a48a7e05336edcdde4496527894c1c236',1,'cpu6502']]],
+  ['loopy_5fregister_4',['loopy_register',['../d4/d46/unionppu2c02_1_1loopy__register.html',1,'ppu2c02']]]
 ];

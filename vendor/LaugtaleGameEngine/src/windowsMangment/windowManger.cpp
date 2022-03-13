@@ -4,7 +4,7 @@
 #include <functional>
 #include <algorithm>
 #include "LTEError.h"
-
+#include "app.h"
 
 namespace LTE
 {
@@ -28,6 +28,7 @@ namespace LTE
             [=](window *win)-> bool { return win->id == sendor->windowId; }
         ), windows.end());
 
+        app::getOsAPI()->closeWindow(sendor->windowId);
         delete sendor->win;
     }
 

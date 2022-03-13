@@ -1,9 +1,11 @@
 <map id="include/cartridgeEmulation/cartridge.h" name="include/cartridgeEmulation/cartridge.h">
-<area shape="rect" id="node1" title=" " alt="" coords="305,5,479,47"/>
-<area shape="rect" id="node2" href="$d3/d6a/cpu_bus_cartridge_8h.html" title=" " alt="" coords="206,95,381,136"/>
-<area shape="rect" id="node5" href="$df/d4d/ppu_bus_cartridge_8h.html" title=" " alt="" coords="405,95,579,136"/>
-<area shape="rect" id="node6" href="$d9/d6e/games_menu_8h.html" title=" " alt="" coords="5,102,181,129"/>
-<area shape="rect" id="node7" href="$d2/d09/cartridge_8cpp.html" title=" " alt="" coords="603,95,754,136"/>
-<area shape="rect" id="node3" href="$df/d0a/main_8cpp.html" title=" " alt="" coords="245,184,341,211"/>
-<area shape="rect" id="node4" href="$dc/db5/cartridge_emualtion_8test_8cpp.html" title=" " alt="" coords="376,184,587,211"/>
+<area shape="rect" id="node1" title=" " alt="" coords="324,5,499,47"/>
+<area shape="rect" id="node2" href="$d3/d6a/cpu_bus_cartridge_8h.html" title=" " alt="" coords="43,95,217,136"/>
+<area shape="rect" id="node5" href="$df/d4d/ppu_bus_cartridge_8h.html" title=" " alt="" coords="261,95,436,136"/>
+<area shape="rect" id="node8" href="$d9/d6e/games_menu_8h.html" title=" " alt="" coords="531,281,707,307"/>
+<area shape="rect" id="node9" href="$d2/d09/cartridge_8cpp.html" title=" " alt="" coords="532,95,683,136"/>
+<area shape="rect" id="node3" href="$df/d0a/main_8cpp.html" title=" " alt="" coords="275,363,371,389"/>
+<area shape="rect" id="node4" href="$dc/db5/cartridge_emualtion_8test_8cpp.html" title=" " alt="" coords="25,191,235,218"/>
+<area shape="rect" id="node6" href="$d8/dce/2c02_8h.html" title=" " alt="" coords="311,184,456,225"/>
+<area shape="rect" id="node7" href="$d2/df9/ppu_8h.html" title=" " alt="" coords="361,273,507,315"/>
 </map>

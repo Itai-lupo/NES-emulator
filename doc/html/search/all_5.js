@@ -1,7 +1,29 @@
 var searchData=
 [
-  ['d_0',['D',['../d9/dbe/classcpu6502.html#a727e6a572ec19f8a44fd59e08746715c',1,'cpu6502']]],
-  ['data_1',['DATA',['../d9/dbe/classcpu6502.html#a3c0e4e4bb75e49bfbb4a4c774374f5d3',1,'cpu6502']]],
-  ['displaydebuginfo_2',['displayDebugInfo',['../d7/d6d/classdisplay_debug_info.html',1,'']]],
-  ['displaydebuginfo_2eh_3',['displayDebugInfo.h',['../d7/dc2/display_debug_info_8h.html',1,'']]]
+  ['c_0',['C',['../d9/dbe/classcpu6502.html#aaccb5a879008d07fc4862da5782d332a',1,'cpu6502']]],
+  ['c_1',['c',['../d0/d1e/classcpu_test.html#affc60d12cd330e6313e1b70094a4c8b0',1,'cpuTest::c()'],['../d8/d8f/classcartridge_emualtion_test.html#a505dbfff12f1c8a6bff96f97435e1e70',1,'cartridgeEmualtionTest::c()'],['../de/d21/classbus_test.html#a5bf154196f1d9f3c5ec34a671ea756c1',1,'busTest::c()']]],
+  ['cart_2',['cart',['../df/d0a/main_8cpp.html#a69a7322d34c7ff785cac5cddecc4fbfe',1,'main.cpp']]],
+  ['cartridge_3',['cartridge',['../d2/dd7/classcartridge.html',1,'cartridge'],['../d2/dd7/classcartridge.html#a1622d6252d4ed11ab9b37e6db22a6088',1,'cartridge::cartridge()']]],
+  ['cartridge_2ecpp_4',['cartridge.cpp',['../d2/d09/cartridge_8cpp.html',1,'']]],
+  ['cartridge_2eh_5',['cartridge.h',['../d6/da5/cartridge_8h.html',1,'']]],
+  ['cartridgeemualtion_2etest_2ecpp_6',['cartridgeEmualtion.test.cpp',['../dc/db5/cartridge_emualtion_8test_8cpp.html',1,'']]],
+  ['cartridgeemualtiontest_7',['cartridgeEmualtionTest',['../d8/d8f/classcartridge_emualtion_test.html',1,'']]],
+  ['changepallate_8',['changePallate',['../d7/d6d/classdisplay_debug_info.html#a79ba0730a0b640e2fc2d19da778219af',1,'displayDebugInfo']]],
+  ['chr_5from_5fchunks_9',['chr_rom_chunks',['../dc/d02/struct_n_e_s_header.html#a9e5f23d0060242898909919519d4ee3e',1,'NESHeader']]],
+  ['chrbanks_10',['chrBanks',['../d6/d32/classmapper.html#ac5405c65c3df3f66fa7e90da8209e983',1,'mapper::chrBanks()'],['../d8/d1f/structmappers_data.html#aee502b130fbf6171fcf508aeadff9e0a',1,'mappersData::chrBanks()']]],
+  ['clock_11',['clock',['../d9/dbe/classcpu6502.html#a39ad8bf547f49f122912e1615aa4677c',1,'cpu6502::clock()'],['../de/d33/classcpu.html#abc8a3d560e97137856c86004d5d5e91b',1,'cpu::clock()'],['../d6/d3f/classppu.html#a8f8beeeceb29673161032303d02e8cad',1,'ppu::clock(LTE::gameObject *eventEntity, LTE::coreEventData *sendor)']]],
+  ['close_12',['close',['../d6/d3f/classppu.html#a5d85f27933540c6709095e12b308b41a',1,'ppu::close()'],['../de/d33/classcpu.html#a40f7f0daa94474f8470d35758d162b54',1,'cpu::close()']]],
+  ['coarse_5fx_13',['coarse_x',['../d4/d46/unionppu2c02_1_1loopy__register.html#ae7b526ced9250f815f73dc55b85b7383',1,'ppu2c02::loopy_register']]],
+  ['coarse_5fy_14',['coarse_y',['../d4/d46/unionppu2c02_1_1loopy__register.html#ad707402019230d6d26b55e97258bbe4d',1,'ppu2c02::loopy_register']]],
+  ['control_15',['control',['../d2/deb/classppu2c02.html#ac99d81b31fec1a67303a8c5547093647',1,'ppu2c02']]],
+  ['cpu_16',['cpu',['../de/d33/classcpu.html',1,'']]],
+  ['cpu_2eh_17',['cpu.h',['../dc/da7/cpu_8h.html',1,'']]],
+  ['cpu6502_18',['cpu6502',['../d9/dbe/classcpu6502.html',1,'cpu6502'],['../d9/dbe/classcpu6502.html#a0b159f96e3e39f6e108ee327aecda3b0',1,'cpu6502::cpu6502()']]],
+  ['cpubuscartridge_19',['cpuBusCartridge',['../dc/de6/classcpu_bus_cartridge.html',1,'cpuBusCartridge'],['../dc/de6/classcpu_bus_cartridge.html#acc8ae7fe2cb59a87135e8d63b6c1df9a',1,'cpuBusCartridge::cpuBusCartridge()']]],
+  ['cpubuscartridge_2eh_20',['cpuBusCartridge.h',['../d3/d6a/cpu_bus_cartridge_8h.html',1,'']]],
+  ['cpuemulation_2etest_2ecpp_21',['cpuEmulation.test.cpp',['../da/d4a/cpu_emulation_8test_8cpp.html',1,'']]],
+  ['cputest_22',['cpuTest',['../d0/d1e/classcpu_test.html',1,'']]],
+  ['createmapper_23',['createMapper',['../de/d4c/classmappers_facory.html#adcc7ae4350d678e2f8315af2e0ddb3fc',1,'mappersFacory']]],
+  ['cycle_24',['cycle',['../d2/deb/classppu2c02.html#af5240aa778b1cf870047f5c67d2ada53',1,'ppu2c02']]],
+  ['cycles_25',['cycles',['../dd/d5a/structcpu6502_1_1instruction6502.html#a3fdc7dbeb42ebc1a541423f1fb74196b',1,'cpu6502::instruction6502']]]
 ];

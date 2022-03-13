@@ -1,4 +1,7 @@
 var searchData=
 [
-  ['operate_0',['operate',['../dd/d5a/structcpu6502_1_1instruction6502.html#a2d5ae513e18b34d5041df899cf925b8b',1,'cpu6502::instruction6502']]]
+  ['mapper1_0',['mapper1',['../dc/d02/struct_n_e_s_header.html#a427badd1645e7127bd821b0115f545fa',1,'NESHeader']]],
+  ['mapper2_1',['mapper2',['../dc/d02/struct_n_e_s_header.html#ae91daefb7facdeae98380c0e89c34ef5',1,'NESHeader']]],
+  ['mapperid_2',['mapperID',['../d8/d1f/structmappers_data.html#aead239cc5893c59f1e4a42621dfec1b1',1,'mappersData']]],
+  ['mask_3',['mask',['../d2/deb/classppu2c02.html#a936d6d02b6b4fa8b220d62d49b6fcde4',1,'ppu2c02']]]
 ];

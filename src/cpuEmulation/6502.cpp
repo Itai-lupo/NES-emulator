@@ -15,14 +15,12 @@ std::string hex(uint32_t n, uint8_t d)
 uint8_t cpu6502::IMP()
 {
     addr = 0x0000;
-    LAUGHTALE_ENGINR_LOG_INFO("IMP")
     return 0;
 }
 	
 uint8_t cpu6502::IMM()
 {
     addr = pc++;
-    LAUGHTALE_ENGINR_LOG_INFO("IMM")
     return 0;
 }	
 
@@ -31,7 +29,6 @@ uint8_t cpu6502::ZP0()
     addr = systemBus->read(pc);
     pc++;
     
-    LAUGHTALE_ENGINR_LOG_INFO("ZP0(" << hex(addr, 4) << ")")
     return 0;
 }
 	
@@ -44,7 +41,6 @@ uint8_t cpu6502::ZPX()
     addr += x;
     addr &= 0x00FF;
     
-    LAUGHTALE_ENGINR_LOG_INFO("ZPX(" << hex(addr, 4) << ")")
     return 0;
 }	
 
@@ -56,7 +52,6 @@ uint8_t cpu6502::ZPY()
     addr += y;
     addr &= 0x00FF;
     
-    LAUGHTALE_ENGINR_LOG_INFO("ZPY(" << hex(addr, 4) << ")")
     return 0;
 }
 	
@@ -65,7 +60,6 @@ uint8_t cpu6502::REL()
     int8_t temp = (int8_t)systemBus->read(pc);
     pc++;
     addr = pc + temp;
-    LAUGHTALE_ENGINR_LOG_INFO("REL(" << hex(addr, 4) << ")" << hex(temp, 2) << ", " << (int) temp);
     return 2;
 }
 
@@ -78,7 +72,6 @@ uint8_t cpu6502::ABS()
 
     addr = (hi << 8) | lo;
     
-    LAUGHTALE_ENGINR_LOG_INFO("ABS(" << hex(addr, 4) << ")")
     return 0;
 }
 	
@@ -91,7 +84,6 @@ uint8_t cpu6502::ABX()
 
     addr = ((hi << 8) | lo) + x;
     
-    LAUGHTALE_ENGINR_LOG_INFO("ABX(" << hex(addr, 4) << ")")
     return ((addr & 0xFF00) != (hi << 8));
 }	
 
@@ -104,7 +96,6 @@ uint8_t cpu6502::ABY()
 
     addr = ((hi << 8) | lo) + y;
     
-    LAUGHTALE_ENGINR_LOG_INFO("ABY(" << hex(addr, 4) << ")")
     return ((addr & 0xFF00) != (hi << 8));
 }
 	
@@ -118,7 +109,6 @@ uint8_t cpu6502::IND()
     addr = systemBus->read(hi | lo);
     addr |= systemBus->read(hi | ((lo + 1) & 0x00FF)) << 8;
     
-    LAUGHTALE_ENGINR_LOG_INFO("IND(" << hex(addr, 4) << ")")
     return 0;
 }	
 
@@ -130,7 +120,6 @@ uint8_t cpu6502::IZX()
     addr = systemBus->read((temp + x) & 0x00FF);
     addr |= systemBus->read((temp + x + 1) & 0x00FF) << 8;
     
-    LAUGHTALE_ENGINR_LOG_INFO("IZX(" << hex(addr, 4) << "):" << (int)x)
     return 0;
 }
 	
@@ -146,7 +135,6 @@ uint8_t cpu6502::IZY()
     addr = hi | lo;
     addr += y;
 
-    LAUGHTALE_ENGINR_LOG_INFO("IZY(" << hex(addr, 4) << "): " << (int)y)
     return  ((addr & 0xFF00) != (hi << 8));
 }
 
@@ -164,7 +152,6 @@ uint8_t cpu6502::ADC()
     status.C = res > 255;
 
     a = res & 0x00FF;
-    LAUGHTALE_ENGINR_LOG_INFO("ADC(" << hex(pc, 4) << ") = " << (int)a);
     return 1;
 }
 	
@@ -175,7 +162,6 @@ uint8_t cpu6502::AND()
     status.Z = (a & 0x00FF) == 0;
     status.N = (a & 0x0080);
 
-    LAUGHTALE_ENGINR_LOG_INFO("AND(" << hex(pc, 4) << ") = " << (int)a);
     return 0;
 }
 	
@@ -190,7 +176,6 @@ uint8_t cpu6502::ASL()
     
     systemBus->write(addr, res & 0x00FF);
 
-    LAUGHTALE_ENGINR_LOG_INFO("ASL(" << hex(pc, 4) << ") = " << (int)res);
     return 0;
 }
 
@@ -201,7 +186,6 @@ uint8_t cpu6502::ASL_A()
     status.Z = (a & 0x00FF) == 0;
     status.N = (a & 0x0080);
 
-    LAUGHTALE_ENGINR_LOG_INFO("ASL(" << hex(pc, 4) << ") = " << (int)a);
     return 0;
 }
 	
@@ -211,7 +195,6 @@ uint8_t cpu6502::BCC()
         return 0;
     uint8_t temp = pc;
     pc = addr;
-    LAUGHTALE_ENGINR_LOG_INFO("BCC(" << hex(temp, 4) << ") " << hex(pc, 4));
     return 1 + ((pc & 0xFF00) != (temp & 0xFF00));
 }
 
@@ -222,7 +205,6 @@ uint8_t cpu6502::BCS()
         return 0;
     uint8_t temp = pc;
     pc = addr;
-    LAUGHTALE_ENGINR_LOG_INFO("BCS(" << hex(temp, 4) << ") " << hex(pc, 4));
     return 1 + ((pc & 0xFF00) != (temp & 0xFF00));
 }
 	
@@ -232,7 +214,6 @@ uint8_t cpu6502::BEQ()
         return 0;
     uint8_t temp = pc;
     pc = addr;
-    LAUGHTALE_ENGINR_LOG_INFO("BEQ(" << hex(temp, 4) << ") " << hex(pc, 4));
     return 1 + ((pc & 0xFF00) != (temp & 0xFF00));
 }
 	
@@ -245,7 +226,7 @@ uint8_t cpu6502::BIT()
     status.V = (temp & (1 << 6));
 
 
-    LAUGHTALE_ENGINR_LOG_INFO("BIT(" << hex(pc, 4) << ")");
+    return 0;
 }
 	
 uint8_t cpu6502::BMI()
@@ -254,7 +235,6 @@ uint8_t cpu6502::BMI()
         return 0;
     uint8_t temp = pc;
     pc = addr;
-    LAUGHTALE_ENGINR_LOG_INFO("BMI(" << hex(temp, 4) << ") " << hex(pc, 4));
     return 1 + ((pc & 0xFF00) != (temp & 0xFF00));
 }
 
@@ -264,7 +244,6 @@ uint8_t cpu6502::BNE()
         return 0;
     uint8_t temp = pc;
     pc = addr;
-    LAUGHTALE_ENGINR_LOG_INFO("BNE(" << hex(temp, 4) << ") " << hex(pc, 4));
     return 1 + ((pc & 0xFF00) != (temp & 0xFF00));
 }
 	
@@ -274,7 +253,6 @@ uint8_t cpu6502::BPL()
         return 0;
     uint8_t temp = pc;
     pc = addr;
-    LAUGHTALE_ENGINR_LOG_INFO("BPL(" << hex(temp, 4) << ") " << hex(pc, 4));
     return 1 + ((pc & 0xFF00) != (temp & 0xFF00));
 }
 	
@@ -303,7 +281,6 @@ uint8_t cpu6502::BVC()
         return 0;
     uint8_t temp = pc;
     pc = addr;
-    LAUGHTALE_ENGINR_LOG_INFO("BVC(" << hex(temp, 4) << ") " << hex(pc, 4));
     return 1 + ((pc & 0xFF00) != (temp & 0xFF00));
 }
 
@@ -313,7 +290,6 @@ uint8_t cpu6502::BVS()
         return 0;
     uint8_t temp = pc;
     pc = addr;
-    LAUGHTALE_ENGINR_LOG_INFO("BVS(" << hex(temp, 4) << ") " << hex(pc, 4));
     return 1 + ((pc & 0xFF00) != (temp & 0xFF00));
     return 0;
 }
@@ -321,28 +297,24 @@ uint8_t cpu6502::BVS()
 uint8_t cpu6502::CLC()
 {
     status.C = 0;
-    LAUGHTALE_ENGINR_LOG_INFO("CLC")
     return 0;
 }
 	
 uint8_t cpu6502::CLD()
 {
     status.D = 0;
-    LAUGHTALE_ENGINR_LOG_INFO("CLD")
     return 0;
 }
 	
 uint8_t cpu6502::CLI()
 {
     status.I = 0;
-    LAUGHTALE_ENGINR_LOG_INFO("CLI")
     return 0;
 }
 
 uint8_t cpu6502::CLV()
 {
     status.V = 0;
-    LAUGHTALE_ENGINR_LOG_INFO("CLV")
     return 0;
 }
 	
@@ -354,7 +326,6 @@ uint8_t cpu6502::CMP()
     status.Z = (temp & 0x00FF) == 0;
     status.N = (temp & 0x0080);
 
-    LAUGHTALE_ENGINR_LOG_INFO("CMP")
     return 1;
 }
 	
@@ -366,7 +337,6 @@ uint8_t cpu6502::CPX()
     status.Z = (temp & 0x00FF) == 0;
     status.N = (temp & 0x0080);
 
-    LAUGHTALE_ENGINR_LOG_INFO("CPX")
     return 0;
 }
 	
@@ -378,7 +348,6 @@ uint8_t cpu6502::CPY()
     status.Z = (temp & 0x00FF) == 0;
     status.N = (temp & 0x0080);
 
-    LAUGHTALE_ENGINR_LOG_INFO("CPY")
     return 0;
 }
 
@@ -391,7 +360,6 @@ uint8_t cpu6502::DEC()
     status.Z = (temp & 0x00FF) == 0; 
     status.N = (temp & 0x0080) == 0; 
 
-    LAUGHTALE_ENGINR_LOG_INFO("DEC(" << hex(addr, 4) << ") = " << hex(systemBus->read(addr), 2));
     return 0;
 }
 	
@@ -402,7 +370,6 @@ uint8_t cpu6502::DEX()
     status.Z = (x & 0x00FF) == 0; 
     status.N = (x & 0x0080) == 0; 
 
-    LAUGHTALE_ENGINR_LOG_INFO("DEX = " << (int)x);
     return 0;
 }
 	
@@ -413,7 +380,6 @@ uint8_t cpu6502::DEY()
     status.Z = (y & 0x00FF) == 0; 
     status.N = (y & 0x0080) == 0; 
 
-    LAUGHTALE_ENGINR_LOG_INFO("DEY = " << (int)x);
     return 0;
 }
 	
@@ -425,7 +391,6 @@ uint8_t cpu6502::EOR()
     status.Z = (a & 0x00FF) == 0; 
     status.N = (a & 0x0080) == 0; 
 
-    LAUGHTALE_ENGINR_LOG_INFO("EOR")
     return 1;
 }
 
@@ -438,7 +403,6 @@ uint8_t cpu6502::INC()
     status.Z = (temp & 0x00FF) == 0; 
     status.N = (temp & 0x0080) == 0; 
 
-    LAUGHTALE_ENGINR_LOG_INFO("INC(" << hex(addr, 4) << ") = " << hex(systemBus->read(addr), 2));
     return 0;
 }
 	
@@ -449,7 +413,6 @@ uint8_t cpu6502::INX()
     status.Z = (x & 0x00FF) == 0; 
     status.N = (x & 0x0080) == 0; 
 
-    LAUGHTALE_ENGINR_LOG_INFO("INX = " << (int)x);
     return 0;
 }
 	
@@ -460,7 +423,6 @@ uint8_t cpu6502::INY()
     status.Z = (y & 0x00FF) == 0; 
     status.N = (y & 0x0080) == 0; 
 
-    LAUGHTALE_ENGINR_LOG_INFO("INY = " << (int)y);
     return 0;
 }
 	
@@ -468,7 +430,6 @@ uint8_t cpu6502::JMP()
 {
     pc = addr;
 
-    LAUGHTALE_ENGINR_LOG_INFO("JMP")
     return 0;
 }
 
@@ -482,7 +443,6 @@ uint8_t cpu6502::JSR()
 
     pc = addr;
 
-    LAUGHTALE_ENGINR_LOG_INFO("JSR")
     return 0;
 }
 	
@@ -493,7 +453,6 @@ uint8_t cpu6502::LDA()
     status.Z = (a & 0x00FF) == 0; 
     status.N = (a & 0x0080) == 0; 
 
-    LAUGHTALE_ENGINR_LOG_INFO("LDA(" << hex(addr, 4) << "} " << (int)a);
     return 1;
 }
 	
@@ -504,7 +463,6 @@ uint8_t cpu6502::LDX()
     status.Z = (x & 0x00FF) == 0; 
     status.N = (x & 0x0080) == 0; 
 
-    LAUGHTALE_ENGINR_LOG_INFO("LDX(" << hex(addr, 4) << "} " << (int)x);
     return 1;
 }
 	
@@ -515,7 +473,6 @@ uint8_t cpu6502::LDY()
     status.Z = (y & 0x00FF) == 0; 
     status.N = (y & 0x0080) == 0; 
 
-    LAUGHTALE_ENGINR_LOG_INFO("LDY(" << hex(addr, 4) << "} " << (int)y);
     return 1;
 }
 uint8_t cpu6502::LSR()
@@ -529,7 +486,6 @@ uint8_t cpu6502::LSR()
     
     systemBus->write(addr, res & 0x00FF);
 
-    LAUGHTALE_ENGINR_LOG_INFO("LSR(" << hex(pc, 4) << ") = " << (int)res);
     return 0;
 }
 
@@ -540,7 +496,6 @@ uint8_t cpu6502::LSR_A()
     status.Z = (a & 0x00FF) == 0;
     status.N = 0;
 
-    LAUGHTALE_ENGINR_LOG_INFO("LSR(" << hex(pc, 4) << ") = " << (int)a);
     return 0;
 }
 	
@@ -556,8 +511,7 @@ uint8_t cpu6502::NOP()
             return 1;
             break;
 	}
-    LAUGHTALE_ENGINR_LOG_INFO("NOP")
-	return 0;
+    return 0;
 }
 	
 uint8_t cpu6502::ORA()
@@ -568,7 +522,6 @@ uint8_t cpu6502::ORA()
     status.Z = (a & 0x00FF) == 0; 
     status.N = (a & 0x0080) == 0; 
 
-    LAUGHTALE_ENGINR_LOG_INFO("ORA")
     return 1;
 }
 	
@@ -576,7 +529,6 @@ uint8_t cpu6502::PHA()
 {
     systemBus->write(0x0100 + stkp, a);
     stkp--;
-    LAUGHTALE_ENGINR_LOG_INFO("PHA")
     return 0;
 }
 
@@ -585,7 +537,6 @@ uint8_t cpu6502::PHP()
     
     systemBus->write(0x0100 + stkp, statusData);
     stkp--;
-    LAUGHTALE_ENGINR_LOG_INFO("PHA")
     return 0;
 }
 	
@@ -593,7 +544,6 @@ uint8_t cpu6502::PLA()
 {
     a = systemBus->read(0x0100 + stkp);
     stkp++;
-    LAUGHTALE_ENGINR_LOG_INFO("PLA")
     return 0;
 }
 	
@@ -601,7 +551,6 @@ uint8_t cpu6502::PLP()
 {
     statusData = systemBus->read(0x0100 + stkp);
     stkp++;
-    LAUGHTALE_ENGINR_LOG_INFO("PLP")
     return 0;
 }
 	
@@ -616,7 +565,6 @@ uint8_t cpu6502::ROL()
     
     systemBus->write(addr, res & 0x00FF);
 
-    LAUGHTALE_ENGINR_LOG_INFO("ROL(" << hex(pc, 4) << ") = " << (int)res);
     return 0;
 }
 
@@ -631,7 +579,6 @@ uint8_t cpu6502::ROL_A()
     
     a = res & 0x00FF;
 
-    LAUGHTALE_ENGINR_LOG_INFO("ROL(" << hex(pc, 4) << ") = " << (int)res);
     return 0;
 }
 
@@ -646,7 +593,6 @@ uint8_t cpu6502::ROR()
     
     systemBus->write(addr, res & 0x00FF);
 
-    LAUGHTALE_ENGINR_LOG_INFO("ROR(" << hex(pc, 4) << ") = " << (int)res);
     return 0;
 }
 
@@ -661,7 +607,6 @@ uint8_t cpu6502::ROR_A()
     
     a = res & 0x00FF;
 
-    LAUGHTALE_ENGINR_LOG_INFO("ROR(" << hex(pc, 4) << ") = " << (int)res);
     return 0;
 }
 	
@@ -675,7 +620,6 @@ uint8_t cpu6502::RTI()
     
     pc |= systemBus->read(0x0100 + stkp) << 8;
     stkp++;
-    LAUGHTALE_ENGINR_LOG_INFO("RTI")
     return 0;
 }
 	
@@ -686,7 +630,6 @@ uint8_t cpu6502::RTS()
     
     pc |= systemBus->read(0x0100 + stkp) << 8;
     stkp++;
-    LAUGHTALE_ENGINR_LOG_INFO("RTS")
     return 0;
 }
 	
@@ -701,7 +644,6 @@ uint8_t cpu6502::SBC()
     status.C = res > 255;
 
     a = res & 0x00FF;
-    LAUGHTALE_ENGINR_LOG_INFO("SBC(" << hex(pc, 4) << ") = " << (int)a);
     return 1;
 }
 
@@ -709,7 +651,6 @@ uint8_t cpu6502::SEC()
 {
     status.C = 1;
 
-    LAUGHTALE_ENGINR_LOG_INFO("SEC")
     return 0;
 }
 	
@@ -717,7 +658,6 @@ uint8_t cpu6502::SED()
 {
     status.D = 1;
 
-    LAUGHTALE_ENGINR_LOG_INFO("SED")
     return 0;
 }
 	
@@ -725,28 +665,24 @@ uint8_t cpu6502::SEI()
 {
     status.I = 1;
 
-    LAUGHTALE_ENGINR_LOG_INFO("SEI")
     return 0;
 }
 	
 uint8_t cpu6502::STA()
 {
     systemBus->write(addr, a);
-    LAUGHTALE_ENGINR_LOG_INFO("STA(" << hex(addr, 4) << ") = " << hex(systemBus->read(addr), 2))
     return 0;
 }
 
 uint8_t cpu6502::STX()
 {
     systemBus->write(addr, x);
-    LAUGHTALE_ENGINR_LOG_INFO("STX(" << hex(addr, 4) << ") = " << hex(systemBus->read(addr), 2))
     return 0;
 }
 	
 uint8_t cpu6502::STY()
 {
     systemBus->write(addr, y);
-    LAUGHTALE_ENGINR_LOG_INFO("STY(" << hex(addr, 4) << ") = " << hex(systemBus->read(addr), 2))
     return 0;
 }
 	
@@ -755,7 +691,6 @@ uint8_t cpu6502::TAX()
     x = a;
     status.Z = (x & 0x00FF) == 0;
     status.N = (x & 0x0080);
-    LAUGHTALE_ENGINR_LOG_INFO("TAX")
     return 0;
 }
 	
@@ -764,7 +699,6 @@ uint8_t cpu6502::TAY()
     y = a;
     status.Z = (y & 0x00FF) == 0;
     status.N = (y & 0x0080);
-    LAUGHTALE_ENGINR_LOG_INFO("TAY")
     return 0;
 }
 
@@ -773,7 +707,6 @@ uint8_t cpu6502::TSX()
     x = stkp;
     status.Z = (x & 0x00FF) == 0;
     status.N = (x & 0x0080);
-    LAUGHTALE_ENGINR_LOG_INFO("TSX")
     return 0;
 }
 	
@@ -784,7 +717,6 @@ uint8_t cpu6502::TXA()
     status.Z = (a & 0x00FF) == 0;
     status.N = (a & 0x0080);
 
-    LAUGHTALE_ENGINR_LOG_INFO("TXA")
     return 0;
 }
 	
@@ -793,7 +725,6 @@ uint8_t cpu6502::TXS()
     stkp = x;
     status.Z = (stkp & 0x00FF) == 0;
     status.N = (stkp & 0x0080);
-    LAUGHTALE_ENGINR_LOG_INFO("TXS")
     return 0;
 }
 	
@@ -802,13 +733,11 @@ uint8_t cpu6502::TYA()
     a = y;
     status.Z = (a & 0x00FF) == 0;
     status.N = (a & 0x0080);
-    LAUGHTALE_ENGINR_LOG_INFO("TYA")
     return 0;
 }
 
 
 uint8_t cpu6502::XXX()
 {
-    LAUGHTALE_ENGINR_LOG_INFO("XXX")
     return 0;
 }

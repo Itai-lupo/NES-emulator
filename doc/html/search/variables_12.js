@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['z_0',['Z',['../d9/dbe/classcpu6502.html#ab6b5c56f7a484561e180582857410a90',1,'cpu6502']]]
+  ['winid_0',['winId',['../df/d0a/main_8cpp.html#a428e0f4627e08881f989064897ac2d5f',1,'main.cpp']]]
 ];

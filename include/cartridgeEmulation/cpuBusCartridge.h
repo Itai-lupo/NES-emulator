@@ -1,26 +1,26 @@
 #pragma once
 #include "cartridge.h"
 
-class ppuBusCartridge: public busDevice<uint8_t, uint16_t>
+class cpuBusCartridge: public busDevice<uint8_t, uint16_t>
 {
     private:
         cartridge *cart;
 
     public:
-        ppuBusCartridge(cartridge *cart): cart(cart){}
+        cpuBusCartridge(cartridge *cart): cart(cart){}
 
         virtual uint8_t read(uint16_t addr, bool bReadOnly = false) override
         {
-            return cart->readCHRMemory(addr);
+            return cart->readPRGMemory(addr);
         }
         
         virtual void write(uint16_t addr, uint8_t data) override
         {
-            cart->writeCHRMemory(addr, data);
+            cart->writePRGMemory(addr, data);
         }
 
         virtual bool isInRange(uint16_t addr) override
         {
-            return addr >= 0x0000 && addr <= 0x1FFF;
-        }
+            return addr >= 0x4020 && addr <= 0xFFFF;
+        }      
 };

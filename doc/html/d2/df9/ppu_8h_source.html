@@ -87,55 +87,85 @@ $(document).ready(function(){initNavTree('d2/df9/ppu_8h_source.html','../../'); 
   <div class="headertitle"><div class="title">ppu.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="../../d2/df9/ppu_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;<a class="code" href="../../d9/deb/bus_device_8h.html">busDevice.h</a>&quot;</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &lt;cstdint&gt;</span></div>
+<a href="../../d2/df9/ppu_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;LaughTaleEngine.h&quot;</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;array&gt;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;bus.h&quot;</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="../../d8/dce/2c02_8h.html">2c02.h</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;bus.h&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;thread&gt;</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="../../d6/d3f/classppu.html">    9</a></span><span class="keyword">class </span><a class="code hl_class" href="../../d6/d3f/classppu.html">ppu</a>: <span class="keyword">public</span> <a class="code hl_class" href="../../dc/d77/classbus_device.html">busDevice</a>&lt;uint8_t, uint16_t&gt;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="../../d6/d3f/classppu.html">    9</a></span><span class="keyword">class </span><a class="code hl_class" href="../../d6/d3f/classppu.html">ppu</a></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>{</div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        std::array&lt;uint8_t, 0x1FFF&gt; ppuData;</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        <a class="code hl_class" href="../../d0/d88/classbus.html">bus&lt;uint8_t, uint16_t&gt;</a> ppuBus; <span class="comment">// pattern(0x0000 - 0x1FFF), name table(0x2000 - 0x2FFF), PALETTES( 0x3F00 - 0x3FFF)</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="../../d6/d3f/classppu.html#acc051968bbee5704b58e6a70bae22e65">   15</a></span>        <a class="code hl_function" href="../../d6/d3f/classppu.html#acc051968bbee5704b58e6a70bae22e65">ppu</a>()</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        {</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>            <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;i : ppuData) i = 0x00;</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        }</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="../../d6/d3f/classppu.html#ac23336696990171dd96e637fa4c3dd4b">   20</a></span>        <a class="code hl_function" href="../../d6/d3f/classppu.html#ac23336696990171dd96e637fa4c3dd4b">~ppu</a>()</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        {</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        <span class="keyword">static</span> <span class="keyword">inline</span> LTE::entityTaleId SystemData;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        <span class="keyword">static</span> <span class="keyword">inline</span> uint8_t cycles = 0X00;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="../../d6/d3f/classppu.html#ac4bf75474698942f6b4f61c2cda09a79">   16</a></span>        <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code hl_variable" href="../../d6/d3f/classppu.html#ac4bf75474698942f6b4f61c2cda09a79">frameComplete</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="../../d6/d3f/classppu.html#a9da775cd1ce9396cf9cec30372721777">   17</a></span>        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="../../d6/d3f/classppu.html#a9da775cd1ce9396cf9cec30372721777">isCpuComplete</a>(){ <span class="keywordflow">return</span> cycles == 0; }</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="../../d6/d3f/classppu.html#a94a271d14d4337d31cbc643d3064b4d8">   19</a></span>        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d6/d3f/classppu.html#a94a271d14d4337d31cbc643d3064b4d8">init</a>(LTE::entityTaleId SystemDataId)</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        {</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>            SystemData = SystemDataId;</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        }</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="../../d6/d3f/classppu.html#a101e7ea25556a1ad19bf7f47da7afb62">   25</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="../../d6/d3f/classppu.html#a101e7ea25556a1ad19bf7f47da7afb62">isInRange</a>(uint16_t addr)<span class="keyword"> override</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keyword">        </span>{</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>            <span class="keywordflow">return</span> addr &gt;= 0x2000 &amp;&amp; addr &lt;= 0x3FFF;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>            LTE::eventManger::startBuildingEvent()-&gt;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>                setEntityID(SystemData)-&gt;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>                setEventRoute(<span class="stringliteral">&quot;cpu cmd/cpu clock/2c02&quot;</span>)-&gt;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>                setEventCallback(<a class="code hl_function" href="../../d6/d3f/classppu.html#a8f8beeeceb29673161032303d02e8cad">ppu::clock</a>)-&gt;add();</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        }</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="../../d6/d3f/classppu.html#aa94af4e62fb26a0cfcbcfa3344894f54">   30</a></span>        <span class="keyword">virtual</span> uint8_t <a class="code hl_function" href="../../d6/d3f/classppu.html#aa94af4e62fb26a0cfcbcfa3344894f54">read</a>(uint16_t addr, <span class="keywordtype">bool</span> bReadOnly = <span class="keyword">false</span>)<span class="keyword"> override</span></div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">        </span>{</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>            addr &amp;= 0x0007;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="../../d6/d3f/classppu.html#a5d85f27933540c6709095e12b308b41a">   30</a></span>        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d6/d3f/classppu.html#a5d85f27933540c6709095e12b308b41a">close</a>()</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        {</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        }</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="../../d6/d3f/classppu.html#a661fc3acbed888e57872b0bf248be401">   35</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d6/d3f/classppu.html#a661fc3acbed888e57872b0bf248be401">write</a>(uint16_t addr, uint8_t data)<span class="keyword"> override</span></div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="keyword">        </span>{</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>            addr &amp;= 0x0007;</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        }</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>};</div>
-<div class="ttc" id="abus_device_8h_html"><div class="ttname"><a href="../../d9/deb/bus_device_8h.html">busDevice.h</a></div></div>
-<div class="ttc" id="aclassbus_device_html"><div class="ttname"><a href="../../dc/d77/classbus_device.html">busDevice</a></div><div class="ttdef"><b>Definition:</b> busDevice.h:5</div></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="../../d6/d3f/classppu.html#a8f8beeeceb29673161032303d02e8cad">   36</a></span>        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d6/d3f/classppu.html#a8f8beeeceb29673161032303d02e8cad">clock</a>(LTE::gameObject *eventEntity, LTE::coreEventData *sendor)</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        {</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            <a class="code hl_class" href="../../d0/d88/classbus.html">bus&lt;uint8_t, uint16_t&gt;</a> *busData = LTE::entityManger::getEntityById(SystemData)-&gt;getComponent&lt;<a class="code hl_class" href="../../d0/d88/classbus.html">bus&lt;uint8_t, uint16_t&gt;</a>&gt;();</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            <a class="code hl_class" href="../../d2/deb/classppu2c02.html">ppu2c02</a> *ppuData = LTE::entityManger::getEntityById(SystemData)-&gt;getComponent&lt;<a class="code hl_class" href="../../d2/deb/classppu2c02.html">ppu2c02</a>&gt;();</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; 3; i++)</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            {</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>                <span class="keywordflow">if</span>(ppuData-&gt;scanline == -1 &amp;&amp; ppuData-&gt;cycle == 1)</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>                    ppuData-&gt;status.vertical_blank = 0;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>                <span class="keywordflow">if</span>(ppuData-&gt;scanline == 241 &amp;&amp; ppuData-&gt;cycle == 1)</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>                {</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>                    ppuData-&gt;status.vertical_blank = 1;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>                    <span class="keywordflow">if</span>(ppuData-&gt;control.enable_nmi){</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>                        sendor-&gt;route = <span class="stringliteral">&quot;cpu cmd/cpu nmi/&quot;</span>;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>                        LTE::eventManger::trigerEvent(sendor);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>                    }</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>                }</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>                </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>                ppuData-&gt;cycle++;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>                <span class="keywordflow">if</span> (ppuData-&gt;cycle &gt;= 341)</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>                {</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>                    ppuData-&gt;cycle = 0;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>                    ppuData-&gt;scanline++;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>                    <span class="keywordflow">if</span> (ppuData-&gt;scanline &gt;= 261)</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>                    {</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                        ppuData-&gt;scanline = -1;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>                        <a class="code hl_variable" href="../../d6/d3f/classppu.html#ac4bf75474698942f6b4f61c2cda09a79">frameComplete</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>                    }</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>                }</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>            }            </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        }</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>};</div>
+<div class="ttc" id="a2c02_8h_html"><div class="ttname"><a href="../../d8/dce/2c02_8h.html">2c02.h</a></div></div>
 <div class="ttc" id="aclassbus_html"><div class="ttname"><a href="../../d0/d88/classbus.html">bus&lt; uint8_t, uint16_t &gt;</a></div></div>
+<div class="ttc" id="aclassppu2c02_html"><div class="ttname"><a href="../../d2/deb/classppu2c02.html">ppu2c02</a></div><div class="ttdef"><b>Definition:</b> 2c02.h:14</div></div>
 <div class="ttc" id="aclassppu_html"><div class="ttname"><a href="../../d6/d3f/classppu.html">ppu</a></div><div class="ttdef"><b>Definition:</b> ppu.h:10</div></div>
-<div class="ttc" id="aclassppu_html_a101e7ea25556a1ad19bf7f47da7afb62"><div class="ttname"><a href="../../d6/d3f/classppu.html#a101e7ea25556a1ad19bf7f47da7afb62">ppu::isInRange</a></div><div class="ttdeci">virtual bool isInRange(uint16_t addr) override</div><div class="ttdef"><b>Definition:</b> ppu.h:25</div></div>
-<div class="ttc" id="aclassppu_html_a661fc3acbed888e57872b0bf248be401"><div class="ttname"><a href="../../d6/d3f/classppu.html#a661fc3acbed888e57872b0bf248be401">ppu::write</a></div><div class="ttdeci">virtual void write(uint16_t addr, uint8_t data) override</div><div class="ttdef"><b>Definition:</b> ppu.h:35</div></div>
-<div class="ttc" id="aclassppu_html_aa94af4e62fb26a0cfcbcfa3344894f54"><div class="ttname"><a href="../../d6/d3f/classppu.html#aa94af4e62fb26a0cfcbcfa3344894f54">ppu::read</a></div><div class="ttdeci">virtual uint8_t read(uint16_t addr, bool bReadOnly=false) override</div><div class="ttdef"><b>Definition:</b> ppu.h:30</div></div>
-<div class="ttc" id="aclassppu_html_ac23336696990171dd96e637fa4c3dd4b"><div class="ttname"><a href="../../d6/d3f/classppu.html#ac23336696990171dd96e637fa4c3dd4b">ppu::~ppu</a></div><div class="ttdeci">~ppu()</div><div class="ttdef"><b>Definition:</b> ppu.h:20</div></div>
-<div class="ttc" id="aclassppu_html_acc051968bbee5704b58e6a70bae22e65"><div class="ttname"><a href="../../d6/d3f/classppu.html#acc051968bbee5704b58e6a70bae22e65">ppu::ppu</a></div><div class="ttdeci">ppu()</div><div class="ttdef"><b>Definition:</b> ppu.h:15</div></div>
+<div class="ttc" id="aclassppu_html_a5d85f27933540c6709095e12b308b41a"><div class="ttname"><a href="../../d6/d3f/classppu.html#a5d85f27933540c6709095e12b308b41a">ppu::close</a></div><div class="ttdeci">static void close()</div><div class="ttdef"><b>Definition:</b> ppu.h:30</div></div>
+<div class="ttc" id="aclassppu_html_a8f8beeeceb29673161032303d02e8cad"><div class="ttname"><a href="../../d6/d3f/classppu.html#a8f8beeeceb29673161032303d02e8cad">ppu::clock</a></div><div class="ttdeci">static void clock(LTE::gameObject *eventEntity, LTE::coreEventData *sendor)</div><div class="ttdef"><b>Definition:</b> ppu.h:36</div></div>
+<div class="ttc" id="aclassppu_html_a94a271d14d4337d31cbc643d3064b4d8"><div class="ttname"><a href="../../d6/d3f/classppu.html#a94a271d14d4337d31cbc643d3064b4d8">ppu::init</a></div><div class="ttdeci">static void init(LTE::entityTaleId SystemDataId)</div><div class="ttdef"><b>Definition:</b> ppu.h:19</div></div>
+<div class="ttc" id="aclassppu_html_a9da775cd1ce9396cf9cec30372721777"><div class="ttname"><a href="../../d6/d3f/classppu.html#a9da775cd1ce9396cf9cec30372721777">ppu::isCpuComplete</a></div><div class="ttdeci">static bool isCpuComplete()</div><div class="ttdef"><b>Definition:</b> ppu.h:17</div></div>
+<div class="ttc" id="aclassppu_html_ac4bf75474698942f6b4f61c2cda09a79"><div class="ttname"><a href="../../d6/d3f/classppu.html#ac4bf75474698942f6b4f61c2cda09a79">ppu::frameComplete</a></div><div class="ttdeci">static bool frameComplete</div><div class="ttdef"><b>Definition:</b> ppu.h:16</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['lookup_0',['lookup',['../d9/dbe/classcpu6502.html#a48a7e05336edcdde4496527894c1c236',1,'cpu6502']]]
+  ['gamepath_0',['gamePath',['../de/d5c/structgames_menu_1_1load_game_event.html#a7701c0703aec5bdae1831be9e14d7b4d',1,'gamesMenu::loadGameEvent']]],
+  ['grayscale_1',['grayscale',['../d2/deb/classppu2c02.html#a58c6b4c7cec4c33956796a2600d5610c',1,'ppu2c02']]]
 ];

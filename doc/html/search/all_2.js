@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['a_0',['a',['../d9/dbe/classcpu6502.html#abae1a951335e55fdfd09807ea9f74598',1,'cpu6502']]],
-  ['addr_1',['addr',['../d9/dbe/classcpu6502.html#af958ce4faa6c741d555eab25eeecc209',1,'cpu6502']]],
-  ['addrmode_2',['addrmode',['../dd/d5a/structcpu6502_1_1instruction6502.html#ac9ed1515b43843b4fecab9b0bc2c053d',1,'cpu6502::instruction6502']]]
+  ['6502_2ecpp_0',['6502.cpp',['../dc/d39/6502_8cpp.html',1,'']]],
+  ['6502_2eh_1',['6502.h',['../d3/d67/6502_8h.html',1,'']]]
 ];

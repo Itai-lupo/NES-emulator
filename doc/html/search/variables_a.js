@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['pc_0',['pc',['../d9/dbe/classcpu6502.html#a3864a06068e5e31cef733b93b9671298',1,'cpu6502']]],
-  ['prg_5fram_5fsize_1',['prg_ram_size',['../dc/d02/struct_n_e_s_header.html#a3a27ac45ada7e86481bb97897a42f61e',1,'NESHeader']]],
-  ['prg_5from_5fchunks_2',['prg_rom_chunks',['../dc/d02/struct_n_e_s_header.html#a7478f9faea2b35201bd77127633dd226',1,'NESHeader']]],
-  ['prgbanks_3',['prgBanks',['../d6/d32/classmapper.html#a64873a38e7b1203f68a40ba47a3ed8a0',1,'mapper::prgBanks()'],['../d8/d1f/structmappers_data.html#ad32d9ee60696e5114eef9f75a7fb8234',1,'mappersData::prgBanks()']]]
+  ['n_0',['N',['../d9/dbe/classcpu6502.html#aa073b5fa51259af01bb2f1c7d6932b1f',1,'cpu6502']]],
+  ['name_1',['name',['../dc/d02/struct_n_e_s_header.html#a7f21880e0a799a1109a3f37716e93629',1,'NESHeader::name()'],['../dd/d5a/structcpu6502_1_1instruction6502.html#a2a53e3f151179b30456035e96e48e540',1,'cpu6502::instruction6502::name()']]],
+  ['nametable_5fx_2',['nametable_x',['../df/d5b/unionppu2c02_1_1_p_p_u_c_t_r_l.html#ac6d27b0ef6533141566a1463dcefd7b9',1,'ppu2c02::PPUCTRL::nametable_x()'],['../d4/d46/unionppu2c02_1_1loopy__register.html#a85d5703f11e821385c2d2728069d1ef4',1,'ppu2c02::loopy_register::nametable_x()']]],
+  ['nametable_5fy_3',['nametable_y',['../df/d5b/unionppu2c02_1_1_p_p_u_c_t_r_l.html#a00ac20e0abfc7f6d5285d2cebdbc2fad',1,'ppu2c02::PPUCTRL::nametable_y()'],['../d4/d46/unionppu2c02_1_1loopy__register.html#adfe6c672efdf8fadedeeae28f8584273',1,'ppu2c02::loopy_register::nametable_y()']]]
 ];

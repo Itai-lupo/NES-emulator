@@ -1,6 +1,8 @@
 #include "LaughTaleEngine.h"
 #include "6502.h"
+#include "2c02.h"
 #include "cpu.h"
+#include "ppu.h"
 #include "ram.h"
 #include "bus.h"
 #include "cpuBusCartridge.h"
@@ -9,12 +11,40 @@
 #include "displayDebugInfo.h"
 #include "gamesMenu.h"
 
+#include <thread>
+
+void runCpu(LTE::coreEventData *sendor)
+{
+    sendor->route = "cpu cmd/cpu clock/";
+    while (true)
+        LTE::eventManger::trigerEvent(sendor);
+}
+
+std::thread *t;
 void keyDispatcher(LTE::gameObject *eventEntity, LTE::coreEventData *sendor)
 {
     LTE::KeyData *eventData = static_cast<LTE::KeyData *>(sendor);
     
     if(eventData->key == LT_KEY_SPACE)
         sendor->route = "cpu cmd/cpu clock/";
+
+    if(eventData->key == LT_KEY_F2)
+    {
+        t = new std::thread(runCpu, sendor);
+    }
+    
+
+    if(eventData->key == LT_KEY_F)        
+    {
+        sendor->route = "cpu cmd/cpu clock/";
+        while (!ppu::frameComplete)
+            LTE::eventManger::trigerEvent(sendor);
+        ppu::frameComplete = false;
+    }
+
+    if(eventData->key == LT_KEY_P)        
+        displayDebugInfo::changePallate();
+
 
     if(eventData->key == LT_KEY_R)        
         sendor->route = "cpu cmd/cpu reset/";
@@ -31,25 +61,64 @@ void keyDispatcher(LTE::gameObject *eventEntity, LTE::coreEventData *sendor)
 
 LTE::entityTaleId id;
 cartridge *cart;
+LTE::windowPieceId winId;
+
+float tilePostions[12] =
+{
+    0.0, 1.0f, 0.0f,
+    0.0, 0.0f, 0.0f,
+    1.0, 0.0f, 0.0f,
+    1.0, 1.0f, 0.0f
+};
+
+unsigned int tileIndices[6] =
+{
+    0,
+    1,
+    2,
+    0,
+    3,
+    2,
+};
+
 void initEmulationSystem()
 {
 
     ram *r = new ram();
+    cart = new cartridge();
     cpu6502 *c = new cpu6502();
+    ppu2c02 *p = new ppu2c02(new ppuBusCartridge(cart));
     bus<uint8_t, uint16_t> *sysBus = (new bus<uint8_t, uint16_t>())->pushDevice(r);
 
-    cart = new cartridge();
-    sysBus->pushDevice(new cpuBusCartridge(cart));
+    LTE::texture *t = LTE::windowManger::getWindow(winId)->context->getMeshFactory()->createCustemTexture({232, 256});
+
+    LTE::windowManger::getWindow(winId)->assetLibrary->saveAsset(t, "res/NEStexture");
+
+    sysBus->
+        pushDevice(new cpuBusCartridge(cart))->
+        pushDevice(p);
 
     id =  LTE::entityManger::addEntity(
         [&](LTE::gameObject::gameObjectBuilder *b)
         {
             b->setObjectName("system data")->
+                setWindowId(winId)->
+                setObjectTransform({{-232.0f / 256.0f * 2.0f, -1, 0}, {0, 0, 0}, {232.0f / 256.0f * 2.0f, 2, 0}})->
                 addComponent(sysBus)->
-                addComponent(c);
+                addComponent(p)->
+                addComponent(c)->
+                addComponent(LTE::mesh::build([&](LTE::mesh::meshBuilder *builder)
+                    { 
+                        builder->
+                            setIndexBuffer(tileIndices, 6)->
+                            setShaderName("res/shaders/Basic.glsl")->
+                            setVertices(tilePostions, 12); 
+                    }))->
+                addComponent(new LTE::material("res/NEStexture", glm::vec4(0, 0, 0, 1.0f)));
         });
 
     cpu<uint8_t, uint16_t>::init(id);
+    ppu::init(id);
 
 }
 
@@ -64,13 +133,20 @@ void loadCartageAndResetCpu(LTE::gameObject *eventEntity, LTE::coreEventData *se
 
 }
 
+
+void WindowClose(__attribute__((unused)) LTE::gameObject *eventEntity, __attribute__((unused)) LTE::coreEventData *sendor)
+{
+    LTE::app::keepRunning = false;
+}
+
+
 int main() 
 {
     LTE::app::init();
     
+    winId =  LTE::windowManger::addWindow([](LTE::windowBuilder *b){ b->setTitle("nes emulator")->useImGui();});
     initEmulationSystem();
 
-    LTE::windowPieceId winId =  LTE::windowManger::addWindow([](LTE::windowBuilder *b){ b->setTitle("nes emulator")->useImGui();});
     
     displayDebugInfo::init(winId, id);
 
@@ -87,6 +163,11 @@ int main()
     LTE::eventManger::startBuildingEvent()->
         setEventRoute("load game/load cartage")->
         setEventCallback(loadCartageAndResetCpu)->add();
+
+ 
+        LTE::eventManger::startBuildingEvent()->
+            setEventRoute("Window close/close app")->
+            setEventCallback(WindowClose)->add();
 
     LTE::app::run();
     cpu<uint8_t, uint16_t>::close();

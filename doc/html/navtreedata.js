@@ -50,7 +50,8 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"annotated.html"
+"annotated.html",
+"de/d4c/classmappers_facory.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
