@@ -9,6 +9,7 @@ namespace LTE
 {
     void orthographicCameraControler::OnMouseScrolled(gameObject *cameraInfo, coreEventData *sendor)
     {
+        return;
         mouseScrollData *eventData = dynamic_cast<mouseScrollData *>(sendor);
         orthographicCameraControler *thisCamera = cameraInfo->getComponent<orthographicCameraControler>();
 

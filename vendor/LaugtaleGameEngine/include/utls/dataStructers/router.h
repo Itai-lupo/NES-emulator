@@ -3,6 +3,8 @@
 #include "string.h"
 #include "logger.h"
 #include <unordered_map>
+#include <vector>
+#include <utility>
 #include <functional>
 #include <queue>
 
@@ -13,7 +15,23 @@ namespace LTE
     {
         private:
             std::unordered_map<std::string, T> values;
-            std::unordered_map<std::string, router<T>*> childs;
+            
+             
+            struct mapVector: std::vector<std::pair<std::string, router<T>*>>
+            {
+                router<T>* operator[](std::string route)
+                {
+                    for(auto& p: *this)
+                    {
+                        if(p.first == route)
+                            return p.second;
+                    }
+
+                    std::pair<std::string, router<T>*> temp = {route, new router<T>()};
+                    this->push_back(temp);
+                    return temp.second;
+                }
+            } childs;
             
             std::queue<std::string> removeQueue;
             std::queue<std::string> deleteQueue;
@@ -36,9 +54,6 @@ namespace LTE
                 if(pos == std::string::npos)
                     return;
 
-                if(childs[token] == nullptr)
-                    childs[token] = new router<T>();
-                
                 childs[token]->addRoute(route);
             }
 
@@ -106,7 +121,7 @@ namespace LTE
                 childs[token]->removeValue(route);
             }
 
-             void deleteValue(std::string route)
+            void deleteValue(std::string route)
             {
                 if(!canRemove)
                 {
@@ -146,7 +161,6 @@ namespace LTE
                 }
 
                 route.erase(0, pos + 1);
-                
                 if(!childs[token])
                 {
                     LAUGHTALE_ENGINR_LOG_ERROR("path: " << route << " wa'snt fount, please add the route before adding values");

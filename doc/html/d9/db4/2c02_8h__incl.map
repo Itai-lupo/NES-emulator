@@ -1,14 +1,14 @@
 <map id="include/ppuEmulation/2c02.h" name="include/ppuEmulation/2c02.h">
-<area shape="rect" id="node1" title=" " alt="" coords="526,5,671,47"/>
-<area shape="rect" id="node2" title=" " alt="" coords="158,95,290,121"/>
+<area shape="rect" id="node1" title=" " alt="" coords="382,5,527,47"/>
+<area shape="rect" id="node2" title=" " alt="" coords="65,95,197,121"/>
 <area shape="rect" id="node3" href="$d9/deb/bus_device_8h.html" title=" " alt="" coords="5,244,99,271"/>
 <area shape="rect" id="node4" title=" " alt="" coords="537,319,599,345"/>
-<area shape="rect" id="node5" title=" " alt="" coords="536,95,587,121"/>
-<area shape="rect" id="node6" title=" " alt="" coords="611,95,664,121"/>
-<area shape="rect" id="node7" href="$df/d4d/ppu_bus_cartridge_8h.html" title=" " alt="" coords="369,95,497,121"/>
-<area shape="rect" id="node16" href="$d4/d1d/name_table_8h.html" title=" " alt="" coords="747,95,843,121"/>
-<area shape="rect" id="node17" href="$d4/d5a/palettes_memory_8h.html" title=" " alt="" coords="867,95,991,121"/>
-<area shape="rect" id="node8" href="$d6/da5/cartridge_8h.html" title=" " alt="" coords="365,169,448,196"/>
+<area shape="rect" id="node5" title=" " alt="" coords="392,95,443,121"/>
+<area shape="rect" id="node6" title=" " alt="" coords="467,95,520,121"/>
+<area shape="rect" id="node7" href="$df/d4d/ppu_bus_cartridge_8h.html" title=" " alt="" coords="544,95,672,121"/>
+<area shape="rect" id="node16" href="$d4/d1d/name_table_8h.html" title=" " alt="" coords="272,95,368,121"/>
+<area shape="rect" id="node17" href="$d4/d5a/palettes_memory_8h.html" title=" " alt="" coords="747,95,871,121"/>
+<area shape="rect" id="node8" href="$d6/da5/cartridge_8h.html" title=" " alt="" coords="320,169,403,196"/>
 <area shape="rect" id="node9" title=" " alt="" coords="605,244,672,271"/>
 <area shape="rect" id="node10" title=" " alt="" coords="109,319,163,345"/>
 <area shape="rect" id="node11" title=" " alt="" coords="285,244,349,271"/>

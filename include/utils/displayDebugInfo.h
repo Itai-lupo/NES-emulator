@@ -9,11 +9,13 @@ class displayDebugInfo
 {
 private:
     static inline int page;
+    static inline int nameTablePage = 0x20;
     static inline bool showDebugInfo = false;
     static inline LTE::windowPieceId winId;
     static inline LTE::entityTaleId id;
     static inline LTE::entityTaleId colorPlateid;
     static inline LTE::entityTaleId patternMemoryId;
+    static inline LTE::entityTaleId NameTableMemoryId[4];
     static inline int pallateNumber = 0;
 
     static std::string toHexString(uint32_t n, uint8_t d)
@@ -23,78 +25,6 @@ private:
             s[i] = "0123456789ABCDEF"[n & 0xF];
         return s;
     }
-
-    static inline const uint8_t colorPalate[0x40][3] =
-    {
-        { 84,   84,     84  },
-        { 0,    30,     116 },
-        { 8,    16,     144 },
-        { 48,   0,      136 },
-        { 68,   0,      100 },
-        { 92,   0,      48  },
-        { 84,   4,      0   },
-        { 60,   24,     0   },
-        { 32,   42,     0   },
-        { 8,    58,     0   },
-        { 0,    64,     0   },
-        { 0,    60,     0   },
-        { 0,    50,     60  },
-        { 0,    0,      0   },
-        { 0,    0,      0   },
-        { 0,    0,      0   },
-
-
-	    { 152,  150,    152 },
-	    { 8,    76,     196 },
-	    { 48,   50,     236 },
-	    { 92,   30,     228 },
-	    { 136,  20,     176 },
-	    { 160,  20,     100 },
-	    { 152,  34,     32  },
-	    { 120,  60,     0   },
-	    { 84,   90,     0   },
-	    { 40,   114,    0   },
-	    { 8,    124,    0   },
-	    { 0,    118,    40  },
-	    { 0,    102,    120 },
-        { 0,    0,      0   },
-        { 0,    0,      0   },
-        { 0,    0,      0   },
-
-        { 236,  238,    236 },
-        { 76,   154,    236 },
-        { 120,  124,    236 },
-        { 176,  98,     236 },
-        { 228,  84,     236 },
-        { 236,  88,     180 },
-        { 236,  106,    100 },
-        { 212,  136,    32  },
-        { 160,  170,    0   },
-        { 116,  196,    0   },
-        { 76,   208,    32  },
-        { 56,   204,    108 },
-        { 56,   180,    204 },
-        { 60,   60,     60  },
-        { 0,    0,      0   },
-        { 0,    0,      0   },
-
-        { 236,  238,    236 },
-        { 168,  204,    236 },
-        { 188,  188,    236 },
-        { 212,  178,    236 },
-        { 236,  174,    236 },
-        { 236,  174,    212 },
-        { 236,  180,    176 },
-        { 228,  196,    144 },
-        { 204,  210,    120 },
-        { 180,  222,    120 },
-        { 168,  226,    144 },
-        { 152,  226,    180 },
-        { 160,  214,    228 },
-        { 160,  162,    160 },
-        { 0,    0,      0   },
-        { 0,    0,      0   }
-    };
 
     static void ImGuiRender(LTE::gameObject *eventEntity, LTE::coreEventData *sendor)
     {
@@ -107,6 +37,11 @@ private:
         std::array<uint8_t, 0xFF> pageData;
         for (uint16_t i = 0; i <= 0xFF; i++)
             pageData[i] = sysBus->read((page << 8) | i);
+
+
+        std::array<uint8_t, 0xFF> nameTablepageData;
+        for (uint16_t i = 0; i <= 0xFF; i++)
+            nameTablepageData[i] = p->ppuBus.read((nameTablePage << 8) | i);
 
         uint16_t pc = c->pc;
 
@@ -228,7 +163,6 @@ private:
         ImGui::EndChild();
 
         ImGui::SliderInt("page num", &page, 0, 0x1F);
-
         ImGui::End();
     }
 
@@ -243,7 +177,7 @@ private:
         for (uint64_t i = 0x3F00; i < 0x3F20; i++)
         {
             uint8_t j = p->ppuBus.read(i);
-            t->setRGBValue({y, x}, colorPalate[j]);
+            t->setRGBValue({y, x}, ppu::colorPalate[j]);
             x++;
             if(x == 4)
             {
@@ -275,8 +209,8 @@ private:
                     MSB >>= 1;
                     LSB >>= 1;
 
-                    uint8_t j = p->ppuBus.read(0x3F00 + c + pallateNumber * 3);
-                    t->setRGBValue({x + n, y + k}, colorPalate[j]);
+                    uint8_t j = p->ppuBus.read(0x3F00 + c + pallateNumber * 4);
+                    t->setRGBValue({x + n, y + k}, ppu::colorPalate[j]);
 
                 }
             }
@@ -304,8 +238,8 @@ private:
                     MSB >>= 1;
                     LSB >>= 1;
 
-                    uint8_t j = p->ppuBus.read(0x3F00 + c + pallateNumber * 3);
-                    t->setRGBValue({x + n, y + k}, colorPalate[j]);
+                    uint8_t j = p->ppuBus.read(0x3F00 + c + pallateNumber * 4);
+                    t->setRGBValue({x + n, y + k}, ppu::colorPalate[j]);
 
                 }
             }
@@ -317,6 +251,59 @@ private:
                 y+=8;
             }
         }
+    }
+
+    static void updateNameTableMemory(LTE::gameObject *eventEntity, LTE::coreEventData *sendor)
+    {
+        LTE::onUpdateData *eventData = static_cast<LTE::onUpdateData *>(sendor);
+        ppu2c02 *p = eventEntity->getComponent<ppu2c02>();
+
+
+        for(int i = 0; i < 4; i++)
+        {
+            LTE::texture *t =  LTE::entityManger::getEntityById(NameTableMemoryId[i])->getComponent<LTE::material>()->getTexture();
+            int x = 0, y = 0;
+            for (uint64_t j = 0x2000 + 0x03FF * i; j < 0x2000 + 0x03FF * (i + 1) - 0x3F; j++)
+            {
+                uint16_t tileId = p->ppuBus.read(j);
+                uint8_t bg_next_tile_attrib = p->ppuBus.read(
+                                                    (0x2000 + 0x03FF * (i + 1) - 0x3F)
+                                                    | ((y >> 2) << 3) 
+                                                    | (x >> 2));
+					
+                    if (y & 0x02) bg_next_tile_attrib >>= 4;
+                    if (x & 0x02) bg_next_tile_attrib >>= 2;
+                    bg_next_tile_attrib &= 0x03;
+                for(int k = 0; k < 8; k++)
+                {
+                    uint8_t LSB = p->ppuBus.read((tileId << 4) + 0 + k);
+                    uint8_t MSB = p->ppuBus.read((tileId << 4) + 8 + k);
+                    
+                    uint8_t c;
+                    for (int n = 7; n >= 0; n--)
+                    { 
+                        c = ((MSB & 1) << 1) | (LSB & 1);
+                        MSB >>= 1;
+                        LSB >>= 1;
+
+                        uint8_t j = p->ppuBus.read(0x3F00 + c + bg_next_tile_attrib * 4);
+                        t->setRGBValue({x + n, y + k}, ppu::colorPalate[j]);
+
+                    }
+                }
+                
+                x+=8;
+                if(x >=  256)
+                {
+                    x = 0;
+                    y+= 8;
+                }
+            }
+
+        }
+
+
+      
     }
 
     static inline float tilePostions[12] =
@@ -361,8 +348,15 @@ public:
         LTE::texture *colorPalateT = LTE::windowManger::getWindow(winId)->context->getMeshFactory()->createCustemTexture({8, 6});
         LTE::texture *patternMemoryT = LTE::windowManger::getWindow(winId)->context->getMeshFactory()->createCustemTexture({256, 128});
 
+        LTE::texture *NameTableMemoryT[4];
+        for (size_t i = 0; i < 4; i++)
+            NameTableMemoryT[i] = LTE::windowManger::getWindow(winId)->context->getMeshFactory()->createCustemTexture({256, 240});
+
         LTE::windowManger::getWindow(winId)->assetLibrary->saveAsset(colorPalateT, "res/colorPalateTexture");
         LTE::windowManger::getWindow(winId)->assetLibrary->saveAsset(patternMemoryT, "res/patternMemoryTexture");
+
+        for (size_t i = 0; i < 4; i++)
+            LTE::windowManger::getWindow(winId)->assetLibrary->saveAsset(NameTableMemoryT[i], "res/NameTableMemoryTexture " + std::to_string(i));
 
 
         colorPlateid =  LTE::entityManger::addEntity(
@@ -397,6 +391,24 @@ public:
                         }))->
                     addComponent(new LTE::material("res/patternMemoryTexture", glm::vec4(0, 0, 0, 1.0f)));
             });
+
+        for (size_t i = 0; i < 4; i++)
+            NameTableMemoryId[i] =  LTE::entityManger::addEntity(
+                [&](LTE::gameObject::gameObjectBuilder *b)
+                {
+                    b->setObjectName("nameTable memory display " + std::to_string(i))->
+                        setWindowId(winId)->
+                        setObjectTransform({{(i % 2) * 0.91f, 0.51f * (i < 2) - 0.1, 0}, {0, 0, 0}, {0.9, 0.5, 0}})->
+                        addComponent(LTE::mesh::build([&](LTE::mesh::meshBuilder *builder)
+                            { 
+                                builder->
+                                    setIndexBuffer(tileIndices, 6)->
+                                    setShaderName("res/shaders/Basic.glsl")->
+                                    setVertices(tilePostions, 12); 
+                            }))->
+                        addComponent(new LTE::material("res/NameTableMemoryTexture " + std::to_string(i), glm::vec4(0, 0, 0, 1.0f)));
+                });
+
         toggleDebugInfo();
     }
 
@@ -406,13 +418,15 @@ public:
         {
             LTE::eventManger::removeEvent("ImGui render/print debug info");
             LTE::eventManger::removeEvent("window render/nes emulator/show color palate");
+            LTE::eventManger::removeEvent("window render/nes emulator/show Pattern");
             LTE::eventManger::removeEvent("window render/nes emulator/show name table");
         }
         else
         {
             LTE::eventManger::startBuildingEvent()->setEventRoute("ImGui render/print debug info")->setEventCallback(ImGuiRender)->setEntityID(id)->setWindowId(winId)->add();
             LTE::eventManger::startBuildingEvent()->setEventRoute("window render/nes emulator/show color palate")->setEventCallback(updateColorPalate)->setEntityID(id)->setWindowId(winId)->add();
-            LTE::eventManger::startBuildingEvent()->setEventRoute("window render/nes emulator/show name table")->setEventCallback(updatePatternMemory)->setEntityID(id)->setWindowId(winId)->add();
+            LTE::eventManger::startBuildingEvent()->setEventRoute("window render/nes emulator/show Pattern")->setEventCallback(updatePatternMemory)->setEntityID(id)->setWindowId(winId)->add();
+            LTE::eventManger::startBuildingEvent()->setEventRoute("window render/nes emulator/show name table")->setEventCallback(updateNameTableMemory)->setEntityID(id)->setWindowId(winId)->add();
         }
         showDebugInfo = !showDebugInfo;
     }

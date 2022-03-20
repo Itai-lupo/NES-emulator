@@ -6,5 +6,6 @@ var classcartridge =
     [ "readCHRMemory", "d2/dd7/classcartridge.html#a5240e3db5c5ca035647e79146bcfe161", null ],
     [ "readPRGMemory", "d2/dd7/classcartridge.html#a8e0fe37a8b6ec718d06914a5ae640ddd", null ],
     [ "writeCHRMemory", "d2/dd7/classcartridge.html#ab6c3a06eb5ecd22980b298a500ddf8fa", null ],
-    [ "writePRGMemory", "d2/dd7/classcartridge.html#aba5451bcf75b569b22b1514bba985be6", null ]
+    [ "writePRGMemory", "d2/dd7/classcartridge.html#aba5451bcf75b569b22b1514bba985be6", null ],
+    [ "mirror", "d2/dd7/classcartridge.html#a9b69569e838b3936ba881ca96641a520", null ]
 ];

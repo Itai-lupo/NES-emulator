@@ -86,6 +86,7 @@ $(document).ready(function(){initNavTree('de/d33/classcpu.html','../../'); initR
 <div class="header">
   <div class="summary">
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="../../d3/df9/classcpu-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">cpu&lt; dataSize, addrSize &gt; Class Template Reference</div></div>
 </div><!--header-->
@@ -111,6 +112,11 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:add49f5d9813e1d2d44fb30e4c5a6eab0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a803206b5587491451a031522d1c9dce7"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d33/classcpu.html#a803206b5587491451a031522d1c9dce7">nmi</a> (LTE::gameObject *eventEntity, LTE::coreEventData *sendor)</td></tr>
 <tr class="separator:a803206b5587491451a031522d1c9dce7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:aaca1960dd5967a4637409262022a6371"><td class="memItemLeft" align="right" valign="top">static uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d33/classcpu.html#aaca1960dd5967a4637409262022a6371">cycles</a> = 0X00</td></tr>
+<tr class="separator:aaca1960dd5967a4637409262022a6371"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="abc8a3d560e97137856c86004d5d5e91b" name="abc8a3d560e97137856c86004d5d5e91b"></a>
@@ -149,30 +155,31 @@ template&lt;typename dataSize , typename addrSize &gt; </div>
 </table>
 </div><div class="memdoc">
 <div class="fragment"><div class="line"><span class="lineno">   55</span>        {</div>
-<div class="line"><span class="lineno">   56</span>            <a class="code hl_class" href="../../d0/d88/classbus.html">bus&lt;dataSize, addrSize&gt;</a> *busData = LTE::entityManger::getEntityById(SystemData)-&gt;getComponent&lt;<a class="code hl_class" href="../../d0/d88/classbus.html">bus&lt;dataSize, addrSize&gt;</a>&gt;();</div>
-<div class="line"><span class="lineno">   57</span>            <a class="code hl_class" href="../../d9/dbe/classcpu6502.html">cpu6502</a> *cpuData = LTE::entityManger::getEntityById(SystemData)-&gt;getComponent&lt;<a class="code hl_class" href="../../d9/dbe/classcpu6502.html">cpu6502</a>&gt;();</div>
+<div class="line"><span class="lineno">   56</span>            <a class="code hl_class" href="../../d0/d88/classbus.html">bus&lt;dataSize, addrSize&gt;</a> *busData = eventEntity-&gt;getComponent&lt;<a class="code hl_class" href="../../d0/d88/classbus.html">bus&lt;dataSize, addrSize&gt;</a>&gt;();</div>
+<div class="line"><span class="lineno">   57</span>            <a class="code hl_class" href="../../d9/dbe/classcpu6502.html">cpu6502</a> *cpuData = eventEntity-&gt;getComponent&lt;<a class="code hl_class" href="../../d9/dbe/classcpu6502.html">cpu6502</a>&gt;();</div>
 <div class="line"><span class="lineno">   58</span> </div>
 <div class="line"><span class="lineno">   59</span>            uint8_t opcode = 0;</div>
 <div class="line"><span class="lineno">   60</span> </div>
-<div class="line"><span class="lineno">   61</span>            <span class="keywordflow">if</span>((<span class="keywordtype">int</span>)cycles == 0)</div>
+<div class="line"><span class="lineno">   61</span>            <span class="keywordflow">if</span>((<span class="keywordtype">int</span>)<a class="code hl_variable" href="../../de/d33/classcpu.html#aaca1960dd5967a4637409262022a6371">cycles</a> == 0)</div>
 <div class="line"><span class="lineno">   62</span>            {</div>
 <div class="line"><span class="lineno">   63</span>                opcode = busData-&gt;<a class="code hl_function" href="../../d0/d88/classbus.html#abb29248facedf75907fba0ebf44022b0">read</a>(cpuData-&gt;pc);</div>
 <div class="line"><span class="lineno">   64</span>                cpuData-&gt;pc++;</div>
-<div class="line"><span class="lineno">   65</span>                cycles = cpuData-&gt;lookup[opcode].cycles;</div>
+<div class="line"><span class="lineno">   65</span>                <a class="code hl_variable" href="../../de/d33/classcpu.html#aaca1960dd5967a4637409262022a6371">cycles</a> = cpuData-&gt;lookup[opcode].cycles;</div>
 <div class="line"><span class="lineno">   66</span> </div>
 <div class="line"><span class="lineno">   67</span>                <span class="keywordtype">int</span> additional_cycle1 = (cpuData-&gt;*(cpuData-&gt;lookup[opcode].addrmode))();</div>
 <div class="line"><span class="lineno">   68</span>                <span class="keywordtype">int</span> additional_cycle2 = (cpuData-&gt;*(cpuData-&gt;lookup[opcode].operate))();</div>
 <div class="line"><span class="lineno">   69</span> </div>
-<div class="line"><span class="lineno">   70</span>                cycles += (additional_cycle1 &amp; additional_cycle2);</div>
+<div class="line"><span class="lineno">   70</span>                <a class="code hl_variable" href="../../de/d33/classcpu.html#aaca1960dd5967a4637409262022a6371">cycles</a> += (additional_cycle1 &amp; additional_cycle2);</div>
 <div class="line"><span class="lineno">   71</span>            }</div>
 <div class="line"><span class="lineno">   72</span>            cpuData-&gt;clock++;</div>
-<div class="line"><span class="lineno">   73</span>            cycles--;</div>
+<div class="line"><span class="lineno">   73</span>            <a class="code hl_variable" href="../../de/d33/classcpu.html#aaca1960dd5967a4637409262022a6371">cycles</a>--;</div>
 <div class="line"><span class="lineno">   74</span>        </div>
 <div class="line"><span class="lineno">   75</span>            </div>
 <div class="line"><span class="lineno">   76</span>        }</div>
 <div class="ttc" id="aclassbus_html"><div class="ttname"><a href="../../d0/d88/classbus.html">bus</a></div><div class="ttdef"><b>Definition:</b> bus.h:9</div></div>
 <div class="ttc" id="aclassbus_html_abb29248facedf75907fba0ebf44022b0"><div class="ttname"><a href="../../d0/d88/classbus.html#abb29248facedf75907fba0ebf44022b0">bus::read</a></div><div class="ttdeci">dataSize read(addrSize addr, bool bReadOnly=false)</div><div class="ttdef"><b>Definition:</b> bus.h:33</div></div>
 <div class="ttc" id="aclasscpu6502_html"><div class="ttname"><a href="../../d9/dbe/classcpu6502.html">cpu6502</a></div><div class="ttdef"><b>Definition:</b> 6502.h:10</div></div>
+<div class="ttc" id="aclasscpu_html_aaca1960dd5967a4637409262022a6371"><div class="ttname"><a href="../../de/d33/classcpu.html#aaca1960dd5967a4637409262022a6371">cpu::cycles</a></div><div class="ttdeci">static uint8_t cycles</div><div class="ttdef"><b>Definition:</b> cpu.h:17</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -180,6 +187,17 @@ Here is the call graph for this function:</div>
 <map name="ade/d33/classcpu_abc8a3d560e97137856c86004d5d5e91b_cgraph" id="ade/d33/classcpu_abc8a3d560e97137856c86004d5d5e91b_cgraph">
 <area shape="rect" title=" " alt="" coords="5,5,85,32"/>
 <area shape="rect" href="../../d0/d88/classbus.html#abb29248facedf75907fba0ebf44022b0" title=" " alt="" coords="133,5,208,32"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../de/d33/classcpu_abc8a3d560e97137856c86004d5d5e91b_icgraph.png" border="0" usemap="#ade/d33/classcpu_abc8a3d560e97137856c86004d5d5e91b_icgraph" alt=""/></div>
+<map name="ade/d33/classcpu_abc8a3d560e97137856c86004d5d5e91b_icgraph" id="ade/d33/classcpu_abc8a3d560e97137856c86004d5d5e91b_icgraph">
+<area shape="rect" title=" " alt="" coords="415,5,495,32"/>
+<area shape="rect" href="../../df/d0a/main_8cpp.html#a6d327e023ed1dae058f86d827940d7a6" title=" " alt="" coords="292,5,367,32"/>
+<area shape="rect" href="../../df/d0a/main_8cpp.html#a21dfe9bde9bd8461cf7b93411861607a" title=" " alt="" coords="104,5,244,32"/>
+<area shape="rect" href="../../df/d0a/main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,56,32"/>
 </map>
 </div>
 
@@ -310,7 +328,7 @@ template&lt;typename dataSize , typename addrSize &gt; </div>
 <div class="line"><span class="lineno">   39</span>            LTE::eventManger::startBuildingEvent()-&gt;setEntityID(SystemData)-&gt;setEventRoute(<span class="stringliteral">&quot;cpu cmd/cpu reset/6502&quot;</span>)-&gt;setEventCallback(<a class="code hl_class" href="../../de/d33/classcpu.html">cpu&lt;uint8_t, uint16_t&gt;::reset</a>)-&gt;add();</div>
 <div class="line"><span class="lineno">   40</span>            LTE::eventManger::startBuildingEvent()-&gt;setEntityID(SystemData)-&gt;setEventRoute(<span class="stringliteral">&quot;cpu cmd/cpu irq/6502&quot;</span>)-&gt;setEventCallback(<a class="code hl_class" href="../../de/d33/classcpu.html">cpu&lt;uint8_t, uint16_t&gt;::irq</a>)-&gt;add();</div>
 <div class="line"><span class="lineno">   41</span>            LTE::eventManger::startBuildingEvent()-&gt;setEntityID(SystemData)-&gt;setEventRoute(<span class="stringliteral">&quot;cpu cmd/cpu nmi/6502&quot;</span>)-&gt;setEventCallback(<a class="code hl_class" href="../../de/d33/classcpu.html">cpu&lt;uint8_t, uint16_t&gt;::nmi</a>)-&gt;add();</div>
-<div class="line"><span class="lineno">   42</span>            LTE::eventManger::startBuildingEvent()-&gt;setEntityID(SystemData)-&gt;setEventRoute(<span class="stringliteral">&quot;cpu cmd/cpu clock/6502&quot;</span>)-&gt;setEventCallback(<a class="code hl_class" href="../../de/d33/classcpu.html">cpu&lt;uint8_t, uint16_t&gt;::clock</a>)-&gt;add();</div>
+<div class="line"><span class="lineno">   42</span>            <span class="comment">// LTE::eventManger::startBuildingEvent()-&gt;setEntityID(SystemData)-&gt;setEventRoute(&quot;cpu cmd/cpu clock/6502&quot;)-&gt;setEventCallback(cpu&lt;uint8_t, uint16_t&gt;::clock)-&gt;add();</span></div>
 <div class="line"><span class="lineno">   43</span> </div>
 <div class="line"><span class="lineno">   44</span>            <span class="comment">// clockT = new std::thread(clock);</span></div>
 <div class="line"><span class="lineno">   45</span>        }</div>
@@ -389,7 +407,7 @@ template&lt;typename dataSize , typename addrSize &gt; </div>
 <div class="line"><span class="lineno">  119</span>            uint16_t lo = busData-&gt;<a class="code hl_function" href="../../d0/d88/classbus.html#abb29248facedf75907fba0ebf44022b0">read</a>(addr_abs + 0);</div>
 <div class="line"><span class="lineno">  120</span>            uint16_t hi = busData-&gt;<a class="code hl_function" href="../../d0/d88/classbus.html#abb29248facedf75907fba0ebf44022b0">read</a>(addr_abs + 1);</div>
 <div class="line"><span class="lineno">  121</span>            cpuData-&gt;pc = (hi &lt;&lt; 8) | lo;</div>
-<div class="line"><span class="lineno">  122</span>            cycles = 7;</div>
+<div class="line"><span class="lineno">  122</span>            <a class="code hl_variable" href="../../de/d33/classcpu.html#aaca1960dd5967a4637409262022a6371">cycles</a> = 7;</div>
 <div class="line"><span class="lineno">  123</span> </div>
 <div class="line"><span class="lineno">  124</span>        }</div>
 <div class="ttc" id="aclassbus_html_ad0926a660fd5c6e08f88943629c095af"><div class="ttname"><a href="../../d0/d88/classbus.html#ad0926a660fd5c6e08f88943629c095af">bus::write</a></div><div class="ttdeci">void write(addrSize addr, dataSize data)</div><div class="ttdef"><b>Definition:</b> bus.h:41</div></div>
@@ -430,7 +448,7 @@ template&lt;typename dataSize , typename addrSize &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   18</span>{ <span class="keywordflow">return</span> cycles == 0; }</div>
+<div class="fragment"><div class="line"><span class="lineno">   18</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="../../de/d33/classcpu.html#aaca1960dd5967a4637409262022a6371">cycles</a> == 0; }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -490,7 +508,7 @@ template&lt;typename dataSize , typename addrSize &gt; </div>
 <div class="line"><span class="lineno">  145</span>            uint16_t lo = busData-&gt;read(addr_abs + 0);</div>
 <div class="line"><span class="lineno">  146</span>            uint16_t hi = busData-&gt;read(addr_abs + 1);</div>
 <div class="line"><span class="lineno">  147</span>            cpuData-&gt;pc = (hi &lt;&lt; 8) | lo;</div>
-<div class="line"><span class="lineno">  148</span>            cycles = 8;</div>
+<div class="line"><span class="lineno">  148</span>            <a class="code hl_variable" href="../../de/d33/classcpu.html#aaca1960dd5967a4637409262022a6371">cycles</a> = 8;</div>
 <div class="line"><span class="lineno">  149</span>        }</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -556,7 +574,7 @@ template&lt;typename dataSize , typename addrSize &gt; </div>
 <div class="line"><span class="lineno">   92</span>            cpuData-&gt;y = 0;</div>
 <div class="line"><span class="lineno">   93</span>            cpuData-&gt;stkp = 0xFD;</div>
 <div class="line"><span class="lineno">   94</span> </div>
-<div class="line"><span class="lineno">   95</span>            cycles = 8;</div>
+<div class="line"><span class="lineno">   95</span>            <a class="code hl_variable" href="../../de/d33/classcpu.html#aaca1960dd5967a4637409262022a6371">cycles</a> = 8;</div>
 <div class="line"><span class="lineno">   96</span>        }</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -567,6 +585,31 @@ Here is the call graph for this function:</div>
 <area shape="rect" href="../../d0/d88/classbus.html#abb29248facedf75907fba0ebf44022b0" title=" " alt="" coords="132,5,207,32"/>
 </map>
 </div>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="aaca1960dd5967a4637409262022a6371" name="aaca1960dd5967a4637409262022a6371"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaca1960dd5967a4637409262022a6371">&#9670;&nbsp;</a></span>cycles</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename dataSize , typename addrSize &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t <a class="el" href="../../de/d33/classcpu.html">cpu</a>&lt; dataSize, addrSize &gt;::cycles = 0X00</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>

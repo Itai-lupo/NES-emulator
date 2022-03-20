@@ -13,8 +13,8 @@ class cpu
         static inline LTE::entityTaleId SystemData;
         static inline std::thread *clockT;
 
-        static inline uint8_t cycles = 0X00;
     public:
+        static inline uint8_t cycles = 0X00;
         static bool isCpuComplete(){ return cycles == 0; }
 
     	static std::string hex(uint32_t n, uint8_t d)
@@ -39,7 +39,7 @@ class cpu
             LTE::eventManger::startBuildingEvent()->setEntityID(SystemData)->setEventRoute("cpu cmd/cpu reset/6502")->setEventCallback(cpu<uint8_t, uint16_t>::reset)->add();
             LTE::eventManger::startBuildingEvent()->setEntityID(SystemData)->setEventRoute("cpu cmd/cpu irq/6502")->setEventCallback(cpu<uint8_t, uint16_t>::irq)->add();
             LTE::eventManger::startBuildingEvent()->setEntityID(SystemData)->setEventRoute("cpu cmd/cpu nmi/6502")->setEventCallback(cpu<uint8_t, uint16_t>::nmi)->add();
-            LTE::eventManger::startBuildingEvent()->setEntityID(SystemData)->setEventRoute("cpu cmd/cpu clock/6502")->setEventCallback(cpu<uint8_t, uint16_t>::clock)->add();
+            // LTE::eventManger::startBuildingEvent()->setEntityID(SystemData)->setEventRoute("cpu cmd/cpu clock/6502")->setEventCallback(cpu<uint8_t, uint16_t>::clock)->add();
 
             // clockT = new std::thread(clock);
         }
@@ -53,8 +53,8 @@ class cpu
 
         static void clock(LTE::gameObject *eventEntity, LTE::coreEventData *sendor)
         {
-            bus<dataSize, addrSize> *busData = LTE::entityManger::getEntityById(SystemData)->getComponent<bus<dataSize, addrSize>>();
-            cpu6502 *cpuData = LTE::entityManger::getEntityById(SystemData)->getComponent<cpu6502>();
+            bus<dataSize, addrSize> *busData = eventEntity->getComponent<bus<dataSize, addrSize>>();
+            cpu6502 *cpuData = eventEntity->getComponent<cpu6502>();
 
             uint8_t opcode = 0;
 

@@ -8,5 +8,6 @@ var searchData=
   ['nametable_5fy_5',['nametable_y',['../df/d5b/unionppu2c02_1_1_p_p_u_c_t_r_l.html#a00ac20e0abfc7f6d5285d2cebdbc2fad',1,'ppu2c02::PPUCTRL::nametable_y()'],['../d4/d46/unionppu2c02_1_1loopy__register.html#adfe6c672efdf8fadedeeae28f8584273',1,'ppu2c02::loopy_register::nametable_y()']]],
   ['neserror_2eh_6',['NESError.h',['../dc/d36/_n_e_s_error_8h.html',1,'']]],
   ['nesheader_7',['NESHeader',['../dc/d02/struct_n_e_s_header.html',1,'']]],
-  ['nmi_8',['nmi',['../de/d33/classcpu.html#a803206b5587491451a031522d1c9dce7',1,'cpu']]]
+  ['nmi_8',['nmi',['../d6/d3f/classppu.html#a3fa653711a870aa6af0e40f28ec240bf',1,'ppu::nmi()'],['../de/d33/classcpu.html#a803206b5587491451a031522d1c9dce7',1,'cpu::nmi()']]],
+  ['nt_9',['nt',['../d2/deb/classppu2c02.html#ab6d3b796ce590e4c90267078411d418d',1,'ppu2c02']]]
 ];

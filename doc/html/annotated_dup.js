@@ -6,6 +6,7 @@ var annotated_dup =
     [ "busTest", "de/d21/classbus_test.html", "de/d21/classbus_test" ],
     [ "cartridge", "d2/dd7/classcartridge.html", "d2/dd7/classcartridge" ],
     [ "cartridgeEmualtionTest", "d8/d8f/classcartridge_emualtion_test.html", "d8/d8f/classcartridge_emualtion_test" ],
+    [ "controller", "d6/df9/classcontroller.html", "d6/df9/classcontroller" ],
     [ "cpu", "de/d33/classcpu.html", null ],
     [ "cpu6502", "d9/dbe/classcpu6502.html", "d9/dbe/classcpu6502" ],
     [ "cpuBusCartridge", "dc/de6/classcpu_bus_cartridge.html", "dc/de6/classcpu_bus_cartridge" ],

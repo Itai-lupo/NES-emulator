@@ -86,6 +86,7 @@ $(document).ready(function(){initNavTree('da/d1c/classname_table.html','../../')
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="../../df/d71/classname_table-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">nameTable Class Reference</div></div>
 </div><!--header-->
@@ -106,8 +107,9 @@ Collaboration diagram for nameTable:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d2/d91/classname_table__coll__graph.png" border="0" usemap="#aname_table_coll__map" alt="Collaboration graph"/></div>
 <map name="aname_table_coll__map" id="aname_table_coll__map">
-<area shape="rect" title=" " alt="" coords="31,95,117,121"/>
+<area shape="rect" title=" " alt="" coords="36,185,123,212"/>
 <area shape="rect" href="../../dc/d77/classbus_device.html" title=" " alt="" coords="5,5,143,47"/>
+<area shape="rect" href="../../da/de8/classppu_bus_cartridge.html" title=" " alt="" coords="96,96,215,123"/>
 </map>
 <center><span class="legend">[<a target="top" href="../../graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -130,6 +132,11 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a76776dbaa4b844927261fe46ab3b690f inherit pub_methods_classbus_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a72c738905ce28059b913090afd049061 inherit pub_methods_classbus_device"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d77/classbus_device.html#a72c738905ce28059b913090afd049061">write</a> (uint16_t addr, uint8_t data)=0</td></tr>
 <tr class="separator:a72c738905ce28059b913090afd049061 inherit pub_methods_classbus_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a6241ac020e613f01e0f85dc6daf2d1d5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../da/de8/classppu_bus_cartridge.html">ppuBusCartridge</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d1c/classname_table.html#a6241ac020e613f01e0f85dc6daf2d1d5">cart</a></td></tr>
+<tr class="separator:a6241ac020e613f01e0f85dc6daf2d1d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aa5d607f82dc2a3cfe2218a707d5a853d" name="aa5d607f82dc2a3cfe2218a707d5a853d"></a>
@@ -154,7 +161,14 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">    9</span>{}</div>
+<div class="fragment"><div class="line"><span class="lineno">   20</span>        {</div>
+<div class="line"><span class="lineno">   21</span>            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; 1024; i++)</div>
+<div class="line"><span class="lineno">   22</span>            {</div>
+<div class="line"><span class="lineno">   23</span>                tableData[0][i] = 0;</div>
+<div class="line"><span class="lineno">   24</span>                tableData[1][i] = 0;</div>
+<div class="line"><span class="lineno">   25</span>            }</div>
+<div class="line"><span class="lineno">   26</span>            </div>
+<div class="line"><span class="lineno">   27</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -184,9 +198,9 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="../../dc/d77/classbus_device.html#ace475b1abcc4375d4723209ed4be17f0">busDevice&lt; uint8_t, uint16_t &gt;</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   22</span>        {</div>
-<div class="line"><span class="lineno">   23</span>            <span class="keywordflow">return</span> addr &gt;= 0x2000 &amp;&amp; addr &lt;= 0x2FFF;</div>
-<div class="line"><span class="lineno">   24</span>        }</div>
+<div class="fragment"><div class="line"><span class="lineno">   91</span>        {</div>
+<div class="line"><span class="lineno">   92</span>            <span class="keywordflow">return</span> addr &gt;= 0x2000 &amp;&amp; addr &lt;= 0x3EFF;</div>
+<div class="line"><span class="lineno">   93</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -225,10 +239,48 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="../../dc/d77/classbus_device.html#a76776dbaa4b844927261fe46ab3b690f">busDevice&lt; uint8_t, uint16_t &gt;</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   12</span>        {</div>
-<div class="line"><span class="lineno">   13</span>            </div>
-<div class="line"><span class="lineno">   14</span>        }</div>
-</div><!-- fragment -->
+<div class="fragment"><div class="line"><span class="lineno">   30</span>        {</div>
+<div class="line"><span class="lineno">   31</span>            addr &amp;= 0x0FFF;</div>
+<div class="line"><span class="lineno">   32</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../da/d1c/classname_table.html#a6241ac020e613f01e0f85dc6daf2d1d5">cart</a>-&gt;<a class="code hl_function" href="../../da/de8/classppu_bus_cartridge.html#a9dcc9658ba9b6d6ec08ce985414cfdba">getMirror</a>() == <a class="code hl_enumvalue" href="../../d6/da5/cartridge_8h.html#af32b022d54641d350cd8d0ef200c79faa1a88641fcd39f2ed3e58a18526e97138">MIRROR::VERTICAL</a>)</div>
+<div class="line"><span class="lineno">   33</span>            {</div>
+<div class="line"><span class="lineno">   34</span>                <span class="comment">// Vertical</span></div>
+<div class="line"><span class="lineno">   35</span>                <span class="keywordflow">if</span> (addr &gt;= 0x0000 &amp;&amp; addr &lt;= 0x03FF)</div>
+<div class="line"><span class="lineno">   36</span>                    <span class="keywordflow">return</span> tableData[0][addr &amp; 0x03FF];</div>
+<div class="line"><span class="lineno">   37</span>                <span class="keywordflow">if</span> (addr &gt;= 0x0400 &amp;&amp; addr &lt;= 0x07FF)</div>
+<div class="line"><span class="lineno">   38</span>                    <span class="keywordflow">return</span> tableData[1][addr &amp; 0x03FF];</div>
+<div class="line"><span class="lineno">   39</span>                <span class="keywordflow">if</span> (addr &gt;= 0x0800 &amp;&amp; addr &lt;= 0x0BFF)</div>
+<div class="line"><span class="lineno">   40</span>                    <span class="keywordflow">return</span> tableData[0][addr &amp; 0x03FF];</div>
+<div class="line"><span class="lineno">   41</span>                <span class="keywordflow">if</span> (addr &gt;= 0x0C00 &amp;&amp; addr &lt;= 0x0FFF)</div>
+<div class="line"><span class="lineno">   42</span>                    <span class="keywordflow">return</span> tableData[1][addr &amp; 0x03FF];</div>
+<div class="line"><span class="lineno">   43</span>            }</div>
+<div class="line"><span class="lineno">   44</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../da/d1c/classname_table.html#a6241ac020e613f01e0f85dc6daf2d1d5">cart</a>-&gt;<a class="code hl_function" href="../../da/de8/classppu_bus_cartridge.html#a9dcc9658ba9b6d6ec08ce985414cfdba">getMirror</a>() == <a class="code hl_enumvalue" href="../../d6/da5/cartridge_8h.html#af32b022d54641d350cd8d0ef200c79faa4dd51ad73508d6fc83a502966779e48e">MIRROR::HORIZONTAL</a>)</div>
+<div class="line"><span class="lineno">   45</span>            {</div>
+<div class="line"><span class="lineno">   46</span>                <span class="comment">// Horizontal</span></div>
+<div class="line"><span class="lineno">   47</span>                <span class="keywordflow">if</span> (addr &gt;= 0x0000 &amp;&amp; addr &lt;= 0x03FF)</div>
+<div class="line"><span class="lineno">   48</span>                    <span class="keywordflow">return</span> tableData[0][addr &amp; 0x03FF];</div>
+<div class="line"><span class="lineno">   49</span>                <span class="keywordflow">if</span> (addr &gt;= 0x0400 &amp;&amp; addr &lt;= 0x07FF)</div>
+<div class="line"><span class="lineno">   50</span>                    <span class="keywordflow">return</span> tableData[0][addr &amp; 0x03FF];</div>
+<div class="line"><span class="lineno">   51</span>                <span class="keywordflow">if</span> (addr &gt;= 0x0800 &amp;&amp; addr &lt;= 0x0BFF)</div>
+<div class="line"><span class="lineno">   52</span>                    <span class="keywordflow">return</span> tableData[1][addr &amp; 0x03FF];</div>
+<div class="line"><span class="lineno">   53</span>                <span class="keywordflow">if</span> (addr &gt;= 0x0C00 &amp;&amp; addr &lt;= 0x0FFF)</div>
+<div class="line"><span class="lineno">   54</span>                    <span class="keywordflow">return</span> tableData[1][addr &amp; 0x03FF];</div>
+<div class="line"><span class="lineno">   55</span>            }</div>
+<div class="line"><span class="lineno">   56</span>            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">   57</span>        }</div>
+<div class="ttc" id="acartridge_8h_html_af32b022d54641d350cd8d0ef200c79faa1a88641fcd39f2ed3e58a18526e97138"><div class="ttname"><a href="../../d6/da5/cartridge_8h.html#af32b022d54641d350cd8d0ef200c79faa1a88641fcd39f2ed3e58a18526e97138">VERTICAL</a></div><div class="ttdeci">@ VERTICAL</div><div class="ttdef"><b>Definition:</b> cartridge.h:29</div></div>
+<div class="ttc" id="acartridge_8h_html_af32b022d54641d350cd8d0ef200c79faa4dd51ad73508d6fc83a502966779e48e"><div class="ttname"><a href="../../d6/da5/cartridge_8h.html#af32b022d54641d350cd8d0ef200c79faa4dd51ad73508d6fc83a502966779e48e">HORIZONTAL</a></div><div class="ttdeci">@ HORIZONTAL</div><div class="ttdef"><b>Definition:</b> cartridge.h:28</div></div>
+<div class="ttc" id="aclassname_table_html_a6241ac020e613f01e0f85dc6daf2d1d5"><div class="ttname"><a href="../../da/d1c/classname_table.html#a6241ac020e613f01e0f85dc6daf2d1d5">nameTable::cart</a></div><div class="ttdeci">ppuBusCartridge * cart</div><div class="ttdef"><b>Definition:</b> nameTable.h:17</div></div>
+<div class="ttc" id="aclassppu_bus_cartridge_html_a9dcc9658ba9b6d6ec08ce985414cfdba"><div class="ttname"><a href="../../da/de8/classppu_bus_cartridge.html#a9dcc9658ba9b6d6ec08ce985414cfdba">ppuBusCartridge::getMirror</a></div><div class="ttdeci">MIRROR getMirror()</div><div class="ttdef"><b>Definition:</b> ppuBusCartridge.h:12</div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../da/d1c/classname_table_a175a72710f8b952cb66e0ab2597961b8_cgraph.png" border="0" usemap="#ada/d1c/classname_table_a175a72710f8b952cb66e0ab2597961b8_cgraph" alt=""/></div>
+<map name="ada/d1c/classname_table_a175a72710f8b952cb66e0ab2597961b8_cgraph" id="ada/d1c/classname_table_a175a72710f8b952cb66e0ab2597961b8_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,123,32"/>
+<area shape="rect" href="../../da/de8/classppu_bus_cartridge.html#a9dcc9658ba9b6d6ec08ce985414cfdba" title=" " alt="" coords="171,5,345,32"/>
+</map>
+</div>
+
 </div>
 </div>
 <a id="ab2c64540d864a5920ffaba76e629ee48" name="ab2c64540d864a5920ffaba76e629ee48"></a>
@@ -266,10 +318,61 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="../../dc/d77/classbus_device.html#a72c738905ce28059b913090afd049061">busDevice&lt; uint8_t, uint16_t &gt;</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   17</span>        {</div>
-<div class="line"><span class="lineno">   18</span>            </div>
-<div class="line"><span class="lineno">   19</span>        }</div>
-</div><!-- fragment -->
+<div class="fragment"><div class="line"><span class="lineno">   60</span>        {</div>
+<div class="line"><span class="lineno">   61</span>            addr &amp;= 0x0FFF;</div>
+<div class="line"><span class="lineno">   62</span>            LAUGHTALE_ENGINR_CONDTION_LOG_INFO(data, data != 0 &amp;&amp; data != 32)</div>
+<div class="line"><span class="lineno">   63</span>            </div>
+<div class="line"><span class="lineno">   64</span>            if (<a class="code hl_variable" href="../../da/d1c/classname_table.html#a6241ac020e613f01e0f85dc6daf2d1d5">cart</a>-&gt;getMirror() == <a class="code hl_enumeration" href="../../d6/da5/cartridge_8h.html#af32b022d54641d350cd8d0ef200c79fa">MIRROR</a>::<a class="code hl_enumvalue" href="../../d6/da5/cartridge_8h.html#af32b022d54641d350cd8d0ef200c79faa1a88641fcd39f2ed3e58a18526e97138">VERTICAL</a>)</div>
+<div class="line"><span class="lineno">   65</span>            {</div>
+<div class="line"><span class="lineno">   66</span>                <span class="comment">// Vertical</span></div>
+<div class="line"><span class="lineno">   67</span>                <span class="keywordflow">if</span> (addr &gt;= 0x0000 &amp;&amp; addr &lt;= 0x03FF)</div>
+<div class="line"><span class="lineno">   68</span>                    tableData[0][addr &amp; 0x03FF] = data;</div>
+<div class="line"><span class="lineno">   69</span>                <span class="keywordflow">if</span> (addr &gt;= 0x0400 &amp;&amp; addr &lt;= 0x07FF)</div>
+<div class="line"><span class="lineno">   70</span>                    tableData[1][addr &amp; 0x03FF] = data;</div>
+<div class="line"><span class="lineno">   71</span>                <span class="keywordflow">if</span> (addr &gt;= 0x0800 &amp;&amp; addr &lt;= 0x0BFF)</div>
+<div class="line"><span class="lineno">   72</span>                    tableData[0][addr &amp; 0x03FF] = data;</div>
+<div class="line"><span class="lineno">   73</span>                <span class="keywordflow">if</span> (addr &gt;= 0x0C00 &amp;&amp; addr &lt;= 0x0FFF)</div>
+<div class="line"><span class="lineno">   74</span>                    tableData[1][addr &amp; 0x03FF] = data;</div>
+<div class="line"><span class="lineno">   75</span>            }</div>
+<div class="line"><span class="lineno">   76</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../da/d1c/classname_table.html#a6241ac020e613f01e0f85dc6daf2d1d5">cart</a>-&gt;<a class="code hl_function" href="../../da/de8/classppu_bus_cartridge.html#a9dcc9658ba9b6d6ec08ce985414cfdba">getMirror</a>() == <a class="code hl_enumvalue" href="../../d6/da5/cartridge_8h.html#af32b022d54641d350cd8d0ef200c79faa4dd51ad73508d6fc83a502966779e48e">MIRROR::HORIZONTAL</a>)</div>
+<div class="line"><span class="lineno">   77</span>            {</div>
+<div class="line"><span class="lineno">   78</span>                <span class="comment">// Horizontal</span></div>
+<div class="line"><span class="lineno">   79</span>                <span class="keywordflow">if</span> (addr &gt;= 0x0000 &amp;&amp; addr &lt;= 0x03FF)</div>
+<div class="line"><span class="lineno">   80</span>                    tableData[0][addr &amp; 0x03FF] = data;</div>
+<div class="line"><span class="lineno">   81</span>                <span class="keywordflow">if</span> (addr &gt;= 0x0400 &amp;&amp; addr &lt;= 0x07FF)</div>
+<div class="line"><span class="lineno">   82</span>                    tableData[0][addr &amp; 0x03FF] = data;</div>
+<div class="line"><span class="lineno">   83</span>                <span class="keywordflow">if</span> (addr &gt;= 0x0800 &amp;&amp; addr &lt;= 0x0BFF)</div>
+<div class="line"><span class="lineno">   84</span>                    tableData[1][addr &amp; 0x03FF] = data;</div>
+<div class="line"><span class="lineno">   85</span>                <span class="keywordflow">if</span> (addr &gt;= 0x0C00 &amp;&amp; addr &lt;= 0x0FFF)</div>
+<div class="line"><span class="lineno">   86</span>                    tableData[1][addr &amp; 0x03FF] = data;</div>
+<div class="line"><span class="lineno">   87</span>            }</div>
+<div class="line"><span class="lineno">   88</span>        }</div>
+<div class="ttc" id="acartridge_8h_html_af32b022d54641d350cd8d0ef200c79fa"><div class="ttname"><a href="../../d6/da5/cartridge_8h.html#af32b022d54641d350cd8d0ef200c79fa">MIRROR</a></div><div class="ttdeci">MIRROR</div><div class="ttdef"><b>Definition:</b> cartridge.h:27</div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../da/d1c/classname_table_ab2c64540d864a5920ffaba76e629ee48_cgraph.png" border="0" usemap="#ada/d1c/classname_table_ab2c64540d864a5920ffaba76e629ee48_cgraph" alt=""/></div>
+<map name="ada/d1c/classname_table_ab2c64540d864a5920ffaba76e629ee48_cgraph" id="ada/d1c/classname_table_ab2c64540d864a5920ffaba76e629ee48_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,125,32"/>
+<area shape="rect" href="../../da/de8/classppu_bus_cartridge.html#a9dcc9658ba9b6d6ec08ce985414cfdba" title=" " alt="" coords="173,5,348,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a6241ac020e613f01e0f85dc6daf2d1d5" name="a6241ac020e613f01e0f85dc6daf2d1d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6241ac020e613f01e0f85dc6daf2d1d5">&#9670;&nbsp;</a></span>cart</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../da/de8/classppu_bus_cartridge.html">ppuBusCartridge</a>* nameTable::cart</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

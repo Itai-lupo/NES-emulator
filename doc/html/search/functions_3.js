@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['hex_0',['hex',['../de/d33/classcpu.html#a982d259d5c5981cb3b51364c97b80519',1,'cpu::hex()'],['../dc/d39/6502_8cpp.html#ade70fa8abce6b20a645d3793dd6fa841',1,'hex():&#160;6502.cpp']]]
+  ['getcolourfrompaletteram_0',['GetColourFromPaletteRam',['../d6/d3f/classppu.html#ab7902989f58e71e7b1a934558ee6bcf1',1,'ppu']]],
+  ['getmirror_1',['getMirror',['../da/de8/classppu_bus_cartridge.html#a9dcc9658ba9b6d6ec08ce985414cfdba',1,'ppuBusCartridge']]]
 ];

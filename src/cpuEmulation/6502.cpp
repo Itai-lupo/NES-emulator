@@ -28,6 +28,7 @@ uint8_t cpu6502::ZP0()
 {
     addr = systemBus->read(pc);
     pc++;
+    addr &= 0x00FF;
     
     return 0;
 }
@@ -82,7 +83,8 @@ uint8_t cpu6502::ABX()
     uint16_t hi = systemBus->read(pc);
     pc++;
 
-    addr = ((hi << 8) | lo) + x;
+    addr = (hi << 8) | lo;
+    addr += x;
     
     return ((addr & 0xFF00) != (hi << 8));
 }	
@@ -94,8 +96,8 @@ uint8_t cpu6502::ABY()
     uint16_t hi = systemBus->read(pc);
     pc++;
 
-    addr = ((hi << 8) | lo) + y;
-    
+    addr = (hi << 8) | lo;
+    addr += y;
     return ((addr & 0xFF00) != (hi << 8));
 }
 	
@@ -519,8 +521,8 @@ uint8_t cpu6502::ORA()
     uint8_t temp = systemBus->read(addr);
     a = temp | a;
     
-    status.Z = (a & 0x00FF) == 0; 
-    status.N = (a & 0x0080) == 0; 
+    status.Z = a == 0; 
+    status.N = a & 0x80; 
 
     return 1;
 }
@@ -612,14 +614,16 @@ uint8_t cpu6502::ROR_A()
 	
 uint8_t cpu6502::RTI()
 {
+    stkp++;
     statusData = systemBus->read(0x0100 + stkp);
-    stkp++;
+	status.B = ~status.B;
+	status.U = ~status.U;
 
-    pc = systemBus->read(0x0100 + stkp);
     stkp++;
-    
-    pc |= systemBus->read(0x0100 + stkp) << 8;
+    pc = (uint16_t)systemBus->read(0x0100 + stkp);
     stkp++;
+    pc |= ((uint16_t)systemBus->read(0x0100 + stkp)) << 8;
+
     return 0;
 }
 	

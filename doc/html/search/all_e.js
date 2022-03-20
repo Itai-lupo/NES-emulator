@@ -13,6 +13,7 @@ var searchData=
   ['mappersdata_10',['mappersData',['../d8/d1f/structmappers_data.html',1,'']]],
   ['mappersfacory_11',['mappersFacory',['../de/d4c/classmappers_facory.html',1,'']]],
   ['mappersfacory_2eh_12',['mappersFacory.h',['../d7/d83/mappers_facory_8h.html',1,'']]],
-  ['mask_13',['mask',['../d2/deb/classppu2c02.html#a936d6d02b6b4fa8b220d62d49b6fcde4',1,'ppu2c02']]],
-  ['mirror_14',['MIRROR',['../d6/da5/cartridge_8h.html#af32b022d54641d350cd8d0ef200c79fa',1,'cartridge.h']]]
+  ['mask_13',['mask',['../d2/deb/classppu2c02.html#ae9acdeb35a57b3f30f50ba6f463a1195',1,'ppu2c02']]],
+  ['mirror_14',['mirror',['../d2/dd7/classcartridge.html#a9b69569e838b3936ba881ca96641a520',1,'cartridge']]],
+  ['mirror_15',['MIRROR',['../d6/da5/cartridge_8h.html#af32b022d54641d350cd8d0ef200c79fa',1,'cartridge.h']]]
 ];

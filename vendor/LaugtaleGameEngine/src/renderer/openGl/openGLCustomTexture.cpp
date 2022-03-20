@@ -53,15 +53,12 @@ namespace LTE
   {
     if(cords.first >= size.first || cords.second >= size.second)
     {
-      LAUGHTALE_ENGINR_LOG_ERROR("out of bond(" << (int)cords.first << ", " << (int)cords.second << ")")
+      LAUGHTALE_ENGINR_LOG_ERROR("out of bond(" << (int)cords.first << ", " << (int)cords.second << ") size of texture(" << (int)size.first << ", " << (int)size.second << ")")
       return;
     }
-
-
+    
     data[(size.second - cords.second - 1) * size.first + cords.first].R = rgb[0];
     data[(size.second - cords.second - 1) * size.first + cords.first].G = rgb[1];
     data[(size.second - cords.second - 1) * size.first + cords.first].B = rgb[2];
-    // LAUGHTALE_ENGINR_LOG_INFO(cords.second * size.first + cords.first << ", " << cords.first << ", " << cords.second)
-    // LAUGHTALE_ENGINR_LOG_INFO((int)data[cords.second * size.first + cords.first].R << ", " <<(int)data[cords.second * size.first + cords.first].G << ", " <<(int)data[cords.second * size.first + cords.first].B << ", ")
   }
 }

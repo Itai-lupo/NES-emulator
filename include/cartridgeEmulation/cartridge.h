@@ -40,7 +40,6 @@ class cartridge
         uint8_t mapperId;        
         uint8_t PRGBanks = 0;
         uint8_t CHRBanks = 0;
-        MIRROR mirror = HORIZONTAL;
     
         bool thereIsALoadedCart = false;
 
@@ -59,6 +58,7 @@ class cartridge
         void writePRGMemory(uint16_t addr, uint8_t data);
         void writeCHRMemory(uint16_t addr, uint8_t data);
 
+        MIRROR mirror = HORIZONTAL;
     private:
         std::ifstream ifs;
         uint8_t fileType;

@@ -10,6 +10,7 @@
 #include "imgui.h"
 #include "displayDebugInfo.h"
 #include "gamesMenu.h"
+#include "controller.h"
 
 #include <thread>
 
@@ -25,8 +26,15 @@ void keyDispatcher(LTE::gameObject *eventEntity, LTE::coreEventData *sendor)
 {
     LTE::KeyData *eventData = static_cast<LTE::KeyData *>(sendor);
     
-    if(eventData->key == LT_KEY_SPACE)
+    if(eventData->key == LT_KEY_SPACE)    
+    {
         sendor->route = "cpu cmd/cpu clock/";
+        LTE::eventManger::trigerEvent(sendor);
+        while (!cpu<uint8_t, uint16_t>::isCpuComplete())
+            LTE::eventManger::trigerEvent(sendor);
+
+        return;
+    }
 
     if(eventData->key == LT_KEY_F2)
     {
@@ -40,6 +48,7 @@ void keyDispatcher(LTE::gameObject *eventEntity, LTE::coreEventData *sendor)
         while (!ppu::frameComplete)
             LTE::eventManger::trigerEvent(sendor);
         ppu::frameComplete = false;
+        return;
     }
 
     if(eventData->key == LT_KEY_P)        
@@ -81,6 +90,19 @@ unsigned int tileIndices[6] =
     2,
 };
 
+void sysClock(LTE::gameObject *eventEntity, LTE::coreEventData *sendor)
+{
+    ppu::clock(eventEntity, sendor);
+    cpu<uint8_t, uint16_t>::clock(eventEntity, sendor);
+
+    if(ppu::nmi)
+    {
+        ppu::nmi = false;
+        sendor->route = "cpu cmd/cpu nmi/";
+        LTE::eventManger::trigerEvent(sendor);
+    }
+}
+
 void initEmulationSystem()
 {
 
@@ -88,14 +110,17 @@ void initEmulationSystem()
     cart = new cartridge();
     cpu6502 *c = new cpu6502();
     ppu2c02 *p = new ppu2c02(new ppuBusCartridge(cart));
+    controller *ctrl = new controller();
     bus<uint8_t, uint16_t> *sysBus = (new bus<uint8_t, uint16_t>())->pushDevice(r);
 
-    LTE::texture *t = LTE::windowManger::getWindow(winId)->context->getMeshFactory()->createCustemTexture({232, 256});
+    LTE::texture *t = LTE::windowManger::getWindow(winId)->context->getMeshFactory()->createCustemTexture({256, 240});
 
-    LTE::windowManger::getWindow(winId)->assetLibrary->saveAsset(t, "res/NEStexture");
+    LTE::windowManger::getWindow(winId)->assetLibrary->saveAsset(t, "res/NEStexture"); 
+    LTE::windowManger::getWindow(winId)->assetLibrary->loadAssetFromFile("res/shaders/Basic.glsl");
 
     sysBus->
         pushDevice(new cpuBusCartridge(cart))->
+        pushDevice(ctrl)->
         pushDevice(p);
 
     id =  LTE::entityManger::addEntity(
@@ -107,6 +132,7 @@ void initEmulationSystem()
                 addComponent(sysBus)->
                 addComponent(p)->
                 addComponent(c)->
+                addComponent(ctrl)->
                 addComponent(LTE::mesh::build([&](LTE::mesh::meshBuilder *builder)
                     { 
                         builder->
@@ -119,6 +145,8 @@ void initEmulationSystem()
 
     cpu<uint8_t, uint16_t>::init(id);
     ppu::init(id);
+    LTE::eventManger::startBuildingEvent()->setEntityID(id)->setEventRoute("cpu cmd/cpu clock/system")->setEventCallback(sysClock)->add();
+
 
 }
 

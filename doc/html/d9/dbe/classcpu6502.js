@@ -17,7 +17,7 @@ var classcpu6502 =
     [ "N", "d9/dbe/classcpu6502.html#aa073b5fa51259af01bb2f1c7d6932b1f", null ],
     [ "pc", "d9/dbe/classcpu6502.html#a3864a06068e5e31cef733b93b9671298", null ],
     [ "RW", "d9/dbe/classcpu6502.html#a764f5a2d57d981ad1f029ab13059fb98", null ],
-    [ "status", "d9/dbe/classcpu6502.html#af885f60532b1939ada3a719ccf4461ad", null ],
+    [ "status", "d9/dbe/classcpu6502.html#a3f2a36c72eb1d2e08f999ed416709d92", null ],
     [ "statusData", "d9/dbe/classcpu6502.html#a71b68863d6facf1c664286a43e08cb84", null ],
     [ "stkp", "d9/dbe/classcpu6502.html#ae7c07e603fef0455bbda5db0d37a8b73", null ],
     [ "U", "d9/dbe/classcpu6502.html#aea4d62529406f9bee5fcc309d2c7c2e6", null ],

@@ -15,6 +15,7 @@ namespace LTE
                 uint8_t B;
             };
             RGB *data;
+            bool a;
 
         public:
             openGLCustomTexture(const std::pair<int, int>& size);
