@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['getcolourfrompaletteram_0',['GetColourFromPaletteRam',['../d6/d3f/classppu.html#ab7902989f58e71e7b1a934558ee6bcf1',1,'ppu']]],
-  ['getmirror_1',['getMirror',['../da/de8/classppu_bus_cartridge.html#a9dcc9658ba9b6d6ec08ce985414cfdba',1,'ppuBusCartridge']]]
+  ['end_0',['end',['../d0/d88/classbus.html#a68d3266be0898d51da88abb2c02b3b01',1,'bus::end()'],['../d6/df9/classcontroller.html#add373ac61cc5e99c209643303ed5e7de',1,'controller::end()'],['../d9/dbe/classcpu6502.html#aed476717c96f94c5481060517f71db67',1,'cpu6502::end()'],['../d2/deb/classppu2c02.html#a00a1c655d9871d361416bc8627a2829a',1,'ppu2c02::end()']]]
 ];

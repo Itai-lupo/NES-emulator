@@ -111,7 +111,7 @@ void initEmulationSystem()
     cpu6502 *c = new cpu6502();
     ppu2c02 *p = new ppu2c02(new ppuBusCartridge(cart));
     controller *ctrl = new controller();
-    bus<uint8_t, uint16_t> *sysBus = (new bus<uint8_t, uint16_t>())->pushDevice(r);
+    bus<uint8_t, uint16_t> *sysBus = (new bus<uint8_t, uint16_t>());
 
     LTE::texture *t = LTE::windowManger::getWindow(winId)->context->getMeshFactory()->createCustemTexture({256, 240});
 
@@ -120,6 +120,7 @@ void initEmulationSystem()
 
     sysBus->
         pushDevice(new cpuBusCartridge(cart))->
+        pushDevice(r)->
         pushDevice(ctrl)->
         pushDevice(p);
 

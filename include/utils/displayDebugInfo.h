@@ -163,6 +163,33 @@ private:
         ImGui::EndChild();
 
         ImGui::SliderInt("page num", &page, 0, 0x1F);
+
+        ImGui::BeginChild("scrolling", ImVec2(0, 150));
+        for (int i = 0; i <= 0xFF; i += 16)
+        {
+            ImGui::Text((
+                            toHexString((nameTablePage << 8) | i, 4) + ":\t" +
+                            toHexString(nameTablepageData[i + 0], 2) + " " +
+                            toHexString(nameTablepageData[i + 1], 2) + " " +
+                            toHexString(nameTablepageData[i + 2], 2) + " " +
+                            toHexString(nameTablepageData[i + 3], 2) + " " +
+                            toHexString(nameTablepageData[i + 4], 2) + " " +
+                            toHexString(nameTablepageData[i + 5], 2) + " " +
+                            toHexString(nameTablepageData[i + 6], 2) + " " +
+                            toHexString(nameTablepageData[i + 7], 2) + "\t" +
+                            toHexString(nameTablepageData[i + 8], 2) + " " +
+                            toHexString(nameTablepageData[i + 9], 2) + " " +
+                            toHexString(nameTablepageData[i + 10], 2) + " " +
+                            toHexString(nameTablepageData[i + 11], 2) + " " +
+                            toHexString(nameTablepageData[i + 12], 2) + " " +
+                            toHexString(nameTablepageData[i + 13], 2) + " " +
+                            toHexString(nameTablepageData[i + 14], 2) + " " +
+                            toHexString(nameTablepageData[i + 15], 2) + " ")
+                            .c_str());
+        }
+        ImGui::EndChild();
+
+        ImGui::SliderInt("name table page num", &nameTablePage, 0x20, 0x3E);
         ImGui::End();
     }
 
@@ -265,23 +292,26 @@ private:
             int x = 0, y = 0;
             for (uint64_t j = 0x2000 + 0x03FF * i; j < 0x2000 + 0x03FF * (i + 1) - 0x3F; j++)
             {
-                uint16_t tileId = p->ppuBus.read(j);
-                uint8_t bg_next_tile_attrib = p->ppuBus.read(
-                                                    (0x2000 + 0x03FF * (i + 1) - 0x3F)
-                                                    | ((y >> 2) << 3) 
-                                                    | (x >> 2));
-					
-                    if (y & 0x02) bg_next_tile_attrib >>= 4;
-                    if (x & 0x02) bg_next_tile_attrib >>= 2;
-                    bg_next_tile_attrib &= 0x03;
                 for(int k = 0; k < 8; k++)
                 {
+                    uint16_t tileId = p->ppuBus.read(j);
                     uint8_t LSB = p->ppuBus.read((tileId << 4) + 0 + k);
                     uint8_t MSB = p->ppuBus.read((tileId << 4) + 8 + k);
+                    
+                    uint8_t bg_next_tile_attrib = p->ppuBus.read(
+                                                        (0x2000 + 0x03FF * (i + 1) - 0x3F)
+                                                        | ((y >> 2) << 3) 
+                                                        | (x >> 2));
+                        
+                    if (y & 0x02) bg_next_tile_attrib >>= 4;
+                    if (x & 0x02) bg_next_tile_attrib >>= 2;
+                    
+                    bg_next_tile_attrib &= 0x03;
                     
                     uint8_t c;
                     for (int n = 7; n >= 0; n--)
                     { 
+
                         c = ((MSB & 1) << 1) | (LSB & 1);
                         MSB >>= 1;
                         LSB >>= 1;

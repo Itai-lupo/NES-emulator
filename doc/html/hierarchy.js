@@ -32,7 +32,6 @@ var hierarchy =
     [ "cpu6502::instruction6502", "dd/d5a/structcpu6502_1_1instruction6502.html", null ],
     [ "ppu2c02::loopy_register", "d4/d46/unionppu2c02_1_1loopy__register.html", null ],
     [ "mapper", "d6/d32/classmapper.html", [
-      [ "mapper_000", "d5/df4/classmapper__000.html", null ],
       [ "mapper_000", "d5/df4/classmapper__000.html", null ]
     ] ],
     [ "mappersData", "d8/d1f/structmappers_data.html", null ],

@@ -16,7 +16,7 @@ class palettesMemory: public busDevice<uint8_t, uint16_t>
             if (addr == 0x0014) addr = 0x0004;
             if (addr == 0x0018) addr = 0x0008;
             if (addr == 0x001C) addr = 0x000C;
-            return paletteData[addr ];
+            return paletteData[addr];
         }
         
         virtual void write(uint16_t addr, uint8_t data) override

@@ -212,6 +212,8 @@ uint8_t cpu6502::BCS()
 	
 uint8_t cpu6502::BEQ()
 {
+    LAUGHTALE_ENGINR_LOG_INFO("BEQ from " << hex(pc, 4) << " to " << hex(addr, 4) << " if " << (int)status.Z)
+
     if(status.Z != 1)
         return 0;
     uint8_t temp = pc;
@@ -222,11 +224,11 @@ uint8_t cpu6502::BEQ()
 uint8_t cpu6502::BIT()
 {
     uint16_t temp = systemBus->read(addr);
-
     status.Z = ((temp & a & 0x00FF) == 0);
     status.N = (temp & (1 << 7));
     status.V = (temp & (1 << 6));
 
+    LAUGHTALE_ENGINR_LOG_INFO("BIT " << hex(addr, 4) << ", ")
 
     return 0;
 }
@@ -242,6 +244,8 @@ uint8_t cpu6502::BMI()
 
 uint8_t cpu6502::BNE()
 {
+    LAUGHTALE_ENGINR_LOG_INFO("BEQ from " << hex(pc, 4) << " to " << hex(addr, 4) << " if " << 1 - (int)status.Z)
+
     if(status.Z != 0)
         return 0;
     uint8_t temp = pc;
@@ -251,6 +255,7 @@ uint8_t cpu6502::BNE()
 	
 uint8_t cpu6502::BPL()
 {
+    LAUGHTALE_ENGINR_LOG_INFO("BPL from " << hex(pc, 4) << " to " << hex(addr, 4) << " if " << (bool)status.N)
     if(status.N != 0)
         return 0;
     uint8_t temp = pc;
@@ -263,6 +268,8 @@ uint8_t cpu6502::BRK()
     pc++;
     status.I = 1;
 
+    LAUGHTALE_ENGINR_LOG_INFO("BRK(" << hex(pc - 2, 4) << ") push in to stack " << hex(pc, 4))
+
     systemBus->write(0x0100 + stkp, (pc >> 8) & 0x00FF);
     stkp--;
     systemBus->write(0x0100 + stkp, pc & 0x00FF);
@@ -274,6 +281,7 @@ uint8_t cpu6502::BRK()
     status.B = 0;
 
     pc = (uint16_t)systemBus->read(0xFFFE) | ((uint16_t)systemBus->read(0xFFFF) << 8);
+    LAUGHTALE_ENGINR_LOG_INFO("BRK read from 0xFFFE and FFFF " << hex(pc, 4))
     return 0;
 }
 	
@@ -322,9 +330,10 @@ uint8_t cpu6502::CLV()
 	
 uint8_t cpu6502::CMP()
 {
-    uint8_t temp = systemBus->read(addr);
+    uint16_t temp = systemBus->read(addr);
+    LAUGHTALE_ENGINR_LOG_INFO("CMP " << hex(addr, 4) << ", " << hex(temp, 2) << ", " << hex(a, 2))
     status.C = a >= temp;
-    temp = a - temp;
+    temp = (uint16_t)a - temp;
     status.Z = (temp & 0x00FF) == 0;
     status.N = (temp & 0x0080);
 
@@ -544,15 +553,15 @@ uint8_t cpu6502::PHP()
 	
 uint8_t cpu6502::PLA()
 {
-    a = systemBus->read(0x0100 + stkp);
     stkp++;
+    a = systemBus->read(0x0100 + stkp);
     return 0;
 }
 	
 uint8_t cpu6502::PLP()
 {
-    statusData = systemBus->read(0x0100 + stkp);
     stkp++;
+    statusData = systemBus->read(0x0100 + stkp);
     return 0;
 }
 	
@@ -619,21 +628,28 @@ uint8_t cpu6502::RTI()
 	status.B = ~status.B;
 	status.U = ~status.U;
 
+    LAUGHTALE_ENGINR_LOG_INFO("RTI before pop stack " << hex(pc, 4))
     stkp++;
     pc = (uint16_t)systemBus->read(0x0100 + stkp);
     stkp++;
     pc |= ((uint16_t)systemBus->read(0x0100 + stkp)) << 8;
 
+    LAUGHTALE_ENGINR_LOG_INFO("RTI after pop stack " << hex(pc, 4))
     return 0;
 }
 	
 uint8_t cpu6502::RTS()
 {
+    LAUGHTALE_ENGINR_LOG_INFO("RTS before pop stack " << hex(pc, 4))
+
+    stkp++;
     pc = systemBus->read(0x0100 + stkp);
-    stkp++;
     
-    pc |= systemBus->read(0x0100 + stkp) << 8;
     stkp++;
+    pc |= systemBus->read(0x0100 + stkp) << 8;
+    pc++;
+    LAUGHTALE_ENGINR_LOG_INFO("RTS after pop stack " << hex(pc, 4))
+    
     return 0;
 }
 	

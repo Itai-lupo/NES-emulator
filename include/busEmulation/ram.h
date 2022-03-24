@@ -35,11 +35,13 @@ class ram: public busDevice<uint8_t, uint16_t>
 
         virtual uint8_t read(uint16_t addr, bool bReadOnly = false) override
         {
+            // LAUGHTALE_ENGINR_LOG_INFO("ram read: " << datatoHexString(addr, 4) << ", " << datatoHexString(ramData[addr & 0x07FF], 2));
             return ramData[addr & 0x07FF];
         }
 
         virtual void write(uint16_t addr, uint8_t data) override
         {
+            // LAUGHTALE_ENGINR_LOG_INFO("ram write: " << datatoHexString(addr, 4) << ", " << datatoHexString(data, 2));
             ramData[addr & 0x07FF] = data;
         }
 

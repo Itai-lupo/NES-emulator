@@ -7,7 +7,7 @@ var searchData=
   ['mapper_2eh_4',['mapper.h',['../d6/df7/mapper_8h.html',1,'']]],
   ['mapper1_5',['mapper1',['../dc/d02/struct_n_e_s_header.html#a427badd1645e7127bd821b0115f545fa',1,'NESHeader']]],
   ['mapper2_6',['mapper2',['../dc/d02/struct_n_e_s_header.html#ae91daefb7facdeae98380c0e89c34ef5',1,'NESHeader']]],
-  ['mapper_5f000_7',['mapper_000',['../d5/df4/classmapper__000.html',1,'mapper_000'],['../d5/df4/classmapper__000.html#a1c262e32e4f60751f48804ed100995c9',1,'mapper_000::mapper_000(uint8_t prgBanks, uint8_t chrBanks)'],['../d5/df4/classmapper__000.html#a1c262e32e4f60751f48804ed100995c9',1,'mapper_000::mapper_000(uint8_t prgBanks, uint8_t chrBanks)']]],
+  ['mapper_5f000_7',['mapper_000',['../d5/df4/classmapper__000.html',1,'mapper_000'],['../d5/df4/classmapper__000.html#a1c262e32e4f60751f48804ed100995c9',1,'mapper_000::mapper_000()']]],
   ['mapperid_8',['mapperID',['../d8/d1f/structmappers_data.html#aead239cc5893c59f1e4a42621dfec1b1',1,'mappersData']]],
   ['mappers_2eh_9',['mappers.h',['../d6/de4/mappers_8h.html',1,'']]],
   ['mappersdata_10',['mappersData',['../d8/d1f/structmappers_data.html',1,'']]],

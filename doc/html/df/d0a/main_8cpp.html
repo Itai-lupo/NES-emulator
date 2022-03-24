@@ -198,7 +198,7 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">  111</span>    <a class="code hl_class" href="../../d9/dbe/classcpu6502.html">cpu6502</a> *c = <span class="keyword">new</span> <a class="code hl_class" href="../../d9/dbe/classcpu6502.html">cpu6502</a>();</div>
 <div class="line"><span class="lineno">  112</span>    <a class="code hl_class" href="../../d2/deb/classppu2c02.html">ppu2c02</a> *p = <span class="keyword">new</span> <a class="code hl_class" href="../../d2/deb/classppu2c02.html">ppu2c02</a>(<span class="keyword">new</span> <a class="code hl_class" href="../../da/de8/classppu_bus_cartridge.html">ppuBusCartridge</a>(<a class="code hl_variable" href="../../df/d0a/main_8cpp.html#a69a7322d34c7ff785cac5cddecc4fbfe">cart</a>));</div>
 <div class="line"><span class="lineno">  113</span>    <a class="code hl_class" href="../../d6/df9/classcontroller.html">controller</a> *ctrl = <span class="keyword">new</span> <a class="code hl_class" href="../../d6/df9/classcontroller.html">controller</a>();</div>
-<div class="line"><span class="lineno">  114</span>    <a class="code hl_class" href="../../d0/d88/classbus.html">bus&lt;uint8_t, uint16_t&gt;</a> *sysBus = (<span class="keyword">new</span> <a class="code hl_class" href="../../d0/d88/classbus.html">bus&lt;uint8_t, uint16_t&gt;</a>())-&gt;pushDevice(r);</div>
+<div class="line"><span class="lineno">  114</span>    <a class="code hl_class" href="../../d0/d88/classbus.html">bus&lt;uint8_t, uint16_t&gt;</a> *sysBus = (<span class="keyword">new</span> <a class="code hl_class" href="../../d0/d88/classbus.html">bus&lt;uint8_t, uint16_t&gt;</a>());</div>
 <div class="line"><span class="lineno">  115</span> </div>
 <div class="line"><span class="lineno">  116</span>    LTE::texture *<a class="code hl_variable" href="../../df/d0a/main_8cpp.html#a56c83145992bda0c5a5664be4fc449e9">t</a> = LTE::windowManger::getWindow(<a class="code hl_variable" href="../../df/d0a/main_8cpp.html#a428e0f4627e08881f989064897ac2d5f">winId</a>)-&gt;context-&gt;getMeshFactory()-&gt;createCustemTexture({256, 240});</div>
 <div class="line"><span class="lineno">  117</span> </div>
@@ -207,35 +207,36 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">  120</span> </div>
 <div class="line"><span class="lineno">  121</span>    sysBus-&gt;</div>
 <div class="line"><span class="lineno">  122</span>        pushDevice(<span class="keyword">new</span> <a class="code hl_class" href="../../dc/de6/classcpu_bus_cartridge.html">cpuBusCartridge</a>(<a class="code hl_variable" href="../../df/d0a/main_8cpp.html#a69a7322d34c7ff785cac5cddecc4fbfe">cart</a>))-&gt;</div>
-<div class="line"><span class="lineno">  123</span>        pushDevice(ctrl)-&gt;</div>
-<div class="line"><span class="lineno">  124</span>        pushDevice(p);</div>
-<div class="line"><span class="lineno">  125</span> </div>
-<div class="line"><span class="lineno">  126</span>    <span class="keywordtype">id</span> =  LTE::entityManger::addEntity(</div>
-<div class="line"><span class="lineno">  127</span>        [&amp;](LTE::gameObject::gameObjectBuilder *b)</div>
-<div class="line"><span class="lineno">  128</span>        {</div>
-<div class="line"><span class="lineno">  129</span>            b-&gt;setObjectName(<span class="stringliteral">&quot;system data&quot;</span>)-&gt;</div>
-<div class="line"><span class="lineno">  130</span>                setWindowId(<a class="code hl_variable" href="../../df/d0a/main_8cpp.html#a428e0f4627e08881f989064897ac2d5f">winId</a>)-&gt;</div>
-<div class="line"><span class="lineno">  131</span>                setObjectTransform({{-232.0f / 256.0f * 2.0f, -1, 0}, {0, 0, 0}, {232.0f / 256.0f * 2.0f, 2, 0}})-&gt;</div>
-<div class="line"><span class="lineno">  132</span>                addComponent(sysBus)-&gt;</div>
-<div class="line"><span class="lineno">  133</span>                addComponent(p)-&gt;</div>
-<div class="line"><span class="lineno">  134</span>                addComponent(c)-&gt;</div>
-<div class="line"><span class="lineno">  135</span>                addComponent(ctrl)-&gt;</div>
-<div class="line"><span class="lineno">  136</span>                addComponent(LTE::mesh::build([&amp;](LTE::mesh::meshBuilder *builder)</div>
-<div class="line"><span class="lineno">  137</span>                    { </div>
-<div class="line"><span class="lineno">  138</span>                        builder-&gt;</div>
-<div class="line"><span class="lineno">  139</span>                            setIndexBuffer(<a class="code hl_variable" href="../../df/d0a/main_8cpp.html#afe6ffec6f80a0873de442cca714fdaab">tileIndices</a>, 6)-&gt;</div>
-<div class="line"><span class="lineno">  140</span>                            setShaderName(<span class="stringliteral">&quot;res/shaders/Basic.glsl&quot;</span>)-&gt;</div>
-<div class="line"><span class="lineno">  141</span>                            setVertices(<a class="code hl_variable" href="../../df/d0a/main_8cpp.html#a42b8f49ac14ac850a225111ca6080e03">tilePostions</a>, 12); </div>
-<div class="line"><span class="lineno">  142</span>                    }))-&gt;</div>
-<div class="line"><span class="lineno">  143</span>                addComponent(<span class="keyword">new</span> LTE::material(<span class="stringliteral">&quot;res/NEStexture&quot;</span>, glm::vec4(0, 0, 0, 1.0f)));</div>
-<div class="line"><span class="lineno">  144</span>        });</div>
-<div class="line"><span class="lineno">  145</span> </div>
-<div class="line"><span class="lineno">  146</span>    <a class="code hl_function" href="../../de/d33/classcpu.html#a5786aff4b18f0688c2a85c8556cf8e0a">cpu&lt;uint8_t, uint16_t&gt;::init</a>(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  147</span>    <a class="code hl_function" href="../../d6/d3f/classppu.html#a94a271d14d4337d31cbc643d3064b4d8">ppu::init</a>(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  148</span>    LTE::eventManger::startBuildingEvent()-&gt;setEntityID(<span class="keywordtype">id</span>)-&gt;setEventRoute(<span class="stringliteral">&quot;cpu cmd/cpu clock/system&quot;</span>)-&gt;setEventCallback(<a class="code hl_function" href="../../df/d0a/main_8cpp.html#a6d327e023ed1dae058f86d827940d7a6">sysClock</a>)-&gt;add();</div>
-<div class="line"><span class="lineno">  149</span> </div>
+<div class="line"><span class="lineno">  123</span>        pushDevice(r)-&gt;</div>
+<div class="line"><span class="lineno">  124</span>        pushDevice(ctrl)-&gt;</div>
+<div class="line"><span class="lineno">  125</span>        pushDevice(p);</div>
+<div class="line"><span class="lineno">  126</span> </div>
+<div class="line"><span class="lineno">  127</span>    <span class="keywordtype">id</span> =  LTE::entityManger::addEntity(</div>
+<div class="line"><span class="lineno">  128</span>        [&amp;](LTE::gameObject::gameObjectBuilder *b)</div>
+<div class="line"><span class="lineno">  129</span>        {</div>
+<div class="line"><span class="lineno">  130</span>            b-&gt;setObjectName(<span class="stringliteral">&quot;system data&quot;</span>)-&gt;</div>
+<div class="line"><span class="lineno">  131</span>                setWindowId(<a class="code hl_variable" href="../../df/d0a/main_8cpp.html#a428e0f4627e08881f989064897ac2d5f">winId</a>)-&gt;</div>
+<div class="line"><span class="lineno">  132</span>                setObjectTransform({{-232.0f / 256.0f * 2.0f, -1, 0}, {0, 0, 0}, {232.0f / 256.0f * 2.0f, 2, 0}})-&gt;</div>
+<div class="line"><span class="lineno">  133</span>                addComponent(sysBus)-&gt;</div>
+<div class="line"><span class="lineno">  134</span>                addComponent(p)-&gt;</div>
+<div class="line"><span class="lineno">  135</span>                addComponent(c)-&gt;</div>
+<div class="line"><span class="lineno">  136</span>                addComponent(ctrl)-&gt;</div>
+<div class="line"><span class="lineno">  137</span>                addComponent(LTE::mesh::build([&amp;](LTE::mesh::meshBuilder *builder)</div>
+<div class="line"><span class="lineno">  138</span>                    { </div>
+<div class="line"><span class="lineno">  139</span>                        builder-&gt;</div>
+<div class="line"><span class="lineno">  140</span>                            setIndexBuffer(<a class="code hl_variable" href="../../df/d0a/main_8cpp.html#afe6ffec6f80a0873de442cca714fdaab">tileIndices</a>, 6)-&gt;</div>
+<div class="line"><span class="lineno">  141</span>                            setShaderName(<span class="stringliteral">&quot;res/shaders/Basic.glsl&quot;</span>)-&gt;</div>
+<div class="line"><span class="lineno">  142</span>                            setVertices(<a class="code hl_variable" href="../../df/d0a/main_8cpp.html#a42b8f49ac14ac850a225111ca6080e03">tilePostions</a>, 12); </div>
+<div class="line"><span class="lineno">  143</span>                    }))-&gt;</div>
+<div class="line"><span class="lineno">  144</span>                addComponent(<span class="keyword">new</span> LTE::material(<span class="stringliteral">&quot;res/NEStexture&quot;</span>, glm::vec4(0, 0, 0, 1.0f)));</div>
+<div class="line"><span class="lineno">  145</span>        });</div>
+<div class="line"><span class="lineno">  146</span> </div>
+<div class="line"><span class="lineno">  147</span>    <a class="code hl_function" href="../../de/d33/classcpu.html#a5786aff4b18f0688c2a85c8556cf8e0a">cpu&lt;uint8_t, uint16_t&gt;::init</a>(<span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">  148</span>    <a class="code hl_function" href="../../d6/d3f/classppu.html#a94a271d14d4337d31cbc643d3064b4d8">ppu::init</a>(<span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">  149</span>    LTE::eventManger::startBuildingEvent()-&gt;setEntityID(<span class="keywordtype">id</span>)-&gt;setEventRoute(<span class="stringliteral">&quot;cpu cmd/cpu clock/system&quot;</span>)-&gt;setEventCallback(<a class="code hl_function" href="../../df/d0a/main_8cpp.html#a6d327e023ed1dae058f86d827940d7a6">sysClock</a>)-&gt;add();</div>
 <div class="line"><span class="lineno">  150</span> </div>
-<div class="line"><span class="lineno">  151</span>}</div>
+<div class="line"><span class="lineno">  151</span> </div>
+<div class="line"><span class="lineno">  152</span>}</div>
 <div class="ttc" id="aclassbus_html"><div class="ttname"><a href="../../d0/d88/classbus.html">bus&lt; uint8_t, uint16_t &gt;</a></div></div>
 <div class="ttc" id="aclasscartridge_html"><div class="ttname"><a href="../../d2/dd7/classcartridge.html">cartridge</a></div><div class="ttdef"><b>Definition:</b> cartridge.h:35</div></div>
 <div class="ttc" id="aclasscontroller_html"><div class="ttname"><a href="../../d6/df9/classcontroller.html">controller</a></div><div class="ttdef"><b>Definition:</b> controller.h:9</div></div>
@@ -257,21 +258,14 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../df/d0a/main_8cpp_a21dfe9bde9bd8461cf7b93411861607a_cgraph.png" border="0" usemap="#adf/d0a/main_8cpp_a21dfe9bde9bd8461cf7b93411861607a_cgraph" alt=""/></div>
 <map name="adf/d0a/main_8cpp_a21dfe9bde9bd8461cf7b93411861607a_cgraph" id="adf/d0a/main_8cpp_a21dfe9bde9bd8461cf7b93411861607a_cgraph">
-<area shape="rect" title=" " alt="" coords="5,73,145,99"/>
-<area shape="rect" href="../../de/d33/classcpu.html#a5786aff4b18f0688c2a85c8556cf8e0a" title=" " alt="" coords="197,22,264,49"/>
-<area shape="rect" href="../../d6/d3f/classppu.html#a94a271d14d4337d31cbc643d3064b4d8" title=" " alt="" coords="197,73,264,99"/>
-<area shape="rect" href="../../df/d0a/main_8cpp.html#a6d327e023ed1dae058f86d827940d7a6" title=" " alt="" coords="193,123,268,150"/>
-<area shape="rect" href="../../de/d33/classcpu.html#abc8a3d560e97137856c86004d5d5e91b" title=" " alt="" coords="316,35,396,62"/>
-<area shape="rect" href="../../d6/d3f/classppu.html#a8f8beeeceb29673161032303d02e8cad" title=" " alt="" coords="316,149,396,175"/>
-<area shape="rect" href="../../d0/d88/classbus.html#abb29248facedf75907fba0ebf44022b0" title=" " alt="" coords="756,47,831,74"/>
-<area shape="rect" href="../../d6/d3f/classppu.html#ab7902989f58e71e7b1a934558ee6bcf1" title=" " alt="" coords="444,73,649,99"/>
-<area shape="rect" href="../../d6/d3f/classppu.html#af1857f201e89b8c907c0ab852474ef0a" title=" " alt="" coords="473,174,621,201"/>
-<area shape="rect" href="../../d6/d3f/classppu.html#adc042fdf517afbfa4b87202ba5bde87f" title=" " alt="" coords="697,225,889,251"/>
-<area shape="rect" href="../../d6/d3f/classppu.html#af4eed16ede0e68d6b23dcc4f10a74d9f" title=" " alt="" coords="471,275,622,302"/>
-<area shape="rect" href="../../d6/d3f/classppu.html#a463868fe462d4d42321103a8d3587121" title=" " alt="" coords="469,326,624,353"/>
-<area shape="rect" href="../../d6/d3f/classppu.html#a011d8cf9ad06b321ecf61ab48ed7825e" title=" " alt="" coords="467,123,626,150"/>
-<area shape="rect" href="../../d6/d3f/classppu.html#a9abb944f427a7a69eebf09dd31cc13a2" title=" " alt="" coords="719,98,867,125"/>
-<area shape="rect" href="../../d6/d3f/classppu.html#a0475cb611cf0579e6132650b83093952" title=" " alt="" coords="725,149,861,175"/>
+<area shape="rect" title=" " alt="" coords="5,56,145,83"/>
+<area shape="rect" href="../../de/d33/classcpu.html#a5786aff4b18f0688c2a85c8556cf8e0a" title=" " alt="" coords="197,5,264,32"/>
+<area shape="rect" href="../../d6/d3f/classppu.html#a94a271d14d4337d31cbc643d3064b4d8" title=" " alt="" coords="197,56,264,83"/>
+<area shape="rect" href="../../df/d0a/main_8cpp.html#a6d327e023ed1dae058f86d827940d7a6" title=" " alt="" coords="193,107,268,133"/>
+<area shape="rect" href="../../de/d33/classcpu.html#abc8a3d560e97137856c86004d5d5e91b" title=" " alt="" coords="507,81,587,108"/>
+<area shape="rect" href="../../d6/d3f/classppu.html#a8f8beeeceb29673161032303d02e8cad" title=" " alt="" coords="316,132,396,159"/>
+<area shape="rect" href="../../d0/d88/classbus.html#abb29248facedf75907fba0ebf44022b0" title=" " alt="" coords="697,107,772,133"/>
+<area shape="rect" href="../../d6/d3f/classppu.html#ab7902989f58e71e7b1a934558ee6bcf1" title=" " alt="" coords="444,132,649,159"/>
 </map>
 </div>
 <div class="dynheader">
@@ -356,7 +350,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">   68</span>        LTE::eventManger::trigerEvent(sendor);</div>
 <div class="line"><span class="lineno">   69</span>}</div>
 <div class="ttc" id="aclasscpu_html"><div class="ttname"><a href="../../de/d33/classcpu.html">cpu</a></div><div class="ttdef"><b>Definition:</b> cpu.h:11</div></div>
-<div class="ttc" id="aclassdisplay_debug_info_html_a79ba0730a0b640e2fc2d19da778219af"><div class="ttname"><a href="../../d7/d6d/classdisplay_debug_info.html#a79ba0730a0b640e2fc2d19da778219af">displayDebugInfo::changePallate</a></div><div class="ttdeci">static void changePallate()</div><div class="ttdef"><b>Definition:</b> displayDebugInfo.h:330</div></div>
+<div class="ttc" id="aclassdisplay_debug_info_html_a79ba0730a0b640e2fc2d19da778219af"><div class="ttname"><a href="../../d7/d6d/classdisplay_debug_info.html#a79ba0730a0b640e2fc2d19da778219af">displayDebugInfo::changePallate</a></div><div class="ttdeci">static void changePallate()</div><div class="ttdef"><b>Definition:</b> displayDebugInfo.h:360</div></div>
 <div class="ttc" id="aclassppu_html_ac4bf75474698942f6b4f61c2cda09a79"><div class="ttname"><a href="../../d6/d3f/classppu.html#ac4bf75474698942f6b4f61c2cda09a79">ppu::frameComplete</a></div><div class="ttdeci">static bool frameComplete</div><div class="ttdef"><b>Definition:</b> ppu.h:89</div></div>
 <div class="ttc" id="amain_8cpp_html_ab59f1b1459454092942fcda083513be9"><div class="ttname"><a href="../../df/d0a/main_8cpp.html#ab59f1b1459454092942fcda083513be9">runCpu</a></div><div class="ttdeci">void runCpu(LTE::coreEventData *sendor)</div><div class="ttdef"><b>Definition:</b> main.cpp:17</div></div>
 </div><!-- fragment --><div class="dynheader">
@@ -406,15 +400,15 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  154</span>{</div>
-<div class="line"><span class="lineno">  155</span>    <a class="code hl_struct" href="../../de/d5c/structgames_menu_1_1load_game_event.html">gamesMenu::loadGameEvent</a> *gameInfo = <span class="keyword">static_cast&lt;</span><a class="code hl_struct" href="../../de/d5c/structgames_menu_1_1load_game_event.html">gamesMenu::loadGameEvent</a>*<span class="keyword">&gt;</span>(sendor);</div>
-<div class="line"><span class="lineno">  156</span>    LAUGHTALE_ENGINR_LOG_INFO(gameInfo-&gt;<a class="code hl_variable" href="../../de/d5c/structgames_menu_1_1load_game_event.html#a7701c0703aec5bdae1831be9e14d7b4d">gamePath</a>)</div>
-<div class="line"><span class="lineno">  157</span>    <a class="code hl_variable" href="../../df/d0a/main_8cpp.html#a69a7322d34c7ff785cac5cddecc4fbfe">cart</a>-&gt;load(gameInfo-&gt;gamePath);</div>
-<div class="line"><span class="lineno">  158</span>    LTE::eventManger::trigerEvent(new LTE::coreEventData(&quot;<a class="code hl_class" href="../../de/d33/classcpu.html">cpu</a> cmd/<a class="code hl_class" href="../../de/d33/classcpu.html">cpu</a> reset/&quot;));</div>
-<div class="line"><span class="lineno">  159</span>    for (<span class="keywordtype">size_t</span> i = 0; i &lt; 8; i++)</div>
-<div class="line"><span class="lineno">  160</span>        LTE::eventManger::trigerEvent(new LTE::coreEventData(&quot;<a class="code hl_class" href="../../de/d33/classcpu.html">cpu</a> cmd/<a class="code hl_class" href="../../de/d33/classcpu.html">cpu</a> clock/&quot;));</div>
-<div class="line"><span class="lineno">  161</span> </div>
-<div class="line"><span class="lineno">  162</span>}</div>
+<div class="fragment"><div class="line"><span class="lineno">  155</span>{</div>
+<div class="line"><span class="lineno">  156</span>    <a class="code hl_struct" href="../../de/d5c/structgames_menu_1_1load_game_event.html">gamesMenu::loadGameEvent</a> *gameInfo = <span class="keyword">static_cast&lt;</span><a class="code hl_struct" href="../../de/d5c/structgames_menu_1_1load_game_event.html">gamesMenu::loadGameEvent</a>*<span class="keyword">&gt;</span>(sendor);</div>
+<div class="line"><span class="lineno">  157</span>    LAUGHTALE_ENGINR_LOG_INFO(gameInfo-&gt;<a class="code hl_variable" href="../../de/d5c/structgames_menu_1_1load_game_event.html#a7701c0703aec5bdae1831be9e14d7b4d">gamePath</a>)</div>
+<div class="line"><span class="lineno">  158</span>    <a class="code hl_variable" href="../../df/d0a/main_8cpp.html#a69a7322d34c7ff785cac5cddecc4fbfe">cart</a>-&gt;load(gameInfo-&gt;gamePath);</div>
+<div class="line"><span class="lineno">  159</span>    LTE::eventManger::trigerEvent(new LTE::coreEventData(&quot;<a class="code hl_class" href="../../de/d33/classcpu.html">cpu</a> cmd/<a class="code hl_class" href="../../de/d33/classcpu.html">cpu</a> reset/&quot;));</div>
+<div class="line"><span class="lineno">  160</span>    for (<span class="keywordtype">size_t</span> i = 0; i &lt; 8; i++)</div>
+<div class="line"><span class="lineno">  161</span>        LTE::eventManger::trigerEvent(new LTE::coreEventData(&quot;<a class="code hl_class" href="../../de/d33/classcpu.html">cpu</a> cmd/<a class="code hl_class" href="../../de/d33/classcpu.html">cpu</a> clock/&quot;));</div>
+<div class="line"><span class="lineno">  162</span> </div>
+<div class="line"><span class="lineno">  163</span>}</div>
 <div class="ttc" id="astructgames_menu_1_1load_game_event_html"><div class="ttname"><a href="../../de/d5c/structgames_menu_1_1load_game_event.html">gamesMenu::loadGameEvent</a></div><div class="ttdef"><b>Definition:</b> gamesMenu.h:12</div></div>
 <div class="ttc" id="astructgames_menu_1_1load_game_event_html_a7701c0703aec5bdae1831be9e14d7b4d"><div class="ttname"><a href="../../de/d5c/structgames_menu_1_1load_game_event.html#a7701c0703aec5bdae1831be9e14d7b4d">gamesMenu::loadGameEvent::gamePath</a></div><div class="ttdeci">std::string gamePath</div><div class="ttdef"><b>Definition:</b> gamesMenu.h:15</div></div>
 </div><!-- fragment --><div class="dynheader">
@@ -452,46 +446,46 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  172</span>{</div>
-<div class="line"><span class="lineno">  173</span>    LTE::app::init();</div>
-<div class="line"><span class="lineno">  174</span>    </div>
-<div class="line"><span class="lineno">  175</span>    <a class="code hl_variable" href="../../df/d0a/main_8cpp.html#a428e0f4627e08881f989064897ac2d5f">winId</a> =  LTE::windowManger::addWindow([](LTE::windowBuilder *b){ b-&gt;setTitle(<span class="stringliteral">&quot;nes emulator&quot;</span>)-&gt;useImGui();});</div>
-<div class="line"><span class="lineno">  176</span>    <a class="code hl_function" href="../../df/d0a/main_8cpp.html#a21dfe9bde9bd8461cf7b93411861607a">initEmulationSystem</a>();</div>
-<div class="line"><span class="lineno">  177</span> </div>
-<div class="line"><span class="lineno">  178</span>    </div>
-<div class="line"><span class="lineno">  179</span>    <a class="code hl_function" href="../../d7/d6d/classdisplay_debug_info.html#adb8a0a4ea74078dc59551779c6ec5f43">displayDebugInfo::init</a>(<a class="code hl_variable" href="../../df/d0a/main_8cpp.html#a428e0f4627e08881f989064897ac2d5f">winId</a>, <span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  180</span> </div>
-<div class="line"><span class="lineno">  181</span>    LTE::eventManger::startBuildingEvent()-&gt;</div>
-<div class="line"><span class="lineno">  182</span>        setEntityID(<span class="keywordtype">id</span>)-&gt;</div>
-<div class="line"><span class="lineno">  183</span>        setEventRoute(<span class="stringliteral">&quot;Key pressed/cpu keyDispatcher&quot;</span>)-&gt;</div>
-<div class="line"><span class="lineno">  184</span>        setEventCallback(<a class="code hl_function" href="../../df/d0a/main_8cpp.html#a4a2adc3d978a792c25ab506f6e13bdfe">keyDispatcher</a>)-&gt;</div>
-<div class="line"><span class="lineno">  185</span>        add();</div>
-<div class="line"><span class="lineno">  186</span> </div>
-<div class="line"><span class="lineno">  187</span>    <a class="code hl_function" href="../../d4/d6e/classgames_menu.html#a11dc451837b3bf6314a860ba9b27ebad">gamesMenu::init</a>(<a class="code hl_variable" href="../../df/d0a/main_8cpp.html#a428e0f4627e08881f989064897ac2d5f">winId</a>, <a class="code hl_variable" href="../../df/d0a/main_8cpp.html#a69a7322d34c7ff785cac5cddecc4fbfe">cart</a>);</div>
-<div class="line"><span class="lineno">  188</span> </div>
+<div class="fragment"><div class="line"><span class="lineno">  173</span>{</div>
+<div class="line"><span class="lineno">  174</span>    LTE::app::init();</div>
+<div class="line"><span class="lineno">  175</span>    </div>
+<div class="line"><span class="lineno">  176</span>    <a class="code hl_variable" href="../../df/d0a/main_8cpp.html#a428e0f4627e08881f989064897ac2d5f">winId</a> =  LTE::windowManger::addWindow([](LTE::windowBuilder *b){ b-&gt;setTitle(<span class="stringliteral">&quot;nes emulator&quot;</span>)-&gt;useImGui();});</div>
+<div class="line"><span class="lineno">  177</span>    <a class="code hl_function" href="../../df/d0a/main_8cpp.html#a21dfe9bde9bd8461cf7b93411861607a">initEmulationSystem</a>();</div>
+<div class="line"><span class="lineno">  178</span> </div>
+<div class="line"><span class="lineno">  179</span>    </div>
+<div class="line"><span class="lineno">  180</span>    <a class="code hl_function" href="../../d7/d6d/classdisplay_debug_info.html#adb8a0a4ea74078dc59551779c6ec5f43">displayDebugInfo::init</a>(<a class="code hl_variable" href="../../df/d0a/main_8cpp.html#a428e0f4627e08881f989064897ac2d5f">winId</a>, <span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">  181</span> </div>
+<div class="line"><span class="lineno">  182</span>    LTE::eventManger::startBuildingEvent()-&gt;</div>
+<div class="line"><span class="lineno">  183</span>        setEntityID(<span class="keywordtype">id</span>)-&gt;</div>
+<div class="line"><span class="lineno">  184</span>        setEventRoute(<span class="stringliteral">&quot;Key pressed/cpu keyDispatcher&quot;</span>)-&gt;</div>
+<div class="line"><span class="lineno">  185</span>        setEventCallback(<a class="code hl_function" href="../../df/d0a/main_8cpp.html#a4a2adc3d978a792c25ab506f6e13bdfe">keyDispatcher</a>)-&gt;</div>
+<div class="line"><span class="lineno">  186</span>        add();</div>
+<div class="line"><span class="lineno">  187</span> </div>
+<div class="line"><span class="lineno">  188</span>    <a class="code hl_function" href="../../d4/d6e/classgames_menu.html#a11dc451837b3bf6314a860ba9b27ebad">gamesMenu::init</a>(<a class="code hl_variable" href="../../df/d0a/main_8cpp.html#a428e0f4627e08881f989064897ac2d5f">winId</a>, <a class="code hl_variable" href="../../df/d0a/main_8cpp.html#a69a7322d34c7ff785cac5cddecc4fbfe">cart</a>);</div>
 <div class="line"><span class="lineno">  189</span> </div>
 <div class="line"><span class="lineno">  190</span> </div>
-<div class="line"><span class="lineno">  191</span>    LTE::eventManger::startBuildingEvent()-&gt;</div>
-<div class="line"><span class="lineno">  192</span>        setEventRoute(<span class="stringliteral">&quot;load game/load cartage&quot;</span>)-&gt;</div>
-<div class="line"><span class="lineno">  193</span>        setEventCallback(<a class="code hl_function" href="../../df/d0a/main_8cpp.html#a5f166273e28df3c6500fc0b742c73824">loadCartageAndResetCpu</a>)-&gt;add();</div>
-<div class="line"><span class="lineno">  194</span> </div>
+<div class="line"><span class="lineno">  191</span> </div>
+<div class="line"><span class="lineno">  192</span>    LTE::eventManger::startBuildingEvent()-&gt;</div>
+<div class="line"><span class="lineno">  193</span>        setEventRoute(<span class="stringliteral">&quot;load game/load cartage&quot;</span>)-&gt;</div>
+<div class="line"><span class="lineno">  194</span>        setEventCallback(<a class="code hl_function" href="../../df/d0a/main_8cpp.html#a5f166273e28df3c6500fc0b742c73824">loadCartageAndResetCpu</a>)-&gt;add();</div>
 <div class="line"><span class="lineno">  195</span> </div>
-<div class="line"><span class="lineno">  196</span>        LTE::eventManger::startBuildingEvent()-&gt;</div>
-<div class="line"><span class="lineno">  197</span>            setEventRoute(<span class="stringliteral">&quot;Window close/close app&quot;</span>)-&gt;</div>
-<div class="line"><span class="lineno">  198</span>            setEventCallback(<a class="code hl_function" href="../../df/d0a/main_8cpp.html#a19532a7aff0f3b47844377a132afa0bb">WindowClose</a>)-&gt;add();</div>
-<div class="line"><span class="lineno">  199</span> </div>
-<div class="line"><span class="lineno">  200</span>    LTE::app::run();</div>
-<div class="line"><span class="lineno">  201</span>    <a class="code hl_function" href="../../de/d33/classcpu.html#a40f7f0daa94474f8470d35758d162b54">cpu&lt;uint8_t, uint16_t&gt;::close</a>();</div>
-<div class="line"><span class="lineno">  202</span>    LTE::app::close();</div>
-<div class="line"><span class="lineno">  203</span>    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">  204</span>}</div>
+<div class="line"><span class="lineno">  196</span> </div>
+<div class="line"><span class="lineno">  197</span>        LTE::eventManger::startBuildingEvent()-&gt;</div>
+<div class="line"><span class="lineno">  198</span>            setEventRoute(<span class="stringliteral">&quot;Window close/close app&quot;</span>)-&gt;</div>
+<div class="line"><span class="lineno">  199</span>            setEventCallback(<a class="code hl_function" href="../../df/d0a/main_8cpp.html#a19532a7aff0f3b47844377a132afa0bb">WindowClose</a>)-&gt;add();</div>
+<div class="line"><span class="lineno">  200</span> </div>
+<div class="line"><span class="lineno">  201</span>    LTE::app::run();</div>
+<div class="line"><span class="lineno">  202</span>    <a class="code hl_function" href="../../de/d33/classcpu.html#a40f7f0daa94474f8470d35758d162b54">cpu&lt;uint8_t, uint16_t&gt;::close</a>();</div>
+<div class="line"><span class="lineno">  203</span>    LTE::app::close();</div>
+<div class="line"><span class="lineno">  204</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  205</span>}</div>
 <div class="ttc" id="aclasscpu_html_a40f7f0daa94474f8470d35758d162b54"><div class="ttname"><a href="../../de/d33/classcpu.html#a40f7f0daa94474f8470d35758d162b54">cpu::close</a></div><div class="ttdeci">static void close()</div><div class="ttdef"><b>Definition:</b> cpu.h:47</div></div>
-<div class="ttc" id="aclassdisplay_debug_info_html_adb8a0a4ea74078dc59551779c6ec5f43"><div class="ttname"><a href="../../d7/d6d/classdisplay_debug_info.html#adb8a0a4ea74078dc59551779c6ec5f43">displayDebugInfo::init</a></div><div class="ttdeci">static void init(LTE::windowPieceId winId, LTE::entityTaleId id)</div><div class="ttdef"><b>Definition:</b> displayDebugInfo.h:341</div></div>
+<div class="ttc" id="aclassdisplay_debug_info_html_adb8a0a4ea74078dc59551779c6ec5f43"><div class="ttname"><a href="../../d7/d6d/classdisplay_debug_info.html#adb8a0a4ea74078dc59551779c6ec5f43">displayDebugInfo::init</a></div><div class="ttdeci">static void init(LTE::windowPieceId winId, LTE::entityTaleId id)</div><div class="ttdef"><b>Definition:</b> displayDebugInfo.h:371</div></div>
 <div class="ttc" id="aclassgames_menu_html_a11dc451837b3bf6314a860ba9b27ebad"><div class="ttname"><a href="../../d4/d6e/classgames_menu.html#a11dc451837b3bf6314a860ba9b27ebad">gamesMenu::init</a></div><div class="ttdeci">static void init(LTE::windowPieceId winId, cartridge *cart)</div><div class="ttdef"><b>Definition:</b> gamesMenu.h:58</div></div>
-<div class="ttc" id="amain_8cpp_html_a19532a7aff0f3b47844377a132afa0bb"><div class="ttname"><a href="../../df/d0a/main_8cpp.html#a19532a7aff0f3b47844377a132afa0bb">WindowClose</a></div><div class="ttdeci">void WindowClose(__attribute__((unused)) LTE::gameObject *eventEntity, __attribute__((unused)) LTE::coreEventData *sendor)</div><div class="ttdef"><b>Definition:</b> main.cpp:165</div></div>
+<div class="ttc" id="amain_8cpp_html_a19532a7aff0f3b47844377a132afa0bb"><div class="ttname"><a href="../../df/d0a/main_8cpp.html#a19532a7aff0f3b47844377a132afa0bb">WindowClose</a></div><div class="ttdeci">void WindowClose(__attribute__((unused)) LTE::gameObject *eventEntity, __attribute__((unused)) LTE::coreEventData *sendor)</div><div class="ttdef"><b>Definition:</b> main.cpp:166</div></div>
 <div class="ttc" id="amain_8cpp_html_a21dfe9bde9bd8461cf7b93411861607a"><div class="ttname"><a href="../../df/d0a/main_8cpp.html#a21dfe9bde9bd8461cf7b93411861607a">initEmulationSystem</a></div><div class="ttdeci">void initEmulationSystem()</div><div class="ttdef"><b>Definition:</b> main.cpp:106</div></div>
 <div class="ttc" id="amain_8cpp_html_a4a2adc3d978a792c25ab506f6e13bdfe"><div class="ttname"><a href="../../df/d0a/main_8cpp.html#a4a2adc3d978a792c25ab506f6e13bdfe">keyDispatcher</a></div><div class="ttdeci">void keyDispatcher(LTE::gameObject *eventEntity, LTE::coreEventData *sendor)</div><div class="ttdef"><b>Definition:</b> main.cpp:25</div></div>
-<div class="ttc" id="amain_8cpp_html_a5f166273e28df3c6500fc0b742c73824"><div class="ttname"><a href="../../df/d0a/main_8cpp.html#a5f166273e28df3c6500fc0b742c73824">loadCartageAndResetCpu</a></div><div class="ttdeci">void loadCartageAndResetCpu(LTE::gameObject *eventEntity, LTE::coreEventData *sendor)</div><div class="ttdef"><b>Definition:</b> main.cpp:153</div></div>
+<div class="ttc" id="amain_8cpp_html_a5f166273e28df3c6500fc0b742c73824"><div class="ttname"><a href="../../df/d0a/main_8cpp.html#a5f166273e28df3c6500fc0b742c73824">loadCartageAndResetCpu</a></div><div class="ttdeci">void loadCartageAndResetCpu(LTE::gameObject *eventEntity, LTE::coreEventData *sendor)</div><div class="ttdef"><b>Definition:</b> main.cpp:154</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -510,17 +504,10 @@ Here is the call graph for this function:</div>
 <area shape="rect" href="../../de/d33/classcpu.html#a5786aff4b18f0688c2a85c8556cf8e0a" title=" " alt="" coords="374,114,441,141"/>
 <area shape="rect" href="../../d6/d3f/classppu.html#a94a271d14d4337d31cbc643d3064b4d8" title=" " alt="" coords="374,165,441,191"/>
 <area shape="rect" href="../../df/d0a/main_8cpp.html#a6d327e023ed1dae058f86d827940d7a6" title=" " alt="" coords="370,215,445,242"/>
-<area shape="rect" href="../../de/d33/classcpu.html#abc8a3d560e97137856c86004d5d5e91b" title=" " alt="" coords="581,159,661,186"/>
-<area shape="rect" href="../../d6/d3f/classppu.html#a8f8beeeceb29673161032303d02e8cad" title=" " alt="" coords="581,273,661,299"/>
-<area shape="rect" href="../../d0/d88/classbus.html#abb29248facedf75907fba0ebf44022b0" title=" " alt="" coords="1063,159,1137,186"/>
-<area shape="rect" href="../../d6/d3f/classppu.html#ab7902989f58e71e7b1a934558ee6bcf1" title=" " alt="" coords="751,197,956,223"/>
-<area shape="rect" href="../../d6/d3f/classppu.html#af1857f201e89b8c907c0ab852474ef0a" title=" " alt="" coords="779,298,927,325"/>
-<area shape="rect" href="../../d6/d3f/classppu.html#adc042fdf517afbfa4b87202ba5bde87f" title=" " alt="" coords="1004,337,1196,363"/>
-<area shape="rect" href="../../d6/d3f/classppu.html#af4eed16ede0e68d6b23dcc4f10a74d9f" title=" " alt="" coords="778,399,929,426"/>
-<area shape="rect" href="../../d6/d3f/classppu.html#a463868fe462d4d42321103a8d3587121" title=" " alt="" coords="776,450,931,477"/>
-<area shape="rect" href="../../d6/d3f/classppu.html#a011d8cf9ad06b321ecf61ab48ed7825e" title=" " alt="" coords="774,247,933,274"/>
-<area shape="rect" href="../../d6/d3f/classppu.html#a9abb944f427a7a69eebf09dd31cc13a2" title=" " alt="" coords="1026,235,1174,262"/>
-<area shape="rect" href="../../d6/d3f/classppu.html#a0475cb611cf0579e6132650b83093952" title=" " alt="" coords="1032,286,1168,313"/>
+<area shape="rect" href="../../de/d33/classcpu.html#abc8a3d560e97137856c86004d5d5e91b" title=" " alt="" coords="813,190,893,217"/>
+<area shape="rect" href="../../d6/d3f/classppu.html#a8f8beeeceb29673161032303d02e8cad" title=" " alt="" coords="581,241,661,267"/>
+<area shape="rect" href="../../d0/d88/classbus.html#abb29248facedf75907fba0ebf44022b0" title=" " alt="" coords="1004,215,1079,242"/>
+<area shape="rect" href="../../d6/d3f/classppu.html#ab7902989f58e71e7b1a934558ee6bcf1" title=" " alt="" coords="751,241,956,267"/>
 <area shape="rect" href="../../d7/d6d/classdisplay_debug_info.html#a79ba0730a0b640e2fc2d19da778219af" title=" " alt="" coords="323,267,492,308"/>
 <area shape="rect" href="../../df/d0a/main_8cpp.html#ab59f1b1459454092942fcda083513be9" title=" " alt="" coords="376,333,439,359"/>
 <area shape="rect" href="../../d2/dd7/classcartridge.html#a45c8cfd4db0173df711c2e3ac5a78be2" title=" " alt="" coords="356,383,459,410"/>
@@ -600,24 +587,17 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">  104</span>}</div>
 <div class="ttc" id="aclasscpu_html_abc8a3d560e97137856c86004d5d5e91b"><div class="ttname"><a href="../../de/d33/classcpu.html#abc8a3d560e97137856c86004d5d5e91b">cpu::clock</a></div><div class="ttdeci">static void clock(LTE::gameObject *eventEntity, LTE::coreEventData *sendor)</div><div class="ttdef"><b>Definition:</b> cpu.h:54</div></div>
 <div class="ttc" id="aclassppu_html_a3fa653711a870aa6af0e40f28ec240bf"><div class="ttname"><a href="../../d6/d3f/classppu.html#a3fa653711a870aa6af0e40f28ec240bf">ppu::nmi</a></div><div class="ttdeci">static bool nmi</div><div class="ttdef"><b>Definition:</b> ppu.h:90</div></div>
-<div class="ttc" id="aclassppu_html_a8f8beeeceb29673161032303d02e8cad"><div class="ttname"><a href="../../d6/d3f/classppu.html#a8f8beeeceb29673161032303d02e8cad">ppu::clock</a></div><div class="ttdeci">static void clock(LTE::gameObject *eventEntity, LTE::coreEventData *sendor)</div><div class="ttdef"><b>Definition:</b> ppu.h:263</div></div>
+<div class="ttc" id="aclassppu_html_a8f8beeeceb29673161032303d02e8cad"><div class="ttname"><a href="../../d6/d3f/classppu.html#a8f8beeeceb29673161032303d02e8cad">ppu::clock</a></div><div class="ttdeci">static void clock(LTE::gameObject *eventEntity, LTE::coreEventData *sendor)</div><div class="ttdef"><b>Definition:</b> ppu.h:114</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../df/d0a/main_8cpp_a6d327e023ed1dae058f86d827940d7a6_cgraph.png" border="0" usemap="#adf/d0a/main_8cpp_a6d327e023ed1dae058f86d827940d7a6_cgraph" alt=""/></div>
 <map name="adf/d0a/main_8cpp_a6d327e023ed1dae058f86d827940d7a6_cgraph" id="adf/d0a/main_8cpp_a6d327e023ed1dae058f86d827940d7a6_cgraph">
-<area shape="rect" title=" " alt="" coords="5,123,80,150"/>
-<area shape="rect" href="../../de/d33/classcpu.html#abc8a3d560e97137856c86004d5d5e91b" title=" " alt="" coords="128,35,208,62"/>
-<area shape="rect" href="../../d6/d3f/classppu.html#a8f8beeeceb29673161032303d02e8cad" title=" " alt="" coords="128,149,208,175"/>
-<area shape="rect" href="../../d0/d88/classbus.html#abb29248facedf75907fba0ebf44022b0" title=" " alt="" coords="568,47,643,74"/>
-<area shape="rect" href="../../d6/d3f/classppu.html#ab7902989f58e71e7b1a934558ee6bcf1" title=" " alt="" coords="256,73,461,99"/>
-<area shape="rect" href="../../d6/d3f/classppu.html#af1857f201e89b8c907c0ab852474ef0a" title=" " alt="" coords="285,174,433,201"/>
-<area shape="rect" href="../../d6/d3f/classppu.html#adc042fdf517afbfa4b87202ba5bde87f" title=" " alt="" coords="509,225,701,251"/>
-<area shape="rect" href="../../d6/d3f/classppu.html#af4eed16ede0e68d6b23dcc4f10a74d9f" title=" " alt="" coords="283,275,434,302"/>
-<area shape="rect" href="../../d6/d3f/classppu.html#a463868fe462d4d42321103a8d3587121" title=" " alt="" coords="281,326,436,353"/>
-<area shape="rect" href="../../d6/d3f/classppu.html#a011d8cf9ad06b321ecf61ab48ed7825e" title=" " alt="" coords="279,123,438,150"/>
-<area shape="rect" href="../../d6/d3f/classppu.html#a9abb944f427a7a69eebf09dd31cc13a2" title=" " alt="" coords="531,98,679,125"/>
-<area shape="rect" href="../../d6/d3f/classppu.html#a0475cb611cf0579e6132650b83093952" title=" " alt="" coords="537,149,673,175"/>
+<area shape="rect" title=" " alt="" coords="5,31,80,57"/>
+<area shape="rect" href="../../de/d33/classcpu.html#abc8a3d560e97137856c86004d5d5e91b" title=" " alt="" coords="319,5,399,32"/>
+<area shape="rect" href="../../d6/d3f/classppu.html#a8f8beeeceb29673161032303d02e8cad" title=" " alt="" coords="128,56,208,83"/>
+<area shape="rect" href="../../d0/d88/classbus.html#abb29248facedf75907fba0ebf44022b0" title=" " alt="" coords="509,31,584,57"/>
+<area shape="rect" href="../../d6/d3f/classppu.html#ab7902989f58e71e7b1a934558ee6bcf1" title=" " alt="" coords="256,56,461,83"/>
 </map>
 </div>
 <div class="dynheader">
@@ -658,9 +638,9 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  166</span>{</div>
-<div class="line"><span class="lineno">  167</span>    LTE::app::keepRunning = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  168</span>}</div>
+<div class="fragment"><div class="line"><span class="lineno">  167</span>{</div>
+<div class="line"><span class="lineno">  168</span>    LTE::app::keepRunning = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  169</span>}</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">

@@ -130,6 +130,8 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a8f94beab3256c68ae933a0ddc74a7c0c"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/deb/classppu2c02.html#a8f94beab3256c68ae933a0ddc74a7c0c">datatoHexString</a> (uint32_t n, uint8_t d)</td></tr>
+<tr class="separator:a8f94beab3256c68ae933a0ddc74a7c0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5dc18f6fc3e11cc25c5f6938eb85620a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/deb/classppu2c02.html#a5dc18f6fc3e11cc25c5f6938eb85620a">ppu2c02</a> (<a class="el" href="../../da/de8/classppu_bus_cartridge.html">ppuBusCartridge</a> *<a class="el" href="../../d2/dd7/classcartridge.html">cartridge</a>)</td></tr>
 <tr class="separator:a5dc18f6fc3e11cc25c5f6938eb85620a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa968000f5565b657285fc1d6ed3303ec"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/deb/classppu2c02.html#aa968000f5565b657285fc1d6ed3303ec">~ppu2c02</a> ()</td></tr>
@@ -263,37 +265,37 @@ Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  110</span>    {</div>
-<div class="line"><span class="lineno">  111</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;i : <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a67ee50859ccedb960e8305c4934f0ba3">ppuData</a>)</div>
-<div class="line"><span class="lineno">  112</span>            i = 0x00;</div>
-<div class="line"><span class="lineno">  113</span>        <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#ab6d3b796ce590e4c90267078411d418d">nt</a> = <span class="keyword">new</span> <a class="code hl_class" href="../../da/d1c/classname_table.html">nameTable</a>();</div>
-<div class="line"><span class="lineno">  114</span>        <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#abc63f9d281a21fecde8a213abdda5bc6">pm</a> = <span class="keyword">new</span> <a class="code hl_class" href="../../de/dba/classpalettes_memory.html">palettesMemory</a>();</div>
-<div class="line"><span class="lineno">  115</span>        this-&gt;cartridge = <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a836e7440f082863c1fa76a9d26200583">cartridge</a>;</div>
-<div class="line"><span class="lineno">  116</span> </div>
-<div class="line"><span class="lineno">  117</span>        <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#ab6d3b796ce590e4c90267078411d418d">nt</a>-&gt;<a class="code hl_variable" href="../../da/d1c/classname_table.html#a6241ac020e613f01e0f85dc6daf2d1d5">cart</a> = <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a836e7440f082863c1fa76a9d26200583">cartridge</a>;</div>
-<div class="line"><span class="lineno">  118</span> </div>
-<div class="line"><span class="lineno">  119</span>        <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#aa167427b0acc186c0922b7a9494e3734">ppuBus</a>.<a class="code hl_function" href="../../d0/d88/classbus.html#a48c90aeac455d34c22da64f98c01bba5">pushDevice</a>(<a class="code hl_class" href="../../d2/dd7/classcartridge.html">cartridge</a>)-&gt;<a class="code hl_function" href="../../d0/d88/classbus.html#a48c90aeac455d34c22da64f98c01bba5">pushDevice</a>(<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#ab6d3b796ce590e4c90267078411d418d">nt</a>)-&gt;<a class="code hl_function" href="../../d0/d88/classbus.html#a48c90aeac455d34c22da64f98c01bba5">pushDevice</a>(<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#abc63f9d281a21fecde8a213abdda5bc6">pm</a>);</div>
-<div class="line"><span class="lineno">  120</span> </div>
-<div class="line"><span class="lineno">  121</span> </div>
-<div class="line"><span class="lineno">  122</span>        <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#ad38262400503707dc60852b2b87a56e2">fine_x</a> = 0x00;</div>
-<div class="line"><span class="lineno">  123</span>        <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#acd73292bd425b91745c7ca2a697207cc">address_latch</a> = 0x00;</div>
-<div class="line"><span class="lineno">  124</span>        <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#ac8ad0294b0613d45f0c14d0c2034b2a9">ppu_data_buffer</a> = 0x00;</div>
-<div class="line"><span class="lineno">  125</span>        <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a18857378e822268f90f7522770832510">scanline</a> = 0;</div>
-<div class="line"><span class="lineno">  126</span>        <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#af5240aa778b1cf870047f5c67d2ada53">cycle</a> = 0;</div>
-<div class="line"><span class="lineno">  127</span>        <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a2089b6ffbaa08f854fc99625c0c22de3">bg_next_tile_id</a> = 0x00;</div>
-<div class="line"><span class="lineno">  128</span>        <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#acd25a2c45ef335af19c0ea747a4e0324">bg_next_tile_attrib</a> = 0x00;</div>
-<div class="line"><span class="lineno">  129</span>        <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a2946f1313cdccc0d134195e8b3bd906a">bg_next_tile_lsb</a> = 0x00;</div>
-<div class="line"><span class="lineno">  130</span>        <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a5bd32eb3f038487f86541e9e6ef8bc50">bg_next_tile_msb</a> = 0x00;</div>
-<div class="line"><span class="lineno">  131</span>        <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a76b299a13833f52f473f4306cb1bfed4">bg_shifter_pattern_lo</a> = 0x0000;</div>
-<div class="line"><span class="lineno">  132</span>        <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a1677fce272b90542ea2459c8ae2fd9db">bg_shifter_pattern_hi</a> = 0x0000;</div>
-<div class="line"><span class="lineno">  133</span>        <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#aacca281f94ba141df4be70494c01c566">bg_shifter_attrib_lo</a> = 0x0000;</div>
-<div class="line"><span class="lineno">  134</span>        <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#aab9cc74b5efe2244c82d6156d6fe7e70">bg_shifter_attrib_hi</a> = 0x0000;</div>
-<div class="line"><span class="lineno">  135</span>        <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#af7d9ec8ee8a7667959c3a83eb3ac63f4">status</a>.reg = 0x00;</div>
-<div class="line"><span class="lineno">  136</span>        <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#ae9acdeb35a57b3f30f50ba6f463a1195">mask</a>.reg = 0x00;</div>
-<div class="line"><span class="lineno">  137</span>        <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#ac99d81b31fec1a67303a8c5547093647">control</a>.<a class="code hl_variable" href="../../df/d5b/unionppu2c02_1_1_p_p_u_c_t_r_l.html#a9fcb09c17a19e3d7aff8f14314b44997">reg</a> = 0x00;</div>
-<div class="line"><span class="lineno">  138</span>        <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a977ed4c9f9596404ca0412db55588cf0">vram_addr</a>.<a class="code hl_variable" href="../../d4/d46/unionppu2c02_1_1loopy__register.html#a536b9ec70d2a37e219d3615576257725">reg</a> = 0x0000;</div>
-<div class="line"><span class="lineno">  139</span>        <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#af3bf476bfc051ee5ed2dee4410f74840">tram_addr</a>.<a class="code hl_variable" href="../../d4/d46/unionppu2c02_1_1loopy__register.html#a536b9ec70d2a37e219d3615576257725">reg</a> = 0x0000;</div>
-<div class="line"><span class="lineno">  140</span>    }</div>
+<div class="fragment"><div class="line"><span class="lineno">  118</span>    {</div>
+<div class="line"><span class="lineno">  119</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;i : <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a67ee50859ccedb960e8305c4934f0ba3">ppuData</a>)</div>
+<div class="line"><span class="lineno">  120</span>            i = 0x00;</div>
+<div class="line"><span class="lineno">  121</span>        <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#ab6d3b796ce590e4c90267078411d418d">nt</a> = <span class="keyword">new</span> <a class="code hl_class" href="../../da/d1c/classname_table.html">nameTable</a>();</div>
+<div class="line"><span class="lineno">  122</span>        <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#abc63f9d281a21fecde8a213abdda5bc6">pm</a> = <span class="keyword">new</span> <a class="code hl_class" href="../../de/dba/classpalettes_memory.html">palettesMemory</a>();</div>
+<div class="line"><span class="lineno">  123</span>        this-&gt;cartridge = <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a836e7440f082863c1fa76a9d26200583">cartridge</a>;</div>
+<div class="line"><span class="lineno">  124</span> </div>
+<div class="line"><span class="lineno">  125</span>        <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#ab6d3b796ce590e4c90267078411d418d">nt</a>-&gt;<a class="code hl_variable" href="../../da/d1c/classname_table.html#a6241ac020e613f01e0f85dc6daf2d1d5">cart</a> = <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a836e7440f082863c1fa76a9d26200583">cartridge</a>;</div>
+<div class="line"><span class="lineno">  126</span> </div>
+<div class="line"><span class="lineno">  127</span>        <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#aa167427b0acc186c0922b7a9494e3734">ppuBus</a>.<a class="code hl_function" href="../../d0/d88/classbus.html#a48c90aeac455d34c22da64f98c01bba5">pushDevice</a>(<a class="code hl_class" href="../../d2/dd7/classcartridge.html">cartridge</a>)-&gt;<a class="code hl_function" href="../../d0/d88/classbus.html#a48c90aeac455d34c22da64f98c01bba5">pushDevice</a>(<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#ab6d3b796ce590e4c90267078411d418d">nt</a>)-&gt;<a class="code hl_function" href="../../d0/d88/classbus.html#a48c90aeac455d34c22da64f98c01bba5">pushDevice</a>(<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#abc63f9d281a21fecde8a213abdda5bc6">pm</a>);</div>
+<div class="line"><span class="lineno">  128</span> </div>
+<div class="line"><span class="lineno">  129</span> </div>
+<div class="line"><span class="lineno">  130</span>        <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#ad38262400503707dc60852b2b87a56e2">fine_x</a> = 0x00;</div>
+<div class="line"><span class="lineno">  131</span>        <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#acd73292bd425b91745c7ca2a697207cc">address_latch</a> = 0x00;</div>
+<div class="line"><span class="lineno">  132</span>        <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#ac8ad0294b0613d45f0c14d0c2034b2a9">ppu_data_buffer</a> = 0x00;</div>
+<div class="line"><span class="lineno">  133</span>        <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a18857378e822268f90f7522770832510">scanline</a> = 0;</div>
+<div class="line"><span class="lineno">  134</span>        <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#af5240aa778b1cf870047f5c67d2ada53">cycle</a> = 0;</div>
+<div class="line"><span class="lineno">  135</span>        <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a2089b6ffbaa08f854fc99625c0c22de3">bg_next_tile_id</a> = 0x00;</div>
+<div class="line"><span class="lineno">  136</span>        <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#acd25a2c45ef335af19c0ea747a4e0324">bg_next_tile_attrib</a> = 0x00;</div>
+<div class="line"><span class="lineno">  137</span>        <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a2946f1313cdccc0d134195e8b3bd906a">bg_next_tile_lsb</a> = 0x00;</div>
+<div class="line"><span class="lineno">  138</span>        <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a5bd32eb3f038487f86541e9e6ef8bc50">bg_next_tile_msb</a> = 0x00;</div>
+<div class="line"><span class="lineno">  139</span>        <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a76b299a13833f52f473f4306cb1bfed4">bg_shifter_pattern_lo</a> = 0x0000;</div>
+<div class="line"><span class="lineno">  140</span>        <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a1677fce272b90542ea2459c8ae2fd9db">bg_shifter_pattern_hi</a> = 0x0000;</div>
+<div class="line"><span class="lineno">  141</span>        <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#aacca281f94ba141df4be70494c01c566">bg_shifter_attrib_lo</a> = 0x0000;</div>
+<div class="line"><span class="lineno">  142</span>        <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#aab9cc74b5efe2244c82d6156d6fe7e70">bg_shifter_attrib_hi</a> = 0x0000;</div>
+<div class="line"><span class="lineno">  143</span>        <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#af7d9ec8ee8a7667959c3a83eb3ac63f4">status</a>.reg = 0x00;</div>
+<div class="line"><span class="lineno">  144</span>        <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#ae9acdeb35a57b3f30f50ba6f463a1195">mask</a>.reg = 0x00;</div>
+<div class="line"><span class="lineno">  145</span>        <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#ac99d81b31fec1a67303a8c5547093647">control</a>.<a class="code hl_variable" href="../../df/d5b/unionppu2c02_1_1_p_p_u_c_t_r_l.html#a9fcb09c17a19e3d7aff8f14314b44997">reg</a> = 0x00;</div>
+<div class="line"><span class="lineno">  146</span>        <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a977ed4c9f9596404ca0412db55588cf0">vram_addr</a>.<a class="code hl_variable" href="../../d4/d46/unionppu2c02_1_1loopy__register.html#a536b9ec70d2a37e219d3615576257725">reg</a> = 0x0000;</div>
+<div class="line"><span class="lineno">  147</span>        <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#af3bf476bfc051ee5ed2dee4410f74840">tram_addr</a>.<a class="code hl_variable" href="../../d4/d46/unionppu2c02_1_1loopy__register.html#a536b9ec70d2a37e219d3615576257725">reg</a> = 0x0000;</div>
+<div class="line"><span class="lineno">  148</span>    }</div>
 <div class="ttc" id="aclassbus_html_a48c90aeac455d34c22da64f98c01bba5"><div class="ttname"><a href="../../d0/d88/classbus.html#a48c90aeac455d34c22da64f98c01bba5">bus::pushDevice</a></div><div class="ttdeci">bus * pushDevice(busDevice&lt; dataSize, addrSize &gt; *toAdd)</div><div class="ttdef"><b>Definition:</b> bus.h:27</div></div>
 <div class="ttc" id="aclasscartridge_html"><div class="ttname"><a href="../../d2/dd7/classcartridge.html">cartridge</a></div><div class="ttdef"><b>Definition:</b> cartridge.h:35</div></div>
 <div class="ttc" id="aclassname_table_html"><div class="ttname"><a href="../../da/d1c/classname_table.html">nameTable</a></div><div class="ttdef"><b>Definition:</b> nameTable.h:6</div></div>
@@ -358,12 +360,63 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  143</span>    {</div>
-<div class="line"><span class="lineno">  144</span>    }</div>
+<div class="fragment"><div class="line"><span class="lineno">  151</span>    {</div>
+<div class="line"><span class="lineno">  152</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a8f94beab3256c68ae933a0ddc74a7c0c" name="a8f94beab3256c68ae933a0ddc74a7c0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f94beab3256c68ae933a0ddc74a7c0c">&#9670;&nbsp;</a></span>datatoHexString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string ppu2c02::datatoHexString </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>d</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  109</span>    {</div>
+<div class="line"><span class="lineno">  110</span>        std::string s(d, <span class="charliteral">&#39;0&#39;</span>);</div>
+<div class="line"><span class="lineno">  111</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = d - 1; i &gt;= 0; i--, n &gt;&gt;= 4)</div>
+<div class="line"><span class="lineno">  112</span>            s[i] = <span class="stringliteral">&quot;0123456789ABCDEF&quot;</span>[n &amp; 0xF];</div>
+<div class="line"><span class="lineno">  113</span>        <span class="keywordflow">return</span> s;</div>
+<div class="line"><span class="lineno">  114</span>    }</div>
+</div><!-- fragment --><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d2/deb/classppu2c02_a8f94beab3256c68ae933a0ddc74a7c0c_icgraph.png" border="0" usemap="#ad2/deb/classppu2c02_a8f94beab3256c68ae933a0ddc74a7c0c_icgraph" alt=""/></div>
+<map name="ad2/deb/classppu2c02_a8f94beab3256c68ae933a0ddc74a7c0c_icgraph" id="ad2/deb/classppu2c02_a8f94beab3256c68ae933a0ddc74a7c0c_icgraph">
+<area shape="rect" title=" " alt="" coords="159,5,329,32"/>
+<area shape="rect" href="../../d2/deb/classppu2c02.html#a5e4f6f226d3d52a674c121dc539c8c53" title=" " alt="" coords="5,5,111,32"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="a00a1c655d9871d361416bc8627a2829a" name="a00a1c655d9871d361416bc8627a2829a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a00a1c655d9871d361416bc8627a2829a">&#9670;&nbsp;</a></span>end()</h2>
 
@@ -386,7 +439,7 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  148</span>{}</div>
+<div class="fragment"><div class="line"><span class="lineno">  156</span>{}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -413,7 +466,7 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  146</span>{}</div>
+<div class="fragment"><div class="line"><span class="lineno">  154</span>{}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -442,9 +495,9 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="../../dc/d77/classbus_device.html#ace475b1abcc4375d4723209ed4be17f0">busDevice&lt; uint8_t, uint16_t &gt;</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  151</span>    {</div>
-<div class="line"><span class="lineno">  152</span>        <span class="keywordflow">return</span> addr &gt;= 0x2000 &amp;&amp; addr &lt;= 0x3FFF;</div>
-<div class="line"><span class="lineno">  153</span>    }</div>
+<div class="fragment"><div class="line"><span class="lineno">  159</span>    {</div>
+<div class="line"><span class="lineno">  160</span>        <span class="keywordflow">return</span> addr &gt;= 0x2000 &amp;&amp; addr &lt;= 0x3FFF;</div>
+<div class="line"><span class="lineno">  161</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -483,65 +536,65 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="../../dc/d77/classbus_device.html#a76776dbaa4b844927261fe46ab3b690f">busDevice&lt; uint8_t, uint16_t &gt;</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  156</span>    {</div>
-<div class="line"><span class="lineno">  157</span>        addr &amp;= 0x0007;</div>
-<div class="line"><span class="lineno">  158</span>        uint8_t data = 0x00;</div>
-<div class="line"><span class="lineno">  159</span> </div>
-<div class="line"><span class="lineno">  160</span>        <span class="keywordflow">switch</span> (addr)</div>
-<div class="line"><span class="lineno">  161</span>        {</div>
-<div class="line"><span class="lineno">  162</span>        <span class="comment">// Control - Not readable</span></div>
-<div class="line"><span class="lineno">  163</span>        <span class="keywordflow">case</span> 0x0000:</div>
-<div class="line"><span class="lineno">  164</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  165</span> </div>
-<div class="line"><span class="lineno">  166</span>            <span class="comment">// Mask - Not Readable</span></div>
-<div class="line"><span class="lineno">  167</span>        <span class="keywordflow">case</span> 0x0001:</div>
-<div class="line"><span class="lineno">  168</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  169</span> </div>
-<div class="line"><span class="lineno">  170</span>            <span class="comment">// Status</span></div>
-<div class="line"><span class="lineno">  171</span>        <span class="keywordflow">case</span> 0x0002:</div>
-<div class="line"><span class="lineno">  172</span>            data = (<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#af7d9ec8ee8a7667959c3a83eb3ac63f4">status</a>.reg &amp; 0xE0) | (<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#ac8ad0294b0613d45f0c14d0c2034b2a9">ppu_data_buffer</a> &amp; 0x1F);</div>
-<div class="line"><span class="lineno">  173</span>            <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#af7d9ec8ee8a7667959c3a83eb3ac63f4">status</a>.vertical_blank = 0;</div>
-<div class="line"><span class="lineno">  174</span>            <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#acd73292bd425b91745c7ca2a697207cc">address_latch</a> = 0;</div>
-<div class="line"><span class="lineno">  175</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  176</span> </div>
-<div class="line"><span class="lineno">  177</span>            <span class="comment">// OAM Address</span></div>
-<div class="line"><span class="lineno">  178</span>        <span class="keywordflow">case</span> 0x0003:</div>
-<div class="line"><span class="lineno">  179</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  180</span> </div>
-<div class="line"><span class="lineno">  181</span>            <span class="comment">// OAM Data</span></div>
-<div class="line"><span class="lineno">  182</span>        <span class="keywordflow">case</span> 0x0004:</div>
+<div class="fragment"><div class="line"><span class="lineno">  164</span>    {</div>
+<div class="line"><span class="lineno">  165</span>        addr &amp;= 0x0007;</div>
+<div class="line"><span class="lineno">  166</span>        uint8_t data = 0x00;</div>
+<div class="line"><span class="lineno">  167</span> </div>
+<div class="line"><span class="lineno">  168</span>        <span class="keywordflow">switch</span> (addr)</div>
+<div class="line"><span class="lineno">  169</span>        {</div>
+<div class="line"><span class="lineno">  170</span>        <span class="comment">// Control - Not readable</span></div>
+<div class="line"><span class="lineno">  171</span>        <span class="keywordflow">case</span> 0x0000:</div>
+<div class="line"><span class="lineno">  172</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  173</span> </div>
+<div class="line"><span class="lineno">  174</span>            <span class="comment">// Mask - Not Readable</span></div>
+<div class="line"><span class="lineno">  175</span>        <span class="keywordflow">case</span> 0x0001:</div>
+<div class="line"><span class="lineno">  176</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  177</span> </div>
+<div class="line"><span class="lineno">  178</span>            <span class="comment">// Status</span></div>
+<div class="line"><span class="lineno">  179</span>        <span class="keywordflow">case</span> 0x0002:</div>
+<div class="line"><span class="lineno">  180</span>            data = (<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#af7d9ec8ee8a7667959c3a83eb3ac63f4">status</a>.reg &amp; 0xE0) | (<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#ac8ad0294b0613d45f0c14d0c2034b2a9">ppu_data_buffer</a> &amp; 0x1F);</div>
+<div class="line"><span class="lineno">  181</span>            <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#af7d9ec8ee8a7667959c3a83eb3ac63f4">status</a>.vertical_blank = 0;</div>
+<div class="line"><span class="lineno">  182</span>            <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#acd73292bd425b91745c7ca2a697207cc">address_latch</a> = 0;</div>
 <div class="line"><span class="lineno">  183</span>            <span class="keywordflow">break</span>;</div>
 <div class="line"><span class="lineno">  184</span> </div>
-<div class="line"><span class="lineno">  185</span>            <span class="comment">// Scroll - Not Readable</span></div>
-<div class="line"><span class="lineno">  186</span>        <span class="keywordflow">case</span> 0x0005:</div>
+<div class="line"><span class="lineno">  185</span>            <span class="comment">// OAM Address</span></div>
+<div class="line"><span class="lineno">  186</span>        <span class="keywordflow">case</span> 0x0003:</div>
 <div class="line"><span class="lineno">  187</span>            <span class="keywordflow">break</span>;</div>
 <div class="line"><span class="lineno">  188</span> </div>
-<div class="line"><span class="lineno">  189</span>            <span class="comment">// PPU Address - Not Readable</span></div>
-<div class="line"><span class="lineno">  190</span>        <span class="keywordflow">case</span> 0x0006:</div>
+<div class="line"><span class="lineno">  189</span>            <span class="comment">// OAM Data</span></div>
+<div class="line"><span class="lineno">  190</span>        <span class="keywordflow">case</span> 0x0004:</div>
 <div class="line"><span class="lineno">  191</span>            <span class="keywordflow">break</span>;</div>
 <div class="line"><span class="lineno">  192</span> </div>
-<div class="line"><span class="lineno">  193</span>            <span class="comment">// PPU Data</span></div>
-<div class="line"><span class="lineno">  194</span>        <span class="keywordflow">case</span> 0x0007:</div>
-<div class="line"><span class="lineno">  195</span>            <span class="comment">// Reads from the NameTable ram get delayed one cycle,</span></div>
-<div class="line"><span class="lineno">  196</span>            <span class="comment">// so output buffer which contains the data from the</span></div>
-<div class="line"><span class="lineno">  197</span>            <span class="comment">// previous read request</span></div>
-<div class="line"><span class="lineno">  198</span>            data = <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#ac8ad0294b0613d45f0c14d0c2034b2a9">ppu_data_buffer</a>;</div>
-<div class="line"><span class="lineno">  199</span>            <span class="comment">// then update the buffer for next time</span></div>
-<div class="line"><span class="lineno">  200</span>            <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#ac8ad0294b0613d45f0c14d0c2034b2a9">ppu_data_buffer</a> = <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#aa167427b0acc186c0922b7a9494e3734">ppuBus</a>.<a class="code hl_function" href="../../d0/d88/classbus.html#abb29248facedf75907fba0ebf44022b0">read</a>(<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a977ed4c9f9596404ca0412db55588cf0">vram_addr</a>.<a class="code hl_variable" href="../../d4/d46/unionppu2c02_1_1loopy__register.html#a536b9ec70d2a37e219d3615576257725">reg</a>);</div>
-<div class="line"><span class="lineno">  201</span>            <span class="comment">// However, if the address was in the palette range, the</span></div>
-<div class="line"><span class="lineno">  202</span>            <span class="comment">// data is not delayed, so it returns immediately</span></div>
-<div class="line"><span class="lineno">  203</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a977ed4c9f9596404ca0412db55588cf0">vram_addr</a>.<a class="code hl_variable" href="../../d4/d46/unionppu2c02_1_1loopy__register.html#a536b9ec70d2a37e219d3615576257725">reg</a> &gt;= 0x3F00)</div>
-<div class="line"><span class="lineno">  204</span>                data = <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#ac8ad0294b0613d45f0c14d0c2034b2a9">ppu_data_buffer</a>;</div>
-<div class="line"><span class="lineno">  205</span>            <span class="comment">// All reads from PPU data automatically increment the nametable</span></div>
-<div class="line"><span class="lineno">  206</span>            <span class="comment">// address depending upon the mode set in the control register.</span></div>
-<div class="line"><span class="lineno">  207</span>            <span class="comment">// If set to vertical mode, the increment is 32, so it skips</span></div>
-<div class="line"><span class="lineno">  208</span>            <span class="comment">// one whole nametable row; in horizontal mode it just increments</span></div>
-<div class="line"><span class="lineno">  209</span>            <span class="comment">// by 1, moving to the next column</span></div>
-<div class="line"><span class="lineno">  210</span>            <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a977ed4c9f9596404ca0412db55588cf0">vram_addr</a>.<a class="code hl_variable" href="../../d4/d46/unionppu2c02_1_1loopy__register.html#a536b9ec70d2a37e219d3615576257725">reg</a> += (<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#ac99d81b31fec1a67303a8c5547093647">control</a>.<a class="code hl_variable" href="../../df/d5b/unionppu2c02_1_1_p_p_u_c_t_r_l.html#a5d93e856cefd8f43895902e7e5bcb127">increment_mode</a> ? 32 : 1);</div>
-<div class="line"><span class="lineno">  211</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  212</span>        }</div>
-<div class="line"><span class="lineno">  213</span>        <span class="keywordflow">return</span> data;</div>
-<div class="line"><span class="lineno">  214</span>    }</div>
+<div class="line"><span class="lineno">  193</span>            <span class="comment">// Scroll - Not Readable</span></div>
+<div class="line"><span class="lineno">  194</span>        <span class="keywordflow">case</span> 0x0005:</div>
+<div class="line"><span class="lineno">  195</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  196</span> </div>
+<div class="line"><span class="lineno">  197</span>            <span class="comment">// PPU Address - Not Readable</span></div>
+<div class="line"><span class="lineno">  198</span>        <span class="keywordflow">case</span> 0x0006:</div>
+<div class="line"><span class="lineno">  199</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  200</span> </div>
+<div class="line"><span class="lineno">  201</span>            <span class="comment">// PPU Data</span></div>
+<div class="line"><span class="lineno">  202</span>        <span class="keywordflow">case</span> 0x0007:</div>
+<div class="line"><span class="lineno">  203</span>            <span class="comment">// Reads from the NameTable ram get delayed one cycle,</span></div>
+<div class="line"><span class="lineno">  204</span>            <span class="comment">// so output buffer which contains the data from the</span></div>
+<div class="line"><span class="lineno">  205</span>            <span class="comment">// previous read request</span></div>
+<div class="line"><span class="lineno">  206</span>            data = <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#ac8ad0294b0613d45f0c14d0c2034b2a9">ppu_data_buffer</a>;</div>
+<div class="line"><span class="lineno">  207</span>            <span class="comment">// then update the buffer for next time</span></div>
+<div class="line"><span class="lineno">  208</span>            <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#ac8ad0294b0613d45f0c14d0c2034b2a9">ppu_data_buffer</a> = <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#aa167427b0acc186c0922b7a9494e3734">ppuBus</a>.<a class="code hl_function" href="../../d0/d88/classbus.html#abb29248facedf75907fba0ebf44022b0">read</a>(<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a977ed4c9f9596404ca0412db55588cf0">vram_addr</a>.<a class="code hl_variable" href="../../d4/d46/unionppu2c02_1_1loopy__register.html#a536b9ec70d2a37e219d3615576257725">reg</a>);</div>
+<div class="line"><span class="lineno">  209</span>            <span class="comment">// However, if the address was in the palette range, the</span></div>
+<div class="line"><span class="lineno">  210</span>            <span class="comment">// data is not delayed, so it returns immediately</span></div>
+<div class="line"><span class="lineno">  211</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a977ed4c9f9596404ca0412db55588cf0">vram_addr</a>.<a class="code hl_variable" href="../../d4/d46/unionppu2c02_1_1loopy__register.html#a536b9ec70d2a37e219d3615576257725">reg</a> &gt;= 0x3F00)</div>
+<div class="line"><span class="lineno">  212</span>                data = <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#ac8ad0294b0613d45f0c14d0c2034b2a9">ppu_data_buffer</a>;</div>
+<div class="line"><span class="lineno">  213</span>            <span class="comment">// All reads from PPU data automatically increment the nametable</span></div>
+<div class="line"><span class="lineno">  214</span>            <span class="comment">// address depending upon the mode set in the control register.</span></div>
+<div class="line"><span class="lineno">  215</span>            <span class="comment">// If set to vertical mode, the increment is 32, so it skips</span></div>
+<div class="line"><span class="lineno">  216</span>            <span class="comment">// one whole nametable row; in horizontal mode it just increments</span></div>
+<div class="line"><span class="lineno">  217</span>            <span class="comment">// by 1, moving to the next column</span></div>
+<div class="line"><span class="lineno">  218</span>            <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a977ed4c9f9596404ca0412db55588cf0">vram_addr</a>.<a class="code hl_variable" href="../../d4/d46/unionppu2c02_1_1loopy__register.html#a536b9ec70d2a37e219d3615576257725">reg</a> += (<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#ac99d81b31fec1a67303a8c5547093647">control</a>.<a class="code hl_variable" href="../../df/d5b/unionppu2c02_1_1_p_p_u_c_t_r_l.html#a5d93e856cefd8f43895902e7e5bcb127">increment_mode</a> ? 32 : 1);</div>
+<div class="line"><span class="lineno">  219</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  220</span>        }</div>
+<div class="line"><span class="lineno">  221</span>        <span class="keywordflow">return</span> data;</div>
+<div class="line"><span class="lineno">  222</span>    }</div>
 <div class="ttc" id="aclassbus_html_abb29248facedf75907fba0ebf44022b0"><div class="ttname"><a href="../../d0/d88/classbus.html#abb29248facedf75907fba0ebf44022b0">bus::read</a></div><div class="ttdeci">dataSize read(addrSize addr, bool bReadOnly=false)</div><div class="ttdef"><b>Definition:</b> bus.h:33</div></div>
 <div class="ttc" id="aunionppu2c02_1_1_p_p_u_c_t_r_l_html_a5d93e856cefd8f43895902e7e5bcb127"><div class="ttname"><a href="../../df/d5b/unionppu2c02_1_1_p_p_u_c_t_r_l.html#a5d93e856cefd8f43895902e7e5bcb127">ppu2c02::PPUCTRL::increment_mode</a></div><div class="ttdeci">uint8_t increment_mode</div><div class="ttdef"><b>Definition:</b> 2c02.h:55</div></div>
 </div><!-- fragment --><div class="dynheader">
@@ -591,76 +644,79 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="../../dc/d77/classbus_device.html#a72c738905ce28059b913090afd049061">busDevice&lt; uint8_t, uint16_t &gt;</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  217</span>    {</div>
-<div class="line"><span class="lineno">  218</span>        addr &amp;= 0x0007;</div>
-<div class="line"><span class="lineno">  219</span>        <span class="comment">// LAUGHTALE_ENGINR_LOG_INFO((int)addr &lt;&lt; &quot;, &quot; &lt;&lt; (int)data)</span></div>
-<div class="line"><span class="lineno">  220</span>        <span class="keywordflow">switch</span> (addr)</div>
-<div class="line"><span class="lineno">  221</span>        {</div>
-<div class="line"><span class="lineno">  222</span>        <span class="keywordflow">case</span> 0x0000: <span class="comment">// Control</span></div>
-<div class="line"><span class="lineno">  223</span>            <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#ac99d81b31fec1a67303a8c5547093647">control</a>.<a class="code hl_variable" href="../../df/d5b/unionppu2c02_1_1_p_p_u_c_t_r_l.html#a9fcb09c17a19e3d7aff8f14314b44997">reg</a> = data;</div>
-<div class="line"><span class="lineno">  224</span>            <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#af3bf476bfc051ee5ed2dee4410f74840">tram_addr</a>.<a class="code hl_variable" href="../../d4/d46/unionppu2c02_1_1loopy__register.html#a85d5703f11e821385c2d2728069d1ef4">nametable_x</a> = <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#ac99d81b31fec1a67303a8c5547093647">control</a>.<a class="code hl_variable" href="../../df/d5b/unionppu2c02_1_1_p_p_u_c_t_r_l.html#ac6d27b0ef6533141566a1463dcefd7b9">nametable_x</a>;</div>
-<div class="line"><span class="lineno">  225</span>            <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#af3bf476bfc051ee5ed2dee4410f74840">tram_addr</a>.<a class="code hl_variable" href="../../d4/d46/unionppu2c02_1_1loopy__register.html#adfe6c672efdf8fadedeeae28f8584273">nametable_y</a> = <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#ac99d81b31fec1a67303a8c5547093647">control</a>.<a class="code hl_variable" href="../../df/d5b/unionppu2c02_1_1_p_p_u_c_t_r_l.html#a00ac20e0abfc7f6d5285d2cebdbc2fad">nametable_y</a>;</div>
-<div class="line"><span class="lineno">  226</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  227</span>        <span class="keywordflow">case</span> 0x0001: <span class="comment">// Mask</span></div>
-<div class="line"><span class="lineno">  228</span>            <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#ae9acdeb35a57b3f30f50ba6f463a1195">mask</a>.reg = data;</div>
-<div class="line"><span class="lineno">  229</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  230</span>        <span class="keywordflow">case</span> 0x0002: <span class="comment">// Status</span></div>
-<div class="line"><span class="lineno">  231</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  232</span>        <span class="keywordflow">case</span> 0x0003: <span class="comment">// OAM Address</span></div>
-<div class="line"><span class="lineno">  233</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  234</span>        <span class="keywordflow">case</span> 0x0004: <span class="comment">// OAM Data</span></div>
-<div class="line"><span class="lineno">  235</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  236</span>        <span class="keywordflow">case</span> 0x0005: <span class="comment">// Scroll</span></div>
-<div class="line"><span class="lineno">  237</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#acd73292bd425b91745c7ca2a697207cc">address_latch</a> == 0)</div>
-<div class="line"><span class="lineno">  238</span>            {</div>
-<div class="line"><span class="lineno">  239</span>                <span class="comment">// First write to scroll register contains X offset in pixel space</span></div>
-<div class="line"><span class="lineno">  240</span>                <span class="comment">// which we split into coarse and fine x values</span></div>
-<div class="line"><span class="lineno">  241</span>                <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#ad38262400503707dc60852b2b87a56e2">fine_x</a> = data &amp; 0x07;</div>
-<div class="line"><span class="lineno">  242</span>                <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#af3bf476bfc051ee5ed2dee4410f74840">tram_addr</a>.<a class="code hl_variable" href="../../d4/d46/unionppu2c02_1_1loopy__register.html#ae7b526ced9250f815f73dc55b85b7383">coarse_x</a> = data &gt;&gt; 3;</div>
-<div class="line"><span class="lineno">  243</span>                <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#acd73292bd425b91745c7ca2a697207cc">address_latch</a> = 1;</div>
-<div class="line"><span class="lineno">  244</span>            }</div>
-<div class="line"><span class="lineno">  245</span>            <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  246</span>            {</div>
-<div class="line"><span class="lineno">  247</span>                <span class="comment">// First write to scroll register contains Y offset in pixel space</span></div>
-<div class="line"><span class="lineno">  248</span>                <span class="comment">// which we split into coarse and fine Y values</span></div>
-<div class="line"><span class="lineno">  249</span>                <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#af3bf476bfc051ee5ed2dee4410f74840">tram_addr</a>.<a class="code hl_variable" href="../../d4/d46/unionppu2c02_1_1loopy__register.html#afbc8b729f2e6112b712bd0a39239103d">fine_y</a> = data &amp; 0x07;</div>
-<div class="line"><span class="lineno">  250</span>                <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#af3bf476bfc051ee5ed2dee4410f74840">tram_addr</a>.<a class="code hl_variable" href="../../d4/d46/unionppu2c02_1_1loopy__register.html#ad707402019230d6d26b55e97258bbe4d">coarse_y</a> = data &gt;&gt; 3;</div>
-<div class="line"><span class="lineno">  251</span>                <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#acd73292bd425b91745c7ca2a697207cc">address_latch</a> = 0;</div>
-<div class="line"><span class="lineno">  252</span>            }</div>
-<div class="line"><span class="lineno">  253</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  254</span>        <span class="keywordflow">case</span> 0x0006: <span class="comment">// PPU Address</span></div>
-<div class="line"><span class="lineno">  255</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#acd73292bd425b91745c7ca2a697207cc">address_latch</a> == 0)</div>
+<div class="fragment"><div class="line"><span class="lineno">  225</span>    {</div>
+<div class="line"><span class="lineno">  226</span>            LAUGHTALE_ENGINR_LOG_INFO(<span class="stringliteral">&quot;ppu write:&quot;</span> &lt;&lt; <a class="code hl_function" href="../../d2/deb/classppu2c02.html#a8f94beab3256c68ae933a0ddc74a7c0c">datatoHexString</a>(addr, 4) &lt;&lt; <span class="stringliteral">&quot;, &quot;</span> &lt;&lt; <a class="code hl_function" href="../../d2/deb/classppu2c02.html#a8f94beab3256c68ae933a0ddc74a7c0c">datatoHexString</a>(data, 2));</div>
+<div class="line"><span class="lineno">  227</span> </div>
+<div class="line"><span class="lineno">  228</span>        addr = addr &amp; 0x0007;</div>
+<div class="line"><span class="lineno">  229</span>        <span class="comment">// LAUGHTALE_ENGINR_LOG_INFO((int)addr &lt;&lt; &quot;, &quot; &lt;&lt; (int)data)</span></div>
+<div class="line"><span class="lineno">  230</span>        <span class="keywordflow">switch</span> (addr)</div>
+<div class="line"><span class="lineno">  231</span>        {</div>
+<div class="line"><span class="lineno">  232</span>        <span class="keywordflow">case</span> 0x0000: <span class="comment">// Control</span></div>
+<div class="line"><span class="lineno">  233</span>            <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#ac99d81b31fec1a67303a8c5547093647">control</a>.<a class="code hl_variable" href="../../df/d5b/unionppu2c02_1_1_p_p_u_c_t_r_l.html#a9fcb09c17a19e3d7aff8f14314b44997">reg</a> = data;</div>
+<div class="line"><span class="lineno">  234</span>            <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#af3bf476bfc051ee5ed2dee4410f74840">tram_addr</a>.<a class="code hl_variable" href="../../d4/d46/unionppu2c02_1_1loopy__register.html#a85d5703f11e821385c2d2728069d1ef4">nametable_x</a> = <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#ac99d81b31fec1a67303a8c5547093647">control</a>.<a class="code hl_variable" href="../../df/d5b/unionppu2c02_1_1_p_p_u_c_t_r_l.html#ac6d27b0ef6533141566a1463dcefd7b9">nametable_x</a>;</div>
+<div class="line"><span class="lineno">  235</span>            <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#af3bf476bfc051ee5ed2dee4410f74840">tram_addr</a>.<a class="code hl_variable" href="../../d4/d46/unionppu2c02_1_1loopy__register.html#adfe6c672efdf8fadedeeae28f8584273">nametable_y</a> = <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#ac99d81b31fec1a67303a8c5547093647">control</a>.<a class="code hl_variable" href="../../df/d5b/unionppu2c02_1_1_p_p_u_c_t_r_l.html#a00ac20e0abfc7f6d5285d2cebdbc2fad">nametable_y</a>;</div>
+<div class="line"><span class="lineno">  236</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  237</span>        <span class="keywordflow">case</span> 0x0001: <span class="comment">// Mask</span></div>
+<div class="line"><span class="lineno">  238</span>            <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#ae9acdeb35a57b3f30f50ba6f463a1195">mask</a>.reg = data;</div>
+<div class="line"><span class="lineno">  239</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  240</span>        <span class="keywordflow">case</span> 0x0002: <span class="comment">// Status</span></div>
+<div class="line"><span class="lineno">  241</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  242</span>        <span class="keywordflow">case</span> 0x0003: <span class="comment">// OAM Address</span></div>
+<div class="line"><span class="lineno">  243</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  244</span>        <span class="keywordflow">case</span> 0x0004: <span class="comment">// OAM Data</span></div>
+<div class="line"><span class="lineno">  245</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  246</span>        <span class="keywordflow">case</span> 0x0005: <span class="comment">// Scroll</span></div>
+<div class="line"><span class="lineno">  247</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#acd73292bd425b91745c7ca2a697207cc">address_latch</a> == 0)</div>
+<div class="line"><span class="lineno">  248</span>            {</div>
+<div class="line"><span class="lineno">  249</span>                <span class="comment">// First write to scroll register contains X offset in pixel space</span></div>
+<div class="line"><span class="lineno">  250</span>                <span class="comment">// which we split into coarse and fine x values</span></div>
+<div class="line"><span class="lineno">  251</span>                <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#ad38262400503707dc60852b2b87a56e2">fine_x</a> = data &amp; 0x07;</div>
+<div class="line"><span class="lineno">  252</span>                <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#af3bf476bfc051ee5ed2dee4410f74840">tram_addr</a>.<a class="code hl_variable" href="../../d4/d46/unionppu2c02_1_1loopy__register.html#ae7b526ced9250f815f73dc55b85b7383">coarse_x</a> = data &gt;&gt; 3;</div>
+<div class="line"><span class="lineno">  253</span>                <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#acd73292bd425b91745c7ca2a697207cc">address_latch</a> = 1;</div>
+<div class="line"><span class="lineno">  254</span>            }</div>
+<div class="line"><span class="lineno">  255</span>            <span class="keywordflow">else</span></div>
 <div class="line"><span class="lineno">  256</span>            {</div>
-<div class="line"><span class="lineno">  257</span>                <span class="comment">// PPU address bus can be accessed by CPU via the ADDR and DATA</span></div>
-<div class="line"><span class="lineno">  258</span>                <span class="comment">// registers. The fisrt write to this register latches the high byte</span></div>
-<div class="line"><span class="lineno">  259</span>                <span class="comment">// of the address, the second is the low byte. Note the writes</span></div>
-<div class="line"><span class="lineno">  260</span>                <span class="comment">// are stored in the tram register...</span></div>
-<div class="line"><span class="lineno">  261</span>                <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#af3bf476bfc051ee5ed2dee4410f74840">tram_addr</a>.<a class="code hl_variable" href="../../d4/d46/unionppu2c02_1_1loopy__register.html#a536b9ec70d2a37e219d3615576257725">reg</a> = (uint16_t)((data &amp; 0x3F) &lt;&lt; 8) | (<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#af3bf476bfc051ee5ed2dee4410f74840">tram_addr</a>.<a class="code hl_variable" href="../../d4/d46/unionppu2c02_1_1loopy__register.html#a536b9ec70d2a37e219d3615576257725">reg</a> &amp; 0x00FF);</div>
-<div class="line"><span class="lineno">  262</span>                <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#acd73292bd425b91745c7ca2a697207cc">address_latch</a> = 1;</div>
-<div class="line"><span class="lineno">  263</span>            }</div>
-<div class="line"><span class="lineno">  264</span>            <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  265</span>            {</div>
-<div class="line"><span class="lineno">  266</span>                <span class="comment">// ...when a whole address has been written, the internal vram address</span></div>
-<div class="line"><span class="lineno">  267</span>                <span class="comment">// buffer is updated. Writing to the PPU is unwise during rendering</span></div>
-<div class="line"><span class="lineno">  268</span>                <span class="comment">// as the PPU will maintam the vram address automatically whilst</span></div>
-<div class="line"><span class="lineno">  269</span>                <span class="comment">// rendering the scanline position.</span></div>
-<div class="line"><span class="lineno">  270</span>                <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#af3bf476bfc051ee5ed2dee4410f74840">tram_addr</a>.<a class="code hl_variable" href="../../d4/d46/unionppu2c02_1_1loopy__register.html#a536b9ec70d2a37e219d3615576257725">reg</a> = (<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#af3bf476bfc051ee5ed2dee4410f74840">tram_addr</a>.<a class="code hl_variable" href="../../d4/d46/unionppu2c02_1_1loopy__register.html#a536b9ec70d2a37e219d3615576257725">reg</a> &amp; 0xFF00) | data;</div>
-<div class="line"><span class="lineno">  271</span>                <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a977ed4c9f9596404ca0412db55588cf0">vram_addr</a> = <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#af3bf476bfc051ee5ed2dee4410f74840">tram_addr</a>;</div>
-<div class="line"><span class="lineno">  272</span>                <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#acd73292bd425b91745c7ca2a697207cc">address_latch</a> = 0;</div>
+<div class="line"><span class="lineno">  257</span>                <span class="comment">// First write to scroll register contains Y offset in pixel space</span></div>
+<div class="line"><span class="lineno">  258</span>                <span class="comment">// which we split into coarse and fine Y values</span></div>
+<div class="line"><span class="lineno">  259</span>                <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#af3bf476bfc051ee5ed2dee4410f74840">tram_addr</a>.<a class="code hl_variable" href="../../d4/d46/unionppu2c02_1_1loopy__register.html#afbc8b729f2e6112b712bd0a39239103d">fine_y</a> = data &amp; 0x07;</div>
+<div class="line"><span class="lineno">  260</span>                <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#af3bf476bfc051ee5ed2dee4410f74840">tram_addr</a>.<a class="code hl_variable" href="../../d4/d46/unionppu2c02_1_1loopy__register.html#ad707402019230d6d26b55e97258bbe4d">coarse_y</a> = data &gt;&gt; 3;</div>
+<div class="line"><span class="lineno">  261</span>                <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#acd73292bd425b91745c7ca2a697207cc">address_latch</a> = 0;</div>
+<div class="line"><span class="lineno">  262</span>            }</div>
+<div class="line"><span class="lineno">  263</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  264</span>        <span class="keywordflow">case</span> 0x0006: <span class="comment">// PPU Address</span></div>
+<div class="line"><span class="lineno">  265</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#acd73292bd425b91745c7ca2a697207cc">address_latch</a> == 0)</div>
+<div class="line"><span class="lineno">  266</span>            {</div>
+<div class="line"><span class="lineno">  267</span>                <span class="comment">// PPU address bus can be accessed by CPU via the ADDR and DATA</span></div>
+<div class="line"><span class="lineno">  268</span>                <span class="comment">// registers. The fisrt write to this register latches the high byte</span></div>
+<div class="line"><span class="lineno">  269</span>                <span class="comment">// of the address, the second is the low byte. Note the writes</span></div>
+<div class="line"><span class="lineno">  270</span>                <span class="comment">// are stored in the tram register...</span></div>
+<div class="line"><span class="lineno">  271</span>                <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#af3bf476bfc051ee5ed2dee4410f74840">tram_addr</a>.<a class="code hl_variable" href="../../d4/d46/unionppu2c02_1_1loopy__register.html#a536b9ec70d2a37e219d3615576257725">reg</a> = (uint16_t)((data &amp; 0x3F) &lt;&lt; 8) | (<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#af3bf476bfc051ee5ed2dee4410f74840">tram_addr</a>.<a class="code hl_variable" href="../../d4/d46/unionppu2c02_1_1loopy__register.html#a536b9ec70d2a37e219d3615576257725">reg</a> &amp; 0x00FF);</div>
+<div class="line"><span class="lineno">  272</span>                <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#acd73292bd425b91745c7ca2a697207cc">address_latch</a> = 1;</div>
 <div class="line"><span class="lineno">  273</span>            }</div>
-<div class="line"><span class="lineno">  274</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  275</span>        <span class="keywordflow">case</span> 0x0007: <span class="comment">// PPU Data</span></div>
-<div class="line"><span class="lineno">  276</span>            <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#aa167427b0acc186c0922b7a9494e3734">ppuBus</a>.<a class="code hl_function" href="../../d0/d88/classbus.html#ad0926a660fd5c6e08f88943629c095af">write</a>(<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a977ed4c9f9596404ca0412db55588cf0">vram_addr</a>.<a class="code hl_variable" href="../../d4/d46/unionppu2c02_1_1loopy__register.html#a536b9ec70d2a37e219d3615576257725">reg</a>, data);</div>
-<div class="line"><span class="lineno">  277</span>            <span class="comment">// All writes from PPU data automatically increment the nametable</span></div>
-<div class="line"><span class="lineno">  278</span>            <span class="comment">// address depending upon the mode set in the control register.</span></div>
-<div class="line"><span class="lineno">  279</span>            <span class="comment">// If set to vertical mode, the increment is 32, so it skips</span></div>
-<div class="line"><span class="lineno">  280</span>            <span class="comment">// one whole nametable row; in horizontal mode it just increments</span></div>
-<div class="line"><span class="lineno">  281</span>            <span class="comment">// by 1, moving to the next column</span></div>
-<div class="line"><span class="lineno">  282</span>            <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a977ed4c9f9596404ca0412db55588cf0">vram_addr</a>.<a class="code hl_variable" href="../../d4/d46/unionppu2c02_1_1loopy__register.html#a536b9ec70d2a37e219d3615576257725">reg</a> += (<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#ac99d81b31fec1a67303a8c5547093647">control</a>.<a class="code hl_variable" href="../../df/d5b/unionppu2c02_1_1_p_p_u_c_t_r_l.html#a5d93e856cefd8f43895902e7e5bcb127">increment_mode</a> ? 32 : 1);</div>
-<div class="line"><span class="lineno">  283</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  284</span>        }</div>
-<div class="line"><span class="lineno">  285</span>    }</div>
+<div class="line"><span class="lineno">  274</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  275</span>            {</div>
+<div class="line"><span class="lineno">  276</span>                <span class="comment">// ...when a whole address has been written, the internal vram address</span></div>
+<div class="line"><span class="lineno">  277</span>                <span class="comment">// buffer is updated. Writing to the PPU is unwise during rendering</span></div>
+<div class="line"><span class="lineno">  278</span>                <span class="comment">// as the PPU will maintam the vram address automatically whilst</span></div>
+<div class="line"><span class="lineno">  279</span>                <span class="comment">// rendering the scanline position.</span></div>
+<div class="line"><span class="lineno">  280</span>                <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#af3bf476bfc051ee5ed2dee4410f74840">tram_addr</a>.<a class="code hl_variable" href="../../d4/d46/unionppu2c02_1_1loopy__register.html#a536b9ec70d2a37e219d3615576257725">reg</a> = (<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#af3bf476bfc051ee5ed2dee4410f74840">tram_addr</a>.<a class="code hl_variable" href="../../d4/d46/unionppu2c02_1_1loopy__register.html#a536b9ec70d2a37e219d3615576257725">reg</a> &amp; 0xFF00) | data;</div>
+<div class="line"><span class="lineno">  281</span>                <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a977ed4c9f9596404ca0412db55588cf0">vram_addr</a> = <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#af3bf476bfc051ee5ed2dee4410f74840">tram_addr</a>;</div>
+<div class="line"><span class="lineno">  282</span>                <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#acd73292bd425b91745c7ca2a697207cc">address_latch</a> = 0;</div>
+<div class="line"><span class="lineno">  283</span>            }</div>
+<div class="line"><span class="lineno">  284</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  285</span>        <span class="keywordflow">case</span> 0x0007: <span class="comment">// PPU Data</span></div>
+<div class="line"><span class="lineno">  286</span>            <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#aa167427b0acc186c0922b7a9494e3734">ppuBus</a>.<a class="code hl_function" href="../../d0/d88/classbus.html#ad0926a660fd5c6e08f88943629c095af">write</a>(<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a977ed4c9f9596404ca0412db55588cf0">vram_addr</a>.<a class="code hl_variable" href="../../d4/d46/unionppu2c02_1_1loopy__register.html#a536b9ec70d2a37e219d3615576257725">reg</a>, data);</div>
+<div class="line"><span class="lineno">  287</span>            <span class="comment">// All writes from PPU data automatically increment the nametable</span></div>
+<div class="line"><span class="lineno">  288</span>            <span class="comment">// address depending upon the mode set in the control register.</span></div>
+<div class="line"><span class="lineno">  289</span>            <span class="comment">// If set to vertical mode, the increment is 32, so it skips</span></div>
+<div class="line"><span class="lineno">  290</span>            <span class="comment">// one whole nametable row; in horizontal mode it just increments</span></div>
+<div class="line"><span class="lineno">  291</span>            <span class="comment">// by 1, moving to the next column</span></div>
+<div class="line"><span class="lineno">  292</span>            <a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a977ed4c9f9596404ca0412db55588cf0">vram_addr</a>.<a class="code hl_variable" href="../../d4/d46/unionppu2c02_1_1loopy__register.html#a536b9ec70d2a37e219d3615576257725">reg</a> += (<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#ac99d81b31fec1a67303a8c5547093647">control</a>.<a class="code hl_variable" href="../../df/d5b/unionppu2c02_1_1_p_p_u_c_t_r_l.html#a5d93e856cefd8f43895902e7e5bcb127">increment_mode</a> ? 32 : 1);</div>
+<div class="line"><span class="lineno">  293</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  294</span>        }</div>
+<div class="line"><span class="lineno">  295</span>    }</div>
 <div class="ttc" id="aclassbus_html_ad0926a660fd5c6e08f88943629c095af"><div class="ttname"><a href="../../d0/d88/classbus.html#ad0926a660fd5c6e08f88943629c095af">bus::write</a></div><div class="ttdeci">void write(addrSize addr, dataSize data)</div><div class="ttdef"><b>Definition:</b> bus.h:41</div></div>
+<div class="ttc" id="aclassppu2c02_html_a8f94beab3256c68ae933a0ddc74a7c0c"><div class="ttname"><a href="../../d2/deb/classppu2c02.html#a8f94beab3256c68ae933a0ddc74a7c0c">ppu2c02::datatoHexString</a></div><div class="ttdeci">std::string datatoHexString(uint32_t n, uint8_t d)</div><div class="ttdef"><b>Definition:</b> 2c02.h:108</div></div>
 <div class="ttc" id="aunionppu2c02_1_1_p_p_u_c_t_r_l_html_a00ac20e0abfc7f6d5285d2cebdbc2fad"><div class="ttname"><a href="../../df/d5b/unionppu2c02_1_1_p_p_u_c_t_r_l.html#a00ac20e0abfc7f6d5285d2cebdbc2fad">ppu2c02::PPUCTRL::nametable_y</a></div><div class="ttdeci">uint8_t nametable_y</div><div class="ttdef"><b>Definition:</b> 2c02.h:54</div></div>
 <div class="ttc" id="aunionppu2c02_1_1_p_p_u_c_t_r_l_html_ac6d27b0ef6533141566a1463dcefd7b9"><div class="ttname"><a href="../../df/d5b/unionppu2c02_1_1_p_p_u_c_t_r_l.html#ac6d27b0ef6533141566a1463dcefd7b9">ppu2c02::PPUCTRL::nametable_x</a></div><div class="ttdeci">uint8_t nametable_x</div><div class="ttdef"><b>Definition:</b> 2c02.h:53</div></div>
 <div class="ttc" id="aunionppu2c02_1_1loopy__register_html_a85d5703f11e821385c2d2728069d1ef4"><div class="ttname"><a href="../../d4/d46/unionppu2c02_1_1loopy__register.html#a85d5703f11e821385c2d2728069d1ef4">ppu2c02::loopy_register::nametable_x</a></div><div class="ttdeci">uint16_t nametable_x</div><div class="ttdef"><b>Definition:</b> 2c02.h:74</div></div>
@@ -673,8 +729,9 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d2/deb/classppu2c02_a5e4f6f226d3d52a674c121dc539c8c53_cgraph.png" border="0" usemap="#ad2/deb/classppu2c02_a5e4f6f226d3d52a674c121dc539c8c53_cgraph" alt=""/></div>
 <map name="ad2/deb/classppu2c02_a5e4f6f226d3d52a674c121dc539c8c53_cgraph" id="ad2/deb/classppu2c02_a5e4f6f226d3d52a674c121dc539c8c53_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,111,32"/>
-<area shape="rect" href="../../d0/d88/classbus.html#ad0926a660fd5c6e08f88943629c095af" title=" " alt="" coords="159,5,236,32"/>
+<area shape="rect" title=" " alt="" coords="5,31,111,57"/>
+<area shape="rect" href="../../d2/deb/classppu2c02.html#a8f94beab3256c68ae933a0ddc74a7c0c" title=" " alt="" coords="159,5,329,32"/>
+<area shape="rect" href="../../d0/d88/classbus.html#ad0926a660fd5c6e08f88943629c095af" title=" " alt="" coords="205,56,283,83"/>
 </map>
 </div>
 

@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['b_0',['B',['../d9/dbe/classcpu6502.html#a8e263976bfd55d8bed62b46d46673310',1,'cpu6502']]],
-  ['b_1',['b',['../d6/df9/classcontroller.html#a1d7b1d59f71508ed13a591a6a7676451',1,'controller']]],
+  ['b_0',['b',['../d6/df9/classcontroller.html#a1d7b1d59f71508ed13a591a6a7676451',1,'controller']]],
+  ['b_1',['B',['../d9/dbe/classcpu6502.html#a8e263976bfd55d8bed62b46d46673310',1,'cpu6502']]],
   ['bg_5fnext_5ftile_5fattrib_2',['bg_next_tile_attrib',['../d2/deb/classppu2c02.html#acd25a2c45ef335af19c0ea747a4e0324',1,'ppu2c02']]],
   ['bg_5fnext_5ftile_5fid_3',['bg_next_tile_id',['../d2/deb/classppu2c02.html#a2089b6ffbaa08f854fc99625c0c22de3',1,'ppu2c02']]],
   ['bg_5fnext_5ftile_5flsb_4',['bg_next_tile_lsb',['../d2/deb/classppu2c02.html#a2946f1313cdccc0d134195e8b3bd906a',1,'ppu2c02']]],

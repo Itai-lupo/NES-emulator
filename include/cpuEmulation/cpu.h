@@ -56,18 +56,26 @@ class cpu
             bus<dataSize, addrSize> *busData = eventEntity->getComponent<bus<dataSize, addrSize>>();
             cpu6502 *cpuData = eventEntity->getComponent<cpu6502>();
 
-            uint8_t opcode = 0;
+            static uint8_t opcode = 0;
 
             if((int)cycles == 0)
             {
+                // LAUGHTALE_ENGINR_LOG_INFO(hex(cpuData->pc, 4) << ", " << hex(opcode, 2));
+
+                // if(opcode == 0)
+                    // LAUGHTALE_ENGINR_LOG_INFO(hex(opcode, 2));
                 opcode = busData->read(cpuData->pc);
                 cpuData->pc++;
+                cpuData->status.U = 1;
+
                 cycles = cpuData->lookup[opcode].cycles;
 
                 int additional_cycle1 = (cpuData->*(cpuData->lookup[opcode].addrmode))();
                 int additional_cycle2 = (cpuData->*(cpuData->lookup[opcode].operate))();
 
                 cycles += (additional_cycle1 & additional_cycle2);
+                cpuData->status.U = 1;
+
             }
             cpuData->clock++;
             cycles--;

@@ -105,6 +105,14 @@ public:
     palettesMemory *pm;
     ppuBusCartridge *cartridge;
 
+    std::string datatoHexString(uint32_t n, uint8_t d)
+    {
+        std::string s(d, '0');
+        for (int i = d - 1; i >= 0; i--, n >>= 4)
+            s[i] = "0123456789ABCDEF"[n & 0xF];
+        return s;
+    }
+
 public:
     ppu2c02(ppuBusCartridge *cartridge)
     {
@@ -215,7 +223,9 @@ public:
 
     virtual void write(uint16_t addr, uint8_t data) override
     {
-        addr &= 0x0007;
+            LAUGHTALE_ENGINR_LOG_INFO("ppu write:" << datatoHexString(addr, 4) << ", " << datatoHexString(data, 2));
+
+        addr = addr & 0x0007;
         // LAUGHTALE_ENGINR_LOG_INFO((int)addr << ", " << (int)data)
         switch (addr)
         {

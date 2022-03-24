@@ -4,6 +4,7 @@ var classppu2c02 =
     [ "PPUCTRL", "df/d5b/unionppu2c02_1_1_p_p_u_c_t_r_l.html", "df/d5b/unionppu2c02_1_1_p_p_u_c_t_r_l" ],
     [ "ppu2c02", "d2/deb/classppu2c02.html#a5dc18f6fc3e11cc25c5f6938eb85620a", null ],
     [ "~ppu2c02", "d2/deb/classppu2c02.html#aa968000f5565b657285fc1d6ed3303ec", null ],
+    [ "datatoHexString", "d2/deb/classppu2c02.html#a8f94beab3256c68ae933a0ddc74a7c0c", null ],
     [ "end", "d2/deb/classppu2c02.html#a00a1c655d9871d361416bc8627a2829a", null ],
     [ "init", "d2/deb/classppu2c02.html#abf1363afdbbfda98289d31d9fffc12ce", null ],
     [ "isInRange", "d2/deb/classppu2c02.html#ad0c522be638f6b20671e0d0ca89e1425", null ],
