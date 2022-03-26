@@ -292,9 +292,10 @@ private:
             int x = 0, y = 0;
             for (uint64_t j = 0x2000 + 0x03FF * i; j < 0x2000 + 0x03FF * (i + 1) - 0x3F; j++)
             {
+                uint16_t tileId = p->ppuBus.read(j);
                 for(int k = 0; k < 8; k++)
                 {
-                    uint16_t tileId = p->ppuBus.read(j);
+                    // LAUGHTALE_ENGINR_CONDTION_LOG_INFO(toHexString(j, 4), tileId != 0 && tileId != 32);
                     uint8_t LSB = p->ppuBus.read((tileId << 4) + 0 + k);
                     uint8_t MSB = p->ppuBus.read((tileId << 4) + 8 + k);
                     

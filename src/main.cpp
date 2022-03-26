@@ -156,9 +156,8 @@ void loadCartageAndResetCpu(LTE::gameObject *eventEntity, LTE::coreEventData *se
     gamesMenu::loadGameEvent *gameInfo = static_cast<gamesMenu::loadGameEvent*>(sendor);
     LAUGHTALE_ENGINR_LOG_INFO(gameInfo->gamePath)
     cart->load(gameInfo->gamePath);
+    // eventEntity->getComponent<ppu2c02>()->reset();
     LTE::eventManger::trigerEvent(new LTE::coreEventData("cpu cmd/cpu reset/"));
-    for (size_t i = 0; i < 8; i++)
-        LTE::eventManger::trigerEvent(new LTE::coreEventData("cpu cmd/cpu clock/"));
 
 }
 
@@ -190,13 +189,14 @@ int main()
 
 
     LTE::eventManger::startBuildingEvent()->
+        setEntityID(id)->
         setEventRoute("load game/load cartage")->
         setEventCallback(loadCartageAndResetCpu)->add();
 
  
-        LTE::eventManger::startBuildingEvent()->
-            setEventRoute("Window close/close app")->
-            setEventCallback(WindowClose)->add();
+    LTE::eventManger::startBuildingEvent()->
+        setEventRoute("Window close/close app")->
+        setEventCallback(WindowClose)->add();
 
     LTE::app::run();
     cpu<uint8_t, uint16_t>::close();

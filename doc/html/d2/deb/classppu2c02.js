@@ -9,6 +9,7 @@ var classppu2c02 =
     [ "init", "d2/deb/classppu2c02.html#abf1363afdbbfda98289d31d9fffc12ce", null ],
     [ "isInRange", "d2/deb/classppu2c02.html#ad0c522be638f6b20671e0d0ca89e1425", null ],
     [ "read", "d2/deb/classppu2c02.html#ad95e050b3759cedc344385d4cf8a4a4a", null ],
+    [ "reset", "d2/deb/classppu2c02.html#a1b3aa18997f18dd6c4c1db3aad84a65c", null ],
     [ "write", "d2/deb/classppu2c02.html#a5e4f6f226d3d52a674c121dc539c8c53", null ],
     [ "address_latch", "d2/deb/classppu2c02.html#acd73292bd425b91745c7ca2a697207cc", null ],
     [ "bg_next_tile_attrib", "d2/deb/classppu2c02.html#acd25a2c45ef335af19c0ea747a4e0324", null ],

@@ -1,7 +1,18 @@
 <map id="sysClock" name="sysClock">
-<area shape="rect" id="node1" title=" " alt="" coords="5,31,80,57"/>
-<area shape="rect" id="node2" href="$de/d33/classcpu.html#abc8a3d560e97137856c86004d5d5e91b" title=" " alt="" coords="319,5,399,32"/>
-<area shape="rect" id="node4" href="$d6/d3f/classppu.html#a8f8beeeceb29673161032303d02e8cad" title=" " alt="" coords="128,56,208,83"/>
-<area shape="rect" id="node3" href="$d0/d88/classbus.html#abb29248facedf75907fba0ebf44022b0" title=" " alt="" coords="509,31,584,57"/>
-<area shape="rect" id="node5" href="$d6/d3f/classppu.html#ab7902989f58e71e7b1a934558ee6bcf1" title=" " alt="" coords="256,56,461,83"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,150,80,176"/>
+<area shape="rect" id="node2" href="$de/d33/classcpu.html#abc8a3d560e97137856c86004d5d5e91b" title=" " alt="" coords="128,62,208,88"/>
+<area shape="rect" id="node4" href="$d6/d3f/classppu.html#a8f8beeeceb29673161032303d02e8cad" title=" " alt="" coords="128,175,208,202"/>
+<area shape="rect" id="node3" href="$d0/d88/classbus.html#abb29248facedf75907fba0ebf44022b0" title=" " alt="" coords="744,251,819,278"/>
+<area shape="rect" id="node5" href="$d6/d3f/classppu.html#ab7902989f58e71e7b1a934558ee6bcf1" title=" " alt="" coords="256,99,461,126"/>
+<area shape="rect" id="node6" href="$d6/d3f/classppu.html#af1857f201e89b8c907c0ab852474ef0a" title=" " alt="" coords="285,150,433,176"/>
+<area shape="rect" id="node7" href="$d6/d3f/classppu.html#abb466cdb15e449cbd54a1ec4fd2ef3d2" title=" " alt="" coords="509,150,696,176"/>
+<area shape="rect" id="node8" href="$d6/d3f/classppu.html#af4eed16ede0e68d6b23dcc4f10a74d9f" title=" " alt="" coords="283,251,434,278"/>
+<area shape="rect" id="node9" href="$d6/d3f/classppu.html#afdebae0b46bc384493f51146539caeff" title=" " alt="" coords="283,302,434,328"/>
+<area shape="rect" id="node10" href="$d6/d3f/classppu.html#a011d8cf9ad06b321ecf61ab48ed7825e" title=" " alt="" coords="279,352,438,379"/>
+<area shape="rect" id="node11" href="$d6/d3f/classppu.html#a9abb944f427a7a69eebf09dd31cc13a2" title=" " alt="" coords="529,200,677,227"/>
+<area shape="rect" id="node12" href="$d6/d3f/classppu.html#ac79c38af3d65d535acc5b681209f7c33" title=" " alt="" coords="515,251,691,278"/>
+<area shape="rect" id="node13" href="$d6/d3f/classppu.html#a24470d8d18ee8660dee020ddfdc6e089" title=" " alt="" coords="521,302,684,328"/>
+<area shape="rect" id="node14" href="$d6/d3f/classppu.html#abc1b9a5dd5bce43692e2db61b31bcd6c" title=" " alt="" coords="518,352,687,379"/>
+<area shape="rect" id="node15" href="$d6/d3f/classppu.html#a7fe1b4219f11e5f08807326089f53324" title=" " alt="" coords="519,403,686,430"/>
+<area shape="rect" id="node16" href="$d6/d3f/classppu.html#a5dfb585633a0fb9ac873189fc72fde2f" title=" " alt="" coords="536,454,669,480"/>
 </map>

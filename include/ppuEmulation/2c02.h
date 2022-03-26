@@ -125,7 +125,11 @@ public:
         nt->cart = cartridge;
 
         ppuBus.pushDevice(cartridge)->pushDevice(nt)->pushDevice(pm);
+        reset();
+    }
 
+    void reset()
+    {
 
         fine_x = 0x00;
         address_latch = 0x00;
@@ -145,6 +149,7 @@ public:
         control.reg = 0x00;
         vram_addr.reg = 0x0000;
         tram_addr.reg = 0x0000;
+
     }
 
     ~ppu2c02()
