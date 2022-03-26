@@ -404,7 +404,7 @@ Here is the caller graph for this function:</div>
 <div class="fragment"><div class="line"><span class="lineno">   71</span>        {</div>
 <div class="line"><span class="lineno">   72</span>            uint8_t data = (controller_state[addr &amp; 0x0001] &amp; 0x80) &gt; 0;</div>
 <div class="line"><span class="lineno">   73</span>            controller_state[addr &amp; 0x0001] &lt;&lt;= 1;</div>
-<div class="line"><span class="lineno">   74</span>            LAUGHTALE_ENGINR_LOG_INFO((<span class="keywordtype">int</span>)data);</div>
+<div class="line"><span class="lineno">   74</span>            <span class="comment">// LAUGHTALE_ENGINR_LOG_INFO((int)data);</span></div>
 <div class="line"><span class="lineno">   75</span> </div>
 <div class="line"><span class="lineno">   76</span>            <span class="keywordflow">return</span> data;</div>
 <div class="line"><span class="lineno">   77</span>        }</div>
@@ -448,7 +448,7 @@ Here is the caller graph for this function:</div>
 <p>Implements <a class="el" href="../../dc/d77/classbus_device.html#a72c738905ce28059b913090afd049061">busDevice&lt; uint8_t, uint16_t &gt;</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   80</span>        {</div>
 <div class="line"><span class="lineno">   81</span>            controller_state[addr &amp; 0x0001] = controllerData.reg[addr &amp; 0x0001];</div>
-<div class="line"><span class="lineno">   82</span>            LAUGHTALE_ENGINR_LOG_INFO((<span class="keywordtype">int</span>)controller_state[addr &amp; 0x0001] );</div>
+<div class="line"><span class="lineno">   82</span>            <span class="comment">// LAUGHTALE_ENGINR_LOG_INFO((int)controller_state[addr &amp; 0x0001] );</span></div>
 <div class="line"><span class="lineno">   83</span> </div>
 <div class="line"><span class="lineno">   84</span>        }</div>
 </div><!-- fragment -->

@@ -133,7 +133,6 @@ class cpu
 
         static void nmi(LTE::gameObject *eventEntity, LTE::coreEventData *sendor)
         {
-            LAUGHTALE_ENGINR_LOG_INFO("nmi")
             bus<dataSize, addrSize> *busData = LTE::entityManger::getEntityById(SystemData)->getComponent<bus<dataSize, addrSize>>();
             cpu6502 *cpuData = LTE::entityManger::getEntityById(SystemData)->getComponent<cpu6502>();
 

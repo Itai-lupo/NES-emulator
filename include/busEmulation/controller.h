@@ -71,7 +71,7 @@ class controller: public busDevice<uint8_t, uint16_t>, public LTE::component
         {
             uint8_t data = (controller_state[addr & 0x0001] & 0x80) > 0;
             controller_state[addr & 0x0001] <<= 1;
-            LAUGHTALE_ENGINR_LOG_INFO((int)data);
+            // LAUGHTALE_ENGINR_LOG_INFO((int)data);
 
             return data;
         }
@@ -79,7 +79,7 @@ class controller: public busDevice<uint8_t, uint16_t>, public LTE::component
         virtual void write(uint16_t addr, uint8_t data) override
         {
     		controller_state[addr & 0x0001] = controllerData.reg[addr & 0x0001];
-            LAUGHTALE_ENGINR_LOG_INFO((int)controller_state[addr & 0x0001] );
+            // LAUGHTALE_ENGINR_LOG_INFO((int)controller_state[addr & 0x0001] );
 
         }
 

@@ -223,7 +223,7 @@ public:
 
     virtual void write(uint16_t addr, uint8_t data) override
     {
-            LAUGHTALE_ENGINR_LOG_INFO("ppu write:" << datatoHexString(addr, 4) << ", " << datatoHexString(data, 2));
+        // LAUGHTALE_ENGINR_LOG_INFO("ppu write:" << datatoHexString(addr, 4) << ", " << datatoHexString(data, 2));
 
         addr = addr & 0x0007;
         // LAUGHTALE_ENGINR_LOG_INFO((int)addr << ", " << (int)data)
@@ -283,6 +283,7 @@ public:
             }
             break;
         case 0x0007: // PPU Data
+            // LAUGHTALE_ENGINR_LOG_INFO("ppu addr: " << datatoHexString(vram_addr.reg, 4))
             ppuBus.write(vram_addr.reg, data);
             // All writes from PPU data automatically increment the nametable
             // address depending upon the mode set in the control register.

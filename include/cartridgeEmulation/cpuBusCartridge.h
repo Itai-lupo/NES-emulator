@@ -24,8 +24,6 @@ class cpuBusCartridge: public busDevice<uint8_t, uint16_t>
         
         virtual void write(uint16_t addr, uint8_t data) override
         {
-            LAUGHTALE_ENGINR_LOG_INFO("cpuBusCartridge write:" << datatoHexString(addr, 4) << ", " << datatoHexString(data, 2));
-
             cart->writePRGMemory(addr, data);
         }
 

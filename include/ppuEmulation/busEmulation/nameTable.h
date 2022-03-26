@@ -59,7 +59,7 @@ class nameTable: public busDevice<uint8_t, uint16_t>
         virtual void write(uint16_t addr, uint8_t data) override
         {
             addr &= 0x0FFF;
-            LAUGHTALE_ENGINR_CONDTION_LOG_INFO(data, data != 0 && data != 32)
+            // LAUGHTALE_ENGINR_CONDTION_LOG_INFO(data, data != 0 && data != 32)
             
             if (cart->getMirror() == MIRROR::VERTICAL)
             {

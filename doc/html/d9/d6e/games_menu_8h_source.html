@@ -128,7 +128,7 @@ $(document).ready(function(){initNavTree('d9/d6e/games_menu_8h_source.html','../
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            std::filesystem::recursive_directory_iterator end;</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            <span class="keywordflow">while</span> (iter != end)</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            {</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>                <span class="keywordflow">if</span> (ImGui::Button(iter-&gt;path().c_str()))</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>                <span class="keywordflow">if</span> (ImGui::Button(iter-&gt;path().stem().c_str()))</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>                {</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>                    sendorData-&gt;<a class="code hl_variable" href="../../de/d5c/structgames_menu_1_1load_game_event.html#a7701c0703aec5bdae1831be9e14d7b4d">gamePath</a> = iter-&gt;path().string();</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>                    LTE::eventManger::trigerEvent(sendorData);</div>

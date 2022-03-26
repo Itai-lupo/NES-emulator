@@ -39,7 +39,7 @@ class gamesMenu
             std::filesystem::recursive_directory_iterator end;
             while (iter != end)
             {
-                if (ImGui::Button(iter->path().c_str()))
+                if (ImGui::Button(iter->path().stem().c_str()))
                 {
                     sendorData->gamePath = iter->path().string();
                     LTE::eventManger::trigerEvent(sendorData);

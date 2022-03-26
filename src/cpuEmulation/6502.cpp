@@ -14,7 +14,6 @@ std::string hex(uint32_t n, uint8_t d)
 // memory mods -------------------------------------
 uint8_t cpu6502::IMP()
 {
-    addr = 0x0000;
     return 0;
 }
 	
@@ -28,14 +27,12 @@ uint8_t cpu6502::ZP0()
 {
     addr = systemBus->read(pc);
     pc++;
-    addr &= 0x00FF;
     
     return 0;
 }
 	
 uint8_t cpu6502::ZPX()
 {
-    
     addr = systemBus->read(pc);
     pc++;
 
@@ -61,6 +58,7 @@ uint8_t cpu6502::REL()
     int8_t temp = (int8_t)systemBus->read(pc);
     pc++;
     addr = pc + temp;
+    
     return 2;
 }
 
@@ -149,8 +147,8 @@ uint8_t cpu6502::ADC()
     uint16_t res = (uint16_t)temp + (uint16_t)a + (uint16_t)status.C;
     
     status.Z = (res & 0x00FF) == 0;
-    status.N = (res & 0x0080);
-    status.V = (  ~((uint16_t)a ^ temp) & ((uint16_t)a ^ res) & 0x0080);
+    status.N = (res & 0x0080) != 0;
+    status.V = (  ~((uint16_t)a ^ temp) & ((uint16_t)a ^ res) & 0x0080) != 0;
     status.C = res > 255;
 
     a = res & 0x00FF;
@@ -162,7 +160,7 @@ uint8_t cpu6502::AND()
     uint8_t temp = systemBus->read(addr);
     a = temp & a;
     status.Z = (a & 0x00FF) == 0;
-    status.N = (a & 0x0080);
+    status.N = (a & 0x0080) != 0;
 
     return 0;
 }
@@ -173,7 +171,7 @@ uint8_t cpu6502::ASL()
     res = res << 1;
     
     status.Z = (res & 0x00FF) == 0;
-    status.N = (res & 0x0080);
+    status.N = (res & 0x0080) != 0;
     status.C = res > 255;
     
     systemBus->write(addr, res & 0x00FF);
@@ -183,10 +181,10 @@ uint8_t cpu6502::ASL()
 
 uint8_t cpu6502::ASL_A()
 {
-    status.C = (uint16_t)a << 1 & 0xFF00;
+    status.C = ((uint16_t)a << 1) & 0xFF00;
     a = a << 1;
-    status.Z = (a & 0x00FF) == 0;
-    status.N = (a & 0x0080);
+    status.Z = (a & 0xFF) == 0;
+    status.N = (a & 0x80) != 0;
 
     return 0;
 }
@@ -212,7 +210,7 @@ uint8_t cpu6502::BCS()
 	
 uint8_t cpu6502::BEQ()
 {
-    LAUGHTALE_ENGINR_LOG_INFO("BEQ from " << hex(pc, 4) << " to " << hex(addr, 4) << " if " << (int)status.Z)
+    //LAUGHTALE_ENGINR_LOG_INFO("BEQ from " << hex(pc, 4) << " to " << hex(addr, 4) << " if " << (int)status.Z)
 
     if(status.Z != 1)
         return 0;
@@ -223,12 +221,12 @@ uint8_t cpu6502::BEQ()
 	
 uint8_t cpu6502::BIT()
 {
-    uint16_t temp = systemBus->read(addr);
-    status.Z = ((temp & a & 0x00FF) == 0);
-    status.N = (temp & (1 << 7));
-    status.V = (temp & (1 << 6));
+    uint8_t temp = systemBus->read(addr);
+    status.Z = ((a & temp) == 0);
+    status.N = ((temp & (1 << 7)) == 0) ? 0: 1;
+    status.V = ((temp & (1 << 6)) == 0) ? 0: 1;
 
-    LAUGHTALE_ENGINR_LOG_INFO("BIT " << hex(addr, 4) << ", ")
+    // LAUGHTALE_ENGINR_LOG_INFO("BIT " << hex(addr, 4) << ", " << hex(temp, 2) << ", " << hex(a, 2))
 
     return 0;
 }
@@ -244,7 +242,7 @@ uint8_t cpu6502::BMI()
 
 uint8_t cpu6502::BNE()
 {
-    LAUGHTALE_ENGINR_LOG_INFO("BEQ from " << hex(pc, 4) << " to " << hex(addr, 4) << " if " << 1 - (int)status.Z)
+    //LAUGHTALE_ENGINR_LOG_INFO("BEQ from " << hex(pc, 4) << " to " << hex(addr, 4) << " if " << 1 - (int)status.Z)
 
     if(status.Z != 0)
         return 0;
@@ -255,7 +253,7 @@ uint8_t cpu6502::BNE()
 	
 uint8_t cpu6502::BPL()
 {
-    LAUGHTALE_ENGINR_LOG_INFO("BPL from " << hex(pc, 4) << " to " << hex(addr, 4) << " if " << (bool)status.N)
+    //LAUGHTALE_ENGINR_LOG_INFO("BPL from " << hex(pc, 4) << " to " << hex(addr, 4) << " if " << (bool)status.N)
     if(status.N != 0)
         return 0;
     uint8_t temp = pc;
@@ -268,7 +266,7 @@ uint8_t cpu6502::BRK()
     pc++;
     status.I = 1;
 
-    LAUGHTALE_ENGINR_LOG_INFO("BRK(" << hex(pc - 2, 4) << ") push in to stack " << hex(pc, 4))
+    //LAUGHTALE_ENGINR_LOG_INFO("BRK(" << hex(pc - 2, 4) << ") push in to stack " << hex(pc, 4))
 
     systemBus->write(0x0100 + stkp, (pc >> 8) & 0x00FF);
     stkp--;
@@ -281,7 +279,7 @@ uint8_t cpu6502::BRK()
     status.B = 0;
 
     pc = (uint16_t)systemBus->read(0xFFFE) | ((uint16_t)systemBus->read(0xFFFF) << 8);
-    LAUGHTALE_ENGINR_LOG_INFO("BRK read from 0xFFFE and FFFF " << hex(pc, 4))
+    //LAUGHTALE_ENGINR_LOG_INFO("BRK read from 0xFFFE and FFFF " << hex(pc, 4))
     return 0;
 }
 	
@@ -331,11 +329,11 @@ uint8_t cpu6502::CLV()
 uint8_t cpu6502::CMP()
 {
     uint16_t temp = systemBus->read(addr);
-    LAUGHTALE_ENGINR_LOG_INFO("CMP " << hex(addr, 4) << ", " << hex(temp, 2) << ", " << hex(a, 2))
+    //LAUGHTALE_ENGINR_LOG_INFO("CMP " << hex(addr, 4) << ", " << hex(temp, 2) << ", " << hex(a, 2))
     status.C = a >= temp;
     temp = (uint16_t)a - temp;
     status.Z = (temp & 0x00FF) == 0;
-    status.N = (temp & 0x0080);
+    status.N = (temp & 0x0080) != 0;
 
     return 1;
 }
@@ -344,9 +342,9 @@ uint8_t cpu6502::CPX()
 {
     uint8_t temp = systemBus->read(addr);
     status.C = x >= temp;
-    temp = x - temp;
+    temp = (uint16_t)x - temp;
     status.Z = (temp & 0x00FF) == 0;
-    status.N = (temp & 0x0080);
+    status.N = (temp & 0x0080) != 0;
 
     return 0;
 }
@@ -355,9 +353,9 @@ uint8_t cpu6502::CPY()
 {
     uint8_t temp = systemBus->read(addr);
     status.C = y >= temp;
-    temp = y - temp;
+    temp = (uint16_t)y - temp;
     status.Z = (temp & 0x00FF) == 0;
-    status.N = (temp & 0x0080);
+    status.N = (temp & 0x0080) != 0;
 
     return 0;
 }
@@ -368,8 +366,8 @@ uint8_t cpu6502::DEC()
     temp--;
     systemBus->write(addr, temp);
 
-    status.Z = (temp & 0x00FF) == 0; 
-    status.N = (temp & 0x0080) == 0; 
+    status.Z = temp == 0; 
+    status.N = (temp & 0x80) != 0; 
 
     return 0;
 }
@@ -379,7 +377,7 @@ uint8_t cpu6502::DEX()
     x--;
     
     status.Z = (x & 0x00FF) == 0; 
-    status.N = (x & 0x0080) == 0; 
+    status.N = (x & 0x0080) != 0; 
 
     return 0;
 }
@@ -389,7 +387,7 @@ uint8_t cpu6502::DEY()
     y--;
     
     status.Z = (y & 0x00FF) == 0; 
-    status.N = (y & 0x0080) == 0; 
+    status.N = (y & 0x0080) != 0; 
 
     return 0;
 }
@@ -399,20 +397,20 @@ uint8_t cpu6502::EOR()
     uint8_t temp = systemBus->read(addr);
     a = temp ^ a;
     
-    status.Z = (a & 0x00FF) == 0; 
-    status.N = (a & 0x0080) == 0; 
+    status.Z = a == 0; 
+    status.N = (a & 0x0080) != 0; 
 
     return 1;
 }
 
 uint8_t cpu6502::INC()
 {
-    uint8_t temp = systemBus->read(addr);
+    uint16_t temp = systemBus->read(addr);
     temp++;
-    systemBus->write(addr, temp);
+    systemBus->write(addr, temp & 0x00FF);
 
     status.Z = (temp & 0x00FF) == 0; 
-    status.N = (temp & 0x0080) == 0; 
+    status.N = (temp & 0x0080) != 0; 
 
     return 0;
 }
@@ -422,7 +420,7 @@ uint8_t cpu6502::INX()
     x++;
     
     status.Z = (x & 0x00FF) == 0; 
-    status.N = (x & 0x0080) == 0; 
+    status.N = (x & 0x0080) != 0; 
 
     return 0;
 }
@@ -432,13 +430,14 @@ uint8_t cpu6502::INY()
     y++;
     
     status.Z = (y & 0x00FF) == 0; 
-    status.N = (y & 0x0080) == 0; 
+    status.N = (y & 0x0080) != 0; 
 
     return 0;
 }
 	
 uint8_t cpu6502::JMP()
 {
+    // LAUGHTALE_ENGINR_LOG_INFO("jump from " << pc << ", " << addr);
     pc = addr;
 
     return 0;
@@ -462,7 +461,7 @@ uint8_t cpu6502::LDA()
     a = systemBus->read(addr);
     
     status.Z = (a & 0x00FF) == 0; 
-    status.N = (a & 0x0080) == 0; 
+    status.N = (a & 0x0080) != 0; 
 
     return 1;
 }
@@ -471,8 +470,8 @@ uint8_t cpu6502::LDX()
 {
     x = systemBus->read(addr);
     
-    status.Z = (x & 0x00FF) == 0; 
-    status.N = (x & 0x0080) == 0; 
+    status.Z = x == 0; 
+    status.N = (x & 0x80) != 0; 
 
     return 1;
 }
@@ -481,8 +480,8 @@ uint8_t cpu6502::LDY()
 {
     y = systemBus->read(addr);
     
-    status.Z = (y & 0x00FF) == 0; 
-    status.N = (y & 0x0080) == 0; 
+    status.Z = y == 0; 
+    status.N = (y & 0x80) != 0; 
 
     return 1;
 }
@@ -531,7 +530,7 @@ uint8_t cpu6502::ORA()
     a = temp | a;
     
     status.Z = a == 0; 
-    status.N = a & 0x80; 
+    status.N = (a & 0x80) != 0; 
 
     return 1;
 }
@@ -546,8 +545,14 @@ uint8_t cpu6502::PHA()
 uint8_t cpu6502::PHP()
 {
     
+	status.B = 1;
+	status.U = 1;
     systemBus->write(0x0100 + stkp, statusData);
     stkp--;
+
+	status.B = 0;
+	status.U = 0;
+
     return 0;
 }
 	
@@ -555,6 +560,10 @@ uint8_t cpu6502::PLA()
 {
     stkp++;
     a = systemBus->read(0x0100 + stkp);
+    
+    status.Z = (a == 0);
+    status.N = (a & 0x80) != 0;
+    
     return 0;
 }
 	
@@ -562,17 +571,18 @@ uint8_t cpu6502::PLP()
 {
     stkp++;
     statusData = systemBus->read(0x0100 + stkp);
+    status.U = 1;
     return 0;
 }
 	
 uint8_t cpu6502::ROL()
 {
     uint16_t res = systemBus->read(addr);
-    res = res << 1 | status.C;
+    res = (res << 1) | (uint16_t)status.C;
     
-    status.C = res & 0xFF00;
+    status.C = (res & 0xFF00) != 0;
     status.Z = (res & 0x00FF) == 0;
-    status.N = (res & 0x0080);
+    status.N = (res & 0x0080) != 0;
     
     systemBus->write(addr, res & 0x00FF);
 
@@ -582,11 +592,11 @@ uint8_t cpu6502::ROL()
 uint8_t cpu6502::ROL_A()
 {
     uint16_t res = a;
-    res = res << 1 | status.C;
+    res = (res << 1) | (uint16_t)status.C;
     
-    status.C = res & 0xFF00;
+    status.C = (res & 0xFF00) != 0;
     status.Z = (res & 0x00FF) == 0;
-    status.N = (res & 0x0080);
+    status.N = (res & 0x0080) != 0;
     
     a = res & 0x00FF;
 
@@ -596,11 +606,11 @@ uint8_t cpu6502::ROL_A()
 uint8_t cpu6502::ROR()
 {
     uint16_t res = systemBus->read(addr);
-    res = (status.C << 7) | (res >> 1);
+    res = ((uint16_t)status.C << 7) | (res >> 1);
     
     status.C = res & 0x0001;
     status.Z = (res & 0x00FF) == 0;
-    status.N = (res & 0x0080);
+    status.N = (res & 0x0080) != 0;
     
     systemBus->write(addr, res & 0x00FF);
 
@@ -610,11 +620,11 @@ uint8_t cpu6502::ROR()
 uint8_t cpu6502::ROR_A()
 {
     uint16_t res = a;
-    res = (status.C << 7) | (res >> 1);
+    res = ((uint16_t)status.C << 7) | (res >> 1);
     
     status.C = res & 0x0001;
     status.Z = (res & 0x00FF) == 0;
-    status.N = (res & 0x0080);
+    status.N = (res & 0x0080) != 0;
     
     a = res & 0x00FF;
 
@@ -628,19 +638,19 @@ uint8_t cpu6502::RTI()
 	status.B = ~status.B;
 	status.U = ~status.U;
 
-    LAUGHTALE_ENGINR_LOG_INFO("RTI before pop stack " << hex(pc, 4))
+    //LAUGHTALE_ENGINR_LOG_INFO("RTI before pop stack " << hex(pc, 4))
     stkp++;
     pc = (uint16_t)systemBus->read(0x0100 + stkp);
     stkp++;
     pc |= ((uint16_t)systemBus->read(0x0100 + stkp)) << 8;
 
-    LAUGHTALE_ENGINR_LOG_INFO("RTI after pop stack " << hex(pc, 4))
+    //LAUGHTALE_ENGINR_LOG_INFO("RTI after pop stack " << hex(pc, 4))
     return 0;
 }
 	
 uint8_t cpu6502::RTS()
 {
-    LAUGHTALE_ENGINR_LOG_INFO("RTS before pop stack " << hex(pc, 4))
+    //LAUGHTALE_ENGINR_LOG_INFO("RTS before pop stack " << hex(pc, 4))
 
     stkp++;
     pc = systemBus->read(0x0100 + stkp);
@@ -648,20 +658,21 @@ uint8_t cpu6502::RTS()
     stkp++;
     pc |= systemBus->read(0x0100 + stkp) << 8;
     pc++;
-    LAUGHTALE_ENGINR_LOG_INFO("RTS after pop stack " << hex(pc, 4))
+    //LAUGHTALE_ENGINR_LOG_INFO("RTS after pop stack " << hex(pc, 4))
     
     return 0;
 }
 	
 uint8_t cpu6502::SBC()
 {
-    uint16_t temp = systemBus->read(addr) ^ 0x00FF;
-    uint16_t res = (uint16_t)a + (uint16_t)temp + (uint16_t)status.C;
+    uint16_t value = ((uint16_t)systemBus->read(addr)) ^ 0xFF;
+
+    uint16_t res = (uint16_t)a + value + (uint16_t)status.C;
     
+    status.C = (res & 0xFF00) != 0;
     status.Z = (res & 0x00FF) == 0;
-    status.N = (res & 0x0080);
-    status.V = (  ~((uint16_t)a ^ temp) & ((uint16_t)a ^ res) & 0x0080);
-    status.C = res > 255;
+    status.N = (res & 0x0080) != 0;
+    status.V = ((res ^ (uint16_t)a) & (res ^ value) & 0x0080) != 0;
 
     a = res & 0x00FF;
     return 1;
@@ -710,23 +721,23 @@ uint8_t cpu6502::TAX()
 {
     x = a;
     status.Z = (x & 0x00FF) == 0;
-    status.N = (x & 0x0080);
+    status.N = (x & 0x0080) != 0;
     return 0;
 }
 	
 uint8_t cpu6502::TAY()
 {
     y = a;
-    status.Z = (y & 0x00FF) == 0;
-    status.N = (y & 0x0080);
+    status.Z = y == 0;
+    status.N = (y & 0x80) != 0;
     return 0;
 }
 
 uint8_t cpu6502::TSX()
 {
     x = stkp;
-    status.Z = (x & 0x00FF) == 0;
-    status.N = (x & 0x0080);
+    status.Z = x == 0;
+    status.N = (x & 0x80) != 0;
     return 0;
 }
 	
@@ -735,7 +746,7 @@ uint8_t cpu6502::TXA()
     a = x;
 
     status.Z = (a & 0x00FF) == 0;
-    status.N = (a & 0x0080);
+    status.N = (a & 0x0080) != 0;
 
     return 0;
 }
@@ -743,8 +754,6 @@ uint8_t cpu6502::TXA()
 uint8_t cpu6502::TXS()
 {
     stkp = x;
-    status.Z = (stkp & 0x00FF) == 0;
-    status.N = (stkp & 0x0080);
     return 0;
 }
 	
@@ -752,7 +761,7 @@ uint8_t cpu6502::TYA()
 {
     a = y;
     status.Z = (a & 0x00FF) == 0;
-    status.N = (a & 0x0080);
+    status.N = (a & 0x0080) != 0;
     return 0;
 }
 
