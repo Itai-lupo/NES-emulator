@@ -104,6 +104,8 @@ var NAVTREEINDEX0 =
 "d4/d5a/palettes_memory_8h.html":[1,0,0,3,0,1],
 "d4/d5a/palettes_memory_8h_source.html":[1,0,0,3,0,1],
 "d4/d6e/classgames_menu.html":[0,0,12],
+"d4/ded/ppucopy_8h.html":[1,0,0,3,3],
+"d4/ded/ppucopy_8h_source.html":[1,0,0,3,3],
 "d5/df4/classmapper__000.html":[0,0,14],
 "d5/df4/classmapper__000.html#a1c262e32e4f60751f48804ed100995c9":[0,0,14,0],
 "d5/df4/classmapper__000.html#a2ece950e6fe57239ca71f40fab960bc6":[0,0,14,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX0 =
 "dc/de6/classcpu_bus_cartridge.html":[0,0,9],
 "dc/de6/classcpu_bus_cartridge.html#a4c431396963a0baea0645d1d87356f62":[0,0,9,2],
 "dc/de6/classcpu_bus_cartridge.html#acc8ae7fe2cb59a87135e8d63b6c1df9a":[0,0,9,0],
-"dc/de6/classcpu_bus_cartridge.html#ae36bf203723860c74ec78ef90fdf5640":[0,0,9,1],
-"dc/de6/classcpu_bus_cartridge.html#ae4af0d8aba720004ac641053377eecd1":[0,0,9,3],
-"dd/d28/classram.html":[0,0,23]
+"dc/de6/classcpu_bus_cartridge.html#ae36bf203723860c74ec78ef90fdf5640":[0,0,9,1]
 };

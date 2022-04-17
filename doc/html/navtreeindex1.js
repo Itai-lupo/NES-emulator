@@ -1,5 +1,7 @@
 var NAVTREEINDEX1 =
 {
+"dc/de6/classcpu_bus_cartridge.html#ae4af0d8aba720004ac641053377eecd1":[0,0,9,3],
+"dd/d28/classram.html":[0,0,23],
 "dd/d28/classram.html#a342f5f90906a9e41a2687214bc13bc5d":[0,0,23,1],
 "dd/d28/classram.html#a40fb07b2eba690992ba281ca6ef9902c":[0,0,23,0],
 "dd/d28/classram.html#a85983e19a0af45528085f72393c69ba3":[0,0,23,3],
@@ -77,8 +79,8 @@ var NAVTREEINDEX1 =
 "dir_e66ebb4ce26506a0ad7ea52c803915b7.html":[1,0,0,1,0],
 "dir_fc3f4263b82e4fd3c0ec23b560c9d680.html":[1,0,0,2,0],
 "files.html":[1,0],
-"functions.html":[0,3,0,0],
 "functions.html":[0,3,0],
+"functions.html":[0,3,0,0],
 "functions_b.html":[0,3,0,1],
 "functions_c.html":[0,3,0,2],
 "functions_d.html":[0,3,0,3],

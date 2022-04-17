@@ -92,11 +92,7 @@ class ppu
 
         static void init(LTE::entityTaleId SystemDataId)
         {
-            // LTE::eventManger::startBuildingEvent()->
-            //     setEntityID(SystemDataId)->
-            //     setEventRoute("cpu cmd/cpu clock/2c02")->
-            //     setEventCallback(ppu::clock)->add();
-
+            
         }
 
         static void close()
@@ -123,63 +119,12 @@ class ppu
 
         static void loadBackgroundShifters(ppu2c02 *ppuData)
         {
-            LAUGHTALE_ENGINR_CONDTION_LOG_INFO(
-                "nametable = " <<  
-                (ppuData->vram_addr.nametable_x  | (ppuData->vram_addr.nametable_y << 1)) << 
-                
-                "tile coordinates = ( " <<
-                (int)ppuData->vram_addr.coarse_x  << ", " << 
-                (int)ppuData->vram_addr.coarse_y  << ") tile y " << 
-                
-                (int)ppuData->vram_addr.fine_y, (ppuData->vram_addr.reg & 0x0FFF) == 0x82 || true)
-
-            LAUGHTALE_ENGINR_CONDTION_LOG_INFO((int)ppuData->bg_next_tile_id  << ", " << (int)ppuData->bg_next_tile_attrib, (ppuData->vram_addr.reg & 0x0FFF) == 0x82 || true)
-
             ppuData->bg_shifter_pattern_lo = (ppuData->bg_shifter_pattern_lo & 0xFF00) | ppuData->bg_next_tile_lsb;
             ppuData->bg_shifter_pattern_hi = (ppuData->bg_shifter_pattern_hi & 0xFF00) | ppuData->bg_next_tile_msb;
 
 
             ppuData->bg_shifter_attrib_lo  = (ppuData->bg_shifter_attrib_lo & 0xFF00) | ((ppuData->bg_next_tile_attrib & 0b01) ? 0xFF : 0x00);
             ppuData->bg_shifter_attrib_hi  = (ppuData->bg_shifter_attrib_hi & 0xFF00) | ((ppuData->bg_next_tile_attrib & 0b10) ? 0xFF : 0x00);
-        }
-
-        static void loadNametableByte(ppu2c02 *ppuData)
-        {
-            ppuData->bg_next_tile_id = ppuData->ppuBus.read(0x2000 | (ppuData->vram_addr.reg & 0x0FFF));
-        }
-
-        static void loadAtributeTableByte(ppu2c02 *ppuData)
-        {
-            ppuData->bg_next_tile_attrib = ppuData->ppuBus.read(0x23C0 | 
-                                                            (ppuData->vram_addr.nametable_y << 11) |
-                                                            (ppuData->vram_addr.nametable_x << 10) |
-                                                            ((ppuData->vram_addr.coarse_y >> 2 ) << 3) |
-                                                            (ppuData->vram_addr.coarse_x >> 2)
-                                                            );		
-
-            if (ppuData->vram_addr.coarse_y & 0x02) ppuData->bg_next_tile_attrib >>= 4;
-            if (ppuData->vram_addr.coarse_x & 0x02) ppuData->bg_next_tile_attrib >>= 2;
-            ppuData->bg_next_tile_attrib &= 0x03;
-        }
-
-        static void patternTableTileLow(ppu2c02 *ppuData)
-        {
-
-            ppuData->bg_next_tile_lsb = ppuData->ppuBus.read(
-                (ppuData->control.pattern_background << 12) + 
-                ((uint16_t)ppuData->bg_next_tile_id << 4) + 
-                ppuData->vram_addr.fine_y + 0);
-
-        }
-
-
-        static void patternTableTileHigh(ppu2c02 *ppuData)
-        {
-            ppuData->bg_next_tile_msb = ppuData->ppuBus.read(
-                (ppuData->control.pattern_background << 12) + 
-                ((uint16_t)ppuData->bg_next_tile_id << 4) + 
-                ppuData->vram_addr.fine_y + 0);
-
         }
 
         static void incrementScrollX(ppu2c02 *ppuData)
@@ -198,38 +143,10 @@ class ppu
             }
         }
 
-        static void visableAreaRender(ppu2c02 *ppuData)
-        {
-            updateShifters(ppuData);
-            switch ((ppuData->cycle - 1) % 8)
-            {
-                case 0:
-                    loadBackgroundShifters(ppuData);
-                    loadNametableByte(ppuData);
-                    break;
-
-                case 2:
-                    loadAtributeTableByte(ppuData);
-                    break;
-                case 4:
-                    patternTableTileLow(ppuData);
-                    break;
-                case 6:
-                    patternTableTileHigh(ppuData);
-                    break;
-                case 7:
-                    incrementScrollX(ppuData);
-                    break;
-                
-            }
-        }
-
-        
         static void incrementScrollY(ppu2c02 *ppuData)
         {
             if (ppuData->mask.render_background || ppuData->mask.render_sprites)
             {
-                LAUGHTALE_ENGINR_LOG_INFO(ppuData->vram_addr.fine_y)
                 if (ppuData->vram_addr.fine_y < 7)
                 {
                     ppuData->vram_addr.fine_y++;
@@ -273,17 +190,120 @@ class ppu
                 ppuData->vram_addr.fine_y    = ppuData->tram_addr.fine_y;
             }
         }
-        
+
+        static void loadNametableByte(ppu2c02 *ppuData)
+        {
+            ppuData->bg_next_tile_id = ppuData->ppuBus.read(0x2000 | (ppuData->vram_addr.reg & 0x0FFF));
+        }
+
+        static void loadAtributeTableByte(ppu2c02 *ppuData)
+        {
+            ppuData->bg_next_tile_attrib = ppuData->ppuBus.read(0x23C0 | 
+                                                            (ppuData->vram_addr.nametable_y << 11) |
+                                                            (ppuData->vram_addr.nametable_x << 10) |
+                                                            ((ppuData->vram_addr.coarse_y >> 2 ) << 3) |
+                                                            (ppuData->vram_addr.coarse_x >> 2)
+                                                            );		
+
+            if (ppuData->vram_addr.coarse_y & 0x02) ppuData->bg_next_tile_attrib >>= 4;
+            if (ppuData->vram_addr.coarse_x & 0x02) ppuData->bg_next_tile_attrib >>= 2;
+            ppuData->bg_next_tile_attrib &= 0x03;
+        }
+
+        static void patternTableTileLow(ppu2c02 *ppuData)
+        {
+            ppuData->bg_next_tile_lsb = ppuData->ppuBus.read(
+                                    (ppuData->control.pattern_background << 12) + 
+                                    ((uint16_t)ppuData->bg_next_tile_id << 4) + 
+                                    ppuData->vram_addr.fine_y + 0);
+
+        }
+
+        static void patternTableTileHigh(ppu2c02 *ppuData)
+        {
+            ppuData->bg_next_tile_msb = ppuData->ppuBus.read(
+                                    (ppuData->control.pattern_background << 12) + 
+                                    ((uint16_t)ppuData->bg_next_tile_id << 4) + 
+                                    ppuData->vram_addr.fine_y + 8);
+
+        }
+
+        static void visableAreaRender(ppu2c02 *ppuData)
+        {
+            updateShifters(ppuData);
+            switch ((ppuData->cycle - 1) % 8)
+            {
+                case 0:
+                    loadBackgroundShifters(ppuData);
+                    loadNametableByte(ppuData);
+                    break;
+
+                case 2:
+                    loadAtributeTableByte(ppuData);
+                    break;
+                case 4:
+                    patternTableTileLow(ppuData);
+                    break;
+                case 6:
+                    patternTableTileHigh(ppuData);
+                    break;
+                case 7:
+                    incrementScrollX(ppuData);
+                    break;
+                
+            }
+        }
+
+        static uint8_t getBGPixelPaletteOffset(ppu2c02 *ppuData)
+        {
+                    
+            uint16_t bit_mux = 0x8000 >> ppuData->fine_x;
+
+            uint8_t p0_pixel = (ppuData->bg_shifter_pattern_lo & bit_mux) > 0;
+            uint8_t p1_pixel = (ppuData->bg_shifter_pattern_hi & bit_mux) > 0;
+
+            return (p1_pixel << 1) | p0_pixel;
+        }
+
+        static uint8_t getBGPixelPalette(ppu2c02 *ppuData)
+        {
+            uint16_t bit_mux = 0x8000 >> ppuData->fine_x;
+
+            uint8_t bg_pal0 = (ppuData->bg_shifter_attrib_lo & bit_mux) > 0;
+            uint8_t bg_pal1 = (ppuData->bg_shifter_attrib_hi & bit_mux) > 0;
+            return (bg_pal1 << 1) | bg_pal0;
+        }
+
+        static void increaseCycle(ppu2c02 *ppuData)
+        {
+            ppuData->cycle++;
+            if (ppuData->cycle >= 341)
+            {
+                ppuData->cycle = 0;
+                ppuData->scanline++;
+
+                if (ppuData->scanline > 261)
+                {
+                    ppuData->scanline = 0;
+                    frameComplete = true;
+                }
+            }
+        }
+
         static void clock(LTE::gameObject *eventEntity, LTE::coreEventData *sendor)
         {
+
+            
             bus<uint8_t, uint16_t> *busData = eventEntity->getComponent<bus<uint8_t, uint16_t>>();
             ppu2c02 *ppuData = eventEntity->getComponent<ppu2c02>();
             LTE::texture *t =  eventEntity->getComponent<LTE::material>()->getTexture();
-
+        
+        
             for (size_t i = 0; i < 3; i++)
             {
-        		if (ppuData->scanline == 0 && ppuData->cycle == 0)
-                    ppuData->cycle = 1;
+
+                if (ppuData->scanline == 0 && ppuData->cycle == 0)
+                        ppuData->cycle = 1;
 
                 else if(ppuData->scanline == 261 && ppuData->cycle == 1)
                     ppuData->status.vertical_blank = 0;
@@ -295,8 +315,9 @@ class ppu
                     {
                         visableAreaRender(ppuData);
                     }
-                    else if(ppuData->cycle == 256)
-            		{	
+                    
+                    if(ppuData->cycle == 256)
+                    {	
                         incrementScrollY(ppuData);
                     }
                     else if(ppuData->cycle == 257)
@@ -321,43 +342,24 @@ class ppu
                         nmi = true;
                     }
                 }
-                
-                
+
                 uint8_t bg_pixel = 0x00;  
                 uint8_t bg_palette = 0x00;
 
                 if (ppuData->mask.render_background)
                 {
-                    
-                    uint16_t bit_mux = 0x8000 >> ppuData->fine_x;
-
-                    uint8_t p0_pixel = (ppuData->bg_shifter_pattern_lo & bit_mux) > 0;
-                    uint8_t p1_pixel = (ppuData->bg_shifter_pattern_hi & bit_mux) > 0;
-
-                    bg_pixel = (p1_pixel << 1) | p0_pixel;
-
-                    uint8_t bg_pal0 = (ppuData->bg_shifter_attrib_lo & bit_mux) > 0;
-                    uint8_t bg_pal1 = (ppuData->bg_shifter_attrib_hi & bit_mux) > 0;
-                    bg_palette = (bg_pal1 << 1) | bg_pal0;
+                    bg_pixel = getBGPixelPaletteOffset(ppuData);
+                    bg_palette = getBGPixelPalette(ppuData);
                 }
                 
                 if(ppuData->scanline < 240 && ppuData->cycle < 256)
                 {    
-                    t->setRGBValue({ppuData->cycle - 1, ppuData->scanline}, colorPalate[GetColourFromPaletteRam(ppuData, bg_palette, bg_pixel)]);
-                    
+                    t->setRGBValue(
+                        {ppuData->cycle - 1, ppuData->scanline}, 
+                        colorPalate[GetColourFromPaletteRam(ppuData, bg_palette, bg_pixel)]);
                 }
-                ppuData->cycle++;
-                if (ppuData->cycle >= 341)
-                {
-                    ppuData->cycle = 0;
-                    ppuData->scanline++;
-
-                    if (ppuData->scanline > 261)
-                    {
-                        ppuData->scanline = 0;
-                        frameComplete = true;
-                    }
-                }
+                
+                increaseCycle(ppuData);
 
             }            
         }
