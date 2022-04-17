@@ -125,12 +125,11 @@ uint8_t cpu6502::IZX()
 	
 uint8_t cpu6502::IZY()
 {
-    
-    uint8_t temp = systemBus->read(pc);
+    uint16_t temp = systemBus->read(pc);
     pc++;
 
-    uint8_t lo = systemBus->read(temp);
-    uint8_t hi = systemBus->read((temp + 1) & 0x00FF) << 8;
+    uint16_t lo = systemBus->read(temp & 0x00FF);
+    uint16_t hi = systemBus->read((temp + 1) & 0x00FF) << 8;
 
     addr = hi | lo;
     addr += y;
@@ -172,20 +171,21 @@ uint8_t cpu6502::ASL()
     
     status.Z = (res & 0x00FF) == 0;
     status.N = (res & 0x0080) != 0;
-    status.C = res > 255;
+    status.C = (res & 0xFF00) != 0;
     
     systemBus->write(addr, res & 0x00FF);
-
     return 0;
 }
 
 uint8_t cpu6502::ASL_A()
 {
-    status.C = ((uint16_t)a << 1) & 0xFF00;
-    a = a << 1;
-    status.Z = (a & 0xFF) == 0;
-    status.N = (a & 0x80) != 0;
+    uint16_t res = a << 1;
 
+    status.Z = (res & 0x00FF) == 0;
+    status.N = (res & 0x0080) != 0;
+    status.C = (res & 0xFF00) != 0;
+
+	a = res & 0x00FF;
     return 0;
 }
 	
@@ -578,7 +578,7 @@ uint8_t cpu6502::PLP()
 uint8_t cpu6502::ROL()
 {
     uint16_t res = systemBus->read(addr);
-    res = (res << 1) | (uint16_t)status.C;
+    res = (res << 1) | status.C;
     
     status.C = (res & 0xFF00) != 0;
     status.Z = (res & 0x00FF) == 0;
@@ -592,23 +592,24 @@ uint8_t cpu6502::ROL()
 uint8_t cpu6502::ROL_A()
 {
     uint16_t res = a;
-    res = (res << 1) | (uint16_t)status.C;
+    res = (res << 1) | status.C;
     
     status.C = (res & 0xFF00) != 0;
     status.Z = (res & 0x00FF) == 0;
     status.N = (res & 0x0080) != 0;
     
     a = res & 0x00FF;
+	// LAUGHTALE_ENGINR_LOG_INFO((int)a)
 
     return 0;
 }
 
 uint8_t cpu6502::ROR()
 {
-    uint16_t res = systemBus->read(addr);
-    res = ((uint16_t)status.C << 7) | (res >> 1);
+    uint16_t temp = systemBus->read(addr);
+    uint16_t res = ((uint16_t)status.C << 7) | (temp >> 1);
     
-    status.C = res & 0x0001;
+    status.C = temp & 0x0001;
     status.Z = (res & 0x00FF) == 0;
     status.N = (res & 0x0080) != 0;
     
@@ -620,14 +621,16 @@ uint8_t cpu6502::ROR()
 uint8_t cpu6502::ROR_A()
 {
     uint16_t res = a;
-    res = ((uint16_t)status.C << 7) | (res >> 1);
-    
-    status.C = res & 0x0001;
+
+    res >>= 1;
+	res |= status.C << 7;
+
+    status.C = a & 0x0001;
     status.Z = (res & 0x00FF) == 0;
     status.N = (res & 0x0080) != 0;
     
     a = res & 0x00FF;
-
+	
     return 0;
 }
 	

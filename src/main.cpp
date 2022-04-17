@@ -13,12 +13,15 @@
 #include "controller.h"
 
 #include <thread>
+void sysClock(LTE::gameObject *eventEntity, LTE::coreEventData *sendor);
 
+LTE::entityTaleId id;
 void runCpu(LTE::coreEventData *sendor)
 {
     sendor->route = "cpu cmd/cpu clock/";
+    LTE::gameObject *eventEntity = LTE::entityManger::getEntityById(id);
     while (true)
-        LTE::eventManger::trigerEvent(sendor);
+        sysClock(eventEntity, sendor);
 }
 
 std::thread *t;
@@ -68,7 +71,6 @@ void keyDispatcher(LTE::gameObject *eventEntity, LTE::coreEventData *sendor)
         LTE::eventManger::trigerEvent(sendor);
 }
 
-LTE::entityTaleId id;
 cartridge *cart;
 LTE::windowPieceId winId;
 
@@ -156,7 +158,7 @@ void loadCartageAndResetCpu(LTE::gameObject *eventEntity, LTE::coreEventData *se
     gamesMenu::loadGameEvent *gameInfo = static_cast<gamesMenu::loadGameEvent*>(sendor);
     LAUGHTALE_ENGINR_LOG_INFO(gameInfo->gamePath)
     cart->load(gameInfo->gamePath);
-    // eventEntity->getComponent<ppu2c02>()->reset();
+    eventEntity->getComponent<ppu2c02>()->reset();
     LTE::eventManger::trigerEvent(new LTE::coreEventData("cpu cmd/cpu reset/"));
 
 }
