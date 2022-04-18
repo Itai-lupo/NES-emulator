@@ -51,7 +51,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"dc/de6/classcpu_bus_cartridge.html#ae4af0d8aba720004ac641053377eecd1"
+"dc/d02/struct_n_e_s_header.html#a880ff2e8e956a1d579dd01746299836b"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

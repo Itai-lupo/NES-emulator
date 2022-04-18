@@ -6,10 +6,10 @@ var dir_ae85f16fa9c526b005352d702ffa6931 =
       [ "ppu2c02::PPUCTRL", "df/d5b/unionppu2c02_1_1_p_p_u_c_t_r_l.html", "df/d5b/unionppu2c02_1_1_p_p_u_c_t_r_l" ],
       [ "ppu2c02::loopy_register", "d4/d46/unionppu2c02_1_1loopy__register.html", "d4/d46/unionppu2c02_1_1loopy__register" ]
     ] ],
-    [ "ppu.h", "d2/df9/ppu_8h.html", [
-      [ "ppu", "d6/d3f/classppu.html", null ]
+    [ "DMA.h", "dd/d65/_d_m_a_8h.html", [
+      [ "DMA", "d4/dff/class_d_m_a.html", "d4/dff/class_d_m_a" ]
     ] ],
-    [ "ppucopy.h", "d4/ded/ppucopy_8h.html", [
+    [ "ppu.h", "d2/df9/ppu_8h.html", [
       [ "ppu", "d6/d3f/classppu.html", null ]
     ] ]
 ];

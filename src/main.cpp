@@ -11,6 +11,7 @@
 #include "displayDebugInfo.h"
 #include "gamesMenu.h"
 #include "controller.h"
+#include "DMA.h"
 
 #include <thread>
 void sysClock(LTE::gameObject *eventEntity, LTE::coreEventData *sendor);
@@ -33,8 +34,6 @@ void keyDispatcher(LTE::gameObject *eventEntity, LTE::coreEventData *sendor)
     {
         sendor->route = "cpu cmd/cpu clock/";
         LTE::eventManger::trigerEvent(sendor);
-        while (!cpu<uint8_t, uint16_t>::isCpuComplete())
-            LTE::eventManger::trigerEvent(sendor);
 
         return;
     }
@@ -114,6 +113,7 @@ void initEmulationSystem()
     ppu2c02 *p = new ppu2c02(new ppuBusCartridge(cart));
     controller *ctrl = new controller();
     bus<uint8_t, uint16_t> *sysBus = (new bus<uint8_t, uint16_t>());
+    DMA *d = new DMA(p, sysBus);
 
     LTE::texture *t = LTE::windowManger::getWindow(winId)->context->getMeshFactory()->createCustemTexture({256, 240});
 
@@ -124,6 +124,7 @@ void initEmulationSystem()
         pushDevice(new cpuBusCartridge(cart))->
         pushDevice(r)->
         pushDevice(ctrl)->
+        pushDevice(d)->
         pushDevice(p);
 
     id =  LTE::entityManger::addEntity(
@@ -135,6 +136,7 @@ void initEmulationSystem()
                 addComponent(sysBus)->
                 addComponent(p)->
                 addComponent(c)->
+                addComponent(d)->
                 addComponent(ctrl)->
                 addComponent(LTE::mesh::build([&](LTE::mesh::meshBuilder *builder)
                     { 
@@ -156,7 +158,6 @@ void initEmulationSystem()
 void loadCartageAndResetCpu(LTE::gameObject *eventEntity, LTE::coreEventData *sendor)
 {
     gamesMenu::loadGameEvent *gameInfo = static_cast<gamesMenu::loadGameEvent*>(sendor);
-    LAUGHTALE_ENGINR_LOG_INFO(gameInfo->gamePath)
     cart->load(gameInfo->gamePath);
     eventEntity->getComponent<ppu2c02>()->reset();
     LTE::eventManger::trigerEvent(new LTE::coreEventData("cpu cmd/cpu reset/"));

@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['c_0',['c',['../d0/d1e/classcpu_test.html#affc60d12cd330e6313e1b70094a4c8b0',1,'cpuTest::c()'],['../d8/d8f/classcartridge_emualtion_test.html#a505dbfff12f1c8a6bff96f97435e1e70',1,'cartridgeEmualtionTest::c()'],['../de/d21/classbus_test.html#a5bf154196f1d9f3c5ec34a671ea756c1',1,'busTest::c()']]],
-  ['c_1',['C',['../d9/dbe/classcpu6502.html#aaccb5a879008d07fc4862da5782d332a',1,'cpu6502']]],
+  ['c_0',['C',['../d9/dbe/classcpu6502.html#aaccb5a879008d07fc4862da5782d332a',1,'cpu6502']]],
+  ['c_1',['c',['../d0/d1e/classcpu_test.html#affc60d12cd330e6313e1b70094a4c8b0',1,'cpuTest::c()'],['../d8/d8f/classcartridge_emualtion_test.html#a505dbfff12f1c8a6bff96f97435e1e70',1,'cartridgeEmualtionTest::c()'],['../de/d21/classbus_test.html#a5bf154196f1d9f3c5ec34a671ea756c1',1,'busTest::c()']]],
   ['cart_2',['cart',['../df/d0a/main_8cpp.html#a69a7322d34c7ff785cac5cddecc4fbfe',1,'cart():&#160;main.cpp'],['../da/d1c/classname_table.html#a6241ac020e613f01e0f85dc6daf2d1d5',1,'nameTable::cart()']]],
   ['cartridge_3',['cartridge',['../d2/dd7/classcartridge.html',1,'cartridge'],['../d2/dd7/classcartridge.html#a1622d6252d4ed11ab9b37e6db22a6088',1,'cartridge::cartridge()'],['../d2/deb/classppu2c02.html#a836e7440f082863c1fa76a9d26200583',1,'ppu2c02::cartridge()']]],
   ['cartridge_2ecpp_4',['cartridge.cpp',['../d2/d09/cartridge_8cpp.html',1,'']]],
@@ -10,14 +10,14 @@ var searchData=
   ['cartridgeemualtiontest_7',['cartridgeEmualtionTest',['../d8/d8f/classcartridge_emualtion_test.html',1,'']]],
   ['changepallate_8',['changePallate',['../d7/d6d/classdisplay_debug_info.html#a79ba0730a0b640e2fc2d19da778219af',1,'displayDebugInfo']]],
   ['chr_5from_5fchunks_9',['chr_rom_chunks',['../dc/d02/struct_n_e_s_header.html#a9e5f23d0060242898909919519d4ee3e',1,'NESHeader']]],
-  ['chrbanks_10',['chrBanks',['../d8/d1f/structmappers_data.html#aee502b130fbf6171fcf508aeadff9e0a',1,'mappersData::chrBanks()'],['../d6/d32/classmapper.html#ac5405c65c3df3f66fa7e90da8209e983',1,'mapper::chrBanks()']]],
-  ['clock_11',['clock',['../d6/d3f/classppu.html#a8f8beeeceb29673161032303d02e8cad',1,'ppu::clock(LTE::gameObject *eventEntity, LTE::coreEventData *sendor)'],['../d6/d3f/classppu.html#a8f8beeeceb29673161032303d02e8cad',1,'ppu::clock(LTE::gameObject *eventEntity, LTE::coreEventData *sendor)'],['../de/d33/classcpu.html#abc8a3d560e97137856c86004d5d5e91b',1,'cpu::clock()'],['../d9/dbe/classcpu6502.html#a39ad8bf547f49f122912e1615aa4677c',1,'cpu6502::clock()']]],
-  ['close_12',['close',['../de/d33/classcpu.html#a40f7f0daa94474f8470d35758d162b54',1,'cpu::close()'],['../d6/d3f/classppu.html#a5d85f27933540c6709095e12b308b41a',1,'ppu::close()'],['../d6/d3f/classppu.html#a5d85f27933540c6709095e12b308b41a',1,'ppu::close()']]],
+  ['chrbanks_10',['chrBanks',['../d6/d32/classmapper.html#ac5405c65c3df3f66fa7e90da8209e983',1,'mapper::chrBanks()'],['../d8/d1f/structmappers_data.html#aee502b130fbf6171fcf508aeadff9e0a',1,'mappersData::chrBanks()']]],
+  ['clock_11',['clock',['../d9/dbe/classcpu6502.html#a39ad8bf547f49f122912e1615aa4677c',1,'cpu6502::clock()'],['../de/d33/classcpu.html#abc8a3d560e97137856c86004d5d5e91b',1,'cpu::clock()'],['../d4/dff/class_d_m_a.html#a7f2ec84329d4ef62f6cd6586217f7f0b',1,'DMA::clock()'],['../d6/d3f/classppu.html#a8f8beeeceb29673161032303d02e8cad',1,'ppu::clock(LTE::gameObject *eventEntity, LTE::coreEventData *sendor)']]],
+  ['close_12',['close',['../d6/d3f/classppu.html#a5d85f27933540c6709095e12b308b41a',1,'ppu::close()'],['../de/d33/classcpu.html#a40f7f0daa94474f8470d35758d162b54',1,'cpu::close()']]],
   ['coarse_5fx_13',['coarse_x',['../d4/d46/unionppu2c02_1_1loopy__register.html#ae7b526ced9250f815f73dc55b85b7383',1,'ppu2c02::loopy_register']]],
   ['coarse_5fy_14',['coarse_y',['../d4/d46/unionppu2c02_1_1loopy__register.html#ad707402019230d6d26b55e97258bbe4d',1,'ppu2c02::loopy_register']]],
-  ['colorpalate_15',['colorPalate',['../d6/d3f/classppu.html#ac2998460bef2e53a38e8406b296d926d',1,'ppu']]],
+  ['colorpalate_15',['colorPalate',['../d6/d3f/classppu.html#a5d40e95f043bcffaa2ef02bfd9423569',1,'ppu']]],
   ['control_16',['control',['../d2/deb/classppu2c02.html#ac99d81b31fec1a67303a8c5547093647',1,'ppu2c02']]],
-  ['controller_17',['controller',['../d6/df9/classcontroller.html#abd54a18254c3bffb0f5462da0ff5a89b',1,'controller::controller()'],['../d6/df9/classcontroller.html',1,'controller']]],
+  ['controller_17',['controller',['../d6/df9/classcontroller.html',1,'controller'],['../d6/df9/classcontroller.html#abd54a18254c3bffb0f5462da0ff5a89b',1,'controller::controller()']]],
   ['controller_2eh_18',['controller.h',['../d2/dd9/controller_8h.html',1,'']]],
   ['cpu_19',['cpu',['../de/d33/classcpu.html',1,'']]],
   ['cpu_2eh_20',['cpu.h',['../dc/da7/cpu_8h.html',1,'']]],
@@ -28,5 +28,5 @@ var searchData=
   ['cputest_25',['cpuTest',['../d0/d1e/classcpu_test.html',1,'']]],
   ['createmapper_26',['createMapper',['../de/d4c/classmappers_facory.html#adcc7ae4350d678e2f8315af2e0ddb3fc',1,'mappersFacory']]],
   ['cycle_27',['cycle',['../d2/deb/classppu2c02.html#af5240aa778b1cf870047f5c67d2ada53',1,'ppu2c02']]],
-  ['cycles_28',['cycles',['../dd/d5a/structcpu6502_1_1instruction6502.html#a3fdc7dbeb42ebc1a541423f1fb74196b',1,'cpu6502::instruction6502::cycles()'],['../de/d33/classcpu.html#aaca1960dd5967a4637409262022a6371',1,'cpu::cycles()']]]
+  ['cycles_28',['cycles',['../dd/d5a/structcpu6502_1_1instruction6502.html#a3fdc7dbeb42ebc1a541423f1fb74196b',1,'cpu6502::instruction6502::cycles()'],['../d9/dbe/classcpu6502.html#a761318d064e4dd503ba1a05a1e4e7af6',1,'cpu6502::cycles()']]]
 ];

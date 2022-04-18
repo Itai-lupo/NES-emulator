@@ -148,39 +148,38 @@ $(document).ready(function(){initNavTree('d4/d1d/name_table_8h_source.html','../
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="../../da/d1c/classname_table.html#ab2c64540d864a5920ffaba76e629ee48">   59</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../da/d1c/classname_table.html#ab2c64540d864a5920ffaba76e629ee48">write</a>(uint16_t addr, uint8_t data)<span class="keyword"> override</span></div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="keyword">        </span>{</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>            addr &amp;= 0x0FFF;</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            <span class="comment">// LAUGHTALE_ENGINR_CONDTION_LOG_INFO(data, data != 0 &amp;&amp; data != 32)</span></div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>            </div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../da/d1c/classname_table.html#a6241ac020e613f01e0f85dc6daf2d1d5">cart</a>-&gt;<a class="code hl_function" href="../../da/de8/classppu_bus_cartridge.html#a9dcc9658ba9b6d6ec08ce985414cfdba">getMirror</a>() == <a class="code hl_enumvalue" href="../../d6/da5/cartridge_8h.html#af32b022d54641d350cd8d0ef200c79faa1a88641fcd39f2ed3e58a18526e97138">MIRROR::VERTICAL</a>)</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            {</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>                <span class="comment">// Vertical</span></div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>                <span class="keywordflow">if</span> (addr &gt;= 0x0000 &amp;&amp; addr &lt;= 0x03FF)</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                    tableData[0][addr &amp; 0x03FF] = data;</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>                <span class="keywordflow">if</span> (addr &gt;= 0x0400 &amp;&amp; addr &lt;= 0x07FF)</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>                    tableData[1][addr &amp; 0x03FF] = data;</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>                <span class="keywordflow">if</span> (addr &gt;= 0x0800 &amp;&amp; addr &lt;= 0x0BFF)</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>                    tableData[0][addr &amp; 0x03FF] = data;</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>                <span class="keywordflow">if</span> (addr &gt;= 0x0C00 &amp;&amp; addr &lt;= 0x0FFF)</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>                    tableData[1][addr &amp; 0x03FF] = data;</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>            }</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../da/d1c/classname_table.html#a6241ac020e613f01e0f85dc6daf2d1d5">cart</a>-&gt;<a class="code hl_function" href="../../da/de8/classppu_bus_cartridge.html#a9dcc9658ba9b6d6ec08ce985414cfdba">getMirror</a>() == <a class="code hl_enumvalue" href="../../d6/da5/cartridge_8h.html#af32b022d54641d350cd8d0ef200c79faa4dd51ad73508d6fc83a502966779e48e">MIRROR::HORIZONTAL</a>)</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>            {</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>                <span class="comment">// Horizontal</span></div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>                <span class="keywordflow">if</span> (addr &gt;= 0x0000 &amp;&amp; addr &lt;= 0x03FF)</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>                    tableData[0][addr &amp; 0x03FF] = data;</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>                <span class="keywordflow">if</span> (addr &gt;= 0x0400 &amp;&amp; addr &lt;= 0x07FF)</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>                    tableData[0][addr &amp; 0x03FF] = data;</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>                <span class="keywordflow">if</span> (addr &gt;= 0x0800 &amp;&amp; addr &lt;= 0x0BFF)</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>                    tableData[1][addr &amp; 0x03FF] = data;</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>                <span class="keywordflow">if</span> (addr &gt;= 0x0C00 &amp;&amp; addr &lt;= 0x0FFF)</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>                    tableData[1][addr &amp; 0x03FF] = data;</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>            }</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        }</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="../../da/d1c/classname_table.html#af8b239e84cc5a51a4de0cb6707caaa74">   90</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="../../da/d1c/classname_table.html#af8b239e84cc5a51a4de0cb6707caaa74">isInRange</a>(uint16_t addr)<span class="keyword"> override</span></div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="keyword">        </span>{</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>            <span class="keywordflow">return</span> addr &gt;= 0x2000 &amp;&amp; addr &lt;= 0x3EFF;</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        }</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>};</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../da/d1c/classname_table.html#a6241ac020e613f01e0f85dc6daf2d1d5">cart</a>-&gt;<a class="code hl_function" href="../../da/de8/classppu_bus_cartridge.html#a9dcc9658ba9b6d6ec08ce985414cfdba">getMirror</a>() == <a class="code hl_enumvalue" href="../../d6/da5/cartridge_8h.html#af32b022d54641d350cd8d0ef200c79faa1a88641fcd39f2ed3e58a18526e97138">MIRROR::VERTICAL</a>)</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            {</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>                <span class="comment">// Vertical</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>                <span class="keywordflow">if</span> (addr &gt;= 0x0000 &amp;&amp; addr &lt;= 0x03FF)</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>                    tableData[0][addr &amp; 0x03FF] = data;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                <span class="keywordflow">if</span> (addr &gt;= 0x0400 &amp;&amp; addr &lt;= 0x07FF)</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>                    tableData[1][addr &amp; 0x03FF] = data;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>                <span class="keywordflow">if</span> (addr &gt;= 0x0800 &amp;&amp; addr &lt;= 0x0BFF)</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>                    tableData[0][addr &amp; 0x03FF] = data;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>                <span class="keywordflow">if</span> (addr &gt;= 0x0C00 &amp;&amp; addr &lt;= 0x0FFF)</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>                    tableData[1][addr &amp; 0x03FF] = data;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>            }</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../da/d1c/classname_table.html#a6241ac020e613f01e0f85dc6daf2d1d5">cart</a>-&gt;<a class="code hl_function" href="../../da/de8/classppu_bus_cartridge.html#a9dcc9658ba9b6d6ec08ce985414cfdba">getMirror</a>() == <a class="code hl_enumvalue" href="../../d6/da5/cartridge_8h.html#af32b022d54641d350cd8d0ef200c79faa4dd51ad73508d6fc83a502966779e48e">MIRROR::HORIZONTAL</a>)</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            {</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>                <span class="comment">// Horizontal</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>                <span class="keywordflow">if</span> (addr &gt;= 0x0000 &amp;&amp; addr &lt;= 0x03FF)</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>                    tableData[0][addr &amp; 0x03FF] = data;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>                <span class="keywordflow">if</span> (addr &gt;= 0x0400 &amp;&amp; addr &lt;= 0x07FF)</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>                    tableData[0][addr &amp; 0x03FF] = data;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>                <span class="keywordflow">if</span> (addr &gt;= 0x0800 &amp;&amp; addr &lt;= 0x0BFF)</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>                    tableData[1][addr &amp; 0x03FF] = data;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>                <span class="keywordflow">if</span> (addr &gt;= 0x0C00 &amp;&amp; addr &lt;= 0x0FFF)</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>                    tableData[1][addr &amp; 0x03FF] = data;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>            }</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        }</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="../../da/d1c/classname_table.html#af8b239e84cc5a51a4de0cb6707caaa74">   89</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="../../da/d1c/classname_table.html#af8b239e84cc5a51a4de0cb6707caaa74">isInRange</a>(uint16_t addr)<span class="keyword"> override</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="keyword">        </span>{</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>            <span class="keywordflow">return</span> addr &gt;= 0x2000 &amp;&amp; addr &lt;= 0x3EFF;</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        }</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>};</div>
 <div class="ttc" id="acartridge_8h_html"><div class="ttname"><a href="../../d6/da5/cartridge_8h.html">cartridge.h</a></div></div>
 <div class="ttc" id="acartridge_8h_html_af32b022d54641d350cd8d0ef200c79faa1a88641fcd39f2ed3e58a18526e97138"><div class="ttname"><a href="../../d6/da5/cartridge_8h.html#af32b022d54641d350cd8d0ef200c79faa1a88641fcd39f2ed3e58a18526e97138">VERTICAL</a></div><div class="ttdeci">@ VERTICAL</div><div class="ttdef"><b>Definition:</b> cartridge.h:29</div></div>
 <div class="ttc" id="acartridge_8h_html_af32b022d54641d350cd8d0ef200c79faa4dd51ad73508d6fc83a502966779e48e"><div class="ttname"><a href="../../d6/da5/cartridge_8h.html#af32b022d54641d350cd8d0ef200c79faa4dd51ad73508d6fc83a502966779e48e">HORIZONTAL</a></div><div class="ttdeci">@ HORIZONTAL</div><div class="ttdef"><b>Definition:</b> cartridge.h:28</div></div>
@@ -190,7 +189,7 @@ $(document).ready(function(){initNavTree('d4/d1d/name_table_8h_source.html','../
 <div class="ttc" id="aclassname_table_html_a6241ac020e613f01e0f85dc6daf2d1d5"><div class="ttname"><a href="../../da/d1c/classname_table.html#a6241ac020e613f01e0f85dc6daf2d1d5">nameTable::cart</a></div><div class="ttdeci">ppuBusCartridge * cart</div><div class="ttdef"><b>Definition:</b> nameTable.h:17</div></div>
 <div class="ttc" id="aclassname_table_html_aa5d607f82dc2a3cfe2218a707d5a853d"><div class="ttname"><a href="../../da/d1c/classname_table.html#aa5d607f82dc2a3cfe2218a707d5a853d">nameTable::nameTable</a></div><div class="ttdeci">nameTable()</div><div class="ttdef"><b>Definition:</b> nameTable.h:19</div></div>
 <div class="ttc" id="aclassname_table_html_ab2c64540d864a5920ffaba76e629ee48"><div class="ttname"><a href="../../da/d1c/classname_table.html#ab2c64540d864a5920ffaba76e629ee48">nameTable::write</a></div><div class="ttdeci">virtual void write(uint16_t addr, uint8_t data) override</div><div class="ttdef"><b>Definition:</b> nameTable.h:59</div></div>
-<div class="ttc" id="aclassname_table_html_af8b239e84cc5a51a4de0cb6707caaa74"><div class="ttname"><a href="../../da/d1c/classname_table.html#af8b239e84cc5a51a4de0cb6707caaa74">nameTable::isInRange</a></div><div class="ttdeci">virtual bool isInRange(uint16_t addr) override</div><div class="ttdef"><b>Definition:</b> nameTable.h:90</div></div>
+<div class="ttc" id="aclassname_table_html_af8b239e84cc5a51a4de0cb6707caaa74"><div class="ttname"><a href="../../da/d1c/classname_table.html#af8b239e84cc5a51a4de0cb6707caaa74">nameTable::isInRange</a></div><div class="ttdeci">virtual bool isInRange(uint16_t addr) override</div><div class="ttdef"><b>Definition:</b> nameTable.h:89</div></div>
 <div class="ttc" id="aclassppu_bus_cartridge_html"><div class="ttname"><a href="../../da/de8/classppu_bus_cartridge.html">ppuBusCartridge</a></div><div class="ttdef"><b>Definition:</b> ppuBusCartridge.h:5</div></div>
 <div class="ttc" id="aclassppu_bus_cartridge_html_a9dcc9658ba9b6d6ec08ce985414cfdba"><div class="ttname"><a href="../../da/de8/classppu_bus_cartridge.html#a9dcc9658ba9b6d6ec08ce985414cfdba">ppuBusCartridge::getMirror</a></div><div class="ttdeci">MIRROR getMirror()</div><div class="ttdef"><b>Definition:</b> ppuBusCartridge.h:12</div></div>
 </div><!-- fragment --></div><!-- contents -->

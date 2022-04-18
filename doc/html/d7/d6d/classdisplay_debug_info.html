@@ -129,15 +129,15 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  362</span>    {</div>
-<div class="line"><span class="lineno">  363</span>        LTE::texture *<a class="code hl_variable" href="../../df/d0a/main_8cpp.html#a56c83145992bda0c5a5664be4fc449e9">t</a> =  LTE::entityManger::getEntityById(colorPlateid)-&gt;getComponent&lt;LTE::material&gt;()-&gt;getTexture();</div>
-<div class="line"><span class="lineno">  364</span> </div>
-<div class="line"><span class="lineno">  365</span>        <a class="code hl_variable" href="../../df/d0a/main_8cpp.html#a56c83145992bda0c5a5664be4fc449e9">t</a>-&gt;setRGBValue({pallateNumber, 4}, <span class="keyword">new</span> uint8_t[3]{0, 0, 0});</div>
-<div class="line"><span class="lineno">  366</span>        pallateNumber = (pallateNumber + 1) % 8;</div>
-<div class="line"><span class="lineno">  367</span>        <a class="code hl_variable" href="../../df/d0a/main_8cpp.html#a56c83145992bda0c5a5664be4fc449e9">t</a>-&gt;setRGBValue({pallateNumber, 4}, <span class="keyword">new</span> uint8_t[3]{255, 255, 255});</div>
-<div class="line"><span class="lineno">  368</span> </div>
-<div class="line"><span class="lineno">  369</span>    }</div>
-<div class="ttc" id="amain_8cpp_html_a56c83145992bda0c5a5664be4fc449e9"><div class="ttname"><a href="../../df/d0a/main_8cpp.html#a56c83145992bda0c5a5664be4fc449e9">t</a></div><div class="ttdeci">std::thread * t</div><div class="ttdef"><b>Definition:</b> main.cpp:27</div></div>
+<div class="fragment"><div class="line"><span class="lineno">  361</span>    {</div>
+<div class="line"><span class="lineno">  362</span>        LTE::texture *<a class="code hl_variable" href="../../df/d0a/main_8cpp.html#a56c83145992bda0c5a5664be4fc449e9">t</a> =  LTE::entityManger::getEntityById(colorPlateid)-&gt;getComponent&lt;LTE::material&gt;()-&gt;getTexture();</div>
+<div class="line"><span class="lineno">  363</span> </div>
+<div class="line"><span class="lineno">  364</span>        <a class="code hl_variable" href="../../df/d0a/main_8cpp.html#a56c83145992bda0c5a5664be4fc449e9">t</a>-&gt;setRGBValue({pallateNumber, 4}, <span class="keyword">new</span> uint8_t[3]{0, 0, 0});</div>
+<div class="line"><span class="lineno">  365</span>        pallateNumber = (pallateNumber + 1) % 8;</div>
+<div class="line"><span class="lineno">  366</span>        <a class="code hl_variable" href="../../df/d0a/main_8cpp.html#a56c83145992bda0c5a5664be4fc449e9">t</a>-&gt;setRGBValue({pallateNumber, 4}, <span class="keyword">new</span> uint8_t[3]{255, 255, 255});</div>
+<div class="line"><span class="lineno">  367</span> </div>
+<div class="line"><span class="lineno">  368</span>    }</div>
+<div class="ttc" id="amain_8cpp_html_a56c83145992bda0c5a5664be4fc449e9"><div class="ttname"><a href="../../df/d0a/main_8cpp.html#a56c83145992bda0c5a5664be4fc449e9">t</a></div><div class="ttdeci">std::thread * t</div><div class="ttdef"><b>Definition:</b> main.cpp:28</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -184,80 +184,80 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  373</span>    {</div>
-<div class="line"><span class="lineno">  374</span>        displayDebugInfo::winId = winId;</div>
-<div class="line"><span class="lineno">  375</span>        displayDebugInfo::id = id;</div>
-<div class="line"><span class="lineno">  376</span> </div>
-<div class="line"><span class="lineno">  377</span>        LTE::eventManger::startBuildingEvent()-&gt;setEventRoute(<span class="stringliteral">&quot;Key pressed/toggleDebugInfo&quot;</span>)-&gt;setEventCallback(<a class="code hl_function" href="../../d7/d6d/classdisplay_debug_info.html#a05da6d958cb086a874045a14b8ae7afe">toggleDebugInfoOnKey</a>)-&gt;add();</div>
-<div class="line"><span class="lineno">  378</span> </div>
-<div class="line"><span class="lineno">  379</span>        LTE::texture *colorPalateT = LTE::windowManger::getWindow(winId)-&gt;context-&gt;getMeshFactory()-&gt;createCustemTexture({8, 6});</div>
-<div class="line"><span class="lineno">  380</span>        LTE::texture *patternMemoryT = LTE::windowManger::getWindow(winId)-&gt;context-&gt;getMeshFactory()-&gt;createCustemTexture({256, 128});</div>
-<div class="line"><span class="lineno">  381</span> </div>
-<div class="line"><span class="lineno">  382</span>        LTE::texture *NameTableMemoryT[4];</div>
-<div class="line"><span class="lineno">  383</span>        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; 4; i++)</div>
-<div class="line"><span class="lineno">  384</span>            NameTableMemoryT[i] = LTE::windowManger::getWindow(winId)-&gt;context-&gt;getMeshFactory()-&gt;createCustemTexture({256, 240});</div>
-<div class="line"><span class="lineno">  385</span> </div>
-<div class="line"><span class="lineno">  386</span>        LTE::windowManger::getWindow(winId)-&gt;assetLibrary-&gt;saveAsset(colorPalateT, <span class="stringliteral">&quot;res/colorPalateTexture&quot;</span>);</div>
-<div class="line"><span class="lineno">  387</span>        LTE::windowManger::getWindow(winId)-&gt;assetLibrary-&gt;saveAsset(patternMemoryT, <span class="stringliteral">&quot;res/patternMemoryTexture&quot;</span>);</div>
-<div class="line"><span class="lineno">  388</span> </div>
-<div class="line"><span class="lineno">  389</span>        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; 4; i++)</div>
-<div class="line"><span class="lineno">  390</span>            LTE::windowManger::getWindow(winId)-&gt;assetLibrary-&gt;saveAsset(NameTableMemoryT[i], <span class="stringliteral">&quot;res/NameTableMemoryTexture &quot;</span> + std::to_string(i));</div>
+<div class="fragment"><div class="line"><span class="lineno">  372</span>    {</div>
+<div class="line"><span class="lineno">  373</span>        displayDebugInfo::winId = winId;</div>
+<div class="line"><span class="lineno">  374</span>        displayDebugInfo::id = id;</div>
+<div class="line"><span class="lineno">  375</span> </div>
+<div class="line"><span class="lineno">  376</span>        LTE::eventManger::startBuildingEvent()-&gt;setEventRoute(<span class="stringliteral">&quot;Key pressed/toggleDebugInfo&quot;</span>)-&gt;setEventCallback(<a class="code hl_function" href="../../d7/d6d/classdisplay_debug_info.html#a05da6d958cb086a874045a14b8ae7afe">toggleDebugInfoOnKey</a>)-&gt;add();</div>
+<div class="line"><span class="lineno">  377</span> </div>
+<div class="line"><span class="lineno">  378</span>        LTE::texture *colorPalateT = LTE::windowManger::getWindow(winId)-&gt;context-&gt;getMeshFactory()-&gt;createCustemTexture({8, 6});</div>
+<div class="line"><span class="lineno">  379</span>        LTE::texture *patternMemoryT = LTE::windowManger::getWindow(winId)-&gt;context-&gt;getMeshFactory()-&gt;createCustemTexture({256, 128});</div>
+<div class="line"><span class="lineno">  380</span> </div>
+<div class="line"><span class="lineno">  381</span>        LTE::texture *NameTableMemoryT[4];</div>
+<div class="line"><span class="lineno">  382</span>        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; 4; i++)</div>
+<div class="line"><span class="lineno">  383</span>            NameTableMemoryT[i] = LTE::windowManger::getWindow(winId)-&gt;context-&gt;getMeshFactory()-&gt;createCustemTexture({256, 240});</div>
+<div class="line"><span class="lineno">  384</span> </div>
+<div class="line"><span class="lineno">  385</span>        LTE::windowManger::getWindow(winId)-&gt;assetLibrary-&gt;saveAsset(colorPalateT, <span class="stringliteral">&quot;res/colorPalateTexture&quot;</span>);</div>
+<div class="line"><span class="lineno">  386</span>        LTE::windowManger::getWindow(winId)-&gt;assetLibrary-&gt;saveAsset(patternMemoryT, <span class="stringliteral">&quot;res/patternMemoryTexture&quot;</span>);</div>
+<div class="line"><span class="lineno">  387</span> </div>
+<div class="line"><span class="lineno">  388</span>        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; 4; i++)</div>
+<div class="line"><span class="lineno">  389</span>            LTE::windowManger::getWindow(winId)-&gt;assetLibrary-&gt;saveAsset(NameTableMemoryT[i], <span class="stringliteral">&quot;res/NameTableMemoryTexture &quot;</span> + std::to_string(i));</div>
+<div class="line"><span class="lineno">  390</span> </div>
 <div class="line"><span class="lineno">  391</span> </div>
-<div class="line"><span class="lineno">  392</span> </div>
-<div class="line"><span class="lineno">  393</span>        colorPlateid =  LTE::entityManger::addEntity(</div>
-<div class="line"><span class="lineno">  394</span>            [&amp;](LTE::gameObject::gameObjectBuilder *b)</div>
-<div class="line"><span class="lineno">  395</span>            {</div>
-<div class="line"><span class="lineno">  396</span>                b-&gt;setObjectName(<span class="stringliteral">&quot;color palate display&quot;</span>)-&gt;</div>
-<div class="line"><span class="lineno">  397</span>                    setWindowId(winId)-&gt;</div>
-<div class="line"><span class="lineno">  398</span>                    setObjectTransform({{0, -0.3f, 0}, {0, 0, 0}, {1.77778f, 0.2f, 0}})-&gt;</div>
-<div class="line"><span class="lineno">  399</span>                    addComponent(LTE::mesh::build([&amp;](LTE::mesh::meshBuilder *builder)</div>
-<div class="line"><span class="lineno">  400</span>                        { </div>
-<div class="line"><span class="lineno">  401</span>                            builder-&gt;</div>
-<div class="line"><span class="lineno">  402</span>                                setIndexBuffer(tileIndices, 6)-&gt;</div>
-<div class="line"><span class="lineno">  403</span>                                setShaderName(<span class="stringliteral">&quot;res/shaders/Basic.glsl&quot;</span>)-&gt;</div>
-<div class="line"><span class="lineno">  404</span>                                setVertices(tilePostions, 12); </div>
-<div class="line"><span class="lineno">  405</span>                        }))-&gt;</div>
-<div class="line"><span class="lineno">  406</span>                    addComponent(<span class="keyword">new</span> LTE::material(<span class="stringliteral">&quot;res/colorPalateTexture&quot;</span>, glm::vec4(0, 0, 0, 1.0f)));</div>
-<div class="line"><span class="lineno">  407</span>            });</div>
+<div class="line"><span class="lineno">  392</span>        colorPlateid =  LTE::entityManger::addEntity(</div>
+<div class="line"><span class="lineno">  393</span>            [&amp;](LTE::gameObject::gameObjectBuilder *b)</div>
+<div class="line"><span class="lineno">  394</span>            {</div>
+<div class="line"><span class="lineno">  395</span>                b-&gt;setObjectName(<span class="stringliteral">&quot;color palate display&quot;</span>)-&gt;</div>
+<div class="line"><span class="lineno">  396</span>                    setWindowId(winId)-&gt;</div>
+<div class="line"><span class="lineno">  397</span>                    setObjectTransform({{0, -0.3f, 0}, {0, 0, 0}, {1.77778f, 0.2f, 0}})-&gt;</div>
+<div class="line"><span class="lineno">  398</span>                    addComponent(LTE::mesh::build([&amp;](LTE::mesh::meshBuilder *builder)</div>
+<div class="line"><span class="lineno">  399</span>                        { </div>
+<div class="line"><span class="lineno">  400</span>                            builder-&gt;</div>
+<div class="line"><span class="lineno">  401</span>                                setIndexBuffer(tileIndices, 6)-&gt;</div>
+<div class="line"><span class="lineno">  402</span>                                setShaderName(<span class="stringliteral">&quot;res/shaders/Basic.glsl&quot;</span>)-&gt;</div>
+<div class="line"><span class="lineno">  403</span>                                setVertices(tilePostions, 12); </div>
+<div class="line"><span class="lineno">  404</span>                        }))-&gt;</div>
+<div class="line"><span class="lineno">  405</span>                    addComponent(<span class="keyword">new</span> LTE::material(<span class="stringliteral">&quot;res/colorPalateTexture&quot;</span>, glm::vec4(0, 0, 0, 1.0f)));</div>
+<div class="line"><span class="lineno">  406</span>            });</div>
+<div class="line"><span class="lineno">  407</span> </div>
 <div class="line"><span class="lineno">  408</span> </div>
-<div class="line"><span class="lineno">  409</span> </div>
-<div class="line"><span class="lineno">  410</span>        patternMemoryId =  LTE::entityManger::addEntity(</div>
-<div class="line"><span class="lineno">  411</span>            [&amp;](LTE::gameObject::gameObjectBuilder *b)</div>
-<div class="line"><span class="lineno">  412</span>            {</div>
-<div class="line"><span class="lineno">  413</span>                b-&gt;setObjectName(<span class="stringliteral">&quot;pattern memory display&quot;</span>)-&gt;</div>
-<div class="line"><span class="lineno">  414</span>                    setWindowId(winId)-&gt;</div>
-<div class="line"><span class="lineno">  415</span>                    setObjectTransform({{0, -1, 0}, {0, 0, 0}, {1.77778f, 0.7f, 0}})-&gt;</div>
-<div class="line"><span class="lineno">  416</span>                    addComponent(LTE::mesh::build([&amp;](LTE::mesh::meshBuilder *builder)</div>
-<div class="line"><span class="lineno">  417</span>                        { </div>
-<div class="line"><span class="lineno">  418</span>                            builder-&gt;</div>
-<div class="line"><span class="lineno">  419</span>                                setIndexBuffer(tileIndices, 6)-&gt;</div>
-<div class="line"><span class="lineno">  420</span>                                setShaderName(<span class="stringliteral">&quot;res/shaders/Basic.glsl&quot;</span>)-&gt;</div>
-<div class="line"><span class="lineno">  421</span>                                setVertices(tilePostions, 12); </div>
-<div class="line"><span class="lineno">  422</span>                        }))-&gt;</div>
-<div class="line"><span class="lineno">  423</span>                    addComponent(<span class="keyword">new</span> LTE::material(<span class="stringliteral">&quot;res/patternMemoryTexture&quot;</span>, glm::vec4(0, 0, 0, 1.0f)));</div>
-<div class="line"><span class="lineno">  424</span>            });</div>
-<div class="line"><span class="lineno">  425</span> </div>
-<div class="line"><span class="lineno">  426</span>        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; 4; i++)</div>
-<div class="line"><span class="lineno">  427</span>            NameTableMemoryId[i] =  LTE::entityManger::addEntity(</div>
-<div class="line"><span class="lineno">  428</span>                [&amp;](LTE::gameObject::gameObjectBuilder *b)</div>
-<div class="line"><span class="lineno">  429</span>                {</div>
-<div class="line"><span class="lineno">  430</span>                    b-&gt;setObjectName(<span class="stringliteral">&quot;nameTable memory display &quot;</span> + std::to_string(i))-&gt;</div>
-<div class="line"><span class="lineno">  431</span>                        setWindowId(winId)-&gt;</div>
-<div class="line"><span class="lineno">  432</span>                        setObjectTransform({{(i % 2) * 0.91f, 0.51f * (i &lt; 2) - 0.1, 0}, {0, 0, 0}, {0.9, 0.5, 0}})-&gt;</div>
-<div class="line"><span class="lineno">  433</span>                        addComponent(LTE::mesh::build([&amp;](LTE::mesh::meshBuilder *builder)</div>
-<div class="line"><span class="lineno">  434</span>                            { </div>
-<div class="line"><span class="lineno">  435</span>                                builder-&gt;</div>
-<div class="line"><span class="lineno">  436</span>                                    setIndexBuffer(tileIndices, 6)-&gt;</div>
-<div class="line"><span class="lineno">  437</span>                                    setShaderName(<span class="stringliteral">&quot;res/shaders/Basic.glsl&quot;</span>)-&gt;</div>
-<div class="line"><span class="lineno">  438</span>                                    setVertices(tilePostions, 12); </div>
-<div class="line"><span class="lineno">  439</span>                            }))-&gt;</div>
-<div class="line"><span class="lineno">  440</span>                        addComponent(<span class="keyword">new</span> LTE::material(<span class="stringliteral">&quot;res/NameTableMemoryTexture &quot;</span> + std::to_string(i), glm::vec4(0, 0, 0, 1.0f)));</div>
-<div class="line"><span class="lineno">  441</span>                });</div>
-<div class="line"><span class="lineno">  442</span> </div>
-<div class="line"><span class="lineno">  443</span>        <a class="code hl_function" href="../../d7/d6d/classdisplay_debug_info.html#aec61352c5c4ba11cf3b8fc6639f5014f">toggleDebugInfo</a>();</div>
-<div class="line"><span class="lineno">  444</span>    }</div>
-<div class="ttc" id="aclassdisplay_debug_info_html_a05da6d958cb086a874045a14b8ae7afe"><div class="ttname"><a href="../../d7/d6d/classdisplay_debug_info.html#a05da6d958cb086a874045a14b8ae7afe">displayDebugInfo::toggleDebugInfoOnKey</a></div><div class="ttdeci">static void toggleDebugInfoOnKey(LTE::gameObject *eventEntity, LTE::coreEventData *sendor)</div><div class="ttdef"><b>Definition:</b> displayDebugInfo.h:465</div></div>
-<div class="ttc" id="aclassdisplay_debug_info_html_aec61352c5c4ba11cf3b8fc6639f5014f"><div class="ttname"><a href="../../d7/d6d/classdisplay_debug_info.html#aec61352c5c4ba11cf3b8fc6639f5014f">displayDebugInfo::toggleDebugInfo</a></div><div class="ttdeci">static void toggleDebugInfo()</div><div class="ttdef"><b>Definition:</b> displayDebugInfo.h:446</div></div>
+<div class="line"><span class="lineno">  409</span>        patternMemoryId =  LTE::entityManger::addEntity(</div>
+<div class="line"><span class="lineno">  410</span>            [&amp;](LTE::gameObject::gameObjectBuilder *b)</div>
+<div class="line"><span class="lineno">  411</span>            {</div>
+<div class="line"><span class="lineno">  412</span>                b-&gt;setObjectName(<span class="stringliteral">&quot;pattern memory display&quot;</span>)-&gt;</div>
+<div class="line"><span class="lineno">  413</span>                    setWindowId(winId)-&gt;</div>
+<div class="line"><span class="lineno">  414</span>                    setObjectTransform({{0, -1, 0}, {0, 0, 0}, {1.77778f, 0.7f, 0}})-&gt;</div>
+<div class="line"><span class="lineno">  415</span>                    addComponent(LTE::mesh::build([&amp;](LTE::mesh::meshBuilder *builder)</div>
+<div class="line"><span class="lineno">  416</span>                        { </div>
+<div class="line"><span class="lineno">  417</span>                            builder-&gt;</div>
+<div class="line"><span class="lineno">  418</span>                                setIndexBuffer(tileIndices, 6)-&gt;</div>
+<div class="line"><span class="lineno">  419</span>                                setShaderName(<span class="stringliteral">&quot;res/shaders/Basic.glsl&quot;</span>)-&gt;</div>
+<div class="line"><span class="lineno">  420</span>                                setVertices(tilePostions, 12); </div>
+<div class="line"><span class="lineno">  421</span>                        }))-&gt;</div>
+<div class="line"><span class="lineno">  422</span>                    addComponent(<span class="keyword">new</span> LTE::material(<span class="stringliteral">&quot;res/patternMemoryTexture&quot;</span>, glm::vec4(0, 0, 0, 1.0f)));</div>
+<div class="line"><span class="lineno">  423</span>            });</div>
+<div class="line"><span class="lineno">  424</span> </div>
+<div class="line"><span class="lineno">  425</span>        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; 4; i++)</div>
+<div class="line"><span class="lineno">  426</span>            NameTableMemoryId[i] =  LTE::entityManger::addEntity(</div>
+<div class="line"><span class="lineno">  427</span>                [&amp;](LTE::gameObject::gameObjectBuilder *b)</div>
+<div class="line"><span class="lineno">  428</span>                {</div>
+<div class="line"><span class="lineno">  429</span>                    b-&gt;setObjectName(<span class="stringliteral">&quot;nameTable memory display &quot;</span> + std::to_string(i))-&gt;</div>
+<div class="line"><span class="lineno">  430</span>                        setWindowId(winId)-&gt;</div>
+<div class="line"><span class="lineno">  431</span>                        setObjectTransform({{(i % 2) * 0.91f, 0.51f * (i &lt; 2) - 0.1, 0}, {0, 0, 0}, {0.9, 0.5, 0}})-&gt;</div>
+<div class="line"><span class="lineno">  432</span>                        addComponent(LTE::mesh::build([&amp;](LTE::mesh::meshBuilder *builder)</div>
+<div class="line"><span class="lineno">  433</span>                            { </div>
+<div class="line"><span class="lineno">  434</span>                                builder-&gt;</div>
+<div class="line"><span class="lineno">  435</span>                                    setIndexBuffer(tileIndices, 6)-&gt;</div>
+<div class="line"><span class="lineno">  436</span>                                    setShaderName(<span class="stringliteral">&quot;res/shaders/Basic.glsl&quot;</span>)-&gt;</div>
+<div class="line"><span class="lineno">  437</span>                                    setVertices(tilePostions, 12); </div>
+<div class="line"><span class="lineno">  438</span>                            }))-&gt;</div>
+<div class="line"><span class="lineno">  439</span>                        addComponent(<span class="keyword">new</span> LTE::material(<span class="stringliteral">&quot;res/NameTableMemoryTexture &quot;</span> + std::to_string(i), glm::vec4(0, 0, 0, 1.0f)));</div>
+<div class="line"><span class="lineno">  440</span>                });</div>
+<div class="line"><span class="lineno">  441</span> </div>
+<div class="line"><span class="lineno">  442</span>        <a class="code hl_function" href="../../d7/d6d/classdisplay_debug_info.html#aec61352c5c4ba11cf3b8fc6639f5014f">toggleDebugInfo</a>();</div>
+<div class="line"><span class="lineno">  443</span>    }</div>
+<div class="ttc" id="aclassdisplay_debug_info_html_a05da6d958cb086a874045a14b8ae7afe"><div class="ttname"><a href="../../d7/d6d/classdisplay_debug_info.html#a05da6d958cb086a874045a14b8ae7afe">displayDebugInfo::toggleDebugInfoOnKey</a></div><div class="ttdeci">static void toggleDebugInfoOnKey(LTE::gameObject *eventEntity, LTE::coreEventData *sendor)</div><div class="ttdef"><b>Definition:</b> displayDebugInfo.h:464</div></div>
+<div class="ttc" id="aclassdisplay_debug_info_html_aec61352c5c4ba11cf3b8fc6639f5014f"><div class="ttname"><a href="../../d7/d6d/classdisplay_debug_info.html#aec61352c5c4ba11cf3b8fc6639f5014f">displayDebugInfo::toggleDebugInfo</a></div><div class="ttdeci">static void toggleDebugInfo()</div><div class="ttdef"><b>Definition:</b> displayDebugInfo.h:445</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -302,7 +302,7 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  370</span>{ <span class="keywordflow">return</span> showDebugInfo; }</div>
+<div class="fragment"><div class="line"><span class="lineno">  369</span>{ <span class="keywordflow">return</span> showDebugInfo; }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -328,23 +328,23 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  447</span>    {</div>
-<div class="line"><span class="lineno">  448</span>        <span class="keywordflow">if</span> (showDebugInfo)</div>
-<div class="line"><span class="lineno">  449</span>        {</div>
-<div class="line"><span class="lineno">  450</span>            LTE::eventManger::removeEvent(<span class="stringliteral">&quot;ImGui render/print debug info&quot;</span>);</div>
-<div class="line"><span class="lineno">  451</span>            LTE::eventManger::removeEvent(<span class="stringliteral">&quot;window render/nes emulator/show color palate&quot;</span>);</div>
-<div class="line"><span class="lineno">  452</span>            LTE::eventManger::removeEvent(<span class="stringliteral">&quot;window render/nes emulator/show Pattern&quot;</span>);</div>
-<div class="line"><span class="lineno">  453</span>            LTE::eventManger::removeEvent(<span class="stringliteral">&quot;window render/nes emulator/show name table&quot;</span>);</div>
-<div class="line"><span class="lineno">  454</span>        }</div>
-<div class="line"><span class="lineno">  455</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  456</span>        {</div>
-<div class="line"><span class="lineno">  457</span>            LTE::eventManger::startBuildingEvent()-&gt;setEventRoute(<span class="stringliteral">&quot;ImGui render/print debug info&quot;</span>)-&gt;setEventCallback(ImGuiRender)-&gt;setEntityID(<span class="keywordtype">id</span>)-&gt;setWindowId(winId)-&gt;add();</div>
-<div class="line"><span class="lineno">  458</span>            LTE::eventManger::startBuildingEvent()-&gt;setEventRoute(<span class="stringliteral">&quot;window render/nes emulator/show color palate&quot;</span>)-&gt;setEventCallback(updateColorPalate)-&gt;setEntityID(<span class="keywordtype">id</span>)-&gt;setWindowId(winId)-&gt;add();</div>
-<div class="line"><span class="lineno">  459</span>            LTE::eventManger::startBuildingEvent()-&gt;setEventRoute(<span class="stringliteral">&quot;window render/nes emulator/show Pattern&quot;</span>)-&gt;setEventCallback(updatePatternMemory)-&gt;setEntityID(<span class="keywordtype">id</span>)-&gt;setWindowId(winId)-&gt;add();</div>
-<div class="line"><span class="lineno">  460</span>            LTE::eventManger::startBuildingEvent()-&gt;setEventRoute(<span class="stringliteral">&quot;window render/nes emulator/show name table&quot;</span>)-&gt;setEventCallback(updateNameTableMemory)-&gt;setEntityID(<span class="keywordtype">id</span>)-&gt;setWindowId(winId)-&gt;add();</div>
-<div class="line"><span class="lineno">  461</span>        }</div>
-<div class="line"><span class="lineno">  462</span>        showDebugInfo = !showDebugInfo;</div>
-<div class="line"><span class="lineno">  463</span>    }</div>
+<div class="fragment"><div class="line"><span class="lineno">  446</span>    {</div>
+<div class="line"><span class="lineno">  447</span>        <span class="keywordflow">if</span> (showDebugInfo)</div>
+<div class="line"><span class="lineno">  448</span>        {</div>
+<div class="line"><span class="lineno">  449</span>            LTE::eventManger::removeEvent(<span class="stringliteral">&quot;ImGui render/print debug info&quot;</span>);</div>
+<div class="line"><span class="lineno">  450</span>            LTE::eventManger::removeEvent(<span class="stringliteral">&quot;window render/nes emulator/show color palate&quot;</span>);</div>
+<div class="line"><span class="lineno">  451</span>            LTE::eventManger::removeEvent(<span class="stringliteral">&quot;window render/nes emulator/show Pattern&quot;</span>);</div>
+<div class="line"><span class="lineno">  452</span>            LTE::eventManger::removeEvent(<span class="stringliteral">&quot;window render/nes emulator/show name table&quot;</span>);</div>
+<div class="line"><span class="lineno">  453</span>        }</div>
+<div class="line"><span class="lineno">  454</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  455</span>        {</div>
+<div class="line"><span class="lineno">  456</span>            LTE::eventManger::startBuildingEvent()-&gt;setEventRoute(<span class="stringliteral">&quot;ImGui render/print debug info&quot;</span>)-&gt;setEventCallback(ImGuiRender)-&gt;setEntityID(<span class="keywordtype">id</span>)-&gt;setWindowId(winId)-&gt;add();</div>
+<div class="line"><span class="lineno">  457</span>            LTE::eventManger::startBuildingEvent()-&gt;setEventRoute(<span class="stringliteral">&quot;window render/nes emulator/show color palate&quot;</span>)-&gt;setEventCallback(updateColorPalate)-&gt;setEntityID(<span class="keywordtype">id</span>)-&gt;setWindowId(winId)-&gt;add();</div>
+<div class="line"><span class="lineno">  458</span>            LTE::eventManger::startBuildingEvent()-&gt;setEventRoute(<span class="stringliteral">&quot;window render/nes emulator/show Pattern&quot;</span>)-&gt;setEventCallback(updatePatternMemory)-&gt;setEntityID(<span class="keywordtype">id</span>)-&gt;setWindowId(winId)-&gt;add();</div>
+<div class="line"><span class="lineno">  459</span>            LTE::eventManger::startBuildingEvent()-&gt;setEventRoute(<span class="stringliteral">&quot;window render/nes emulator/show name table&quot;</span>)-&gt;setEventCallback(updateNameTableMemory)-&gt;setEntityID(<span class="keywordtype">id</span>)-&gt;setWindowId(winId)-&gt;add();</div>
+<div class="line"><span class="lineno">  460</span>        }</div>
+<div class="line"><span class="lineno">  461</span>        showDebugInfo = !showDebugInfo;</div>
+<div class="line"><span class="lineno">  462</span>    }</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -392,12 +392,12 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  466</span>    {</div>
-<div class="line"><span class="lineno">  467</span>        LTE::KeyData *eventData = <span class="keyword">static_cast&lt;</span>LTE::KeyData *<span class="keyword">&gt;</span>(sendor);</div>
-<div class="line"><span class="lineno">  468</span> </div>
-<div class="line"><span class="lineno">  469</span>        <span class="keywordflow">if</span> (eventData-&gt;key == LT_KEY_F1)</div>
-<div class="line"><span class="lineno">  470</span>            <a class="code hl_function" href="../../d7/d6d/classdisplay_debug_info.html#aec61352c5c4ba11cf3b8fc6639f5014f">toggleDebugInfo</a>();</div>
-<div class="line"><span class="lineno">  471</span>    }</div>
+<div class="fragment"><div class="line"><span class="lineno">  465</span>    {</div>
+<div class="line"><span class="lineno">  466</span>        LTE::KeyData *eventData = <span class="keyword">static_cast&lt;</span>LTE::KeyData *<span class="keyword">&gt;</span>(sendor);</div>
+<div class="line"><span class="lineno">  467</span> </div>
+<div class="line"><span class="lineno">  468</span>        <span class="keywordflow">if</span> (eventData-&gt;key == LT_KEY_F1)</div>
+<div class="line"><span class="lineno">  469</span>            <a class="code hl_function" href="../../d7/d6d/classdisplay_debug_info.html#aec61352c5c4ba11cf3b8fc6639f5014f">toggleDebugInfo</a>();</div>
+<div class="line"><span class="lineno">  470</span>    }</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">

@@ -3,6 +3,7 @@
 
 #include "6502.h"
 #include "bus.h"
+#include "DMA.h"
 
 #include <thread>
 
@@ -14,8 +15,7 @@ class cpu
         static inline std::thread *clockT;
 
     public:
-        static inline uint8_t cycles = 0X00;
-        static bool isCpuComplete(){ return cycles == 0; }
+        // static bool isCpuComplete(){ return cpuData->cycles == 0; }
 
     	static std::string hex(uint32_t n, uint8_t d)
         {
@@ -39,15 +39,26 @@ class cpu
             LTE::eventManger::startBuildingEvent()->setEntityID(SystemData)->setEventRoute("cpu cmd/cpu reset/6502")->setEventCallback(cpu<uint8_t, uint16_t>::reset)->add();
             LTE::eventManger::startBuildingEvent()->setEntityID(SystemData)->setEventRoute("cpu cmd/cpu irq/6502")->setEventCallback(cpu<uint8_t, uint16_t>::irq)->add();
             LTE::eventManger::startBuildingEvent()->setEntityID(SystemData)->setEventRoute("cpu cmd/cpu nmi/6502")->setEventCallback(cpu<uint8_t, uint16_t>::nmi)->add();
-            // LTE::eventManger::startBuildingEvent()->setEntityID(SystemData)->setEventRoute("cpu cmd/cpu clock/6502")->setEventCallback(cpu<uint8_t, uint16_t>::clock)->add();
-
-            // clockT = new std::thread(clock);
         }
 
         static void close()
         {
-            // clockT->join();
-            // delete clockT;
+
+        }
+
+        static void executeInstruction(bus<dataSize, addrSize> *busData, cpu6502 *cpuData)
+        {
+            cpuData->opcode = busData->read(cpuData->pc);
+            cpuData->pc++;
+            cpuData->status.U = 1;
+
+            cpuData->cycles = cpuData->lookup[cpuData->opcode].cycles;
+
+            int additional_cycle1 = (cpuData->*(cpuData->lookup[cpuData->opcode].addrmode))();
+            int additional_cycle2 = (cpuData->*(cpuData->lookup[cpuData->opcode].operate))();
+
+            cpuData->cycles += (additional_cycle1 & additional_cycle2);
+            cpuData->status.U = 1;
         }
 
 
@@ -55,32 +66,18 @@ class cpu
         {
             bus<dataSize, addrSize> *busData = eventEntity->getComponent<bus<dataSize, addrSize>>();
             cpu6502 *cpuData = eventEntity->getComponent<cpu6502>();
+            DMA *dma = eventEntity->getComponent<DMA>();
 
-            static uint8_t opcode = 0;
 
-            if((int)cycles == 0)
+            if((int)cpuData->cycles == 0)
             {
-                // LAUGHTALE_ENGINR_LOG_INFO(hex(cpuData->pc, 4) << ", " << hex(opcode, 2));
-
-                // if(opcode == 0)
-                    // LAUGHTALE_ENGINR_LOG_INFO(hex(opcode, 2));
-                opcode = busData->read(cpuData->pc);
-                cpuData->pc++;
-                cpuData->status.U = 1;
-
-                cycles = cpuData->lookup[opcode].cycles;
-
-                int additional_cycle1 = (cpuData->*(cpuData->lookup[opcode].addrmode))();
-                int additional_cycle2 = (cpuData->*(cpuData->lookup[opcode].operate))();
-
-                cycles += (additional_cycle1 & additional_cycle2);
-                cpuData->status.U = 1;
-
+                if (dma->isOn())
+                    dma->clock();
+                else
+                  executeInstruction(busData, cpuData);
             }
             cpuData->clock++;
-            cycles--;
-        
-            
+            cpuData->cycles--;
         }
 
         static void reset(LTE::gameObject *eventEntity, LTE::coreEventData *sendor)
@@ -100,7 +97,7 @@ class cpu
             cpuData->y = 0;
             cpuData->stkp = 0xFD;
 
-	        cycles = 8;
+	        cpuData->cycles = 8;
         }
 
         static void irq(LTE::gameObject *eventEntity, LTE::coreEventData *sendor)
@@ -127,7 +124,7 @@ class cpu
             uint16_t lo = busData->read(addr_abs + 0);
             uint16_t hi = busData->read(addr_abs + 1);
             cpuData->pc = (hi << 8) | lo;
-	        cycles = 7;
+	        cpuData->cycles = 7;
 
         }
 
@@ -152,7 +149,7 @@ class cpu
             uint16_t lo = busData->read(addr_abs + 0);
             uint16_t hi = busData->read(addr_abs + 1);
             cpuData->pc = (hi << 8) | lo;
-	        cycles = 8;
+	        cpuData->cycles = 8;
         }
 
 };

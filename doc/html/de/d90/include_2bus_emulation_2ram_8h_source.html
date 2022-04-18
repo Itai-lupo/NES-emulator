@@ -124,17 +124,15 @@ $(document).ready(function(){initNavTree('de/d90/include_2bus_emulation_2ram_8h_
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="../../dd/d28/classram.html#a85983e19a0af45528085f72393c69ba3">   36</a></span>        <span class="keyword">virtual</span> uint8_t <a class="code hl_function" href="../../dd/d28/classram.html#a85983e19a0af45528085f72393c69ba3">read</a>(uint16_t addr, <span class="keywordtype">bool</span> bReadOnly = <span class="keyword">false</span>)<span class="keyword"> override</span></div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="keyword">        </span>{</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            <span class="comment">// LAUGHTALE_ENGINR_LOG_INFO(&quot;ram read: &quot; &lt;&lt; datatoHexString(addr, 4) &lt;&lt; &quot;, &quot; &lt;&lt; datatoHexString(ramData[addr &amp; 0x07FF], 2));</span></div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            <span class="keywordflow">return</span> ramData[addr &amp; 0x07FF];</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        }</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="../../dd/d28/classram.html#af0f454094d68ea49725c4f241023cf6a">   42</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../dd/d28/classram.html#af0f454094d68ea49725c4f241023cf6a">write</a>(uint16_t addr, uint8_t data)<span class="keyword"> override</span></div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="keyword">        </span>{</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            <span class="comment">// LAUGHTALE_ENGINR_LOG_INFO(&quot;ram write: &quot; &lt;&lt; datatoHexString(addr, 4) &lt;&lt; &quot;, &quot; &lt;&lt; datatoHexString(data, 2));</span></div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            ramData[addr &amp; 0x07FF] = data;</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        }</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>};</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            <span class="keywordflow">return</span> ramData[addr &amp; 0x07FF];</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        }</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="../../dd/d28/classram.html#af0f454094d68ea49725c4f241023cf6a">   41</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../dd/d28/classram.html#af0f454094d68ea49725c4f241023cf6a">write</a>(uint16_t addr, uint8_t data)<span class="keyword"> override</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="keyword">        </span>{</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            ramData[addr &amp; 0x07FF] = data;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        }</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>};</div>
 <div class="ttc" id="abus_device_8h_html"><div class="ttname"><a href="../../d9/deb/bus_device_8h.html">busDevice.h</a></div></div>
 <div class="ttc" id="aclassbus_device_html"><div class="ttname"><a href="../../dc/d77/classbus_device.html">busDevice</a></div><div class="ttdef"><b>Definition:</b> busDevice.h:5</div></div>
 <div class="ttc" id="aclassram_html"><div class="ttname"><a href="../../dd/d28/classram.html">ram</a></div><div class="ttdef"><b>Definition:</b> ram.h:8</div></div>
@@ -142,7 +140,7 @@ $(document).ready(function(){initNavTree('de/d90/include_2bus_emulation_2ram_8h_
 <div class="ttc" id="aclassram_html_a40fb07b2eba690992ba281ca6ef9902c"><div class="ttname"><a href="../../dd/d28/classram.html#a40fb07b2eba690992ba281ca6ef9902c">ram::ram</a></div><div class="ttdeci">ram()</div><div class="ttdef"><b>Definition:</b> ram.h:21</div></div>
 <div class="ttc" id="aclassram_html_a85983e19a0af45528085f72393c69ba3"><div class="ttname"><a href="../../dd/d28/classram.html#a85983e19a0af45528085f72393c69ba3">ram::read</a></div><div class="ttdeci">virtual uint8_t read(uint16_t addr, bool bReadOnly=false) override</div><div class="ttdef"><b>Definition:</b> ram.h:36</div></div>
 <div class="ttc" id="aclassram_html_ad1d4c635b695934d8daf2d188149cb57"><div class="ttname"><a href="../../dd/d28/classram.html#ad1d4c635b695934d8daf2d188149cb57">ram::isInRange</a></div><div class="ttdeci">virtual bool isInRange(uint16_t addr) override</div><div class="ttdef"><b>Definition:</b> ram.h:31</div></div>
-<div class="ttc" id="aclassram_html_af0f454094d68ea49725c4f241023cf6a"><div class="ttname"><a href="../../dd/d28/classram.html#af0f454094d68ea49725c4f241023cf6a">ram::write</a></div><div class="ttdeci">virtual void write(uint16_t addr, uint8_t data) override</div><div class="ttdef"><b>Definition:</b> ram.h:42</div></div>
+<div class="ttc" id="aclassram_html_af0f454094d68ea49725c4f241023cf6a"><div class="ttname"><a href="../../dd/d28/classram.html#af0f454094d68ea49725c4f241023cf6a">ram::write</a></div><div class="ttdeci">virtual void write(uint16_t addr, uint8_t data) override</div><div class="ttdef"><b>Definition:</b> ram.h:41</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

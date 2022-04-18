@@ -295,7 +295,6 @@ private:
                 uint16_t tileId = p->ppuBus.read(j);
                 for(int k = 0; k < 8; k++)
                 {
-                    // LAUGHTALE_ENGINR_CONDTION_LOG_INFO(toHexString(j, 4), tileId != 0 && tileId != 32);
                     uint8_t LSB = p->ppuBus.read((tileId << 4) + 0 + k + (i % 2) * 0x1000);
                     uint8_t MSB = p->ppuBus.read((tileId << 4) + 8 + k + (i % 2) * 0x1000);
                     

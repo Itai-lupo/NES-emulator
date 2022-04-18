@@ -13,11 +13,20 @@ class controller: public busDevice<uint8_t, uint16_t>, public LTE::component
         {
             struct 
             {
-                uint8_t a;
-                uint8_t b;                
+                uint8_t right:  1;
+                uint8_t left:   1;                
+                uint8_t down:   1;                
+                uint8_t up:     1;
+
+                uint8_t start:  1;
+                uint8_t select: 1;                
+                
+                uint8_t B:      1;            
+                uint8_t A:      1;                
+
             };
-            uint8_t reg[2];
-        } controllerData;
+            uint8_t reg;
+        } controllerData[2];
         
     	uint8_t controller_state[2];
 
@@ -27,15 +36,29 @@ class controller: public busDevice<uint8_t, uint16_t>, public LTE::component
         {
             controller *controllerContainer = eventEntity->getComponent<controller>();
 
-            controllerContainer->controllerData.reg[0] = 0x00;
-            controllerContainer->controllerData.reg[0] |= sendor->win->inputManger->isKeyPressed(LT_KEY_X) ?     0x80 : 0x00;
-            controllerContainer->controllerData.reg[0] |= sendor->win->inputManger->isKeyPressed(LT_KEY_Z) ?     0x40 : 0x00;
-            controllerContainer->controllerData.reg[0] |= sendor->win->inputManger->isKeyPressed(LT_KEY_A) ?     0x20 : 0x00;
-            controllerContainer->controllerData.reg[0] |= sendor->win->inputManger->isKeyPressed(LT_KEY_S) ?     0x10 : 0x00;
-            controllerContainer->controllerData.reg[0] |= sendor->win->inputManger->isKeyPressed(LT_KEY_UP) ?    0x08 : 0x00;
-            controllerContainer->controllerData.reg[0] |= sendor->win->inputManger->isKeyPressed(LT_KEY_DOWN) ?  0x04 : 0x00;
-            controllerContainer->controllerData.reg[0] |= sendor->win->inputManger->isKeyPressed(LT_KEY_LEFT) ?  0x02 : 0x00;
-            controllerContainer->controllerData.reg[0] |= sendor->win->inputManger->isKeyPressed(LT_KEY_RIGHT) ? 0x01 : 0x00;
+            controllerContainer->controllerData[0].A        = sendor->win->inputManger->isKeyPressed(LT_KEY_Q);
+            controllerContainer->controllerData[0].B        = sendor->win->inputManger->isKeyPressed(LT_KEY_E);
+            
+            controllerContainer->controllerData[0].select   = sendor->win->inputManger->isKeyPressed(LT_KEY_Z);
+            controllerContainer->controllerData[0].start    = sendor->win->inputManger->isKeyPressed(LT_KEY_X);
+
+            controllerContainer->controllerData[0].up       = sendor->win->inputManger->isKeyPressed(LT_KEY_W);
+            controllerContainer->controllerData[0].down     = sendor->win->inputManger->isKeyPressed(LT_KEY_S);
+            controllerContainer->controllerData[0].left     = sendor->win->inputManger->isKeyPressed(LT_KEY_A);
+            controllerContainer->controllerData[0].right    = sendor->win->inputManger->isKeyPressed(LT_KEY_D);
+
+
+
+            controllerContainer->controllerData[1].A        = sendor->win->inputManger->isKeyPressed(LT_KEY_1);
+            controllerContainer->controllerData[1].B        = sendor->win->inputManger->isKeyPressed(LT_KEY_2);
+            
+            controllerContainer->controllerData[1].select   = sendor->win->inputManger->isKeyPressed(LT_KEY_BACKSLASH);
+            controllerContainer->controllerData[1].start    = sendor->win->inputManger->isKeyPressed(LT_KEY_ENTER);
+
+            controllerContainer->controllerData[1].up       = sendor->win->inputManger->isKeyPressed(LT_KEY_UP);
+            controllerContainer->controllerData[1].down     = sendor->win->inputManger->isKeyPressed(LT_KEY_DOWN);
+            controllerContainer->controllerData[1].left     = sendor->win->inputManger->isKeyPressed(LT_KEY_LEFT);
+            controllerContainer->controllerData[1].right    = sendor->win->inputManger->isKeyPressed(LT_KEY_RIGHT);
         }      
 
         controller()
@@ -71,16 +94,13 @@ class controller: public busDevice<uint8_t, uint16_t>, public LTE::component
         {
             uint8_t data = (controller_state[addr & 0x0001] & 0x80) > 0;
             controller_state[addr & 0x0001] <<= 1;
-            // LAUGHTALE_ENGINR_LOG_INFO((int)data);
 
             return data;
         }
 
         virtual void write(uint16_t addr, uint8_t data) override
         {
-    		controller_state[addr & 0x0001] = controllerData.reg[addr & 0x0001];
-            // LAUGHTALE_ENGINR_LOG_INFO((int)controller_state[addr & 0x0001] );
-
+    		controller_state[addr & 0x0001] = controllerData[addr & 0x0001].reg;
         }
 
 };

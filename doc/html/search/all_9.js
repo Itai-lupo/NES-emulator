@@ -5,7 +5,7 @@ var searchData=
   ['gamesmenu_2eh_2',['gamesMenu.h',['../d9/d6e/games_menu_8h.html',1,'']]],
   ['getbgpixelpalette_3',['getBGPixelPalette',['../d6/d3f/classppu.html#a637979c9ca071fa6aa2b16783220538d',1,'ppu']]],
   ['getbgpixelpaletteoffset_4',['getBGPixelPaletteOffset',['../d6/d3f/classppu.html#a032eaca2250f2be302f32cd259ec53ce',1,'ppu']]],
-  ['getcolourfrompaletteram_5',['GetColourFromPaletteRam',['../d6/d3f/classppu.html#ab7902989f58e71e7b1a934558ee6bcf1',1,'ppu::GetColourFromPaletteRam(ppu2c02 *ppuData, uint8_t palette, uint8_t pixel)'],['../d6/d3f/classppu.html#ab7902989f58e71e7b1a934558ee6bcf1',1,'ppu::GetColourFromPaletteRam(ppu2c02 *ppuData, uint8_t palette, uint8_t pixel)']]],
+  ['getcolourfrompaletteram_5',['GetColourFromPaletteRam',['../d6/d3f/classppu.html#ab7902989f58e71e7b1a934558ee6bcf1',1,'ppu']]],
   ['getmirror_6',['getMirror',['../da/de8/classppu_bus_cartridge.html#a9dcc9658ba9b6d6ec08ce985414cfdba',1,'ppuBusCartridge']]],
   ['grayscale_7',['grayscale',['../d2/deb/classppu2c02.html#a58c6b4c7cec4c33956796a2600d5610c',1,'ppu2c02']]]
 ];

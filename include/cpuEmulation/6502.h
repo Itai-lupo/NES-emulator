@@ -25,6 +25,9 @@ class cpu6502: public LTE::component
         uint8_t a = 0X00, x = 0X00, y = 0X00;
         uint8_t stkp = 0X00;
         uint16_t pc = 0X0000;
+        uint8_t cycles = 0X00;
+        uint8_t opcode = 0;
+
         union 
         {
             struct

@@ -258,9 +258,8 @@ Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="../../dc/d77/classbus_device.html#a76776dbaa4b844927261fe46ab3b690f">busDevice&lt; uint8_t, uint16_t &gt;</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   37</span>        {</div>
-<div class="line"><span class="lineno">   38</span>            <span class="comment">// LAUGHTALE_ENGINR_LOG_INFO(&quot;ram read: &quot; &lt;&lt; datatoHexString(addr, 4) &lt;&lt; &quot;, &quot; &lt;&lt; datatoHexString(ramData[addr &amp; 0x07FF], 2));</span></div>
-<div class="line"><span class="lineno">   39</span>            <span class="keywordflow">return</span> ramData[addr &amp; 0x07FF];</div>
-<div class="line"><span class="lineno">   40</span>        }</div>
+<div class="line"><span class="lineno">   38</span>            <span class="keywordflow">return</span> ramData[addr &amp; 0x07FF];</div>
+<div class="line"><span class="lineno">   39</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -299,10 +298,9 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="../../dc/d77/classbus_device.html#a72c738905ce28059b913090afd049061">busDevice&lt; uint8_t, uint16_t &gt;</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   43</span>        {</div>
-<div class="line"><span class="lineno">   44</span>            <span class="comment">// LAUGHTALE_ENGINR_LOG_INFO(&quot;ram write: &quot; &lt;&lt; datatoHexString(addr, 4) &lt;&lt; &quot;, &quot; &lt;&lt; datatoHexString(data, 2));</span></div>
-<div class="line"><span class="lineno">   45</span>            ramData[addr &amp; 0x07FF] = data;</div>
-<div class="line"><span class="lineno">   46</span>        }</div>
+<div class="fragment"><div class="line"><span class="lineno">   42</span>        {</div>
+<div class="line"><span class="lineno">   43</span>            ramData[addr &amp; 0x07FF] = data;</div>
+<div class="line"><span class="lineno">   44</span>        }</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">

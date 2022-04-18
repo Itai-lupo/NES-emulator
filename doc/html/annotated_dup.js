@@ -12,6 +12,7 @@ var annotated_dup =
     [ "cpuBusCartridge", "dc/de6/classcpu_bus_cartridge.html", "dc/de6/classcpu_bus_cartridge" ],
     [ "cpuTest", "d0/d1e/classcpu_test.html", "d0/d1e/classcpu_test" ],
     [ "displayDebugInfo", "d7/d6d/classdisplay_debug_info.html", null ],
+    [ "DMA", "d4/dff/class_d_m_a.html", "d4/dff/class_d_m_a" ],
     [ "gamesMenu", "d4/d6e/classgames_menu.html", "d4/d6e/classgames_menu" ],
     [ "mapper", "d6/d32/classmapper.html", "d6/d32/classmapper" ],
     [ "mapper_000", "d5/df4/classmapper__000.html", "d5/df4/classmapper__000" ],

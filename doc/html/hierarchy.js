@@ -2,6 +2,7 @@ var hierarchy =
 [
     [ "busDevice< dataSize, addrSize >", "dc/d77/classbus_device.html", null ],
     [ "busDevice< uint8_t, uint16_t >", "dc/d77/classbus_device.html", [
+      [ "DMA", "d4/dff/class_d_m_a.html", null ],
       [ "controller", "d6/df9/classcontroller.html", null ],
       [ "cpuBusCartridge", "dc/de6/classcpu_bus_cartridge.html", null ],
       [ "nameTable", "da/d1c/classname_table.html", null ],
@@ -14,6 +15,7 @@ var hierarchy =
     [ "cartridge", "d2/dd7/classcartridge.html", null ],
     [ "LTE::component", null, [
       [ "bus< uint8_t, uint16_t >", "d0/d88/classbus.html", null ],
+      [ "DMA", "d4/dff/class_d_m_a.html", null ],
       [ "bus< dataSize, addrSize >", "d0/d88/classbus.html", null ],
       [ "controller", "d6/df9/classcontroller.html", null ],
       [ "cpu6502", "d9/dbe/classcpu6502.html", null ],
