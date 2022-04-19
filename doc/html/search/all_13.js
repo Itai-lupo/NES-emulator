@@ -8,10 +8,17 @@ var searchData=
   ['sprite_5foverflow_5',['sprite_overflow',['../d2/deb/classppu2c02.html#a5a0bfb4266a7b163f46f68760ef17240',1,'ppu2c02']]],
   ['sprite_5fsize_6',['sprite_size',['../df/d5b/unionppu2c02_1_1_p_p_u_c_t_r_l.html#a76e1b73727a510a0a66e960719be2120',1,'ppu2c02::PPUCTRL']]],
   ['sprite_5fzero_5fhit_7',['sprite_zero_hit',['../d2/deb/classppu2c02.html#a7cb98208b1520638bfc7f7a459f47ea3',1,'ppu2c02']]],
-  ['start_8',['start',['../d6/df9/classcontroller.html#a976dcc8850d8de37a426b37d1d0754b2',1,'controller']]],
-  ['status_9',['status',['../d9/dbe/classcpu6502.html#a3f2a36c72eb1d2e08f999ed416709d92',1,'cpu6502::status()'],['../d2/deb/classppu2c02.html#ad0da07ad1213767314d41a02c825d917',1,'ppu2c02::status()']]],
-  ['statusdata_10',['statusData',['../d9/dbe/classcpu6502.html#a71b68863d6facf1c664286a43e08cb84',1,'cpu6502']]],
-  ['stkp_11',['stkp',['../d9/dbe/classcpu6502.html#ae7c07e603fef0455bbda5db0d37a8b73',1,'cpu6502']]],
-  ['sysbus_12',['sysBus',['../de/d21/classbus_test.html#ac34a488b3ae6db6b2090b5cd555179f0',1,'busTest::sysBus()'],['../d8/d8f/classcartridge_emualtion_test.html#a958c2da6a79d1003b289e8b4c21dd141',1,'cartridgeEmualtionTest::sysBus()']]],
-  ['sysclock_13',['sysClock',['../df/d0a/main_8cpp.html#a6d327e023ed1dae058f86d827940d7a6',1,'main.cpp']]]
+  ['spritecount_8',['spriteCount',['../d2/deb/classppu2c02.html#a80404dda2684075bec7c0a09a0e97238',1,'ppu2c02']]],
+  ['spritedata_9',['spriteData',['../d7/de8/structppu2c02_1_1sprite_data.html',1,'ppu2c02']]],
+  ['spritescanline_10',['spriteScanline',['../d2/deb/classppu2c02.html#acbdeb257d1d202217512159326b2db95',1,'ppu2c02']]],
+  ['spriteshifterpatternhi_11',['spriteShifterPatternHi',['../d2/deb/classppu2c02.html#a18e78ca23f88ef533a32f003f6d82515',1,'ppu2c02']]],
+  ['spriteshifterpatternlo_12',['spriteShifterPatternLo',['../d2/deb/classppu2c02.html#a9ae0a9296ea1a2b87471eef102255d0c',1,'ppu2c02']]],
+  ['spritezerobeingrendered_13',['spriteZeroBeingRendered',['../d2/deb/classppu2c02.html#a64835c5fe29fe6f047546c06ba4b36ad',1,'ppu2c02']]],
+  ['spritezerohitpossible_14',['spriteZeroHitPossible',['../d2/deb/classppu2c02.html#a19feb74ccf16a25ff2a04f00a79bd264',1,'ppu2c02']]],
+  ['start_15',['start',['../d6/df9/classcontroller.html#a976dcc8850d8de37a426b37d1d0754b2',1,'controller']]],
+  ['status_16',['status',['../d9/dbe/classcpu6502.html#a3f2a36c72eb1d2e08f999ed416709d92',1,'cpu6502::status()'],['../d2/deb/classppu2c02.html#ad0da07ad1213767314d41a02c825d917',1,'ppu2c02::status()']]],
+  ['statusdata_17',['statusData',['../d9/dbe/classcpu6502.html#a71b68863d6facf1c664286a43e08cb84',1,'cpu6502']]],
+  ['stkp_18',['stkp',['../d9/dbe/classcpu6502.html#ae7c07e603fef0455bbda5db0d37a8b73',1,'cpu6502']]],
+  ['sysbus_19',['sysBus',['../de/d21/classbus_test.html#ac34a488b3ae6db6b2090b5cd555179f0',1,'busTest::sysBus()'],['../d8/d8f/classcartridge_emualtion_test.html#a958c2da6a79d1003b289e8b4c21dd141',1,'cartridgeEmualtionTest::sysBus()']]],
+  ['sysclock_20',['sysClock',['../df/d0a/main_8cpp.html#a6d327e023ed1dae058f86d827940d7a6',1,'main.cpp']]]
 ];

@@ -36,7 +36,7 @@ CPPFLAGS ?=   -std=c++20
 TEST_CPP_FLAGE = -lgtest -lgtest_main -lgmock  
 # CFLAGS :=
 
-CXXFLAGS += $(INC_FLAGS)  -MMD -MP  -g -Wall -Wc++17-extensions -g -Wall -Wextra -pthread  $(LIB_FLAGS) -lstdc++ -lgflags -lglog -lGL -lglfw   -lrt -lm -ldl -lasound -O0
+CXXFLAGS += $(INC_FLAGS)  -MMD -MP  -g -Wall -Wc++17-extensions -g -Wall -Wextra -pthread  $(LIB_FLAGS) -lstdc++ -lgflags -lglog -lGL -lglfw   -lrt -lm -ldl -lasound -O3
 
 LDFLAGS =  $(LIB_FLAGS)
 
@@ -55,6 +55,7 @@ print:
 $(BUILD_DIR)/%.cpp.o: %.cpp
 	$(MKDIR_P) $(dir $@)
 	$(CC)  $(CPPFLAGS) $(CXXFLAGS) -c $< -o $@
+
 
 $(BUILD_DIR)/%.c.o: %.c
 	$(MKDIR_P) $(dir $@)
@@ -85,7 +86,7 @@ gtest_main.a : gtest-all.o gtest_main.o
 
 clean:
 	$(RM) -f gtest.a gtest_main.a *.o
-	$(RM) -r $(BUILD_DIR) 
+	$(RM) -r $(BUILD_DIR)
 	$(RM) -r $(OUTPUT_DIR)
 
 -include $(DEPS)

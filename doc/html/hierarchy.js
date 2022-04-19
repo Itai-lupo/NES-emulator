@@ -41,6 +41,7 @@ var hierarchy =
     [ "NESHeader", "dc/d02/struct_n_e_s_header.html", null ],
     [ "ppu", "d6/d3f/classppu.html", null ],
     [ "ppu2c02::PPUCTRL", "df/d5b/unionppu2c02_1_1_p_p_u_c_t_r_l.html", null ],
+    [ "ppu2c02::spriteData", "d7/de8/structppu2c02_1_1sprite_data.html", null ],
     [ "testing::Test", null, [
       [ "busTest", "de/d21/classbus_test.html", null ],
       [ "cartridgeEmualtionTest", "d8/d8f/classcartridge_emualtion_test.html", null ],

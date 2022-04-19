@@ -18,32 +18,46 @@ class ppu2c02 : public busDevice<uint8_t, uint16_t>, public LTE::component
         // pattern(0x0000 - 0x1FFF), name table(0x2000 - 0x2FFF), PALETTES( 0x3F00 - 0x3FFF)
         bus<uint8_t, uint16_t> ppuBus; 
 
+        struct spriteData
+        {
+            uint8_t y;
+            uint8_t tileId;
+            union
+            {
+                struct
+                {
+                    uint8_t palette: 2;  
+                    uint8_t U: 3;  
+                    uint8_t priority: 1;  
+                    uint8_t flipHorizontally: 1;  
+                    uint8_t flipVertically: 1;  
+                };
+                uint8_t attribute;  
+            };
+            uint8_t x;
+            
+        };
+
+
         union
         {
-            struct
-            {
-                uint8_t y;
-                uint8_t tileId;
-                union
-                {
-                    struct
-                    {
-                        uint8_t palette: 2;  
-                        uint8_t U: 3;  
-                        uint8_t priority: 1;  
-                        uint8_t flipHorizontally: 1;  
-                        uint8_t flipVertically: 1;  
-                    };
-                    uint8_t attribute;  
-                };
-                uint8_t x;
-                
-            } OAM[64];
+            spriteData OAM[64];
             uint8_t pOAM[256];
         };
 
         uint8_t oamAddr = 0x00;
         
+        spriteData spriteScanline[8];
+
+        uint8_t spriteCount;
+        uint8_t spriteShifterPatternLo[8];
+        uint8_t spriteShifterPatternHi[8];
+
+
+        bool spriteZeroHitPossible = false;
+        bool spriteZeroBeingRendered = false;
+
+
 
         union
         {

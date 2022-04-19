@@ -132,6 +132,10 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:a637979c9ca071fa6aa2b16783220538d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb5a4288af63c9e5d42ea460a91e04aa"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d3f/classppu.html#adb5a4288af63c9e5d42ea460a91e04aa">increaseCycle</a> (<a class="el" href="../../d2/deb/classppu2c02.html">ppu2c02</a> *ppuData)</td></tr>
 <tr class="separator:adb5a4288af63c9e5d42ea460a91e04aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc553339a3f633423214a161971cb244"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d3f/classppu.html#adc553339a3f633423214a161971cb244">backgroundRendring</a> (<a class="el" href="../../d2/deb/classppu2c02.html">ppu2c02</a> *ppuData)</td></tr>
+<tr class="separator:adc553339a3f633423214a161971cb244"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3cf4b36b2944ab7f2c793125ac30340"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d3f/classppu.html#aa3cf4b36b2944ab7f2c793125ac30340">foregroundRendring</a> (<a class="el" href="../../d2/deb/classppu2c02.html">ppu2c02</a> *ppuData)</td></tr>
+<tr class="separator:aa3cf4b36b2944ab7f2c793125ac30340"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8f8beeeceb29673161032303d02e8cad"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d3f/classppu.html#a8f8beeeceb29673161032303d02e8cad">clock</a> (LTE::gameObject *eventEntity, LTE::coreEventData *sendor)</td></tr>
 <tr class="separator:a8f8beeeceb29673161032303d02e8cad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -145,6 +149,97 @@ Static Public Attributes</h2></td></tr>
 <tr class="separator:a3fa653711a870aa6af0e40f28ec240bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="adc553339a3f633423214a161971cb244" name="adc553339a3f633423214a161971cb244"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc553339a3f633423214a161971cb244">&#9670;&nbsp;</a></span>backgroundRendring()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void ppu::backgroundRendring </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d2/deb/classppu2c02.html">ppu2c02</a> *&#160;</td>
+          <td class="paramname"><em>ppuData</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  324</span>        {</div>
+<div class="line"><span class="lineno">  325</span> </div>
+<div class="line"><span class="lineno">  326</span>            <span class="keywordflow">if</span>((ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#af5240aa778b1cf870047f5c67d2ada53">cycle</a> &gt;= 2 &amp;&amp; ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#af5240aa778b1cf870047f5c67d2ada53">cycle</a> &lt; 258) || (ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#af5240aa778b1cf870047f5c67d2ada53">cycle</a> &gt;= 321 &amp;&amp; ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#af5240aa778b1cf870047f5c67d2ada53">cycle</a> &lt; 338))</div>
+<div class="line"><span class="lineno">  327</span>            {</div>
+<div class="line"><span class="lineno">  328</span>                <a class="code hl_function" href="../../d6/d3f/classppu.html#a011d8cf9ad06b321ecf61ab48ed7825e">visableAreaRender</a>(ppuData);</div>
+<div class="line"><span class="lineno">  329</span>            }</div>
+<div class="line"><span class="lineno">  330</span>            </div>
+<div class="line"><span class="lineno">  331</span>            <span class="keywordflow">if</span>(ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#af5240aa778b1cf870047f5c67d2ada53">cycle</a> == 256)</div>
+<div class="line"><span class="lineno">  332</span>            {   </div>
+<div class="line"><span class="lineno">  333</span>                <a class="code hl_function" href="../../d6/d3f/classppu.html#af1857f201e89b8c907c0ab852474ef0a">incrementScrollY</a>(ppuData);</div>
+<div class="line"><span class="lineno">  334</span>            }</div>
+<div class="line"><span class="lineno">  335</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span>(ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#af5240aa778b1cf870047f5c67d2ada53">cycle</a> == 257)</div>
+<div class="line"><span class="lineno">  336</span>            {</div>
+<div class="line"><span class="lineno">  337</span>                <a class="code hl_function" href="../../d6/d3f/classppu.html#abb466cdb15e449cbd54a1ec4fd2ef3d2">loadBackgroundShifters</a>(ppuData);</div>
+<div class="line"><span class="lineno">  338</span>                <a class="code hl_function" href="../../d6/d3f/classppu.html#af4eed16ede0e68d6b23dcc4f10a74d9f">transferAddressX</a>(ppuData);</div>
+<div class="line"><span class="lineno">  339</span>            }</div>
+<div class="line"><span class="lineno">  340</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#af5240aa778b1cf870047f5c67d2ada53">cycle</a> == 338 || ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#af5240aa778b1cf870047f5c67d2ada53">cycle</a> == 340)</div>
+<div class="line"><span class="lineno">  341</span>            {</div>
+<div class="line"><span class="lineno">  342</span>                ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a2089b6ffbaa08f854fc99625c0c22de3">bg_next_tile_id</a> = ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#aa167427b0acc186c0922b7a9494e3734">ppuBus</a>.<a class="code hl_function" href="../../d0/d88/classbus.html#abb29248facedf75907fba0ebf44022b0">read</a>(0x2000 | (ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a977ed4c9f9596404ca0412db55588cf0">vram_addr</a>.<a class="code hl_variable" href="../../d4/d46/unionppu2c02_1_1loopy__register.html#a536b9ec70d2a37e219d3615576257725">reg</a> &amp; 0x0FFF));</div>
+<div class="line"><span class="lineno">  343</span>            }</div>
+<div class="line"><span class="lineno">  344</span>            </div>
+<div class="line"><span class="lineno">  345</span>        }</div>
+<div class="ttc" id="aclassbus_html_abb29248facedf75907fba0ebf44022b0"><div class="ttname"><a href="../../d0/d88/classbus.html#abb29248facedf75907fba0ebf44022b0">bus::read</a></div><div class="ttdeci">dataSize read(addrSize addr, bool bReadOnly=false)</div><div class="ttdef"><b>Definition:</b> bus.h:33</div></div>
+<div class="ttc" id="aclassppu2c02_html_a2089b6ffbaa08f854fc99625c0c22de3"><div class="ttname"><a href="../../d2/deb/classppu2c02.html#a2089b6ffbaa08f854fc99625c0c22de3">ppu2c02::bg_next_tile_id</a></div><div class="ttdeci">uint8_t bg_next_tile_id</div><div class="ttdef"><b>Definition:</b> 2c02.h:136</div></div>
+<div class="ttc" id="aclassppu2c02_html_a977ed4c9f9596404ca0412db55588cf0"><div class="ttname"><a href="../../d2/deb/classppu2c02.html#a977ed4c9f9596404ca0412db55588cf0">ppu2c02::vram_addr</a></div><div class="ttdeci">loopy_register vram_addr</div><div class="ttdef"><b>Definition:</b> 2c02.h:125</div></div>
+<div class="ttc" id="aclassppu2c02_html_aa167427b0acc186c0922b7a9494e3734"><div class="ttname"><a href="../../d2/deb/classppu2c02.html#aa167427b0acc186c0922b7a9494e3734">ppu2c02::ppuBus</a></div><div class="ttdeci">bus&lt; uint8_t, uint16_t &gt; ppuBus</div><div class="ttdef"><b>Definition:</b> 2c02.h:19</div></div>
+<div class="ttc" id="aclassppu2c02_html_af5240aa778b1cf870047f5c67d2ada53"><div class="ttname"><a href="../../d2/deb/classppu2c02.html#af5240aa778b1cf870047f5c67d2ada53">ppu2c02::cycle</a></div><div class="ttdeci">int16_t cycle</div><div class="ttdef"><b>Definition:</b> 2c02.h:131</div></div>
+<div class="ttc" id="aclassppu_html_a011d8cf9ad06b321ecf61ab48ed7825e"><div class="ttname"><a href="../../d6/d3f/classppu.html#a011d8cf9ad06b321ecf61ab48ed7825e">ppu::visableAreaRender</a></div><div class="ttdeci">static void visableAreaRender(ppu2c02 *ppuData)</div><div class="ttdef"><b>Definition:</b> ppu.h:260</div></div>
+<div class="ttc" id="aclassppu_html_abb466cdb15e449cbd54a1ec4fd2ef3d2"><div class="ttname"><a href="../../d6/d3f/classppu.html#abb466cdb15e449cbd54a1ec4fd2ef3d2">ppu::loadBackgroundShifters</a></div><div class="ttdeci">static void loadBackgroundShifters(ppu2c02 *ppuData)</div><div class="ttdef"><b>Definition:</b> ppu.h:149</div></div>
+<div class="ttc" id="aclassppu_html_af1857f201e89b8c907c0ab852474ef0a"><div class="ttname"><a href="../../d6/d3f/classppu.html#af1857f201e89b8c907c0ab852474ef0a">ppu::incrementScrollY</a></div><div class="ttdeci">static void incrementScrollY(ppu2c02 *ppuData)</div><div class="ttdef"><b>Definition:</b> ppu.h:175</div></div>
+<div class="ttc" id="aclassppu_html_af4eed16ede0e68d6b23dcc4f10a74d9f"><div class="ttname"><a href="../../d6/d3f/classppu.html#af4eed16ede0e68d6b23dcc4f10a74d9f">ppu::transferAddressX</a></div><div class="ttdeci">static void transferAddressX(ppu2c02 *ppuData)</div><div class="ttdef"><b>Definition:</b> ppu.h:204</div></div>
+<div class="ttc" id="aunionppu2c02_1_1loopy__register_html_a536b9ec70d2a37e219d3615576257725"><div class="ttname"><a href="../../d4/d46/unionppu2c02_1_1loopy__register.html#a536b9ec70d2a37e219d3615576257725">ppu2c02::loopy_register::reg</a></div><div class="ttdeci">uint16_t reg</div><div class="ttdef"><b>Definition:</b> 2c02.h:122</div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d6/d3f/classppu_adc553339a3f633423214a161971cb244_cgraph.png" border="0" usemap="#ad6/d3f/classppu_adc553339a3f633423214a161971cb244_cgraph" alt=""/></div>
+<map name="ad6/d3f/classppu_adc553339a3f633423214a161971cb244_cgraph" id="ad6/d3f/classppu_adc553339a3f633423214a161971cb244_cgraph">
+<area shape="rect" title=" " alt="" coords="5,107,172,133"/>
+<area shape="rect" href="../../d6/d3f/classppu.html#af1857f201e89b8c907c0ab852474ef0a" title=" " alt="" coords="225,5,373,32"/>
+<area shape="rect" href="../../d6/d3f/classppu.html#abb466cdb15e449cbd54a1ec4fd2ef3d2" title=" " alt="" coords="427,107,613,133"/>
+<area shape="rect" href="../../d0/d88/classbus.html#abb29248facedf75907fba0ebf44022b0" title=" " alt="" coords="661,309,736,336"/>
+<area shape="rect" href="../../d6/d3f/classppu.html#af4eed16ede0e68d6b23dcc4f10a74d9f" title=" " alt="" coords="224,157,375,184"/>
+<area shape="rect" href="../../d6/d3f/classppu.html#a011d8cf9ad06b321ecf61ab48ed7825e" title=" " alt="" coords="220,233,379,260"/>
+<area shape="rect" href="../../d6/d3f/classppu.html#a9abb944f427a7a69eebf09dd31cc13a2" title=" " alt="" coords="446,259,594,285"/>
+<area shape="rect" href="../../d6/d3f/classppu.html#ac79c38af3d65d535acc5b681209f7c33" title=" " alt="" coords="432,309,608,336"/>
+<area shape="rect" href="../../d6/d3f/classppu.html#a24470d8d18ee8660dee020ddfdc6e089" title=" " alt="" coords="439,360,601,387"/>
+<area shape="rect" href="../../d6/d3f/classppu.html#abc1b9a5dd5bce43692e2db61b31bcd6c" title=" " alt="" coords="435,411,605,437"/>
+<area shape="rect" href="../../d6/d3f/classppu.html#a7fe1b4219f11e5f08807326089f53324" title=" " alt="" coords="437,157,603,184"/>
+<area shape="rect" href="../../d6/d3f/classppu.html#a5dfb585633a0fb9ac873189fc72fde2f" title=" " alt="" coords="453,208,587,235"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d6/d3f/classppu_adc553339a3f633423214a161971cb244_icgraph.png" border="0" usemap="#ad6/d3f/classppu_adc553339a3f633423214a161971cb244_icgraph" alt=""/></div>
+<map name="ad6/d3f/classppu_adc553339a3f633423214a161971cb244_icgraph" id="ad6/d3f/classppu_adc553339a3f633423214a161971cb244_icgraph">
+<area shape="rect" title=" " alt="" coords="653,31,820,57"/>
+<area shape="rect" href="../../d6/d3f/classppu.html#a8f8beeeceb29673161032303d02e8cad" title=" " alt="" coords="525,31,605,57"/>
+<area shape="rect" href="../../df/d0a/main_8cpp.html#a6d327e023ed1dae058f86d827940d7a6" title=" " alt="" coords="403,31,477,57"/>
+<area shape="rect" href="../../df/d0a/main_8cpp.html#a21dfe9bde9bd8461cf7b93411861607a" title=" " alt="" coords="104,5,244,32"/>
+<area shape="rect" href="../../df/d0a/main_8cpp.html#ab59f1b1459454092942fcda083513be9" title=" " alt="" coords="292,56,355,83"/>
+<area shape="rect" href="../../df/d0a/main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,31,56,57"/>
+<area shape="rect" href="../../df/d0a/main_8cpp.html#a4a2adc3d978a792c25ab506f6e13bdfe" title=" " alt="" coords="122,56,226,83"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="a8f8beeeceb29673161032303d02e8cad" name="a8f8beeeceb29673161032303d02e8cad"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8f8beeeceb29673161032303d02e8cad">&#9670;&nbsp;</a></span>clock()</h2>
 
@@ -178,115 +273,183 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  294</span>        {</div>
-<div class="line"><span class="lineno">  295</span> </div>
-<div class="line"><span class="lineno">  296</span>            </div>
-<div class="line"><span class="lineno">  297</span>            <a class="code hl_class" href="../../d0/d88/classbus.html">bus&lt;uint8_t, uint16_t&gt;</a> *busData = eventEntity-&gt;getComponent&lt;<a class="code hl_class" href="../../d0/d88/classbus.html">bus&lt;uint8_t, uint16_t&gt;</a>&gt;();</div>
-<div class="line"><span class="lineno">  298</span>            <a class="code hl_class" href="../../d2/deb/classppu2c02.html">ppu2c02</a> *ppuData = eventEntity-&gt;getComponent&lt;<a class="code hl_class" href="../../d2/deb/classppu2c02.html">ppu2c02</a>&gt;();</div>
-<div class="line"><span class="lineno">  299</span>            LTE::texture *<a class="code hl_variable" href="../../df/d0a/main_8cpp.html#a56c83145992bda0c5a5664be4fc449e9">t</a> =  eventEntity-&gt;getComponent&lt;LTE::material&gt;()-&gt;getTexture();</div>
-<div class="line"><span class="lineno">  300</span>        </div>
-<div class="line"><span class="lineno">  301</span>        </div>
-<div class="line"><span class="lineno">  302</span>            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; 3; i++)</div>
-<div class="line"><span class="lineno">  303</span>            {</div>
-<div class="line"><span class="lineno">  304</span> </div>
-<div class="line"><span class="lineno">  305</span>                <span class="keywordflow">if</span> (ppuData-&gt;scanline == 0 &amp;&amp; ppuData-&gt;cycle == 0)</div>
-<div class="line"><span class="lineno">  306</span>                        ppuData-&gt;cycle = 1;</div>
-<div class="line"><span class="lineno">  307</span> </div>
-<div class="line"><span class="lineno">  308</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span>(ppuData-&gt;scanline == 261 &amp;&amp; ppuData-&gt;cycle == 1)</div>
-<div class="line"><span class="lineno">  309</span>                    ppuData-&gt;status.vertical_blank = 0;</div>
-<div class="line"><span class="lineno">  310</span> </div>
-<div class="line"><span class="lineno">  311</span> </div>
-<div class="line"><span class="lineno">  312</span>                <span class="keywordflow">if</span> (ppuData-&gt;scanline &lt; 240 || ppuData-&gt;scanline == 261 )</div>
-<div class="line"><span class="lineno">  313</span>                {</div>
-<div class="line"><span class="lineno">  314</span>                    <span class="keywordflow">if</span>((ppuData-&gt;cycle &gt;= 2 &amp;&amp; ppuData-&gt;cycle &lt; 258) || (ppuData-&gt;cycle &gt;= 321 &amp;&amp; ppuData-&gt;cycle &lt; 338))</div>
-<div class="line"><span class="lineno">  315</span>                    {</div>
-<div class="line"><span class="lineno">  316</span>                        <a class="code hl_function" href="../../d6/d3f/classppu.html#a011d8cf9ad06b321ecf61ab48ed7825e">visableAreaRender</a>(ppuData);</div>
-<div class="line"><span class="lineno">  317</span>                    }</div>
-<div class="line"><span class="lineno">  318</span>                    </div>
-<div class="line"><span class="lineno">  319</span>                    <span class="keywordflow">if</span>(ppuData-&gt;cycle == 256)</div>
-<div class="line"><span class="lineno">  320</span>                    {   </div>
-<div class="line"><span class="lineno">  321</span>                        <a class="code hl_function" href="../../d6/d3f/classppu.html#af1857f201e89b8c907c0ab852474ef0a">incrementScrollY</a>(ppuData);</div>
-<div class="line"><span class="lineno">  322</span>                    }</div>
-<div class="line"><span class="lineno">  323</span>                    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(ppuData-&gt;cycle == 257)</div>
-<div class="line"><span class="lineno">  324</span>                    {</div>
-<div class="line"><span class="lineno">  325</span>                        <a class="code hl_function" href="../../d6/d3f/classppu.html#abb466cdb15e449cbd54a1ec4fd2ef3d2">loadBackgroundShifters</a>(ppuData);</div>
-<div class="line"><span class="lineno">  326</span>                        <a class="code hl_function" href="../../d6/d3f/classppu.html#af4eed16ede0e68d6b23dcc4f10a74d9f">transferAddressX</a>(ppuData);</div>
-<div class="line"><span class="lineno">  327</span>                    }</div>
-<div class="line"><span class="lineno">  328</span>                    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (ppuData-&gt;cycle == 338 || ppuData-&gt;cycle == 340)</div>
-<div class="line"><span class="lineno">  329</span>                    {</div>
-<div class="line"><span class="lineno">  330</span>                        ppuData-&gt;bg_next_tile_id = ppuData-&gt;ppuBus.<a class="code hl_function" href="../../d0/d88/classbus.html#abb29248facedf75907fba0ebf44022b0">read</a>(0x2000 | (ppuData-&gt;vram_addr.reg &amp; 0x0FFF));</div>
-<div class="line"><span class="lineno">  331</span>                    }</div>
-<div class="line"><span class="lineno">  332</span>                    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(ppuData-&gt;scanline == 261 &amp;&amp; ppuData-&gt;cycle &gt;= 280 &amp;&amp; ppuData-&gt;cycle &lt; 305)</div>
-<div class="line"><span class="lineno">  333</span>                    {</div>
-<div class="line"><span class="lineno">  334</span>                        <a class="code hl_function" href="../../d6/d3f/classppu.html#afdebae0b46bc384493f51146539caeff">transferAddressY</a>(ppuData);</div>
-<div class="line"><span class="lineno">  335</span>                    }</div>
-<div class="line"><span class="lineno">  336</span>                }</div>
-<div class="line"><span class="lineno">  337</span>                </div>
-<div class="line"><span class="lineno">  338</span>                <span class="keywordflow">if</span>(ppuData-&gt;scanline == 241 &amp;&amp; ppuData-&gt;cycle == 1)</div>
-<div class="line"><span class="lineno">  339</span>                {</div>
-<div class="line"><span class="lineno">  340</span>                    ppuData-&gt;status.vertical_blank = 1;</div>
-<div class="line"><span class="lineno">  341</span>                    <span class="keywordflow">if</span>(ppuData-&gt;control.enable_nmi){</div>
-<div class="line"><span class="lineno">  342</span>                        <a class="code hl_variable" href="../../d6/d3f/classppu.html#a3fa653711a870aa6af0e40f28ec240bf">nmi</a> = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  343</span>                    }</div>
-<div class="line"><span class="lineno">  344</span>                }</div>
-<div class="line"><span class="lineno">  345</span> </div>
-<div class="line"><span class="lineno">  346</span>                uint8_t bg_pixel = 0x00;  </div>
-<div class="line"><span class="lineno">  347</span>                uint8_t bg_palette = 0x00;</div>
-<div class="line"><span class="lineno">  348</span> </div>
-<div class="line"><span class="lineno">  349</span>                <span class="keywordflow">if</span> (ppuData-&gt;mask.render_background)</div>
-<div class="line"><span class="lineno">  350</span>                {</div>
-<div class="line"><span class="lineno">  351</span>                    bg_pixel = <a class="code hl_function" href="../../d6/d3f/classppu.html#a032eaca2250f2be302f32cd259ec53ce">getBGPixelPaletteOffset</a>(ppuData);</div>
-<div class="line"><span class="lineno">  352</span>                    bg_palette = <a class="code hl_function" href="../../d6/d3f/classppu.html#a637979c9ca071fa6aa2b16783220538d">getBGPixelPalette</a>(ppuData);</div>
-<div class="line"><span class="lineno">  353</span>                }</div>
-<div class="line"><span class="lineno">  354</span>                </div>
-<div class="line"><span class="lineno">  355</span>                <span class="keywordflow">if</span>(ppuData-&gt;scanline &lt; 240 &amp;&amp; ppuData-&gt;cycle &lt; 256)</div>
-<div class="line"><span class="lineno">  356</span>                {    </div>
-<div class="line"><span class="lineno">  357</span>                    <a class="code hl_variable" href="../../df/d0a/main_8cpp.html#a56c83145992bda0c5a5664be4fc449e9">t</a>-&gt;setRGBValue(</div>
-<div class="line"><span class="lineno">  358</span>                        {ppuData-&gt;cycle - 1, ppuData-&gt;scanline}, </div>
-<div class="line"><span class="lineno">  359</span>                        <a class="code hl_variable" href="../../d6/d3f/classppu.html#a5d40e95f043bcffaa2ef02bfd9423569">colorPalate</a>[<a class="code hl_function" href="../../d6/d3f/classppu.html#ab7902989f58e71e7b1a934558ee6bcf1">GetColourFromPaletteRam</a>(ppuData, bg_palette, bg_pixel)]);</div>
-<div class="line"><span class="lineno">  360</span>                }</div>
-<div class="line"><span class="lineno">  361</span>                </div>
-<div class="line"><span class="lineno">  362</span>                <a class="code hl_function" href="../../d6/d3f/classppu.html#adb5a4288af63c9e5d42ea460a91e04aa">increaseCycle</a>(ppuData);</div>
-<div class="line"><span class="lineno">  363</span> </div>
-<div class="line"><span class="lineno">  364</span>            }            </div>
-<div class="line"><span class="lineno">  365</span>        }</div>
+<div class="fragment"><div class="line"><span class="lineno">  428</span>        {        </div>
+<div class="line"><span class="lineno">  429</span>            <a class="code hl_class" href="../../d0/d88/classbus.html">bus&lt;uint8_t, uint16_t&gt;</a> *busData = eventEntity-&gt;getComponent&lt;<a class="code hl_class" href="../../d0/d88/classbus.html">bus&lt;uint8_t, uint16_t&gt;</a>&gt;();</div>
+<div class="line"><span class="lineno">  430</span>            <a class="code hl_class" href="../../d2/deb/classppu2c02.html">ppu2c02</a> *ppuData = eventEntity-&gt;getComponent&lt;<a class="code hl_class" href="../../d2/deb/classppu2c02.html">ppu2c02</a>&gt;();</div>
+<div class="line"><span class="lineno">  431</span>            LTE::texture *<a class="code hl_variable" href="../../df/d0a/main_8cpp.html#a56c83145992bda0c5a5664be4fc449e9">t</a> =  eventEntity-&gt;getComponent&lt;LTE::material&gt;()-&gt;getTexture();</div>
+<div class="line"><span class="lineno">  432</span> </div>
+<div class="line"><span class="lineno">  433</span>            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; 3; i++)</div>
+<div class="line"><span class="lineno">  434</span>            {</div>
+<div class="line"><span class="lineno">  435</span>                <span class="keywordflow">if</span> (ppuData-&gt;scanline == 0 &amp;&amp; ppuData-&gt;cycle == 0)</div>
+<div class="line"><span class="lineno">  436</span>                    ppuData-&gt;cycle = 1;</div>
+<div class="line"><span class="lineno">  437</span> </div>
+<div class="line"><span class="lineno">  438</span>                <span class="keywordflow">if</span> (ppuData-&gt;scanline &lt; 240 || ppuData-&gt;scanline == 261 )</div>
+<div class="line"><span class="lineno">  439</span>                {</div>
+<div class="line"><span class="lineno">  440</span>                    <a class="code hl_function" href="../../d6/d3f/classppu.html#adc553339a3f633423214a161971cb244">backgroundRendring</a>(ppuData);</div>
+<div class="line"><span class="lineno">  441</span>                    <a class="code hl_function" href="../../d6/d3f/classppu.html#aa3cf4b36b2944ab7f2c793125ac30340">foregroundRendring</a>(ppuData);</div>
+<div class="line"><span class="lineno">  442</span>                }</div>
+<div class="line"><span class="lineno">  443</span>                </div>
+<div class="line"><span class="lineno">  444</span>                <span class="keywordflow">if</span>(ppuData-&gt;scanline == 261 &amp;&amp; ppuData-&gt;cycle == 1){</div>
+<div class="line"><span class="lineno">  445</span>                    ppuData-&gt;status.vertical_blank = 0;</div>
+<div class="line"><span class="lineno">  446</span>                    ppuData-&gt;status.sprite_overflow = 0;</div>
+<div class="line"><span class="lineno">  447</span>                    ppuData-&gt;status.sprite_zero_hit = 0;</div>
+<div class="line"><span class="lineno">  448</span>                    </div>
+<div class="line"><span class="lineno">  449</span>                    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 8; i++)</div>
+<div class="line"><span class="lineno">  450</span>                    {</div>
+<div class="line"><span class="lineno">  451</span>                        ppuData-&gt;spriteShifterPatternLo[i] = 0;</div>
+<div class="line"><span class="lineno">  452</span>                        ppuData-&gt;spriteShifterPatternHi[i] = 0;</div>
+<div class="line"><span class="lineno">  453</span>                    }</div>
+<div class="line"><span class="lineno">  454</span>                    </div>
+<div class="line"><span class="lineno">  455</span>                }</div>
+<div class="line"><span class="lineno">  456</span>                </div>
+<div class="line"><span class="lineno">  457</span>                <span class="keywordflow">if</span>(ppuData-&gt;scanline == 261 &amp;&amp; ppuData-&gt;cycle &gt;= 280 &amp;&amp; ppuData-&gt;cycle &lt; 305)</div>
+<div class="line"><span class="lineno">  458</span>                    <a class="code hl_function" href="../../d6/d3f/classppu.html#afdebae0b46bc384493f51146539caeff">transferAddressY</a>(ppuData);</div>
+<div class="line"><span class="lineno">  459</span>                </div>
+<div class="line"><span class="lineno">  460</span> </div>
+<div class="line"><span class="lineno">  461</span>                <span class="keywordflow">if</span>(ppuData-&gt;scanline == 241 &amp;&amp; ppuData-&gt;cycle == 1)</div>
+<div class="line"><span class="lineno">  462</span>                {</div>
+<div class="line"><span class="lineno">  463</span>                    ppuData-&gt;status.vertical_blank = 1;</div>
+<div class="line"><span class="lineno">  464</span>                    <span class="keywordflow">if</span>(ppuData-&gt;control.enable_nmi){</div>
+<div class="line"><span class="lineno">  465</span>                        <a class="code hl_variable" href="../../d6/d3f/classppu.html#a3fa653711a870aa6af0e40f28ec240bf">nmi</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  466</span>                    }</div>
+<div class="line"><span class="lineno">  467</span>                }</div>
+<div class="line"><span class="lineno">  468</span>                </div>
+<div class="line"><span class="lineno">  469</span>                uint8_t bg_pixel = 0x00;  </div>
+<div class="line"><span class="lineno">  470</span>                uint8_t bg_palette = 0x00;</div>
+<div class="line"><span class="lineno">  471</span> </div>
+<div class="line"><span class="lineno">  472</span>                <span class="keywordflow">if</span> (ppuData-&gt;mask.render_background)</div>
+<div class="line"><span class="lineno">  473</span>                {</div>
+<div class="line"><span class="lineno">  474</span>                    bg_pixel = <a class="code hl_function" href="../../d6/d3f/classppu.html#a032eaca2250f2be302f32cd259ec53ce">getBGPixelPaletteOffset</a>(ppuData);</div>
+<div class="line"><span class="lineno">  475</span>                    bg_palette = <a class="code hl_function" href="../../d6/d3f/classppu.html#a637979c9ca071fa6aa2b16783220538d">getBGPixelPalette</a>(ppuData);</div>
+<div class="line"><span class="lineno">  476</span>                }</div>
+<div class="line"><span class="lineno">  477</span>                </div>
+<div class="line"><span class="lineno">  478</span>                uint8_t fgPixel = 0x00, fgPalette = 0x00, fgPriority;</div>
+<div class="line"><span class="lineno">  479</span>                <span class="keywordflow">if</span>(ppuData-&gt;mask.render_sprites)</div>
+<div class="line"><span class="lineno">  480</span>                {</div>
+<div class="line"><span class="lineno">  481</span>                    ppuData-&gt;spriteZeroBeingRendered = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  482</span>                    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; ppuData-&gt;spriteCount; i++)</div>
+<div class="line"><span class="lineno">  483</span>                    {</div>
+<div class="line"><span class="lineno">  484</span>                        <span class="keywordflow">if</span>(ppuData-&gt;spriteScanline[i].x == 0)</div>
+<div class="line"><span class="lineno">  485</span>                        {</div>
+<div class="line"><span class="lineno">  486</span>                            uint8_t fgPixelLo = (ppuData-&gt;spriteShifterPatternLo[i] &amp; 0x80) &gt; 0;</div>
+<div class="line"><span class="lineno">  487</span>                            uint8_t fgPixelHi = (ppuData-&gt;spriteShifterPatternHi[i] &amp; 0x80) &gt; 0;</div>
+<div class="line"><span class="lineno">  488</span> </div>
+<div class="line"><span class="lineno">  489</span>                            fgPixel = (fgPixelHi &lt;&lt; 1) | fgPixelLo;</div>
+<div class="line"><span class="lineno">  490</span> </div>
+<div class="line"><span class="lineno">  491</span>                            fgPalette = ppuData-&gt;spriteScanline[i].palette + 0x04;</div>
+<div class="line"><span class="lineno">  492</span>                            fgPriority = ppuData-&gt;spriteScanline[i].priority == 0;</div>
+<div class="line"><span class="lineno">  493</span> </div>
+<div class="line"><span class="lineno">  494</span>                            <span class="keywordflow">if</span>( fgPixel != 0){</div>
+<div class="line"><span class="lineno">  495</span>                                <span class="keywordflow">if</span>(i == 0)</div>
+<div class="line"><span class="lineno">  496</span>                                    ppuData-&gt;spriteZeroBeingRendered = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  497</span>                                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  498</span>                            }</div>
+<div class="line"><span class="lineno">  499</span>                        }</div>
+<div class="line"><span class="lineno">  500</span>                    }</div>
+<div class="line"><span class="lineno">  501</span>                }</div>
+<div class="line"><span class="lineno">  502</span>                </div>
+<div class="line"><span class="lineno">  503</span>                uint8_t pixel = 0x00;  </div>
+<div class="line"><span class="lineno">  504</span>                uint8_t palette = 0x00;</div>
+<div class="line"><span class="lineno">  505</span> </div>
+<div class="line"><span class="lineno">  506</span>                <span class="keywordflow">if</span> (bg_pixel == 0 &amp;&amp; fgPixel == 0)</div>
+<div class="line"><span class="lineno">  507</span>                {</div>
+<div class="line"><span class="lineno">  508</span>                    pixel = 0x00;</div>
+<div class="line"><span class="lineno">  509</span>                    palette = 0x00;</div>
+<div class="line"><span class="lineno">  510</span>                }</div>
+<div class="line"><span class="lineno">  511</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span>(fgPixel &gt; 0 &amp;&amp; bg_pixel == 0)</div>
+<div class="line"><span class="lineno">  512</span>                {</div>
+<div class="line"><span class="lineno">  513</span>                    pixel = fgPixel;</div>
+<div class="line"><span class="lineno">  514</span>                    palette = fgPalette;</div>
+<div class="line"><span class="lineno">  515</span>                }</div>
+<div class="line"><span class="lineno">  516</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span>(bg_pixel &gt; 0 &amp;&amp; fgPixel == 0)</div>
+<div class="line"><span class="lineno">  517</span>                {</div>
+<div class="line"><span class="lineno">  518</span>                    pixel = bg_pixel;</div>
+<div class="line"><span class="lineno">  519</span>                    palette = bg_palette;</div>
+<div class="line"><span class="lineno">  520</span>                }</div>
+<div class="line"><span class="lineno">  521</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span>(fgPixel &gt; 0 &amp;&amp; bg_pixel &gt; 0)</div>
+<div class="line"><span class="lineno">  522</span>                {</div>
+<div class="line"><span class="lineno">  523</span>                    <span class="keywordflow">if</span>(fgPriority)</div>
+<div class="line"><span class="lineno">  524</span>                    {</div>
+<div class="line"><span class="lineno">  525</span>                        pixel = fgPixel;</div>
+<div class="line"><span class="lineno">  526</span>                        palette = fgPalette;</div>
+<div class="line"><span class="lineno">  527</span>                    }</div>
+<div class="line"><span class="lineno">  528</span>                    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  529</span>                    {</div>
+<div class="line"><span class="lineno">  530</span>                        pixel = bg_pixel;</div>
+<div class="line"><span class="lineno">  531</span>                        palette = bg_palette;</div>
+<div class="line"><span class="lineno">  532</span>                    }</div>
+<div class="line"><span class="lineno">  533</span> </div>
+<div class="line"><span class="lineno">  534</span>                    <span class="keywordflow">if</span> (ppuData-&gt;spriteZeroHitPossible &amp;&amp; ppuData-&gt;spriteZeroBeingRendered)</div>
+<div class="line"><span class="lineno">  535</span>                    {</div>
+<div class="line"><span class="lineno">  536</span>                        <span class="keywordflow">if</span> (ppuData-&gt;mask.render_background &amp; ppuData-&gt;mask.render_sprites)</div>
+<div class="line"><span class="lineno">  537</span>                        {</div>
+<div class="line"><span class="lineno">  538</span>                            <span class="keywordflow">if</span> (~(ppuData-&gt;mask.render_background_left | ppuData-&gt;mask.render_sprites_left))</div>
+<div class="line"><span class="lineno">  539</span>                            {</div>
+<div class="line"><span class="lineno">  540</span>                                <span class="keywordflow">if</span> (ppuData-&gt;cycle &gt;= 9 &amp;&amp; ppuData-&gt;cycle &lt; 258)</div>
+<div class="line"><span class="lineno">  541</span>                                {</div>
+<div class="line"><span class="lineno">  542</span>                                    ppuData-&gt;status.sprite_zero_hit = 1;</div>
+<div class="line"><span class="lineno">  543</span>                                }</div>
+<div class="line"><span class="lineno">  544</span>                            }</div>
+<div class="line"><span class="lineno">  545</span>                            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  546</span>                            {</div>
+<div class="line"><span class="lineno">  547</span>                                <span class="keywordflow">if</span> (ppuData-&gt;cycle &gt;= 1 &amp;&amp; ppuData-&gt;cycle &lt; 258)</div>
+<div class="line"><span class="lineno">  548</span>                                {</div>
+<div class="line"><span class="lineno">  549</span>                                    LAUGHTALE_ENGINR_LOG_INFO((<span class="keywordtype">int</span>)ppuData-&gt;status.sprite_zero_hit)</div>
+<div class="line"><span class="lineno">  550</span> </div>
+<div class="line"><span class="lineno">  551</span>                                    ppuData-&gt;status.sprite_zero_hit = 1;</div>
+<div class="line"><span class="lineno">  552</span>                                }</div>
+<div class="line"><span class="lineno">  553</span>                            }</div>
+<div class="line"><span class="lineno">  554</span>                        }</div>
+<div class="line"><span class="lineno">  555</span>                    }</div>
+<div class="line"><span class="lineno">  556</span>                }</div>
+<div class="line"><span class="lineno">  557</span> </div>
+<div class="line"><span class="lineno">  558</span>                <span class="keywordflow">if</span>(ppuData-&gt;scanline &lt; 240 &amp;&amp; ppuData-&gt;cycle &lt; 256)</div>
+<div class="line"><span class="lineno">  559</span>                {    </div>
+<div class="line"><span class="lineno">  560</span>                    <a class="code hl_variable" href="../../df/d0a/main_8cpp.html#a56c83145992bda0c5a5664be4fc449e9">t</a>-&gt;setRGBValue(</div>
+<div class="line"><span class="lineno">  561</span>                        {ppuData-&gt;cycle - 1, ppuData-&gt;scanline}, </div>
+<div class="line"><span class="lineno">  562</span>                        <a class="code hl_variable" href="../../d6/d3f/classppu.html#a5d40e95f043bcffaa2ef02bfd9423569">colorPalate</a>[<a class="code hl_function" href="../../d6/d3f/classppu.html#ab7902989f58e71e7b1a934558ee6bcf1">GetColourFromPaletteRam</a>(ppuData, palette, pixel)]);</div>
+<div class="line"><span class="lineno">  563</span>                }</div>
+<div class="line"><span class="lineno">  564</span>                </div>
+<div class="line"><span class="lineno">  565</span>                <a class="code hl_function" href="../../d6/d3f/classppu.html#adb5a4288af63c9e5d42ea460a91e04aa">increaseCycle</a>(ppuData);</div>
+<div class="line"><span class="lineno">  566</span> </div>
+<div class="line"><span class="lineno">  567</span>            }            </div>
+<div class="line"><span class="lineno">  568</span>        }</div>
 <div class="ttc" id="aclassbus_html"><div class="ttname"><a href="../../d0/d88/classbus.html">bus&lt; uint8_t, uint16_t &gt;</a></div></div>
-<div class="ttc" id="aclassbus_html_abb29248facedf75907fba0ebf44022b0"><div class="ttname"><a href="../../d0/d88/classbus.html#abb29248facedf75907fba0ebf44022b0">bus::read</a></div><div class="ttdeci">dataSize read(addrSize addr, bool bReadOnly=false)</div><div class="ttdef"><b>Definition:</b> bus.h:33</div></div>
 <div class="ttc" id="aclassppu2c02_html"><div class="ttname"><a href="../../d2/deb/classppu2c02.html">ppu2c02</a></div><div class="ttdef"><b>Definition:</b> 2c02.h:14</div></div>
-<div class="ttc" id="aclassppu_html_a011d8cf9ad06b321ecf61ab48ed7825e"><div class="ttname"><a href="../../d6/d3f/classppu.html#a011d8cf9ad06b321ecf61ab48ed7825e">ppu::visableAreaRender</a></div><div class="ttdeci">static void visableAreaRender(ppu2c02 *ppuData)</div><div class="ttdef"><b>Definition:</b> ppu.h:231</div></div>
-<div class="ttc" id="aclassppu_html_a032eaca2250f2be302f32cd259ec53ce"><div class="ttname"><a href="../../d6/d3f/classppu.html#a032eaca2250f2be302f32cd259ec53ce">ppu::getBGPixelPaletteOffset</a></div><div class="ttdeci">static uint8_t getBGPixelPaletteOffset(ppu2c02 *ppuData)</div><div class="ttdef"><b>Definition:</b> ppu.h:257</div></div>
-<div class="ttc" id="aclassppu_html_a3fa653711a870aa6af0e40f28ec240bf"><div class="ttname"><a href="../../d6/d3f/classppu.html#a3fa653711a870aa6af0e40f28ec240bf">ppu::nmi</a></div><div class="ttdeci">static bool nmi</div><div class="ttdef"><b>Definition:</b> ppu.h:90</div></div>
-<div class="ttc" id="aclassppu_html_a5d40e95f043bcffaa2ef02bfd9423569"><div class="ttname"><a href="../../d6/d3f/classppu.html#a5d40e95f043bcffaa2ef02bfd9423569">ppu::colorPalate</a></div><div class="ttdeci">static const uint8_t colorPalate[0x40][3]</div><div class="ttdef"><b>Definition:</b> ppu.h:17</div></div>
-<div class="ttc" id="aclassppu_html_a637979c9ca071fa6aa2b16783220538d"><div class="ttname"><a href="../../d6/d3f/classppu.html#a637979c9ca071fa6aa2b16783220538d">ppu::getBGPixelPalette</a></div><div class="ttdeci">static uint8_t getBGPixelPalette(ppu2c02 *ppuData)</div><div class="ttdef"><b>Definition:</b> ppu.h:268</div></div>
-<div class="ttc" id="aclassppu_html_ab7902989f58e71e7b1a934558ee6bcf1"><div class="ttname"><a href="../../d6/d3f/classppu.html#ab7902989f58e71e7b1a934558ee6bcf1">ppu::GetColourFromPaletteRam</a></div><div class="ttdeci">static uint8_t GetColourFromPaletteRam(ppu2c02 *ppuData, uint8_t palette, uint8_t pixel)</div><div class="ttdef"><b>Definition:</b> ppu.h:105</div></div>
-<div class="ttc" id="aclassppu_html_abb466cdb15e449cbd54a1ec4fd2ef3d2"><div class="ttname"><a href="../../d6/d3f/classppu.html#abb466cdb15e449cbd54a1ec4fd2ef3d2">ppu::loadBackgroundShifters</a></div><div class="ttdeci">static void loadBackgroundShifters(ppu2c02 *ppuData)</div><div class="ttdef"><b>Definition:</b> ppu.h:120</div></div>
-<div class="ttc" id="aclassppu_html_adb5a4288af63c9e5d42ea460a91e04aa"><div class="ttname"><a href="../../d6/d3f/classppu.html#adb5a4288af63c9e5d42ea460a91e04aa">ppu::increaseCycle</a></div><div class="ttdeci">static void increaseCycle(ppu2c02 *ppuData)</div><div class="ttdef"><b>Definition:</b> ppu.h:277</div></div>
-<div class="ttc" id="aclassppu_html_af1857f201e89b8c907c0ab852474ef0a"><div class="ttname"><a href="../../d6/d3f/classppu.html#af1857f201e89b8c907c0ab852474ef0a">ppu::incrementScrollY</a></div><div class="ttdeci">static void incrementScrollY(ppu2c02 *ppuData)</div><div class="ttdef"><b>Definition:</b> ppu.h:146</div></div>
-<div class="ttc" id="aclassppu_html_af4eed16ede0e68d6b23dcc4f10a74d9f"><div class="ttname"><a href="../../d6/d3f/classppu.html#af4eed16ede0e68d6b23dcc4f10a74d9f">ppu::transferAddressX</a></div><div class="ttdeci">static void transferAddressX(ppu2c02 *ppuData)</div><div class="ttdef"><b>Definition:</b> ppu.h:175</div></div>
-<div class="ttc" id="aclassppu_html_afdebae0b46bc384493f51146539caeff"><div class="ttname"><a href="../../d6/d3f/classppu.html#afdebae0b46bc384493f51146539caeff">ppu::transferAddressY</a></div><div class="ttdeci">static void transferAddressY(ppu2c02 *ppuData)</div><div class="ttdef"><b>Definition:</b> ppu.h:184</div></div>
-<div class="ttc" id="amain_8cpp_html_a56c83145992bda0c5a5664be4fc449e9"><div class="ttname"><a href="../../df/d0a/main_8cpp.html#a56c83145992bda0c5a5664be4fc449e9">t</a></div><div class="ttdeci">std::thread * t</div><div class="ttdef"><b>Definition:</b> main.cpp:28</div></div>
+<div class="ttc" id="aclassppu_html_a032eaca2250f2be302f32cd259ec53ce"><div class="ttname"><a href="../../d6/d3f/classppu.html#a032eaca2250f2be302f32cd259ec53ce">ppu::getBGPixelPaletteOffset</a></div><div class="ttdeci">static uint8_t getBGPixelPaletteOffset(ppu2c02 *ppuData)</div><div class="ttdef"><b>Definition:</b> ppu.h:286</div></div>
+<div class="ttc" id="aclassppu_html_a3fa653711a870aa6af0e40f28ec240bf"><div class="ttname"><a href="../../d6/d3f/classppu.html#a3fa653711a870aa6af0e40f28ec240bf">ppu::nmi</a></div><div class="ttdeci">static bool nmi</div><div class="ttdef"><b>Definition:</b> ppu.h:101</div></div>
+<div class="ttc" id="aclassppu_html_a5d40e95f043bcffaa2ef02bfd9423569"><div class="ttname"><a href="../../d6/d3f/classppu.html#a5d40e95f043bcffaa2ef02bfd9423569">ppu::colorPalate</a></div><div class="ttdeci">static const uint8_t colorPalate[0x40][3]</div><div class="ttdef"><b>Definition:</b> ppu.h:28</div></div>
+<div class="ttc" id="aclassppu_html_a637979c9ca071fa6aa2b16783220538d"><div class="ttname"><a href="../../d6/d3f/classppu.html#a637979c9ca071fa6aa2b16783220538d">ppu::getBGPixelPalette</a></div><div class="ttdeci">static uint8_t getBGPixelPalette(ppu2c02 *ppuData)</div><div class="ttdef"><b>Definition:</b> ppu.h:297</div></div>
+<div class="ttc" id="aclassppu_html_aa3cf4b36b2944ab7f2c793125ac30340"><div class="ttname"><a href="../../d6/d3f/classppu.html#aa3cf4b36b2944ab7f2c793125ac30340">ppu::foregroundRendring</a></div><div class="ttdeci">static void foregroundRendring(ppu2c02 *ppuData)</div><div class="ttdef"><b>Definition:</b> ppu.h:347</div></div>
+<div class="ttc" id="aclassppu_html_ab7902989f58e71e7b1a934558ee6bcf1"><div class="ttname"><a href="../../d6/d3f/classppu.html#ab7902989f58e71e7b1a934558ee6bcf1">ppu::GetColourFromPaletteRam</a></div><div class="ttdeci">static uint8_t GetColourFromPaletteRam(ppu2c02 *ppuData, uint8_t palette, uint8_t pixel)</div><div class="ttdef"><b>Definition:</b> ppu.h:116</div></div>
+<div class="ttc" id="aclassppu_html_adb5a4288af63c9e5d42ea460a91e04aa"><div class="ttname"><a href="../../d6/d3f/classppu.html#adb5a4288af63c9e5d42ea460a91e04aa">ppu::increaseCycle</a></div><div class="ttdeci">static void increaseCycle(ppu2c02 *ppuData)</div><div class="ttdef"><b>Definition:</b> ppu.h:306</div></div>
+<div class="ttc" id="aclassppu_html_adc553339a3f633423214a161971cb244"><div class="ttname"><a href="../../d6/d3f/classppu.html#adc553339a3f633423214a161971cb244">ppu::backgroundRendring</a></div><div class="ttdeci">static void backgroundRendring(ppu2c02 *ppuData)</div><div class="ttdef"><b>Definition:</b> ppu.h:323</div></div>
+<div class="ttc" id="aclassppu_html_afdebae0b46bc384493f51146539caeff"><div class="ttname"><a href="../../d6/d3f/classppu.html#afdebae0b46bc384493f51146539caeff">ppu::transferAddressY</a></div><div class="ttdeci">static void transferAddressY(ppu2c02 *ppuData)</div><div class="ttdef"><b>Definition:</b> ppu.h:213</div></div>
+<div class="ttc" id="amain_8cpp_html_a56c83145992bda0c5a5664be4fc449e9"><div class="ttname"><a href="../../df/d0a/main_8cpp.html#a56c83145992bda0c5a5664be4fc449e9">t</a></div><div class="ttdeci">std::thread * t</div><div class="ttdef"><b>Definition:</b> main.cpp:31</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d6/d3f/classppu_a8f8beeeceb29673161032303d02e8cad_cgraph.png" border="0" usemap="#ad6/d3f/classppu_a8f8beeeceb29673161032303d02e8cad_cgraph" alt=""/></div>
 <map name="ad6/d3f/classppu_a8f8beeeceb29673161032303d02e8cad_cgraph" id="ad6/d3f/classppu_a8f8beeeceb29673161032303d02e8cad_cgraph">
-<area shape="rect" title=" " alt="" coords="5,233,85,260"/>
-<area shape="rect" href="../../d6/d3f/classppu.html#a637979c9ca071fa6aa2b16783220538d" title=" " alt="" coords="151,5,306,32"/>
-<area shape="rect" href="../../d6/d3f/classppu.html#a032eaca2250f2be302f32cd259ec53ce" title=" " alt="" coords="133,56,324,83"/>
-<area shape="rect" href="../../d6/d3f/classppu.html#ab7902989f58e71e7b1a934558ee6bcf1" title=" " alt="" coords="372,107,577,133"/>
-<area shape="rect" href="../../d0/d88/classbus.html#abb29248facedf75907fba0ebf44022b0" title=" " alt="" coords="625,411,700,437"/>
-<area shape="rect" href="../../d6/d3f/classppu.html#adb5a4288af63c9e5d42ea460a91e04aa" title=" " alt="" coords="163,208,294,235"/>
-<area shape="rect" href="../../d6/d3f/classppu.html#af1857f201e89b8c907c0ab852474ef0a" title=" " alt="" coords="155,259,303,285"/>
-<area shape="rect" href="../../d6/d3f/classppu.html#abb466cdb15e449cbd54a1ec4fd2ef3d2" title=" " alt="" coords="381,284,568,311"/>
-<area shape="rect" href="../../d6/d3f/classppu.html#af4eed16ede0e68d6b23dcc4f10a74d9f" title=" " alt="" coords="153,360,304,387"/>
-<area shape="rect" href="../../d6/d3f/classppu.html#afdebae0b46bc384493f51146539caeff" title=" " alt="" coords="153,411,304,437"/>
-<area shape="rect" href="../../d6/d3f/classppu.html#a011d8cf9ad06b321ecf61ab48ed7825e" title=" " alt="" coords="149,461,308,488"/>
-<area shape="rect" href="../../d6/d3f/classppu.html#a9abb944f427a7a69eebf09dd31cc13a2" title=" " alt="" coords="401,335,549,361"/>
-<area shape="rect" href="../../d6/d3f/classppu.html#ac79c38af3d65d535acc5b681209f7c33" title=" " alt="" coords="387,385,563,412"/>
-<area shape="rect" href="../../d6/d3f/classppu.html#a24470d8d18ee8660dee020ddfdc6e089" title=" " alt="" coords="393,436,556,463"/>
-<area shape="rect" href="../../d6/d3f/classppu.html#abc1b9a5dd5bce43692e2db61b31bcd6c" title=" " alt="" coords="390,487,559,513"/>
-<area shape="rect" href="../../d6/d3f/classppu.html#a7fe1b4219f11e5f08807326089f53324" title=" " alt="" coords="391,537,558,564"/>
-<area shape="rect" href="../../d6/d3f/classppu.html#a5dfb585633a0fb9ac873189fc72fde2f" title=" " alt="" coords="408,588,541,615"/>
+<area shape="rect" title=" " alt="" coords="5,411,85,437"/>
+<area shape="rect" href="../../d6/d3f/classppu.html#adc553339a3f633423214a161971cb244" title=" " alt="" coords="145,259,312,285"/>
+<area shape="rect" href="../../d6/d3f/classppu.html#aa3cf4b36b2944ab7f2c793125ac30340" title=" " alt="" coords="394,411,555,437"/>
+<area shape="rect" href="../../d6/d3f/classppu.html#a637979c9ca071fa6aa2b16783220538d" title=" " alt="" coords="151,360,306,387"/>
+<area shape="rect" href="../../d6/d3f/classppu.html#a032eaca2250f2be302f32cd259ec53ce" title=" " alt="" coords="133,411,324,437"/>
+<area shape="rect" href="../../d6/d3f/classppu.html#ab7902989f58e71e7b1a934558ee6bcf1" title=" " alt="" coords="372,461,577,488"/>
+<area shape="rect" href="../../d6/d3f/classppu.html#adb5a4288af63c9e5d42ea460a91e04aa" title=" " alt="" coords="163,512,294,539"/>
+<area shape="rect" href="../../d6/d3f/classppu.html#afdebae0b46bc384493f51146539caeff" title=" " alt="" coords="153,563,304,589"/>
+<area shape="rect" href="../../d6/d3f/classppu.html#af1857f201e89b8c907c0ab852474ef0a" title=" " alt="" coords="401,259,549,285"/>
+<area shape="rect" href="../../d6/d3f/classppu.html#abb466cdb15e449cbd54a1ec4fd2ef3d2" title=" " alt="" coords="625,309,812,336"/>
+<area shape="rect" href="../../d0/d88/classbus.html#abb29248facedf75907fba0ebf44022b0" title=" " alt="" coords="860,259,935,285"/>
+<area shape="rect" href="../../d6/d3f/classppu.html#af4eed16ede0e68d6b23dcc4f10a74d9f" title=" " alt="" coords="399,157,550,184"/>
+<area shape="rect" href="../../d6/d3f/classppu.html#a011d8cf9ad06b321ecf61ab48ed7825e" title=" " alt="" coords="395,208,554,235"/>
+<area shape="rect" href="../../d6/d3f/classppu.html#a9abb944f427a7a69eebf09dd31cc13a2" title=" " alt="" coords="645,208,793,235"/>
+<area shape="rect" href="../../d6/d3f/classppu.html#ac79c38af3d65d535acc5b681209f7c33" title=" " alt="" coords="631,259,807,285"/>
+<area shape="rect" href="../../d6/d3f/classppu.html#a24470d8d18ee8660dee020ddfdc6e089" title=" " alt="" coords="637,5,800,32"/>
+<area shape="rect" href="../../d6/d3f/classppu.html#abc1b9a5dd5bce43692e2db61b31bcd6c" title=" " alt="" coords="634,56,803,83"/>
+<area shape="rect" href="../../d6/d3f/classppu.html#a7fe1b4219f11e5f08807326089f53324" title=" " alt="" coords="635,107,802,133"/>
+<area shape="rect" href="../../d6/d3f/classppu.html#a5dfb585633a0fb9ac873189fc72fde2f" title=" " alt="" coords="652,157,785,184"/>
 </map>
 </div>
 <div class="dynheader">
@@ -327,10 +490,155 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   99</span>        {</div>
-<div class="line"><span class="lineno">  100</span> </div>
-<div class="line"><span class="lineno">  101</span>        }</div>
+<div class="fragment"><div class="line"><span class="lineno">  110</span>        {</div>
+<div class="line"><span class="lineno">  111</span> </div>
+<div class="line"><span class="lineno">  112</span>        }</div>
 </div><!-- fragment -->
+</div>
+</div>
+<a id="aa3cf4b36b2944ab7f2c793125ac30340" name="aa3cf4b36b2944ab7f2c793125ac30340"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3cf4b36b2944ab7f2c793125ac30340">&#9670;&nbsp;</a></span>foregroundRendring()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void ppu::foregroundRendring </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d2/deb/classppu2c02.html">ppu2c02</a> *&#160;</td>
+          <td class="paramname"><em>ppuData</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  348</span>        {</div>
+<div class="line"><span class="lineno">  349</span>            <span class="keywordflow">if</span>(ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#af5240aa778b1cf870047f5c67d2ada53">cycle</a> == 257 &amp;&amp; ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a18857378e822268f90f7522770832510">scanline</a> != 261)</div>
+<div class="line"><span class="lineno">  350</span>            {</div>
+<div class="line"><span class="lineno">  351</span>                std::memset(ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#acbdeb257d1d202217512159326b2db95">spriteScanline</a>, 0xFF, 8 * <span class="keyword">sizeof</span>(<a class="code hl_struct" href="../../d7/de8/structppu2c02_1_1sprite_data.html">ppu2c02::spriteData</a>));</div>
+<div class="line"><span class="lineno">  352</span> </div>
+<div class="line"><span class="lineno">  353</span>                ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a19feb74ccf16a25ff2a04f00a79bd264">spriteZeroHitPossible</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  354</span> </div>
+<div class="line"><span class="lineno">  355</span>                ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a80404dda2684075bec7c0a09a0e97238">spriteCount</a> = 0;</div>
+<div class="line"><span class="lineno">  356</span> </div>
+<div class="line"><span class="lineno">  357</span>                uint8_t OAMEntry = 0;</div>
+<div class="line"><span class="lineno">  358</span>                <span class="keywordflow">while</span> (OAMEntry &lt; 64 &amp;&amp; ppuData-&gt;spriteCount &lt; 9)</div>
+<div class="line"><span class="lineno">  359</span>                {</div>
+<div class="line"><span class="lineno">  360</span>                    int16_t diff (ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a18857378e822268f90f7522770832510">scanline</a> - (int16_t)ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#ab3fb0ebbf51f433755d17b3d15177388">OAM</a>[OAMEntry].<a class="code hl_variable" href="../../d7/de8/structppu2c02_1_1sprite_data.html#aa64a047efb8509e17671004ee03105db">y</a>);</div>
+<div class="line"><span class="lineno">  361</span>                    <span class="keywordflow">if</span>(diff &gt;= 0 &amp;&amp; diff &lt; (ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#ac99d81b31fec1a67303a8c5547093647">control</a>.<a class="code hl_variable" href="../../df/d5b/unionppu2c02_1_1_p_p_u_c_t_r_l.html#a76e1b73727a510a0a66e960719be2120">sprite_size</a> ? 16 : 8))</div>
+<div class="line"><span class="lineno">  362</span>                    {</div>
+<div class="line"><span class="lineno">  363</span>                        <span class="keywordflow">if</span>(ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a80404dda2684075bec7c0a09a0e97238">spriteCount</a> &lt; 8){</div>
+<div class="line"><span class="lineno">  364</span>                            <span class="keywordflow">if</span>(OAMEntry == 0)</div>
+<div class="line"><span class="lineno">  365</span>                                ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a19feb74ccf16a25ff2a04f00a79bd264">spriteZeroHitPossible</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  366</span> </div>
+<div class="line"><span class="lineno">  367</span>                            memcpy(&amp;ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#acbdeb257d1d202217512159326b2db95">spriteScanline</a>[ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a80404dda2684075bec7c0a09a0e97238">spriteCount</a>], &amp;ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#ab3fb0ebbf51f433755d17b3d15177388">OAM</a>[OAMEntry], <span class="keyword">sizeof</span>(<a class="code hl_struct" href="../../d7/de8/structppu2c02_1_1sprite_data.html">ppu2c02::spriteData</a>));</div>
+<div class="line"><span class="lineno">  368</span>                            ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a80404dda2684075bec7c0a09a0e97238">spriteCount</a>++;                        </div>
+<div class="line"><span class="lineno">  369</span>                        }</div>
+<div class="line"><span class="lineno">  370</span>                    }</div>
+<div class="line"><span class="lineno">  371</span>                    OAMEntry++;</div>
+<div class="line"><span class="lineno">  372</span>                }</div>
+<div class="line"><span class="lineno">  373</span> </div>
+<div class="line"><span class="lineno">  374</span>                ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#ad0da07ad1213767314d41a02c825d917">status</a>.<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a5a0bfb4266a7b163f46f68760ef17240">sprite_overflow</a> = (ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a80404dda2684075bec7c0a09a0e97238">spriteCount</a> &gt; 8);</div>
+<div class="line"><span class="lineno">  375</span>            }</div>
+<div class="line"><span class="lineno">  376</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span>(ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#af5240aa778b1cf870047f5c67d2ada53">cycle</a> == 340)</div>
+<div class="line"><span class="lineno">  377</span>            {</div>
+<div class="line"><span class="lineno">  378</span>                <span class="keywordflow">for</span>(uint8_t i = 0; i &lt; ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a80404dda2684075bec7c0a09a0e97238">spriteCount</a>; i++)</div>
+<div class="line"><span class="lineno">  379</span>                {</div>
+<div class="line"><span class="lineno">  380</span>                    uint8_t spritePatternBitsLo, spritePatternBitsHi; </div>
+<div class="line"><span class="lineno">  381</span>                    uint16_t spritePatternAddrLo, spritePatternAddrHi;</div>
+<div class="line"><span class="lineno">  382</span> </div>
+<div class="line"><span class="lineno">  383</span>                    <span class="keywordflow">if</span>(!ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#ac99d81b31fec1a67303a8c5547093647">control</a>.<a class="code hl_variable" href="../../df/d5b/unionppu2c02_1_1_p_p_u_c_t_r_l.html#a76e1b73727a510a0a66e960719be2120">sprite_size</a>)</div>
+<div class="line"><span class="lineno">  384</span>                    {</div>
+<div class="line"><span class="lineno">  385</span>                        spritePatternAddrLo = </div>
+<div class="line"><span class="lineno">  386</span>                            ( ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#ac99d81b31fec1a67303a8c5547093647">control</a>.<a class="code hl_variable" href="../../df/d5b/unionppu2c02_1_1_p_p_u_c_t_r_l.html#a7a43abdd14dc4326b58ef1e2cd424588">pattern_sprite</a> &lt;&lt; 12)  |</div>
+<div class="line"><span class="lineno">  387</span>                            ( ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#acbdeb257d1d202217512159326b2db95">spriteScanline</a>[i].<a class="code hl_variable" href="../../d7/de8/structppu2c02_1_1sprite_data.html#a4405c1b640c488f3db3caf6715c3f716">tileId</a> &lt;&lt; 4) |</div>
+<div class="line"><span class="lineno">  388</span>                            ( </div>
+<div class="line"><span class="lineno">  389</span>                                (ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#acbdeb257d1d202217512159326b2db95">spriteScanline</a>[i].<a class="code hl_variable" href="../../d7/de8/structppu2c02_1_1sprite_data.html#a2cc89e2e30cb6d1476a5f9c1c4c88ae6">flipVertically</a> * 7) + </div>
+<div class="line"><span class="lineno">  390</span>                                (1 - ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#acbdeb257d1d202217512159326b2db95">spriteScanline</a>[i].<a class="code hl_variable" href="../../d7/de8/structppu2c02_1_1sprite_data.html#a2cc89e2e30cb6d1476a5f9c1c4c88ae6">flipVertically</a> * 2) * </div>
+<div class="line"><span class="lineno">  391</span>                                (ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a18857378e822268f90f7522770832510">scanline</a> - ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#acbdeb257d1d202217512159326b2db95">spriteScanline</a>[i].<a class="code hl_variable" href="../../d7/de8/structppu2c02_1_1sprite_data.html#aa64a047efb8509e17671004ee03105db">y</a>)</div>
+<div class="line"><span class="lineno">  392</span>                            );</div>
+<div class="line"><span class="lineno">  393</span>                    } </div>
+<div class="line"><span class="lineno">  394</span>                    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  395</span>                    {</div>
+<div class="line"><span class="lineno">  396</span>                        spritePatternAddrLo = </div>
+<div class="line"><span class="lineno">  397</span>                            ( (ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#acbdeb257d1d202217512159326b2db95">spriteScanline</a>[i].<a class="code hl_variable" href="../../d7/de8/structppu2c02_1_1sprite_data.html#a4405c1b640c488f3db3caf6715c3f716">tileId</a> &amp; 0x01) &lt;&lt; 12)  |</div>
+<div class="line"><span class="lineno">  398</span>                            ( </div>
+<div class="line"><span class="lineno">  399</span>                                (ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#acbdeb257d1d202217512159326b2db95">spriteScanline</a>[i].<a class="code hl_variable" href="../../d7/de8/structppu2c02_1_1sprite_data.html#a4405c1b640c488f3db3caf6715c3f716">tileId</a> &amp; 0xFE + </div>
+<div class="line"><span class="lineno">  400</span>                                ((ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a18857378e822268f90f7522770832510">scanline</a> - ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#acbdeb257d1d202217512159326b2db95">spriteScanline</a>[i].<a class="code hl_variable" href="../../d7/de8/structppu2c02_1_1sprite_data.html#aa64a047efb8509e17671004ee03105db">y</a> &lt; 8) ^ </div>
+<div class="line"><span class="lineno">  401</span>                                !(ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#acbdeb257d1d202217512159326b2db95">spriteScanline</a>[i].<a class="code hl_variable" href="../../d7/de8/structppu2c02_1_1sprite_data.html#a2cc89e2e30cb6d1476a5f9c1c4c88ae6">flipVertically</a>))) </div>
+<div class="line"><span class="lineno">  402</span>                                &lt;&lt; 4) |</div>
+<div class="line"><span class="lineno">  403</span>                            ( </div>
+<div class="line"><span class="lineno">  404</span>                                (ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#acbdeb257d1d202217512159326b2db95">spriteScanline</a>[i].<a class="code hl_variable" href="../../d7/de8/structppu2c02_1_1sprite_data.html#a2cc89e2e30cb6d1476a5f9c1c4c88ae6">flipVertically</a> * 7) + </div>
+<div class="line"><span class="lineno">  405</span>                                (1 - ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#acbdeb257d1d202217512159326b2db95">spriteScanline</a>[i].<a class="code hl_variable" href="../../d7/de8/structppu2c02_1_1sprite_data.html#a2cc89e2e30cb6d1476a5f9c1c4c88ae6">flipVertically</a> * 2) * </div>
+<div class="line"><span class="lineno">  406</span>                                ((ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a18857378e822268f90f7522770832510">scanline</a> - ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#acbdeb257d1d202217512159326b2db95">spriteScanline</a>[i].<a class="code hl_variable" href="../../d7/de8/structppu2c02_1_1sprite_data.html#aa64a047efb8509e17671004ee03105db">y</a>) &amp; 0x07)</div>
+<div class="line"><span class="lineno">  407</span>                            );</div>
+<div class="line"><span class="lineno">  408</span>                    }</div>
+<div class="line"><span class="lineno">  409</span> </div>
+<div class="line"><span class="lineno">  410</span>                    spritePatternAddrHi = spritePatternAddrLo + 8;</div>
+<div class="line"><span class="lineno">  411</span> </div>
+<div class="line"><span class="lineno">  412</span>                    spritePatternBitsLo = ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#aa167427b0acc186c0922b7a9494e3734">ppuBus</a>.<a class="code hl_function" href="../../d0/d88/classbus.html#abb29248facedf75907fba0ebf44022b0">read</a>(spritePatternAddrLo);</div>
+<div class="line"><span class="lineno">  413</span>                    spritePatternBitsHi = ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#aa167427b0acc186c0922b7a9494e3734">ppuBus</a>.<a class="code hl_function" href="../../d0/d88/classbus.html#abb29248facedf75907fba0ebf44022b0">read</a>(spritePatternAddrHi);</div>
+<div class="line"><span class="lineno">  414</span> </div>
+<div class="line"><span class="lineno">  415</span>                    <span class="keywordflow">if</span>(ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#acbdeb257d1d202217512159326b2db95">spriteScanline</a>[i].<a class="code hl_variable" href="../../d7/de8/structppu2c02_1_1sprite_data.html#a66282a393078220956e540fbf5f1858c">flipHorizontally</a>)</div>
+<div class="line"><span class="lineno">  416</span>                    {</div>
+<div class="line"><span class="lineno">  417</span>                        spritePatternBitsLo = <a class="code hl_define" href="../../d2/df9/ppu_8h.html#a1ed3212bbd3162dd55586ddb3b72be9c">FLIP_BITS</a>(spritePatternBitsLo);</div>
+<div class="line"><span class="lineno">  418</span>                        spritePatternBitsHi = <a class="code hl_define" href="../../d2/df9/ppu_8h.html#a1ed3212bbd3162dd55586ddb3b72be9c">FLIP_BITS</a>(spritePatternBitsHi);</div>
+<div class="line"><span class="lineno">  419</span>                    }</div>
+<div class="line"><span class="lineno">  420</span> </div>
+<div class="line"><span class="lineno">  421</span>                    ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a9ae0a9296ea1a2b87471eef102255d0c">spriteShifterPatternLo</a>[i] = spritePatternBitsLo;</div>
+<div class="line"><span class="lineno">  422</span>                    ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a18e78ca23f88ef533a32f003f6d82515">spriteShifterPatternHi</a>[i] = spritePatternBitsHi;</div>
+<div class="line"><span class="lineno">  423</span>                }</div>
+<div class="line"><span class="lineno">  424</span>            }</div>
+<div class="line"><span class="lineno">  425</span>        }</div>
+<div class="ttc" id="aclassppu2c02_html_a18857378e822268f90f7522770832510"><div class="ttname"><a href="../../d2/deb/classppu2c02.html#a18857378e822268f90f7522770832510">ppu2c02::scanline</a></div><div class="ttdeci">int16_t scanline</div><div class="ttdef"><b>Definition:</b> 2c02.h:130</div></div>
+<div class="ttc" id="aclassppu2c02_html_a18e78ca23f88ef533a32f003f6d82515"><div class="ttname"><a href="../../d2/deb/classppu2c02.html#a18e78ca23f88ef533a32f003f6d82515">ppu2c02::spriteShifterPatternHi</a></div><div class="ttdeci">uint8_t spriteShifterPatternHi[8]</div><div class="ttdef"><b>Definition:</b> 2c02.h:54</div></div>
+<div class="ttc" id="aclassppu2c02_html_a19feb74ccf16a25ff2a04f00a79bd264"><div class="ttname"><a href="../../d2/deb/classppu2c02.html#a19feb74ccf16a25ff2a04f00a79bd264">ppu2c02::spriteZeroHitPossible</a></div><div class="ttdeci">bool spriteZeroHitPossible</div><div class="ttdef"><b>Definition:</b> 2c02.h:57</div></div>
+<div class="ttc" id="aclassppu2c02_html_a5a0bfb4266a7b163f46f68760ef17240"><div class="ttname"><a href="../../d2/deb/classppu2c02.html#a5a0bfb4266a7b163f46f68760ef17240">ppu2c02::sprite_overflow</a></div><div class="ttdeci">uint8_t sprite_overflow</div><div class="ttdef"><b>Definition:</b> 2c02.h:67</div></div>
+<div class="ttc" id="aclassppu2c02_html_a80404dda2684075bec7c0a09a0e97238"><div class="ttname"><a href="../../d2/deb/classppu2c02.html#a80404dda2684075bec7c0a09a0e97238">ppu2c02::spriteCount</a></div><div class="ttdeci">uint8_t spriteCount</div><div class="ttdef"><b>Definition:</b> 2c02.h:52</div></div>
+<div class="ttc" id="aclassppu2c02_html_a9ae0a9296ea1a2b87471eef102255d0c"><div class="ttname"><a href="../../d2/deb/classppu2c02.html#a9ae0a9296ea1a2b87471eef102255d0c">ppu2c02::spriteShifterPatternLo</a></div><div class="ttdeci">uint8_t spriteShifterPatternLo[8]</div><div class="ttdef"><b>Definition:</b> 2c02.h:53</div></div>
+<div class="ttc" id="aclassppu2c02_html_ab3fb0ebbf51f433755d17b3d15177388"><div class="ttname"><a href="../../d2/deb/classppu2c02.html#ab3fb0ebbf51f433755d17b3d15177388">ppu2c02::OAM</a></div><div class="ttdeci">spriteData OAM[64]</div><div class="ttdef"><b>Definition:</b> 2c02.h:44</div></div>
+<div class="ttc" id="aclassppu2c02_html_ac99d81b31fec1a67303a8c5547093647"><div class="ttname"><a href="../../d2/deb/classppu2c02.html#ac99d81b31fec1a67303a8c5547093647">ppu2c02::control</a></div><div class="ttdeci">union ppu2c02::PPUCTRL control</div></div>
+<div class="ttc" id="aclassppu2c02_html_acbdeb257d1d202217512159326b2db95"><div class="ttname"><a href="../../d2/deb/classppu2c02.html#acbdeb257d1d202217512159326b2db95">ppu2c02::spriteScanline</a></div><div class="ttdeci">spriteData spriteScanline[8]</div><div class="ttdef"><b>Definition:</b> 2c02.h:50</div></div>
+<div class="ttc" id="aclassppu2c02_html_ad0da07ad1213767314d41a02c825d917"><div class="ttname"><a href="../../d2/deb/classppu2c02.html#ad0da07ad1213767314d41a02c825d917">ppu2c02::status</a></div><div class="ttdeci">union ppu2c02::@8 status</div></div>
+<div class="ttc" id="appu_8h_html_a1ed3212bbd3162dd55586ddb3b72be9c"><div class="ttname"><a href="../../d2/df9/ppu_8h.html#a1ed3212bbd3162dd55586ddb3b72be9c">FLIP_BITS</a></div><div class="ttdeci">#define FLIP_BITS(b)</div><div class="ttdef"><b>Definition:</b> ppu.h:9</div></div>
+<div class="ttc" id="astructppu2c02_1_1sprite_data_html"><div class="ttname"><a href="../../d7/de8/structppu2c02_1_1sprite_data.html">ppu2c02::spriteData</a></div><div class="ttdef"><b>Definition:</b> 2c02.h:22</div></div>
+<div class="ttc" id="astructppu2c02_1_1sprite_data_html_a2cc89e2e30cb6d1476a5f9c1c4c88ae6"><div class="ttname"><a href="../../d7/de8/structppu2c02_1_1sprite_data.html#a2cc89e2e30cb6d1476a5f9c1c4c88ae6">ppu2c02::spriteData::flipVertically</a></div><div class="ttdeci">uint8_t flipVertically</div><div class="ttdef"><b>Definition:</b> 2c02.h:33</div></div>
+<div class="ttc" id="astructppu2c02_1_1sprite_data_html_a4405c1b640c488f3db3caf6715c3f716"><div class="ttname"><a href="../../d7/de8/structppu2c02_1_1sprite_data.html#a4405c1b640c488f3db3caf6715c3f716">ppu2c02::spriteData::tileId</a></div><div class="ttdeci">uint8_t tileId</div><div class="ttdef"><b>Definition:</b> 2c02.h:24</div></div>
+<div class="ttc" id="astructppu2c02_1_1sprite_data_html_a66282a393078220956e540fbf5f1858c"><div class="ttname"><a href="../../d7/de8/structppu2c02_1_1sprite_data.html#a66282a393078220956e540fbf5f1858c">ppu2c02::spriteData::flipHorizontally</a></div><div class="ttdeci">uint8_t flipHorizontally</div><div class="ttdef"><b>Definition:</b> 2c02.h:32</div></div>
+<div class="ttc" id="astructppu2c02_1_1sprite_data_html_aa64a047efb8509e17671004ee03105db"><div class="ttname"><a href="../../d7/de8/structppu2c02_1_1sprite_data.html#aa64a047efb8509e17671004ee03105db">ppu2c02::spriteData::y</a></div><div class="ttdeci">uint8_t y</div><div class="ttdef"><b>Definition:</b> 2c02.h:23</div></div>
+<div class="ttc" id="aunionppu2c02_1_1_p_p_u_c_t_r_l_html_a76e1b73727a510a0a66e960719be2120"><div class="ttname"><a href="../../df/d5b/unionppu2c02_1_1_p_p_u_c_t_r_l.html#a76e1b73727a510a0a66e960719be2120">ppu2c02::PPUCTRL::sprite_size</a></div><div class="ttdeci">uint8_t sprite_size</div><div class="ttdef"><b>Definition:</b> 2c02.h:101</div></div>
+<div class="ttc" id="aunionppu2c02_1_1_p_p_u_c_t_r_l_html_a7a43abdd14dc4326b58ef1e2cd424588"><div class="ttname"><a href="../../df/d5b/unionppu2c02_1_1_p_p_u_c_t_r_l.html#a7a43abdd14dc4326b58ef1e2cd424588">ppu2c02::PPUCTRL::pattern_sprite</a></div><div class="ttdeci">uint8_t pattern_sprite</div><div class="ttdef"><b>Definition:</b> 2c02.h:99</div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d6/d3f/classppu_aa3cf4b36b2944ab7f2c793125ac30340_cgraph.png" border="0" usemap="#ad6/d3f/classppu_aa3cf4b36b2944ab7f2c793125ac30340_cgraph" alt=""/></div>
+<map name="ad6/d3f/classppu_aa3cf4b36b2944ab7f2c793125ac30340_cgraph" id="ad6/d3f/classppu_aa3cf4b36b2944ab7f2c793125ac30340_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,167,32"/>
+<area shape="rect" href="../../d0/d88/classbus.html#abb29248facedf75907fba0ebf44022b0" title=" " alt="" coords="215,5,289,32"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d6/d3f/classppu_aa3cf4b36b2944ab7f2c793125ac30340_icgraph.png" border="0" usemap="#ad6/d3f/classppu_aa3cf4b36b2944ab7f2c793125ac30340_icgraph" alt=""/></div>
+<map name="ad6/d3f/classppu_aa3cf4b36b2944ab7f2c793125ac30340_icgraph" id="ad6/d3f/classppu_aa3cf4b36b2944ab7f2c793125ac30340_icgraph">
+<area shape="rect" title=" " alt="" coords="653,31,815,57"/>
+<area shape="rect" href="../../d6/d3f/classppu.html#a8f8beeeceb29673161032303d02e8cad" title=" " alt="" coords="525,31,605,57"/>
+<area shape="rect" href="../../df/d0a/main_8cpp.html#a6d327e023ed1dae058f86d827940d7a6" title=" " alt="" coords="403,31,477,57"/>
+<area shape="rect" href="../../df/d0a/main_8cpp.html#a21dfe9bde9bd8461cf7b93411861607a" title=" " alt="" coords="104,5,244,32"/>
+<area shape="rect" href="../../df/d0a/main_8cpp.html#ab59f1b1459454092942fcda083513be9" title=" " alt="" coords="292,56,355,83"/>
+<area shape="rect" href="../../df/d0a/main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,31,56,57"/>
+<area shape="rect" href="../../df/d0a/main_8cpp.html#a4a2adc3d978a792c25ab506f6e13bdfe" title=" " alt="" coords="122,56,226,83"/>
+</map>
+</div>
+
 </div>
 </div>
 <a id="a637979c9ca071fa6aa2b16783220538d" name="a637979c9ca071fa6aa2b16783220538d"></a>
@@ -356,16 +664,16 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  269</span>        {</div>
-<div class="line"><span class="lineno">  270</span>            uint16_t bit_mux = 0x8000 &gt;&gt; ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#ad38262400503707dc60852b2b87a56e2">fine_x</a>;</div>
-<div class="line"><span class="lineno">  271</span> </div>
-<div class="line"><span class="lineno">  272</span>            uint8_t bg_pal0 = (ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#aacca281f94ba141df4be70494c01c566">bg_shifter_attrib_lo</a> &amp; bit_mux) &gt; 0;</div>
-<div class="line"><span class="lineno">  273</span>            uint8_t bg_pal1 = (ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#aab9cc74b5efe2244c82d6156d6fe7e70">bg_shifter_attrib_hi</a> &amp; bit_mux) &gt; 0;</div>
-<div class="line"><span class="lineno">  274</span>            <span class="keywordflow">return</span> (bg_pal1 &lt;&lt; 1) | bg_pal0;</div>
-<div class="line"><span class="lineno">  275</span>        }</div>
-<div class="ttc" id="aclassppu2c02_html_aab9cc74b5efe2244c82d6156d6fe7e70"><div class="ttname"><a href="../../d2/deb/classppu2c02.html#aab9cc74b5efe2244c82d6156d6fe7e70">ppu2c02::bg_shifter_attrib_hi</a></div><div class="ttdeci">uint16_t bg_shifter_attrib_hi</div><div class="ttdef"><b>Definition:</b> 2c02.h:129</div></div>
-<div class="ttc" id="aclassppu2c02_html_aacca281f94ba141df4be70494c01c566"><div class="ttname"><a href="../../d2/deb/classppu2c02.html#aacca281f94ba141df4be70494c01c566">ppu2c02::bg_shifter_attrib_lo</a></div><div class="ttdeci">uint16_t bg_shifter_attrib_lo</div><div class="ttdef"><b>Definition:</b> 2c02.h:128</div></div>
-<div class="ttc" id="aclassppu2c02_html_ad38262400503707dc60852b2b87a56e2"><div class="ttname"><a href="../../d2/deb/classppu2c02.html#ad38262400503707dc60852b2b87a56e2">ppu2c02::fine_x</a></div><div class="ttdeci">uint8_t fine_x</div><div class="ttdef"><b>Definition:</b> 2c02.h:114</div></div>
+<div class="fragment"><div class="line"><span class="lineno">  298</span>        {</div>
+<div class="line"><span class="lineno">  299</span>            uint16_t bit_mux = 0x8000 &gt;&gt; ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#ad38262400503707dc60852b2b87a56e2">fine_x</a>;</div>
+<div class="line"><span class="lineno">  300</span> </div>
+<div class="line"><span class="lineno">  301</span>            uint8_t bg_pal0 = (ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#aacca281f94ba141df4be70494c01c566">bg_shifter_attrib_lo</a> &amp; bit_mux) &gt; 0;</div>
+<div class="line"><span class="lineno">  302</span>            uint8_t bg_pal1 = (ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#aab9cc74b5efe2244c82d6156d6fe7e70">bg_shifter_attrib_hi</a> &amp; bit_mux) &gt; 0;</div>
+<div class="line"><span class="lineno">  303</span>            <span class="keywordflow">return</span> (bg_pal1 &lt;&lt; 1) | bg_pal0;</div>
+<div class="line"><span class="lineno">  304</span>        }</div>
+<div class="ttc" id="aclassppu2c02_html_aab9cc74b5efe2244c82d6156d6fe7e70"><div class="ttname"><a href="../../d2/deb/classppu2c02.html#aab9cc74b5efe2244c82d6156d6fe7e70">ppu2c02::bg_shifter_attrib_hi</a></div><div class="ttdeci">uint16_t bg_shifter_attrib_hi</div><div class="ttdef"><b>Definition:</b> 2c02.h:143</div></div>
+<div class="ttc" id="aclassppu2c02_html_aacca281f94ba141df4be70494c01c566"><div class="ttname"><a href="../../d2/deb/classppu2c02.html#aacca281f94ba141df4be70494c01c566">ppu2c02::bg_shifter_attrib_lo</a></div><div class="ttdeci">uint16_t bg_shifter_attrib_lo</div><div class="ttdef"><b>Definition:</b> 2c02.h:142</div></div>
+<div class="ttc" id="aclassppu2c02_html_ad38262400503707dc60852b2b87a56e2"><div class="ttname"><a href="../../d2/deb/classppu2c02.html#ad38262400503707dc60852b2b87a56e2">ppu2c02::fine_x</a></div><div class="ttdeci">uint8_t fine_x</div><div class="ttdef"><b>Definition:</b> 2c02.h:128</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -406,17 +714,17 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  258</span>        {</div>
-<div class="line"><span class="lineno">  259</span>                    </div>
-<div class="line"><span class="lineno">  260</span>            uint16_t bit_mux = 0x8000 &gt;&gt; ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#ad38262400503707dc60852b2b87a56e2">fine_x</a>;</div>
-<div class="line"><span class="lineno">  261</span> </div>
-<div class="line"><span class="lineno">  262</span>            uint8_t p0_pixel = (ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a76b299a13833f52f473f4306cb1bfed4">bg_shifter_pattern_lo</a> &amp; bit_mux) &gt; 0;</div>
-<div class="line"><span class="lineno">  263</span>            uint8_t p1_pixel = (ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a1677fce272b90542ea2459c8ae2fd9db">bg_shifter_pattern_hi</a> &amp; bit_mux) &gt; 0;</div>
-<div class="line"><span class="lineno">  264</span> </div>
-<div class="line"><span class="lineno">  265</span>            <span class="keywordflow">return</span> (p1_pixel &lt;&lt; 1) | p0_pixel;</div>
-<div class="line"><span class="lineno">  266</span>        }</div>
-<div class="ttc" id="aclassppu2c02_html_a1677fce272b90542ea2459c8ae2fd9db"><div class="ttname"><a href="../../d2/deb/classppu2c02.html#a1677fce272b90542ea2459c8ae2fd9db">ppu2c02::bg_shifter_pattern_hi</a></div><div class="ttdeci">uint16_t bg_shifter_pattern_hi</div><div class="ttdef"><b>Definition:</b> 2c02.h:127</div></div>
-<div class="ttc" id="aclassppu2c02_html_a76b299a13833f52f473f4306cb1bfed4"><div class="ttname"><a href="../../d2/deb/classppu2c02.html#a76b299a13833f52f473f4306cb1bfed4">ppu2c02::bg_shifter_pattern_lo</a></div><div class="ttdeci">uint16_t bg_shifter_pattern_lo</div><div class="ttdef"><b>Definition:</b> 2c02.h:126</div></div>
+<div class="fragment"><div class="line"><span class="lineno">  287</span>        {</div>
+<div class="line"><span class="lineno">  288</span>                    </div>
+<div class="line"><span class="lineno">  289</span>            uint16_t bit_mux = 0x8000 &gt;&gt; ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#ad38262400503707dc60852b2b87a56e2">fine_x</a>;</div>
+<div class="line"><span class="lineno">  290</span> </div>
+<div class="line"><span class="lineno">  291</span>            uint8_t p0_pixel = (ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a76b299a13833f52f473f4306cb1bfed4">bg_shifter_pattern_lo</a> &amp; bit_mux) &gt; 0;</div>
+<div class="line"><span class="lineno">  292</span>            uint8_t p1_pixel = (ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a1677fce272b90542ea2459c8ae2fd9db">bg_shifter_pattern_hi</a> &amp; bit_mux) &gt; 0;</div>
+<div class="line"><span class="lineno">  293</span> </div>
+<div class="line"><span class="lineno">  294</span>            <span class="keywordflow">return</span> (p1_pixel &lt;&lt; 1) | p0_pixel;</div>
+<div class="line"><span class="lineno">  295</span>        }</div>
+<div class="ttc" id="aclassppu2c02_html_a1677fce272b90542ea2459c8ae2fd9db"><div class="ttname"><a href="../../d2/deb/classppu2c02.html#a1677fce272b90542ea2459c8ae2fd9db">ppu2c02::bg_shifter_pattern_hi</a></div><div class="ttdeci">uint16_t bg_shifter_pattern_hi</div><div class="ttdef"><b>Definition:</b> 2c02.h:141</div></div>
+<div class="ttc" id="aclassppu2c02_html_a76b299a13833f52f473f4306cb1bfed4"><div class="ttname"><a href="../../d2/deb/classppu2c02.html#a76b299a13833f52f473f4306cb1bfed4">ppu2c02::bg_shifter_pattern_lo</a></div><div class="ttdeci">uint16_t bg_shifter_pattern_lo</div><div class="ttdef"><b>Definition:</b> 2c02.h:140</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -473,10 +781,9 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  106</span>        {</div>
-<div class="line"><span class="lineno">  107</span>            <span class="keywordflow">return</span> ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#aa167427b0acc186c0922b7a9494e3734">ppuBus</a>.<a class="code hl_function" href="../../d0/d88/classbus.html#abb29248facedf75907fba0ebf44022b0">read</a>(0x3F00 + (palette &lt;&lt; 2) + pixel) &amp; 0x3F;</div>
-<div class="line"><span class="lineno">  108</span>        }</div>
-<div class="ttc" id="aclassppu2c02_html_aa167427b0acc186c0922b7a9494e3734"><div class="ttname"><a href="../../d2/deb/classppu2c02.html#aa167427b0acc186c0922b7a9494e3734">ppu2c02::ppuBus</a></div><div class="ttdeci">bus&lt; uint8_t, uint16_t &gt; ppuBus</div><div class="ttdef"><b>Definition:</b> 2c02.h:19</div></div>
+<div class="fragment"><div class="line"><span class="lineno">  117</span>        {</div>
+<div class="line"><span class="lineno">  118</span>            <span class="keywordflow">return</span> ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#aa167427b0acc186c0922b7a9494e3734">ppuBus</a>.<a class="code hl_function" href="../../d0/d88/classbus.html#abb29248facedf75907fba0ebf44022b0">read</a>(0x3F00 + (palette &lt;&lt; 2) + pixel) &amp; 0x3F;</div>
+<div class="line"><span class="lineno">  119</span>        }</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -526,23 +833,22 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  278</span>        {</div>
-<div class="line"><span class="lineno">  279</span>            ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#af5240aa778b1cf870047f5c67d2ada53">cycle</a>++;</div>
-<div class="line"><span class="lineno">  280</span>            <span class="keywordflow">if</span> (ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#af5240aa778b1cf870047f5c67d2ada53">cycle</a> &gt;= 341)</div>
-<div class="line"><span class="lineno">  281</span>            {</div>
-<div class="line"><span class="lineno">  282</span>                ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#af5240aa778b1cf870047f5c67d2ada53">cycle</a> = 0;</div>
-<div class="line"><span class="lineno">  283</span>                ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a18857378e822268f90f7522770832510">scanline</a>++;</div>
-<div class="line"><span class="lineno">  284</span> </div>
-<div class="line"><span class="lineno">  285</span>                <span class="keywordflow">if</span> (ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a18857378e822268f90f7522770832510">scanline</a> &gt; 261)</div>
-<div class="line"><span class="lineno">  286</span>                {</div>
-<div class="line"><span class="lineno">  287</span>                    ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a18857378e822268f90f7522770832510">scanline</a> = 0;</div>
-<div class="line"><span class="lineno">  288</span>                    <a class="code hl_variable" href="../../d6/d3f/classppu.html#ac4bf75474698942f6b4f61c2cda09a79">frameComplete</a> = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  289</span>                }</div>
-<div class="line"><span class="lineno">  290</span>            }</div>
-<div class="line"><span class="lineno">  291</span>        }</div>
-<div class="ttc" id="aclassppu2c02_html_a18857378e822268f90f7522770832510"><div class="ttname"><a href="../../d2/deb/classppu2c02.html#a18857378e822268f90f7522770832510">ppu2c02::scanline</a></div><div class="ttdeci">int16_t scanline</div><div class="ttdef"><b>Definition:</b> 2c02.h:116</div></div>
-<div class="ttc" id="aclassppu2c02_html_af5240aa778b1cf870047f5c67d2ada53"><div class="ttname"><a href="../../d2/deb/classppu2c02.html#af5240aa778b1cf870047f5c67d2ada53">ppu2c02::cycle</a></div><div class="ttdeci">int16_t cycle</div><div class="ttdef"><b>Definition:</b> 2c02.h:117</div></div>
-<div class="ttc" id="aclassppu_html_ac4bf75474698942f6b4f61c2cda09a79"><div class="ttname"><a href="../../d6/d3f/classppu.html#ac4bf75474698942f6b4f61c2cda09a79">ppu::frameComplete</a></div><div class="ttdeci">static bool frameComplete</div><div class="ttdef"><b>Definition:</b> ppu.h:89</div></div>
+<div class="fragment"><div class="line"><span class="lineno">  307</span>        {</div>
+<div class="line"><span class="lineno">  308</span>            ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#af5240aa778b1cf870047f5c67d2ada53">cycle</a>++;</div>
+<div class="line"><span class="lineno">  309</span>            <span class="keywordflow">if</span> (ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#af5240aa778b1cf870047f5c67d2ada53">cycle</a> &gt;= 341)</div>
+<div class="line"><span class="lineno">  310</span>            {</div>
+<div class="line"><span class="lineno">  311</span>                ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#af5240aa778b1cf870047f5c67d2ada53">cycle</a> = 0;</div>
+<div class="line"><span class="lineno">  312</span>                ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a18857378e822268f90f7522770832510">scanline</a>++;</div>
+<div class="line"><span class="lineno">  313</span> </div>
+<div class="line"><span class="lineno">  314</span>                <span class="keywordflow">if</span> (ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a18857378e822268f90f7522770832510">scanline</a> &gt; 261)</div>
+<div class="line"><span class="lineno">  315</span>                {</div>
+<div class="line"><span class="lineno">  316</span>                    ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a18857378e822268f90f7522770832510">scanline</a> = 0;                    </div>
+<div class="line"><span class="lineno">  317</span>                    <span class="comment">// LAUGHTALE_ENGINR_LOG_INFO(&quot;frame&quot;)</span></div>
+<div class="line"><span class="lineno">  318</span>                    <a class="code hl_variable" href="../../d6/d3f/classppu.html#ac4bf75474698942f6b4f61c2cda09a79">frameComplete</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  319</span>                }</div>
+<div class="line"><span class="lineno">  320</span>            }</div>
+<div class="line"><span class="lineno">  321</span>        }</div>
+<div class="ttc" id="aclassppu_html_ac4bf75474698942f6b4f61c2cda09a79"><div class="ttname"><a href="../../d6/d3f/classppu.html#ac4bf75474698942f6b4f61c2cda09a79">ppu::frameComplete</a></div><div class="ttdeci">static bool frameComplete</div><div class="ttdef"><b>Definition:</b> ppu.h:100</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -583,33 +889,33 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  131</span>        {</div>
-<div class="line"><span class="lineno">  132</span>            <span class="keywordflow">if</span> (ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#ae8399bc89c92d76b399da6efff282c15">mask</a>.<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a6539ec50d4dd9d95e00ab0de2771e695">render_background</a> || ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#ae8399bc89c92d76b399da6efff282c15">mask</a>.<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a36e34c5bbd3dcada0b27bddd1f40ed98">render_sprites</a>)</div>
-<div class="line"><span class="lineno">  133</span>            {</div>
-<div class="line"><span class="lineno">  134</span>                <span class="keywordflow">if</span> (ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a977ed4c9f9596404ca0412db55588cf0">vram_addr</a>.<a class="code hl_variable" href="../../d4/d46/unionppu2c02_1_1loopy__register.html#ae7b526ced9250f815f73dc55b85b7383">coarse_x</a> == 31)</div>
-<div class="line"><span class="lineno">  135</span>                {</div>
-<div class="line"><span class="lineno">  136</span>                    ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a977ed4c9f9596404ca0412db55588cf0">vram_addr</a>.<a class="code hl_variable" href="../../d4/d46/unionppu2c02_1_1loopy__register.html#ae7b526ced9250f815f73dc55b85b7383">coarse_x</a> = 0;</div>
-<div class="line"><span class="lineno">  137</span>                    ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a977ed4c9f9596404ca0412db55588cf0">vram_addr</a>.<a class="code hl_variable" href="../../d4/d46/unionppu2c02_1_1loopy__register.html#a85d5703f11e821385c2d2728069d1ef4">nametable_x</a> = ~ppuData-&gt;vram_addr.nametable_x;</div>
-<div class="line"><span class="lineno">  138</span>                }</div>
-<div class="line"><span class="lineno">  139</span>                <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  140</span>                {</div>
-<div class="line"><span class="lineno">  141</span>                    ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a977ed4c9f9596404ca0412db55588cf0">vram_addr</a>.<a class="code hl_variable" href="../../d4/d46/unionppu2c02_1_1loopy__register.html#ae7b526ced9250f815f73dc55b85b7383">coarse_x</a>++;</div>
-<div class="line"><span class="lineno">  142</span>                }</div>
-<div class="line"><span class="lineno">  143</span>            }</div>
-<div class="line"><span class="lineno">  144</span>        }</div>
-<div class="ttc" id="aclassppu2c02_html_a36e34c5bbd3dcada0b27bddd1f40ed98"><div class="ttname"><a href="../../d2/deb/classppu2c02.html#a36e34c5bbd3dcada0b27bddd1f40ed98">ppu2c02::render_sprites</a></div><div class="ttdeci">uint8_t render_sprites</div><div class="ttdef"><b>Definition:</b> 2c02.h:69</div></div>
-<div class="ttc" id="aclassppu2c02_html_a6539ec50d4dd9d95e00ab0de2771e695"><div class="ttname"><a href="../../d2/deb/classppu2c02.html#a6539ec50d4dd9d95e00ab0de2771e695">ppu2c02::render_background</a></div><div class="ttdeci">uint8_t render_background</div><div class="ttdef"><b>Definition:</b> 2c02.h:68</div></div>
-<div class="ttc" id="aclassppu2c02_html_a977ed4c9f9596404ca0412db55588cf0"><div class="ttname"><a href="../../d2/deb/classppu2c02.html#a977ed4c9f9596404ca0412db55588cf0">ppu2c02::vram_addr</a></div><div class="ttdeci">loopy_register vram_addr</div><div class="ttdef"><b>Definition:</b> 2c02.h:111</div></div>
+<div class="fragment"><div class="line"><span class="lineno">  160</span>        {</div>
+<div class="line"><span class="lineno">  161</span>            <span class="keywordflow">if</span> (ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#ae8399bc89c92d76b399da6efff282c15">mask</a>.<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a6539ec50d4dd9d95e00ab0de2771e695">render_background</a> || ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#ae8399bc89c92d76b399da6efff282c15">mask</a>.<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a36e34c5bbd3dcada0b27bddd1f40ed98">render_sprites</a>)</div>
+<div class="line"><span class="lineno">  162</span>            {</div>
+<div class="line"><span class="lineno">  163</span>                <span class="keywordflow">if</span> (ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a977ed4c9f9596404ca0412db55588cf0">vram_addr</a>.<a class="code hl_variable" href="../../d4/d46/unionppu2c02_1_1loopy__register.html#ae7b526ced9250f815f73dc55b85b7383">coarse_x</a> == 31)</div>
+<div class="line"><span class="lineno">  164</span>                {</div>
+<div class="line"><span class="lineno">  165</span>                    ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a977ed4c9f9596404ca0412db55588cf0">vram_addr</a>.<a class="code hl_variable" href="../../d4/d46/unionppu2c02_1_1loopy__register.html#ae7b526ced9250f815f73dc55b85b7383">coarse_x</a> = 0;</div>
+<div class="line"><span class="lineno">  166</span>                    ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a977ed4c9f9596404ca0412db55588cf0">vram_addr</a>.<a class="code hl_variable" href="../../d4/d46/unionppu2c02_1_1loopy__register.html#a85d5703f11e821385c2d2728069d1ef4">nametable_x</a> = ~ppuData-&gt;vram_addr.nametable_x;</div>
+<div class="line"><span class="lineno">  167</span>                }</div>
+<div class="line"><span class="lineno">  168</span>                <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  169</span>                {</div>
+<div class="line"><span class="lineno">  170</span>                    ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a977ed4c9f9596404ca0412db55588cf0">vram_addr</a>.<a class="code hl_variable" href="../../d4/d46/unionppu2c02_1_1loopy__register.html#ae7b526ced9250f815f73dc55b85b7383">coarse_x</a>++;</div>
+<div class="line"><span class="lineno">  171</span>                }</div>
+<div class="line"><span class="lineno">  172</span>            }</div>
+<div class="line"><span class="lineno">  173</span>        }</div>
+<div class="ttc" id="aclassppu2c02_html_a36e34c5bbd3dcada0b27bddd1f40ed98"><div class="ttname"><a href="../../d2/deb/classppu2c02.html#a36e34c5bbd3dcada0b27bddd1f40ed98">ppu2c02::render_sprites</a></div><div class="ttdeci">uint8_t render_sprites</div><div class="ttdef"><b>Definition:</b> 2c02.h:83</div></div>
+<div class="ttc" id="aclassppu2c02_html_a6539ec50d4dd9d95e00ab0de2771e695"><div class="ttname"><a href="../../d2/deb/classppu2c02.html#a6539ec50d4dd9d95e00ab0de2771e695">ppu2c02::render_background</a></div><div class="ttdeci">uint8_t render_background</div><div class="ttdef"><b>Definition:</b> 2c02.h:82</div></div>
 <div class="ttc" id="aclassppu2c02_html_ae8399bc89c92d76b399da6efff282c15"><div class="ttname"><a href="../../d2/deb/classppu2c02.html#ae8399bc89c92d76b399da6efff282c15">ppu2c02::mask</a></div><div class="ttdeci">union ppu2c02::@9 mask</div></div>
-<div class="ttc" id="aunionppu2c02_1_1loopy__register_html_a85d5703f11e821385c2d2728069d1ef4"><div class="ttname"><a href="../../d4/d46/unionppu2c02_1_1loopy__register.html#a85d5703f11e821385c2d2728069d1ef4">ppu2c02::loopy_register::nametable_x</a></div><div class="ttdeci">uint16_t nametable_x</div><div class="ttdef"><b>Definition:</b> 2c02.h:102</div></div>
-<div class="ttc" id="aunionppu2c02_1_1loopy__register_html_ae7b526ced9250f815f73dc55b85b7383"><div class="ttname"><a href="../../d4/d46/unionppu2c02_1_1loopy__register.html#ae7b526ced9250f815f73dc55b85b7383">ppu2c02::loopy_register::coarse_x</a></div><div class="ttdeci">uint16_t coarse_x</div><div class="ttdef"><b>Definition:</b> 2c02.h:100</div></div>
+<div class="ttc" id="aunionppu2c02_1_1loopy__register_html_a85d5703f11e821385c2d2728069d1ef4"><div class="ttname"><a href="../../d4/d46/unionppu2c02_1_1loopy__register.html#a85d5703f11e821385c2d2728069d1ef4">ppu2c02::loopy_register::nametable_x</a></div><div class="ttdeci">uint16_t nametable_x</div><div class="ttdef"><b>Definition:</b> 2c02.h:116</div></div>
+<div class="ttc" id="aunionppu2c02_1_1loopy__register_html_ae7b526ced9250f815f73dc55b85b7383"><div class="ttname"><a href="../../d4/d46/unionppu2c02_1_1loopy__register.html#ae7b526ced9250f815f73dc55b85b7383">ppu2c02::loopy_register::coarse_x</a></div><div class="ttdeci">uint16_t coarse_x</div><div class="ttdef"><b>Definition:</b> 2c02.h:114</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d6/d3f/classppu_a9abb944f427a7a69eebf09dd31cc13a2_icgraph.png" border="0" usemap="#ad6/d3f/classppu_a9abb944f427a7a69eebf09dd31cc13a2_icgraph" alt=""/></div>
 <map name="ad6/d3f/classppu_a9abb944f427a7a69eebf09dd31cc13a2_icgraph" id="ad6/d3f/classppu_a9abb944f427a7a69eebf09dd31cc13a2_icgraph">
-<area shape="rect" title=" " alt="" coords="860,31,1008,57"/>
-<area shape="rect" href="../../d6/d3f/classppu.html#a011d8cf9ad06b321ecf61ab48ed7825e" title=" " alt="" coords="653,31,812,57"/>
+<area shape="rect" title=" " alt="" coords="1075,31,1223,57"/>
+<area shape="rect" href="../../d6/d3f/classppu.html#a011d8cf9ad06b321ecf61ab48ed7825e" title=" " alt="" coords="868,31,1027,57"/>
+<area shape="rect" href="../../d6/d3f/classppu.html#adc553339a3f633423214a161971cb244" title=" " alt="" coords="653,31,820,57"/>
 <area shape="rect" href="../../d6/d3f/classppu.html#a8f8beeeceb29673161032303d02e8cad" title=" " alt="" coords="525,31,605,57"/>
 <area shape="rect" href="../../df/d0a/main_8cpp.html#a6d327e023ed1dae058f86d827940d7a6" title=" " alt="" coords="403,31,477,57"/>
 <area shape="rect" href="../../df/d0a/main_8cpp.html#a21dfe9bde9bd8461cf7b93411861607a" title=" " alt="" coords="104,5,244,32"/>
@@ -644,42 +950,43 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  147</span>        {</div>
-<div class="line"><span class="lineno">  148</span>            <span class="keywordflow">if</span> (ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#ae8399bc89c92d76b399da6efff282c15">mask</a>.<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a6539ec50d4dd9d95e00ab0de2771e695">render_background</a> || ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#ae8399bc89c92d76b399da6efff282c15">mask</a>.<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a36e34c5bbd3dcada0b27bddd1f40ed98">render_sprites</a>)</div>
-<div class="line"><span class="lineno">  149</span>            {</div>
-<div class="line"><span class="lineno">  150</span>                <span class="keywordflow">if</span> (ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a977ed4c9f9596404ca0412db55588cf0">vram_addr</a>.<a class="code hl_variable" href="../../d4/d46/unionppu2c02_1_1loopy__register.html#afbc8b729f2e6112b712bd0a39239103d">fine_y</a> &lt; 7)</div>
-<div class="line"><span class="lineno">  151</span>                {</div>
-<div class="line"><span class="lineno">  152</span>                    ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a977ed4c9f9596404ca0412db55588cf0">vram_addr</a>.<a class="code hl_variable" href="../../d4/d46/unionppu2c02_1_1loopy__register.html#afbc8b729f2e6112b712bd0a39239103d">fine_y</a>++;</div>
-<div class="line"><span class="lineno">  153</span>                }</div>
-<div class="line"><span class="lineno">  154</span>                <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  155</span>                {</div>
-<div class="line"><span class="lineno">  156</span>                    ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a977ed4c9f9596404ca0412db55588cf0">vram_addr</a>.<a class="code hl_variable" href="../../d4/d46/unionppu2c02_1_1loopy__register.html#afbc8b729f2e6112b712bd0a39239103d">fine_y</a> = 0;</div>
-<div class="line"><span class="lineno">  157</span> </div>
-<div class="line"><span class="lineno">  158</span>                    <span class="keywordflow">if</span> (ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a977ed4c9f9596404ca0412db55588cf0">vram_addr</a>.<a class="code hl_variable" href="../../d4/d46/unionppu2c02_1_1loopy__register.html#ad707402019230d6d26b55e97258bbe4d">coarse_y</a> == 29)</div>
-<div class="line"><span class="lineno">  159</span>                    {</div>
-<div class="line"><span class="lineno">  160</span>                        ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a977ed4c9f9596404ca0412db55588cf0">vram_addr</a>.<a class="code hl_variable" href="../../d4/d46/unionppu2c02_1_1loopy__register.html#ad707402019230d6d26b55e97258bbe4d">coarse_y</a> = 0;</div>
-<div class="line"><span class="lineno">  161</span>                        ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a977ed4c9f9596404ca0412db55588cf0">vram_addr</a>.<a class="code hl_variable" href="../../d4/d46/unionppu2c02_1_1loopy__register.html#adfe6c672efdf8fadedeeae28f8584273">nametable_y</a> = ~ppuData-&gt;vram_addr.nametable_y;</div>
-<div class="line"><span class="lineno">  162</span>                    }</div>
-<div class="line"><span class="lineno">  163</span>                    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a977ed4c9f9596404ca0412db55588cf0">vram_addr</a>.<a class="code hl_variable" href="../../d4/d46/unionppu2c02_1_1loopy__register.html#ad707402019230d6d26b55e97258bbe4d">coarse_y</a> == 31)</div>
-<div class="line"><span class="lineno">  164</span>                    {</div>
-<div class="line"><span class="lineno">  165</span>                        ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a977ed4c9f9596404ca0412db55588cf0">vram_addr</a>.<a class="code hl_variable" href="../../d4/d46/unionppu2c02_1_1loopy__register.html#ad707402019230d6d26b55e97258bbe4d">coarse_y</a> = 0;</div>
-<div class="line"><span class="lineno">  166</span>                    }</div>
-<div class="line"><span class="lineno">  167</span>                    <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  168</span>                    {</div>
-<div class="line"><span class="lineno">  169</span>                        ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a977ed4c9f9596404ca0412db55588cf0">vram_addr</a>.<a class="code hl_variable" href="../../d4/d46/unionppu2c02_1_1loopy__register.html#ad707402019230d6d26b55e97258bbe4d">coarse_y</a>++;</div>
-<div class="line"><span class="lineno">  170</span>                    }</div>
-<div class="line"><span class="lineno">  171</span>                }</div>
-<div class="line"><span class="lineno">  172</span>            }</div>
-<div class="line"><span class="lineno">  173</span>        }</div>
-<div class="ttc" id="aunionppu2c02_1_1loopy__register_html_ad707402019230d6d26b55e97258bbe4d"><div class="ttname"><a href="../../d4/d46/unionppu2c02_1_1loopy__register.html#ad707402019230d6d26b55e97258bbe4d">ppu2c02::loopy_register::coarse_y</a></div><div class="ttdeci">uint16_t coarse_y</div><div class="ttdef"><b>Definition:</b> 2c02.h:101</div></div>
-<div class="ttc" id="aunionppu2c02_1_1loopy__register_html_adfe6c672efdf8fadedeeae28f8584273"><div class="ttname"><a href="../../d4/d46/unionppu2c02_1_1loopy__register.html#adfe6c672efdf8fadedeeae28f8584273">ppu2c02::loopy_register::nametable_y</a></div><div class="ttdeci">uint16_t nametable_y</div><div class="ttdef"><b>Definition:</b> 2c02.h:103</div></div>
-<div class="ttc" id="aunionppu2c02_1_1loopy__register_html_afbc8b729f2e6112b712bd0a39239103d"><div class="ttname"><a href="../../d4/d46/unionppu2c02_1_1loopy__register.html#afbc8b729f2e6112b712bd0a39239103d">ppu2c02::loopy_register::fine_y</a></div><div class="ttdeci">uint16_t fine_y</div><div class="ttdef"><b>Definition:</b> 2c02.h:104</div></div>
+<div class="fragment"><div class="line"><span class="lineno">  176</span>        {</div>
+<div class="line"><span class="lineno">  177</span>            <span class="keywordflow">if</span> (ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#ae8399bc89c92d76b399da6efff282c15">mask</a>.<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a6539ec50d4dd9d95e00ab0de2771e695">render_background</a> || ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#ae8399bc89c92d76b399da6efff282c15">mask</a>.<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a36e34c5bbd3dcada0b27bddd1f40ed98">render_sprites</a>)</div>
+<div class="line"><span class="lineno">  178</span>            {</div>
+<div class="line"><span class="lineno">  179</span>                <span class="keywordflow">if</span> (ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a977ed4c9f9596404ca0412db55588cf0">vram_addr</a>.<a class="code hl_variable" href="../../d4/d46/unionppu2c02_1_1loopy__register.html#afbc8b729f2e6112b712bd0a39239103d">fine_y</a> &lt; 7)</div>
+<div class="line"><span class="lineno">  180</span>                {</div>
+<div class="line"><span class="lineno">  181</span>                    ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a977ed4c9f9596404ca0412db55588cf0">vram_addr</a>.<a class="code hl_variable" href="../../d4/d46/unionppu2c02_1_1loopy__register.html#afbc8b729f2e6112b712bd0a39239103d">fine_y</a>++;</div>
+<div class="line"><span class="lineno">  182</span>                }</div>
+<div class="line"><span class="lineno">  183</span>                <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  184</span>                {</div>
+<div class="line"><span class="lineno">  185</span>                    ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a977ed4c9f9596404ca0412db55588cf0">vram_addr</a>.<a class="code hl_variable" href="../../d4/d46/unionppu2c02_1_1loopy__register.html#afbc8b729f2e6112b712bd0a39239103d">fine_y</a> = 0;</div>
+<div class="line"><span class="lineno">  186</span> </div>
+<div class="line"><span class="lineno">  187</span>                    <span class="keywordflow">if</span> (ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a977ed4c9f9596404ca0412db55588cf0">vram_addr</a>.<a class="code hl_variable" href="../../d4/d46/unionppu2c02_1_1loopy__register.html#ad707402019230d6d26b55e97258bbe4d">coarse_y</a> == 29)</div>
+<div class="line"><span class="lineno">  188</span>                    {</div>
+<div class="line"><span class="lineno">  189</span>                        ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a977ed4c9f9596404ca0412db55588cf0">vram_addr</a>.<a class="code hl_variable" href="../../d4/d46/unionppu2c02_1_1loopy__register.html#ad707402019230d6d26b55e97258bbe4d">coarse_y</a> = 0;</div>
+<div class="line"><span class="lineno">  190</span>                        ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a977ed4c9f9596404ca0412db55588cf0">vram_addr</a>.<a class="code hl_variable" href="../../d4/d46/unionppu2c02_1_1loopy__register.html#adfe6c672efdf8fadedeeae28f8584273">nametable_y</a> = ~ppuData-&gt;vram_addr.nametable_y;</div>
+<div class="line"><span class="lineno">  191</span>                    }</div>
+<div class="line"><span class="lineno">  192</span>                    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a977ed4c9f9596404ca0412db55588cf0">vram_addr</a>.<a class="code hl_variable" href="../../d4/d46/unionppu2c02_1_1loopy__register.html#ad707402019230d6d26b55e97258bbe4d">coarse_y</a> == 31)</div>
+<div class="line"><span class="lineno">  193</span>                    {</div>
+<div class="line"><span class="lineno">  194</span>                        ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a977ed4c9f9596404ca0412db55588cf0">vram_addr</a>.<a class="code hl_variable" href="../../d4/d46/unionppu2c02_1_1loopy__register.html#ad707402019230d6d26b55e97258bbe4d">coarse_y</a> = 0;</div>
+<div class="line"><span class="lineno">  195</span>                    }</div>
+<div class="line"><span class="lineno">  196</span>                    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  197</span>                    {</div>
+<div class="line"><span class="lineno">  198</span>                        ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a977ed4c9f9596404ca0412db55588cf0">vram_addr</a>.<a class="code hl_variable" href="../../d4/d46/unionppu2c02_1_1loopy__register.html#ad707402019230d6d26b55e97258bbe4d">coarse_y</a>++;</div>
+<div class="line"><span class="lineno">  199</span>                    }</div>
+<div class="line"><span class="lineno">  200</span>                }</div>
+<div class="line"><span class="lineno">  201</span>            }</div>
+<div class="line"><span class="lineno">  202</span>        }</div>
+<div class="ttc" id="aunionppu2c02_1_1loopy__register_html_ad707402019230d6d26b55e97258bbe4d"><div class="ttname"><a href="../../d4/d46/unionppu2c02_1_1loopy__register.html#ad707402019230d6d26b55e97258bbe4d">ppu2c02::loopy_register::coarse_y</a></div><div class="ttdeci">uint16_t coarse_y</div><div class="ttdef"><b>Definition:</b> 2c02.h:115</div></div>
+<div class="ttc" id="aunionppu2c02_1_1loopy__register_html_adfe6c672efdf8fadedeeae28f8584273"><div class="ttname"><a href="../../d4/d46/unionppu2c02_1_1loopy__register.html#adfe6c672efdf8fadedeeae28f8584273">ppu2c02::loopy_register::nametable_y</a></div><div class="ttdeci">uint16_t nametable_y</div><div class="ttdef"><b>Definition:</b> 2c02.h:117</div></div>
+<div class="ttc" id="aunionppu2c02_1_1loopy__register_html_afbc8b729f2e6112b712bd0a39239103d"><div class="ttname"><a href="../../d4/d46/unionppu2c02_1_1loopy__register.html#afbc8b729f2e6112b712bd0a39239103d">ppu2c02::loopy_register::fine_y</a></div><div class="ttdeci">uint16_t fine_y</div><div class="ttdef"><b>Definition:</b> 2c02.h:118</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d6/d3f/classppu_af1857f201e89b8c907c0ab852474ef0a_icgraph.png" border="0" usemap="#ad6/d3f/classppu_af1857f201e89b8c907c0ab852474ef0a_icgraph" alt=""/></div>
 <map name="ad6/d3f/classppu_af1857f201e89b8c907c0ab852474ef0a_icgraph" id="ad6/d3f/classppu_af1857f201e89b8c907c0ab852474ef0a_icgraph">
-<area shape="rect" title=" " alt="" coords="653,31,801,57"/>
+<area shape="rect" title=" " alt="" coords="868,31,1016,57"/>
+<area shape="rect" href="../../d6/d3f/classppu.html#adc553339a3f633423214a161971cb244" title=" " alt="" coords="653,31,820,57"/>
 <area shape="rect" href="../../d6/d3f/classppu.html#a8f8beeeceb29673161032303d02e8cad" title=" " alt="" coords="525,31,605,57"/>
 <area shape="rect" href="../../df/d0a/main_8cpp.html#a6d327e023ed1dae058f86d827940d7a6" title=" " alt="" coords="403,31,477,57"/>
 <area shape="rect" href="../../df/d0a/main_8cpp.html#a21dfe9bde9bd8461cf7b93411861607a" title=" " alt="" coords="104,5,244,32"/>
@@ -714,9 +1021,9 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   94</span>        {</div>
-<div class="line"><span class="lineno">   95</span>            </div>
-<div class="line"><span class="lineno">   96</span>        }</div>
+<div class="fragment"><div class="line"><span class="lineno">  105</span>        {</div>
+<div class="line"><span class="lineno">  106</span>            </div>
+<div class="line"><span class="lineno">  107</span>        }</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -752,7 +1059,7 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   91</span>{ <span class="keywordflow">return</span> cycles == 0; }</div>
+<div class="fragment"><div class="line"><span class="lineno">  102</span>{ <span class="keywordflow">return</span> cycles == 0; }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -779,19 +1086,19 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  200</span>        {</div>
-<div class="line"><span class="lineno">  201</span>            ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#acd25a2c45ef335af19c0ea747a4e0324">bg_next_tile_attrib</a> = ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#aa167427b0acc186c0922b7a9494e3734">ppuBus</a>.<a class="code hl_function" href="../../d0/d88/classbus.html#abb29248facedf75907fba0ebf44022b0">read</a>(0x23C0 | </div>
-<div class="line"><span class="lineno">  202</span>                                                            (ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a977ed4c9f9596404ca0412db55588cf0">vram_addr</a>.<a class="code hl_variable" href="../../d4/d46/unionppu2c02_1_1loopy__register.html#adfe6c672efdf8fadedeeae28f8584273">nametable_y</a> &lt;&lt; 11) |</div>
-<div class="line"><span class="lineno">  203</span>                                                            (ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a977ed4c9f9596404ca0412db55588cf0">vram_addr</a>.<a class="code hl_variable" href="../../d4/d46/unionppu2c02_1_1loopy__register.html#a85d5703f11e821385c2d2728069d1ef4">nametable_x</a> &lt;&lt; 10) |</div>
-<div class="line"><span class="lineno">  204</span>                                                            ((ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a977ed4c9f9596404ca0412db55588cf0">vram_addr</a>.<a class="code hl_variable" href="../../d4/d46/unionppu2c02_1_1loopy__register.html#ad707402019230d6d26b55e97258bbe4d">coarse_y</a> &gt;&gt; 2 ) &lt;&lt; 3) |</div>
-<div class="line"><span class="lineno">  205</span>                                                            (ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a977ed4c9f9596404ca0412db55588cf0">vram_addr</a>.<a class="code hl_variable" href="../../d4/d46/unionppu2c02_1_1loopy__register.html#ae7b526ced9250f815f73dc55b85b7383">coarse_x</a> &gt;&gt; 2)</div>
-<div class="line"><span class="lineno">  206</span>                                                            );      </div>
-<div class="line"><span class="lineno">  207</span> </div>
-<div class="line"><span class="lineno">  208</span>            <span class="keywordflow">if</span> (ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a977ed4c9f9596404ca0412db55588cf0">vram_addr</a>.<a class="code hl_variable" href="../../d4/d46/unionppu2c02_1_1loopy__register.html#ad707402019230d6d26b55e97258bbe4d">coarse_y</a> &amp; 0x02) ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#acd25a2c45ef335af19c0ea747a4e0324">bg_next_tile_attrib</a> &gt;&gt;= 4;</div>
-<div class="line"><span class="lineno">  209</span>            <span class="keywordflow">if</span> (ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a977ed4c9f9596404ca0412db55588cf0">vram_addr</a>.<a class="code hl_variable" href="../../d4/d46/unionppu2c02_1_1loopy__register.html#ae7b526ced9250f815f73dc55b85b7383">coarse_x</a> &amp; 0x02) ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#acd25a2c45ef335af19c0ea747a4e0324">bg_next_tile_attrib</a> &gt;&gt;= 2;</div>
-<div class="line"><span class="lineno">  210</span>            ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#acd25a2c45ef335af19c0ea747a4e0324">bg_next_tile_attrib</a> &amp;= 0x03;</div>
-<div class="line"><span class="lineno">  211</span>        }</div>
-<div class="ttc" id="aclassppu2c02_html_acd25a2c45ef335af19c0ea747a4e0324"><div class="ttname"><a href="../../d2/deb/classppu2c02.html#acd25a2c45ef335af19c0ea747a4e0324">ppu2c02::bg_next_tile_attrib</a></div><div class="ttdeci">uint8_t bg_next_tile_attrib</div><div class="ttdef"><b>Definition:</b> 2c02.h:123</div></div>
+<div class="fragment"><div class="line"><span class="lineno">  229</span>        {</div>
+<div class="line"><span class="lineno">  230</span>            ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#acd25a2c45ef335af19c0ea747a4e0324">bg_next_tile_attrib</a> = ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#aa167427b0acc186c0922b7a9494e3734">ppuBus</a>.<a class="code hl_function" href="../../d0/d88/classbus.html#abb29248facedf75907fba0ebf44022b0">read</a>(0x23C0 | </div>
+<div class="line"><span class="lineno">  231</span>                                                            (ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a977ed4c9f9596404ca0412db55588cf0">vram_addr</a>.<a class="code hl_variable" href="../../d4/d46/unionppu2c02_1_1loopy__register.html#adfe6c672efdf8fadedeeae28f8584273">nametable_y</a> &lt;&lt; 11) |</div>
+<div class="line"><span class="lineno">  232</span>                                                            (ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a977ed4c9f9596404ca0412db55588cf0">vram_addr</a>.<a class="code hl_variable" href="../../d4/d46/unionppu2c02_1_1loopy__register.html#a85d5703f11e821385c2d2728069d1ef4">nametable_x</a> &lt;&lt; 10) |</div>
+<div class="line"><span class="lineno">  233</span>                                                            ((ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a977ed4c9f9596404ca0412db55588cf0">vram_addr</a>.<a class="code hl_variable" href="../../d4/d46/unionppu2c02_1_1loopy__register.html#ad707402019230d6d26b55e97258bbe4d">coarse_y</a> &gt;&gt; 2 ) &lt;&lt; 3) |</div>
+<div class="line"><span class="lineno">  234</span>                                                            (ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a977ed4c9f9596404ca0412db55588cf0">vram_addr</a>.<a class="code hl_variable" href="../../d4/d46/unionppu2c02_1_1loopy__register.html#ae7b526ced9250f815f73dc55b85b7383">coarse_x</a> &gt;&gt; 2)</div>
+<div class="line"><span class="lineno">  235</span>                                                            );      </div>
+<div class="line"><span class="lineno">  236</span> </div>
+<div class="line"><span class="lineno">  237</span>            <span class="keywordflow">if</span> (ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a977ed4c9f9596404ca0412db55588cf0">vram_addr</a>.<a class="code hl_variable" href="../../d4/d46/unionppu2c02_1_1loopy__register.html#ad707402019230d6d26b55e97258bbe4d">coarse_y</a> &amp; 0x02) ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#acd25a2c45ef335af19c0ea747a4e0324">bg_next_tile_attrib</a> &gt;&gt;= 4;</div>
+<div class="line"><span class="lineno">  238</span>            <span class="keywordflow">if</span> (ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a977ed4c9f9596404ca0412db55588cf0">vram_addr</a>.<a class="code hl_variable" href="../../d4/d46/unionppu2c02_1_1loopy__register.html#ae7b526ced9250f815f73dc55b85b7383">coarse_x</a> &amp; 0x02) ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#acd25a2c45ef335af19c0ea747a4e0324">bg_next_tile_attrib</a> &gt;&gt;= 2;</div>
+<div class="line"><span class="lineno">  239</span>            ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#acd25a2c45ef335af19c0ea747a4e0324">bg_next_tile_attrib</a> &amp;= 0x03;</div>
+<div class="line"><span class="lineno">  240</span>        }</div>
+<div class="ttc" id="aclassppu2c02_html_acd25a2c45ef335af19c0ea747a4e0324"><div class="ttname"><a href="../../d2/deb/classppu2c02.html#acd25a2c45ef335af19c0ea747a4e0324">ppu2c02::bg_next_tile_attrib</a></div><div class="ttdeci">uint8_t bg_next_tile_attrib</div><div class="ttdef"><b>Definition:</b> 2c02.h:137</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -806,8 +1113,9 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d6/d3f/classppu_ac79c38af3d65d535acc5b681209f7c33_icgraph.png" border="0" usemap="#ad6/d3f/classppu_ac79c38af3d65d535acc5b681209f7c33_icgraph" alt=""/></div>
 <map name="ad6/d3f/classppu_ac79c38af3d65d535acc5b681209f7c33_icgraph" id="ad6/d3f/classppu_ac79c38af3d65d535acc5b681209f7c33_icgraph">
-<area shape="rect" title=" " alt="" coords="860,31,1036,57"/>
-<area shape="rect" href="../../d6/d3f/classppu.html#a011d8cf9ad06b321ecf61ab48ed7825e" title=" " alt="" coords="653,31,812,57"/>
+<area shape="rect" title=" " alt="" coords="1075,31,1251,57"/>
+<area shape="rect" href="../../d6/d3f/classppu.html#a011d8cf9ad06b321ecf61ab48ed7825e" title=" " alt="" coords="868,31,1027,57"/>
+<area shape="rect" href="../../d6/d3f/classppu.html#adc553339a3f633423214a161971cb244" title=" " alt="" coords="653,31,820,57"/>
 <area shape="rect" href="../../d6/d3f/classppu.html#a8f8beeeceb29673161032303d02e8cad" title=" " alt="" coords="525,31,605,57"/>
 <area shape="rect" href="../../df/d0a/main_8cpp.html#a6d327e023ed1dae058f86d827940d7a6" title=" " alt="" coords="403,31,477,57"/>
 <area shape="rect" href="../../df/d0a/main_8cpp.html#a21dfe9bde9bd8461cf7b93411861607a" title=" " alt="" coords="104,5,244,32"/>
@@ -842,24 +1150,25 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  121</span>        {</div>
-<div class="line"><span class="lineno">  122</span>            ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a76b299a13833f52f473f4306cb1bfed4">bg_shifter_pattern_lo</a> = (ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a76b299a13833f52f473f4306cb1bfed4">bg_shifter_pattern_lo</a> &amp; 0xFF00) | ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a2946f1313cdccc0d134195e8b3bd906a">bg_next_tile_lsb</a>;</div>
-<div class="line"><span class="lineno">  123</span>            ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a1677fce272b90542ea2459c8ae2fd9db">bg_shifter_pattern_hi</a> = (ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a1677fce272b90542ea2459c8ae2fd9db">bg_shifter_pattern_hi</a> &amp; 0xFF00) | ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a5bd32eb3f038487f86541e9e6ef8bc50">bg_next_tile_msb</a>;</div>
-<div class="line"><span class="lineno">  124</span> </div>
-<div class="line"><span class="lineno">  125</span> </div>
-<div class="line"><span class="lineno">  126</span>            ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#aacca281f94ba141df4be70494c01c566">bg_shifter_attrib_lo</a>  = (ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#aacca281f94ba141df4be70494c01c566">bg_shifter_attrib_lo</a> &amp; 0xFF00) | ((ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#acd25a2c45ef335af19c0ea747a4e0324">bg_next_tile_attrib</a> &amp; 0b01) ? 0xFF : 0x00);</div>
-<div class="line"><span class="lineno">  127</span>            ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#aab9cc74b5efe2244c82d6156d6fe7e70">bg_shifter_attrib_hi</a>  = (ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#aab9cc74b5efe2244c82d6156d6fe7e70">bg_shifter_attrib_hi</a> &amp; 0xFF00) | ((ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#acd25a2c45ef335af19c0ea747a4e0324">bg_next_tile_attrib</a> &amp; 0b10) ? 0xFF : 0x00);</div>
-<div class="line"><span class="lineno">  128</span>        }</div>
-<div class="ttc" id="aclassppu2c02_html_a2946f1313cdccc0d134195e8b3bd906a"><div class="ttname"><a href="../../d2/deb/classppu2c02.html#a2946f1313cdccc0d134195e8b3bd906a">ppu2c02::bg_next_tile_lsb</a></div><div class="ttdeci">uint8_t bg_next_tile_lsb</div><div class="ttdef"><b>Definition:</b> 2c02.h:124</div></div>
-<div class="ttc" id="aclassppu2c02_html_a5bd32eb3f038487f86541e9e6ef8bc50"><div class="ttname"><a href="../../d2/deb/classppu2c02.html#a5bd32eb3f038487f86541e9e6ef8bc50">ppu2c02::bg_next_tile_msb</a></div><div class="ttdeci">uint8_t bg_next_tile_msb</div><div class="ttdef"><b>Definition:</b> 2c02.h:125</div></div>
+<div class="fragment"><div class="line"><span class="lineno">  150</span>        {</div>
+<div class="line"><span class="lineno">  151</span>            ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a76b299a13833f52f473f4306cb1bfed4">bg_shifter_pattern_lo</a> = (ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a76b299a13833f52f473f4306cb1bfed4">bg_shifter_pattern_lo</a> &amp; 0xFF00) | ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a2946f1313cdccc0d134195e8b3bd906a">bg_next_tile_lsb</a>;</div>
+<div class="line"><span class="lineno">  152</span>            ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a1677fce272b90542ea2459c8ae2fd9db">bg_shifter_pattern_hi</a> = (ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a1677fce272b90542ea2459c8ae2fd9db">bg_shifter_pattern_hi</a> &amp; 0xFF00) | ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a5bd32eb3f038487f86541e9e6ef8bc50">bg_next_tile_msb</a>;</div>
+<div class="line"><span class="lineno">  153</span> </div>
+<div class="line"><span class="lineno">  154</span> </div>
+<div class="line"><span class="lineno">  155</span>            ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#aacca281f94ba141df4be70494c01c566">bg_shifter_attrib_lo</a>  = (ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#aacca281f94ba141df4be70494c01c566">bg_shifter_attrib_lo</a> &amp; 0xFF00) | ((ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#acd25a2c45ef335af19c0ea747a4e0324">bg_next_tile_attrib</a> &amp; 0b01) ? 0xFF : 0x00);</div>
+<div class="line"><span class="lineno">  156</span>            ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#aab9cc74b5efe2244c82d6156d6fe7e70">bg_shifter_attrib_hi</a>  = (ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#aab9cc74b5efe2244c82d6156d6fe7e70">bg_shifter_attrib_hi</a> &amp; 0xFF00) | ((ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#acd25a2c45ef335af19c0ea747a4e0324">bg_next_tile_attrib</a> &amp; 0b10) ? 0xFF : 0x00);</div>
+<div class="line"><span class="lineno">  157</span>        }</div>
+<div class="ttc" id="aclassppu2c02_html_a2946f1313cdccc0d134195e8b3bd906a"><div class="ttname"><a href="../../d2/deb/classppu2c02.html#a2946f1313cdccc0d134195e8b3bd906a">ppu2c02::bg_next_tile_lsb</a></div><div class="ttdeci">uint8_t bg_next_tile_lsb</div><div class="ttdef"><b>Definition:</b> 2c02.h:138</div></div>
+<div class="ttc" id="aclassppu2c02_html_a5bd32eb3f038487f86541e9e6ef8bc50"><div class="ttname"><a href="../../d2/deb/classppu2c02.html#a5bd32eb3f038487f86541e9e6ef8bc50">ppu2c02::bg_next_tile_msb</a></div><div class="ttdeci">uint8_t bg_next_tile_msb</div><div class="ttdef"><b>Definition:</b> 2c02.h:139</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d6/d3f/classppu_abb466cdb15e449cbd54a1ec4fd2ef3d2_icgraph.png" border="0" usemap="#ad6/d3f/classppu_abb466cdb15e449cbd54a1ec4fd2ef3d2_icgraph" alt=""/></div>
 <map name="ad6/d3f/classppu_abb466cdb15e449cbd54a1ec4fd2ef3d2_icgraph" id="ad6/d3f/classppu_abb466cdb15e449cbd54a1ec4fd2ef3d2_icgraph">
-<area shape="rect" title=" " alt="" coords="860,31,1047,57"/>
+<area shape="rect" title=" " alt="" coords="1075,31,1261,57"/>
+<area shape="rect" href="../../d6/d3f/classppu.html#adc553339a3f633423214a161971cb244" title=" " alt="" coords="653,31,820,57"/>
+<area shape="rect" href="../../d6/d3f/classppu.html#a011d8cf9ad06b321ecf61ab48ed7825e" title=" " alt="" coords="868,56,1027,83"/>
 <area shape="rect" href="../../d6/d3f/classppu.html#a8f8beeeceb29673161032303d02e8cad" title=" " alt="" coords="525,31,605,57"/>
-<area shape="rect" href="../../d6/d3f/classppu.html#a011d8cf9ad06b321ecf61ab48ed7825e" title=" " alt="" coords="653,56,812,83"/>
 <area shape="rect" href="../../df/d0a/main_8cpp.html#a6d327e023ed1dae058f86d827940d7a6" title=" " alt="" coords="403,31,477,57"/>
 <area shape="rect" href="../../df/d0a/main_8cpp.html#a21dfe9bde9bd8461cf7b93411861607a" title=" " alt="" coords="104,5,244,32"/>
 <area shape="rect" href="../../df/d0a/main_8cpp.html#ab59f1b1459454092942fcda083513be9" title=" " alt="" coords="292,56,355,83"/>
@@ -893,11 +1202,9 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  195</span>        {</div>
-<div class="line"><span class="lineno">  196</span>            ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a2089b6ffbaa08f854fc99625c0c22de3">bg_next_tile_id</a> = ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#aa167427b0acc186c0922b7a9494e3734">ppuBus</a>.<a class="code hl_function" href="../../d0/d88/classbus.html#abb29248facedf75907fba0ebf44022b0">read</a>(0x2000 | (ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a977ed4c9f9596404ca0412db55588cf0">vram_addr</a>.<a class="code hl_variable" href="../../d4/d46/unionppu2c02_1_1loopy__register.html#a536b9ec70d2a37e219d3615576257725">reg</a> &amp; 0x0FFF));</div>
-<div class="line"><span class="lineno">  197</span>        }</div>
-<div class="ttc" id="aclassppu2c02_html_a2089b6ffbaa08f854fc99625c0c22de3"><div class="ttname"><a href="../../d2/deb/classppu2c02.html#a2089b6ffbaa08f854fc99625c0c22de3">ppu2c02::bg_next_tile_id</a></div><div class="ttdeci">uint8_t bg_next_tile_id</div><div class="ttdef"><b>Definition:</b> 2c02.h:122</div></div>
-<div class="ttc" id="aunionppu2c02_1_1loopy__register_html_a536b9ec70d2a37e219d3615576257725"><div class="ttname"><a href="../../d4/d46/unionppu2c02_1_1loopy__register.html#a536b9ec70d2a37e219d3615576257725">ppu2c02::loopy_register::reg</a></div><div class="ttdeci">uint16_t reg</div><div class="ttdef"><b>Definition:</b> 2c02.h:108</div></div>
+<div class="fragment"><div class="line"><span class="lineno">  224</span>        {</div>
+<div class="line"><span class="lineno">  225</span>            ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a2089b6ffbaa08f854fc99625c0c22de3">bg_next_tile_id</a> = ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#aa167427b0acc186c0922b7a9494e3734">ppuBus</a>.<a class="code hl_function" href="../../d0/d88/classbus.html#abb29248facedf75907fba0ebf44022b0">read</a>(0x2000 | (ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a977ed4c9f9596404ca0412db55588cf0">vram_addr</a>.<a class="code hl_variable" href="../../d4/d46/unionppu2c02_1_1loopy__register.html#a536b9ec70d2a37e219d3615576257725">reg</a> &amp; 0x0FFF));</div>
+<div class="line"><span class="lineno">  226</span>        }</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -912,8 +1219,9 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d6/d3f/classppu_a24470d8d18ee8660dee020ddfdc6e089_icgraph.png" border="0" usemap="#ad6/d3f/classppu_a24470d8d18ee8660dee020ddfdc6e089_icgraph" alt=""/></div>
 <map name="ad6/d3f/classppu_a24470d8d18ee8660dee020ddfdc6e089_icgraph" id="ad6/d3f/classppu_a24470d8d18ee8660dee020ddfdc6e089_icgraph">
-<area shape="rect" title=" " alt="" coords="860,31,1023,57"/>
-<area shape="rect" href="../../d6/d3f/classppu.html#a011d8cf9ad06b321ecf61ab48ed7825e" title=" " alt="" coords="653,31,812,57"/>
+<area shape="rect" title=" " alt="" coords="1075,31,1237,57"/>
+<area shape="rect" href="../../d6/d3f/classppu.html#a011d8cf9ad06b321ecf61ab48ed7825e" title=" " alt="" coords="868,31,1027,57"/>
+<area shape="rect" href="../../d6/d3f/classppu.html#adc553339a3f633423214a161971cb244" title=" " alt="" coords="653,31,820,57"/>
 <area shape="rect" href="../../d6/d3f/classppu.html#a8f8beeeceb29673161032303d02e8cad" title=" " alt="" coords="525,31,605,57"/>
 <area shape="rect" href="../../df/d0a/main_8cpp.html#a6d327e023ed1dae058f86d827940d7a6" title=" " alt="" coords="403,31,477,57"/>
 <area shape="rect" href="../../df/d0a/main_8cpp.html#a21dfe9bde9bd8461cf7b93411861607a" title=" " alt="" coords="104,5,244,32"/>
@@ -948,15 +1256,14 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  223</span>        {</div>
-<div class="line"><span class="lineno">  224</span>            ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a5bd32eb3f038487f86541e9e6ef8bc50">bg_next_tile_msb</a> = ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#aa167427b0acc186c0922b7a9494e3734">ppuBus</a>.<a class="code hl_function" href="../../d0/d88/classbus.html#abb29248facedf75907fba0ebf44022b0">read</a>(</div>
-<div class="line"><span class="lineno">  225</span>                                    (ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#ac99d81b31fec1a67303a8c5547093647">control</a>.<a class="code hl_variable" href="../../df/d5b/unionppu2c02_1_1_p_p_u_c_t_r_l.html#aef7acf60b88b64d5c0e6919e982348eb">pattern_background</a> &lt;&lt; 12) + </div>
-<div class="line"><span class="lineno">  226</span>                                    ((uint16_t)ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a2089b6ffbaa08f854fc99625c0c22de3">bg_next_tile_id</a> &lt;&lt; 4) + </div>
-<div class="line"><span class="lineno">  227</span>                                    ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a977ed4c9f9596404ca0412db55588cf0">vram_addr</a>.<a class="code hl_variable" href="../../d4/d46/unionppu2c02_1_1loopy__register.html#afbc8b729f2e6112b712bd0a39239103d">fine_y</a> + 8);</div>
-<div class="line"><span class="lineno">  228</span> </div>
-<div class="line"><span class="lineno">  229</span>        }</div>
-<div class="ttc" id="aclassppu2c02_html_ac99d81b31fec1a67303a8c5547093647"><div class="ttname"><a href="../../d2/deb/classppu2c02.html#ac99d81b31fec1a67303a8c5547093647">ppu2c02::control</a></div><div class="ttdeci">union ppu2c02::PPUCTRL control</div></div>
-<div class="ttc" id="aunionppu2c02_1_1_p_p_u_c_t_r_l_html_aef7acf60b88b64d5c0e6919e982348eb"><div class="ttname"><a href="../../df/d5b/unionppu2c02_1_1_p_p_u_c_t_r_l.html#aef7acf60b88b64d5c0e6919e982348eb">ppu2c02::PPUCTRL::pattern_background</a></div><div class="ttdeci">uint8_t pattern_background</div><div class="ttdef"><b>Definition:</b> 2c02.h:86</div></div>
+<div class="fragment"><div class="line"><span class="lineno">  252</span>        {</div>
+<div class="line"><span class="lineno">  253</span>            ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a5bd32eb3f038487f86541e9e6ef8bc50">bg_next_tile_msb</a> = ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#aa167427b0acc186c0922b7a9494e3734">ppuBus</a>.<a class="code hl_function" href="../../d0/d88/classbus.html#abb29248facedf75907fba0ebf44022b0">read</a>(</div>
+<div class="line"><span class="lineno">  254</span>                                    (ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#ac99d81b31fec1a67303a8c5547093647">control</a>.<a class="code hl_variable" href="../../df/d5b/unionppu2c02_1_1_p_p_u_c_t_r_l.html#aef7acf60b88b64d5c0e6919e982348eb">pattern_background</a> &lt;&lt; 12) + </div>
+<div class="line"><span class="lineno">  255</span>                                    ((uint16_t)ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a2089b6ffbaa08f854fc99625c0c22de3">bg_next_tile_id</a> &lt;&lt; 4) + </div>
+<div class="line"><span class="lineno">  256</span>                                    ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a977ed4c9f9596404ca0412db55588cf0">vram_addr</a>.<a class="code hl_variable" href="../../d4/d46/unionppu2c02_1_1loopy__register.html#afbc8b729f2e6112b712bd0a39239103d">fine_y</a> + 8);</div>
+<div class="line"><span class="lineno">  257</span> </div>
+<div class="line"><span class="lineno">  258</span>        }</div>
+<div class="ttc" id="aunionppu2c02_1_1_p_p_u_c_t_r_l_html_aef7acf60b88b64d5c0e6919e982348eb"><div class="ttname"><a href="../../df/d5b/unionppu2c02_1_1_p_p_u_c_t_r_l.html#aef7acf60b88b64d5c0e6919e982348eb">ppu2c02::PPUCTRL::pattern_background</a></div><div class="ttdeci">uint8_t pattern_background</div><div class="ttdef"><b>Definition:</b> 2c02.h:100</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -971,8 +1278,9 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d6/d3f/classppu_abc1b9a5dd5bce43692e2db61b31bcd6c_icgraph.png" border="0" usemap="#ad6/d3f/classppu_abc1b9a5dd5bce43692e2db61b31bcd6c_icgraph" alt=""/></div>
 <map name="ad6/d3f/classppu_abc1b9a5dd5bce43692e2db61b31bcd6c_icgraph" id="ad6/d3f/classppu_abc1b9a5dd5bce43692e2db61b31bcd6c_icgraph">
-<area shape="rect" title=" " alt="" coords="860,31,1029,57"/>
-<area shape="rect" href="../../d6/d3f/classppu.html#a011d8cf9ad06b321ecf61ab48ed7825e" title=" " alt="" coords="653,31,812,57"/>
+<area shape="rect" title=" " alt="" coords="1075,31,1244,57"/>
+<area shape="rect" href="../../d6/d3f/classppu.html#a011d8cf9ad06b321ecf61ab48ed7825e" title=" " alt="" coords="868,31,1027,57"/>
+<area shape="rect" href="../../d6/d3f/classppu.html#adc553339a3f633423214a161971cb244" title=" " alt="" coords="653,31,820,57"/>
 <area shape="rect" href="../../d6/d3f/classppu.html#a8f8beeeceb29673161032303d02e8cad" title=" " alt="" coords="525,31,605,57"/>
 <area shape="rect" href="../../df/d0a/main_8cpp.html#a6d327e023ed1dae058f86d827940d7a6" title=" " alt="" coords="403,31,477,57"/>
 <area shape="rect" href="../../df/d0a/main_8cpp.html#a21dfe9bde9bd8461cf7b93411861607a" title=" " alt="" coords="104,5,244,32"/>
@@ -1007,13 +1315,13 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  214</span>        {</div>
-<div class="line"><span class="lineno">  215</span>            ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a2946f1313cdccc0d134195e8b3bd906a">bg_next_tile_lsb</a> = ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#aa167427b0acc186c0922b7a9494e3734">ppuBus</a>.<a class="code hl_function" href="../../d0/d88/classbus.html#abb29248facedf75907fba0ebf44022b0">read</a>(</div>
-<div class="line"><span class="lineno">  216</span>                                    (ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#ac99d81b31fec1a67303a8c5547093647">control</a>.<a class="code hl_variable" href="../../df/d5b/unionppu2c02_1_1_p_p_u_c_t_r_l.html#aef7acf60b88b64d5c0e6919e982348eb">pattern_background</a> &lt;&lt; 12) + </div>
-<div class="line"><span class="lineno">  217</span>                                    ((uint16_t)ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a2089b6ffbaa08f854fc99625c0c22de3">bg_next_tile_id</a> &lt;&lt; 4) + </div>
-<div class="line"><span class="lineno">  218</span>                                    ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a977ed4c9f9596404ca0412db55588cf0">vram_addr</a>.<a class="code hl_variable" href="../../d4/d46/unionppu2c02_1_1loopy__register.html#afbc8b729f2e6112b712bd0a39239103d">fine_y</a> + 0);</div>
-<div class="line"><span class="lineno">  219</span> </div>
-<div class="line"><span class="lineno">  220</span>        }</div>
+<div class="fragment"><div class="line"><span class="lineno">  243</span>        {</div>
+<div class="line"><span class="lineno">  244</span>            ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a2946f1313cdccc0d134195e8b3bd906a">bg_next_tile_lsb</a> = ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#aa167427b0acc186c0922b7a9494e3734">ppuBus</a>.<a class="code hl_function" href="../../d0/d88/classbus.html#abb29248facedf75907fba0ebf44022b0">read</a>(</div>
+<div class="line"><span class="lineno">  245</span>                                    (ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#ac99d81b31fec1a67303a8c5547093647">control</a>.<a class="code hl_variable" href="../../df/d5b/unionppu2c02_1_1_p_p_u_c_t_r_l.html#aef7acf60b88b64d5c0e6919e982348eb">pattern_background</a> &lt;&lt; 12) + </div>
+<div class="line"><span class="lineno">  246</span>                                    ((uint16_t)ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a2089b6ffbaa08f854fc99625c0c22de3">bg_next_tile_id</a> &lt;&lt; 4) + </div>
+<div class="line"><span class="lineno">  247</span>                                    ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a977ed4c9f9596404ca0412db55588cf0">vram_addr</a>.<a class="code hl_variable" href="../../d4/d46/unionppu2c02_1_1loopy__register.html#afbc8b729f2e6112b712bd0a39239103d">fine_y</a> + 0);</div>
+<div class="line"><span class="lineno">  248</span> </div>
+<div class="line"><span class="lineno">  249</span>        }</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1028,8 +1336,9 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d6/d3f/classppu_a7fe1b4219f11e5f08807326089f53324_icgraph.png" border="0" usemap="#ad6/d3f/classppu_a7fe1b4219f11e5f08807326089f53324_icgraph" alt=""/></div>
 <map name="ad6/d3f/classppu_a7fe1b4219f11e5f08807326089f53324_icgraph" id="ad6/d3f/classppu_a7fe1b4219f11e5f08807326089f53324_icgraph">
-<area shape="rect" title=" " alt="" coords="860,31,1027,57"/>
-<area shape="rect" href="../../d6/d3f/classppu.html#a011d8cf9ad06b321ecf61ab48ed7825e" title=" " alt="" coords="653,31,812,57"/>
+<area shape="rect" title=" " alt="" coords="1075,31,1241,57"/>
+<area shape="rect" href="../../d6/d3f/classppu.html#a011d8cf9ad06b321ecf61ab48ed7825e" title=" " alt="" coords="868,31,1027,57"/>
+<area shape="rect" href="../../d6/d3f/classppu.html#adc553339a3f633423214a161971cb244" title=" " alt="" coords="653,31,820,57"/>
 <area shape="rect" href="../../d6/d3f/classppu.html#a8f8beeeceb29673161032303d02e8cad" title=" " alt="" coords="525,31,605,57"/>
 <area shape="rect" href="../../df/d0a/main_8cpp.html#a6d327e023ed1dae058f86d827940d7a6" title=" " alt="" coords="403,31,477,57"/>
 <area shape="rect" href="../../df/d0a/main_8cpp.html#a21dfe9bde9bd8461cf7b93411861607a" title=" " alt="" coords="104,5,244,32"/>
@@ -1064,20 +1373,21 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  176</span>        {</div>
-<div class="line"><span class="lineno">  177</span>            <span class="keywordflow">if</span> (ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#ae8399bc89c92d76b399da6efff282c15">mask</a>.<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a6539ec50d4dd9d95e00ab0de2771e695">render_background</a> || ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#ae8399bc89c92d76b399da6efff282c15">mask</a>.<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a36e34c5bbd3dcada0b27bddd1f40ed98">render_sprites</a>)</div>
-<div class="line"><span class="lineno">  178</span>            {</div>
-<div class="line"><span class="lineno">  179</span>                ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a977ed4c9f9596404ca0412db55588cf0">vram_addr</a>.<a class="code hl_variable" href="../../d4/d46/unionppu2c02_1_1loopy__register.html#a85d5703f11e821385c2d2728069d1ef4">nametable_x</a> = ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#af3bf476bfc051ee5ed2dee4410f74840">tram_addr</a>.<a class="code hl_variable" href="../../d4/d46/unionppu2c02_1_1loopy__register.html#a85d5703f11e821385c2d2728069d1ef4">nametable_x</a>;</div>
-<div class="line"><span class="lineno">  180</span>                ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a977ed4c9f9596404ca0412db55588cf0">vram_addr</a>.<a class="code hl_variable" href="../../d4/d46/unionppu2c02_1_1loopy__register.html#ae7b526ced9250f815f73dc55b85b7383">coarse_x</a>    = ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#af3bf476bfc051ee5ed2dee4410f74840">tram_addr</a>.<a class="code hl_variable" href="../../d4/d46/unionppu2c02_1_1loopy__register.html#ae7b526ced9250f815f73dc55b85b7383">coarse_x</a>;</div>
-<div class="line"><span class="lineno">  181</span>            }</div>
-<div class="line"><span class="lineno">  182</span>        }</div>
-<div class="ttc" id="aclassppu2c02_html_af3bf476bfc051ee5ed2dee4410f74840"><div class="ttname"><a href="../../d2/deb/classppu2c02.html#af3bf476bfc051ee5ed2dee4410f74840">ppu2c02::tram_addr</a></div><div class="ttdeci">loopy_register tram_addr</div><div class="ttdef"><b>Definition:</b> 2c02.h:112</div></div>
+<div class="fragment"><div class="line"><span class="lineno">  205</span>        {</div>
+<div class="line"><span class="lineno">  206</span>            <span class="keywordflow">if</span> (ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#ae8399bc89c92d76b399da6efff282c15">mask</a>.<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a6539ec50d4dd9d95e00ab0de2771e695">render_background</a> || ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#ae8399bc89c92d76b399da6efff282c15">mask</a>.<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a36e34c5bbd3dcada0b27bddd1f40ed98">render_sprites</a>)</div>
+<div class="line"><span class="lineno">  207</span>            {</div>
+<div class="line"><span class="lineno">  208</span>                ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a977ed4c9f9596404ca0412db55588cf0">vram_addr</a>.<a class="code hl_variable" href="../../d4/d46/unionppu2c02_1_1loopy__register.html#a85d5703f11e821385c2d2728069d1ef4">nametable_x</a> = ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#af3bf476bfc051ee5ed2dee4410f74840">tram_addr</a>.<a class="code hl_variable" href="../../d4/d46/unionppu2c02_1_1loopy__register.html#a85d5703f11e821385c2d2728069d1ef4">nametable_x</a>;</div>
+<div class="line"><span class="lineno">  209</span>                ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a977ed4c9f9596404ca0412db55588cf0">vram_addr</a>.<a class="code hl_variable" href="../../d4/d46/unionppu2c02_1_1loopy__register.html#ae7b526ced9250f815f73dc55b85b7383">coarse_x</a>    = ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#af3bf476bfc051ee5ed2dee4410f74840">tram_addr</a>.<a class="code hl_variable" href="../../d4/d46/unionppu2c02_1_1loopy__register.html#ae7b526ced9250f815f73dc55b85b7383">coarse_x</a>;</div>
+<div class="line"><span class="lineno">  210</span>            }</div>
+<div class="line"><span class="lineno">  211</span>        }</div>
+<div class="ttc" id="aclassppu2c02_html_af3bf476bfc051ee5ed2dee4410f74840"><div class="ttname"><a href="../../d2/deb/classppu2c02.html#af3bf476bfc051ee5ed2dee4410f74840">ppu2c02::tram_addr</a></div><div class="ttdeci">loopy_register tram_addr</div><div class="ttdef"><b>Definition:</b> 2c02.h:126</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d6/d3f/classppu_af4eed16ede0e68d6b23dcc4f10a74d9f_icgraph.png" border="0" usemap="#ad6/d3f/classppu_af4eed16ede0e68d6b23dcc4f10a74d9f_icgraph" alt=""/></div>
 <map name="ad6/d3f/classppu_af4eed16ede0e68d6b23dcc4f10a74d9f_icgraph" id="ad6/d3f/classppu_af4eed16ede0e68d6b23dcc4f10a74d9f_icgraph">
-<area shape="rect" title=" " alt="" coords="653,31,804,57"/>
+<area shape="rect" title=" " alt="" coords="868,31,1019,57"/>
+<area shape="rect" href="../../d6/d3f/classppu.html#adc553339a3f633423214a161971cb244" title=" " alt="" coords="653,31,820,57"/>
 <area shape="rect" href="../../d6/d3f/classppu.html#a8f8beeeceb29673161032303d02e8cad" title=" " alt="" coords="525,31,605,57"/>
 <area shape="rect" href="../../df/d0a/main_8cpp.html#a6d327e023ed1dae058f86d827940d7a6" title=" " alt="" coords="403,31,477,57"/>
 <area shape="rect" href="../../df/d0a/main_8cpp.html#a21dfe9bde9bd8461cf7b93411861607a" title=" " alt="" coords="104,5,244,32"/>
@@ -1112,14 +1422,14 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  185</span>        {</div>
-<div class="line"><span class="lineno">  186</span>            <span class="keywordflow">if</span> (ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#ae8399bc89c92d76b399da6efff282c15">mask</a>.<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a6539ec50d4dd9d95e00ab0de2771e695">render_background</a> || ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#ae8399bc89c92d76b399da6efff282c15">mask</a>.<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a36e34c5bbd3dcada0b27bddd1f40ed98">render_sprites</a>)</div>
-<div class="line"><span class="lineno">  187</span>            {</div>
-<div class="line"><span class="lineno">  188</span>                ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a977ed4c9f9596404ca0412db55588cf0">vram_addr</a>.<a class="code hl_variable" href="../../d4/d46/unionppu2c02_1_1loopy__register.html#adfe6c672efdf8fadedeeae28f8584273">nametable_y</a> = ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#af3bf476bfc051ee5ed2dee4410f74840">tram_addr</a>.<a class="code hl_variable" href="../../d4/d46/unionppu2c02_1_1loopy__register.html#adfe6c672efdf8fadedeeae28f8584273">nametable_y</a>;</div>
-<div class="line"><span class="lineno">  189</span>                ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a977ed4c9f9596404ca0412db55588cf0">vram_addr</a>.<a class="code hl_variable" href="../../d4/d46/unionppu2c02_1_1loopy__register.html#ad707402019230d6d26b55e97258bbe4d">coarse_y</a>    = ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#af3bf476bfc051ee5ed2dee4410f74840">tram_addr</a>.<a class="code hl_variable" href="../../d4/d46/unionppu2c02_1_1loopy__register.html#ad707402019230d6d26b55e97258bbe4d">coarse_y</a>;</div>
-<div class="line"><span class="lineno">  190</span>                ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a977ed4c9f9596404ca0412db55588cf0">vram_addr</a>.<a class="code hl_variable" href="../../d4/d46/unionppu2c02_1_1loopy__register.html#afbc8b729f2e6112b712bd0a39239103d">fine_y</a>    = ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#af3bf476bfc051ee5ed2dee4410f74840">tram_addr</a>.<a class="code hl_variable" href="../../d4/d46/unionppu2c02_1_1loopy__register.html#afbc8b729f2e6112b712bd0a39239103d">fine_y</a>;</div>
-<div class="line"><span class="lineno">  191</span>            }</div>
-<div class="line"><span class="lineno">  192</span>        }</div>
+<div class="fragment"><div class="line"><span class="lineno">  214</span>        {</div>
+<div class="line"><span class="lineno">  215</span>            <span class="keywordflow">if</span> (ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#ae8399bc89c92d76b399da6efff282c15">mask</a>.<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a6539ec50d4dd9d95e00ab0de2771e695">render_background</a> || ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#ae8399bc89c92d76b399da6efff282c15">mask</a>.<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a36e34c5bbd3dcada0b27bddd1f40ed98">render_sprites</a>)</div>
+<div class="line"><span class="lineno">  216</span>            {</div>
+<div class="line"><span class="lineno">  217</span>                ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a977ed4c9f9596404ca0412db55588cf0">vram_addr</a>.<a class="code hl_variable" href="../../d4/d46/unionppu2c02_1_1loopy__register.html#adfe6c672efdf8fadedeeae28f8584273">nametable_y</a> = ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#af3bf476bfc051ee5ed2dee4410f74840">tram_addr</a>.<a class="code hl_variable" href="../../d4/d46/unionppu2c02_1_1loopy__register.html#adfe6c672efdf8fadedeeae28f8584273">nametable_y</a>;</div>
+<div class="line"><span class="lineno">  218</span>                ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a977ed4c9f9596404ca0412db55588cf0">vram_addr</a>.<a class="code hl_variable" href="../../d4/d46/unionppu2c02_1_1loopy__register.html#ad707402019230d6d26b55e97258bbe4d">coarse_y</a>    = ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#af3bf476bfc051ee5ed2dee4410f74840">tram_addr</a>.<a class="code hl_variable" href="../../d4/d46/unionppu2c02_1_1loopy__register.html#ad707402019230d6d26b55e97258bbe4d">coarse_y</a>;</div>
+<div class="line"><span class="lineno">  219</span>                ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a977ed4c9f9596404ca0412db55588cf0">vram_addr</a>.<a class="code hl_variable" href="../../d4/d46/unionppu2c02_1_1loopy__register.html#afbc8b729f2e6112b712bd0a39239103d">fine_y</a>    = ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#af3bf476bfc051ee5ed2dee4410f74840">tram_addr</a>.<a class="code hl_variable" href="../../d4/d46/unionppu2c02_1_1loopy__register.html#afbc8b729f2e6112b712bd0a39239103d">fine_y</a>;</div>
+<div class="line"><span class="lineno">  220</span>            }</div>
+<div class="line"><span class="lineno">  221</span>        }</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1160,20 +1470,40 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  112</span>        {</div>
-<div class="line"><span class="lineno">  113</span>            ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a76b299a13833f52f473f4306cb1bfed4">bg_shifter_pattern_lo</a> &lt;&lt;= 1;</div>
-<div class="line"><span class="lineno">  114</span>            ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a1677fce272b90542ea2459c8ae2fd9db">bg_shifter_pattern_hi</a> &lt;&lt;= 1;</div>
-<div class="line"><span class="lineno">  115</span> </div>
-<div class="line"><span class="lineno">  116</span>            ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#aacca281f94ba141df4be70494c01c566">bg_shifter_attrib_lo</a> &lt;&lt;= 1;</div>
-<div class="line"><span class="lineno">  117</span>            ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#aab9cc74b5efe2244c82d6156d6fe7e70">bg_shifter_attrib_hi</a> &lt;&lt;= 1;</div>
-<div class="line"><span class="lineno">  118</span>        }</div>
+<div class="fragment"><div class="line"><span class="lineno">  123</span>        {</div>
+<div class="line"><span class="lineno">  124</span>            <span class="keywordflow">if</span>(ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#ae8399bc89c92d76b399da6efff282c15">mask</a>.<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a6539ec50d4dd9d95e00ab0de2771e695">render_background</a>)</div>
+<div class="line"><span class="lineno">  125</span>            {</div>
+<div class="line"><span class="lineno">  126</span>                ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a76b299a13833f52f473f4306cb1bfed4">bg_shifter_pattern_lo</a> &lt;&lt;= 1;</div>
+<div class="line"><span class="lineno">  127</span>                ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a1677fce272b90542ea2459c8ae2fd9db">bg_shifter_pattern_hi</a> &lt;&lt;= 1;</div>
+<div class="line"><span class="lineno">  128</span> </div>
+<div class="line"><span class="lineno">  129</span>                ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#aacca281f94ba141df4be70494c01c566">bg_shifter_attrib_lo</a> &lt;&lt;= 1;</div>
+<div class="line"><span class="lineno">  130</span>                ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#aab9cc74b5efe2244c82d6156d6fe7e70">bg_shifter_attrib_hi</a> &lt;&lt;= 1;</div>
+<div class="line"><span class="lineno">  131</span>            }</div>
+<div class="line"><span class="lineno">  132</span> </div>
+<div class="line"><span class="lineno">  133</span>            <span class="keywordflow">if</span>(ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#ae8399bc89c92d76b399da6efff282c15">mask</a>.<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a36e34c5bbd3dcada0b27bddd1f40ed98">render_sprites</a> &amp;&amp; ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#af5240aa778b1cf870047f5c67d2ada53">cycle</a> &gt;= 1 &amp;&amp; ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#af5240aa778b1cf870047f5c67d2ada53">cycle</a> &lt; 258)</div>
+<div class="line"><span class="lineno">  134</span>            {</div>
+<div class="line"><span class="lineno">  135</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a80404dda2684075bec7c0a09a0e97238">spriteCount</a>; i++)</div>
+<div class="line"><span class="lineno">  136</span>                {</div>
+<div class="line"><span class="lineno">  137</span>                    <span class="keywordflow">if</span>(ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#acbdeb257d1d202217512159326b2db95">spriteScanline</a>[i].<a class="code hl_variable" href="../../d7/de8/structppu2c02_1_1sprite_data.html#a1d5b149e6bc30819907afa6194c93532">x</a> &gt; 0)</div>
+<div class="line"><span class="lineno">  138</span>                        ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#acbdeb257d1d202217512159326b2db95">spriteScanline</a>[i].<a class="code hl_variable" href="../../d7/de8/structppu2c02_1_1sprite_data.html#a1d5b149e6bc30819907afa6194c93532">x</a>--;</div>
+<div class="line"><span class="lineno">  139</span>                    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  140</span>                    {</div>
+<div class="line"><span class="lineno">  141</span>                        ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a9ae0a9296ea1a2b87471eef102255d0c">spriteShifterPatternLo</a>[i] &lt;&lt;= 1;</div>
+<div class="line"><span class="lineno">  142</span>                        ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a18e78ca23f88ef533a32f003f6d82515">spriteShifterPatternHi</a>[i] &lt;&lt;= 1;</div>
+<div class="line"><span class="lineno">  143</span>                    }</div>
+<div class="line"><span class="lineno">  144</span>                }</div>
+<div class="line"><span class="lineno">  145</span>                </div>
+<div class="line"><span class="lineno">  146</span>            }</div>
+<div class="line"><span class="lineno">  147</span>        }</div>
+<div class="ttc" id="astructppu2c02_1_1sprite_data_html_a1d5b149e6bc30819907afa6194c93532"><div class="ttname"><a href="../../d7/de8/structppu2c02_1_1sprite_data.html#a1d5b149e6bc30819907afa6194c93532">ppu2c02::spriteData::x</a></div><div class="ttdeci">uint8_t x</div><div class="ttdef"><b>Definition:</b> 2c02.h:37</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d6/d3f/classppu_a5dfb585633a0fb9ac873189fc72fde2f_icgraph.png" border="0" usemap="#ad6/d3f/classppu_a5dfb585633a0fb9ac873189fc72fde2f_icgraph" alt=""/></div>
 <map name="ad6/d3f/classppu_a5dfb585633a0fb9ac873189fc72fde2f_icgraph" id="ad6/d3f/classppu_a5dfb585633a0fb9ac873189fc72fde2f_icgraph">
-<area shape="rect" title=" " alt="" coords="860,31,993,57"/>
-<area shape="rect" href="../../d6/d3f/classppu.html#a011d8cf9ad06b321ecf61ab48ed7825e" title=" " alt="" coords="653,31,812,57"/>
+<area shape="rect" title=" " alt="" coords="1075,31,1208,57"/>
+<area shape="rect" href="../../d6/d3f/classppu.html#a011d8cf9ad06b321ecf61ab48ed7825e" title=" " alt="" coords="868,31,1027,57"/>
+<area shape="rect" href="../../d6/d3f/classppu.html#adc553339a3f633423214a161971cb244" title=" " alt="" coords="653,31,820,57"/>
 <area shape="rect" href="../../d6/d3f/classppu.html#a8f8beeeceb29673161032303d02e8cad" title=" " alt="" coords="525,31,605,57"/>
 <area shape="rect" href="../../df/d0a/main_8cpp.html#a6d327e023ed1dae058f86d827940d7a6" title=" " alt="" coords="403,31,477,57"/>
 <area shape="rect" href="../../df/d0a/main_8cpp.html#a21dfe9bde9bd8461cf7b93411861607a" title=" " alt="" coords="104,5,244,32"/>
@@ -1208,36 +1538,36 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  232</span>        {</div>
-<div class="line"><span class="lineno">  233</span>            <a class="code hl_function" href="../../d6/d3f/classppu.html#a5dfb585633a0fb9ac873189fc72fde2f">updateShifters</a>(ppuData);</div>
-<div class="line"><span class="lineno">  234</span>            <span class="keywordflow">switch</span> ((ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#af5240aa778b1cf870047f5c67d2ada53">cycle</a> - 1) % 8)</div>
-<div class="line"><span class="lineno">  235</span>            {</div>
-<div class="line"><span class="lineno">  236</span>                <span class="keywordflow">case</span> 0:</div>
-<div class="line"><span class="lineno">  237</span>                    <a class="code hl_function" href="../../d6/d3f/classppu.html#abb466cdb15e449cbd54a1ec4fd2ef3d2">loadBackgroundShifters</a>(ppuData);</div>
-<div class="line"><span class="lineno">  238</span>                    <a class="code hl_function" href="../../d6/d3f/classppu.html#a24470d8d18ee8660dee020ddfdc6e089">loadNametableByte</a>(ppuData);</div>
-<div class="line"><span class="lineno">  239</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  240</span> </div>
-<div class="line"><span class="lineno">  241</span>                <span class="keywordflow">case</span> 2:</div>
-<div class="line"><span class="lineno">  242</span>                    <a class="code hl_function" href="../../d6/d3f/classppu.html#ac79c38af3d65d535acc5b681209f7c33">loadAtributeTableByte</a>(ppuData);</div>
-<div class="line"><span class="lineno">  243</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  244</span>                <span class="keywordflow">case</span> 4:</div>
-<div class="line"><span class="lineno">  245</span>                    <a class="code hl_function" href="../../d6/d3f/classppu.html#a7fe1b4219f11e5f08807326089f53324">patternTableTileLow</a>(ppuData);</div>
-<div class="line"><span class="lineno">  246</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  247</span>                <span class="keywordflow">case</span> 6:</div>
-<div class="line"><span class="lineno">  248</span>                    <a class="code hl_function" href="../../d6/d3f/classppu.html#abc1b9a5dd5bce43692e2db61b31bcd6c">patternTableTileHigh</a>(ppuData);</div>
-<div class="line"><span class="lineno">  249</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  250</span>                <span class="keywordflow">case</span> 7:</div>
-<div class="line"><span class="lineno">  251</span>                    <a class="code hl_function" href="../../d6/d3f/classppu.html#a9abb944f427a7a69eebf09dd31cc13a2">incrementScrollX</a>(ppuData);</div>
-<div class="line"><span class="lineno">  252</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  253</span>                </div>
-<div class="line"><span class="lineno">  254</span>            }</div>
-<div class="line"><span class="lineno">  255</span>        }</div>
-<div class="ttc" id="aclassppu_html_a24470d8d18ee8660dee020ddfdc6e089"><div class="ttname"><a href="../../d6/d3f/classppu.html#a24470d8d18ee8660dee020ddfdc6e089">ppu::loadNametableByte</a></div><div class="ttdeci">static void loadNametableByte(ppu2c02 *ppuData)</div><div class="ttdef"><b>Definition:</b> ppu.h:194</div></div>
-<div class="ttc" id="aclassppu_html_a5dfb585633a0fb9ac873189fc72fde2f"><div class="ttname"><a href="../../d6/d3f/classppu.html#a5dfb585633a0fb9ac873189fc72fde2f">ppu::updateShifters</a></div><div class="ttdeci">static void updateShifters(ppu2c02 *ppuData)</div><div class="ttdef"><b>Definition:</b> ppu.h:111</div></div>
-<div class="ttc" id="aclassppu_html_a7fe1b4219f11e5f08807326089f53324"><div class="ttname"><a href="../../d6/d3f/classppu.html#a7fe1b4219f11e5f08807326089f53324">ppu::patternTableTileLow</a></div><div class="ttdeci">static void patternTableTileLow(ppu2c02 *ppuData)</div><div class="ttdef"><b>Definition:</b> ppu.h:213</div></div>
-<div class="ttc" id="aclassppu_html_a9abb944f427a7a69eebf09dd31cc13a2"><div class="ttname"><a href="../../d6/d3f/classppu.html#a9abb944f427a7a69eebf09dd31cc13a2">ppu::incrementScrollX</a></div><div class="ttdeci">static void incrementScrollX(ppu2c02 *ppuData)</div><div class="ttdef"><b>Definition:</b> ppu.h:130</div></div>
-<div class="ttc" id="aclassppu_html_abc1b9a5dd5bce43692e2db61b31bcd6c"><div class="ttname"><a href="../../d6/d3f/classppu.html#abc1b9a5dd5bce43692e2db61b31bcd6c">ppu::patternTableTileHigh</a></div><div class="ttdeci">static void patternTableTileHigh(ppu2c02 *ppuData)</div><div class="ttdef"><b>Definition:</b> ppu.h:222</div></div>
-<div class="ttc" id="aclassppu_html_ac79c38af3d65d535acc5b681209f7c33"><div class="ttname"><a href="../../d6/d3f/classppu.html#ac79c38af3d65d535acc5b681209f7c33">ppu::loadAtributeTableByte</a></div><div class="ttdeci">static void loadAtributeTableByte(ppu2c02 *ppuData)</div><div class="ttdef"><b>Definition:</b> ppu.h:199</div></div>
+<div class="fragment"><div class="line"><span class="lineno">  261</span>        {</div>
+<div class="line"><span class="lineno">  262</span>            <a class="code hl_function" href="../../d6/d3f/classppu.html#a5dfb585633a0fb9ac873189fc72fde2f">updateShifters</a>(ppuData);</div>
+<div class="line"><span class="lineno">  263</span>            <span class="keywordflow">switch</span> ((ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#af5240aa778b1cf870047f5c67d2ada53">cycle</a> - 1) % 8)</div>
+<div class="line"><span class="lineno">  264</span>            {</div>
+<div class="line"><span class="lineno">  265</span>                <span class="keywordflow">case</span> 0:</div>
+<div class="line"><span class="lineno">  266</span>                    <a class="code hl_function" href="../../d6/d3f/classppu.html#abb466cdb15e449cbd54a1ec4fd2ef3d2">loadBackgroundShifters</a>(ppuData);</div>
+<div class="line"><span class="lineno">  267</span>                    <a class="code hl_function" href="../../d6/d3f/classppu.html#a24470d8d18ee8660dee020ddfdc6e089">loadNametableByte</a>(ppuData);</div>
+<div class="line"><span class="lineno">  268</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  269</span> </div>
+<div class="line"><span class="lineno">  270</span>                <span class="keywordflow">case</span> 2:</div>
+<div class="line"><span class="lineno">  271</span>                    <a class="code hl_function" href="../../d6/d3f/classppu.html#ac79c38af3d65d535acc5b681209f7c33">loadAtributeTableByte</a>(ppuData);</div>
+<div class="line"><span class="lineno">  272</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  273</span>                <span class="keywordflow">case</span> 4:</div>
+<div class="line"><span class="lineno">  274</span>                    <a class="code hl_function" href="../../d6/d3f/classppu.html#a7fe1b4219f11e5f08807326089f53324">patternTableTileLow</a>(ppuData);</div>
+<div class="line"><span class="lineno">  275</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  276</span>                <span class="keywordflow">case</span> 6:</div>
+<div class="line"><span class="lineno">  277</span>                    <a class="code hl_function" href="../../d6/d3f/classppu.html#abc1b9a5dd5bce43692e2db61b31bcd6c">patternTableTileHigh</a>(ppuData);</div>
+<div class="line"><span class="lineno">  278</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  279</span>                <span class="keywordflow">case</span> 7:</div>
+<div class="line"><span class="lineno">  280</span>                    <a class="code hl_function" href="../../d6/d3f/classppu.html#a9abb944f427a7a69eebf09dd31cc13a2">incrementScrollX</a>(ppuData);</div>
+<div class="line"><span class="lineno">  281</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  282</span>                </div>
+<div class="line"><span class="lineno">  283</span>            }</div>
+<div class="line"><span class="lineno">  284</span>        }</div>
+<div class="ttc" id="aclassppu_html_a24470d8d18ee8660dee020ddfdc6e089"><div class="ttname"><a href="../../d6/d3f/classppu.html#a24470d8d18ee8660dee020ddfdc6e089">ppu::loadNametableByte</a></div><div class="ttdeci">static void loadNametableByte(ppu2c02 *ppuData)</div><div class="ttdef"><b>Definition:</b> ppu.h:223</div></div>
+<div class="ttc" id="aclassppu_html_a5dfb585633a0fb9ac873189fc72fde2f"><div class="ttname"><a href="../../d6/d3f/classppu.html#a5dfb585633a0fb9ac873189fc72fde2f">ppu::updateShifters</a></div><div class="ttdeci">static void updateShifters(ppu2c02 *ppuData)</div><div class="ttdef"><b>Definition:</b> ppu.h:122</div></div>
+<div class="ttc" id="aclassppu_html_a7fe1b4219f11e5f08807326089f53324"><div class="ttname"><a href="../../d6/d3f/classppu.html#a7fe1b4219f11e5f08807326089f53324">ppu::patternTableTileLow</a></div><div class="ttdeci">static void patternTableTileLow(ppu2c02 *ppuData)</div><div class="ttdef"><b>Definition:</b> ppu.h:242</div></div>
+<div class="ttc" id="aclassppu_html_a9abb944f427a7a69eebf09dd31cc13a2"><div class="ttname"><a href="../../d6/d3f/classppu.html#a9abb944f427a7a69eebf09dd31cc13a2">ppu::incrementScrollX</a></div><div class="ttdeci">static void incrementScrollX(ppu2c02 *ppuData)</div><div class="ttdef"><b>Definition:</b> ppu.h:159</div></div>
+<div class="ttc" id="aclassppu_html_abc1b9a5dd5bce43692e2db61b31bcd6c"><div class="ttname"><a href="../../d6/d3f/classppu.html#abc1b9a5dd5bce43692e2db61b31bcd6c">ppu::patternTableTileHigh</a></div><div class="ttdeci">static void patternTableTileHigh(ppu2c02 *ppuData)</div><div class="ttdef"><b>Definition:</b> ppu.h:251</div></div>
+<div class="ttc" id="aclassppu_html_ac79c38af3d65d535acc5b681209f7c33"><div class="ttname"><a href="../../d6/d3f/classppu.html#ac79c38af3d65d535acc5b681209f7c33">ppu::loadAtributeTableByte</a></div><div class="ttdeci">static void loadAtributeTableByte(ppu2c02 *ppuData)</div><div class="ttdef"><b>Definition:</b> ppu.h:228</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1259,7 +1589,8 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d6/d3f/classppu_a011d8cf9ad06b321ecf61ab48ed7825e_icgraph.png" border="0" usemap="#ad6/d3f/classppu_a011d8cf9ad06b321ecf61ab48ed7825e_icgraph" alt=""/></div>
 <map name="ad6/d3f/classppu_a011d8cf9ad06b321ecf61ab48ed7825e_icgraph" id="ad6/d3f/classppu_a011d8cf9ad06b321ecf61ab48ed7825e_icgraph">
-<area shape="rect" title=" " alt="" coords="653,31,812,57"/>
+<area shape="rect" title=" " alt="" coords="868,31,1027,57"/>
+<area shape="rect" href="../../d6/d3f/classppu.html#adc553339a3f633423214a161971cb244" title=" " alt="" coords="653,31,820,57"/>
 <area shape="rect" href="../../d6/d3f/classppu.html#a8f8beeeceb29673161032303d02e8cad" title=" " alt="" coords="525,31,605,57"/>
 <area shape="rect" href="../../df/d0a/main_8cpp.html#a6d327e023ed1dae058f86d827940d7a6" title=" " alt="" coords="403,31,477,57"/>
 <area shape="rect" href="../../df/d0a/main_8cpp.html#a21dfe9bde9bd8461cf7b93411861607a" title=" " alt="" coords="104,5,244,32"/>

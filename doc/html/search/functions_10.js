@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['visablearearender_0',['visableAreaRender',['../d6/d3f/classppu.html#a011d8cf9ad06b321ecf61ab48ed7825e',1,'ppu']]]
+  ['updateshifters_0',['updateShifters',['../d6/d3f/classppu.html#a5dfb585633a0fb9ac873189fc72fde2f',1,'ppu']]]
 ];

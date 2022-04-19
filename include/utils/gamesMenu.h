@@ -60,13 +60,21 @@ class gamesMenu
             gamesMenu::cart = cart;
             
 
-            LTE::eventManger::addCoustemEventsRoute("load game/");
             sendorData = new loadGameEvent("load game/");
 
             LTE::eventManger::startBuildingEvent()->
                 setEventRoute("ImGui render/show games menu")->
                 setEventCallback(ImGuiRender)->
                 setWindowId(winId)->add();
+
+            sendorData->gamePath = "./res/roms/Donkey Kong (World) (Rev A).nes";
+            // sendorData->gamePath = "./res/roms/Galaga (U).nes";
+            // sendorData->gamePath = "./res/roms/Ice Climber (USA, Europe).nes";
+            sendorData->gamePath = "./res/roms/Kung Fu (Japan, USA).nes";
+            // sendorData->gamePath = "./res/roms/Pac-Man (USA) (Namco).nes";
+            sendorData->gamePath = "./res/roms/Super Mario Bros (E).nes";
+            LTE::eventManger::trigerEvent(sendorData);
+
         }
 };
 

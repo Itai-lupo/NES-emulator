@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['palette_0',['palette',['../d2/deb/classppu2c02.html#abff27c18ce98f89337aa9e35523c9f6b',1,'ppu2c02']]],
+  ['palette_0',['palette',['../d7/de8/structppu2c02_1_1sprite_data.html#a69f4582e83741bf9e2d89930915daa22',1,'ppu2c02::spriteData']]],
   ['palettesmemory_1',['palettesMemory',['../de/dba/classpalettes_memory.html',1,'palettesMemory'],['../de/dba/classpalettes_memory.html#a0f52abb989684f1fe9cd9e1d22eac830',1,'palettesMemory::palettesMemory()']]],
   ['palettesmemory_2eh_2',['palettesMemory.h',['../d4/d5a/palettes_memory_8h.html',1,'']]],
   ['pattern_5fbackground_3',['pattern_background',['../df/d5b/unionppu2c02_1_1_p_p_u_c_t_r_l.html#aef7acf60b88b64d5c0e6919e982348eb',1,'ppu2c02::PPUCTRL']]],
@@ -23,6 +23,6 @@ var searchData=
   ['prg_5from_5fchunks_20',['prg_rom_chunks',['../dc/d02/struct_n_e_s_header.html#a7478f9faea2b35201bd77127633dd226',1,'NESHeader']]],
   ['prgbanks_21',['prgBanks',['../d6/d32/classmapper.html#a64873a38e7b1203f68a40ba47a3ed8a0',1,'mapper::prgBanks()'],['../d8/d1f/structmappers_data.html#ad32d9ee60696e5114eef9f75a7fb8234',1,'mappersData::prgBanks()']]],
   ['printdata_2ecpp_22',['printData.cpp',['../d9/d07/print_data_8cpp.html',1,'']]],
-  ['priority_23',['priority',['../d2/deb/classppu2c02.html#acaad68b81d0b63d2bebfaaaa6b41101c',1,'ppu2c02']]],
+  ['priority_23',['priority',['../d7/de8/structppu2c02_1_1sprite_data.html#ad1b9dd35a2987f6f52972aa4f8d0f22f',1,'ppu2c02::spriteData']]],
   ['pushdevice_24',['pushDevice',['../d0/d88/classbus.html#a48c90aeac455d34c22da64f98c01bba5',1,'bus']]]
 ];

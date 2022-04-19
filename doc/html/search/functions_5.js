@@ -1,4 +1,7 @@
 var searchData=
 [
-  ['hex_0',['hex',['../de/d33/classcpu.html#a982d259d5c5981cb3b51364c97b80519',1,'cpu::hex()'],['../dc/d39/6502_8cpp.html#ade70fa8abce6b20a645d3793dd6fa841',1,'hex():&#160;6502.cpp']]]
+  ['getbgpixelpalette_0',['getBGPixelPalette',['../d6/d3f/classppu.html#a637979c9ca071fa6aa2b16783220538d',1,'ppu']]],
+  ['getbgpixelpaletteoffset_1',['getBGPixelPaletteOffset',['../d6/d3f/classppu.html#a032eaca2250f2be302f32cd259ec53ce',1,'ppu']]],
+  ['getcolourfrompaletteram_2',['GetColourFromPaletteRam',['../d6/d3f/classppu.html#ab7902989f58e71e7b1a934558ee6bcf1',1,'ppu']]],
+  ['getmirror_3',['getMirror',['../da/de8/classppu_bus_cartridge.html#a9dcc9658ba9b6d6ec08ce985414cfdba',1,'ppuBusCartridge']]]
 ];

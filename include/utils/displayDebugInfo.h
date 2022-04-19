@@ -26,23 +26,10 @@ private:
         return s;
     }
 
-    static void ImGuiRender(LTE::gameObject *eventEntity, LTE::coreEventData *sendor)
+    static void renderCpuData(cpu6502 *c, bus<uint8_t, uint16_t> *sysBus)
     {
-        LTE::onUpdateData *eventData = static_cast<LTE::onUpdateData *>(sendor);
-
-        cpu6502 *c = eventEntity->getComponent<cpu6502>();
-        ppu2c02 *p = eventEntity->getComponent<ppu2c02>();
-        bus<uint8_t, uint16_t> *sysBus = eventEntity->getComponent<bus<uint8_t, uint16_t>>();
 
         std::array<uint8_t, 0xFF> pageData;
-        for (uint16_t i = 0; i <= 0xFF; i++)
-            pageData[i] = sysBus->read((page << 8) | i);
-
-
-        std::array<uint8_t, 0xFF> nameTablepageData;
-        for (uint16_t i = 0; i <= 0xFF; i++)
-            nameTablepageData[i] = p->ppuBus.read((nameTablePage << 8) | i);
-
         uint16_t pc = c->pc;
 
         uint16_t codeStart = pc;
@@ -51,12 +38,8 @@ private:
             codeStart -= c->lookup[sysBus->read(codeStart)].size + 1;
         }
 
-        if (!ImGui::Begin("debug info"))
-        {
-            // Early out if the window is collapsed, as an optimization.
-            ImGui::End();
-            return;
-        }
+        for (uint16_t i = 0; i <= 0xFF; i++)
+            pageData[i] = sysBus->read((page << 8) | i);
 
 
         ImGui::TextColored(ImVec4(1, 1, 0, 1), "flags");
@@ -164,32 +147,43 @@ private:
 
         ImGui::SliderInt("page num", &page, 0, 0x1F);
 
-        ImGui::BeginChild("scrolling", ImVec2(0, 150));
-        for (int i = 0; i <= 0xFF; i += 16)
+    }
+
+    static void ImGuiRender(LTE::gameObject *eventEntity, LTE::coreEventData *sendor)
+    {
+        LTE::onUpdateData *eventData = static_cast<LTE::onUpdateData *>(sendor);
+
+        cpu6502 *c = eventEntity->getComponent<cpu6502>();
+        ppu2c02 *p = eventEntity->getComponent<ppu2c02>();
+        bus<uint8_t, uint16_t> *sysBus = eventEntity->getComponent<bus<uint8_t, uint16_t>>();
+
+        if (!ImGui::Begin("debug info"))
+        {
+            // Early out if the window is collapsed, as an optimization.
+            ImGui::End();
+            return;
+        }
+        // renderCpuData(c, sysBus);
+
+
+        ImGui::TextColored(ImVec4(1, 1, 0, 1), "OAM");
+        ImGui::BeginChild("###scrolling");
+          
+        for (int i = 0; i < 64; i ++)
         {
             ImGui::Text((
-                            toHexString((nameTablePage << 8) | i, 4) + ":\t" +
-                            toHexString(nameTablepageData[i + 0], 2) + " " +
-                            toHexString(nameTablepageData[i + 1], 2) + " " +
-                            toHexString(nameTablepageData[i + 2], 2) + " " +
-                            toHexString(nameTablepageData[i + 3], 2) + " " +
-                            toHexString(nameTablepageData[i + 4], 2) + " " +
-                            toHexString(nameTablepageData[i + 5], 2) + " " +
-                            toHexString(nameTablepageData[i + 6], 2) + " " +
-                            toHexString(nameTablepageData[i + 7], 2) + "\t" +
-                            toHexString(nameTablepageData[i + 8], 2) + " " +
-                            toHexString(nameTablepageData[i + 9], 2) + " " +
-                            toHexString(nameTablepageData[i + 10], 2) + " " +
-                            toHexString(nameTablepageData[i + 11], 2) + " " +
-                            toHexString(nameTablepageData[i + 12], 2) + " " +
-                            toHexString(nameTablepageData[i + 13], 2) + " " +
-                            toHexString(nameTablepageData[i + 14], 2) + " " +
-                            toHexString(nameTablepageData[i + 15], 2) + " ")
-                            .c_str());
+                            toHexString(i, 2) + ":" +
+                            "\ty: " + std::to_string(p->OAM[i].y) + 
+                            "\ttileId: " + toHexString(p->OAM[i].tileId, 2) + 
+                            "\tpalette: " + std::to_string(p->OAM[i].palette) + 
+                            "\tpriority: " + std::to_string(p->OAM[i].priority) + 
+                            "\tflipHorizontally: " + std::to_string(p->OAM[i].flipHorizontally) + 
+                            "\tflipVertically: " + std::to_string(p->OAM[i].flipVertically) + 
+                            "\tx: " + std::to_string(p->OAM[i].x)
+                        ).c_str());
         }
-        ImGui::EndChild();
 
-        ImGui::SliderInt("name table page num", &nameTablePage, 0x20, 0x3E);
+        ImGui::EndChild();
         ImGui::End();
     }
 
@@ -355,8 +349,6 @@ private:
     };
 
 public:
-
-    
     static void changePallate()
     {
         LTE::texture *t =  LTE::entityManger::getEntityById(colorPlateid)->getComponent<LTE::material>()->getTexture();
@@ -439,7 +431,7 @@ public:
                         addComponent(new LTE::material("res/NameTableMemoryTexture " + std::to_string(i), glm::vec4(0, 0, 0, 1.0f)));
                 });
 
-        toggleDebugInfo();
+        // toggleDebugInfo();
     }
 
     static void toggleDebugInfo()

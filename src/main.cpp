@@ -13,7 +13,10 @@
 #include "controller.h"
 #include "DMA.h"
 
+#include <chrono>
+
 #include <thread>
+
 void sysClock(LTE::gameObject *eventEntity, LTE::coreEventData *sendor);
 
 LTE::entityTaleId id;
@@ -187,14 +190,17 @@ int main()
         setEventCallback(keyDispatcher)->
         add();
 
-    gamesMenu::init(winId, cart);
-
-
+    LTE::eventManger::addCoustemEventsRoute("load game/");
 
     LTE::eventManger::startBuildingEvent()->
         setEntityID(id)->
         setEventRoute("load game/load cartage")->
         setEventCallback(loadCartageAndResetCpu)->add();
+
+    gamesMenu::init(winId, cart);
+
+
+
 
  
     LTE::eventManger::startBuildingEvent()->
