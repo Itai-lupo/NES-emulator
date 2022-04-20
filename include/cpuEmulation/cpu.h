@@ -15,8 +15,6 @@ class cpu
         static inline std::thread *clockT;
 
     public:
-        // static bool isCpuComplete(){ return cpuData->cycles == 0; }
-
     	static std::string hex(uint32_t n, uint8_t d)
         {
             std::string s(d, '0');
@@ -69,15 +67,16 @@ class cpu
             DMA *dma = eventEntity->getComponent<DMA>();
 
 
-            if((int)cpuData->cycles == 0)
-            {
-                if (dma->isOn())
-                    dma->clock();
-                else
-                  executeInstruction(busData, cpuData);
+            if (dma->isOn())
+                dma->clock();
+            else{
+                if((int)cpuData->cycles == 0)
+                {
+                    executeInstruction(busData, cpuData);
+                }
+                cpuData->clock++;
+                cpuData->cycles--;
             }
-            cpuData->clock++;
-            cpuData->cycles--;
         }
 
         static void reset(LTE::gameObject *eventEntity, LTE::coreEventData *sendor)

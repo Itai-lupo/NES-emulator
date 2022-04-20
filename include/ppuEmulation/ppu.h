@@ -424,7 +424,7 @@ class ppu
             }
         }
 
-        static void clock(LTE::gameObject *eventEntity, LTE::coreEventData *sendor)
+        static void clock(LTE::gameObject *eventEntity)
         {        
             bus<uint8_t, uint16_t> *busData = eventEntity->getComponent<bus<uint8_t, uint16_t>>();
             ppu2c02 *ppuData = eventEntity->getComponent<ppu2c02>();

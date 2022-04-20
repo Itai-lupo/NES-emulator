@@ -14,6 +14,7 @@ var searchData=
   ['reset_11',['reset',['../de/d33/classcpu.html#a97745a7f67189c0ace83e404c2345ba1',1,'cpu::reset()'],['../d2/deb/classppu2c02.html#a1b3aa18997f18dd6c4c1db3aad84a65c',1,'ppu2c02::reset()']]],
   ['right_12',['right',['../d6/df9/classcontroller.html#ab8635f0417644a07e533642519d892c7',1,'controller']]],
   ['romfilenotfoundexception_13',['romFileNotFoundException',['../dc/d96/classrom_file_not_found_exception.html',1,'romFileNotFoundException'],['../dc/d96/classrom_file_not_found_exception.html#a5f4583cffa992b56a4f42040dabbb8e5',1,'romFileNotFoundException::romFileNotFoundException()']]],
-  ['runcpu_14',['runCpu',['../df/d0a/main_8cpp.html#ab59f1b1459454092942fcda083513be9',1,'main.cpp']]],
-  ['rw_15',['RW',['../d9/dbe/classcpu6502.html#a764f5a2d57d981ad1f029ab13059fb98',1,'cpu6502']]]
+  ['runcpu_14',['runCpu',['../df/d0a/main_8cpp.html#aaeabc40a029089be2009eca1ccfc9e63',1,'main.cpp']]],
+  ['runppu_15',['runPpu',['../df/d0a/main_8cpp.html#acffc3f0c98d55474cfb5caafe5e176af',1,'main.cpp']]],
+  ['rw_16',['RW',['../d9/dbe/classcpu6502.html#a764f5a2d57d981ad1f029ab13059fb98',1,'cpu6502']]]
 ];

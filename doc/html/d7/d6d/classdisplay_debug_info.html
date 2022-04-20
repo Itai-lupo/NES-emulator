@@ -130,14 +130,13 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <div class="fragment"><div class="line"><span class="lineno">  353</span>    {</div>
-<div class="line"><span class="lineno">  354</span>        LTE::texture *<a class="code hl_variable" href="../../df/d0a/main_8cpp.html#a56c83145992bda0c5a5664be4fc449e9">t</a> =  LTE::entityManger::getEntityById(colorPlateid)-&gt;getComponent&lt;LTE::material&gt;()-&gt;getTexture();</div>
+<div class="line"><span class="lineno">  354</span>        LTE::texture *t =  LTE::entityManger::getEntityById(colorPlateid)-&gt;getComponent&lt;LTE::material&gt;()-&gt;getTexture();</div>
 <div class="line"><span class="lineno">  355</span> </div>
-<div class="line"><span class="lineno">  356</span>        <a class="code hl_variable" href="../../df/d0a/main_8cpp.html#a56c83145992bda0c5a5664be4fc449e9">t</a>-&gt;setRGBValue({pallateNumber, 4}, <span class="keyword">new</span> uint8_t[3]{0, 0, 0});</div>
+<div class="line"><span class="lineno">  356</span>        t-&gt;setRGBValue({pallateNumber, 4}, <span class="keyword">new</span> uint8_t[3]{0, 0, 0});</div>
 <div class="line"><span class="lineno">  357</span>        pallateNumber = (pallateNumber + 1) % 8;</div>
-<div class="line"><span class="lineno">  358</span>        <a class="code hl_variable" href="../../df/d0a/main_8cpp.html#a56c83145992bda0c5a5664be4fc449e9">t</a>-&gt;setRGBValue({pallateNumber, 4}, <span class="keyword">new</span> uint8_t[3]{255, 255, 255});</div>
+<div class="line"><span class="lineno">  358</span>        t-&gt;setRGBValue({pallateNumber, 4}, <span class="keyword">new</span> uint8_t[3]{255, 255, 255});</div>
 <div class="line"><span class="lineno">  359</span> </div>
 <div class="line"><span class="lineno">  360</span>    }</div>
-<div class="ttc" id="amain_8cpp_html_a56c83145992bda0c5a5664be4fc449e9"><div class="ttname"><a href="../../df/d0a/main_8cpp.html#a56c83145992bda0c5a5664be4fc449e9">t</a></div><div class="ttdeci">std::thread * t</div><div class="ttdef"><b>Definition:</b> main.cpp:31</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -253,10 +252,8 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">  430</span>                            }))-&gt;</div>
 <div class="line"><span class="lineno">  431</span>                        addComponent(<span class="keyword">new</span> LTE::material(<span class="stringliteral">&quot;res/NameTableMemoryTexture &quot;</span> + std::to_string(i), glm::vec4(0, 0, 0, 1.0f)));</div>
 <div class="line"><span class="lineno">  432</span>                });</div>
-<div class="line"><span class="lineno">  433</span> </div>
-<div class="line"><span class="lineno">  434</span>        <span class="comment">// toggleDebugInfo();</span></div>
-<div class="line"><span class="lineno">  435</span>    }</div>
-<div class="ttc" id="aclassdisplay_debug_info_html_a05da6d958cb086a874045a14b8ae7afe"><div class="ttname"><a href="../../d7/d6d/classdisplay_debug_info.html#a05da6d958cb086a874045a14b8ae7afe">displayDebugInfo::toggleDebugInfoOnKey</a></div><div class="ttdeci">static void toggleDebugInfoOnKey(LTE::gameObject *eventEntity, LTE::coreEventData *sendor)</div><div class="ttdef"><b>Definition:</b> displayDebugInfo.h:456</div></div>
+<div class="line"><span class="lineno">  433</span>    }</div>
+<div class="ttc" id="aclassdisplay_debug_info_html_a05da6d958cb086a874045a14b8ae7afe"><div class="ttname"><a href="../../d7/d6d/classdisplay_debug_info.html#a05da6d958cb086a874045a14b8ae7afe">displayDebugInfo::toggleDebugInfoOnKey</a></div><div class="ttdeci">static void toggleDebugInfoOnKey(LTE::gameObject *eventEntity, LTE::coreEventData *sendor)</div><div class="ttdef"><b>Definition:</b> displayDebugInfo.h:454</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -265,15 +262,6 @@ Here is the call graph for this function:</div>
 <area shape="rect" title=" " alt="" coords="5,13,149,39"/>
 <area shape="rect" href="../../d7/d6d/classdisplay_debug_info.html#a05da6d958cb086a874045a14b8ae7afe" title=" " alt="" coords="197,5,360,47"/>
 <area shape="rect" href="../../d7/d6d/classdisplay_debug_info.html#aec61352c5c4ba11cf3b8fc6639f5014f" title=" " alt="" coords="408,5,571,47"/>
-</map>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../d7/d6d/classdisplay_debug_info_adb8a0a4ea74078dc59551779c6ec5f43_icgraph.png" border="0" usemap="#ad7/d6d/classdisplay_debug_info_adb8a0a4ea74078dc59551779c6ec5f43_icgraph" alt=""/></div>
-<map name="ad7/d6d/classdisplay_debug_info_adb8a0a4ea74078dc59551779c6ec5f43_icgraph" id="ad7/d6d/classdisplay_debug_info_adb8a0a4ea74078dc59551779c6ec5f43_icgraph">
-<area shape="rect" title=" " alt="" coords="104,5,248,32"/>
-<area shape="rect" href="../../df/d0a/main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,56,32"/>
 </map>
 </div>
 
@@ -327,32 +315,31 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  438</span>    {</div>
-<div class="line"><span class="lineno">  439</span>        <span class="keywordflow">if</span> (showDebugInfo)</div>
-<div class="line"><span class="lineno">  440</span>        {</div>
-<div class="line"><span class="lineno">  441</span>            LTE::eventManger::removeEvent(<span class="stringliteral">&quot;ImGui render/print debug info&quot;</span>);</div>
-<div class="line"><span class="lineno">  442</span>            LTE::eventManger::removeEvent(<span class="stringliteral">&quot;window render/nes emulator/show color palate&quot;</span>);</div>
-<div class="line"><span class="lineno">  443</span>            LTE::eventManger::removeEvent(<span class="stringliteral">&quot;window render/nes emulator/show Pattern&quot;</span>);</div>
-<div class="line"><span class="lineno">  444</span>            LTE::eventManger::removeEvent(<span class="stringliteral">&quot;window render/nes emulator/show name table&quot;</span>);</div>
-<div class="line"><span class="lineno">  445</span>        }</div>
-<div class="line"><span class="lineno">  446</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  447</span>        {</div>
-<div class="line"><span class="lineno">  448</span>            LTE::eventManger::startBuildingEvent()-&gt;setEventRoute(<span class="stringliteral">&quot;ImGui render/print debug info&quot;</span>)-&gt;setEventCallback(ImGuiRender)-&gt;setEntityID(<span class="keywordtype">id</span>)-&gt;setWindowId(winId)-&gt;add();</div>
-<div class="line"><span class="lineno">  449</span>            LTE::eventManger::startBuildingEvent()-&gt;setEventRoute(<span class="stringliteral">&quot;window render/nes emulator/show color palate&quot;</span>)-&gt;setEventCallback(updateColorPalate)-&gt;setEntityID(<span class="keywordtype">id</span>)-&gt;setWindowId(winId)-&gt;add();</div>
-<div class="line"><span class="lineno">  450</span>            LTE::eventManger::startBuildingEvent()-&gt;setEventRoute(<span class="stringliteral">&quot;window render/nes emulator/show Pattern&quot;</span>)-&gt;setEventCallback(updatePatternMemory)-&gt;setEntityID(<span class="keywordtype">id</span>)-&gt;setWindowId(winId)-&gt;add();</div>
-<div class="line"><span class="lineno">  451</span>            LTE::eventManger::startBuildingEvent()-&gt;setEventRoute(<span class="stringliteral">&quot;window render/nes emulator/show name table&quot;</span>)-&gt;setEventCallback(updateNameTableMemory)-&gt;setEntityID(<span class="keywordtype">id</span>)-&gt;setWindowId(winId)-&gt;add();</div>
-<div class="line"><span class="lineno">  452</span>        }</div>
-<div class="line"><span class="lineno">  453</span>        showDebugInfo = !showDebugInfo;</div>
-<div class="line"><span class="lineno">  454</span>    }</div>
+<div class="fragment"><div class="line"><span class="lineno">  436</span>    {</div>
+<div class="line"><span class="lineno">  437</span>        <span class="keywordflow">if</span> (showDebugInfo)</div>
+<div class="line"><span class="lineno">  438</span>        {</div>
+<div class="line"><span class="lineno">  439</span>            LTE::eventManger::removeEvent(<span class="stringliteral">&quot;ImGui render/print debug info&quot;</span>);</div>
+<div class="line"><span class="lineno">  440</span>            LTE::eventManger::removeEvent(<span class="stringliteral">&quot;window render/nes emulator/show color palate&quot;</span>);</div>
+<div class="line"><span class="lineno">  441</span>            LTE::eventManger::removeEvent(<span class="stringliteral">&quot;window render/nes emulator/show Pattern&quot;</span>);</div>
+<div class="line"><span class="lineno">  442</span>            LTE::eventManger::removeEvent(<span class="stringliteral">&quot;window render/nes emulator/show name table&quot;</span>);</div>
+<div class="line"><span class="lineno">  443</span>        }</div>
+<div class="line"><span class="lineno">  444</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  445</span>        {</div>
+<div class="line"><span class="lineno">  446</span>            LTE::eventManger::startBuildingEvent()-&gt;setEventRoute(<span class="stringliteral">&quot;ImGui render/print debug info&quot;</span>)-&gt;setEventCallback(ImGuiRender)-&gt;setEntityID(<span class="keywordtype">id</span>)-&gt;setWindowId(winId)-&gt;add();</div>
+<div class="line"><span class="lineno">  447</span>            LTE::eventManger::startBuildingEvent()-&gt;setEventRoute(<span class="stringliteral">&quot;window render/nes emulator/show color palate&quot;</span>)-&gt;setEventCallback(updateColorPalate)-&gt;setEntityID(<span class="keywordtype">id</span>)-&gt;setWindowId(winId)-&gt;add();</div>
+<div class="line"><span class="lineno">  448</span>            LTE::eventManger::startBuildingEvent()-&gt;setEventRoute(<span class="stringliteral">&quot;window render/nes emulator/show Pattern&quot;</span>)-&gt;setEventCallback(updatePatternMemory)-&gt;setEntityID(<span class="keywordtype">id</span>)-&gt;setWindowId(winId)-&gt;add();</div>
+<div class="line"><span class="lineno">  449</span>            LTE::eventManger::startBuildingEvent()-&gt;setEventRoute(<span class="stringliteral">&quot;window render/nes emulator/show name table&quot;</span>)-&gt;setEventCallback(updateNameTableMemory)-&gt;setEntityID(<span class="keywordtype">id</span>)-&gt;setWindowId(winId)-&gt;add();</div>
+<div class="line"><span class="lineno">  450</span>        }</div>
+<div class="line"><span class="lineno">  451</span>        showDebugInfo = !showDebugInfo;</div>
+<div class="line"><span class="lineno">  452</span>    }</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d7/d6d/classdisplay_debug_info_aec61352c5c4ba11cf3b8fc6639f5014f_icgraph.png" border="0" usemap="#ad7/d6d/classdisplay_debug_info_aec61352c5c4ba11cf3b8fc6639f5014f_icgraph" alt=""/></div>
 <map name="ad7/d6d/classdisplay_debug_info_aec61352c5c4ba11cf3b8fc6639f5014f_icgraph" id="ad7/d6d/classdisplay_debug_info_aec61352c5c4ba11cf3b8fc6639f5014f_icgraph">
-<area shape="rect" title=" " alt="" coords="507,5,669,47"/>
-<area shape="rect" href="../../d7/d6d/classdisplay_debug_info.html#a05da6d958cb086a874045a14b8ae7afe" title=" " alt="" coords="296,5,459,47"/>
-<area shape="rect" href="../../d7/d6d/classdisplay_debug_info.html#adb8a0a4ea74078dc59551779c6ec5f43" title=" " alt="" coords="104,13,248,39"/>
-<area shape="rect" href="../../df/d0a/main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,13,56,39"/>
+<area shape="rect" title=" " alt="" coords="408,5,571,47"/>
+<area shape="rect" href="../../d7/d6d/classdisplay_debug_info.html#a05da6d958cb086a874045a14b8ae7afe" title=" " alt="" coords="197,5,360,47"/>
+<area shape="rect" href="../../d7/d6d/classdisplay_debug_info.html#adb8a0a4ea74078dc59551779c6ec5f43" title=" " alt="" coords="5,13,149,39"/>
 </map>
 </div>
 
@@ -391,13 +378,13 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  457</span>    {</div>
-<div class="line"><span class="lineno">  458</span>        LTE::KeyData *eventData = <span class="keyword">static_cast&lt;</span>LTE::KeyData *<span class="keyword">&gt;</span>(sendor);</div>
-<div class="line"><span class="lineno">  459</span> </div>
-<div class="line"><span class="lineno">  460</span>        <span class="keywordflow">if</span> (eventData-&gt;key == LT_KEY_F1)</div>
-<div class="line"><span class="lineno">  461</span>            <a class="code hl_function" href="../../d7/d6d/classdisplay_debug_info.html#aec61352c5c4ba11cf3b8fc6639f5014f">toggleDebugInfo</a>();</div>
-<div class="line"><span class="lineno">  462</span>    }</div>
-<div class="ttc" id="aclassdisplay_debug_info_html_aec61352c5c4ba11cf3b8fc6639f5014f"><div class="ttname"><a href="../../d7/d6d/classdisplay_debug_info.html#aec61352c5c4ba11cf3b8fc6639f5014f">displayDebugInfo::toggleDebugInfo</a></div><div class="ttdeci">static void toggleDebugInfo()</div><div class="ttdef"><b>Definition:</b> displayDebugInfo.h:437</div></div>
+<div class="fragment"><div class="line"><span class="lineno">  455</span>    {</div>
+<div class="line"><span class="lineno">  456</span>        LTE::KeyData *eventData = <span class="keyword">static_cast&lt;</span>LTE::KeyData *<span class="keyword">&gt;</span>(sendor);</div>
+<div class="line"><span class="lineno">  457</span> </div>
+<div class="line"><span class="lineno">  458</span>        <span class="keywordflow">if</span> (eventData-&gt;key == LT_KEY_F1)</div>
+<div class="line"><span class="lineno">  459</span>            <a class="code hl_function" href="../../d7/d6d/classdisplay_debug_info.html#aec61352c5c4ba11cf3b8fc6639f5014f">toggleDebugInfo</a>();</div>
+<div class="line"><span class="lineno">  460</span>    }</div>
+<div class="ttc" id="aclassdisplay_debug_info_html_aec61352c5c4ba11cf3b8fc6639f5014f"><div class="ttname"><a href="../../d7/d6d/classdisplay_debug_info.html#aec61352c5c4ba11cf3b8fc6639f5014f">displayDebugInfo::toggleDebugInfo</a></div><div class="ttdeci">static void toggleDebugInfo()</div><div class="ttdef"><b>Definition:</b> displayDebugInfo.h:435</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -412,9 +399,8 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d7/d6d/classdisplay_debug_info_a05da6d958cb086a874045a14b8ae7afe_icgraph.png" border="0" usemap="#ad7/d6d/classdisplay_debug_info_a05da6d958cb086a874045a14b8ae7afe_icgraph" alt=""/></div>
 <map name="ad7/d6d/classdisplay_debug_info_a05da6d958cb086a874045a14b8ae7afe_icgraph" id="ad7/d6d/classdisplay_debug_info_a05da6d958cb086a874045a14b8ae7afe_icgraph">
-<area shape="rect" title=" " alt="" coords="296,5,459,47"/>
-<area shape="rect" href="../../d7/d6d/classdisplay_debug_info.html#adb8a0a4ea74078dc59551779c6ec5f43" title=" " alt="" coords="104,13,248,39"/>
-<area shape="rect" href="../../df/d0a/main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,13,56,39"/>
+<area shape="rect" title=" " alt="" coords="197,5,360,47"/>
+<area shape="rect" href="../../d7/d6d/classdisplay_debug_info.html#adb8a0a4ea74078dc59551779c6ec5f43" title=" " alt="" coords="5,13,149,39"/>
 </map>
 </div>
 

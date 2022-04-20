@@ -430,8 +430,6 @@ public:
                             }))->
                         addComponent(new LTE::material("res/NameTableMemoryTexture " + std::to_string(i), glm::vec4(0, 0, 0, 1.0f)));
                 });
-
-        // toggleDebugInfo();
     }
 
     static void toggleDebugInfo()

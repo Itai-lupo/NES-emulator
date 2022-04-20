@@ -168,10 +168,10 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   65</span>        {</div>
-<div class="line"><span class="lineno">   66</span> </div>
-<div class="line"><span class="lineno">   67</span>            </div>
-<div class="line"><span class="lineno">   68</span>        }</div>
+<div class="fragment"><div class="line"><span class="lineno">   52</span>        {</div>
+<div class="line"><span class="lineno">   53</span> </div>
+<div class="line"><span class="lineno">   54</span>            </div>
+<div class="line"><span class="lineno">   55</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -197,9 +197,9 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   71</span>        {</div>
-<div class="line"><span class="lineno">   72</span> </div>
-<div class="line"><span class="lineno">   73</span>        }</div>
+<div class="fragment"><div class="line"><span class="lineno">   58</span>        {</div>
+<div class="line"><span class="lineno">   59</span> </div>
+<div class="line"><span class="lineno">   60</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -226,7 +226,7 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   86</span>{}</div>
+<div class="fragment"><div class="line"><span class="lineno">   73</span>{}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -253,15 +253,15 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   77</span>        {</div>
-<div class="line"><span class="lineno">   78</span>            LTE::eventManger::startBuildingEvent()-&gt;</div>
-<div class="line"><span class="lineno">   79</span>                setEntityID(parent-&gt;getId())-&gt;</div>
-<div class="line"><span class="lineno">   80</span>                setEventRoute(<span class="stringliteral">&quot;window render/nes emulator/controller key handler&quot;</span>)-&gt;</div>
-<div class="line"><span class="lineno">   81</span>                setEventCallback(<a class="code hl_function" href="../../d6/df9/classcontroller.html#a243443bea65d7bbad6db74b540f3933c">keyDispatcher</a>)-&gt;</div>
-<div class="line"><span class="lineno">   82</span>                add();</div>
-<div class="line"><span class="lineno">   83</span>                </div>
-<div class="line"><span class="lineno">   84</span> </div>
-<div class="line"><span class="lineno">   85</span>        }</div>
+<div class="fragment"><div class="line"><span class="lineno">   64</span>        {</div>
+<div class="line"><span class="lineno">   65</span>            LTE::eventManger::startBuildingEvent()-&gt;</div>
+<div class="line"><span class="lineno">   66</span>                setEntityID(parent-&gt;getId())-&gt;</div>
+<div class="line"><span class="lineno">   67</span>                setEventRoute(<span class="stringliteral">&quot;window render/nes emulator/controller key handler&quot;</span>)-&gt;</div>
+<div class="line"><span class="lineno">   68</span>                setEventCallback(<a class="code hl_function" href="../../d6/df9/classcontroller.html#a243443bea65d7bbad6db74b540f3933c">keyDispatcher</a>)-&gt;</div>
+<div class="line"><span class="lineno">   69</span>                add();</div>
+<div class="line"><span class="lineno">   70</span>                </div>
+<div class="line"><span class="lineno">   71</span> </div>
+<div class="line"><span class="lineno">   72</span>        }</div>
 <div class="ttc" id="aclasscontroller_html_a243443bea65d7bbad6db74b540f3933c"><div class="ttname"><a href="../../d6/df9/classcontroller.html#a243443bea65d7bbad6db74b540f3933c">controller::keyDispatcher</a></div><div class="ttdeci">static void keyDispatcher(LTE::gameObject *eventEntity, LTE::coreEventData *sendor)</div><div class="ttdef"><b>Definition:</b> controller.h:35</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -300,9 +300,9 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="../../dc/d77/classbus_device.html#ace475b1abcc4375d4723209ed4be17f0">busDevice&lt; uint8_t, uint16_t &gt;</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   89</span>        {</div>
-<div class="line"><span class="lineno">   90</span>            <span class="keywordflow">return</span> addr == 0x4016 || addr == 0x4017;</div>
-<div class="line"><span class="lineno">   91</span>        }</div>
+<div class="fragment"><div class="line"><span class="lineno">   76</span>        {</div>
+<div class="line"><span class="lineno">   77</span>            <span class="keywordflow">return</span> addr == 0x4016 || addr == 0x4017;</div>
+<div class="line"><span class="lineno">   78</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -342,30 +342,17 @@ Here is the call graph for this function:</div>
 <div class="fragment"><div class="line"><span class="lineno">   36</span>        {</div>
 <div class="line"><span class="lineno">   37</span>            <a class="code hl_class" href="../../d6/df9/classcontroller.html">controller</a> *controllerContainer = eventEntity-&gt;getComponent&lt;<a class="code hl_class" href="../../d6/df9/classcontroller.html">controller</a>&gt;();</div>
 <div class="line"><span class="lineno">   38</span> </div>
-<div class="line"><span class="lineno">   39</span>            controllerContainer-&gt;controllerData[0].<a class="code hl_variable" href="../../d6/df9/classcontroller.html#aa5bb86a6d1e4751936addb5286e3e477">A</a>        = sendor-&gt;win-&gt;inputManger-&gt;isKeyPressed(LT_KEY_Q);</div>
-<div class="line"><span class="lineno">   40</span>            controllerContainer-&gt;controllerData[0].<a class="code hl_variable" href="../../d6/df9/classcontroller.html#a7bd7f4305328c291c8428e866999351e">B</a>        = sendor-&gt;win-&gt;inputManger-&gt;isKeyPressed(LT_KEY_E);</div>
+<div class="line"><span class="lineno">   39</span>            controllerContainer-&gt;controllerData[0].<a class="code hl_variable" href="../../d6/df9/classcontroller.html#aa5bb86a6d1e4751936addb5286e3e477">A</a>        = sendor-&gt;win-&gt;inputManger-&gt;isKeyPressed(LT_KEY_Z) || sendor-&gt;win-&gt;inputManger-&gt;isKeyPressed(LT_KEY_A);</div>
+<div class="line"><span class="lineno">   40</span>            controllerContainer-&gt;controllerData[0].<a class="code hl_variable" href="../../d6/df9/classcontroller.html#a7bd7f4305328c291c8428e866999351e">B</a>        = sendor-&gt;win-&gt;inputManger-&gt;isKeyPressed(LT_KEY_X) || sendor-&gt;win-&gt;inputManger-&gt;isKeyPressed(LT_KEY_S);</div>
 <div class="line"><span class="lineno">   41</span>            </div>
-<div class="line"><span class="lineno">   42</span>            controllerContainer-&gt;controllerData[0].<a class="code hl_variable" href="../../d6/df9/classcontroller.html#ac2be6ddba3d3d9556f1dc4b60252be34">select</a>   = sendor-&gt;win-&gt;inputManger-&gt;isKeyPressed(LT_KEY_Z);</div>
-<div class="line"><span class="lineno">   43</span>            controllerContainer-&gt;controllerData[0].<a class="code hl_variable" href="../../d6/df9/classcontroller.html#a976dcc8850d8de37a426b37d1d0754b2">start</a>    = sendor-&gt;win-&gt;inputManger-&gt;isKeyPressed(LT_KEY_X);</div>
+<div class="line"><span class="lineno">   42</span>            controllerContainer-&gt;controllerData[0].<a class="code hl_variable" href="../../d6/df9/classcontroller.html#ac2be6ddba3d3d9556f1dc4b60252be34">select</a>   = sendor-&gt;win-&gt;inputManger-&gt;isKeyPressed(LT_KEY_C) || sendor-&gt;win-&gt;inputManger-&gt;isKeyPressed(LT_KEY_LEFT_SHIFT);</div>
+<div class="line"><span class="lineno">   43</span>            controllerContainer-&gt;controllerData[0].<a class="code hl_variable" href="../../d6/df9/classcontroller.html#a976dcc8850d8de37a426b37d1d0754b2">start</a>    = sendor-&gt;win-&gt;inputManger-&gt;isKeyPressed(LT_KEY_D) || sendor-&gt;win-&gt;inputManger-&gt;isKeyPressed(LT_KEY_ENTER);</div>
 <div class="line"><span class="lineno">   44</span> </div>
-<div class="line"><span class="lineno">   45</span>            controllerContainer-&gt;controllerData[0].<a class="code hl_variable" href="../../d6/df9/classcontroller.html#a30690896db2e84e98232f58e30078a2d">up</a>       = sendor-&gt;win-&gt;inputManger-&gt;isKeyPressed(LT_KEY_W);</div>
-<div class="line"><span class="lineno">   46</span>            controllerContainer-&gt;controllerData[0].<a class="code hl_variable" href="../../d6/df9/classcontroller.html#a8a444738d4776d5f2901a12296d42709">down</a>     = sendor-&gt;win-&gt;inputManger-&gt;isKeyPressed(LT_KEY_S);</div>
-<div class="line"><span class="lineno">   47</span>            controllerContainer-&gt;controllerData[0].<a class="code hl_variable" href="../../d6/df9/classcontroller.html#a740950175920eca07f5b855f101d72ba">left</a>     = sendor-&gt;win-&gt;inputManger-&gt;isKeyPressed(LT_KEY_A);</div>
-<div class="line"><span class="lineno">   48</span>            controllerContainer-&gt;controllerData[0].<a class="code hl_variable" href="../../d6/df9/classcontroller.html#ab8635f0417644a07e533642519d892c7">right</a>    = sendor-&gt;win-&gt;inputManger-&gt;isKeyPressed(LT_KEY_D);</div>
-<div class="line"><span class="lineno">   49</span> </div>
-<div class="line"><span class="lineno">   50</span> </div>
-<div class="line"><span class="lineno">   51</span> </div>
-<div class="line"><span class="lineno">   52</span>            controllerContainer-&gt;controllerData[1].<a class="code hl_variable" href="../../d6/df9/classcontroller.html#aa5bb86a6d1e4751936addb5286e3e477">A</a>        = sendor-&gt;win-&gt;inputManger-&gt;isKeyPressed(LT_KEY_1);</div>
-<div class="line"><span class="lineno">   53</span>            controllerContainer-&gt;controllerData[1].<a class="code hl_variable" href="../../d6/df9/classcontroller.html#a7bd7f4305328c291c8428e866999351e">B</a>        = sendor-&gt;win-&gt;inputManger-&gt;isKeyPressed(LT_KEY_2);</div>
-<div class="line"><span class="lineno">   54</span>            </div>
-<div class="line"><span class="lineno">   55</span>            controllerContainer-&gt;controllerData[1].<a class="code hl_variable" href="../../d6/df9/classcontroller.html#ac2be6ddba3d3d9556f1dc4b60252be34">select</a>   = sendor-&gt;win-&gt;inputManger-&gt;isKeyPressed(LT_KEY_BACKSLASH);</div>
-<div class="line"><span class="lineno">   56</span>            controllerContainer-&gt;controllerData[1].<a class="code hl_variable" href="../../d6/df9/classcontroller.html#a976dcc8850d8de37a426b37d1d0754b2">start</a>    = sendor-&gt;win-&gt;inputManger-&gt;isKeyPressed(LT_KEY_ENTER);</div>
-<div class="line"><span class="lineno">   57</span> </div>
-<div class="line"><span class="lineno">   58</span>            controllerContainer-&gt;controllerData[1].<a class="code hl_variable" href="../../d6/df9/classcontroller.html#a30690896db2e84e98232f58e30078a2d">up</a>       = sendor-&gt;win-&gt;inputManger-&gt;isKeyPressed(LT_KEY_UP);</div>
-<div class="line"><span class="lineno">   59</span>            controllerContainer-&gt;controllerData[1].<a class="code hl_variable" href="../../d6/df9/classcontroller.html#a8a444738d4776d5f2901a12296d42709">down</a>     = sendor-&gt;win-&gt;inputManger-&gt;isKeyPressed(LT_KEY_DOWN);</div>
-<div class="line"><span class="lineno">   60</span>            controllerContainer-&gt;controllerData[1].<a class="code hl_variable" href="../../d6/df9/classcontroller.html#a740950175920eca07f5b855f101d72ba">left</a>     = sendor-&gt;win-&gt;inputManger-&gt;isKeyPressed(LT_KEY_LEFT);</div>
-<div class="line"><span class="lineno">   61</span>            controllerContainer-&gt;controllerData[1].<a class="code hl_variable" href="../../d6/df9/classcontroller.html#ab8635f0417644a07e533642519d892c7">right</a>    = sendor-&gt;win-&gt;inputManger-&gt;isKeyPressed(LT_KEY_RIGHT);</div>
-<div class="line"><span class="lineno">   62</span>        }      </div>
+<div class="line"><span class="lineno">   45</span>            controllerContainer-&gt;controllerData[0].<a class="code hl_variable" href="../../d6/df9/classcontroller.html#a30690896db2e84e98232f58e30078a2d">up</a>       = sendor-&gt;win-&gt;inputManger-&gt;isKeyPressed(LT_KEY_UP);</div>
+<div class="line"><span class="lineno">   46</span>            controllerContainer-&gt;controllerData[0].<a class="code hl_variable" href="../../d6/df9/classcontroller.html#a8a444738d4776d5f2901a12296d42709">down</a>     = sendor-&gt;win-&gt;inputManger-&gt;isKeyPressed(LT_KEY_DOWN);</div>
+<div class="line"><span class="lineno">   47</span>            controllerContainer-&gt;controllerData[0].<a class="code hl_variable" href="../../d6/df9/classcontroller.html#a740950175920eca07f5b855f101d72ba">left</a>     = sendor-&gt;win-&gt;inputManger-&gt;isKeyPressed(LT_KEY_LEFT);</div>
+<div class="line"><span class="lineno">   48</span>            controllerContainer-&gt;controllerData[0].<a class="code hl_variable" href="../../d6/df9/classcontroller.html#ab8635f0417644a07e533642519d892c7">right</a>    = sendor-&gt;win-&gt;inputManger-&gt;isKeyPressed(LT_KEY_RIGHT);</div>
+<div class="line"><span class="lineno">   49</span>        }      </div>
 <div class="ttc" id="aclasscontroller_html"><div class="ttname"><a href="../../d6/df9/classcontroller.html">controller</a></div><div class="ttdef"><b>Definition:</b> controller.h:9</div></div>
 <div class="ttc" id="aclasscontroller_html_a30690896db2e84e98232f58e30078a2d"><div class="ttname"><a href="../../d6/df9/classcontroller.html#a30690896db2e84e98232f58e30078a2d">controller::up</a></div><div class="ttdeci">uint8_t up</div><div class="ttdef"><b>Definition:</b> controller.h:19</div></div>
 <div class="ttc" id="aclasscontroller_html_a740950175920eca07f5b855f101d72ba"><div class="ttname"><a href="../../d6/df9/classcontroller.html#a740950175920eca07f5b855f101d72ba">controller::left</a></div><div class="ttdeci">uint8_t left</div><div class="ttdef"><b>Definition:</b> controller.h:17</div></div>
@@ -422,12 +409,12 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="../../dc/d77/classbus_device.html#a76776dbaa4b844927261fe46ab3b690f">busDevice&lt; uint8_t, uint16_t &gt;</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   94</span>        {</div>
-<div class="line"><span class="lineno">   95</span>            uint8_t data = (controller_state[addr &amp; 0x0001] &amp; 0x80) &gt; 0;</div>
-<div class="line"><span class="lineno">   96</span>            controller_state[addr &amp; 0x0001] &lt;&lt;= 1;</div>
-<div class="line"><span class="lineno">   97</span> </div>
-<div class="line"><span class="lineno">   98</span>            <span class="keywordflow">return</span> data;</div>
-<div class="line"><span class="lineno">   99</span>        }</div>
+<div class="fragment"><div class="line"><span class="lineno">   81</span>        {</div>
+<div class="line"><span class="lineno">   82</span>            uint8_t data = (controller_state[addr &amp; 0x0001] &amp; 0x80) &gt; 0;</div>
+<div class="line"><span class="lineno">   83</span>            controller_state[addr &amp; 0x0001] &lt;&lt;= 1;</div>
+<div class="line"><span class="lineno">   84</span> </div>
+<div class="line"><span class="lineno">   85</span>            <span class="keywordflow">return</span> data;</div>
+<div class="line"><span class="lineno">   86</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -466,9 +453,9 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="../../dc/d77/classbus_device.html#a72c738905ce28059b913090afd049061">busDevice&lt; uint8_t, uint16_t &gt;</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  102</span>        {</div>
-<div class="line"><span class="lineno">  103</span>            controller_state[addr &amp; 0x0001] = controllerData[addr &amp; 0x0001].reg;</div>
-<div class="line"><span class="lineno">  104</span>        }</div>
+<div class="fragment"><div class="line"><span class="lineno">   89</span>        {</div>
+<div class="line"><span class="lineno">   90</span>            controller_state[addr &amp; 0x0001] = controllerData[addr &amp; 0x0001].reg;</div>
+<div class="line"><span class="lineno">   91</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>

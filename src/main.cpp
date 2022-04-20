@@ -17,18 +17,72 @@
 
 #include <thread>
 
-void sysClock(LTE::gameObject *eventEntity, LTE::coreEventData *sendor);
+bool ppuFinsh = false;
+
 
 LTE::entityTaleId id;
-void runCpu(LTE::coreEventData *sendor)
+void runCpu()
 {
-    sendor->route = "cpu cmd/cpu clock/";
+    
+    LTE::coreEventData *sendor = new LTE::coreEventData("cpu cmd/cpu nmi/");
     LTE::gameObject *eventEntity = LTE::entityManger::getEntityById(id);
+
     while (true)
-        sysClock(eventEntity, sendor);
+    {
+        cpu<uint8_t, uint16_t>::clock(eventEntity, sendor);
+
+        if(ppu::nmi)
+        {
+            ppu::nmi = false;
+            sendor->route = "cpu cmd/cpu nmi/";
+            LTE::eventManger::trigerEvent(sendor);
+        }
+
+        while (!ppuFinsh){}        
+        ppuFinsh = false;
+        
+        while (ppu::frameComplete)
+        {
+            std::this_thread::sleep_for(std::chrono::nanoseconds(1));
+        }
+
+    }
+    
 }
 
-std::thread *t;
+void runPpu()
+{
+    LTE::gameObject *eventEntity = LTE::entityManger::getEntityById(id);
+    auto start = std::chrono::high_resolution_clock::now();
+
+    while (true)
+    {
+        ppu::clock(eventEntity);
+        
+        ppuFinsh = true;
+
+        while (ppu::frameComplete)
+        {
+            auto stop = std::chrono::high_resolution_clock::now();
+            auto duration = std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
+
+
+            if(duration >= std::chrono::duration<double>(0.01666666666666667) ){
+                ppu::frameComplete = false;
+                start = std::chrono::high_resolution_clock::now();
+            }
+            else
+            {
+                std::this_thread::sleep_for(std::chrono::nanoseconds(10));
+            }
+
+
+        }
+    }
+}
+
+std::thread *t1;
+std::thread *t2;
 void keyDispatcher(LTE::gameObject *eventEntity, LTE::coreEventData *sendor)
 {
     LTE::KeyData *eventData = static_cast<LTE::KeyData *>(sendor);
@@ -43,7 +97,6 @@ void keyDispatcher(LTE::gameObject *eventEntity, LTE::coreEventData *sendor)
 
     if(eventData->key == LT_KEY_F2)
     {
-        t = new std::thread(runCpu, sendor);
     }
     
 
@@ -94,19 +147,6 @@ unsigned int tileIndices[6] =
     2,
 };
 
-void sysClock(LTE::gameObject *eventEntity, LTE::coreEventData *sendor)
-{
-    ppu::clock(eventEntity, sendor);
-    cpu<uint8_t, uint16_t>::clock(eventEntity, sendor);
-
-    if(ppu::nmi)
-    {
-        ppu::nmi = false;
-        sendor->route = "cpu cmd/cpu nmi/";
-        LTE::eventManger::trigerEvent(sendor);
-    }
-}
-
 void initEmulationSystem()
 {
 
@@ -135,7 +175,7 @@ void initEmulationSystem()
         {
             b->setObjectName("system data")->
                 setWindowId(winId)->
-                setObjectTransform({{-232.0f / 256.0f * 2.0f, -1, 0}, {0, 0, 0}, {232.0f / 256.0f * 2.0f, 2, 0}})->
+                setObjectTransform({{-1.066666666666667, -1, 0}, {0, 0, 0}, {1.066666666666667 * 2.0f, 2, 0}})->
                 addComponent(sysBus)->
                 addComponent(p)->
                 addComponent(c)->
@@ -153,9 +193,6 @@ void initEmulationSystem()
 
     cpu<uint8_t, uint16_t>::init(id);
     ppu::init(id);
-    LTE::eventManger::startBuildingEvent()->setEntityID(id)->setEventRoute("cpu cmd/cpu clock/system")->setEventCallback(sysClock)->add();
-
-
 }
 
 void loadCartageAndResetCpu(LTE::gameObject *eventEntity, LTE::coreEventData *sendor)
@@ -178,12 +215,9 @@ int main()
 {
     LTE::app::init();
     
-    winId =  LTE::windowManger::addWindow([](LTE::windowBuilder *b){ b->setTitle("nes emulator")->useImGui();});
+    winId =  LTE::windowManger::addWindow([](LTE::windowBuilder *b){ b->setTitle("nes emulator")->useImGui()->setWidth(256 * 4)->setHeight(240 * 4);});
     initEmulationSystem();
-
     
-    displayDebugInfo::init(winId, id);
-
     LTE::eventManger::startBuildingEvent()->
         setEntityID(id)->
         setEventRoute("Key pressed/cpu keyDispatcher")->
@@ -197,11 +231,9 @@ int main()
         setEventRoute("load game/load cartage")->
         setEventCallback(loadCartageAndResetCpu)->add();
 
+    t1 = new std::thread(runCpu);
+    t2 = new std::thread(runPpu);
     gamesMenu::init(winId, cart);
-
-
-
-
  
     LTE::eventManger::startBuildingEvent()->
         setEventRoute("Window close/close app")->

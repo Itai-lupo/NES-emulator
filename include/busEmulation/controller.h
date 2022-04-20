@@ -36,29 +36,16 @@ class controller: public busDevice<uint8_t, uint16_t>, public LTE::component
         {
             controller *controllerContainer = eventEntity->getComponent<controller>();
 
-            controllerContainer->controllerData[0].A        = sendor->win->inputManger->isKeyPressed(LT_KEY_Q);
-            controllerContainer->controllerData[0].B        = sendor->win->inputManger->isKeyPressed(LT_KEY_E);
+            controllerContainer->controllerData[0].A        = sendor->win->inputManger->isKeyPressed(LT_KEY_Z) || sendor->win->inputManger->isKeyPressed(LT_KEY_A);
+            controllerContainer->controllerData[0].B        = sendor->win->inputManger->isKeyPressed(LT_KEY_X) || sendor->win->inputManger->isKeyPressed(LT_KEY_S);
             
-            controllerContainer->controllerData[0].select   = sendor->win->inputManger->isKeyPressed(LT_KEY_Z);
-            controllerContainer->controllerData[0].start    = sendor->win->inputManger->isKeyPressed(LT_KEY_X);
+            controllerContainer->controllerData[0].select   = sendor->win->inputManger->isKeyPressed(LT_KEY_C) || sendor->win->inputManger->isKeyPressed(LT_KEY_LEFT_SHIFT);
+            controllerContainer->controllerData[0].start    = sendor->win->inputManger->isKeyPressed(LT_KEY_D) || sendor->win->inputManger->isKeyPressed(LT_KEY_ENTER);
 
-            controllerContainer->controllerData[0].up       = sendor->win->inputManger->isKeyPressed(LT_KEY_W);
-            controllerContainer->controllerData[0].down     = sendor->win->inputManger->isKeyPressed(LT_KEY_S);
-            controllerContainer->controllerData[0].left     = sendor->win->inputManger->isKeyPressed(LT_KEY_A);
-            controllerContainer->controllerData[0].right    = sendor->win->inputManger->isKeyPressed(LT_KEY_D);
-
-
-
-            controllerContainer->controllerData[1].A        = sendor->win->inputManger->isKeyPressed(LT_KEY_1);
-            controllerContainer->controllerData[1].B        = sendor->win->inputManger->isKeyPressed(LT_KEY_2);
-            
-            controllerContainer->controllerData[1].select   = sendor->win->inputManger->isKeyPressed(LT_KEY_BACKSLASH);
-            controllerContainer->controllerData[1].start    = sendor->win->inputManger->isKeyPressed(LT_KEY_ENTER);
-
-            controllerContainer->controllerData[1].up       = sendor->win->inputManger->isKeyPressed(LT_KEY_UP);
-            controllerContainer->controllerData[1].down     = sendor->win->inputManger->isKeyPressed(LT_KEY_DOWN);
-            controllerContainer->controllerData[1].left     = sendor->win->inputManger->isKeyPressed(LT_KEY_LEFT);
-            controllerContainer->controllerData[1].right    = sendor->win->inputManger->isKeyPressed(LT_KEY_RIGHT);
+            controllerContainer->controllerData[0].up       = sendor->win->inputManger->isKeyPressed(LT_KEY_UP);
+            controllerContainer->controllerData[0].down     = sendor->win->inputManger->isKeyPressed(LT_KEY_DOWN);
+            controllerContainer->controllerData[0].left     = sendor->win->inputManger->isKeyPressed(LT_KEY_LEFT);
+            controllerContainer->controllerData[0].right    = sendor->win->inputManger->isKeyPressed(LT_KEY_RIGHT);
         }      
 
         controller()

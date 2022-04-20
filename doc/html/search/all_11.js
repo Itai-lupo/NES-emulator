@@ -15,14 +15,15 @@ var searchData=
   ['ppu2c02_12',['ppu2c02',['../d2/deb/classppu2c02.html#a5dc18f6fc3e11cc25c5f6938eb85620a',1,'ppu2c02::ppu2c02()'],['../d2/deb/classppu2c02.html',1,'ppu2c02']]],
   ['ppu_5fdata_5fbuffer_13',['ppu_data_buffer',['../d2/deb/classppu2c02.html#ac8ad0294b0613d45f0c14d0c2034b2a9',1,'ppu2c02']]],
   ['ppubus_14',['ppuBus',['../d2/deb/classppu2c02.html#aa167427b0acc186c0922b7a9494e3734',1,'ppu2c02']]],
-  ['ppubuscartridge_15',['ppuBusCartridge',['../da/de8/classppu_bus_cartridge.html',1,'ppuBusCartridge'],['../da/de8/classppu_bus_cartridge.html#a051a75d3543480daa9bcd7422ce99aeb',1,'ppuBusCartridge::ppuBusCartridge()']]],
+  ['ppubuscartridge_15',['ppuBusCartridge',['../da/de8/classppu_bus_cartridge.html#a051a75d3543480daa9bcd7422ce99aeb',1,'ppuBusCartridge::ppuBusCartridge()'],['../da/de8/classppu_bus_cartridge.html',1,'ppuBusCartridge']]],
   ['ppubuscartridge_2eh_16',['ppuBusCartridge.h',['../df/d4d/ppu_bus_cartridge_8h.html',1,'']]],
   ['ppuctrl_17',['PPUCTRL',['../df/d5b/unionppu2c02_1_1_p_p_u_c_t_r_l.html',1,'ppu2c02']]],
   ['ppudata_18',['ppuData',['../d2/deb/classppu2c02.html#a67ee50859ccedb960e8305c4934f0ba3',1,'ppu2c02']]],
-  ['prg_5fram_5fsize_19',['prg_ram_size',['../dc/d02/struct_n_e_s_header.html#a3a27ac45ada7e86481bb97897a42f61e',1,'NESHeader']]],
-  ['prg_5from_5fchunks_20',['prg_rom_chunks',['../dc/d02/struct_n_e_s_header.html#a7478f9faea2b35201bd77127633dd226',1,'NESHeader']]],
-  ['prgbanks_21',['prgBanks',['../d6/d32/classmapper.html#a64873a38e7b1203f68a40ba47a3ed8a0',1,'mapper::prgBanks()'],['../d8/d1f/structmappers_data.html#ad32d9ee60696e5114eef9f75a7fb8234',1,'mappersData::prgBanks()']]],
-  ['printdata_2ecpp_22',['printData.cpp',['../d9/d07/print_data_8cpp.html',1,'']]],
-  ['priority_23',['priority',['../d7/de8/structppu2c02_1_1sprite_data.html#ad1b9dd35a2987f6f52972aa4f8d0f22f',1,'ppu2c02::spriteData']]],
-  ['pushdevice_24',['pushDevice',['../d0/d88/classbus.html#a48c90aeac455d34c22da64f98c01bba5',1,'bus']]]
+  ['ppufinsh_19',['ppuFinsh',['../df/d0a/main_8cpp.html#ad28902578239c756f22f983054066a8b',1,'main.cpp']]],
+  ['prg_5fram_5fsize_20',['prg_ram_size',['../dc/d02/struct_n_e_s_header.html#a3a27ac45ada7e86481bb97897a42f61e',1,'NESHeader']]],
+  ['prg_5from_5fchunks_21',['prg_rom_chunks',['../dc/d02/struct_n_e_s_header.html#a7478f9faea2b35201bd77127633dd226',1,'NESHeader']]],
+  ['prgbanks_22',['prgBanks',['../d6/d32/classmapper.html#a64873a38e7b1203f68a40ba47a3ed8a0',1,'mapper::prgBanks()'],['../d8/d1f/structmappers_data.html#ad32d9ee60696e5114eef9f75a7fb8234',1,'mappersData::prgBanks()']]],
+  ['printdata_2ecpp_23',['printData.cpp',['../d9/d07/print_data_8cpp.html',1,'']]],
+  ['priority_24',['priority',['../d7/de8/structppu2c02_1_1sprite_data.html#ad1b9dd35a2987f6f52972aa4f8d0f22f',1,'ppu2c02::spriteData']]],
+  ['pushdevice_25',['pushDevice',['../d0/d88/classbus.html#a48c90aeac455d34c22da64f98c01bba5',1,'bus']]]
 ];

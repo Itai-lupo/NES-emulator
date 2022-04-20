@@ -6,5 +6,6 @@ var searchData=
   ['readprgmemory_3',['readPRGMemory',['../d2/dd7/classcartridge.html#a8e0fe37a8b6ec718d06914a5ae640ddd',1,'cartridge::readPRGMemory()'],['../d5/df4/classmapper__000.html#afc95e041b804abaa091bcaa96ee11075',1,'mapper_000::readPRGMemory()'],['../d6/d32/classmapper.html#a53f46a12a4a0835aada2991b7925d3ac',1,'mapper::readPRGMemory()']]],
   ['reset_4',['reset',['../de/d33/classcpu.html#a97745a7f67189c0ace83e404c2345ba1',1,'cpu::reset()'],['../d2/deb/classppu2c02.html#a1b3aa18997f18dd6c4c1db3aad84a65c',1,'ppu2c02::reset()']]],
   ['romfilenotfoundexception_5',['romFileNotFoundException',['../dc/d96/classrom_file_not_found_exception.html#a5f4583cffa992b56a4f42040dabbb8e5',1,'romFileNotFoundException']]],
-  ['runcpu_6',['runCpu',['../df/d0a/main_8cpp.html#ab59f1b1459454092942fcda083513be9',1,'main.cpp']]]
+  ['runcpu_6',['runCpu',['../df/d0a/main_8cpp.html#aaeabc40a029089be2009eca1ccfc9e63',1,'main.cpp']]],
+  ['runppu_7',['runPpu',['../df/d0a/main_8cpp.html#acffc3f0c98d55474cfb5caafe5e176af',1,'main.cpp']]]
 ];

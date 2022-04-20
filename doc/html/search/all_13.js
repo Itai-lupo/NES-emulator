@@ -19,6 +19,5 @@ var searchData=
   ['status_16',['status',['../d9/dbe/classcpu6502.html#a3f2a36c72eb1d2e08f999ed416709d92',1,'cpu6502::status()'],['../d2/deb/classppu2c02.html#ad0da07ad1213767314d41a02c825d917',1,'ppu2c02::status()']]],
   ['statusdata_17',['statusData',['../d9/dbe/classcpu6502.html#a71b68863d6facf1c664286a43e08cb84',1,'cpu6502']]],
   ['stkp_18',['stkp',['../d9/dbe/classcpu6502.html#ae7c07e603fef0455bbda5db0d37a8b73',1,'cpu6502']]],
-  ['sysbus_19',['sysBus',['../de/d21/classbus_test.html#ac34a488b3ae6db6b2090b5cd555179f0',1,'busTest::sysBus()'],['../d8/d8f/classcartridge_emualtion_test.html#a958c2da6a79d1003b289e8b4c21dd141',1,'cartridgeEmualtionTest::sysBus()']]],
-  ['sysclock_20',['sysClock',['../df/d0a/main_8cpp.html#a6d327e023ed1dae058f86d827940d7a6',1,'main.cpp']]]
+  ['sysbus_19',['sysBus',['../de/d21/classbus_test.html#ac34a488b3ae6db6b2090b5cd555179f0',1,'busTest::sysBus()'],['../d8/d8f/classcartridge_emualtion_test.html#a958c2da6a79d1003b289e8b4c21dd141',1,'cartridgeEmualtionTest::sysBus()']]]
 ];
