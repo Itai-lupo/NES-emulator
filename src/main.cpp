@@ -217,6 +217,7 @@ int main()
     
     winId =  LTE::windowManger::addWindow([](LTE::windowBuilder *b){ b->setTitle("nes emulator")->useImGui()->setWidth(256 * 4)->setHeight(240 * 4);});
     initEmulationSystem();
+    displayDebugInfo::init(winId, id);
     
     LTE::eventManger::startBuildingEvent()->
         setEntityID(id)->
@@ -224,12 +225,12 @@ int main()
         setEventCallback(keyDispatcher)->
         add();
 
-    LTE::eventManger::addCoustemEventsRoute("load game/");
 
     LTE::eventManger::startBuildingEvent()->
         setEntityID(id)->
         setEventRoute("load game/load cartage")->
         setEventCallback(loadCartageAndResetCpu)->add();
+
 
     t1 = new std::thread(runCpu);
     t2 = new std::thread(runPpu);

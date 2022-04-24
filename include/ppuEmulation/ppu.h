@@ -394,12 +394,14 @@ class ppu
                     else
                     {
                         spritePatternAddrLo = 
-                            ( (ppuData->spriteScanline[i].tileId & 0x01) << 12)  |
+                            ((ppuData->spriteScanline[i].tileId & 0x01) << 12)  |
                             ( 
-                                (ppuData->spriteScanline[i].tileId & 0xFE + 
-                                ((ppuData->scanline - ppuData->spriteScanline[i].y < 8) ^ 
-                                !(ppuData->spriteScanline[i].flipVertically))) 
-                                << 4) |
+                                (ppuData->spriteScanline[i].tileId & 0xFE) + 
+                                (
+                                    1 - ppuData->spriteScanline[i].flipVertically - ((ppuData->scanline - ppuData->spriteScanline[i].y ) < 8)  
+                                    // 
+                                )
+                            ) << 4 |
                             ( 
                                 (ppuData->spriteScanline[i].flipVertically * 7) + 
                                 (1 - ppuData->spriteScanline[i].flipVertically * 2) * 

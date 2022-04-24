@@ -9,8 +9,11 @@ var searchData=
   ['_7edma_6',['~DMA',['../d4/dff/class_d_m_a.html#a2ba95288fb099f546a38c90a9fa61b36',1,'DMA']]],
   ['_7emapper_7',['~mapper',['../d6/d32/classmapper.html#abfd1c02614dcebd9e0ca06b3b3f1582b',1,'mapper']]],
   ['_7emapper_5f000_8',['~mapper_000',['../d5/df4/classmapper__000.html#a2ece950e6fe57239ca71f40fab960bc6',1,'mapper_000']]],
-  ['_7eppu2c02_9',['~ppu2c02',['../d2/deb/classppu2c02.html#aa968000f5565b657285fc1d6ed3303ec',1,'ppu2c02']]],
-  ['_7eram_10',['~ram',['../dd/d28/classram.html#a342f5f90906a9e41a2687214bc13bc5d',1,'ram']]],
-  ['_7eromfilenotfoundexception_11',['~romFileNotFoundException',['../dc/d96/classrom_file_not_found_exception.html#a15c205a078488f539eb1199d034a057d',1,'romFileNotFoundException']]],
-  ['_7etestram_12',['~testRam',['../d1/d46/classtest_ram.html#a90c49c15d24866afea1366032238ae48',1,'testRam']]]
+  ['_7emapper_5f001_9',['~mapper_001',['../dc/dfe/classmapper__001.html#a7a94f8d31c143a0b89980f074a19abe3',1,'mapper_001']]],
+  ['_7emapper_5f002_10',['~mapper_002',['../d6/d57/classmapper__002.html#a4ccf0d881d4fdc7233ce34ea7afbefee',1,'mapper_002']]],
+  ['_7emapper_5f004_11',['~mapper_004',['../d9/d31/classmapper__004.html#a5528cf58bda1be5b9aeaad498c4cf476',1,'mapper_004']]],
+  ['_7eppu2c02_12',['~ppu2c02',['../d2/deb/classppu2c02.html#aa968000f5565b657285fc1d6ed3303ec',1,'ppu2c02']]],
+  ['_7eram_13',['~ram',['../dd/d28/classram.html#a342f5f90906a9e41a2687214bc13bc5d',1,'ram']]],
+  ['_7eromfilenotfoundexception_14',['~romFileNotFoundException',['../dc/d96/classrom_file_not_found_exception.html#a15c205a078488f539eb1199d034a057d',1,'romFileNotFoundException']]],
+  ['_7etestram_15',['~testRam',['../d1/d46/classtest_ram.html#a90c49c15d24866afea1366032238ae48',1,'testRam']]]
 ];

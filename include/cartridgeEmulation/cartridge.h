@@ -23,13 +23,6 @@ struct NESHeader
     char unused[5];
 };
 
-enum MIRROR
-{
-    HORIZONTAL,
-    VERTICAL,
-    ONESCREEN_LO,
-    ONESCREEN_HI,
-};
 
 class cartridge
 {
@@ -46,19 +39,23 @@ class cartridge
         std::vector<uint8_t> PRGMemory;
         std::vector<uint8_t> CHRMemory;
 
+        MIRROR mirror = HORIZONTAL;
+
     public:
         cartridge(){}
         virtual ~cartridge() = default;
 
         void load(const std::string& romPath);
+        void unload();
 
-        uint8_t readPRGMemory(uint16_t addr);
-        uint8_t readCHRMemory(uint16_t addr);
+        uint8_t readPRGMemory(uint32_t addr);
+        uint8_t readCHRMemory(uint32_t addr);
 
-        void writePRGMemory(uint16_t addr, uint8_t data);
-        void writeCHRMemory(uint16_t addr, uint8_t data);
+        void writePRGMemory(uint32_t addr, uint8_t data);
+        void writeCHRMemory(uint32_t addr, uint8_t data);
 
-        MIRROR mirror = HORIZONTAL;
+        MIRROR getMirror();
+
     private:
         std::ifstream ifs;
         uint8_t fileType;

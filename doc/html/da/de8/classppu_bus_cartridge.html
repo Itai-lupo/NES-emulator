@@ -115,7 +115,7 @@ Collaboration diagram for ppuBusCartridge:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a051a75d3543480daa9bcd7422ce99aeb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/de8/classppu_bus_cartridge.html#a051a75d3543480daa9bcd7422ce99aeb">ppuBusCartridge</a> (<a class="el" href="../../d2/dd7/classcartridge.html">cartridge</a> *cart)</td></tr>
 <tr class="separator:a051a75d3543480daa9bcd7422ce99aeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9dcc9658ba9b6d6ec08ce985414cfdba"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/da5/cartridge_8h.html#af32b022d54641d350cd8d0ef200c79fa">MIRROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/de8/classppu_bus_cartridge.html#a9dcc9658ba9b6d6ec08ce985414cfdba">getMirror</a> ()</td></tr>
+<tr class="memitem:a9dcc9658ba9b6d6ec08ce985414cfdba"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/df7/mapper_8h.html#af32b022d54641d350cd8d0ef200c79fa">MIRROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/de8/classppu_bus_cartridge.html#a9dcc9658ba9b6d6ec08ce985414cfdba">getMirror</a> ()</td></tr>
 <tr class="separator:a9dcc9658ba9b6d6ec08ce985414cfdba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8dfc2ee929f65cdd48dac8de209299c9"><td class="memItemLeft" align="right" valign="top">virtual uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/de8/classppu_bus_cartridge.html#a8dfc2ee929f65cdd48dac8de209299c9">read</a> (uint16_t addr, bool bReadOnly=false) override</td></tr>
 <tr class="separator:a8dfc2ee929f65cdd48dac8de209299c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -173,7 +173,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d6/da5/cartridge_8h.html#af32b022d54641d350cd8d0ef200c79fa">MIRROR</a> ppuBusCartridge::getMirror </td>
+          <td class="memname"><a class="el" href="../../d6/df7/mapper_8h.html#af32b022d54641d350cd8d0ef200c79fa">MIRROR</a> ppuBusCartridge::getMirror </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -186,10 +186,20 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <div class="fragment"><div class="line"><span class="lineno">   13</span>        {</div>
-<div class="line"><span class="lineno">   14</span>            <span class="keywordflow">return</span> cart-&gt;<a class="code hl_variable" href="../../d2/dd7/classcartridge.html#a9b69569e838b3936ba881ca96641a520">mirror</a>;</div>
+<div class="line"><span class="lineno">   14</span>            <span class="keywordflow">return</span> cart-&gt;<a class="code hl_function" href="../../d2/dd7/classcartridge.html#a25893cbff0b629e683029cc0b64b7bf1">getMirror</a>();</div>
 <div class="line"><span class="lineno">   15</span>        }</div>
-<div class="ttc" id="aclasscartridge_html_a9b69569e838b3936ba881ca96641a520"><div class="ttname"><a href="../../d2/dd7/classcartridge.html#a9b69569e838b3936ba881ca96641a520">cartridge::mirror</a></div><div class="ttdeci">MIRROR mirror</div><div class="ttdef"><b>Definition:</b> cartridge.h:61</div></div>
+<div class="ttc" id="aclasscartridge_html_a25893cbff0b629e683029cc0b64b7bf1"><div class="ttname"><a href="../../d2/dd7/classcartridge.html#a25893cbff0b629e683029cc0b64b7bf1">cartridge::getMirror</a></div><div class="ttdeci">MIRROR getMirror()</div><div class="ttdef"><b>Definition:</b> cartridge.cpp:112</div></div>
 </div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../da/de8/classppu_bus_cartridge_a9dcc9658ba9b6d6ec08ce985414cfdba_cgraph.png" border="0" usemap="#ada/de8/classppu_bus_cartridge_a9dcc9658ba9b6d6ec08ce985414cfdba_cgraph" alt=""/></div>
+<map name="ada/de8/classppu_bus_cartridge_a9dcc9658ba9b6d6ec08ce985414cfdba_cgraph" id="ada/de8/classppu_bus_cartridge_a9dcc9658ba9b6d6ec08ce985414cfdba_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,180,32"/>
+<area shape="rect" href="../../d2/dd7/classcartridge.html#a25893cbff0b629e683029cc0b64b7bf1" title=" " alt="" coords="228,5,357,32"/>
+<area shape="rect" href="../../d6/d32/classmapper.html#ac95663290d78d28421e62cb8838939bd" title=" " alt="" coords="405,5,528,32"/>
+</map>
+</div>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../da/de8/classppu_bus_cartridge_a9dcc9658ba9b6d6ec08ce985414cfdba_icgraph.png" border="0" usemap="#ada/de8/classppu_bus_cartridge_a9dcc9658ba9b6d6ec08ce985414cfdba_icgraph" alt=""/></div>
@@ -269,17 +279,17 @@ Here is the caller graph for this function:</div>
 
 <p>Implements <a class="el" href="../../dc/d77/classbus_device.html#a76776dbaa4b844927261fe46ab3b690f">busDevice&lt; uint8_t, uint16_t &gt;</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   18</span>        {</div>
-<div class="line"><span class="lineno">   19</span>            <span class="keywordflow">return</span> cart-&gt;<a class="code hl_function" href="../../d2/dd7/classcartridge.html#a5240e3db5c5ca035647e79146bcfe161">readCHRMemory</a>(addr);</div>
+<div class="line"><span class="lineno">   19</span>            <span class="keywordflow">return</span> cart-&gt;<a class="code hl_function" href="../../d2/dd7/classcartridge.html#aead156cf2889f9f919f0ae15e0370906">readCHRMemory</a>(addr);</div>
 <div class="line"><span class="lineno">   20</span>        }</div>
-<div class="ttc" id="aclasscartridge_html_a5240e3db5c5ca035647e79146bcfe161"><div class="ttname"><a href="../../d2/dd7/classcartridge.html#a5240e3db5c5ca035647e79146bcfe161">cartridge::readCHRMemory</a></div><div class="ttdeci">uint8_t readCHRMemory(uint16_t addr)</div><div class="ttdef"><b>Definition:</b> cartridge.cpp:26</div></div>
+<div class="ttc" id="aclasscartridge_html_aead156cf2889f9f919f0ae15e0370906"><div class="ttname"><a href="../../d2/dd7/classcartridge.html#aead156cf2889f9f919f0ae15e0370906">cartridge::readCHRMemory</a></div><div class="ttdeci">uint8_t readCHRMemory(uint32_t addr)</div><div class="ttdef"><b>Definition:</b> cartridge.cpp:33</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../da/de8/classppu_bus_cartridge_a8dfc2ee929f65cdd48dac8de209299c9_cgraph.png" border="0" usemap="#ada/de8/classppu_bus_cartridge_a8dfc2ee929f65cdd48dac8de209299c9_cgraph" alt=""/></div>
 <map name="ada/de8/classppu_bus_cartridge_a8dfc2ee929f65cdd48dac8de209299c9_cgraph" id="ada/de8/classppu_bus_cartridge_a8dfc2ee929f65cdd48dac8de209299c9_cgraph">
 <area shape="rect" title=" " alt="" coords="5,5,155,32"/>
-<area shape="rect" href="../../d2/dd7/classcartridge.html#a5240e3db5c5ca035647e79146bcfe161" title=" " alt="" coords="203,5,380,32"/>
-<area shape="rect" href="../../d6/d32/classmapper.html#ad5d71134f5d84f2a1bb3f3861ccbb45d" title=" " alt="" coords="428,5,599,32"/>
+<area shape="rect" href="../../d2/dd7/classcartridge.html#aead156cf2889f9f919f0ae15e0370906" title=" " alt="" coords="203,5,380,32"/>
+<area shape="rect" href="../../d6/d32/classmapper.html#a80945028fd439e0938db6cd97689a219" title=" " alt="" coords="428,5,599,32"/>
 </map>
 </div>
 
@@ -321,17 +331,17 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="../../dc/d77/classbus_device.html#a72c738905ce28059b913090afd049061">busDevice&lt; uint8_t, uint16_t &gt;</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   23</span>        {</div>
-<div class="line"><span class="lineno">   24</span>            cart-&gt;<a class="code hl_function" href="../../d2/dd7/classcartridge.html#ab6c3a06eb5ecd22980b298a500ddf8fa">writeCHRMemory</a>(addr, data);</div>
+<div class="line"><span class="lineno">   24</span>            cart-&gt;<a class="code hl_function" href="../../d2/dd7/classcartridge.html#aefa28620764198e7cdb66967d3413152">writeCHRMemory</a>(addr, data);</div>
 <div class="line"><span class="lineno">   25</span>        }</div>
-<div class="ttc" id="aclasscartridge_html_ab6c3a06eb5ecd22980b298a500ddf8fa"><div class="ttname"><a href="../../d2/dd7/classcartridge.html#ab6c3a06eb5ecd22980b298a500ddf8fa">cartridge::writeCHRMemory</a></div><div class="ttdeci">void writeCHRMemory(uint16_t addr, uint8_t data)</div><div class="ttdef"><b>Definition:</b> cartridge.cpp:39</div></div>
+<div class="ttc" id="aclasscartridge_html_aefa28620764198e7cdb66967d3413152"><div class="ttname"><a href="../../d2/dd7/classcartridge.html#aefa28620764198e7cdb66967d3413152">cartridge::writeCHRMemory</a></div><div class="ttdeci">void writeCHRMemory(uint32_t addr, uint8_t data)</div><div class="ttdef"><b>Definition:</b> cartridge.cpp:47</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../da/de8/classppu_bus_cartridge_aa23aefa0b775e0271d7ba62fccb70bb0_cgraph.png" border="0" usemap="#ada/de8/classppu_bus_cartridge_aa23aefa0b775e0271d7ba62fccb70bb0_cgraph" alt=""/></div>
 <map name="ada/de8/classppu_bus_cartridge_aa23aefa0b775e0271d7ba62fccb70bb0_cgraph" id="ada/de8/classppu_bus_cartridge_aa23aefa0b775e0271d7ba62fccb70bb0_cgraph">
 <area shape="rect" title=" " alt="" coords="5,5,157,32"/>
-<area shape="rect" href="../../d2/dd7/classcartridge.html#ab6c3a06eb5ecd22980b298a500ddf8fa" title=" " alt="" coords="205,5,385,32"/>
-<area shape="rect" href="../../d6/d32/classmapper.html#a20ee8500148153ee633b051ab47c9d91" title=" " alt="" coords="433,5,607,32"/>
+<area shape="rect" href="../../d2/dd7/classcartridge.html#aefa28620764198e7cdb66967d3413152" title=" " alt="" coords="205,5,385,32"/>
+<area shape="rect" href="../../d6/d32/classmapper.html#a7026475cd3428df9f7cb34c5cf82a4fc" title=" " alt="" coords="433,5,607,32"/>
 </map>
 </div>
 

@@ -11,7 +11,7 @@ class ppuBusCartridge: public busDevice<uint8_t, uint16_t>
 
         MIRROR getMirror()
         {
-            return cart->mirror;
+            return cart->getMirror();
         }
 
         virtual uint8_t read(uint16_t addr, bool bReadOnly = false) override

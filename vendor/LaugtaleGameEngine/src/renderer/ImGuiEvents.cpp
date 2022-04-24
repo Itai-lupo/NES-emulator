@@ -111,7 +111,7 @@ namespace LTE
 		io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;
 
         ImGui_ImplGlfw_InitForOpenGL((GLFWwindow*)windowId, true);
-        ImGui_ImplOpenGL3_Init("#version 410");
+        ImGui_ImplOpenGL3_Init("#version 460");
 
         LAUGHTALE_ENGINR_LOG_INFO("imgui init successfully");
     }

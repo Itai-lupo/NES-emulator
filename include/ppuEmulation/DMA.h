@@ -49,7 +49,7 @@ class DMA: public busDevice<uint8_t, uint16_t>, public LTE::component
 
         virtual uint8_t read(uint16_t addr, bool bReadOnly = false) override
         {
-
+            
         }
 
         virtual void write(uint16_t addr, uint8_t data) override

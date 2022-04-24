@@ -241,7 +241,7 @@ Public Attributes</h2></td></tr>
 <p>Implements <a class="el" href="../../dc/d77/classbus_device.html#a76776dbaa4b844927261fe46ab3b690f">busDevice&lt; uint8_t, uint16_t &gt;</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   30</span>        {</div>
 <div class="line"><span class="lineno">   31</span>            addr &amp;= 0x0FFF;</div>
-<div class="line"><span class="lineno">   32</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../da/d1c/classname_table.html#a6241ac020e613f01e0f85dc6daf2d1d5">cart</a>-&gt;<a class="code hl_function" href="../../da/de8/classppu_bus_cartridge.html#a9dcc9658ba9b6d6ec08ce985414cfdba">getMirror</a>() == <a class="code hl_enumvalue" href="../../d6/da5/cartridge_8h.html#af32b022d54641d350cd8d0ef200c79faa1a88641fcd39f2ed3e58a18526e97138">MIRROR::VERTICAL</a>)</div>
+<div class="line"><span class="lineno">   32</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../da/d1c/classname_table.html#a6241ac020e613f01e0f85dc6daf2d1d5">cart</a>-&gt;<a class="code hl_function" href="../../da/de8/classppu_bus_cartridge.html#a9dcc9658ba9b6d6ec08ce985414cfdba">getMirror</a>() == <a class="code hl_enumvalue" href="../../d6/df7/mapper_8h.html#af32b022d54641d350cd8d0ef200c79faa1a88641fcd39f2ed3e58a18526e97138">MIRROR::VERTICAL</a>)</div>
 <div class="line"><span class="lineno">   33</span>            {</div>
 <div class="line"><span class="lineno">   34</span>                <span class="comment">// Vertical</span></div>
 <div class="line"><span class="lineno">   35</span>                <span class="keywordflow">if</span> (addr &gt;= 0x0000 &amp;&amp; addr &lt;= 0x03FF)</div>
@@ -253,7 +253,7 @@ Public Attributes</h2></td></tr>
 <div class="line"><span class="lineno">   41</span>                <span class="keywordflow">if</span> (addr &gt;= 0x0C00 &amp;&amp; addr &lt;= 0x0FFF)</div>
 <div class="line"><span class="lineno">   42</span>                    <span class="keywordflow">return</span> tableData[1][addr &amp; 0x03FF];</div>
 <div class="line"><span class="lineno">   43</span>            }</div>
-<div class="line"><span class="lineno">   44</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../da/d1c/classname_table.html#a6241ac020e613f01e0f85dc6daf2d1d5">cart</a>-&gt;<a class="code hl_function" href="../../da/de8/classppu_bus_cartridge.html#a9dcc9658ba9b6d6ec08ce985414cfdba">getMirror</a>() == <a class="code hl_enumvalue" href="../../d6/da5/cartridge_8h.html#af32b022d54641d350cd8d0ef200c79faa4dd51ad73508d6fc83a502966779e48e">MIRROR::HORIZONTAL</a>)</div>
+<div class="line"><span class="lineno">   44</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../da/d1c/classname_table.html#a6241ac020e613f01e0f85dc6daf2d1d5">cart</a>-&gt;<a class="code hl_function" href="../../da/de8/classppu_bus_cartridge.html#a9dcc9658ba9b6d6ec08ce985414cfdba">getMirror</a>() == <a class="code hl_enumvalue" href="../../d6/df7/mapper_8h.html#af32b022d54641d350cd8d0ef200c79faa4dd51ad73508d6fc83a502966779e48e">MIRROR::HORIZONTAL</a>)</div>
 <div class="line"><span class="lineno">   45</span>            {</div>
 <div class="line"><span class="lineno">   46</span>                <span class="comment">// Horizontal</span></div>
 <div class="line"><span class="lineno">   47</span>                <span class="keywordflow">if</span> (addr &gt;= 0x0000 &amp;&amp; addr &lt;= 0x03FF)</div>
@@ -267,10 +267,10 @@ Public Attributes</h2></td></tr>
 <div class="line"><span class="lineno">   55</span>            }</div>
 <div class="line"><span class="lineno">   56</span>            <span class="keywordflow">return</span> 0;</div>
 <div class="line"><span class="lineno">   57</span>        }</div>
-<div class="ttc" id="acartridge_8h_html_af32b022d54641d350cd8d0ef200c79faa1a88641fcd39f2ed3e58a18526e97138"><div class="ttname"><a href="../../d6/da5/cartridge_8h.html#af32b022d54641d350cd8d0ef200c79faa1a88641fcd39f2ed3e58a18526e97138">VERTICAL</a></div><div class="ttdeci">@ VERTICAL</div><div class="ttdef"><b>Definition:</b> cartridge.h:29</div></div>
-<div class="ttc" id="acartridge_8h_html_af32b022d54641d350cd8d0ef200c79faa4dd51ad73508d6fc83a502966779e48e"><div class="ttname"><a href="../../d6/da5/cartridge_8h.html#af32b022d54641d350cd8d0ef200c79faa4dd51ad73508d6fc83a502966779e48e">HORIZONTAL</a></div><div class="ttdeci">@ HORIZONTAL</div><div class="ttdef"><b>Definition:</b> cartridge.h:28</div></div>
 <div class="ttc" id="aclassname_table_html_a6241ac020e613f01e0f85dc6daf2d1d5"><div class="ttname"><a href="../../da/d1c/classname_table.html#a6241ac020e613f01e0f85dc6daf2d1d5">nameTable::cart</a></div><div class="ttdeci">ppuBusCartridge * cart</div><div class="ttdef"><b>Definition:</b> nameTable.h:17</div></div>
 <div class="ttc" id="aclassppu_bus_cartridge_html_a9dcc9658ba9b6d6ec08ce985414cfdba"><div class="ttname"><a href="../../da/de8/classppu_bus_cartridge.html#a9dcc9658ba9b6d6ec08ce985414cfdba">ppuBusCartridge::getMirror</a></div><div class="ttdeci">MIRROR getMirror()</div><div class="ttdef"><b>Definition:</b> ppuBusCartridge.h:12</div></div>
+<div class="ttc" id="amapper_8h_html_af32b022d54641d350cd8d0ef200c79faa1a88641fcd39f2ed3e58a18526e97138"><div class="ttname"><a href="../../d6/df7/mapper_8h.html#af32b022d54641d350cd8d0ef200c79faa1a88641fcd39f2ed3e58a18526e97138">VERTICAL</a></div><div class="ttdeci">@ VERTICAL</div><div class="ttdef"><b>Definition:</b> mapper.h:7</div></div>
+<div class="ttc" id="amapper_8h_html_af32b022d54641d350cd8d0ef200c79faa4dd51ad73508d6fc83a502966779e48e"><div class="ttname"><a href="../../d6/df7/mapper_8h.html#af32b022d54641d350cd8d0ef200c79faa4dd51ad73508d6fc83a502966779e48e">HORIZONTAL</a></div><div class="ttdeci">@ HORIZONTAL</div><div class="ttdef"><b>Definition:</b> mapper.h:6</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -278,6 +278,8 @@ Here is the call graph for this function:</div>
 <map name="ada/d1c/classname_table_a175a72710f8b952cb66e0ab2597961b8_cgraph" id="ada/d1c/classname_table_a175a72710f8b952cb66e0ab2597961b8_cgraph">
 <area shape="rect" title=" " alt="" coords="5,5,123,32"/>
 <area shape="rect" href="../../da/de8/classppu_bus_cartridge.html#a9dcc9658ba9b6d6ec08ce985414cfdba" title=" " alt="" coords="171,5,345,32"/>
+<area shape="rect" href="../../d2/dd7/classcartridge.html#a25893cbff0b629e683029cc0b64b7bf1" title=" " alt="" coords="393,5,523,32"/>
+<area shape="rect" href="../../d6/d32/classmapper.html#ac95663290d78d28421e62cb8838939bd" title=" " alt="" coords="571,5,693,32"/>
 </map>
 </div>
 
@@ -321,7 +323,7 @@ Here is the call graph for this function:</div>
 <div class="fragment"><div class="line"><span class="lineno">   60</span>        {</div>
 <div class="line"><span class="lineno">   61</span>            addr &amp;= 0x0FFF;</div>
 <div class="line"><span class="lineno">   62</span>            </div>
-<div class="line"><span class="lineno">   63</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../da/d1c/classname_table.html#a6241ac020e613f01e0f85dc6daf2d1d5">cart</a>-&gt;<a class="code hl_function" href="../../da/de8/classppu_bus_cartridge.html#a9dcc9658ba9b6d6ec08ce985414cfdba">getMirror</a>() == <a class="code hl_enumvalue" href="../../d6/da5/cartridge_8h.html#af32b022d54641d350cd8d0ef200c79faa1a88641fcd39f2ed3e58a18526e97138">MIRROR::VERTICAL</a>)</div>
+<div class="line"><span class="lineno">   63</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../da/d1c/classname_table.html#a6241ac020e613f01e0f85dc6daf2d1d5">cart</a>-&gt;<a class="code hl_function" href="../../da/de8/classppu_bus_cartridge.html#a9dcc9658ba9b6d6ec08ce985414cfdba">getMirror</a>() == <a class="code hl_enumvalue" href="../../d6/df7/mapper_8h.html#af32b022d54641d350cd8d0ef200c79faa1a88641fcd39f2ed3e58a18526e97138">MIRROR::VERTICAL</a>)</div>
 <div class="line"><span class="lineno">   64</span>            {</div>
 <div class="line"><span class="lineno">   65</span>                <span class="comment">// Vertical</span></div>
 <div class="line"><span class="lineno">   66</span>                <span class="keywordflow">if</span> (addr &gt;= 0x0000 &amp;&amp; addr &lt;= 0x03FF)</div>
@@ -333,7 +335,7 @@ Here is the call graph for this function:</div>
 <div class="line"><span class="lineno">   72</span>                <span class="keywordflow">if</span> (addr &gt;= 0x0C00 &amp;&amp; addr &lt;= 0x0FFF)</div>
 <div class="line"><span class="lineno">   73</span>                    tableData[1][addr &amp; 0x03FF] = data;</div>
 <div class="line"><span class="lineno">   74</span>            }</div>
-<div class="line"><span class="lineno">   75</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../da/d1c/classname_table.html#a6241ac020e613f01e0f85dc6daf2d1d5">cart</a>-&gt;<a class="code hl_function" href="../../da/de8/classppu_bus_cartridge.html#a9dcc9658ba9b6d6ec08ce985414cfdba">getMirror</a>() == <a class="code hl_enumvalue" href="../../d6/da5/cartridge_8h.html#af32b022d54641d350cd8d0ef200c79faa4dd51ad73508d6fc83a502966779e48e">MIRROR::HORIZONTAL</a>)</div>
+<div class="line"><span class="lineno">   75</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../da/d1c/classname_table.html#a6241ac020e613f01e0f85dc6daf2d1d5">cart</a>-&gt;<a class="code hl_function" href="../../da/de8/classppu_bus_cartridge.html#a9dcc9658ba9b6d6ec08ce985414cfdba">getMirror</a>() == <a class="code hl_enumvalue" href="../../d6/df7/mapper_8h.html#af32b022d54641d350cd8d0ef200c79faa4dd51ad73508d6fc83a502966779e48e">MIRROR::HORIZONTAL</a>)</div>
 <div class="line"><span class="lineno">   76</span>            {</div>
 <div class="line"><span class="lineno">   77</span>                <span class="comment">// Horizontal</span></div>
 <div class="line"><span class="lineno">   78</span>                <span class="keywordflow">if</span> (addr &gt;= 0x0000 &amp;&amp; addr &lt;= 0x03FF)</div>
@@ -353,6 +355,8 @@ Here is the call graph for this function:</div>
 <map name="ada/d1c/classname_table_ab2c64540d864a5920ffaba76e629ee48_cgraph" id="ada/d1c/classname_table_ab2c64540d864a5920ffaba76e629ee48_cgraph">
 <area shape="rect" title=" " alt="" coords="5,5,125,32"/>
 <area shape="rect" href="../../da/de8/classppu_bus_cartridge.html#a9dcc9658ba9b6d6ec08ce985414cfdba" title=" " alt="" coords="173,5,348,32"/>
+<area shape="rect" href="../../d2/dd7/classcartridge.html#a25893cbff0b629e683029cc0b64b7bf1" title=" " alt="" coords="396,5,525,32"/>
+<area shape="rect" href="../../d6/d32/classmapper.html#ac95663290d78d28421e62cb8838939bd" title=" " alt="" coords="573,5,696,32"/>
 </map>
 </div>
 

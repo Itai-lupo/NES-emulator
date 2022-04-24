@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['c_0',['C',['../d9/dbe/classcpu6502.html#aaccb5a879008d07fc4862da5782d332a',1,'cpu6502']]],
-  ['c_1',['c',['../d0/d1e/classcpu_test.html#affc60d12cd330e6313e1b70094a4c8b0',1,'cpuTest::c()'],['../d8/d8f/classcartridge_emualtion_test.html#a505dbfff12f1c8a6bff96f97435e1e70',1,'cartridgeEmualtionTest::c()'],['../de/d21/classbus_test.html#a5bf154196f1d9f3c5ec34a671ea756c1',1,'busTest::c()']]],
+  ['c_0',['c',['../d0/d1e/classcpu_test.html#affc60d12cd330e6313e1b70094a4c8b0',1,'cpuTest::c()'],['../d8/d8f/classcartridge_emualtion_test.html#a505dbfff12f1c8a6bff96f97435e1e70',1,'cartridgeEmualtionTest::c()'],['../de/d21/classbus_test.html#a5bf154196f1d9f3c5ec34a671ea756c1',1,'busTest::c()']]],
+  ['c_1',['C',['../d9/dbe/classcpu6502.html#aaccb5a879008d07fc4862da5782d332a',1,'cpu6502']]],
   ['cart_2',['cart',['../df/d0a/main_8cpp.html#a69a7322d34c7ff785cac5cddecc4fbfe',1,'cart():&#160;main.cpp'],['../da/d1c/classname_table.html#a6241ac020e613f01e0f85dc6daf2d1d5',1,'nameTable::cart()']]],
   ['cartridge_3',['cartridge',['../d2/dd7/classcartridge.html',1,'cartridge'],['../d2/dd7/classcartridge.html#a1622d6252d4ed11ab9b37e6db22a6088',1,'cartridge::cartridge()'],['../d2/deb/classppu2c02.html#a836e7440f082863c1fa76a9d26200583',1,'ppu2c02::cartridge()']]],
   ['cartridge_2ecpp_4',['cartridge.cpp',['../d2/d09/cartridge_8cpp.html',1,'']]],

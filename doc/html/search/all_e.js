@@ -8,12 +8,14 @@ var searchData=
   ['mapper1_5',['mapper1',['../dc/d02/struct_n_e_s_header.html#a427badd1645e7127bd821b0115f545fa',1,'NESHeader']]],
   ['mapper2_6',['mapper2',['../dc/d02/struct_n_e_s_header.html#ae91daefb7facdeae98380c0e89c34ef5',1,'NESHeader']]],
   ['mapper_5f000_7',['mapper_000',['../d5/df4/classmapper__000.html',1,'mapper_000'],['../d5/df4/classmapper__000.html#a1c262e32e4f60751f48804ed100995c9',1,'mapper_000::mapper_000()']]],
-  ['mapperid_8',['mapperID',['../d8/d1f/structmappers_data.html#aead239cc5893c59f1e4a42621dfec1b1',1,'mappersData']]],
-  ['mappers_2eh_9',['mappers.h',['../d6/de4/mappers_8h.html',1,'']]],
-  ['mappersdata_10',['mappersData',['../d8/d1f/structmappers_data.html',1,'']]],
-  ['mappersfacory_11',['mappersFacory',['../de/d4c/classmappers_facory.html',1,'']]],
-  ['mappersfacory_2eh_12',['mappersFacory.h',['../d7/d83/mappers_facory_8h.html',1,'']]],
-  ['mask_13',['mask',['../d2/deb/classppu2c02.html#ae8399bc89c92d76b399da6efff282c15',1,'ppu2c02']]],
-  ['mirror_14',['mirror',['../d2/dd7/classcartridge.html#a9b69569e838b3936ba881ca96641a520',1,'cartridge']]],
-  ['mirror_15',['MIRROR',['../d6/da5/cartridge_8h.html#af32b022d54641d350cd8d0ef200c79fa',1,'cartridge.h']]]
+  ['mapper_5f001_8',['mapper_001',['../dc/dfe/classmapper__001.html#a0507adb95e94a358c123573efad1604f',1,'mapper_001::mapper_001()'],['../dc/dfe/classmapper__001.html',1,'mapper_001']]],
+  ['mapper_5f002_9',['mapper_002',['../d6/d57/classmapper__002.html#a676b416765d80c598f1860dc09bdac59',1,'mapper_002::mapper_002()'],['../d6/d57/classmapper__002.html',1,'mapper_002']]],
+  ['mapper_5f004_10',['mapper_004',['../d9/d31/classmapper__004.html',1,'mapper_004'],['../d9/d31/classmapper__004.html#aed569da11ee2f821e6b60d02465aa739',1,'mapper_004::mapper_004()']]],
+  ['mapperid_11',['mapperID',['../d8/d1f/structmappers_data.html#aead239cc5893c59f1e4a42621dfec1b1',1,'mappersData']]],
+  ['mappers_2eh_12',['mappers.h',['../d6/de4/mappers_8h.html',1,'']]],
+  ['mappersdata_13',['mappersData',['../d8/d1f/structmappers_data.html',1,'']]],
+  ['mappersfacory_14',['mappersFacory',['../de/d4c/classmappers_facory.html',1,'']]],
+  ['mappersfacory_2eh_15',['mappersFacory.h',['../d7/d83/mappers_facory_8h.html',1,'']]],
+  ['mask_16',['mask',['../d2/deb/classppu2c02.html#ae8399bc89c92d76b399da6efff282c15',1,'ppu2c02']]],
+  ['mirror_17',['MIRROR',['../d6/df7/mapper_8h.html#af32b022d54641d350cd8d0ef200c79fa',1,'mapper.h']]]
 ];

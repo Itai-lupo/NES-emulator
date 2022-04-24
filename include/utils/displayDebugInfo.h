@@ -163,7 +163,7 @@ private:
             ImGui::End();
             return;
         }
-        // renderCpuData(c, sysBus);
+        renderCpuData(c, sysBus);
 
 
         ImGui::TextColored(ImVec4(1, 1, 0, 1), "OAM");

@@ -260,147 +260,147 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  428</span>        {        </div>
-<div class="line"><span class="lineno">  429</span>            <a class="code hl_class" href="../../d0/d88/classbus.html">bus&lt;uint8_t, uint16_t&gt;</a> *busData = eventEntity-&gt;getComponent&lt;<a class="code hl_class" href="../../d0/d88/classbus.html">bus&lt;uint8_t, uint16_t&gt;</a>&gt;();</div>
-<div class="line"><span class="lineno">  430</span>            <a class="code hl_class" href="../../d2/deb/classppu2c02.html">ppu2c02</a> *ppuData = eventEntity-&gt;getComponent&lt;<a class="code hl_class" href="../../d2/deb/classppu2c02.html">ppu2c02</a>&gt;();</div>
-<div class="line"><span class="lineno">  431</span>            LTE::texture *t =  eventEntity-&gt;getComponent&lt;LTE::material&gt;()-&gt;getTexture();</div>
-<div class="line"><span class="lineno">  432</span> </div>
-<div class="line"><span class="lineno">  433</span>            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; 3; i++)</div>
-<div class="line"><span class="lineno">  434</span>            {</div>
-<div class="line"><span class="lineno">  435</span>                <span class="keywordflow">if</span> (ppuData-&gt;scanline == 0 &amp;&amp; ppuData-&gt;cycle == 0)</div>
-<div class="line"><span class="lineno">  436</span>                    ppuData-&gt;cycle = 1;</div>
-<div class="line"><span class="lineno">  437</span> </div>
-<div class="line"><span class="lineno">  438</span>                <span class="keywordflow">if</span> (ppuData-&gt;scanline &lt; 240 || ppuData-&gt;scanline == 261 )</div>
-<div class="line"><span class="lineno">  439</span>                {</div>
-<div class="line"><span class="lineno">  440</span>                    <a class="code hl_function" href="../../d6/d3f/classppu.html#adc553339a3f633423214a161971cb244">backgroundRendring</a>(ppuData);</div>
-<div class="line"><span class="lineno">  441</span>                    <a class="code hl_function" href="../../d6/d3f/classppu.html#aa3cf4b36b2944ab7f2c793125ac30340">foregroundRendring</a>(ppuData);</div>
-<div class="line"><span class="lineno">  442</span>                }</div>
-<div class="line"><span class="lineno">  443</span>                </div>
-<div class="line"><span class="lineno">  444</span>                <span class="keywordflow">if</span>(ppuData-&gt;scanline == 261 &amp;&amp; ppuData-&gt;cycle == 1){</div>
-<div class="line"><span class="lineno">  445</span>                    ppuData-&gt;status.vertical_blank = 0;</div>
-<div class="line"><span class="lineno">  446</span>                    ppuData-&gt;status.sprite_overflow = 0;</div>
-<div class="line"><span class="lineno">  447</span>                    ppuData-&gt;status.sprite_zero_hit = 0;</div>
-<div class="line"><span class="lineno">  448</span>                    </div>
-<div class="line"><span class="lineno">  449</span>                    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 8; i++)</div>
-<div class="line"><span class="lineno">  450</span>                    {</div>
-<div class="line"><span class="lineno">  451</span>                        ppuData-&gt;spriteShifterPatternLo[i] = 0;</div>
-<div class="line"><span class="lineno">  452</span>                        ppuData-&gt;spriteShifterPatternHi[i] = 0;</div>
-<div class="line"><span class="lineno">  453</span>                    }</div>
-<div class="line"><span class="lineno">  454</span>                    </div>
-<div class="line"><span class="lineno">  455</span>                }</div>
-<div class="line"><span class="lineno">  456</span>                </div>
-<div class="line"><span class="lineno">  457</span>                <span class="keywordflow">if</span>(ppuData-&gt;scanline == 261 &amp;&amp; ppuData-&gt;cycle &gt;= 280 &amp;&amp; ppuData-&gt;cycle &lt; 305)</div>
-<div class="line"><span class="lineno">  458</span>                    <a class="code hl_function" href="../../d6/d3f/classppu.html#afdebae0b46bc384493f51146539caeff">transferAddressY</a>(ppuData);</div>
-<div class="line"><span class="lineno">  459</span>                </div>
-<div class="line"><span class="lineno">  460</span> </div>
-<div class="line"><span class="lineno">  461</span>                <span class="keywordflow">if</span>(ppuData-&gt;scanline == 241 &amp;&amp; ppuData-&gt;cycle == 1)</div>
-<div class="line"><span class="lineno">  462</span>                {</div>
-<div class="line"><span class="lineno">  463</span>                    ppuData-&gt;status.vertical_blank = 1;</div>
-<div class="line"><span class="lineno">  464</span>                    <span class="keywordflow">if</span>(ppuData-&gt;control.enable_nmi){</div>
-<div class="line"><span class="lineno">  465</span>                        <a class="code hl_variable" href="../../d6/d3f/classppu.html#a3fa653711a870aa6af0e40f28ec240bf">nmi</a> = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  466</span>                    }</div>
-<div class="line"><span class="lineno">  467</span>                }</div>
-<div class="line"><span class="lineno">  468</span>                </div>
-<div class="line"><span class="lineno">  469</span>                uint8_t bg_pixel = 0x00;  </div>
-<div class="line"><span class="lineno">  470</span>                uint8_t bg_palette = 0x00;</div>
-<div class="line"><span class="lineno">  471</span> </div>
-<div class="line"><span class="lineno">  472</span>                <span class="keywordflow">if</span> (ppuData-&gt;mask.render_background)</div>
-<div class="line"><span class="lineno">  473</span>                {</div>
-<div class="line"><span class="lineno">  474</span>                    bg_pixel = <a class="code hl_function" href="../../d6/d3f/classppu.html#a032eaca2250f2be302f32cd259ec53ce">getBGPixelPaletteOffset</a>(ppuData);</div>
-<div class="line"><span class="lineno">  475</span>                    bg_palette = <a class="code hl_function" href="../../d6/d3f/classppu.html#a637979c9ca071fa6aa2b16783220538d">getBGPixelPalette</a>(ppuData);</div>
-<div class="line"><span class="lineno">  476</span>                }</div>
-<div class="line"><span class="lineno">  477</span>                </div>
-<div class="line"><span class="lineno">  478</span>                uint8_t fgPixel = 0x00, fgPalette = 0x00, fgPriority;</div>
-<div class="line"><span class="lineno">  479</span>                <span class="keywordflow">if</span>(ppuData-&gt;mask.render_sprites)</div>
-<div class="line"><span class="lineno">  480</span>                {</div>
-<div class="line"><span class="lineno">  481</span>                    ppuData-&gt;spriteZeroBeingRendered = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  482</span>                    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; ppuData-&gt;spriteCount; i++)</div>
-<div class="line"><span class="lineno">  483</span>                    {</div>
-<div class="line"><span class="lineno">  484</span>                        <span class="keywordflow">if</span>(ppuData-&gt;spriteScanline[i].x == 0)</div>
-<div class="line"><span class="lineno">  485</span>                        {</div>
-<div class="line"><span class="lineno">  486</span>                            uint8_t fgPixelLo = (ppuData-&gt;spriteShifterPatternLo[i] &amp; 0x80) &gt; 0;</div>
-<div class="line"><span class="lineno">  487</span>                            uint8_t fgPixelHi = (ppuData-&gt;spriteShifterPatternHi[i] &amp; 0x80) &gt; 0;</div>
-<div class="line"><span class="lineno">  488</span> </div>
-<div class="line"><span class="lineno">  489</span>                            fgPixel = (fgPixelHi &lt;&lt; 1) | fgPixelLo;</div>
+<div class="fragment"><div class="line"><span class="lineno">  430</span>        {        </div>
+<div class="line"><span class="lineno">  431</span>            <a class="code hl_class" href="../../d0/d88/classbus.html">bus&lt;uint8_t, uint16_t&gt;</a> *busData = eventEntity-&gt;getComponent&lt;<a class="code hl_class" href="../../d0/d88/classbus.html">bus&lt;uint8_t, uint16_t&gt;</a>&gt;();</div>
+<div class="line"><span class="lineno">  432</span>            <a class="code hl_class" href="../../d2/deb/classppu2c02.html">ppu2c02</a> *ppuData = eventEntity-&gt;getComponent&lt;<a class="code hl_class" href="../../d2/deb/classppu2c02.html">ppu2c02</a>&gt;();</div>
+<div class="line"><span class="lineno">  433</span>            LTE::texture *t =  eventEntity-&gt;getComponent&lt;LTE::material&gt;()-&gt;getTexture();</div>
+<div class="line"><span class="lineno">  434</span> </div>
+<div class="line"><span class="lineno">  435</span>            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; 3; i++)</div>
+<div class="line"><span class="lineno">  436</span>            {</div>
+<div class="line"><span class="lineno">  437</span>                <span class="keywordflow">if</span> (ppuData-&gt;scanline == 0 &amp;&amp; ppuData-&gt;cycle == 0)</div>
+<div class="line"><span class="lineno">  438</span>                    ppuData-&gt;cycle = 1;</div>
+<div class="line"><span class="lineno">  439</span> </div>
+<div class="line"><span class="lineno">  440</span>                <span class="keywordflow">if</span> (ppuData-&gt;scanline &lt; 240 || ppuData-&gt;scanline == 261 )</div>
+<div class="line"><span class="lineno">  441</span>                {</div>
+<div class="line"><span class="lineno">  442</span>                    <a class="code hl_function" href="../../d6/d3f/classppu.html#adc553339a3f633423214a161971cb244">backgroundRendring</a>(ppuData);</div>
+<div class="line"><span class="lineno">  443</span>                    <a class="code hl_function" href="../../d6/d3f/classppu.html#aa3cf4b36b2944ab7f2c793125ac30340">foregroundRendring</a>(ppuData);</div>
+<div class="line"><span class="lineno">  444</span>                }</div>
+<div class="line"><span class="lineno">  445</span>                </div>
+<div class="line"><span class="lineno">  446</span>                <span class="keywordflow">if</span>(ppuData-&gt;scanline == 261 &amp;&amp; ppuData-&gt;cycle == 1){</div>
+<div class="line"><span class="lineno">  447</span>                    ppuData-&gt;status.vertical_blank = 0;</div>
+<div class="line"><span class="lineno">  448</span>                    ppuData-&gt;status.sprite_overflow = 0;</div>
+<div class="line"><span class="lineno">  449</span>                    ppuData-&gt;status.sprite_zero_hit = 0;</div>
+<div class="line"><span class="lineno">  450</span>                    </div>
+<div class="line"><span class="lineno">  451</span>                    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 8; i++)</div>
+<div class="line"><span class="lineno">  452</span>                    {</div>
+<div class="line"><span class="lineno">  453</span>                        ppuData-&gt;spriteShifterPatternLo[i] = 0;</div>
+<div class="line"><span class="lineno">  454</span>                        ppuData-&gt;spriteShifterPatternHi[i] = 0;</div>
+<div class="line"><span class="lineno">  455</span>                    }</div>
+<div class="line"><span class="lineno">  456</span>                    </div>
+<div class="line"><span class="lineno">  457</span>                }</div>
+<div class="line"><span class="lineno">  458</span>                </div>
+<div class="line"><span class="lineno">  459</span>                <span class="keywordflow">if</span>(ppuData-&gt;scanline == 261 &amp;&amp; ppuData-&gt;cycle &gt;= 280 &amp;&amp; ppuData-&gt;cycle &lt; 305)</div>
+<div class="line"><span class="lineno">  460</span>                    <a class="code hl_function" href="../../d6/d3f/classppu.html#afdebae0b46bc384493f51146539caeff">transferAddressY</a>(ppuData);</div>
+<div class="line"><span class="lineno">  461</span>                </div>
+<div class="line"><span class="lineno">  462</span> </div>
+<div class="line"><span class="lineno">  463</span>                <span class="keywordflow">if</span>(ppuData-&gt;scanline == 241 &amp;&amp; ppuData-&gt;cycle == 1)</div>
+<div class="line"><span class="lineno">  464</span>                {</div>
+<div class="line"><span class="lineno">  465</span>                    ppuData-&gt;status.vertical_blank = 1;</div>
+<div class="line"><span class="lineno">  466</span>                    <span class="keywordflow">if</span>(ppuData-&gt;control.enable_nmi){</div>
+<div class="line"><span class="lineno">  467</span>                        <a class="code hl_variable" href="../../d6/d3f/classppu.html#a3fa653711a870aa6af0e40f28ec240bf">nmi</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  468</span>                    }</div>
+<div class="line"><span class="lineno">  469</span>                }</div>
+<div class="line"><span class="lineno">  470</span>                </div>
+<div class="line"><span class="lineno">  471</span>                uint8_t bg_pixel = 0x00;  </div>
+<div class="line"><span class="lineno">  472</span>                uint8_t bg_palette = 0x00;</div>
+<div class="line"><span class="lineno">  473</span> </div>
+<div class="line"><span class="lineno">  474</span>                <span class="keywordflow">if</span> (ppuData-&gt;mask.render_background)</div>
+<div class="line"><span class="lineno">  475</span>                {</div>
+<div class="line"><span class="lineno">  476</span>                    bg_pixel = <a class="code hl_function" href="../../d6/d3f/classppu.html#a032eaca2250f2be302f32cd259ec53ce">getBGPixelPaletteOffset</a>(ppuData);</div>
+<div class="line"><span class="lineno">  477</span>                    bg_palette = <a class="code hl_function" href="../../d6/d3f/classppu.html#a637979c9ca071fa6aa2b16783220538d">getBGPixelPalette</a>(ppuData);</div>
+<div class="line"><span class="lineno">  478</span>                }</div>
+<div class="line"><span class="lineno">  479</span>                </div>
+<div class="line"><span class="lineno">  480</span>                uint8_t fgPixel = 0x00, fgPalette = 0x00, fgPriority;</div>
+<div class="line"><span class="lineno">  481</span>                <span class="keywordflow">if</span>(ppuData-&gt;mask.render_sprites)</div>
+<div class="line"><span class="lineno">  482</span>                {</div>
+<div class="line"><span class="lineno">  483</span>                    ppuData-&gt;spriteZeroBeingRendered = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  484</span>                    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; ppuData-&gt;spriteCount; i++)</div>
+<div class="line"><span class="lineno">  485</span>                    {</div>
+<div class="line"><span class="lineno">  486</span>                        <span class="keywordflow">if</span>(ppuData-&gt;spriteScanline[i].x == 0)</div>
+<div class="line"><span class="lineno">  487</span>                        {</div>
+<div class="line"><span class="lineno">  488</span>                            uint8_t fgPixelLo = (ppuData-&gt;spriteShifterPatternLo[i] &amp; 0x80) &gt; 0;</div>
+<div class="line"><span class="lineno">  489</span>                            uint8_t fgPixelHi = (ppuData-&gt;spriteShifterPatternHi[i] &amp; 0x80) &gt; 0;</div>
 <div class="line"><span class="lineno">  490</span> </div>
-<div class="line"><span class="lineno">  491</span>                            fgPalette = ppuData-&gt;spriteScanline[i].palette + 0x04;</div>
-<div class="line"><span class="lineno">  492</span>                            fgPriority = ppuData-&gt;spriteScanline[i].priority == 0;</div>
-<div class="line"><span class="lineno">  493</span> </div>
-<div class="line"><span class="lineno">  494</span>                            <span class="keywordflow">if</span>( fgPixel != 0){</div>
-<div class="line"><span class="lineno">  495</span>                                <span class="keywordflow">if</span>(i == 0)</div>
-<div class="line"><span class="lineno">  496</span>                                    ppuData-&gt;spriteZeroBeingRendered = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  497</span>                                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  498</span>                            }</div>
-<div class="line"><span class="lineno">  499</span>                        }</div>
-<div class="line"><span class="lineno">  500</span>                    }</div>
-<div class="line"><span class="lineno">  501</span>                }</div>
-<div class="line"><span class="lineno">  502</span>                </div>
-<div class="line"><span class="lineno">  503</span>                uint8_t pixel = 0x00;  </div>
-<div class="line"><span class="lineno">  504</span>                uint8_t palette = 0x00;</div>
-<div class="line"><span class="lineno">  505</span> </div>
-<div class="line"><span class="lineno">  506</span>                <span class="keywordflow">if</span> (bg_pixel == 0 &amp;&amp; fgPixel == 0)</div>
-<div class="line"><span class="lineno">  507</span>                {</div>
-<div class="line"><span class="lineno">  508</span>                    pixel = 0x00;</div>
-<div class="line"><span class="lineno">  509</span>                    palette = 0x00;</div>
-<div class="line"><span class="lineno">  510</span>                }</div>
-<div class="line"><span class="lineno">  511</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span>(fgPixel &gt; 0 &amp;&amp; bg_pixel == 0)</div>
-<div class="line"><span class="lineno">  512</span>                {</div>
-<div class="line"><span class="lineno">  513</span>                    pixel = fgPixel;</div>
-<div class="line"><span class="lineno">  514</span>                    palette = fgPalette;</div>
-<div class="line"><span class="lineno">  515</span>                }</div>
-<div class="line"><span class="lineno">  516</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span>(bg_pixel &gt; 0 &amp;&amp; fgPixel == 0)</div>
-<div class="line"><span class="lineno">  517</span>                {</div>
-<div class="line"><span class="lineno">  518</span>                    pixel = bg_pixel;</div>
-<div class="line"><span class="lineno">  519</span>                    palette = bg_palette;</div>
-<div class="line"><span class="lineno">  520</span>                }</div>
-<div class="line"><span class="lineno">  521</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span>(fgPixel &gt; 0 &amp;&amp; bg_pixel &gt; 0)</div>
-<div class="line"><span class="lineno">  522</span>                {</div>
-<div class="line"><span class="lineno">  523</span>                    <span class="keywordflow">if</span>(fgPriority)</div>
-<div class="line"><span class="lineno">  524</span>                    {</div>
-<div class="line"><span class="lineno">  525</span>                        pixel = fgPixel;</div>
-<div class="line"><span class="lineno">  526</span>                        palette = fgPalette;</div>
-<div class="line"><span class="lineno">  527</span>                    }</div>
-<div class="line"><span class="lineno">  528</span>                    <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  529</span>                    {</div>
-<div class="line"><span class="lineno">  530</span>                        pixel = bg_pixel;</div>
-<div class="line"><span class="lineno">  531</span>                        palette = bg_palette;</div>
-<div class="line"><span class="lineno">  532</span>                    }</div>
-<div class="line"><span class="lineno">  533</span> </div>
-<div class="line"><span class="lineno">  534</span>                    <span class="keywordflow">if</span> (ppuData-&gt;spriteZeroHitPossible &amp;&amp; ppuData-&gt;spriteZeroBeingRendered)</div>
-<div class="line"><span class="lineno">  535</span>                    {</div>
-<div class="line"><span class="lineno">  536</span>                        <span class="keywordflow">if</span> (ppuData-&gt;mask.render_background &amp; ppuData-&gt;mask.render_sprites)</div>
-<div class="line"><span class="lineno">  537</span>                        {</div>
-<div class="line"><span class="lineno">  538</span>                            <span class="keywordflow">if</span> (~(ppuData-&gt;mask.render_background_left | ppuData-&gt;mask.render_sprites_left))</div>
-<div class="line"><span class="lineno">  539</span>                            {</div>
-<div class="line"><span class="lineno">  540</span>                                <span class="keywordflow">if</span> (ppuData-&gt;cycle &gt;= 9 &amp;&amp; ppuData-&gt;cycle &lt; 258)</div>
-<div class="line"><span class="lineno">  541</span>                                {</div>
-<div class="line"><span class="lineno">  542</span>                                    ppuData-&gt;status.sprite_zero_hit = 1;</div>
-<div class="line"><span class="lineno">  543</span>                                }</div>
-<div class="line"><span class="lineno">  544</span>                            }</div>
-<div class="line"><span class="lineno">  545</span>                            <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  546</span>                            {</div>
-<div class="line"><span class="lineno">  547</span>                                <span class="keywordflow">if</span> (ppuData-&gt;cycle &gt;= 1 &amp;&amp; ppuData-&gt;cycle &lt; 258)</div>
-<div class="line"><span class="lineno">  548</span>                                {</div>
-<div class="line"><span class="lineno">  549</span>                                    LAUGHTALE_ENGINR_LOG_INFO((<span class="keywordtype">int</span>)ppuData-&gt;status.sprite_zero_hit)</div>
-<div class="line"><span class="lineno">  550</span> </div>
-<div class="line"><span class="lineno">  551</span>                                    ppuData-&gt;status.sprite_zero_hit = 1;</div>
-<div class="line"><span class="lineno">  552</span>                                }</div>
-<div class="line"><span class="lineno">  553</span>                            }</div>
-<div class="line"><span class="lineno">  554</span>                        }</div>
-<div class="line"><span class="lineno">  555</span>                    }</div>
-<div class="line"><span class="lineno">  556</span>                }</div>
-<div class="line"><span class="lineno">  557</span> </div>
-<div class="line"><span class="lineno">  558</span>                <span class="keywordflow">if</span>(ppuData-&gt;scanline &lt; 240 &amp;&amp; ppuData-&gt;cycle &lt; 256)</div>
-<div class="line"><span class="lineno">  559</span>                {    </div>
-<div class="line"><span class="lineno">  560</span>                    t-&gt;setRGBValue(</div>
-<div class="line"><span class="lineno">  561</span>                        {ppuData-&gt;cycle - 1, ppuData-&gt;scanline}, </div>
-<div class="line"><span class="lineno">  562</span>                        <a class="code hl_variable" href="../../d6/d3f/classppu.html#a5d40e95f043bcffaa2ef02bfd9423569">colorPalate</a>[<a class="code hl_function" href="../../d6/d3f/classppu.html#ab7902989f58e71e7b1a934558ee6bcf1">GetColourFromPaletteRam</a>(ppuData, palette, pixel)]);</div>
-<div class="line"><span class="lineno">  563</span>                }</div>
-<div class="line"><span class="lineno">  564</span>                </div>
-<div class="line"><span class="lineno">  565</span>                <a class="code hl_function" href="../../d6/d3f/classppu.html#adb5a4288af63c9e5d42ea460a91e04aa">increaseCycle</a>(ppuData);</div>
-<div class="line"><span class="lineno">  566</span> </div>
-<div class="line"><span class="lineno">  567</span>            }            </div>
-<div class="line"><span class="lineno">  568</span>        }</div>
+<div class="line"><span class="lineno">  491</span>                            fgPixel = (fgPixelHi &lt;&lt; 1) | fgPixelLo;</div>
+<div class="line"><span class="lineno">  492</span> </div>
+<div class="line"><span class="lineno">  493</span>                            fgPalette = ppuData-&gt;spriteScanline[i].palette + 0x04;</div>
+<div class="line"><span class="lineno">  494</span>                            fgPriority = ppuData-&gt;spriteScanline[i].priority == 0;</div>
+<div class="line"><span class="lineno">  495</span> </div>
+<div class="line"><span class="lineno">  496</span>                            <span class="keywordflow">if</span>( fgPixel != 0){</div>
+<div class="line"><span class="lineno">  497</span>                                <span class="keywordflow">if</span>(i == 0)</div>
+<div class="line"><span class="lineno">  498</span>                                    ppuData-&gt;spriteZeroBeingRendered = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  499</span>                                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  500</span>                            }</div>
+<div class="line"><span class="lineno">  501</span>                        }</div>
+<div class="line"><span class="lineno">  502</span>                    }</div>
+<div class="line"><span class="lineno">  503</span>                }</div>
+<div class="line"><span class="lineno">  504</span>                </div>
+<div class="line"><span class="lineno">  505</span>                uint8_t pixel = 0x00;  </div>
+<div class="line"><span class="lineno">  506</span>                uint8_t palette = 0x00;</div>
+<div class="line"><span class="lineno">  507</span> </div>
+<div class="line"><span class="lineno">  508</span>                <span class="keywordflow">if</span> (bg_pixel == 0 &amp;&amp; fgPixel == 0)</div>
+<div class="line"><span class="lineno">  509</span>                {</div>
+<div class="line"><span class="lineno">  510</span>                    pixel = 0x00;</div>
+<div class="line"><span class="lineno">  511</span>                    palette = 0x00;</div>
+<div class="line"><span class="lineno">  512</span>                }</div>
+<div class="line"><span class="lineno">  513</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span>(fgPixel &gt; 0 &amp;&amp; bg_pixel == 0)</div>
+<div class="line"><span class="lineno">  514</span>                {</div>
+<div class="line"><span class="lineno">  515</span>                    pixel = fgPixel;</div>
+<div class="line"><span class="lineno">  516</span>                    palette = fgPalette;</div>
+<div class="line"><span class="lineno">  517</span>                }</div>
+<div class="line"><span class="lineno">  518</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span>(bg_pixel &gt; 0 &amp;&amp; fgPixel == 0)</div>
+<div class="line"><span class="lineno">  519</span>                {</div>
+<div class="line"><span class="lineno">  520</span>                    pixel = bg_pixel;</div>
+<div class="line"><span class="lineno">  521</span>                    palette = bg_palette;</div>
+<div class="line"><span class="lineno">  522</span>                }</div>
+<div class="line"><span class="lineno">  523</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span>(fgPixel &gt; 0 &amp;&amp; bg_pixel &gt; 0)</div>
+<div class="line"><span class="lineno">  524</span>                {</div>
+<div class="line"><span class="lineno">  525</span>                    <span class="keywordflow">if</span>(fgPriority)</div>
+<div class="line"><span class="lineno">  526</span>                    {</div>
+<div class="line"><span class="lineno">  527</span>                        pixel = fgPixel;</div>
+<div class="line"><span class="lineno">  528</span>                        palette = fgPalette;</div>
+<div class="line"><span class="lineno">  529</span>                    }</div>
+<div class="line"><span class="lineno">  530</span>                    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  531</span>                    {</div>
+<div class="line"><span class="lineno">  532</span>                        pixel = bg_pixel;</div>
+<div class="line"><span class="lineno">  533</span>                        palette = bg_palette;</div>
+<div class="line"><span class="lineno">  534</span>                    }</div>
+<div class="line"><span class="lineno">  535</span> </div>
+<div class="line"><span class="lineno">  536</span>                    <span class="keywordflow">if</span> (ppuData-&gt;spriteZeroHitPossible &amp;&amp; ppuData-&gt;spriteZeroBeingRendered)</div>
+<div class="line"><span class="lineno">  537</span>                    {</div>
+<div class="line"><span class="lineno">  538</span>                        <span class="keywordflow">if</span> (ppuData-&gt;mask.render_background &amp; ppuData-&gt;mask.render_sprites)</div>
+<div class="line"><span class="lineno">  539</span>                        {</div>
+<div class="line"><span class="lineno">  540</span>                            <span class="keywordflow">if</span> (~(ppuData-&gt;mask.render_background_left | ppuData-&gt;mask.render_sprites_left))</div>
+<div class="line"><span class="lineno">  541</span>                            {</div>
+<div class="line"><span class="lineno">  542</span>                                <span class="keywordflow">if</span> (ppuData-&gt;cycle &gt;= 9 &amp;&amp; ppuData-&gt;cycle &lt; 258)</div>
+<div class="line"><span class="lineno">  543</span>                                {</div>
+<div class="line"><span class="lineno">  544</span>                                    ppuData-&gt;status.sprite_zero_hit = 1;</div>
+<div class="line"><span class="lineno">  545</span>                                }</div>
+<div class="line"><span class="lineno">  546</span>                            }</div>
+<div class="line"><span class="lineno">  547</span>                            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  548</span>                            {</div>
+<div class="line"><span class="lineno">  549</span>                                <span class="keywordflow">if</span> (ppuData-&gt;cycle &gt;= 1 &amp;&amp; ppuData-&gt;cycle &lt; 258)</div>
+<div class="line"><span class="lineno">  550</span>                                {</div>
+<div class="line"><span class="lineno">  551</span>                                    LAUGHTALE_ENGINR_LOG_INFO((<span class="keywordtype">int</span>)ppuData-&gt;status.sprite_zero_hit)</div>
+<div class="line"><span class="lineno">  552</span> </div>
+<div class="line"><span class="lineno">  553</span>                                    ppuData-&gt;status.sprite_zero_hit = 1;</div>
+<div class="line"><span class="lineno">  554</span>                                }</div>
+<div class="line"><span class="lineno">  555</span>                            }</div>
+<div class="line"><span class="lineno">  556</span>                        }</div>
+<div class="line"><span class="lineno">  557</span>                    }</div>
+<div class="line"><span class="lineno">  558</span>                }</div>
+<div class="line"><span class="lineno">  559</span> </div>
+<div class="line"><span class="lineno">  560</span>                <span class="keywordflow">if</span>(ppuData-&gt;scanline &lt; 240 &amp;&amp; ppuData-&gt;cycle &lt; 256)</div>
+<div class="line"><span class="lineno">  561</span>                {    </div>
+<div class="line"><span class="lineno">  562</span>                    t-&gt;setRGBValue(</div>
+<div class="line"><span class="lineno">  563</span>                        {ppuData-&gt;cycle - 1, ppuData-&gt;scanline}, </div>
+<div class="line"><span class="lineno">  564</span>                        <a class="code hl_variable" href="../../d6/d3f/classppu.html#a5d40e95f043bcffaa2ef02bfd9423569">colorPalate</a>[<a class="code hl_function" href="../../d6/d3f/classppu.html#ab7902989f58e71e7b1a934558ee6bcf1">GetColourFromPaletteRam</a>(ppuData, palette, pixel)]);</div>
+<div class="line"><span class="lineno">  565</span>                }</div>
+<div class="line"><span class="lineno">  566</span>                </div>
+<div class="line"><span class="lineno">  567</span>                <a class="code hl_function" href="../../d6/d3f/classppu.html#adb5a4288af63c9e5d42ea460a91e04aa">increaseCycle</a>(ppuData);</div>
+<div class="line"><span class="lineno">  568</span> </div>
+<div class="line"><span class="lineno">  569</span>            }            </div>
+<div class="line"><span class="lineno">  570</span>        }</div>
 <div class="ttc" id="aclassbus_html"><div class="ttname"><a href="../../d0/d88/classbus.html">bus&lt; uint8_t, uint16_t &gt;</a></div></div>
 <div class="ttc" id="aclassppu2c02_html"><div class="ttname"><a href="../../d2/deb/classppu2c02.html">ppu2c02</a></div><div class="ttdef"><b>Definition:</b> 2c02.h:14</div></div>
 <div class="ttc" id="aclassppu_html_a032eaca2250f2be302f32cd259ec53ce"><div class="ttname"><a href="../../d6/d3f/classppu.html#a032eaca2250f2be302f32cd259ec53ce">ppu::getBGPixelPaletteOffset</a></div><div class="ttdeci">static uint8_t getBGPixelPaletteOffset(ppu2c02 *ppuData)</div><div class="ttdef"><b>Definition:</b> ppu.h:286</div></div>
@@ -551,35 +551,37 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">  394</span>                    <span class="keywordflow">else</span></div>
 <div class="line"><span class="lineno">  395</span>                    {</div>
 <div class="line"><span class="lineno">  396</span>                        spritePatternAddrLo = </div>
-<div class="line"><span class="lineno">  397</span>                            ( (ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#acbdeb257d1d202217512159326b2db95">spriteScanline</a>[i].<a class="code hl_variable" href="../../d7/de8/structppu2c02_1_1sprite_data.html#a4405c1b640c488f3db3caf6715c3f716">tileId</a> &amp; 0x01) &lt;&lt; 12)  |</div>
+<div class="line"><span class="lineno">  397</span>                            ((ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#acbdeb257d1d202217512159326b2db95">spriteScanline</a>[i].<a class="code hl_variable" href="../../d7/de8/structppu2c02_1_1sprite_data.html#a4405c1b640c488f3db3caf6715c3f716">tileId</a> &amp; 0x01) &lt;&lt; 12)  |</div>
 <div class="line"><span class="lineno">  398</span>                            ( </div>
-<div class="line"><span class="lineno">  399</span>                                (ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#acbdeb257d1d202217512159326b2db95">spriteScanline</a>[i].<a class="code hl_variable" href="../../d7/de8/structppu2c02_1_1sprite_data.html#a4405c1b640c488f3db3caf6715c3f716">tileId</a> &amp; 0xFE + </div>
-<div class="line"><span class="lineno">  400</span>                                ((ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a18857378e822268f90f7522770832510">scanline</a> - ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#acbdeb257d1d202217512159326b2db95">spriteScanline</a>[i].<a class="code hl_variable" href="../../d7/de8/structppu2c02_1_1sprite_data.html#aa64a047efb8509e17671004ee03105db">y</a> &lt; 8) ^ </div>
-<div class="line"><span class="lineno">  401</span>                                !(ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#acbdeb257d1d202217512159326b2db95">spriteScanline</a>[i].<a class="code hl_variable" href="../../d7/de8/structppu2c02_1_1sprite_data.html#a2cc89e2e30cb6d1476a5f9c1c4c88ae6">flipVertically</a>))) </div>
-<div class="line"><span class="lineno">  402</span>                                &lt;&lt; 4) |</div>
-<div class="line"><span class="lineno">  403</span>                            ( </div>
-<div class="line"><span class="lineno">  404</span>                                (ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#acbdeb257d1d202217512159326b2db95">spriteScanline</a>[i].<a class="code hl_variable" href="../../d7/de8/structppu2c02_1_1sprite_data.html#a2cc89e2e30cb6d1476a5f9c1c4c88ae6">flipVertically</a> * 7) + </div>
-<div class="line"><span class="lineno">  405</span>                                (1 - ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#acbdeb257d1d202217512159326b2db95">spriteScanline</a>[i].<a class="code hl_variable" href="../../d7/de8/structppu2c02_1_1sprite_data.html#a2cc89e2e30cb6d1476a5f9c1c4c88ae6">flipVertically</a> * 2) * </div>
-<div class="line"><span class="lineno">  406</span>                                ((ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a18857378e822268f90f7522770832510">scanline</a> - ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#acbdeb257d1d202217512159326b2db95">spriteScanline</a>[i].<a class="code hl_variable" href="../../d7/de8/structppu2c02_1_1sprite_data.html#aa64a047efb8509e17671004ee03105db">y</a>) &amp; 0x07)</div>
-<div class="line"><span class="lineno">  407</span>                            );</div>
-<div class="line"><span class="lineno">  408</span>                    }</div>
-<div class="line"><span class="lineno">  409</span> </div>
-<div class="line"><span class="lineno">  410</span>                    spritePatternAddrHi = spritePatternAddrLo + 8;</div>
+<div class="line"><span class="lineno">  399</span>                                (ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#acbdeb257d1d202217512159326b2db95">spriteScanline</a>[i].<a class="code hl_variable" href="../../d7/de8/structppu2c02_1_1sprite_data.html#a4405c1b640c488f3db3caf6715c3f716">tileId</a> &amp; 0xFE) + </div>
+<div class="line"><span class="lineno">  400</span>                                (</div>
+<div class="line"><span class="lineno">  401</span>                                    1 - ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#acbdeb257d1d202217512159326b2db95">spriteScanline</a>[i].<a class="code hl_variable" href="../../d7/de8/structppu2c02_1_1sprite_data.html#a2cc89e2e30cb6d1476a5f9c1c4c88ae6">flipVertically</a> - ((ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a18857378e822268f90f7522770832510">scanline</a> - ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#acbdeb257d1d202217512159326b2db95">spriteScanline</a>[i].<a class="code hl_variable" href="../../d7/de8/structppu2c02_1_1sprite_data.html#aa64a047efb8509e17671004ee03105db">y</a> ) &lt; 8)  </div>
+<div class="line"><span class="lineno">  402</span>                                    <span class="comment">// </span></div>
+<div class="line"><span class="lineno">  403</span>                                )</div>
+<div class="line"><span class="lineno">  404</span>                            ) &lt;&lt; 4 |</div>
+<div class="line"><span class="lineno">  405</span>                            ( </div>
+<div class="line"><span class="lineno">  406</span>                                (ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#acbdeb257d1d202217512159326b2db95">spriteScanline</a>[i].<a class="code hl_variable" href="../../d7/de8/structppu2c02_1_1sprite_data.html#a2cc89e2e30cb6d1476a5f9c1c4c88ae6">flipVertically</a> * 7) + </div>
+<div class="line"><span class="lineno">  407</span>                                (1 - ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#acbdeb257d1d202217512159326b2db95">spriteScanline</a>[i].<a class="code hl_variable" href="../../d7/de8/structppu2c02_1_1sprite_data.html#a2cc89e2e30cb6d1476a5f9c1c4c88ae6">flipVertically</a> * 2) * </div>
+<div class="line"><span class="lineno">  408</span>                                ((ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a18857378e822268f90f7522770832510">scanline</a> - ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#acbdeb257d1d202217512159326b2db95">spriteScanline</a>[i].<a class="code hl_variable" href="../../d7/de8/structppu2c02_1_1sprite_data.html#aa64a047efb8509e17671004ee03105db">y</a>) &amp; 0x07)</div>
+<div class="line"><span class="lineno">  409</span>                            );</div>
+<div class="line"><span class="lineno">  410</span>                    }</div>
 <div class="line"><span class="lineno">  411</span> </div>
-<div class="line"><span class="lineno">  412</span>                    spritePatternBitsLo = ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#aa167427b0acc186c0922b7a9494e3734">ppuBus</a>.<a class="code hl_function" href="../../d0/d88/classbus.html#abb29248facedf75907fba0ebf44022b0">read</a>(spritePatternAddrLo);</div>
-<div class="line"><span class="lineno">  413</span>                    spritePatternBitsHi = ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#aa167427b0acc186c0922b7a9494e3734">ppuBus</a>.<a class="code hl_function" href="../../d0/d88/classbus.html#abb29248facedf75907fba0ebf44022b0">read</a>(spritePatternAddrHi);</div>
-<div class="line"><span class="lineno">  414</span> </div>
-<div class="line"><span class="lineno">  415</span>                    <span class="keywordflow">if</span>(ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#acbdeb257d1d202217512159326b2db95">spriteScanline</a>[i].<a class="code hl_variable" href="../../d7/de8/structppu2c02_1_1sprite_data.html#a66282a393078220956e540fbf5f1858c">flipHorizontally</a>)</div>
-<div class="line"><span class="lineno">  416</span>                    {</div>
-<div class="line"><span class="lineno">  417</span>                        spritePatternBitsLo = <a class="code hl_define" href="../../d2/df9/ppu_8h.html#a1ed3212bbd3162dd55586ddb3b72be9c">FLIP_BITS</a>(spritePatternBitsLo);</div>
-<div class="line"><span class="lineno">  418</span>                        spritePatternBitsHi = <a class="code hl_define" href="../../d2/df9/ppu_8h.html#a1ed3212bbd3162dd55586ddb3b72be9c">FLIP_BITS</a>(spritePatternBitsHi);</div>
-<div class="line"><span class="lineno">  419</span>                    }</div>
-<div class="line"><span class="lineno">  420</span> </div>
-<div class="line"><span class="lineno">  421</span>                    ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a9ae0a9296ea1a2b87471eef102255d0c">spriteShifterPatternLo</a>[i] = spritePatternBitsLo;</div>
-<div class="line"><span class="lineno">  422</span>                    ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a18e78ca23f88ef533a32f003f6d82515">spriteShifterPatternHi</a>[i] = spritePatternBitsHi;</div>
-<div class="line"><span class="lineno">  423</span>                }</div>
-<div class="line"><span class="lineno">  424</span>            }</div>
-<div class="line"><span class="lineno">  425</span>        }</div>
+<div class="line"><span class="lineno">  412</span>                    spritePatternAddrHi = spritePatternAddrLo + 8;</div>
+<div class="line"><span class="lineno">  413</span> </div>
+<div class="line"><span class="lineno">  414</span>                    spritePatternBitsLo = ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#aa167427b0acc186c0922b7a9494e3734">ppuBus</a>.<a class="code hl_function" href="../../d0/d88/classbus.html#abb29248facedf75907fba0ebf44022b0">read</a>(spritePatternAddrLo);</div>
+<div class="line"><span class="lineno">  415</span>                    spritePatternBitsHi = ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#aa167427b0acc186c0922b7a9494e3734">ppuBus</a>.<a class="code hl_function" href="../../d0/d88/classbus.html#abb29248facedf75907fba0ebf44022b0">read</a>(spritePatternAddrHi);</div>
+<div class="line"><span class="lineno">  416</span> </div>
+<div class="line"><span class="lineno">  417</span>                    <span class="keywordflow">if</span>(ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#acbdeb257d1d202217512159326b2db95">spriteScanline</a>[i].<a class="code hl_variable" href="../../d7/de8/structppu2c02_1_1sprite_data.html#a66282a393078220956e540fbf5f1858c">flipHorizontally</a>)</div>
+<div class="line"><span class="lineno">  418</span>                    {</div>
+<div class="line"><span class="lineno">  419</span>                        spritePatternBitsLo = <a class="code hl_define" href="../../d2/df9/ppu_8h.html#a1ed3212bbd3162dd55586ddb3b72be9c">FLIP_BITS</a>(spritePatternBitsLo);</div>
+<div class="line"><span class="lineno">  420</span>                        spritePatternBitsHi = <a class="code hl_define" href="../../d2/df9/ppu_8h.html#a1ed3212bbd3162dd55586ddb3b72be9c">FLIP_BITS</a>(spritePatternBitsHi);</div>
+<div class="line"><span class="lineno">  421</span>                    }</div>
+<div class="line"><span class="lineno">  422</span> </div>
+<div class="line"><span class="lineno">  423</span>                    ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a9ae0a9296ea1a2b87471eef102255d0c">spriteShifterPatternLo</a>[i] = spritePatternBitsLo;</div>
+<div class="line"><span class="lineno">  424</span>                    ppuData-&gt;<a class="code hl_variable" href="../../d2/deb/classppu2c02.html#a18e78ca23f88ef533a32f003f6d82515">spriteShifterPatternHi</a>[i] = spritePatternBitsHi;</div>
+<div class="line"><span class="lineno">  425</span>                }</div>
+<div class="line"><span class="lineno">  426</span>            }</div>
+<div class="line"><span class="lineno">  427</span>        }</div>
 <div class="ttc" id="aclassppu2c02_html_a18857378e822268f90f7522770832510"><div class="ttname"><a href="../../d2/deb/classppu2c02.html#a18857378e822268f90f7522770832510">ppu2c02::scanline</a></div><div class="ttdeci">int16_t scanline</div><div class="ttdef"><b>Definition:</b> 2c02.h:130</div></div>
 <div class="ttc" id="aclassppu2c02_html_a18e78ca23f88ef533a32f003f6d82515"><div class="ttname"><a href="../../d2/deb/classppu2c02.html#a18e78ca23f88ef533a32f003f6d82515">ppu2c02::spriteShifterPatternHi</a></div><div class="ttdeci">uint8_t spriteShifterPatternHi[8]</div><div class="ttdef"><b>Definition:</b> 2c02.h:54</div></div>
 <div class="ttc" id="aclassppu2c02_html_a19feb74ccf16a25ff2a04f00a79bd264"><div class="ttname"><a href="../../d2/deb/classppu2c02.html#a19feb74ccf16a25ff2a04f00a79bd264">ppu2c02::spriteZeroHitPossible</a></div><div class="ttdeci">bool spriteZeroHitPossible</div><div class="ttdef"><b>Definition:</b> 2c02.h:57</div></div>

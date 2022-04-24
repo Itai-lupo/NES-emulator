@@ -22,15 +22,29 @@ class gamesMenu
         static inline LTE::windowPieceId winId;
         static inline cartridge *cart;
         static inline loadGameEvent *sendorData;
+        static inline LTE::coreEventData *qSendorData;
+        static inline bool showMenu = true;
 
+
+        static void quiteGame(LTE::gameObject *eventEntity, LTE::coreEventData *sendor)
+        {
+            LTE::KeyData *e = dynamic_cast<LTE::KeyData *>(sendor);
+            if(e->key == LT_KEY_ESCAPE)
+            {
+                LTE::eventManger::trigerEvent(qSendorData);
+                cart->unload();
+                showMenu = true;
+            }
+        }
 
         static void ImGuiRender(LTE::gameObject *eventEntity, LTE::coreEventData *sendor)
         {
+            if(!showMenu) return;
+
             LTE::onUpdateData *eventData = static_cast<LTE::onUpdateData *>(sendor);
             
             if (!ImGui::Begin("game list"))
             {
-                // Early out if the window is collapsed, as an optimization.
                 ImGui::End();
                 return;
             }
@@ -43,6 +57,7 @@ class gamesMenu
                 {
                     sendorData->gamePath = iter->path().string();
                     LTE::eventManger::trigerEvent(sendorData);
+                    showMenu = false;
                 }
 
                 std::error_code ec;
@@ -59,21 +74,22 @@ class gamesMenu
             gamesMenu::winId = winId;
             gamesMenu::cart = cart;
             
+            LTE::eventManger::addCoustemEventsRoute("load game/");
+            LTE::eventManger::addCoustemEventsRoute("quite game/");
+            
 
             sendorData = new loadGameEvent("load game/");
+            qSendorData = new LTE::coreEventData("quite game/");
 
             LTE::eventManger::startBuildingEvent()->
                 setEventRoute("ImGui render/show games menu")->
                 setEventCallback(ImGuiRender)->
                 setWindowId(winId)->add();
 
-            sendorData->gamePath = "./res/roms/Donkey Kong (World) (Rev A).nes";
-            // sendorData->gamePath = "./res/roms/Galaga (U).nes";
-            // sendorData->gamePath = "./res/roms/Ice Climber (USA, Europe).nes";
-            // sendorData->gamePath = "./res/roms/Kung Fu (Japan, USA).nes";
-            // sendorData->gamePath = "./res/roms/Pac-Man (USA) (Namco).nes";
-            sendorData->gamePath = "./res/roms/Super Mario Bros (E).nes";
-            LTE::eventManger::trigerEvent(sendorData);
+            LTE::eventManger::startBuildingEvent()->
+                setEventRoute("Key pressed/check if quite game")->
+                setEventCallback(quiteGame)->
+                setWindowId(winId)->add();
 
         }
 };

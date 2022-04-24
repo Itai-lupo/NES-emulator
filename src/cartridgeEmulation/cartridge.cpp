@@ -16,27 +16,35 @@ void cartridge::load(const std::string& romPath)
     thereIsALoadedCart = true;
 }
 
-uint8_t cartridge::readPRGMemory(uint16_t addr)
+void cartridge::unload()
 {
-    if(thereIsALoadedCart && cartMapper->readPRGMemory(addr))
-        return PRGMemory[addr];
-    return 0;
+    thereIsALoadedCart = false;
 }
 
-uint8_t cartridge::readCHRMemory(uint16_t addr)
+
+uint8_t cartridge::readPRGMemory(uint32_t addr)
+{
+    uint8_t temp = 0;
+    if(thereIsALoadedCart && cartMapper->readPRGMemory(addr, temp))
+        temp = PRGMemory[addr];
+    return temp;
+}
+
+uint8_t cartridge::readCHRMemory(uint32_t addr)
 {
     if(thereIsALoadedCart && cartMapper->readCHRMemory(addr))
         return CHRMemory[addr];
+    
     return 0;
 }
 
-void cartridge::writePRGMemory(uint16_t addr, uint8_t data)
+void cartridge::writePRGMemory(uint32_t addr, uint8_t data)
 {
-    if(thereIsALoadedCart && cartMapper->writePRGMemory(addr))
+    if(thereIsALoadedCart && cartMapper->writePRGMemory(addr, data))
         PRGMemory[addr] = data;
 }
 
-void cartridge::writeCHRMemory(uint16_t addr, uint8_t data)
+void cartridge::writeCHRMemory(uint32_t addr, uint8_t data)
 {
     if(thereIsALoadedCart && cartMapper->writeCHRMemory(addr))
         CHRMemory[addr] = data;
@@ -84,7 +92,8 @@ void cartridge::handleFileType1()
     ifs.read((char*)PRGMemory.data(), PRGMemory.size());
 
     CHRBanks = header.chr_rom_chunks;
-    CHRMemory.resize(CHRBanks * 0x2000);
+    
+    CHRMemory.resize(CHRBanks * 0x2000 + (CHRBanks == 0) * 0x2000);
     ifs.read((char*)CHRMemory.data(), CHRMemory.size());
 
 }
@@ -100,3 +109,9 @@ void cartridge::initMapper()
 }
 
 
+MIRROR cartridge::getMirror()
+{
+    if(!thereIsALoadedCart || cartMapper->getMirror() == MIRROR::HARDWARE)
+        return mirror;
+    return cartMapper->getMirror();
+}

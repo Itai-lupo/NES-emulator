@@ -138,29 +138,29 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   58</span>                                                                 {</div>
-<div class="line"><span class="lineno">   59</span>            gamesMenu::winId = winId;</div>
-<div class="line"><span class="lineno">   60</span>            gamesMenu::cart = <a class="code hl_variable" href="../../df/d0a/main_8cpp.html#a69a7322d34c7ff785cac5cddecc4fbfe">cart</a>;</div>
-<div class="line"><span class="lineno">   61</span>            </div>
-<div class="line"><span class="lineno">   62</span> </div>
-<div class="line"><span class="lineno">   63</span>            sendorData = <span class="keyword">new</span> loadGameEvent(<span class="stringliteral">&quot;load game/&quot;</span>);</div>
-<div class="line"><span class="lineno">   64</span> </div>
-<div class="line"><span class="lineno">   65</span>            LTE::eventManger::startBuildingEvent()-&gt;</div>
-<div class="line"><span class="lineno">   66</span>                setEventRoute(<span class="stringliteral">&quot;ImGui render/show games menu&quot;</span>)-&gt;</div>
-<div class="line"><span class="lineno">   67</span>                setEventCallback(ImGuiRender)-&gt;</div>
-<div class="line"><span class="lineno">   68</span>                setWindowId(winId)-&gt;add();</div>
-<div class="line"><span class="lineno">   69</span> </div>
-<div class="line"><span class="lineno">   70</span>            sendorData-&gt;<a class="code hl_variable" href="../../de/d5c/structgames_menu_1_1load_game_event.html#a7701c0703aec5bdae1831be9e14d7b4d">gamePath</a> = <span class="stringliteral">&quot;./res/roms/Donkey Kong (World) (Rev A).nes&quot;</span>;</div>
-<div class="line"><span class="lineno">   71</span>            <span class="comment">// sendorData-&gt;gamePath = &quot;./res/roms/Galaga (U).nes&quot;;</span></div>
-<div class="line"><span class="lineno">   72</span>            <span class="comment">// sendorData-&gt;gamePath = &quot;./res/roms/Ice Climber (USA, Europe).nes&quot;;</span></div>
-<div class="line"><span class="lineno">   73</span>            <span class="comment">// sendorData-&gt;gamePath = &quot;./res/roms/Kung Fu (Japan, USA).nes&quot;;</span></div>
-<div class="line"><span class="lineno">   74</span>            <span class="comment">// sendorData-&gt;gamePath = &quot;./res/roms/Pac-Man (USA) (Namco).nes&quot;;</span></div>
-<div class="line"><span class="lineno">   75</span>            sendorData-&gt;<a class="code hl_variable" href="../../de/d5c/structgames_menu_1_1load_game_event.html#a7701c0703aec5bdae1831be9e14d7b4d">gamePath</a> = <span class="stringliteral">&quot;./res/roms/Super Mario Bros (E).nes&quot;</span>;</div>
-<div class="line"><span class="lineno">   76</span>            LTE::eventManger::trigerEvent(sendorData);</div>
-<div class="line"><span class="lineno">   77</span> </div>
-<div class="line"><span class="lineno">   78</span>        }</div>
+<div class="fragment"><div class="line"><span class="lineno">   73</span>                                                                 {</div>
+<div class="line"><span class="lineno">   74</span>            gamesMenu::winId = winId;</div>
+<div class="line"><span class="lineno">   75</span>            gamesMenu::cart = <a class="code hl_variable" href="../../df/d0a/main_8cpp.html#a69a7322d34c7ff785cac5cddecc4fbfe">cart</a>;</div>
+<div class="line"><span class="lineno">   76</span>            </div>
+<div class="line"><span class="lineno">   77</span>            LTE::eventManger::addCoustemEventsRoute(<span class="stringliteral">&quot;load game/&quot;</span>);</div>
+<div class="line"><span class="lineno">   78</span>            LTE::eventManger::addCoustemEventsRoute(<span class="stringliteral">&quot;quite game/&quot;</span>);</div>
+<div class="line"><span class="lineno">   79</span>            </div>
+<div class="line"><span class="lineno">   80</span> </div>
+<div class="line"><span class="lineno">   81</span>            sendorData = <span class="keyword">new</span> loadGameEvent(<span class="stringliteral">&quot;load game/&quot;</span>);</div>
+<div class="line"><span class="lineno">   82</span>            qSendorData = <span class="keyword">new</span> LTE::coreEventData(<span class="stringliteral">&quot;quite game/&quot;</span>);</div>
+<div class="line"><span class="lineno">   83</span> </div>
+<div class="line"><span class="lineno">   84</span>            LTE::eventManger::startBuildingEvent()-&gt;</div>
+<div class="line"><span class="lineno">   85</span>                setEventRoute(<span class="stringliteral">&quot;ImGui render/show games menu&quot;</span>)-&gt;</div>
+<div class="line"><span class="lineno">   86</span>                setEventCallback(ImGuiRender)-&gt;</div>
+<div class="line"><span class="lineno">   87</span>                setWindowId(winId)-&gt;add();</div>
+<div class="line"><span class="lineno">   88</span> </div>
+<div class="line"><span class="lineno">   89</span>            LTE::eventManger::startBuildingEvent()-&gt;</div>
+<div class="line"><span class="lineno">   90</span>                setEventRoute(<span class="stringliteral">&quot;Key pressed/check if quite game&quot;</span>)-&gt;</div>
+<div class="line"><span class="lineno">   91</span>                setEventCallback(quiteGame)-&gt;</div>
+<div class="line"><span class="lineno">   92</span>                setWindowId(winId)-&gt;add();</div>
+<div class="line"><span class="lineno">   93</span> </div>
+<div class="line"><span class="lineno">   94</span>        }</div>
 <div class="ttc" id="amain_8cpp_html_a69a7322d34c7ff785cac5cddecc4fbfe"><div class="ttname"><a href="../../df/d0a/main_8cpp.html#a69a7322d34c7ff785cac5cddecc4fbfe">cart</a></div><div class="ttdeci">cartridge * cart</div><div class="ttdef"><b>Definition:</b> main.cpp:129</div></div>
-<div class="ttc" id="astructgames_menu_1_1load_game_event_html_a7701c0703aec5bdae1831be9e14d7b4d"><div class="ttname"><a href="../../de/d5c/structgames_menu_1_1load_game_event.html#a7701c0703aec5bdae1831be9e14d7b4d">gamesMenu::loadGameEvent::gamePath</a></div><div class="ttdeci">std::string gamePath</div><div class="ttdef"><b>Definition:</b> gamesMenu.h:15</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
