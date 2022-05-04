@@ -11,12 +11,13 @@ var searchData=
   ['bg_5fshifter_5fattrib_5flo_8',['bg_shifter_attrib_lo',['../d2/deb/classppu2c02.html#aacca281f94ba141df4be70494c01c566',1,'ppu2c02']]],
   ['bg_5fshifter_5fpattern_5fhi_9',['bg_shifter_pattern_hi',['../d2/deb/classppu2c02.html#a1677fce272b90542ea2459c8ae2fd9db',1,'ppu2c02']]],
   ['bg_5fshifter_5fpattern_5flo_10',['bg_shifter_pattern_lo',['../d2/deb/classppu2c02.html#a76b299a13833f52f473f4306cb1bfed4',1,'ppu2c02']]],
-  ['bus_11',['bus',['../d0/d88/classbus.html#ad73c6c35db12d75f4dd3d4098192ff0d',1,'bus::bus()'],['../d0/d88/classbus.html',1,'bus&lt; dataSize, addrSize &gt;']]],
-  ['bus_2eh_12',['bus.h',['../db/d9b/src_2bus_emulation_2bus_8h.html',1,'(Global Namespace)'],['../d2/d49/include_2bus_emulation_2bus_8h.html',1,'(Global Namespace)']]],
-  ['bus_3c_20uint8_5ft_2c_20uint16_5ft_20_3e_13',['bus&lt; uint8_t, uint16_t &gt;',['../d0/d88/classbus.html',1,'']]],
-  ['busdevice_14',['busDevice',['../dc/d77/classbus_device.html',1,'']]],
-  ['busdevice_2eh_15',['busDevice.h',['../d9/deb/bus_device_8h.html',1,'']]],
-  ['busdevice_3c_20uint8_5ft_2c_20uint16_5ft_20_3e_16',['busDevice&lt; uint8_t, uint16_t &gt;',['../dc/d77/classbus_device.html',1,'']]],
-  ['busemulation_2etest_2ecpp_17',['busEmulation.test.cpp',['../dc/dd4/bus_emulation_8test_8cpp.html',1,'']]],
-  ['bustest_18',['busTest',['../de/d21/classbus_test.html',1,'']]]
+  ['bodydata_11',['bodyData',['../d6/db8/structhttp_body.html#a85924cbd2277028efe5480551c50a51e',1,'httpBody']]],
+  ['bus_12',['bus',['../d0/d88/classbus.html#ad73c6c35db12d75f4dd3d4098192ff0d',1,'bus::bus()'],['../d0/d88/classbus.html',1,'bus&lt; dataSize, addrSize &gt;']]],
+  ['bus_2eh_13',['bus.h',['../db/d9b/src_2bus_emulation_2bus_8h.html',1,'(Global Namespace)'],['../d2/d49/include_2bus_emulation_2bus_8h.html',1,'(Global Namespace)']]],
+  ['bus_3c_20uint8_5ft_2c_20uint16_5ft_20_3e_14',['bus&lt; uint8_t, uint16_t &gt;',['../d0/d88/classbus.html',1,'']]],
+  ['busdevice_15',['busDevice',['../dc/d77/classbus_device.html',1,'']]],
+  ['busdevice_2eh_16',['busDevice.h',['../d9/deb/bus_device_8h.html',1,'']]],
+  ['busdevice_3c_20uint8_5ft_2c_20uint16_5ft_20_3e_17',['busDevice&lt; uint8_t, uint16_t &gt;',['../dc/d77/classbus_device.html',1,'']]],
+  ['busemulation_2etest_2ecpp_18',['busEmulation.test.cpp',['../dc/dd4/bus_emulation_8test_8cpp.html',1,'']]],
+  ['bustest_19',['busTest',['../de/d21/classbus_test.html',1,'']]]
 ];

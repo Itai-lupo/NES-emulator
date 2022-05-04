@@ -313,8 +313,7 @@ class ppu
  
                 if (ppuData->scanline > 261)
                 {
-                    ppuData->scanline = 0;                    
-                    // LAUGHTALE_ENGINR_LOG_INFO("frame")
+                    ppuData->scanline = 0;                  
                     frameComplete = true;
                 }
             }
@@ -548,8 +547,6 @@ class ppu
                             {
                                 if (ppuData->cycle >= 1 && ppuData->cycle < 258)
                                 {
-                                    LAUGHTALE_ENGINR_LOG_INFO((int)ppuData->status.sprite_zero_hit)
-
                                     ppuData->status.sprite_zero_hit = 1;
                                 }
                             }

@@ -33,6 +33,14 @@ namespace LTE::GMNM
             return bytes;
         }
 
+        friend byteStream& operator <= (byteStream& bytes, const std::string& data)
+        {
+            size_t i = bytes.body.size();
+            bytes.body.resize(bytes.body.size() + data.size());
+            std::memcpy(bytes.body.data() + i, data.c_str(), data.size());
+            return bytes;
+        }
+
         template<typename DataType>
         friend byteStream& operator >> (byteStream& data, DataType& buffer)
         {

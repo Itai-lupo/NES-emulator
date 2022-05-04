@@ -14,13 +14,52 @@
 #include "DMA.h"
 
 #include <chrono>
-
 #include <thread>
 
 bool ppuFinsh = false;
 
 
 LTE::entityTaleId id;
+
+void runNes()
+{
+    
+    LTE::coreEventData *sendor = new LTE::coreEventData("cpu cmd/cpu nmi/");
+    LTE::gameObject *eventEntity = LTE::entityManger::getEntityById(id);
+
+    auto start = std::chrono::high_resolution_clock::now();
+    while (true)
+    {
+        cpu<uint8_t, uint16_t>::clock(eventEntity, sendor);
+        ppu::clock(eventEntity);
+
+        if(ppu::nmi)
+        {
+            ppu::nmi = false;
+            sendor->route = "cpu cmd/cpu nmi/";
+            LTE::eventManger::trigerEvent(sendor);
+        }
+
+        while (ppu::frameComplete)
+        {
+            auto stop = std::chrono::high_resolution_clock::now();
+            auto duration = std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
+
+
+            if(duration >= std::chrono::duration<double>(0.01666666666666667) ){
+                ppu::frameComplete = false;
+                start = std::chrono::high_resolution_clock::now();
+            }
+            else
+            {
+                std::this_thread::sleep_for(std::chrono::nanoseconds(10));
+            }
+        }
+
+    }
+    
+}
+
 void runCpu()
 {
     
@@ -211,6 +250,7 @@ void WindowClose(__attribute__((unused)) LTE::gameObject *eventEntity, __attribu
 }
 
 
+
 int main() 
 {
     LTE::app::init();
@@ -232,13 +272,18 @@ int main()
         setEventCallback(loadCartageAndResetCpu)->add();
 
 
-    t1 = new std::thread(runCpu);
-    t2 = new std::thread(runPpu);
+    // t1 = new std::thread(runCpu);
+    // t2 = new std::thread(runPpu);
+
+    t1 = new std::thread(runNes);
+    
     gamesMenu::init(winId, cart);
  
     LTE::eventManger::startBuildingEvent()->
         setEventRoute("Window close/close app")->
         setEventCallback(WindowClose)->add();
+
+
 
     LTE::app::run();
     cpu<uint8_t, uint16_t>::close();

@@ -14,6 +14,11 @@ var annotated_dup =
     [ "displayDebugInfo", "d7/d6d/classdisplay_debug_info.html", null ],
     [ "DMA", "d4/dff/class_d_m_a.html", "d4/dff/class_d_m_a" ],
     [ "gamesMenu", "d4/d6e/classgames_menu.html", "d4/d6e/classgames_menu" ],
+    [ "httpBody", "d6/db8/structhttp_body.html", "d6/db8/structhttp_body" ],
+    [ "httpFileBody", "d6/dd1/structhttp_file_body.html", "d6/dd1/structhttp_file_body" ],
+    [ "httpHeader", "d7/df4/structhttp_header.html", "d7/df4/structhttp_header" ],
+    [ "httpJSONBody", "d1/d54/structhttp_j_s_o_n_body.html", "d1/d54/structhttp_j_s_o_n_body" ],
+    [ "httpsProtocol", "d8/d58/classhttps_protocol.html", "d8/d58/classhttps_protocol" ],
     [ "mapper", "d6/d32/classmapper.html", "d6/d32/classmapper" ],
     [ "mapper_000", "d5/df4/classmapper__000.html", "d5/df4/classmapper__000" ],
     [ "mapper_001", "dc/dfe/classmapper__001.html", "dc/dfe/classmapper__001" ],
@@ -29,5 +34,6 @@ var annotated_dup =
     [ "ppuBusCartridge", "da/de8/classppu_bus_cartridge.html", "da/de8/classppu_bus_cartridge" ],
     [ "ram", "dd/d28/classram.html", "dd/d28/classram" ],
     [ "romFileNotFoundException", "dc/d96/classrom_file_not_found_exception.html", "dc/d96/classrom_file_not_found_exception" ],
+    [ "serverConction", "d6/d2d/classserver_conction.html", "d6/d2d/classserver_conction" ],
     [ "testRam", "d1/d46/classtest_ram.html", "d1/d46/classtest_ram" ]
 ];

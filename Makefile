@@ -33,23 +33,16 @@ INC_FLAGS := $(addprefix -I,$(INC_DIRS) $(LIB_DIR))
 LIB_FLAGS := $(addprefix -L,$(LIB_DIR))
 
 CPPFLAGS ?=   -std=c++20
-TEST_CPP_FLAGE = -lgtest -lgtest_main -lgmock  
-# CFLAGS :=
+TEST_CPP_FLAGE = -lgtest -lgtest_main -lgmock 
 
-CXXFLAGS += $(INC_FLAGS)  -MMD -MP  -g -Wall -Wc++17-extensions -g -Wall -Wextra -pthread  $(LIB_FLAGS) -lstdc++ -lgflags -lglog -lGL -lglfw   -lrt -lm -ldl -lasound -O3
+CXXFLAGS += $(INC_FLAGS)  -MMD -MP  -g -Wc++17-extensions -g -pthread  $(LIB_FLAGS) -lstdc++ -lgflags -lglog -lGL -lglfw   -lrt -lm -ldl -lasound -O3
 
 LDFLAGS =  $(LIB_FLAGS)
 
 
 $(OUTPUT_DIR)/$(TARGET_EXEC): $(OBJS)
 	mkdir -p output
-	$(CC) $(CPPFLAGS)   $(CXXFLAGS) $(OBJS)  -o $@ $(LDFLAGS)
-
-print:
-	@echo ./include/ $(wildcard ./include/*/) $(wildcard ./include/*/*/) $(wildcard ./include/*/*/*/) $(wildcard ./include/*/*/*/*/)
-	@echo $(call rwildcardDir,./include)
-
-	
+	$(CC) $(CPPFLAGS)   $(CXXFLAGS) $(OBJS)  -o $@ $(LDFLAGS)	
 
 # c++ source
 $(BUILD_DIR)/%.cpp.o: %.cpp

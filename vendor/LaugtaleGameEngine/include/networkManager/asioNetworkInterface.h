@@ -26,7 +26,7 @@ namespace LTE::GMNM
             asioNetworkInterface(const std::string& ip, uint32_t port);
 
             virtual ~asioNetworkInterface() override;
-            virtual void reciveData(const byteStream& data) override;
+            virtual void reciveData(byteStream& data) override;
             virtual void sendData(const byteStream& data) override;
             virtual void close() override;
             virtual void fullClose() override;

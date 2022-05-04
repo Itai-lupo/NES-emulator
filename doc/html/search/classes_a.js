@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['spritedata_0',['spriteData',['../d7/de8/structppu2c02_1_1sprite_data.html',1,'ppu2c02']]]
+  ['ram_0',['ram',['../dd/d28/classram.html',1,'']]],
+  ['romfilenotfoundexception_1',['romFileNotFoundException',['../dc/d96/classrom_file_not_found_exception.html',1,'']]]
 ];

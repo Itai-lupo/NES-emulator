@@ -5,6 +5,7 @@ var main_8cpp =
     [ "loadCartageAndResetCpu", "df/d0a/main_8cpp.html#a5f166273e28df3c6500fc0b742c73824", null ],
     [ "main", "df/d0a/main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4", null ],
     [ "runCpu", "df/d0a/main_8cpp.html#aaeabc40a029089be2009eca1ccfc9e63", null ],
+    [ "runNes", "df/d0a/main_8cpp.html#aebe18b38c7af4b6882a0d036a537b3dd", null ],
     [ "runPpu", "df/d0a/main_8cpp.html#acffc3f0c98d55474cfb5caafe5e176af", null ],
     [ "WindowClose", "df/d0a/main_8cpp.html#a19532a7aff0f3b47844377a132afa0bb", null ],
     [ "cart", "df/d0a/main_8cpp.html#a69a7322d34c7ff785cac5cddecc4fbfe", null ],

@@ -50,15 +50,38 @@ namespace LTE::GMNM
         free(socketConnction);
     }
 
-    void asioNetworkInterface::reciveData(const byteStream& data)
+    void asioNetworkInterface::reciveData(byteStream& data)
     {
         try
         {
-            asio::read(*socketConnction, asio::mutable_buffer((void *)&data.body[0], data.body.size()));
+            if (data.getSize() == 0)
+            {
+                int count;
+                bool r = true;
+                while(count != 4)
+                {
+                    char temp;
+                    asio::read(*socketConnction, asio::mutable_buffer( (void*)&temp, 1));
+                    data << temp;
+                    if((temp == '\r' && r) || (temp == '\n' && !r))
+                    {
+                        count++;
+                        r = !r;
+                    }
+                    else
+                    {
+                        count = 0;
+                        r = true;
+                    }
+                }
+            }
+            else
+                asio::read(*socketConnction, asio::mutable_buffer((void *)&data.body[0], data.body.size()));        
         }
         catch(const std::exception& e)
         {
-            std::cerr << e.what() << '\n';
+            if (data.getSize() != 0)
+                LAUGHTALE_ENGINR_LOG_ERROR(e.what() << '\n' << data.getSize());
         }
     }
 

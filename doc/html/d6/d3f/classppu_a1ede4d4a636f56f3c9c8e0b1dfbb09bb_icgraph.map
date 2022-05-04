@@ -1,5 +1,6 @@
 <map id="ppu::clock" name="ppu::clock">
-<area shape="rect" id="node1" title=" " alt="" coords="215,5,295,32"/>
-<area shape="rect" id="node2" href="$df/d0a/main_8cpp.html#acffc3f0c98d55474cfb5caafe5e176af" title=" " alt="" coords="104,5,167,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="216,31,296,57"/>
+<area shape="rect" id="node2" href="$df/d0a/main_8cpp.html#aebe18b38c7af4b6882a0d036a537b3dd" title=" " alt="" coords="104,5,168,32"/>
+<area shape="rect" id="node4" href="$df/d0a/main_8cpp.html#acffc3f0c98d55474cfb5caafe5e176af" title=" " alt="" coords="105,56,167,83"/>
 <area shape="rect" id="node3" href="$df/d0a/main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,56,32"/>
 </map>

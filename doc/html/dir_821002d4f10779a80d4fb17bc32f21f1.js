@@ -4,6 +4,7 @@ var dir_821002d4f10779a80d4fb17bc32f21f1 =
       [ "displayDebugInfo", "d7/d6d/classdisplay_debug_info.html", null ]
     ] ],
     [ "gamesMenu.h", "d9/d6e/games_menu_8h.html", [
+      [ "serverConction", "d6/d2d/classserver_conction.html", "d6/d2d/classserver_conction" ],
       [ "gamesMenu", "d4/d6e/classgames_menu.html", "d4/d6e/classgames_menu" ],
       [ "gamesMenu::loadGameEvent", "de/d5c/structgames_menu_1_1load_game_event.html", "de/d5c/structgames_menu_1_1load_game_event" ]
     ] ],

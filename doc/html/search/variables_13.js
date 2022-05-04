@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['x_0',['x',['../d9/dbe/classcpu6502.html#a58821a0e169aba9d2202934cb75edd98',1,'cpu6502::x()'],['../d7/de8/structppu2c02_1_1sprite_data.html#a1d5b149e6bc30819907afa6194c93532',1,'ppu2c02::spriteData::x()']]]
+  ['winid_0',['winId',['../df/d0a/main_8cpp.html#a428e0f4627e08881f989064897ac2d5f',1,'main.cpp']]]
 ];

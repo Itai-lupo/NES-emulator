@@ -26,19 +26,20 @@ namespace LTE::GMNM
 
     void connection::send(packet& data)
     {
-        byteStream buffer;
+        byteStream headerBuffer;
         while (!canSend){}
         
         canSend = false;
-        messageFormat->formatHeaderToSend(buffer, data);
-        dataEncryption->encodeHeader(buffer);
+        messageFormat->formatHeaderToSend(headerBuffer, data);
+        dataEncryption->encodeHeader(headerBuffer);
 
-        networkConnction->sendData(buffer);
+        networkConnction->sendData(headerBuffer);
         
-        messageFormat->formatBodyToSend(buffer, data);
-        dataEncryption->encodeBody(buffer);
-
-        networkConnction->sendData(buffer);
+        byteStream bodyBuffer;
+        messageFormat->formatBodyToSend(bodyBuffer, data);
+        dataEncryption->encodeBody(bodyBuffer);
+        if(bodyBuffer.getSize() != 0)
+            networkConnction->sendData(bodyBuffer);
         canSend = true;
 
     }
@@ -46,6 +47,9 @@ namespace LTE::GMNM
     void connection::connect()
     {
         networkConnction = new asioNetworkInterface(ip, port);
+        if(!networkConnction->isConnected())
+            return;
+        
         id = networkConnction->getPort();
         connectionData *serverData = new connectionData(id, ip, port, [&, this](packet& data){ this->send(data); } );
         canSend = true;
@@ -63,9 +67,12 @@ namespace LTE::GMNM
         {
             packet data;
             byteStream buffer;
+            int headerSize = 0;
 
             buffer.body.resize(messageFormat->getHeaderSize());
             networkConnction->reciveData(buffer);
+            headerSize = buffer.getSize();
+            
             dataEncryption->decodeHeader(buffer);
             messageFormat->formatRecivedHeader(buffer, data);
             
@@ -78,8 +85,10 @@ namespace LTE::GMNM
              [&, this](packet& data){ this->send(data); } 
              );
             recivedData->route = "message received/";
-            eventManger::trigerEvent(recivedData);
+            if (headerSize != 0)
+                eventManger::trigerEvent(recivedData);
             delete recivedData;
+            std::this_thread::sleep_for(std::chrono::milliseconds(500));
         }
     }
 }

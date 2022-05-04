@@ -52,7 +52,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"d9/dbe/classcpu6502.html#afc4df6f8800132813070014fde2c4641"
+"d8/df3/src_2bus_emulation_2ram_8h.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

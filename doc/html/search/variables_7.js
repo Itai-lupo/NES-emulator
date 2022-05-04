@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['i_0',['I',['../d9/dbe/classcpu6502.html#a420c21add44ea6cd60abc1f23a1c8794',1,'cpu6502']]],
-  ['id_1',['id',['../df/d0a/main_8cpp.html#af9e4bb967ec58755e182fdfdb4e4709c',1,'main.cpp']]],
-  ['increment_5fmode_2',['increment_mode',['../df/d5b/unionppu2c02_1_1_p_p_u_c_t_r_l.html#a5d93e856cefd8f43895902e7e5bcb127',1,'ppu2c02::PPUCTRL']]]
+  ['headerdata_0',['headerData',['../d7/df4/structhttp_header.html#a2ad49442d98a497d4a21510fddd68dd0',1,'httpHeader']]],
+  ['headers_1',['headers',['../d7/df4/structhttp_header.html#a18ebea2a6266b7f6aac488d61a0beb10',1,'httpHeader']]],
+  ['httptype_2',['httpType',['../d7/df4/structhttp_header.html#a35fd439d3584f94f0b3b6621b64f68e0',1,'httpHeader']]]
 ];

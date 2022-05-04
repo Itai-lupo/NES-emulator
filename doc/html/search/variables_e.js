@@ -1,21 +1,14 @@
 var searchData=
 [
-  ['scanline_0',['scanline',['../d2/deb/classppu2c02.html#a18857378e822268f90f7522770832510',1,'ppu2c02']]],
-  ['select_1',['select',['../d6/df9/classcontroller.html#ac2be6ddba3d3d9556f1dc4b60252be34',1,'controller']]],
-  ['size_2',['size',['../dd/d5a/structcpu6502_1_1instruction6502.html#abef88bb85bd822324d446e669cca7cf8',1,'cpu6502::instruction6502']]],
-  ['slave_5fmode_3',['slave_mode',['../df/d5b/unionppu2c02_1_1_p_p_u_c_t_r_l.html#a4424ba2884cc19699348038f10af171d',1,'ppu2c02::PPUCTRL']]],
-  ['sprite_5foverflow_4',['sprite_overflow',['../d2/deb/classppu2c02.html#a5a0bfb4266a7b163f46f68760ef17240',1,'ppu2c02']]],
-  ['sprite_5fsize_5',['sprite_size',['../df/d5b/unionppu2c02_1_1_p_p_u_c_t_r_l.html#a76e1b73727a510a0a66e960719be2120',1,'ppu2c02::PPUCTRL']]],
-  ['sprite_5fzero_5fhit_6',['sprite_zero_hit',['../d2/deb/classppu2c02.html#a7cb98208b1520638bfc7f7a459f47ea3',1,'ppu2c02']]],
-  ['spritecount_7',['spriteCount',['../d2/deb/classppu2c02.html#a80404dda2684075bec7c0a09a0e97238',1,'ppu2c02']]],
-  ['spritescanline_8',['spriteScanline',['../d2/deb/classppu2c02.html#acbdeb257d1d202217512159326b2db95',1,'ppu2c02']]],
-  ['spriteshifterpatternhi_9',['spriteShifterPatternHi',['../d2/deb/classppu2c02.html#a18e78ca23f88ef533a32f003f6d82515',1,'ppu2c02']]],
-  ['spriteshifterpatternlo_10',['spriteShifterPatternLo',['../d2/deb/classppu2c02.html#a9ae0a9296ea1a2b87471eef102255d0c',1,'ppu2c02']]],
-  ['spritezerobeingrendered_11',['spriteZeroBeingRendered',['../d2/deb/classppu2c02.html#a64835c5fe29fe6f047546c06ba4b36ad',1,'ppu2c02']]],
-  ['spritezerohitpossible_12',['spriteZeroHitPossible',['../d2/deb/classppu2c02.html#a19feb74ccf16a25ff2a04f00a79bd264',1,'ppu2c02']]],
-  ['start_13',['start',['../d6/df9/classcontroller.html#a976dcc8850d8de37a426b37d1d0754b2',1,'controller']]],
-  ['status_14',['status',['../d9/dbe/classcpu6502.html#a3f2a36c72eb1d2e08f999ed416709d92',1,'cpu6502::status()'],['../d2/deb/classppu2c02.html#ad0da07ad1213767314d41a02c825d917',1,'ppu2c02::status()']]],
-  ['statusdata_15',['statusData',['../d9/dbe/classcpu6502.html#a71b68863d6facf1c664286a43e08cb84',1,'cpu6502']]],
-  ['stkp_16',['stkp',['../d9/dbe/classcpu6502.html#ae7c07e603fef0455bbda5db0d37a8b73',1,'cpu6502']]],
-  ['sysbus_17',['sysBus',['../de/d21/classbus_test.html#ac34a488b3ae6db6b2090b5cd555179f0',1,'busTest::sysBus()'],['../d8/d8f/classcartridge_emualtion_test.html#a958c2da6a79d1003b289e8b4c21dd141',1,'cartridgeEmualtionTest::sysBus()']]]
+  ['r_0',['r',['../de/d21/classbus_test.html#a9607b5b8c2e32330650442b66cde9866',1,'busTest::r()'],['../d8/d8f/classcartridge_emualtion_test.html#a11fbecc2a2ecd2e5e58b0430bf2bcab5',1,'cartridgeEmualtionTest::r()'],['../d0/d1e/classcpu_test.html#ae2e41f7caf7416b4a4b7c3a30e3c7b87',1,'cpuTest::r()']]],
+  ['reg_1',['reg',['../d6/df9/classcontroller.html#a1fc12d5c90e572b54a85edcbd320d9db',1,'controller::reg()'],['../d2/deb/classppu2c02.html#a1de80388060fe88a7b5eccd20b8d10f2',1,'ppu2c02::reg()'],['../df/d5b/unionppu2c02_1_1_p_p_u_c_t_r_l.html#a9fcb09c17a19e3d7aff8f14314b44997',1,'ppu2c02::PPUCTRL::reg()'],['../d4/d46/unionppu2c02_1_1loopy__register.html#a536b9ec70d2a37e219d3615576257725',1,'ppu2c02::loopy_register::reg()']]],
+  ['render_5fbackground_2',['render_background',['../d2/deb/classppu2c02.html#a6539ec50d4dd9d95e00ab0de2771e695',1,'ppu2c02']]],
+  ['render_5fbackground_5fleft_3',['render_background_left',['../d2/deb/classppu2c02.html#a245a6027733342572b1ae63d05071d7a',1,'ppu2c02']]],
+  ['render_5fsprites_4',['render_sprites',['../d2/deb/classppu2c02.html#a36e34c5bbd3dcada0b27bddd1f40ed98',1,'ppu2c02']]],
+  ['render_5fsprites_5fleft_5',['render_sprites_left',['../d2/deb/classppu2c02.html#a537144078c125e2312baa0ab97db6521',1,'ppu2c02']]],
+  ['reqpath_6',['reqPath',['../d7/df4/structhttp_header.html#a0a22e35ec2337c74a498d88cbab49a43',1,'httpHeader']]],
+  ['reqtype_7',['reqType',['../d7/df4/structhttp_header.html#a844134292f64f8c217f13febbf557bac',1,'httpHeader']]],
+  ['res_8',['res',['../d7/df4/structhttp_header.html#ad561bc23eb7ae83ff4a18175783a07e9',1,'httpHeader']]],
+  ['right_9',['right',['../d6/df9/classcontroller.html#ab8635f0417644a07e533642519d892c7',1,'controller']]],
+  ['rw_10',['RW',['../d9/dbe/classcpu6502.html#a764f5a2d57d981ad1f029ab13059fb98',1,'cpu6502']]]
 ];

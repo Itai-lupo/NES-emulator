@@ -8,5 +8,6 @@ var searchData=
   ['bg_5fshifter_5fattrib_5fhi_5',['bg_shifter_attrib_hi',['../d2/deb/classppu2c02.html#aab9cc74b5efe2244c82d6156d6fe7e70',1,'ppu2c02']]],
   ['bg_5fshifter_5fattrib_5flo_6',['bg_shifter_attrib_lo',['../d2/deb/classppu2c02.html#aacca281f94ba141df4be70494c01c566',1,'ppu2c02']]],
   ['bg_5fshifter_5fpattern_5fhi_7',['bg_shifter_pattern_hi',['../d2/deb/classppu2c02.html#a1677fce272b90542ea2459c8ae2fd9db',1,'ppu2c02']]],
-  ['bg_5fshifter_5fpattern_5flo_8',['bg_shifter_pattern_lo',['../d2/deb/classppu2c02.html#a76b299a13833f52f473f4306cb1bfed4',1,'ppu2c02']]]
+  ['bg_5fshifter_5fpattern_5flo_8',['bg_shifter_pattern_lo',['../d2/deb/classppu2c02.html#a76b299a13833f52f473f4306cb1bfed4',1,'ppu2c02']]],
+  ['bodydata_9',['bodyData',['../d6/db8/structhttp_body.html#a85924cbd2277028efe5480551c50a51e',1,'httpBody']]]
 ];

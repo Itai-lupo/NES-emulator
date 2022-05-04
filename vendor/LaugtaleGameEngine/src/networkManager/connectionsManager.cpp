@@ -32,7 +32,8 @@ namespace LTE::GMNM
         const std::string& ip, uint32_t port, dataFormatter *messageFormat, dataCryptographer *dataEncryption)
     {
         connection *newCon = new connection(ip, port, messageFormat, dataEncryption);
-        connections->push_back(newCon);
+        if(newCon->getId() != 0)
+            connections->push_back(newCon);
         return newCon->getId();
     }
 
