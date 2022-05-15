@@ -1,7 +1,0 @@
-<map id="piece::mouseInBond" name="piece::mouseInBond">
-<area shape="rect" id="node1" title=" " alt="" coords="5,97,147,123"/>
-<area shape="rect" id="node2" href="$db/dd9/class_l_t_e_1_1core_input.html#a7fb394762ffabc02a4b0451920bf9bca" title=" " alt="" coords="211,5,387,47"/>
-<area shape="rect" id="node3" href="$d6/d08/class_l_t_e_1_1transform.html#a160e68074988f3992b3cc6df921db306" title=" " alt="" coords="210,71,389,98"/>
-<area shape="rect" id="node4" href="$d6/d08/class_l_t_e_1_1transform.html#ae99effe341f4e47e4d5e0d8e288de666" title=" " alt="" coords="215,122,383,149"/>
-<area shape="rect" id="node5" href="$d2/d49/class_l_t_e_1_1game_object.html#a568b30b81a33465e74c3c39663d1b5c0" title=" " alt="" coords="195,173,404,199"/>
-</map>

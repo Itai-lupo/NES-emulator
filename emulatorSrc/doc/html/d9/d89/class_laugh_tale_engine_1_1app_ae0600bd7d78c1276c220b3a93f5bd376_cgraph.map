@@ -1,0 +1,12 @@
+<map id="LaughTaleEngine::app::close" name="LaughTaleEngine::app::close">
+<area shape="rect" id="node1" title=" " alt="" coords="5,235,156,276"/>
+<area shape="rect" id="node2" href="$df/dc8/class_laugh_tale_engine_1_1entity_manger.html#a3ceba32e8088e579731ab9d709cbd031" title=" " alt="" coords="243,5,447,47"/>
+<area shape="rect" id="node3" href="$d9/dd1/class_laugh_tale_engine_1_1event_manger.html#a3493122a7ee2cfcc18970447664c067f" title=" " alt="" coords="243,71,447,112"/>
+<area shape="rect" id="node4" href="$d7/d1f/class_laugh_tale_engine_1_1going_marry_network_manger_1_1connections_manager.html#ad883b87b347f60bb543c908746ce3b1d" title=" " alt="" coords="204,136,485,177"/>
+<area shape="rect" id="node5" href="$d1/dda/class_laugh_tale_engine_1_1materials_manger.html#a7e163e00e4f98288ad97260e01c44dc2" title=" " alt="" coords="253,201,436,243"/>
+<area shape="rect" id="node6" href="$d7/d47/class_laugh_tale_engine_1_1render_loop.html#a601530ce1c74dcc07017d1f63c0ca273" title=" " alt="" coords="248,267,441,308"/>
+<area shape="rect" id="node7" href="$df/d84/class_laugh_tale_engine_1_1sound_engine.html#ad7c03b24b04737b5da1de706d1557a44" title=" " alt="" coords="243,332,447,373"/>
+<area shape="rect" id="node9" href="$d6/d62/class_laugh_tale_engine_1_1logger.html#a4c3ef502f6105a31a16c9df67ece1953" title=" " alt="" coords="263,397,427,439"/>
+<area shape="rect" id="node10" href="$da/d17/class_laugh_tale_engine_1_1window_manger.html#accf42f24c30bfbb04bea8e9435cae082" title=" " alt="" coords="237,463,453,504"/>
+<area shape="rect" id="node8" href="$d6/d31/class_laugh_tale_engine_1_1sound_synthesizer.html#ad4c2986e38b867dad680c447d9794991" title=" " alt="" coords="533,332,767,373"/>
+</map>

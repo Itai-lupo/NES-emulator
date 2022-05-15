@@ -1,6 +1,0 @@
-<map id="LaughTaleEngine::apoSequencerAndRythemManer::sequencer" name="LaughTaleEngine::apoSequencerAndRythemManer::sequencer">
-<area shape="rect" id="node1" title="base sequencer class this class can be inherited in order to crate a set of musical instraments that ..." alt="" coords="5,71,217,112"/>
-<area shape="rect" id="node2" href="$d9/d07/class_laugh_tale_engine_1_1apo_sequencer_and_rythem_maner_1_1bell_ring.html" title=" " alt="" coords="265,5,477,47"/>
-<area shape="rect" id="node3" href="$db/dd7/class_laugh_tale_engine_1_1apo_sequencer_and_rythem_maner_1_1drum.html" title=" " alt="" coords="265,71,477,112"/>
-<area shape="rect" id="node4" href="$d8/dc5/class_laugh_tale_engine_1_1apo_sequencer_and_rythem_maner_1_1guitar.html" title=" " alt="" coords="265,136,477,177"/>
-</map>

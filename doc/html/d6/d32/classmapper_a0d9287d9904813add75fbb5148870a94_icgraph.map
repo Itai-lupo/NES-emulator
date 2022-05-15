@@ -1,5 +1,0 @@
-<map id="mapper::writePRGMemory" name="mapper::writePRGMemory">
-<area shape="rect" id="node1" title=" " alt="" coords="433,5,607,32"/>
-<area shape="rect" id="node2" href="$d2/dd7/classcartridge.html#a20fb6bca748ca9007c5f7566f1717b0c" title=" " alt="" coords="205,5,385,32"/>
-<area shape="rect" id="node3" href="$dc/de6/classcpu_bus_cartridge.html#ae4af0d8aba720004ac641053377eecd1" title=" " alt="" coords="5,5,157,32"/>
-</map>

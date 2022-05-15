@@ -1,6 +1,0 @@
-<map id="piece::stopFollowingMouse" name="piece::stopFollowingMouse">
-<area shape="rect" id="node1" title=" " alt="" coords="5,71,184,98"/>
-<area shape="rect" id="node2" href="$de/d44/class_l_t_e_1_1entity_manger.html#ad019a4750f1350c7185cefe6072dcd6e" title=" " alt="" coords="257,5,389,47"/>
-<area shape="rect" id="node3" href="$d2/d49/class_l_t_e_1_1game_object.html#a47aab7f8afa1da77fe4de1fe7d28fb08" title=" " alt="" coords="232,71,413,98"/>
-<area shape="rect" id="node4" href="$d5/d7c/class_l_t_e_1_1event_manger.html#ad8411ccbb4f69a60c6280071a02ccb1c" title=" " alt="" coords="235,123,411,164"/>
-</map>

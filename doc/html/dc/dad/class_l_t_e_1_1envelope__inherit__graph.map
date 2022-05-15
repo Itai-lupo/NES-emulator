@@ -1,9 +1,0 @@
-<map id="LTE::envelope" name="LTE::envelope">
-<area shape="rect" id="node1" title=" " alt="" coords="244,80,351,107"/>
-<area shape="rect" id="node3" href="$d9/dc5/class_l_t_e_1_1bell.html" title=" " alt="" coords="5,155,80,181"/>
-<area shape="rect" id="node4" href="$d7/d80/class_l_t_e_1_1drum_kick.html" title=" " alt="" coords="104,155,213,181"/>
-<area shape="rect" id="node5" href="$d4/d73/class_l_t_e_1_1guitar_string.html" title=" " alt="" coords="237,155,357,181"/>
-<area shape="rect" id="node6" href="$d4/d06/class_l_t_e_1_1harmonica.html" title=" " alt="" coords="381,155,496,181"/>
-<area shape="rect" id="node7" href="$df/d00/class_l_t_e_1_1sound_file.html" title=" " alt="" coords="521,155,631,181"/>
-<area shape="rect" id="node2" href="$d9/d4b/class_l_t_e_1_1component.html" title=" " alt="" coords="238,5,357,32"/>
-</map>

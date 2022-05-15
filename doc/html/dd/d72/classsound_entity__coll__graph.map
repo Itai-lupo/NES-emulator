@@ -1,6 +1,0 @@
-<map id="soundEntity" name="soundEntity">
-<area shape="rect" id="node1" title=" " alt="" coords="59,200,150,227"/>
-<area shape="rect" id="node2" href="$d4/d84/struct_l_t_e_1_1_i_entity.html" title=" " alt="" coords="5,103,97,130"/>
-<area shape="rect" id="node3" href="$d2/d24/class_l_t_e_1_1apo_sequencer_and_rythem_maner_1_1drum.html" title=" " alt="" coords="121,96,328,137"/>
-<area shape="rect" id="node4" href="$d5/d51/class_l_t_e_1_1apo_sequencer_and_rythem_maner_1_1sequencer.html" title="base sequencer class this class can be inherited in order to crate a set of musical instraments that ..." alt="" coords="121,5,328,47"/>
-</map>

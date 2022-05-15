@@ -1,0 +1,12 @@
+<map id="board::canMoveToNewPostion" name="board::canMoveToNewPostion">
+<area shape="rect" id="node1" title=" " alt="" coords="5,123,204,149"/>
+<area shape="rect" id="node2" href="$db/dd9/class_l_t_e_1_1core_input.html#a7fb394762ffabc02a4b0451920bf9bca" title=" " alt="" coords="255,31,427,73"/>
+<area shape="rect" id="node3" href="$d2/d44/classboard.html#a01b432e28907706a0f70f7bfb32afe67" title=" " alt="" coords="269,148,414,175"/>
+<area shape="rect" id="node8" href="$de/de3/class_l_t_e_1_1window_manger.html#aeb94c72d9ef01e6ec53328e2ba972628" title=" " alt="" coords="269,199,414,241"/>
+<area shape="rect" id="node9" href="$d2/d44/classboard.html#abc34cabed948c8cc2b0356e9b63b98d3" title=" " alt="" coords="252,97,431,124"/>
+<area shape="rect" id="node4" href="$de/d44/class_l_t_e_1_1entity_manger.html#ad019a4750f1350c7185cefe6072dcd6e" title=" " alt="" coords="515,57,647,98"/>
+<area shape="rect" id="node5" href="$d2/d44/classboard.html#a990231a6644f06d11f55d5edf87456b6" title=" " alt="" coords="494,224,669,251"/>
+<area shape="rect" id="node6" href="$d6/d08/class_l_t_e_1_1transform.html#a160e68074988f3992b3cc6df921db306" title=" " alt="" coords="494,123,669,149"/>
+<area shape="rect" id="node7" href="$d2/d49/class_l_t_e_1_1game_object.html#a568b30b81a33465e74c3c39663d1b5c0" title=" " alt="" coords="479,173,684,200"/>
+<area shape="rect" id="node10" href="$d6/d08/class_l_t_e_1_1transform.html#ae99effe341f4e47e4d5e0d8e288de666" title=" " alt="" coords="499,5,663,32"/>
+</map>

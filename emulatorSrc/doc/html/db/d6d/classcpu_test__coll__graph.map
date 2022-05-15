@@ -1,0 +1,8 @@
+<map id="cpuTest" name="cpuTest">
+<area shape="rect" id="node1" title=" " alt="" coords="124,185,193,212"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,96,99,123"/>
+<area shape="rect" id="node3" href="$d1/d46/classtest_ram.html" title=" " alt="" coords="123,96,194,123"/>
+<area shape="rect" id="node4" href="$dc/d77/classbus_device.html" title=" " alt="" coords="77,5,214,47"/>
+<area shape="rect" id="node5" href="$d9/dbe/classcpu6502.html" title=" " alt="" coords="233,96,303,123"/>
+<area shape="rect" id="node6" title=" " alt="" coords="238,13,354,39"/>
+</map>

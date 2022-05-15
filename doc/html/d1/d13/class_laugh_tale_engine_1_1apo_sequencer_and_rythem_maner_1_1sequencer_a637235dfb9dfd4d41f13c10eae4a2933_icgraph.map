@@ -1,8 +1,0 @@
-<map id="LaughTaleEngine::apoSequencerAndRythemManer::sequencer::PlayBeat" name="LaughTaleEngine::apoSequencerAndRythemManer::sequencer::PlayBeat">
-<area shape="rect" id="node1" title="PlayBeat &#45; called every beat or bpm time a minut noteOn/Off the instraments here." alt="" coords="804,79,1016,135"/>
-<area shape="rect" id="node2" href="$d1/d13/class_laugh_tale_engine_1_1apo_sequencer_and_rythem_maner_1_1sequencer.html#acfae13b3a01bd16af46218204acee81a" title="song &#45; the main function of the sequencer plays the song" alt="" coords="525,86,756,127"/>
-<area shape="rect" id="node3" href="$d1/d13/class_laugh_tale_engine_1_1apo_sequencer_and_rythem_maner_1_1sequencer.html#af7cd42fb9c63a63ece120f3375267cc0" title="startSong &#45; start playing the song in a new thrad" alt="" coords="265,79,477,135"/>
-<area shape="rect" id="node4" href="$d9/d07/class_laugh_tale_engine_1_1apo_sequencer_and_rythem_maner_1_1bell_ring.html#ae15b2b12f740cceb6468ddafb22e77ab" title=" " alt="" coords="5,5,217,61"/>
-<area shape="rect" id="node5" href="$db/dd7/class_laugh_tale_engine_1_1apo_sequencer_and_rythem_maner_1_1drum.html#a4f2995a69a616aaf7ddc7db3c30e65ba" title=" " alt="" coords="5,86,217,127"/>
-<area shape="rect" id="node6" href="$d8/dc5/class_laugh_tale_engine_1_1apo_sequencer_and_rythem_maner_1_1guitar.html#a2bc1c611abdbc98dee42845f09f57c2b" title=" " alt="" coords="5,151,217,193"/>
-</map>

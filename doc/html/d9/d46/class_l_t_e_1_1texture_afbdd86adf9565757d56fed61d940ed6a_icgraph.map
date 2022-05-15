@@ -1,7 +1,0 @@
-<map id="LTE::texture::getSpirteStartById" name="LTE::texture::getSpirteStartById">
-<area shape="rect" id="node1" title=" " alt="" coords="663,46,865,73"/>
-<area shape="rect" id="node2" href="$dc/dda/class_l_t_e_1_1material.html#a60c9114c31494e7310bfded8f3b7713b" title=" " alt="" coords="449,5,615,47"/>
-<area shape="rect" id="node5" href="$dc/dda/class_l_t_e_1_1material.html#a90ab73f411394a7f9787ca8afd2bdfa6" title=" " alt="" coords="449,71,615,112"/>
-<area shape="rect" id="node3" href="$d1/d3d/class_l_t_e_1_1shader_render_buffer.html#ad5f4eefe2fd0ccb1eca97b1ea900f884" title=" " alt="" coords="235,39,401,80"/>
-<area shape="rect" id="node4" href="$d1/d10/class_l_t_e_1_1renderer.html#a593a79a85c12d6469425a703fecbde6d" title=" " alt="" coords="5,46,187,73"/>
-</map>

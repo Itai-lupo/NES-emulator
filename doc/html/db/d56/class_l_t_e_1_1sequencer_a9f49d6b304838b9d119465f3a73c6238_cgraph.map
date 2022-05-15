@@ -1,6 +1,0 @@
-<map id="LTE::sequencer::startSong" name="LTE::sequencer::startSong">
-<area shape="rect" id="node1" title="startSong &#45; start playing the song in a new thrad" alt="" coords="5,31,184,57"/>
-<area shape="rect" id="node2" href="$db/d56/class_l_t_e_1_1sequencer.html#ad51ff013bc29c7c3b910d8e0d2a0dcbe" title="song &#45; the main function of the sequencer plays the song" alt="" coords="232,31,383,57"/>
-<area shape="rect" id="node3" href="$de/d01/class_l_t_e_1_1sound_engine.html#ac88b300c6166c97be5e9b05b038c615c" title=" " alt="" coords="431,5,615,32"/>
-<area shape="rect" id="node4" href="$db/d56/class_l_t_e_1_1sequencer.html#af925e90b5a7d6e6d62eda124528d82d6" title="PlayBeat &#45; called every beat or bpm time a minut noteOn/Off the instraments here." alt="" coords="435,56,610,83"/>
-</map>

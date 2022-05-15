@@ -1,7 +1,0 @@
-<map id="LTE::apoSequencerAndRythemManer::bellRing::PlayBeat" name="LTE::apoSequencerAndRythemManer::bellRing::PlayBeat">
-<area shape="rect" id="node1" title="PlayBeat &#45; called every beat or bpm time a minut noteOn/Off the instraments here." alt="" coords="5,57,212,98"/>
-<area shape="rect" id="node2" href="$d2/d04/class_l_t_e_1_1envelope.html#a6c14f0fb15abc74ddfb8f9fce18f5815" title=" " alt="" coords="268,5,411,32"/>
-<area shape="rect" id="node3" href="$d2/dff/class_l_t_e_1_1sound_synthesizer.html#a87b587d2bb2be384b13f3881028c089e" title=" " alt="" coords="260,57,419,98"/>
-<area shape="rect" id="node5" href="$d2/dff/class_l_t_e_1_1sound_synthesizer.html#a667bd56b3e7c0d62591e23a931231906" title=" " alt="" coords="260,122,419,163"/>
-<area shape="rect" id="node4" href="$de/d01/class_l_t_e_1_1sound_engine.html#ac88b300c6166c97be5e9b05b038c615c" title=" " alt="" coords="467,97,651,124"/>
-</map>

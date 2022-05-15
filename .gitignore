@@ -1,7 +1,11 @@
-build/
-output/
+emulatorSrc/build/
+emulatorSrc/output/
 
-logs/info
-logs/warninig
-logs/error
-logs/fatal
+emulatorSrc/logs/info
+emulatorSrc/logs/warninig
+emulatorSrc/logs/error
+emulatorSrc/logs/fatal
+
+lancherSrc/node_modules
+serverSrc/node_modules
+serverSrc/coverage

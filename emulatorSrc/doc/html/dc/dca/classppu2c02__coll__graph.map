@@ -1,0 +1,12 @@
+<map id="ppu2c02" name="ppu2c02">
+<area shape="rect" id="node1" title=" " alt="" coords="761,266,832,293"/>
+<area shape="rect" id="node2" href="$dc/d77/classbus_device.html" title=" " alt="" coords="5,74,143,115"/>
+<area shape="rect" id="node8" href="$da/d1c/classname_table.html" title=" " alt="" coords="509,90,595,117"/>
+<area shape="rect" id="node9" href="$da/de8/classppu_bus_cartridge.html" title=" " alt="" coords="192,114,311,141"/>
+<area shape="rect" id="node10" href="$de/dba/classpalettes_memory.html" title=" " alt="" coords="335,196,449,222"/>
+<area shape="rect" id="node3" title=" " alt="" coords="193,286,309,313"/>
+<area shape="rect" id="node4" href="$d0/d88/classbus.html" title=" " alt="" coords="473,317,631,344"/>
+<area shape="rect" id="node5" href="$d7/de8/structppu2c02_1_1sprite_data.html" title=" " alt="" coords="484,368,620,394"/>
+<area shape="rect" id="node6" href="$df/d5b/unionppu2c02_1_1_p_p_u_c_t_r_l.html" title=" " alt="" coords="483,418,621,445"/>
+<area shape="rect" id="node7" href="$d4/d46/unionppu2c02_1_1loopy__register.html" title=" " alt="" coords="473,476,631,502"/>
+</map>

@@ -1,6 +1,0 @@
-<map id="LTE::sequencer" name="LTE::sequencer">
-<area shape="rect" id="node1" title="base sequencer class this class can be inherited in order to crate a set of musical instraments that ..." alt="" coords="115,5,229,32"/>
-<area shape="rect" id="node2" href="$d9/d60/class_l_t_e_1_1bell_ring.html" title=" " alt="" coords="5,80,107,107"/>
-<area shape="rect" id="node3" href="$d7/d4c/class_l_t_e_1_1drum.html" title=" " alt="" coords="131,80,213,107"/>
-<area shape="rect" id="node4" href="$d4/d0d/class_l_t_e_1_1guitar.html" title=" " alt="" coords="238,80,325,107"/>
-</map>

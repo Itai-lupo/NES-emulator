@@ -1,7 +1,0 @@
-<map id="LTE::renderer::renderScene" name="LTE::renderer::renderScene">
-<area shape="rect" id="node1" title=" " alt="" coords="5,85,184,112"/>
-<area shape="rect" id="node2" href="$df/d3a/class_l_t_e_1_1render_api.html#a487b5438ff6895578e9955b15a6fc9a5" title=" " alt="" coords="242,5,385,32"/>
-<area shape="rect" id="node3" href="$dc/dda/class_l_t_e_1_1material.html#a99d55dfd6ef208f58a0d11a1102df234" title=" " alt="" coords="234,56,393,83"/>
-<area shape="rect" id="node4" href="$de/de3/class_l_t_e_1_1window_manger.html#aeb94c72d9ef01e6ec53328e2ba972628" title=" " alt="" coords="241,107,386,149"/>
-<area shape="rect" id="node5" href="$df/d3a/class_l_t_e_1_1render_api.html#a559ae0985986d43e165a90019c3b07a0" title=" " alt="" coords="232,173,395,214"/>
-</map>

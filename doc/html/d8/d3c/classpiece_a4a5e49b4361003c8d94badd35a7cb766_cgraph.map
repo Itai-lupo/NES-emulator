@@ -1,6 +1,0 @@
-<map id="piece::followMouse" name="piece::followMouse">
-<area shape="rect" id="node1" title=" " alt="" coords="5,56,140,83"/>
-<area shape="rect" id="node2" href="$d2/d49/class_l_t_e_1_1game_object.html#a568b30b81a33465e74c3c39663d1b5c0" title=" " alt="" coords="188,5,397,32"/>
-<area shape="rect" id="node3" href="$d6/d08/class_l_t_e_1_1transform.html#a5eeba93d4b1b4929f00fe2a83ac87453" title=" " alt="" coords="199,56,387,83"/>
-<area shape="rect" id="node4" href="$d6/d08/class_l_t_e_1_1transform.html#abd8d3eca680b8173f7b34daf5bb779bc" title=" " alt="" coords="199,107,387,133"/>
-</map>

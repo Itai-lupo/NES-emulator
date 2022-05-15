@@ -1,6 +1,0 @@
-<map id="pawn::move" name="pawn::move">
-<area shape="rect" id="node1" title=" " alt="" coords="5,71,96,98"/>
-<area shape="rect" id="node2" href="$de/d44/class_l_t_e_1_1entity_manger.html#ad019a4750f1350c7185cefe6072dcd6e" title=" " alt="" coords="181,5,313,47"/>
-<area shape="rect" id="node3" href="$d2/d49/class_l_t_e_1_1game_object.html#a568b30b81a33465e74c3c39663d1b5c0" title=" " alt="" coords="144,71,349,98"/>
-<area shape="rect" id="node4" href="$d6/d08/class_l_t_e_1_1transform.html#a60a944c3a4baab5a1886cc382d4318ba" title=" " alt="" coords="159,122,334,149"/>
-</map>

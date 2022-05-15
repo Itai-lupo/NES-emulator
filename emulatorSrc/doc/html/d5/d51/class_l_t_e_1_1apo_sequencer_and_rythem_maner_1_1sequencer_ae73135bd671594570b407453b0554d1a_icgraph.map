@@ -1,0 +1,8 @@
+<map id="LTE::apoSequencerAndRythemManer::sequencer::PlayBeat" name="LTE::apoSequencerAndRythemManer::sequencer::PlayBeat">
+<area shape="rect" id="node1" title="PlayBeat &#45; called every beat or bpm time a minut noteOn/Off the instraments here." alt="" coords="769,71,976,112"/>
+<area shape="rect" id="node2" href="$d5/d51/class_l_t_e_1_1apo_sequencer_and_rythem_maner_1_1sequencer.html#a5cd87028d1b1617f4d5448ac2f1f0052" title="song &#45; the main function of the sequencer plays the song" alt="" coords="515,71,721,112"/>
+<area shape="rect" id="node3" href="$d5/d51/class_l_t_e_1_1apo_sequencer_and_rythem_maner_1_1sequencer.html#ab4d85f40859e7c55261194a78cca666b" title="startSong &#45; start playing the song in a new thrad" alt="" coords="260,71,467,112"/>
+<area shape="rect" id="node4" href="$d8/d36/class_l_t_e_1_1apo_sequencer_and_rythem_maner_1_1bell_ring.html#a35cc71e33eeebe976876673f30a2ca10" title=" " alt="" coords="5,5,212,47"/>
+<area shape="rect" id="node5" href="$d2/d24/class_l_t_e_1_1apo_sequencer_and_rythem_maner_1_1drum.html#acbd1fe75394c50c316a792fa097e2cae" title=" " alt="" coords="5,71,212,112"/>
+<area shape="rect" id="node6" href="$d3/d3f/class_l_t_e_1_1apo_sequencer_and_rythem_maner_1_1guitar.html#a128d5a426bf6f55d6516c0bb1d2d2ef3" title=" " alt="" coords="5,136,212,177"/>
+</map>

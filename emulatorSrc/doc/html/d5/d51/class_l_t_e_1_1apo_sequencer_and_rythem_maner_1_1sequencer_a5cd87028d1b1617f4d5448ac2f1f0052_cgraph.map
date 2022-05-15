@@ -1,0 +1,5 @@
+<map id="LTE::apoSequencerAndRythemManer::sequencer::song" name="LTE::apoSequencerAndRythemManer::sequencer::song">
+<area shape="rect" id="node1" title="song &#45; the main function of the sequencer plays the song" alt="" coords="5,27,212,69"/>
+<area shape="rect" id="node2" href="$de/d01/class_l_t_e_1_1sound_engine.html#ac88b300c6166c97be5e9b05b038c615c" title=" " alt="" coords="271,5,455,32"/>
+<area shape="rect" id="node3" href="$d5/d51/class_l_t_e_1_1apo_sequencer_and_rythem_maner_1_1sequencer.html#ae73135bd671594570b407453b0554d1a" title="PlayBeat &#45; called every beat or bpm time a minut noteOn/Off the instraments here." alt="" coords="260,57,467,98"/>
+</map>

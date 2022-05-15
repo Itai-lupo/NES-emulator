@@ -1,6 +1,0 @@
-<map id="cpu::clock" name="cpu::clock">
-<area shape="rect" id="node1" title=" " alt="" coords="5,31,85,57"/>
-<area shape="rect" id="node2" href="$d4/dff/class_d_m_a.html#a7f2ec84329d4ef62f6cd6586217f7f0b" title=" " alt="" coords="167,5,255,32"/>
-<area shape="rect" id="node4" href="$de/d33/classcpu.html#a5684aacd37522ceedf0a60d2af7770af" title=" " alt="" coords="133,56,288,83"/>
-<area shape="rect" id="node3" href="$d0/d88/classbus.html#abb29248facedf75907fba0ebf44022b0" title=" " alt="" coords="336,31,411,57"/>
-</map>

@@ -1,7 +1,0 @@
-<map id="player::playerMove" name="player::playerMove">
-<area shape="rect" id="node1" title=" " alt="" coords="5,81,133,108"/>
-<area shape="rect" id="node2" href="$d2/d49/class_l_t_e_1_1game_object.html#af885dbd7e72e830ae61ab37b6d52b8b6" title=" " alt="" coords="181,5,393,32"/>
-<area shape="rect" id="node3" href="$d2/d49/class_l_t_e_1_1game_object.html#a568b30b81a33465e74c3c39663d1b5c0" title=" " alt="" coords="185,56,390,83"/>
-<area shape="rect" id="node4" href="$db/dd9/class_l_t_e_1_1core_input.html#ad9dd2d2737e633890b0388d85b6b87cd" title=" " alt="" coords="191,107,383,133"/>
-<area shape="rect" id="node5" href="$dc/dda/class_l_t_e_1_1material.html#ac6bf65919f261b88ba80bdb79bcbb440" title=" " alt="" coords="200,157,375,184"/>
-</map>

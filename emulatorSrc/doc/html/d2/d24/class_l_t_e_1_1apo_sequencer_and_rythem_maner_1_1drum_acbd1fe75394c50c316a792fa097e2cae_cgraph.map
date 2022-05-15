@@ -1,0 +1,12 @@
+<map id="LTE::apoSequencerAndRythemManer::drum::drum" name="LTE::apoSequencerAndRythemManer::drum::drum">
+<area shape="rect" id="node1" title=" " alt="" coords="5,122,212,163"/>
+<area shape="rect" id="node2" href="$d2/dff/class_l_t_e_1_1sound_synthesizer.html#a04255924d76b7babffe16e7b749830f6" title=" " alt="" coords="284,23,443,65"/>
+<area shape="rect" id="node5" href="$d5/d51/class_l_t_e_1_1apo_sequencer_and_rythem_maner_1_1sequencer.html#a43e5eb72075331dd647fb2ad8f8184f8" title=" " alt="" coords="260,89,467,130"/>
+<area shape="rect" id="node6" href="$d5/d51/class_l_t_e_1_1apo_sequencer_and_rythem_maner_1_1sequencer.html#a84a2f512bf9caa908ba25faa278f9bec" title=" " alt="" coords="260,154,467,195"/>
+<area shape="rect" id="node7" href="$d5/d51/class_l_t_e_1_1apo_sequencer_and_rythem_maner_1_1sequencer.html#ab4d85f40859e7c55261194a78cca666b" title="startSong &#45; start playing the song in a new thrad" alt="" coords="260,219,467,261"/>
+<area shape="rect" id="node3" href="$d2/d04/class_l_t_e_1_1envelope.html#a6c14f0fb15abc74ddfb8f9fce18f5815" title=" " alt="" coords="547,5,689,32"/>
+<area shape="rect" id="node4" href="$d2/d04/class_l_t_e_1_1envelope.html#a13e89e5e47e6fcc8b3ebfd6d3c76c29e" title=" " alt="" coords="547,56,689,83"/>
+<area shape="rect" id="node8" href="$d5/d51/class_l_t_e_1_1apo_sequencer_and_rythem_maner_1_1sequencer.html#a5cd87028d1b1617f4d5448ac2f1f0052" title="song &#45; the main function of the sequencer plays the song" alt="" coords="515,219,721,261"/>
+<area shape="rect" id="node9" href="$de/d01/class_l_t_e_1_1sound_engine.html#ac88b300c6166c97be5e9b05b038c615c" title=" " alt="" coords="781,197,965,224"/>
+<area shape="rect" id="node10" href="$d5/d51/class_l_t_e_1_1apo_sequencer_and_rythem_maner_1_1sequencer.html#ae73135bd671594570b407453b0554d1a" title="PlayBeat &#45; called every beat or bpm time a minut noteOn/Off the instraments here." alt="" coords="769,249,976,290"/>
+</map>

@@ -1,8 +1,0 @@
-<map id="LTE::soundSynthesizer::addEnvelope" name="LTE::soundSynthesizer::addEnvelope">
-<area shape="rect" id="node1" title=" " alt="" coords="209,99,368,141"/>
-<area shape="rect" id="node2" href="$d9/d60/class_l_t_e_1_1bell_ring.html#aeaf341edf4d5bda5863d599b6dba9feb" title=" " alt="" coords="5,5,161,32"/>
-<area shape="rect" id="node3" href="$d7/d4c/class_l_t_e_1_1drum.html#adbb08e290639da3aec3c015361c75a39" title=" " alt="" coords="23,56,143,83"/>
-<area shape="rect" id="node4" href="$d4/d0d/class_l_t_e_1_1guitar.html#ab0dd5b5c8db673322f5cb397ac0a61eb" title=" " alt="" coords="20,107,147,133"/>
-<area shape="rect" id="node5" href="$d2/d04/class_l_t_e_1_1envelope.html#a72a745c19a10af1dac2990689113fae0" title=" " alt="" coords="18,157,149,184"/>
-<area shape="rect" id="node6" href="$d4/d0c/class_l_t_e_1_1sound_files_player.html#aa1f94aa370252b343b1f0899958fffcc" title=" " alt="" coords="6,209,161,250"/>
-</map>

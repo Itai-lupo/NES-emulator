@@ -1,9 +1,0 @@
-<map id="cpu::init" name="cpu::init">
-<area shape="rect" id="node1" title=" " alt="" coords="5,81,72,108"/>
-<area shape="rect" id="node2" href="$de/d33/classcpu.html#aba5d39bb9d49ff59e8ea65628a4776d2" title=" " alt="" coords="120,5,200,32"/>
-<area shape="rect" id="node4" href="$de/d33/classcpu.html#add49f5d9813e1d2d44fb30e4c5a6eab0" title=" " alt="" coords="129,107,191,133"/>
-<area shape="rect" id="node6" href="$de/d33/classcpu.html#a803206b5587491451a031522d1c9dce7" title=" " alt="" coords="125,157,195,184"/>
-<area shape="rect" id="node7" href="$de/d33/classcpu.html#a97745a7f67189c0ace83e404c2345ba1" title=" " alt="" coords="121,56,199,83"/>
-<area shape="rect" id="node3" href="$d0/d88/classbus.html#abb29248facedf75907fba0ebf44022b0" title=" " alt="" coords="249,69,324,96"/>
-<area shape="rect" id="node5" href="$d0/d88/classbus.html#ad0926a660fd5c6e08f88943629c095af" title=" " alt="" coords="248,145,325,172"/>
-</map>

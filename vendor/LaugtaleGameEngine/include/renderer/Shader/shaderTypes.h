@@ -1,7 +1,0 @@
-#define LT_BYTE 0x1400
-#define LT_UNSIGNED_BYTE 0x1401
-#define LT_SHORT 0x1402
-#define LT_UNSIGNED_SHORT 0x1403
-#define LT_INT 0x1404
-#define LT_UNSIGNED_INT 0x1405
-#define LT_FLOAT 0x1406
