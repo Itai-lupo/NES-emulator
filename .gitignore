@@ -6,6 +6,8 @@ emulatorSrc/logs/warninig
 emulatorSrc/logs/error
 emulatorSrc/logs/fatal
 
-lancherSrc/node_modules
-serverSrc/node_modules
-serverSrc/coverage
+
+lancherSrc/dist/
+lancherSrc/node_modules/
+serverSrc/node_modules/
+serverSrc/coverage/

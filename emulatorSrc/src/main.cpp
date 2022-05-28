@@ -255,7 +255,7 @@ int main(int argc, char** argv)
 {
     LTE::app::init();
     
-    winId =  LTE::windowManger::addWindow([](LTE::windowBuilder *b){ b->setTitle("nes emulator")->useImGui()->setWidth(256 * 4)->setHeight(240 * 4);});
+    winId =  LTE::windowManger::addWindow([](LTE::windowBuilder *b){ b->setTitle("nes emulator")->setWidth(256 * 4)->setHeight(240 * 4);});
     initEmulationSystem();
     displayDebugInfo::init(winId, id);
     

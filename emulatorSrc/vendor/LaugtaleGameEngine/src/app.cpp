@@ -34,7 +34,7 @@ namespace LTE
         fileManager::init();
         
         windowManger::init();
-        soundEngine::init();
+        // soundEngine::init();
         materialsManger::init();
         GMNM::connectionsManager::init();
     }
@@ -44,7 +44,7 @@ namespace LTE
         keepRunning = false;
         eventManger::close();
         entityManger::close();
-        soundEngine::close();
+        // soundEngine::close();
         windowManger::close();
         materialsManger::close();
         GMNM::connectionsManager::close();
